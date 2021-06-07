@@ -1,0 +1,152 @@
+### YamlMime:Landing
+title: Microsoft HoloLens
+summary: Microsoft HoloLens, Windows 10 ' un çalıştırılacağı ilk tam içeren holographic bilgisayardır. HoloLens 2 ' nin kullanıma sunulmasıyla birlikte, her HoloLens cihazı, Microsoft 'un bulut ve AI hizmetlerinin güvenilirliği, güvenliği ve ölçeklenebilirliği tarafından geliştirilmiş, ticari kullanıma hazır yönetim özellikleri sağlar.
+metadata:
+  title: Microsoft HoloLens
+  description: Microsoft HoloLens için giriş sayfası.
+  ms.prod: hololens
+  ms.subservice: subservice
+  ms.topic: landing-page
+  author: mccoybot
+  ms.author: v-todmc
+  ms.date: 5/22/2020
+  ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
+  ms.openlocfilehash: 040e353d42c97aa6387e5611a3479464cf5ae2e8
+  ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 05/25/2021
+  ms.locfileid: "111379049"
+landingContent:
+- title: HoloLens genel bakış
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: HoloLens 2 genel bakış
+      url: hololens2-options.md
+    - text: HoloLens 2 donanımı
+      url: hololens2-hardware.md
+    - text: Microsoft ağı (Önizleme)
+      url: /mesh/overview
+    - text: Başlat menüsünü ve karma gerçeklik giriş sayfası 'nı kullanın
+      url: holographic-home.md
+    - text: Uygulamaları bulma, yükleme ve kaldırma
+      url: holographic-store-apps.md
+    - text: Görsel kalite ve rahatlık geliştirme
+      url: hololens-calibration.md
+    - text: HoloLens 'i güncelleştirme
+      url: hololens-update-hololens.md
+- title: Dağıtım Kılavuzu
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Yaygın dağıtım senaryoları
+      url: common-scenarios.md
+    - text: Uzaktan Yardım ile ölçekli bulut bağlantılı HoloLens 2 dağıtımı
+      url: hololens2-cloud-connected-overview.md
+    - text: Dynamics 365 kılavuzlarıyla kurumsal bağlantılı HoloLens 2 dağıtımı
+      url: hololens2-corp-connected-overview.md
+    - text: Dış Istemciler dağıtım kılavuzu
+      url: hololens2-deployment-guide.md
+    - text: Çevrimdışı güvenli dağıtım
+      url: hololens-common-scenarios-offline-secure.md
+- title: Hazırlama
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Bir ticari ortamda HoloLens dağıtma
+      url: hololens-requirements.md
+    - text: Güvenliğe genel bakış
+      url: security-overview.md
+    - text: Lisans gereksinimleri
+      url: hololens-licenses-requirements.md
+    - text: HoloLens ortam konuları
+      url: hololens-environment-considerations.md
+    - text: Ticari Özellikler
+      url: hololens-commercial-features.md
+- title: Yapılandırma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: HoloLens için Kullanıcı kimliğini ve oturum açmayı yönetme
+      url: hololens-identity.md
+    - text: Ağınızı HoloLens için yapılandırma
+      url: hololens-commercial-infrastructure.md
+    - text: HoloLens 'i ağa bağlama
+      url: hololens-network.md
+    - text: HoloLens için bağlantı uç noktalarını yönetme
+      url: hololens-offline.md
+    - text: Sağlama paketlerini kullanarak HoloLens yapılandırma
+      url: hololens-provisioning.md
+    - text: HoloLens 'i bilgi noktası olarak ayarlama
+      url: hololens-kiosk.md
+- title: Dağıtma
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: MDM 'ye HoloLens kaydetme
+      url: hololens-enroll-mdm.md
+    - text: HoloLens 2 için Windows Autopilot
+      url: hololens2-autopilot.md
+    - text: Uygulama yönetimine genel bakış
+      url: app-deploy-overview.md
+    - text: Intune & Şirket Portalı
+      url: app-deploy-intune.md
+    - text: Iş için Microsoft Store
+      url: app-deploy-store-business.md
+    - text: Sağlama paketi
+      url: app-deploy-provisioning-package.md
+- title: Bakım ve sorun giderme kılavuzu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: HoloLens sorunlarını giderme
+      url: hololens-troubleshooting.md
+    - text: HoloLens 2 ' yi yeniden başlatın, sıfırlayın veya kurtarın
+      url: hololens-recovery.md
+    - text: HoloLens 'i yeniden başlatma, sıfırlama veya kurtarma (1. Genel)
+      url: hololens1-recovery.md
+    - text: HoloLens için bilinen sorunlar
+      url: hololens-known-issues.md
+    - text: HoloLens cihazlarından tanılama bilgilerini toplayın ve kullanın
+      url: hololens-diagnostic-logs.md
+    - text: HoloLens güncelleştirmelerini yönetme
+      url: hololens-updates.md
+- title: Sürüm notları & geri bildirim
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: HoloLens 2 sürüm notları
+      url: hololens-release-notes.md
+    - text: Microsoft HoloLens için Insider Preview
+      url: hololens-insider.md
+    - text: Geri bildirimde bulunun
+      url: hololens-feedback.md
+- title: Diğer hizmetler
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dynamics 365 uzaktan yardım belgeleri
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview
+    - text: Dynamics 365 uzaktan yardım 'ı öğrenin
+      url: https://docs.microsoft.com/learn/browse/?products=dynamics-remote-assist
+    - text: Dynamics 365 kılavuzlar
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
+    - text: Microsoft Dynamics 365 karma gerçeklik
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+  - linkListType: how-to-guide
+    links:
+    - text: Karma Gerçeklik nedir?
+      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality
+    - text: Tasarlamaya ve prototip oluşturmaya başlayın
+      url: https://docs.microsoft.com/windows/mixed-reality/design
+    - text: Karma Gerçeklik geliştirmeye giriş
+      url: https://docs.microsoft.com/windows/mixed-reality/development?tabs=unity
+    - text: Cloud Services genel bakış
+      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality-cloud-services#overview
+- title: Nasıl yapılır Kılavuzu
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: HoloLens2 için destek ve yardım seçenekleri
+      url: hololens2-support.md
