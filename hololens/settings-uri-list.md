@@ -13,12 +13,12 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b5779ffa1de1700b4fcd17fc17b8ae3a82a45c22
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: d28994d911532a940d82756aa45609571ee80ac3
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380213"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924341"
 ---
 # <a name="page-settings-visibility"></a>Sayfa ayarları görünürlüğü
 
@@ -136,9 +136,9 @@ HoloLens cihazlarının ve Windows 10 cihazlarının Ayarlar uygulamasında fark
 | Ses > uygulama hacmi ve cihaz tercihi <sup>2</sup>           | `ms-settings:apps-volume`<br>|
 | Ses > ses cihazlarını yönetme <sup>2</sup>           | `ms-settings:sound-devices`<br>|
 | Depolama            | `ms-settings:storagesense`           |
-| Depolama > Configue depolama algılaması <sup>2</sup>           | `ms-settings:storagepolicies`<br>|
+| Depolama > depolama algılaması yapılandırma <sup>2</sup>           | `ms-settings:storagepolicies`<br>|
 
-### <a name="time--language"></a>Zaman & dili
+### <a name="time--language"></a>Saat & Dili
 | Ayarlar sayfası | URI                                           |
 |---------------|-----------------------------------------------|
 | Tarih & saat <sup>2</sup> | `ms-settings:dateandtime`                  |
@@ -148,21 +148,21 @@ HoloLens cihazlarının ve Windows 10 cihazlarının Ayarlar uygulamasında fark
 | Dil      | `ms-settings:regionlanguage`<br>`ms-settings:regionlanguage-adddisplaylanguage`<br>`ms-settings:regionlanguage-setdisplaylanguage` |
 | Region        | `ms-settings:regionformatting`                  |
 
-### <a name="update--security"></a>& güvenliğini Güncelleştir
+### <a name="update--security"></a>Güncelleştirme & Güvenliği
 | Ayarlar sayfası                         | URI                                       |
 |---------------------------------------|-------------------------------------------|
 | Gelişmiş Seçenekler                    | `ms-settings:windowsupdate-options`         |
-| & kurtarmayı Sıfırla <sup>2</sup>      | `ms-settings:reset`         |
+| Kurtarma & <sup>2'ye sıfırlama</sup>      | `ms-settings:reset`         |
 | Windows Insider Programı               | `ms-settings:windowsinsider` <br>`ms-settings:windowsinsider-optin`          |
 | Windows Update                        | `ms-settings:windowsupdate`<br> `ms-settings:windowsupdate-activehours`  <br> `ms-settings:windowsupdate-history` <br> `ms-settings:windowsupdate-optionalupdates` <br><sup>1</sup>`ms-settings:windowsupdate-options`<br><sup>1</sup>`ms-settings:windowsupdate-restartoptions` |
-| Windows Update-güncelleştirmeleri denetler | `ms-settings:windowsupdate-action`          |
+| Windows Update - Güncelleştirmeleri denetler | `ms-settings:windowsupdate-action`          |
 
 
->  <sup>1</sup> Windows holographic, sürüm 21H1 ' den önceki sürümlerde, aşağıdaki iki URI gerçekte sizi **Gelişmiş seçeneklere** veya **seçenek** sayfalarına götürür; yalnızca ana Windows Update sayfasını engeller veya gösterir.
-> - MS-Settings: windowsupdate-seçenekler
-> - MS-Settings: windowsupdate-restartoptions
- 
-> <sup>2</sup> -Windows holographic 21H1 veya üzeri sürümlerde kullanılabilir.
+- <sup>1</sup> - Windows Holographic sürüm 21H1'den önceki sürümlerde, aşağıdaki iki URL sizi Gelişmiş seçenekler veya Seçenekler **sayfalarına** **gerçekten de** götürmektedir; yalnızca ana sayfayı Windows Update gösterir.
+  -  ms-settings:windowsupdate-options
+  -  ms-settings:windowsupdate-restartoptions
+
+- <sup>2</sup> - Windows Holographic 21H1 veya üzerinde kullanılabilir.
 
 
-Windows 10 ayarları URI 'lerinin tam listesi için lütfen [başlatma ayarları](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) belgelerini ziyaret edin.
+Ayarlar URL'Windows 10 tam listesi için lütfen başlatma ayarları [belgelerini ziyaret](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.

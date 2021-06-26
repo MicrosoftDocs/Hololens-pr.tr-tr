@@ -14,12 +14,12 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 keywords: ayarlama, rahatlık, görseller, kalite, ipd, HoloLens, Windows Mixed Reality, VR kulaklıklar
-ms.openlocfilehash: e975e2ccd978d4ec6b5331af0ae566af116711c5
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 62d83aa5c6032d15b26fbc7938859bdaf74151f4
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111380163"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924154"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Görsel kalite ve rahatlık geliştirme
 
@@ -50,7 +50,7 @@ Bu işlem sırasında, bir dizi hedefe (Gems) bakacaksınız. Ayarlama sırasın
 
 ![Ayarlama istemi ayarlama.](./images/09-et-adjusting.png)
 
-Ayarlama başarılı olduysa, başarılı bir ekran görürsünüz.  Aksi takdirde, [ayarlama başarısızlıklarını tanılama](#troubleshooting-hololens-2-calibration)hakkında daha fazla bilgi edinin.
+Ayarlama başarılı olduysa, başarılı bir ekran görürsünüz.  Aksi takdirde, [ayarlama başarısızlıklarını tanılama](hololens2-display.md#troubleshooting)hakkında daha fazla bilgi edinin.
 
 ![Ayarlama isteği başarılı.](./images/10-et-success.png)
 
@@ -94,34 +94,6 @@ Otomatik gözle, göz Izleme ayarlaması istem iletişim kutusu, bir uygulama, v
 
 Kullanıcı, göz Izleme ayarlamasını başlatmayı seçerse, odak ayarlama tamamlandıktan sonra orijinal uygulamaya geri dönmelidir. 
 
-### <a name="troubleshooting-hololens-2-calibration"></a>HoloLens 2 ayarlaması sorunlarını giderme
-
-Ayarlama çoğu kişi için çalışmalıdır, ancak ayarlama işleminin başarısız olduğu durumlar vardır.
-  
-Ayarlama hatasının bazı olası nedenleri şunlardır:
-
-- Ayarlama hedeflerini takip etme
-- Kirli veya çizilmiş cihaz vizörü veya cihaz vizörü düzgün şekilde konumlandırılmadı
-- Kirli veya çizik gözlük
-- Belirli türlerde iletişim ve gözlük (renkli kişi mercekler, bazı haksız kişi mercekler, IR engelleme gözlüğü, yüksek kaliteli gözlük, güneş gözlüğü veya benzer)
-- Daha fazla bilgi ve bazı eyeflash uzantıları
-- Cihazın gözlerinizi görmesini engelliyorsa, saç veya kalın eyecam çerçeveler
-- Dar gözler, uzun Eyelashes, amblyopia, nystagmus, bazı LASIK veya diğer gözle bazı durumlar gibi belirli gözle, göz önünde ve göz yormalileri
-
-Ayarlama başarısız olursa, deneyin:
-
-- Cihazınızı Temizleme vizörü
-- Gözlerinizi Temizleme
-- Cihazınızın vizörü ' i mümkün olduğunca yakın bir şekilde iletme
-- Nesneleri (örneğin, saç) vizörü içinde hareket ettirmenin
-- Odadaki bir ışığı açma veya doğrudan güneş dışına taşıma
-
-Tüm yönergeleri izlediyseniz ve ayarlama hala başarısız olursa, Ayarlar ' da ayarlama isteğini devre dışı bırakabilirsiniz. Ayrıca, [geri bildirim merkezinde](hololens-feedback.md)geri bildirimde bulunarak bize bilgi verin.
-
-Ayrıca, [görüntü renk veya parlaklık sorun giderme](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right) için ilgili bilgiler bölümüne bakın.
-
-Gözle ayar konumları sistem tarafından hesaplandığından, ıPD ayarı HoloLens 2 için geçerli değildir. 
-
 ### <a name="calibration-data-and-security"></a>Ayarlama verileri ve güvenliği
 
 Ayarlama bilgileri cihazda yerel olarak depolanır ve herhangi bir hesap bilgileriyle ilişkili değildir. Cihazı ayarlama olmadan kimin kullanmışsa bir kayıt yoktur. Bu yeni kullanıcılardan, cihazı ilk kez kullandıklarında görselleri ayarlaması istenir ve daha önce ayarlamayı devre dışı bırakılmış olan kullanıcılar başarısız olur.
@@ -154,37 +126,37 @@ HoloLens (1. gen), hologram görüntüsünü kendi [takdirine](https://en.wikipe
 
 HoloLens (1. gen) cihazınızı ayarlarken, Cortana herkendi kendini tanıtdıktan sonra görsellerinizi ayarlamayı ister. Bu kurulum aşamasında ayarlama adımını doldurmanız önerilir. Bununla birlikte, Cortana sizi isteyip istemediğinizi bekleyip "atla" diyerek bu öğeyi atlayabilirsiniz.
 
-Ayarlama işlemi sırasında, HoloLens, parmağınızı her göz için bir dizi altı hedefe hizalamanızı ister. HoloLens bu işlemi, IPD 'yi gözleriniz için doğru şekilde ayarlamak üzere kullanır.
+Ayarlama işlemi sırasında, HoloLens, parmağınızı her göz için bir dizi altı hedefe hizalamanızı ister. HoloLens, IPD'yi sizin için doğru şekilde ayarlamak için bu işlemi kullanır.
 
-![İkinci adımda ıPD Finger hizalama ekranı](./images/ipd-finger-alignment-300px.jpg)
+![İkinci adımda IPD parmak hizalama ekranı](./images/ipd-finger-alignment-300px.jpg)
 
 ### <a name="manually-start-the-calibration-process"></a>Ayarlama işlemini el ile başlatma
 
-Ayarlamayı güncelleştirmeniz gerekiyorsa veya yeni bir kullanıcının onu ayarlaması gerekiyorsa, ayarlama uygulamasını dilediğiniz zaman el ile çalıştırabilirsiniz. Ayar uygulaması varsayılan olarak yüklenir. **Başlat** menüsünü veya ayarlar uygulamasını kullanarak bu uygulamaya erişebilirsiniz.
+Ayarlamayı güncelleştirmeniz gerekirse veya yeni bir kullanıcının ayarlaması gerekirse, Ayarlama uygulamasını istediğiniz zaman el ile çalıştırabilirsiniz. Ayar uygulaması varsayılan olarak yüklenir. Başlat menüsünü veya Ayarlar uygulamasını **kullanarak** erişebilirsiniz.
 
-Ayar uygulamasını çalıştırmak için **Başlat** menüsünü kullanmak için şu adımları izleyin:
+Başlat menüsünü **kullanarak** Ayarlama uygulamasını çalıştırmak için şu adımları izleyin:
 
-1. **Başlat** menüsünü açmak için [Bloom](hololens1-basic-usage.md) hareketini kullanın.
-1. Tüm uygulamaları görüntülemek için öğesini seçin **+** .
-1. **Ayarlama** seçeneğini belirleyin.
+1. Başlat [menüsünü açmak](hololens1-basic-usage.md) için bloom **hareketini** kullanın.
+1. Tüm uygulamaları görüntülemek için öğesini **+** seçin.
+1. **Ayar'ı seçin.**
 
 ![Kabuktan ayarlama uygulamasına erişme](./images/calibration-shell.png)
 
-![Başlatıldıktan sonra canlı küp olarak görünen ayarlama uygulaması](./images/calibration-livecube-200px.png)
+![Canlı Küp olarak görüntülenen ayarlama uygulaması başlatıldıktan sonra](./images/calibration-livecube-200px.png)
 
-Ayarlama uygulamasını çalıştırmak üzere Ayarlar uygulamasını kullanmak için şu adımları izleyin:
+Ayarlar uygulamasını Kullanarak Ayarlama uygulamasını çalıştırmak için şu adımları izleyin:
 
-1. **Başlat** menüsünü açmak için [Bloom](hololens1-basic-usage.md) hareketini kullanın.
-1. **Ayarlar** **Başlangıç** için sabitlenmemişse, **+** tüm uygulamaları görüntülemek için seçin.
+1. Başlat [menüsünü açmak](hololens1-basic-usage.md) için bloom **hareketini** kullanın.
+1. Ayarlar **Başlat'a** sabitlenmiş **değilse,** tüm **+** uygulamaları görüntülemek için öğesini seçin.
 1. **Ayarlar**'ı seçin.
-1. **Sistem**  >  **yardımcı programları**  >  **açma ayarlama** seçeneğini belirleyin.
+1. Sistem **Yardımcı Programları** Açık  >    >  **Ayarlama'yi seçin.**
 
-![Ayarlar uygulamasından ayarlama uygulaması başlatılıyor](./images/calibration-settings-500px.jpg)
+![Ayarlar uygulamasından ayarlama uygulamasını başlatma](./images/calibration-settings-500px.jpg)
 
-## <a name="immersive-headsets"></a>Modern kulaklıklar
+## <a name="immersive-headsets"></a>Çevreleyici başlığı
 
-Bazı derinlikli kulaklıklar, ıPD ayarını özelleştirme olanağı sağlar. Kulaklıklarınız için ipd 'yi değiştirmek üzere Ayarlar uygulamasını açın ve **karma gerçeklik**  >  **kulaklık görüntüsünü** seçin ve ardından kaydırıcı denetimini taşıyın. Değişiklikleri, kulaklığınızın gerçek zamanlı olarak görürsünüz. IPD 'nizi biliyorsanız, optometrik 'e bir ziyaretten belki de doğrudan girebilirsiniz.
+Bazı çevreleyici başlığı, IPD ayarını özelleştirme olanağı sağlar. Başlığın IPD'sini değiştirmek için Ayarlar uygulamasını açın ve **Karma** gerçeklik Başlığı görüntüsü'ne tıklayın ve  >  kaydırıcı denetimi hareket ettirin. Değişiklikleri başlığında gerçek zamanlı olarak görüyorsunuz. IPD'nizi biliyorsanız, ziyaretten sonra doğrudan da girebilirsiniz.
 
-Ayrıca, **Ayarlar**  >  **karma gerçeklik**  >  **kulaklık ekranı**' nı seçerek bu ayarı bilgisayarınızda da ayarlayabilirsiniz.
+Bu ayarı bilgisayarınızda Ayarlar Karma gerçeklik Başlığı ekranı seçeneğini **kullanarak**  >  **da**  >  **ayarlayabilirsiniz.**
 
-Kulaklığınızın ıPD özelleştirmesini desteklememesi durumunda bu ayar devre dışı bırakılır.
+Başlığınız IPD özelleştirmesini desteklemezse bu ayar devre dışı bırakılır.

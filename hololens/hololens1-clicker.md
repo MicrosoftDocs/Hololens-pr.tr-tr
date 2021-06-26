@@ -13,12 +13,12 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 4b17fc134846a66046a819c56755d87206c5643e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 83e5a746b6900c547778c71a0855426563458032
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379159"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924069"
 ---
 # <a name="use-the-hololens-1st-gen-clicker"></a>HoloLens (1. gen) Click kullanın
 
@@ -75,6 +75,15 @@ Merçi hareketleri, HoloLens el hareketleri için kullanılan daha büyük taş�
 > [!TIP]
 > Microsoft Edge 'i kullanarak yakınlaştırmak veya uzaklaştırmak için bir sayfada Gaze ve çift tıklayın.
 
+## <a name="im-having-problems-using-the-hololens-clicker"></a>HoloLens 'i kullanarak sorun yaşıyorum
+
+Hologragram seçme, kaydırma, taşıma ve yeniden boyutlandırma için [Click](hololens1-clicker.md) kullanın. Ayrı uygulamalar, ek Click hareketlerini destekleyebilir.
+
+Click ile ilgili sorun yaşıyorsanız, bunun ücretlendirildiği ve HoloLens ile eşleştirilmiş olduğundan emin olun. Pil düşükse, gösterge açık yanıp sönme. Click 'in eşleştirildiğini doğrulamak için, **Ayarlar**  >  **cihazlar** ' a gidin ve burada görünür olup olmadığını görün. Daha fazla bilgi için, bkz. [Click 'ı eşleştirme](hololens1-clicker.md).
+
+Click 'e ücretlendirildikten ve eşlenmeye devam ediyorsanız ve sorun yaşıyorsanız, ana düğmeyi ve eşleştirme düğmesini 15 saniye basılı tutarak sıfırlayın. Ardından, bir daha sonra Holomeryi bir kez daha eşleştirin.
+
+Click 'in sıfırlanması yardım vermezse, bkz. [HoloLens 'ı yeniden başlatma veya kurtarma](hololens1-clicker.md#restart-or-recover-the-clicker).
 ## <a name="restart-or-recover-the-clicker"></a>Click 'i yeniden başlatın veya kurtarın
 
 HoloLens, yanıt vermemeye başlarsa veya düzgün çalışmıyorsa deneyebileceğiniz bazı şeyler aşağıda verilmiştir.
@@ -100,3 +109,4 @@ Click 'i kurtarmak için:
 1. Windows cihaz kurtarma aracı 'nı çalıştırın ve yönergeleri izleyin.
 
 Click otomatik olarak algılanmazsa **cihazımın algılanmadığını** seçin ve cihazınızı kurtarma moduna almak için yönergeleri izleyin.
+

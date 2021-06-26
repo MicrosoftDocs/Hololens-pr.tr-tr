@@ -13,12 +13,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ffae65a6e1c096242ae7a28c488896c65df1c62d
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: e02950bf6cb70e381e3bc5850509bc65267759c1
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380243"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924188"
 ---
 # <a name="connect-to-bluetooth-and-usb-c-devices"></a>Bluetooth ve USB-C cihazlarına bağlanma
 
@@ -44,7 +44,7 @@ HoloLens (1. nesil), aşağıdaki Bluetooth cihaz sınıflarını destekler:
 - [HoloLens (1. nesil) tıklama](https://docs.microsoft.com/hololens/hololens1-clicker)
 
 > [!NOTE]
-> HoloLens ayarlarında konuşmacılar, mikrofonlu telefonlar, akıllı telefonlar ve oyun paneli gibi diğer Bluetooth cihaz türleri listelenmiş olabilir. Ancak bu cihazlar HoloLens'te (1. nesil) desteklenmiyor. Daha fazla bilgi için [bkz. HoloLens Ayarları](hololens-FAQ.md#hololens-settings-lists-devices-as-available-but-the-devices-dont-work)cihazları kullanılabilir olarak listeler, ancak cihazlar çalışmıyor.
+> HoloLens ayarlarında konuşmacılar, mikrofonlu telefonlar, akıllı telefonlar ve oyun paneli gibi diğer Bluetooth cihaz türleri listelenmiş olabilir. Ancak bu cihazlar HoloLens'te (1. nesil) desteklenmiyor. Daha fazla bilgi için [bkz. HoloLens Ayarları](hololens-troubleshooting.md#devices-listed-as-available-in-settings-dont-work)cihazları kullanılabilir olarak listeler, ancak cihazlar çalışmıyor.
 
 ### <a name="pair-a-bluetooth-keyboard-or-mouse"></a>Bluetooth klavyesini veya faresini eşleştirme
 
@@ -84,7 +84,7 @@ HoloLens 2, aşağıdaki USB-C cihaz sınıflarını destekler:
 ### <a name="usb-c-external-microphone-support"></a>USB-C Dış Mikrofon Desteği
 
 > [!IMPORTANT]
-> BIR **USB mikrofona takan, bunu giriş cihazı olarak otomatik olarak ayarlamaz.** Kullanıcılar bir USB-C klavyesi kümesine takılıyken, mikrofonlu cihazın sesinin otomatik olarak mikrofona yeniden yönlendirilmesine neden olduğunu gözlemler ancak HoloLens işletim sistemi, iç mikrofon dizisini diğer giriş cihazlarından yüksek önceliklendirmektedir. **USB-C mikrofonunu kullanmak için aşağıdaki adımları izleyin.**
+> BIR **USB mikrofona takan, bunu giriş cihazı olarak otomatik olarak ayarlamaz.** Kullanıcılar bir USB-C kulaklık kümesine takılıyken, mikrofonlu cihazın sesinin otomatik olarak mikrofonlara yeniden yönlendirilmesine neden olduğunu gözlemler ancak HoloLens işletim sistemi, iç mikrofon dizisini diğer giriş cihazlarından yüksek önceliklendirmektedir. **USB-C mikrofonunu kullanmak için aşağıdaki adımları izleyin.**
 
 > [!NOTE]
 > Dış mikrofonlar, Windows Holographic sürüm [21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve daha önceki derlemelerde kullanılamaz. 
@@ -100,7 +100,7 @@ Ayarlar uygulamasını **açın** ve Sistem **Sesi'ne**  >  **tıklayın.**
 >
 > Ardından, dış mikrofonu Varsayılan veya İletişim Varsayılanı olarak ayarlamak **için açılır** **liste kullanın.** **Varsayılan'ın** seçerek dış mikrofon her yerde kullanılacaktır.
 >
-> İletişim **Varsayılanı'nın** seçimi, dış mikrofonun Remote Assist ve diğer iletişim uygulamaları için kullanılamayacak, ancak HoloLens mikrofon dizisi diğer görevler için de kullanılabilir.
+> İletişim **Varsayılanı'nın** seçimi, dış mikrofonun Remote Assist ve diğer iletişim uygulamaları için kullanılamayacak, ancak HoloLens mikrofon dizisi diğer görevler için hala kullanılabilir.
 
 ![Ses cihazlarını yönetme](images/usbc-mic-2.png)
 
@@ -112,13 +112,6 @@ Ayarlar uygulamasını **açın** ve Sistem **Sesi'ne**  >  **tıklayın.**
 
 Ne yazık ki, HoloLens 2'de Bluetooth mikrofonları şu anda desteklenmiyor.
 
-#### <a name="troubleshooting-usb-c-microphones"></a>USB-C mikrofon sorunlarını giderme
-
-Bazı USB-C mikrofonlarının kendilerini hem mikrofon hem de konuşmacı olarak yanlış şekilde *raporlasalar.* Bu, HoloLens ile değil mikrofonla ilgili bir sorundur. Bu mikrofonlardan birini HoloLens'e takarak ses kaybolabilir. Neyse ki basit bir düzeltme var.  
-
-Ayarlar   ->  **Sistem**  ->  **Sesi'nin** içinde yerleşik konuşmacıları (Analog Özellik Ses **Sürücüsü) Varsayılan** cihaz olarak açıkça **ayarlayın.** HoloLens, mikrofon daha sonra kaldırılarak yeniden bağlansa bile bu ayarı hatırlaması gerekir.
-
-![USB-C mikrofon sorunlarını giderme](images/usbc-mic-4.png)
 ### <a name="usb-c-hubs"></a>USB-C Hub'ları
 
 Bazı kullanıcıların aynı anda birden çok cihaza bağlanması gerekir. [USB-C](#usb-c-external-microphone-support) mikrofonunu başka bir bağlı cihazla birlikte kullanmak isteyen kullanıcılar için, USB-C hub'ları müşterinin ihtiyaçlarına uygun olabilir. Microsoft bu cihazları test edilmemiştir ve herhangi bir marka önerilmez.

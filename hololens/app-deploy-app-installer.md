@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9e413963dbf34dd071fc9603487590065b967ee7
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: d8be5c2ed7fba38b6710aba9c122557a36073a79
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111378999"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924137"
 ---
 # <a name="install-apps-on-hololens-2-via-app-installer"></a>Uygulama yükleyicisi aracılığıyla HoloLens 2 ' ye uygulama yükleme
 
@@ -107,8 +107,6 @@ Uygulama artık cihaza yüklenir. Uygulamayı bulmak için **Başlat menüsünü
 
 ## <a name="sample-apps"></a>Örnek Uygulamalar
 
-Uygulama yükleyicisini bazı örnek uygulamalarla denemek için bazı mevcut örneklerimizden göz atın:
-
-- [MRTK örnekleri Merkezi](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html)
-- [Leri](https://docs.microsoft.com/windows/mixed-reality/develop/unity/sampleapp-surfaces)
-- [Test için kullanılabilen UWP örnek uygulamaları](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples)
+Uygulama yükleyicisini kullanılabilir örnek uygulamalarımızdan biriyle deneyin. 
+> [!div class="nextstepaction"]
+> [Örnek uygulamalar](https://docs.microsoft.com/windows/mixed-reality/develop/features-and-samples?tabs=unity#sample-apps)

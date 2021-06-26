@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f7ee1849e51132f0e3d30585cfed6a89ecfee2a9
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: a3e54bd586502207d24e28d7d2eeadd659b3e019
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111378955"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924562"
 ---
 # <a name="hololens-2-development-edition-faq"></a>HoloLens 2 geliştirme sürümü SSS
 
@@ -161,27 +161,27 @@ Kullanılacak yönler
 
 ### <a name="how-do-i-contact-pixyz-support"></a>Nasıl yaparım?, pikselde desteğe başvurun mi?
 
-Unity KIMLIĞINIZ, hesabınız, kuruluşunuz ve abonelikleriniz hakkında sorularınız hakkında yardım almak için lütfen support.unity3d.com ziyaret edin
+Unity kimliğiniz, hesabınız, kuruluşlarınız ve abonelikleri hakkında sorularınızla ilgili yardım almak için lütfen şu sayfayı ziyaret support.unity3d.com
 
-Pikselleme özgü destek için (deneme sürümünüzü yükselttikten sonra) lütfen [Pixyz-Software.com/support](http://pixyz-software.com/support) ziyaret edin
+Pixyz'e özgü destek için (denemenizi [](http://pixyz-software.com/support) kullandıktan sonra) lütfen Pixyz-software.com/support
 
 
 ## <a name="azure"></a>Azure
 
-### <a name="how-can-i-redeem-my-500-azure-credit"></a>$500 Azure kredimi nasıl kullanabilirim?
+### <a name="how-can-i-redeem-my-500-azure-credit"></a>500 ABD doları olan Azure kredimi nasıl kullanabilirim?
 
-$500 Azure kredilerinizi kullanmak için Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
+500 ABD doları Azure kredinizi kullanmak için, Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
 
-Azure Pass [Abonelik Sözleşmesi](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) ve [Teklif Ayrıntıları](https://azure.microsoft.com/en-us/offers/azure-pass/)' nı gözden geçirin.
+Abonelik Azure Pass ve [teklif ayrıntılarını](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [gözden geçirebilirsiniz.](https://azure.microsoft.com/en-us/offers/azure-pass/)
 
-### <a name="when-does-my-500-azure-credit-expire"></a>$500 Azure kredisi ne zaman dolacak?
+### <a name="when-does-my-500-azure-credit-expire"></a>500 ABD doları olan Azure kredimin süresi ne zaman dolar?
 
-$500 Azure krediniz, Azure anahtar kodunuzu etkinleştirdikten sonra 90 gün sonra sona eriyor.
+500 ABD doları azure kredinizin süresi, Azure anahtar kodunuzu etkinleştirdikten 90 gün sonra dolar.
 
-### <a name="what-can-i-do-with-my-azure-credits"></a>Azure kredilerimle ne yapabilirim?
+### <a name="what-can-i-do-with-my-azure-credits"></a>Azure kredilerimi kullanarak ne yapabilirim?
 
-Azure kredileriniz sayesinde, Microsoft&#39;s 'yi sürekli genişleyen bulut hizmetleri kümesiyle oluşturmaya başlayabilirsiniz. HoloLens 2 geliştirme sürümüne dahil edilen Azure kredileri, müşterilerin Azure 'da karışık gerçeklik uygulamaları oluşturmaya ve test etmeye hemen başlayın. Azure 'da oluşturma hakkında ayrıntılı bilgi için [Azure kaynaklarını](https://azure.microsoft.com/en-us/resources/) ziyaret edin
+Azure kredilerinizi kullanarak, Microsoft&#39;giderek genişleyen bulut hizmetleri kümesiyle çalışmalara başlayabilirsiniz. HoloLens 2 Geliştirme Sürümü'ne dahil edilen Azure kredileri, müşterilerin Azure'da karma gerçeklik uygulamaları yapmaya ve test etmeye hızla başlamalarını sağlamaktır. Azure'da binaya ilişkin tüm ayrıntılar için Azure kaynaklarını [ziyaret edin](https://azure.microsoft.com/en-us/resources/)
 
-### <a name="where-can-i-learn-more-about-azure-mixed-reality-services"></a>Azure Karma Gerçeklik hizmetleri hakkında nereden daha fazla bilgi edinebilirim?
+### <a name="where-can-i-learn-more-about-azure-mixed-reality-services"></a>Azure karma gerçeklik hizmetleri hakkında nereden daha fazla bilgi edin olabilirim?
 
-Microsoft, geliştiricilerin karma gerçeklik çözümlerini oluşturup test etmelerine olanak tanımak için bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)
+Microsoft, geliştiricilerin karma gerçeklik çözümleri oluşturmasına ve test sına olanak sağlayan bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)

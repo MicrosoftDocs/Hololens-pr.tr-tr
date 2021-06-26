@@ -19,12 +19,12 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 6c9d1551b2a3348a6ff9962180c2d5552eb100f1
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: faa6bb2b095d69c3538063b1c042c5ce5e215d33
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380217"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924086"
 ---
 # <a name="manage-hololens-updates"></a>HoloLens güncelleştirmelerini yönetme
 
@@ -77,20 +77,20 @@ Güncelleştirmelerin nasıl ve ne zaman uygulanıyor olduğunu yapılandırmak 
   - Varsayılan değer: **0** (her gün)
 - [Update/ScheduledInstallTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
   - Değerler: 0–23 (0 = gece yarısı, 23 = 11 PM)
-  - Varsayılan değer: 15:00
+  - Varsayılan değer: 03:00
 
 #### <a name="configure-active-hours"></a>Etkin saatleri yapılandırma
 Windows [Holographic sürüm 20H2'den](hololens-release-notes.md#windows-holographic-version-20h2) başlayarak, bir IT Yöneticisi HoloLens 2 cihazları için etkin saat aralığını belirtebilirsiniz.
 
 Etkin saatler, cihazın kullanımda olmasını beklediğiniz zamanı gösterir. Güncelleştirmeden sonra otomatik yeniden başlatmalar etkin saatlerin dışında gerçekleşir. Belirtilen aralık, etkin saat başlangıç zamanından itibaren sayılır. MDM ile etkin saatleri yapılandırma konusunda [açıklandığı gibi MDM'i kullanabilirsiniz.](https://docs.microsoft.com/windows/deployment/update/waas-restart#configuring-active-hours-with-mdm) MDM, etkin saatleri yapılandırmak için İlke CSP'sinde Update/ActiveHoursStart ve Update/ActiveHoursEnd ve Update/ActiveHoursMaxRange ayarlarını kullanır.
 
--   [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend) - Bu değer bitiş saati ayarlar. Başlangıç zamanından itibaren en fazla 12 saat olur.
+-   [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend) - Bu değer bitiş saati ayarlar. Başlangıç zamanından itibaren en fazla 12 saat sürer.
     -   Desteklenen değerler 0-23'tir; burada 0 12 am, 1 ise 1 am vb. olur.
     -   Varsayılan değer 17'dir (17:00).
 -   [Update/ActiveHoursMaxRange](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange) - Bu değer başlangıç zamanından itibaren en fazla etkin saat sayısını ayarlar.
     -   Desteklenen değerler 8-18'tir.
-    -   Varsayılan değer 18 'tir (saat).
--   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart) - Bu değer başlangıç saati ayarlar. Bitiş zamanından itibaren en fazla 12 saat olur.
+    -   Varsayılan değer 18'tir (saat).
+-   [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart) - Bu değer başlangıç saati ayarlar. Bitiş zamanından itibaren en fazla 12 saat sürer.
     -   Desteklenen değerler 0-23'tir; burada 0 12 am, 1 ise 1 am vb. olur.
     -   Varsayılan değer 8 'tir (8 AM).
 
@@ -108,7 +108,7 @@ HoloLens 2, HoloLens'in (1. nesil) desteklediğinden daha fazla güncelleştirme
 
 #### <a name="plan-the-update-strategy"></a>Güncelleştirme stratejisini planlama
 
-İş için Windows Güncelleştirmeleri erteleme ilkelerini destekler. Microsoft bir güncelleştirmeyi yayımladikten sonra, bir erteleme ilkesi kullanarak bu güncelleştirmeyi cihazlara yüklemeden önce ne kadar beklemeniz gerektir olduğunu tanımlayabilirsiniz. Cihaz alt kümelerinizi (güncelleştirme halkaları olarak da *bilinir)* farklı erteleme ilkeleriyle bağdarak, bir güncelleştirme alma stratejisini kuruluş için koordine edin.
+İş için Windows Güncelleştirmeleri erteleme ilkelerini destekler. Microsoft bir güncelleştirmeyi yayımladikten sonra, bir erteleme ilkesi kullanarak bu güncelleştirmeyi cihazlara yüklemeden önce ne kadar bekleyeceğinizi tanımlayabilirsiniz. Cihaz alt kümelerinizi (güncelleştirme halkaları olarak da *bilinir)* farklı erteleme ilkeleriyle bağdarak, bir güncelleştirme alma stratejisini kuruluş için koordine edin.
 
 Örneğin, 1.000 cihazı olan ve cihazları beş dalgada güncelleştirmesi gereken bir kuruluş düşünün. Kuruluş, aşağıdaki tabloda gösterildiği gibi beş güncelleştirme halkası oluşturabilir.
 
@@ -137,7 +137,7 @@ Erteleme ilkesi, güncelleştirmenin kullanılabilir olduğu tarih ile cihazın 
 
 #### <a name="pause-updates-via-device"></a>Güncelleştirmeleri cihaz üzerinden Duraklat
 
-Bir kullanıcının MDM 'ye erişimi yoksa [, Windows holographic, sürüm 2004](hololens-release-notes.md#windows-holographic-version-2004) veya sonraki sürümlerini oluşturan bir HoloLens 2 cihazında güncelleştirmeleri tek başına 35 güne kadar duraklatabilirsiniz. **Ayarlar-> güncelleştirme & güvenlik-> gelişmiş seçenekler** ' e giderek bu ayara ulaşabilir ve güncelleştirmeleri **duraklatmak** için aşağı kaydırın ve güncelleştirmeleri duraklatmaya kadar olan tarihi seçin. Bir Kullanıcı duraklatma sınırına ulaştığında, yeniden duraklatılamadığından cihazın yeni güncelleştirmeler alması gerekir. 
+Bir kullanıcının MDM 'ye erişimi yoksa [, Windows holographic, sürüm 2004](hololens-release-notes.md#windows-holographic-version-2004) veya sonraki sürümlerini oluşturan bir HoloLens 2 cihazında güncelleştirmeleri tek başına 35 güne kadar duraklatabilirsiniz. Kullanıcılar bu ayara giderek **ayarlar > güncelleştirme & güvenlik > gelişmiş seçenekler** ' e giderek güncelleştirmeleri **duraklatabilir** ve güncelleştirmeleri duraklatmaya kadar olan tarihi seçer. Kullanıcı duraklatma sınırına ulaştığında, yeniden duraklamadan önce cihazın yeni güncelleştirmeler alması gerekir. 
 
 [Windows holographic, sürüm 20H2](hololens-release-notes.md#windows-holographic-version-20h2)ile başlayarak, bu güncelleştirme duraklatma Işlevi, Hololens 2 cihazları için yönetilebilir. 
 - [Güncelleştirme/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess).

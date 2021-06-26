@@ -1,7 +1,7 @@
 ---
-title: Yeni bir HoloLens hazırlama 2
-description: HoloLens 2 cihazınızı, sistem durumu ve güvenlik ipuçları ve donanım kılavuzlarıyla birlikte ilk kez ayarlama ve ayarlama hakkında bilgi edinin.
-keywords: Hololens, ışıklar, sığdırma, rahatlık, parçalar
+title: Yeni bir HoloLens 2 hazırlama
+description: HoloLens 2 cihazınızı sağlık ve güvenlik ipuçları ve donanım kılavuzları dahil olmak üzere ilk kez ayarlamayı ve ayarlamayı öğrenin.
+keywords: hololens, lights, fit, konfor, parçalar
 ms.assetid: 02692dcf-aa22-4d1e-bd00-f89f51048e32
 ms.date: 9/17/2019
 ms.prod: hololens
@@ -12,91 +12,91 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9a1d9eaccb212474f47fd277c77fb41784f9ddc5
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 22b3dad817260175bccdb89faac0bbae7b210038
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380143"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924443"
 ---
-# <a name="get-your-hololens-2-ready-to-use"></a>HoloLens 2 ' ye kullanım için hazırlanın
+# <a name="get-your-hololens-2-ready-to-use"></a>HoloLens 2'nizi kullanıma hazır hale getirmek
 
-Aşağıdaki yordamlar, HoloLens 2 ' nin ilk kez kurulumunu yapmanıza yardımcı olur.
+Aşağıdaki yordamlar HoloLens 2'i ilk kez ayarlamanıza yardımcı olur.
 
-## <a name="charge-your-hololens"></a>HoloLens 'nizi ücretlendirin
+## <a name="charge-your-hololens"></a>HoloLens'inizi ücretlendirin
 
-Güç kaynağını, USB-C kablosunu (dahil) kullanarak ücretlendirme bağlantı noktasına bağlayın. Güç kaynağını bir güç prizine takın. Cihazla birlikte gelen güç kaynağı ve USB-c-C kablosu, HoloLens 2 ' inizi ücretlendirmenin en iyi yoludur. Cihazınızın şarj cihazına, 18W gücü (2a 'da 9V) sağlar. HoloLens 2 cihazları sağlanan duvar karağını kullanarak, cihaz bekleme modundayken 65 dakikadan kısa bir süre içinde pili tam olarak ücretlendiriyolabilir.
+USB-C kablosunu (dahil) kullanarak güç besleme noktasını ücretlendirme bağlantı noktasına bağlayın. Güç beslemeyi bir güç çıkışına takın. Cihazla birlikte gelen güç kaynağı ve USB-C-C kablosu, HoloLens 2'nizi ücretlendirecek en iyi yoldır. Malzeme 18W güç sağlar (2A'da 9V). HoloLens 2 cihazları, sağlanan duvar duvarını kullanarak, cihaz beklemedeyken 65 dakikadan kısa bir süre içinde pilin dolup dolmayyabilirsiniz.
 
-Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
+Ücretlendirme hızı ve hızı, cihazın çalıştır olduğu ortama bağlı olarak değişebilir.
 
-- Cihaz şarj edildiğinde, pil göstergesi, geçerli ücret düzeyini belirtmek için ışıkları.  Son ışık, etkin şarjın olduğunu göstermek için soluklaşır ve artacaktır.
-- HoloLens 'niz açık olduğunda, pil göstergesi pil düzeyini artışlarla görüntüler.
-- Beş ışığının yalnızca biri açık olduğunda, pil düzeyi yüzde 20 ' nin altında olur.
-- Pil düzeyi kritik düzeyde düşükse ve cihazı açmaya çalışırsanız, bir ışık kısa bir süre yanıp söndürmez ve sonra da çıkar.
+- Cihaz ücretlendirmeye devam edin. Pil göstergesi, geçerli ücret düzeyini belirtmek için yanıp söner.  Son ışık, etkin ücretlendirmeyi göstermek için belirecek ve sönecek.
+- HoloLens'iniz etkin olduğunda pil göstergesi pil düzeyini artımlarla görüntüler.
+- Beş ışığın yalnızca biri açık olduğunda pil düzeyi yüzde 20'nin altında olur.
+- Pil düzeyi kritik düzeyde düşükse ve cihazı açmayı denersiniz, bir ışık kısa bir süre yanıp söner ve sonra gider.
 
-Daha fazla bilgi gerekirse [cihaz şarjındaki tüm ayrıntılar buradan okunabilir](hololens-recovery.md#charge-the-device) . 
+Daha [fazla bilgi gerekirse, cihaz ücretlendirmeyle ilgili](hololens2-charging.md#charging-the-device) tüm ayrıntıları burada okuyabilirsiniz. 
 
-## <a name="adjust-fit"></a>Sığdırmayı ayarla
+## <a name="adjust-fit"></a>Fit'i ayarlama
 
-HoloLens 2 ' i kafaya yerleştirin. Gözeyede aşdığınızda, bunları açık bırakın.  Broş paneli, kendi başkananıza rahat bir şekilde oturmalıdır ve arka bantın ortasından geri doğru olması gerekir.
+HoloLens 2'i kafanıza koyarak. Gözlük takıyorsanız açık bırakın.  Kaş panelinin, sizin gibi bir yerde, arka bandın da kafanıza doğru yerde olması gerekir.
 
-Gerekirse, ayarlama tekerleğini açıp daha sonra ek yükü strap 'yi gevyana ekleyerek başlık bandı ' ni genişletin.
+Gerekirse, ayarlama tekerleğini döndürerek baş bandı genişletin ve ek yükü gevşetin.
 
 ![HoloLens 2 sığdırma ve ayarlamalar](images/hololens2-fit.png)
 
-### <a name="attach-and-detach-the-overhead-strap"></a>Ek yükü strap 'yi iliştirme ve ayır
+### <a name="attach-and-detach-the-overhead-strap"></a>Ek yükü ekleme ve ayırma
 
-Ek yükü strap gerekli değildir, ancak uzun kullanım dönemlerinde HoloLens 2 ' yi daha rahat bir şekilde kullanabilirler.
+Ek yük yükü gerekli değildir, ancak uzun kullanım dönemleri boyunca HoloLens 2'nin daha rahat takmasını da mümkün hale getirir.
 
-Ek yükün önünü ayırmak için, strap 'yi kaldırır ve Brow panelinde Retractable döngüsü aracılığıyla kaydırın. Yeniden iliştirmek için döngüyü çekin ve geriye doğru katman kaydırın.
+Ek yük yükünün ön halkasını ayırmak için, kancayı ayırarak atılabilir döngü boyunca atarak atılabilir durumdaki bir döngüye kaydırın. Yeniden eklemek için döngüyü çekin ve geri kaydırarak geri kaydırın.
 
-Ek yükü strap 'nin geri ayrılması için her bağlantı sekmesinin altındaki düğmeye basın ve yavaşça çekin. Yeniden iliştirmek için bağlantı sekmelerini tıkladıkları sürece yuvalara geri gönderin.
+Ek yük yükünün arkasını ayırmak için her bağlantı sekmesinin altındaki düğmeye basın ve hafifçe çekin. Bunu yeniden yapmak için bağlantı sekmelerini tık olana kadar yuvalara geri itin.
 
-![HoloLens 2 baş strap 'yi iliştirme veya kaldırma](images/hololens2-headstrap.png)
+![HoloLens 2 başını ekleme veya kaldırma](images/hololens2-headstrap.png)
 
-## <a name="turn-on-the-hololens-2"></a>HoloLens 2 ' i açın
+## <a name="turn-on-the-hololens-2"></a>HoloLens 2'i açma
 
-HoloLens 2 ' yi açmak için, güç düğmesine basın.  Güç düğmesinin altındaki LED 'ler pil düzeyini görüntüler.
+HoloLens 2'nizi açmak için Güç düğmesine basın.  Güç düğmesinin altındaki LED'ler pil düzeyini görüntüler.
 
 > [!NOTE]
-> HoloLens 2 ' yi ilk kez açmak için, kutudan çıktıktan sonra, açmak için en az 4 saniye boyunca güç düğmesine basın ve basılı tutun. HoloLens 2 ' yi bir sonraki sefer açışınızda, kısa bir güç düğmesine basduktan sonra başlatılır.
+> HoloLens 2'de ilk kez açmak için, kutusundan indikten sonra güç düğmesine en az 4 saniye basılı tutun ve düğmeyi açık bırakın. HoloLens 2'de bir sonraki güç düğmesine basıldığında başlar.
 
 ### <a name="power-button-actions-for-different-power-transitions"></a>Farklı güç geçişleri için güç düğmesi eylemleri
 
-| Bunu yapmak için | Bu eylemi gerçekleştir | HoloLens 2 bunu kullanacaktır |
+| Bunu yapmak için | Bu eylemi gerçekleştirin | HoloLens 2 bunu yapar |
 | - | - | - |
-| Açmak için | Tek düğmeye basma. | Beş ışık, sonra da pil düzeyini belirtecek şekilde değişir. Dört saniye sonra bir ses çalar. |
-| Uykuya geçme | Tek düğmeye basma. | Beş ışık, her seferinde bir kez açık ve sonra kapanır. Işıklar kapatıldıktan sonra bir ses oynatılır ve ekran "güle" görüntülenir. |
-| Uykudan uyanma için | Tek düğmeye basma. | Beş ışık, sonra da pil düzeyini belirtecek şekilde değişir. Bir ses hemen oynatılır. |
-| Kapatmak için | 5 s için basın ve basılı tutun. |  Beş ışık, her seferinde bir kez açık ve sonra kapanır. Işıklar kapatıldıktan sonra bir ses oynatılır ve ekran "güle" görüntülenir. |
-| Yanıt vermezse HoloLens 'i yeniden başlatmaya zorlamak için | 10 sn için basılı tutun. | Beş ışık, her seferinde bir kez açık ve sonra kapanır. Işıklar kapatıldıktan sonra. |
+| Açmak için | Tek düğmeye basın. | Beş ışığın hepsi yanarak pil düzeyini belirtmek için değişir. Dört saniye sonra bir ses çalar. |
+| Uyku için | Tek düğmeye basın. | Beş ışığın hepsi yanarak aynı anda bir tane soluktur. Işıklar kapattıktan sonra bir ses çalar ve ekranda "Goodbye" (Güle Güle) görüntülenir. |
+| Uykudan uyandırmak için | Tek düğmeye basın. | Beş ışığın hepsi yanarak pil düzeyini belirtmek için değişir. Hemen bir ses çalar. |
+| Kapatmak için | 5'ler için basılı tutun. |  Beş ışığın hepsi yanarak aynı anda bir tane soluktur. Işıklar kapattıktan sonra bir ses çalar ve ekranda "Goodbye" (Güle Güle) görüntülenir. |
+| Yanıt vermiyorsa HoloLens'i yeniden başlatmaya zorlamak için | 10'lar için basılı tutun. | Beş ışığın hepsi yanarak aynı anda bir tane soluktur. Işıklar kapattıktan sonra. |
 
 ## <a name="hololens-behavior-reference"></a>HoloLens davranış başvurusu
 
-HoloLens 'inizdeki gösterge ışıklarının ne olduğundan emin değil misiniz? HoloLens 'in şarj edilirken nasıl davranması gerektiğini öğrenmek mi istiyorsunuz?  İşte size bazı yardım!
+HoloLens'inizin gösterge ışığının ne anlama geliyor olduğundan emin değil misiniz? HoloLens'in ücretlendirme sırasında nasıl davranması gerektiğini bilmek ister misiniz?  İşte yardım!
 
 ### <a name="charging-behavior"></a>Ücretlendirme davranışı
 
-| Cihazın durumu | Eylem | HoloLens 2 bunu kullanacaktır |
+| Cihazın Durumu | Eylem | HoloLens 2 bunu yapar |
 | - | - | - |
-| KAPALI | Eklenti USB kablosu | Cihaz düzeyini gösteren gösterge ışıkları ile açık cihaz geçişleri, cihaz şarjını başlatır.
-| AÇIK | USB kablosunu kaldır | Cihazın dolumu durduruluyor
-| AÇIK | Eklenti USB kablosu | Cihaz şarj başlıyor
-| KULLANıLMADıĞıNDA | Eklenti USB kablosu | Cihaz şarj başlıyor
-| KULLANıLMADıĞıNDA | USB kablosunu kaldır | Cihazın dolumu durduruluyor
-| USB kablosu takılı olduğunda | Cihazı kapat | Pil düzeyini gösteren gösterge ışıkları ile açık olan cihaz geçişleri ve cihaz şarj başlatacak |
+| KAPALI | USB Kablosu Takın | Pil düzeyini gösteren gösterge ışığıyla cihaz ON'a geçişler ve cihaz ücretlendirmeye başlar.
+| AÇIK | USB Kablosunu Kaldırma | Cihaz ücretlendirmeyi durdurur
+| AÇIK | USB Kablosu Takın | Cihaz ücretlendirmeye başlıyor
+| Uyku | USB Kablosu Takın | Cihaz ücretlendirmeye başlıyor
+| Uyku | USB Kablosunu Kaldırma | Cihaz ücretlendirmeyi durdurur
+| USB kablosu takılı açık | Cihazı Kapatma | Pil düzeyini gösteren gösterge ışığıyla cihaz ON'a geçişler ve cihaz ücretlendirmeye başlayacak |
 
-### <a name="lights-that-indicate-the-battery-level"></a>Pil düzeyini gösteren ışıklar
+### <a name="lights-that-indicate-the-battery-level"></a>Pil düzeyini gösteren lambalar
 
-| Işık sayısı | Pil düzeyi |
+| ışık sayısı | Pil düzeyi |
 | - | - |
-| Dört katı ışık, bir açık ve dışarı geçiş | %100 ve %81 arasında (tam olarak ücretlendirilir) |
-| Üç katı ışık, bir açık ve dışarı geçiş | %80 ile 61 arasında |
-| İki katı ışık, bir açık soldurma ve dışarı | %60 ile 41 arasında |
-| Tek bir katı ışık, bir açık ve dışarı geçiş | %40 ile %21 arasında |
-| Bir açık ve dışarı geçişi | %20 ile %5 veya daha düşük (kritik pil) |
+| Dört düz ışık, bir ışığın sönen ve sönen ışığı | %100 ile %81 arasında (tam ücret) |
+| Üç düz ışık, bir ışığın sönen ve kapatan ışığı | %80 ile %61 arasında |
+| İki düz ışık, bir ışığın soluklaşması ve dışarısı | %60 ile %41 arasında |
+| Bir düz ışık, bir ışığın soluklaşması ve dışarısı | %40 ile %21 arasında |
+| Bir ışığın içinde ve dışında soluk | %20 ile %5 arasında veya daha düşük (kritik pil) |
 
-### <a name="sleep-behavior"></a>Uyku davranışı
+### <a name="sleep-behavior"></a>Uyku Davranışı
 
 | Cihazın Durumu | Eylem | HoloLens 2 bunu yapar |
 | - | - | - |
@@ -116,13 +116,13 @@ HoloLens 'inizdeki gösterge ışıklarının ne olduğundan emin değil misiniz
 
 ### <a name="use-hololens-in-safe-surroundings"></a>HoloLens'i güvenli bir yerde kullanma
 
-HoloLens'inizi güvenli bir alanda, hiçbir engel ve tehlikeleri yok etmede kullanın. Net bir görünüm alanına ihtiyacınız olduğunda veya tüm dikkati çekerken (örneğin, bir araçla çalışırken veya diğer tehlikeli etkinlikler yaparken) bunu kullanmayın.
+HoloLens'inizi güvenli bir alanda, hiçbir engel ve tehlikeleri yok etmede kullanın. Net bir görünüm alanına ihtiyacınız olduğunda veya tüm dikkatlerinizi çekerken (örneğin, bir araçla çalışırken veya tehlikeli olabilecek diğer etkinlikler yaparken) bunu kullanmayın.
 
 ### <a name="stay-comfortable"></a>Rahat kalın
 
-HoloLens ile ilk birkaç oturumlarınızı kısa tutarak ara verdiklerinizi unutmayın. Sorun yaşamadıysanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareket şikayeti, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
+HoloLens ile ilk birkaç oturumlarınızı kısa tutarak ara verdiklerinizi unutmayın. Sorun yaşamazsanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareket şikayeti, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
 
 Ürün [güvenliği uyarıları ve yönergelerine bakın.](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions)
 
 > [!div class="nextstepaction"]
-> [HoloLens 2'nizi başlatma ve yapılandırma](hololens2-start.md)
+> [HoloLens 2'nizi ayarlama](hololens2-start.md)

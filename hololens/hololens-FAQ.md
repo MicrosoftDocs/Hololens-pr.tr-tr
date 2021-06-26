@@ -1,7 +1,7 @@
 ---
-title: HoloLens cihazları ve hologragram hakkında sık sorulan sorular
-description: HoloLens ile ilgili hızlı bir sorunuz mu var?  Bu makale, hızlı bir yanıt ve daha fazla kaynak sağlar.
-keywords: Hololens, SSS, bilinen sorun, yardım
+title: HoloLens cihazları ve hologramları hakkında sık sorulan sorular
+description: HoloLens veya hologramlarla etkileşim kurma hakkında hızlı bir sorunun mu var?  Bu makale hızlı bir yanıt ve daha fazla kaynak sağlar.
+keywords: hololens, s, bilinen sorun, yardım
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -18,283 +18,164 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 660c3b4d3a35a7794de5e3e2fb18f2a4aba03c0e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: ae44ae1d9a2e088a1ef746f4e929e8fae73880bf
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111378972"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924035"
 ---
-# <a name="frequently-asked-questions-about-hololens-devices-and-holograms"></a>HoloLens cihazları ve hologragram hakkında sık sorulan sorular
+# <a name="holograms-and-interactions-troubleshooting"></a>Hologramlar ve etkileşim sorunlarını giderme
 
-Bu makalede, hologramlar yerleştirme, boşluklarla çalışma ve daha fazlasını yapma gibi HoloLens kullanma hakkında karşılaşabileceğiniz bazı sorular yanıtlanmaktadır.
+Bu makalede hologram yerleştirme, boşluklarla çalışma ve hologramlarla ilgili sorunları bildirme ile ilgili sorunlar giderilir.
 
-Sorun yaşadığınızda, HoloLens 'in [ücretlendirildiği](https://support.microsoft.com/help/12627/hololens-charge-your-hololens)bir yerde olduğundan emin olun. Bunun düzeltme yapıp yapamadığını görmek için [yeniden başlatmayı](hololens-restart-recover.md) deneyin. Ve sorun hakkında bize bilgi göndermek için lütfen geri bildirim uygulamasını kullanın. Geri bildirim uygulamasını [ **Başlangıç** menüsünde](holographic-home.md)bulabilirsiniz.
+Her soruna sahip olduğunuz her zaman şu sorunlardan emin olun:
+- Bunun [bir şeyi düzeltip](hololens-restart-recover.md) düzeltmey olmadığını görmek için yeniden başlatmayı deneyin.
+- Sorun gidermeden önce HoloLens'in [ücretlendir (en az](hololens2-charging.md) bir saat ücretlendir) olduğundan emin olur. 
 
-HoloLens 'nizi aşmaya yönelik ipuçları için bkz. [HoloLens (1. Genel) uyum ve rahatlık hakkında sık sorulan sorular](hololens1-fit-comfort-faq.md).
 
-Bu makalede aşağıdaki sorular ve sorunlar ele alınmaktadır: <a id="list"></a>
+Sorun hakkında bize bilgi göndermek için Lütfen Geri Bildirim uygulamasını kullanın. Geri Bildirim uygulamasını Başlat menüsünde [  bulabilirsiniz.](holographic-home.md) 
 
-- [Hologramlar doğru değil veya etrafında taşınıyor](#my-holograms-dont-look-right-or-are-moving-around)
-- ["Alanınızı bulma" ifadesini bildiren bir ileti görüyorum](#i-see-a-message-that-says-finding-your-space)
-- [Alanım 'da görmeyi beklediğim hologramlar görmüyorum](#im-not-seeing-the-holograms-that-i-expect-to-see-in-my-space)
-- [İstediğim yerde hologramlar yerleştiremiyorum](#i-cant-place-holograms-where-i-want-to)
-- [Hologram, diğer hologramlar veya nesnelerde kaybolur veya kaybolur](#holograms-disappear-or-are-encased-in-other-holograms-or-objects)
-- [Bir duvar 'nin diğer tarafında bulunan hologramlar görebiliyorum](#i-can-see-holograms-that-are-on-the-other-side-of-a-wall)
-- [Bir duvarda bir hologram yerleştirdiğimde, hologram float olarak görünüyor](#when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float)
-- [Uygulamalar taşımaya çalışırken bana çok yakın görünüyor](#apps-appear-too-close-to-me-when-im-trying-to-move-them)
-- [Yetersiz disk alanı hatası alıyorum](#im-getting-a-low-disk-space-error)
-- [HoloLens, hareketime yanıt vermiyor](#hololens-doesnt-respond-to-my-gestures)
-- [HoloLens sesime yanıt vermiyor](#hololens-doesnt-respond-to-my-voice)
-- [Bluetooth cihazını eşleştirdim veya kullanarak sorun yaşıyorum](#im-having-problems-pairing-or-using-a-bluetooth-device)
-- [HoloLens ayarları cihazları kullanılabilir olarak listeler, ancak cihazlar çalışmaz](#hololens-settings-lists-devices-as-available-but-the-devices-dont-work)
-- [HoloLens 'i kullanarak sorun yaşıyorum](#im-having-problems-using-the-hololens-clicker)
-- [Wi-Fi ' a bağlanamıyorum](#i-cant-connect-to-wi-fi)
-- [HoloLens My iyi çalışmıyor, yanıt vermiyor veya başlamıyor](#my-hololens-isnt-running-well-is-unresponsive-or-wont-start)
-- [Daha önce başka bir kişi için ayarlandığından bir HoloLens cihazında oturum açamıyorum](#i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else)
-- [HoloLens cihazlarını yönetme hakkında sorular](#questions-about-managing-hololens-devices)
-- [HoloLens cihazlarını güvenli hale getirme hakkında sorular](#questions-about-securing-hololens-devices)
-- [Tüm boşluklar silinsin mi Nasıl yaparım??](#how-do-i-delete-all-spaces)
-- [HoloLens 2 öykünücüsünü yazmak için klavyeyi bulamıyorum veya kullanmıyorum](#i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator)
+HoloLens'inizi nasıl takacakları hakkında ipuçları için bkz. [Fit Ayarlama.](hololens2-setup.md#adjust-fit)
 
-## <a name="my-holograms-dont-look-right-or-are-moving-around"></a>Hologramlar doğru değil veya etrafında taşınıyor
+<a id="list"></a>
+- [Yeni alanlar oluşturulamıyor](#new-spaces-cant-be-created)
+- [Boşluklar tanımlenemiyor veya yüklenemiyor](#spaces-cant-be-identified-or-loaded)
+- [Nasıl yaparım? alanları mı silebilirsiniz?](#how-do-i-delete-all-spaces)
+- [Hologramlar doğru görünmüyor veya hareket ediyor](#holograms-dont-look-right-or-are-moving-around)
+- ["Yer bulma" iletisi](#finding-your-space-message)
+- [Beklenen hologramlar alanımda gösterlenmiyor](#expected-holograms-arent-showing-in-my-space)
+- [Hologram yerleştirilemleri veya önceden yerleştirilmiş hologramları göremiyorum](#cant-place-holograms-or-see-previously-placed-holograms)
+- [Hologramlar kaybolur veya diğer hologramlara veya nesnelere olur](#holograms-disappear-or-are-encased-in-other-holograms-or-objects)
+- [Hologramlar duvarın diğer tarafında görünüyor](#holograms-are-appearing-on-the-other-side-of-a-wall)
+- [Bir duvara hologram yerleştirdikten sonra kayan bir hologram gibi görünüyor](#after-placing-a-hologram-on-a-wall-it-seems-to-float)
+- [Uygulamalar, taşımadan sonra çok yakın görünüyor](#apps-appear-too-close-after-moving-them)
+- [Kararsız veya değişken olmayan hologramlarla ilgili sorunları bildirme](#reporting-issues-with-unstable-or-inexact-holograms)
 
-Hologramlar doğru görünmüyorsa (örneğin, jeklik veya titremesi veya üzerine siyah düzeltme ekleri görürseniz), bu düzeltmelerden birini deneyin:
+## <a name="new-spaces-cant-be-created"></a>Yeni alanlar oluşturulamıyor
 
-- [Cihaz vizörü](hololens1-hardware.md#care-and-cleaning) ' nı temizleyin ve sensörlerden herhangi bir şeyin engellenmediğinden emin olun.
-- Çok sayıda doğrudan güneş olmayan, iyi bir odakla olduğunuzdan emin olun.
-- HoloLens 'te daha fazla tarayabilmesi için katarlarınızın etrafında yürüme ve gatayı deneyin.
-- Birçok hologragram yerleştirdiyseniz, bazılarını kaldırmayı deneyin.
+En olası sorun, depolama alanı az olmasıdır. [Biraz disk alanı boşaltın](hololens-troubleshooting.md#low-disk-space-error) ve sonra yeniden deneyin.
 
-Hala sorun yaşıyorsanız, ayarlama uygulamasını çalıştırmaya çalışılıyor. Bu uygulama, hologradıklarınızın en iyi şekilde bakmasına yardımcı olmak için Holomerceği için bir oran sağlar. Bunu yapmak için **Ayarlar**  >  **sistem**  >  **yardımcı programları**' na gidin. **Ayar**' ın altında, **ayarlamayı aç**' ı seçin.
+[Listeye dön](#list)
 
-[Listeye geri dön](#list)
+## <a name="spaces-cant-be-identified-or-loaded"></a>Boşluklar tanımlenemiyor veya yüklenemiyor
 
-## <a name="i-see-a-message-that-says-finding-your-space"></a>"Alanınızı bulma" ifadesini bildiren bir ileti görüyorum
+HoloLens'iniz otomatik olarak içinde yer alan alanı belirleyeye ve yükleyenene kadar aşağıdaki faktörleri kontrol edin:
 
-HoloLens bir alanı öğrenirken veya yüklerken, "alanınızı bulma" ifadesini belirten kısa bir ileti görebilirsiniz. Bu ileti birkaç saniyeden uzun bir süre görüntülüyorsa, Başlat menüsü altında "alanınızı arıyor" yazan başka bir ileti görürsünüz.
+- Wi-Fi'a bağlı olduğunuzdan emin Wi-Fi
+- Odada bol miktarda ışık olduğundan emin olun
+- Çevresinde önemli bir değişiklik olmadığını emin olun.
 
-Bu iletiler, HoloLens 'in alanınızı eşleştirmede sorun yaşadığını ifade eden anlamına gelir. Bu durumda, uygulamaları açabilirsiniz, ancak ortamınızda hologragram yerleştirebilirsiniz.
+Ayrıca, Ayarlar Sistem Alanları'nın 'a gidip el ile bir alan yükleyebilirsiniz **veya**  >  **alanlarınızı**  >  **yönetebilirsiniz.**
 
-Bu iletileri sık görüyorsanız, aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
+[Listeye dön](#list)
 
-- Çok sayıda doğrudan güneş olmayan, iyi bir odakla olduğunuzdan emin olun.
-- Cihazınızın vizörü 'in temiz olduğundan emin olun. [Vizörü ' inizi temizlemeyi öğrenin](hololens1-hardware.md#care-and-cleaning).
-- Güçlü bir Wi-Fi sinyaliniz olduğundan emin olun. Wi-Fi veya zayıf Wi-Fi sinyali olmayan yeni bir ortam girerseniz, HoloLens alanınızı bulamaz. **Ayarlar**  >  **Ağ &amp; Internet**  >  **Wi-Fi** bölümüne giderek Wi-Fi bağlantınızı denetleyin.
-- Daha yavaş geçmeyi deneyin.
+## <a name="how-do-i-delete-all-spaces"></a>Nasıl yaparım? alanları mı silebilirsiniz?
 
-[Listeye geri dön](#list)
+*Çok yakında*
 
-## <a name="im-not-seeing-the-holograms-that-i-expect-to-see-in-my-space"></a>Alanım 'da görmeyi beklediğim hologramlar görmüyorum
+[Listeye dön](#list)
 
-Yerleştirdiğiniz hologratonları görmüyorsanız veya beklemediğinizi belirten bir veya daha fazla düzeltmeyi deneyin:
+## <a name="holograms-dont-look-right-or-are-moving-around"></a>Hologramlar doğru görünmüyor veya hareket ediyor
 
-- Bazı ışıkları açın. HoloLens en iyi şekilde doğru aydınlatmalı bir alanda çalışmaktadır.
-- **Ayarlar**  >  **sistem**  >  **hologragram**' da  >  **yakın hologramlar kaldırma**' ya giderek ihtiyacınız olmayan hologragram 'ı kaldırın. Ya da gerekirse **Tüm hologramlar kaldır**' ı seçin.
+Hologramlar doğru görünmüyorsa (örneğin, bu hologramlar hareket ediyor veya shaky veya bunların üzerinde siyah düzeltme ekleri görüyorsanız) şu düzeltmelerden birini deneyin:
+
+- [Cihazınızın güvenlik kameralarını temizleyin](hololens1-hardware.md#care-and-cleaning) ve algılayıcıları engelleyen bir şey olmadığını emin olun.
+- Çok fazla doğrudan erişime sahip olmayan, iyi bir şekilde ışık alan bir odaya sahip olduğundan emin olun.
+- HoloLens'in bunları tamamen tarayana kadar etrafınıza bakarak çevrenizi incelemeyi deneyin.
+- Çok sayıda hologram yerleştirilse, bazı hologramları kaldırmayı deneyin.
+
+Sorun devam ediyorsanız, Ayarlama uygulamasını çalıştırmayı deniyorum. Bu uygulama, hologramlarınızı en iyi şekilde tutmaya yardımcı olmak için HoloLens'inizi sizin için ayarlar. Bunu yapmak için Ayarlar Sistem Yardımcı  >    >  **Programları'nı seçin.** **Ayarlama'nın** altında Açık **Ayar'ı seçin.**
+
+[Listeye dön](#list)
+
+## <a name="finding-your-space-message"></a>"Yer bulma" iletisi
+
+HoloLens bir alanı öğrenerek veya yüklerken "Yerlerinizi bulma" ifadesinin yer alır. Bu ileti birkaç saniyeden uzun süre görüntülenirse, uygulamanın altında "Hala alanınızı Başlat menüsü" ifadesinin yer alan başka bir iletiyle de karşınıza vardır.
+
+Bu iletiler HoloLens'in alanınızı eşleme konusunda sorun içinde olduğu anlamına geliyor. Bu durumda uygulamaları açabilirsiniz ancak ortamınıza hologramlar yer açabilirsiniz.
+
+Bu iletileri sık görüyorsanız aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
+
+- Çok fazla doğrudan erişime sahip olmayan, iyi bir şekilde ışık alan bir odaya sahip olduğundan emin olun.
+- Cihaz mengenenizin temiz olduğundan emin olun. [Mengenenizi temizlemeyi öğrenin.](hololens1-hardware.md#care-and-cleaning)
+- Güçlü bir sinyale sahip Wi-Fi olun. Sanal sinyal veya zayıf sinyal Wi-Fi yeni bir Wi-Fi girersiniz HoloLens alanınızı bulamaz. Ayarlar Ağ Wi-Fi   >  Wi-Fi'a **gidip &amp;**  >  **bağlantınızı kontrol edin.**
+- Daha yavaş ilerlemeyi deneyin.
+
+[Listeye dön](#list)
+
+## <a name="expected-holograms-arent-showing-in-my-space"></a>Beklenen hologramlar alanımda gösterlenmiyor
+
+Yerleştir beklediğiniz hologramları görmüyorsanız veya beklediğiniz hologramları görüyorsanız aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
+
+- Birkaç lambayı açın. HoloLens en iyi şekilde iyi ışık alan bir alanda çalışır.
+- Ayarlar Sistem Hologramları Yakındaki hologramları kaldır'a gidip ihtiyacınız olan  >    >    >  **hologramları kaldırın.** Veya gerekirse Tüm **hologramları kaldır'ı seçin.**
 
   > [!NOTE]
-  > Alanınızdaki düzen veya aydınlatma önemli ölçüde değişiyorsa, cihazınız alanınızı tanımlama ve hologramlar gösterme konusunda sorun yaşıyor olabilir.
+  > Alanınızdaki düzen veya aydınlatma önemli ölçüde değişiyorsa, cihazınız alanınızı tanımlama ve hologramlarınızı gösterme konusunda sorun olabilir.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="i-cant-place-holograms-where-i-want-to"></a>İstediğim yerde hologramlar yerleştiremiyorum
+## <a name="cant-place-holograms-or-see-previously-placed-holograms"></a>Hologram yerleştirilemleri veya önceden yerleştirilmiş hologramları göremiyorum
 
-Hologramlar yerleştirmede sorun yaşıyorsanız deneyebileceğiniz bazı şeyler aşağıda verilmiştir:
+HoloLens alanınızı eşleyene veya yükleyenene kadar Sınırlı moda girer ve hologram yerleştiresiniz veya yerleştirmiş olduğunuz hologramları göresiniz. İşte deneyebileceğiniz bazı çözümler:
 
-- Hologram yerleştirmeyi denediğiniz bir ve üç ölçüm arasında stand.
-- Siyah veya yansıtıcı yüzeylere hologramlar yerleştirmeyin.
-- Çok sayıda doğrudan güneş olmayan, iyi bir odakla olduğunuzdan emin olun.
-- Odaların etrafında dolaştığından HoloLens 'in sursörlerinizi yeniden taraması sağlanır. Zaten taranmış olan öğeleri görmek için, eşleşen kafes grafiğinin görüntülenmesini sağlamak üzere AIR ' e dokunun.
+- HoloLens'in alanı görene ve eşleyene kadar ortamınız için yeterli ışık olduğundan emin olun.
+- Hologramı yapmaya çalıştığın yerden bir ile üç metre arasında dur.
+- Hologramları siyah veya yansıtıcı yüzeylere yerleştirin.
+- Bir ağ bağlantısına bağlı olduğunuzdan emin Wi-Fi olun. Wi-Fi'a bağlı değilsanız HoloLens bilinen bir alanı tanım tanımp yükleyememektedir.
+- HoloLens'in çevrenizi yeniden görene kadar odaları dolaşabilirsiniz. Nelerin taranmış olduğunu görmek için havadan dokunarak eşleme ağı grafiğini ortaya çıkarabilirsiniz.
+- Yeni bir alan oluşturmanız gerekirse Wi-Fi'a bağlanın ve HoloLens'inizi yeniden başlatın.
+- Doğru boşluğun etkin olup olmadığını görmek veya el ile bir alan yüklemek için Ayarlar Sistem  >  **Alanları'ne**  >  **gidin.**
+- Doğru alan yüklü ise ve sorun devam ediyorsanız, alan bozuk olabilir. Bu sorunu çözmek için alanı seçin ve **kaldır'ı seçin.** Siz alanı kaldırdikten sonra HoloLens, çevrenizi eşlemeye ve yeni bir alan oluşturmaya başlar.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="holograms-disappear-or-are-encased-in-other-holograms-or-objects"></a>Hologram, diğer hologramlar veya nesnelerde kaybolur veya kaybolur
+## <a name="holograms-disappear-or-are-encased-in-other-holograms-or-objects"></a>Hologramlar kaybolur veya diğer hologramlara veya nesnelere olur
 
-Bir hologram için çok daha yakın bir işlem yaparsanız, bu, &mdash; hologram geri yüklemek için geçici olarak kaybolacaktır, bundan uzaklaşmanız yeterlidir. Ayrıca, birkaç hologragram birlikte yakındıysanız, bazıları kaybolabilir. Birkaçını kaldırmayı deneyin.
+Bir holograma çok yaklaşmanız, hologramı geri yüklemek için geçici olarak &mdash; kaybolur, yalnızca bundan uzaklaşabilirsiniz. Ayrıca, birkaç hologramı birbirine yakın yerleştirilse de bazıları kaybolabilir. Birkaç tane kaldırmayı deneyin.
 
-Hologragram, diğer hologramlar veya duvarlar gibi nesneler tarafından da engellenebilir veya bunları kullanabilir. Bu durumda, aşağıdaki düzeltmelerden birini deneyin:
+Hologramlar ayrıca diğer hologramlar veya duvar gibi nesneler tarafından engellenmiş veya kapatılmalıdır. Bu durumda aşağıdaki düzeltmelerden birini deneyin:
 
-- Hologram başka bir hologram içinde kullanılıyorsa, bu hologram başka bir konuma taşıyın. Bunu yapmak için **Ayarla**' yı seçin, sonra da konumlandırın ve tutun.
-- Hologram bir duvarta kullanılıyorsa, **Ayarla**' yı seçin ve ardından hologram görünene kadar duvara yaklaşın. Dokunup basılı tutarak, daha sonra hologram ileri ve çıkış dışına çekin.
-- Hareketleri kullanarak hologram taşıyamıyorum, bunu kaldırmak için sesinizi kullanın. Hologram sırasında, "Kaldır" deyin. Sonra, hologram yeniden açın ve yeni bir konuma yerleştirin.
+- Hologram başka bir hologramda yer alan bir hologram ise, büyük harfli hologramı başka bir konuma taşıma. Bunu yapmak için **Ayarla'ya ve** ardından dokunarak basılı tutun ve konuma getirin.
+- Hologram bir duvara monte edilirse Ayarla'ya tıklayın **ve** ardından hologram görünene kadar duvara doğru inin. Dokunun ve basılı tutun, sonra hologramı duvardan ileri ve dışarı çekin.
+- Hareketleri kullanarak hologramı hareket ettire biliyorsanız sesinizi kullanarak kaldırın. Holograma bakarak "Kaldır" diyelim. Ardından hologramı yeniden açın ve yeni bir konuma yer açın.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="i-can-see-holograms-that-are-on-the-other-side-of-a-wall"></a>Bir duvar 'nin diğer tarafında bulunan hologramlar görebiliyorum
+## <a name="holograms-are-appearing-on-the-other-side-of-a-wall"></a>Hologramlar duvarın diğer tarafında görünüyor
 
-Bir duvara çok yakınsanız veya HoloLens henüz duvarı taramamışsa, sonraki odada bulunan hologragram ' u görebilirsiniz. Duvar taramak için, duvardan bir ve üç ölçüm arasında tek tek ve BT 'nin aralarındaki
+Duvara çok yakınsanız veya HoloLens henüz duvarı taramamışsa, bir sonraki odada yer alan hologramları görebilir. Duvarı taramak için duvardan bir ile üç metre arasında durur ve duvara bakar.
 
-HoloLens, duvarı taramayı denediğinde, bir siyah veya yansıtıcı nesne (örneğin, bir siyah bir beyaz ya da bir ya da daha az çelik soğutma), duvara yaklaşmanıza neden olabilir. Böyle bir nesne varsa, duvarın diğer tarafını tarayın.
+HoloLens duvarı taramaya çalıştığında, duvarın yakınındaki siyah veya yansıtıcı bir nesne (örneğin, siyah bir buzdolabı veya çelik buzdolabı) sorunlara neden olabilir. Böyle bir nesne varsa duvarın diğer tarafını tarayın.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="when-i-place-a-hologram-on-a-wall-the-hologram-seems-to-float"></a>Bir duvarda bir hologram yerleştirdiğimde, hologram float olarak görünüyor
+## <a name="after-placing-a-hologram-on-a-wall-it-seems-to-float"></a>Bir duvara hologram yerleştirdikten sonra kayan bir hologram gibi görünüyor
 
-Bir duvara yerleştirdiğiniz bir hologram, genellikle duvardan bir inç veya daha fazla şekilde görünür. Daha fazla görünüyorsa, aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
+Duvara yer alan hologram genellikle duvardan bir inç uzakta gibi görünür. Daha uzakta görünüyorsa aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
 
-- Bir duvardaki bir hologram yerleştirirken, duvardan bir ve üç ölçüm arasında tek tek ve duvardan doğrudan açık olarak yer alır.
-- Harita kafes grafiğini göstermek için duvara dokunun. Kafesin duvarda hizalandığından emin olun. Yoksa hologramı kaldırın, duvarı yeniden deneyin ve yeniden deneyin.
-- Sorun devam ederse Ayarlama uygulamasını çalıştırın. Bunu Ayarlar Sistem Yardımcı **Programları**  >    >  **sayfasında bulabilirsiniz.**
+- Bir duvara hologramı yerken duvardan bir ile üç metre arasında durur ve duvarın doğrudan üzerinde durur.
+- Eşleme ağı grafiğini ortaya çıkarmak için duvara havadan dokunun. Örgün duvarla hizalı olduğundan emin olun. Yoksa hologramı kaldırın, duvarı yeniden deneyin ve yeniden deneyin.
+- Sorun devam ederse Ayarlama uygulamasını çalıştırın. Bunu Ayarlar Sistem Yardımcı **Programları**  >  **sayfasında**  >  **bulabilirsiniz.**
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="apps-appear-too-close-to-me-when-im-trying-to-move-them"></a>Taşımaya çalıştığımda uygulamalar bana çok yakın görünüyor
+## <a name="apps-appear-too-close-after-moving-them"></a>Uygulamalar, taşımadan sonra çok yakın görünüyor
 
 HoloLens'in alanı farklı açılardan taraması için uygulamayı yerleştirmiş olduğu alanı incelemeyi deneyin. [Cihaz mengenenizin temizlenmesi](hololens1-hardware.md#care-and-cleaning) de yardımcı olabilir.
 
-[Listeye geri dön](#list)
-
-## <a name="im-getting-a-low-disk-space-error"></a>Düşük disk alanı hatası alıyorum
-
-Aşağıdakilerden birini veya daha fazlasını yaparak biraz depolama alanı serbest bırakabilirsiniz:
-
-- Yerleştiren hologramlardan bazılarını kaldırın veya bazı kayıtlı verileri uygulamalardan kaldırın. [Nasıl yaparım? nasıl bulamıyorum?](holographic-data.md)
-- Fotoğraflar uygulamasında bazı resimleri ve videoları silin.
-- HoloLens'inize bazı uygulamaları kaldırın. Uygulama **Tüm uygulamalar** kaldırmak istediğiniz uygulamaya dokunarak basılı tutun ve Kaldır'ı **seçin.** (Uygulamanın kaldırılması, uygulamanın cihazda depolana tüm verileri de siler.)
-
-[Listeye geri dön](#list)
-
-## <a name="hololens-doesnt-respond-to-my-gestures"></a>HoloLens hareketlerime yanıt vermiyor
-
-HoloLens'in hareketlerinizi görene kadar hareket çerçevesinden emin olmak için ellerinizi hareket çerçevesinde tutmanız gerekir. Hareket çerçevesi iki tarafınızı da birkaç adım genişletti. HoloLens ayrıca en iyi şekilde, onu gövdenizin önünde yaklaşık 18 inç tutarken de en iyi şekilde görebilir (ancak bu konuda kesin olmak zorunda değildir). HoloLens ellerinizi görene kadar imleç bir noktadan halkaya değişir. [HoloLens 2'de](hololens2-basic-usage.md) hareketleri kullanma veya HoloLens'te hareket kullanma [(1. nesil)](hololens1-basic-usage.md)hakkında daha fazla bilgi.
-
-[Listeye geri dön](#list)
-
-## <a name="hololens-doesnt-respond-to-my-voice"></a>HoloLens sesime yanıt vermiyor
-
-HoloLens (1. nesil) ve HoloLens 2, yerleşik konuşma tanıma özelliğine ve Cortana'yı (çevrimiçi konuşma tanıma) destekler.
-
-### <a name="built-in-voice-commands-do-not-work"></a>Yerleşik sesli komutlar çalışmıyor
-
-HoloLens'te (1. nesil) yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açık. HoloLens 2'de, cihaz kurulumu sırasında hem konuşma tanımayı hem de Cortana'yı açma tercih edebilirsiniz.
-
-HoloLens 2'niz sesinize yanıt vermiyorsa Konuşma tanıma'nın açık olduğundan emin olun. Başlangıç Ayarları **Gizlilik**  >    >  **Konuşma'ya**  >  **gidin** ve Konuşma **tanıma'ya gidin.**
-
-### <a name="cortana-or-dictation-doesnt-work"></a>Cortana veya Dikte çalışmıyor
-
-Cortana veya Dikte özelliği sesinize yanıt vermiyorsa çevrimiçi konuşma tanımanın açık olduğundan emin olun. Ayarlar Gizlilik **Konuşmasını**  >    >  **Başlat'a**  >   gidin ve Çevrimiçi konuşma **tanıma ayarlarını** doğrulayın. 
-
-Cortana hala yanıt vermiyorsa, Cortana'nın açık olduğunu doğrulamak için aşağıdakilerden birini yapın:
-
-- Bu **Tüm uygulamalar** **Cortana'yı** seçin > yapmak **için Menü** Not  >  **Defteri**  >  **Ayarları'>** seçin.
-- HoloLens 2'de Konuşma ayarları **düğmesini seçin** veya "Konuşma ayarları" ifadesini kullanın.
-
-Neler söylemeniz hakkında daha fazla bilgi edinmek için [bkz. HoloLens ile sesinizi kullanma.](hololens-cortana.md)
-
-[Listeye geri dön](#list)
-
-## <a name="im-having-problems-pairing-or-using-a-bluetooth-device"></a>Bluetooth cihazını eşleştirme veya kullanma sorunlarım var
-
-Bluetooth cihazını [eşleştirmeyle ilgili sorunlarınız varsa,](hololens-connect-devices.md)aşağıdakini deneyin:
-
-- Ayarlar   >  **Cihazlar'a** gidin ve Bluetooth'un açık olduğundan emin olun. Varsa, tekrar kapatın ve tekrar açma.
-- Bluetooth cihazınızın tamamen ücrete tabi olduğundan veya yeni pillere sahip olduğundan emin olun.
-- Hala bağlanamıyorsanız [HoloLens'i yeniden başlatın.](hololens-recovery.md)
-
-[Listeye geri dön](#list)
-
-## <a name="hololens-settings-lists-devices-as-available-but-the-devices-dont-work"></a>HoloLens Ayarları cihazları kullanılabilir olarak listeler, ancak cihazlar çalışmıyor
-
-HoloLens (1. nesil), Bluetooth ses profillerini desteklemez. Konuşmacılar ve mikrofonlu başlığı gibi Bluetooth ses cihazları HoloLens ayarlarında kullanılabilir olarak görünebilir ancak bunlar desteklenmmektedir.
-
-HoloLens 2, stereo kayıttan yürütme için Bluetooth A2DP ses profilini destekler. HoloLens 2'de Bluetooth çevre biriminden mikrofon yakalamayı sağlayan Bluetooth Hands Free profili desteklenmiyor.
-
-Bluetooth cihazı kullanırken sorun kullanıyorsanız, cihazın desteklenen bir cihaz olduğundan emin olun. Desteklenen cihazlar aşağıdakileri içerir:
-
-- İngilizce QWERTY Bluetooth klavyeleri (holografik klavyeyi her yerde kullanabilirsiniz).
-- Bluetooth fareleri.
-- [HoloLens tıkıcısı.](hololens1-clicker.md)
-
-Diğer Bluetooth BLUETOOTH ve GATT cihazlarını HoloLens'iniz ile eşleştirebilirsiniz. Ancak, cihazları gerçekten kullanmak için ilgili yardımcı uygulamaları Microsoft Store uygulamaları yüklemeniz gerekir.
-
-[Listeye geri dön](#list)
-
-## <a name="im-having-problems-using-the-hololens-clicker"></a>HoloLens tık düğmesini kullanırken sorunm var
-
-Hologramları [seçmek, kaydırmak,](hololens1-clicker.md) taşımak ve yeniden boyutlandırmak için tık düğmesini kullanın. Tek tek uygulamalar ek tıklar hareketlerini destekleyebilirsiniz.
-
-Tık düğmesini kullanırken sorun kullanıyorsanız ücret alınarak HoloLens'iniz ile eşleştirilmiş olduğundan emin olun. Pil düşükse gösterge ışığı yanıp söner. Tık düğmesinin eşleştirilmiş olduğunu doğrulamak için Ayarlar **Cihazlar'a**  >  **gidin** ve orada gösterip gösterip görmey istediğinize bakın. Daha fazla bilgi için [bkz. Tıkıcıyı eşleştirme.](hololens1-clicker.md)
-
-Tıklanabilir ve eşleştirilmişse ve sorun devam ediyorsanız, ana düğmeyi ve eşleştirme düğmesini 15 saniye basılı tutarak sıfırlayın. Ardından tıkıcıyı HoloLens'iniz ile yeniden eşleştirin.
-
-Tıklamayı sıfırlamak yardımcı olmazsa bkz. [HoloLens tıkçını](hololens1-clicker.md#restart-or-recover-the-clicker)yeniden başlatma veya kurtarma.
-
-[Listeye geri dön](#list)
-
-## <a name="i-cant-connect-to-wi-fi"></a>Wi-Fi'a bağlana Wi-Fi
-
-HoloLens'inizi bir sanal ağ bağlantısı kuramıyorsanız deneyecek Wi-Fi:
-
-- Bu Wi-Fi emin olun. Kontrol etmek için Başlangıç hareketini kullanın ve Ayarlar Ağ  >  **&amp; İnterneti**  >  **Wi-Fi seçeneğini seçin.** Bu Wi-Fi, kapatmayı ve sonra tekrar açmayı deneyin.
-- Yönlendiriciye veya erişim noktasına yaklaşın.
-- Sanal yönlendiricinizi Wi-Fi ve [ardından HoloLens'i yeniden başlatın.](hololens-recovery.md) Yeniden bağlanmayı deneyin.
-- Bunlardan hiçbiri çalışmıyorsa yönlendiricinizin en son bellenim sürümünü kullana olduğundan emin olun. Bu bilgileri üretici web sitesinde bulabilirsiniz.
-
-[Listeye geri dön](#list)
-
-## <a name="my-hololens-isnt-running-well-is-unresponsive-or-wont-start"></a>HoloLens'im iyi çalışmıyor, yanıt vermiyor veya başlatlanmıyor
-
-Cihazınız düzgün çalışmıyorsa bkz. [HoloLens'i yeniden başlatma,](hololens-recovery.md)sıfırlama veya kurtarma.
-
-[Listeye geri dön](#list)
-
-## <a name="i-cant-sign-in-to-a-hololens-device-because-it-was-previously-set-up-for-someone-else"></a>Daha önce başka biri için ayarlanmış olduğundan HoloLens cihazında oturum aça bilmiyorum
-
-Cihazınız daha önce bir istemci için veya eski bir çalışan için başka biri için ayarlanmışsa ve cihazın kilidini açmak için parolanız yoksa, aşağıdakilerden birini yapabilirsiniz:
-
-- Intune mobil cihaz yönetimine (MDM) kayıtlı bir cihaz için Intune'u kullanarak cihazı [uzaktan silebilirsiniz.](https://docs.microsoft.com/intune/remote-actions/devices-wipe) Ardından cihaz kendisini yeniden yanıp söner.  
-   > [!IMPORTANT]  
-   > Cihazı silerken Kayıt durumunu ve kullanıcı hesabını **koruma işaretsiz bırakın.**
-- MDM olmayan bir cihaz için, cihazı [ **FlashIng Mode'a**](hololens-recovery.md#clean-reflash-the-device) yer ve cihazı kurtarmak için Gelişmiş Kurtarma Yardımcı'sı kullanabilirsiniz.
-
-[Listeye geri dön](#list)
-
-## <a name="questions-about-managing-hololens-devices"></a>HoloLens cihazlarını yönetmeyle ilgili sorular
-
-### <a name="can-i-use-system-center-configuration-manager-sccm-to-manage-hololens-devices"></a>HoloLens System Center Yapılandırma Yöneticisi yönetmek için System Center Yapılandırma Yöneticisi (SCCM) kullanabilir miyim?
-
-Hayır. HoloLens cihazlarını yönetmek için bir MDM sistemi kullanmak zorundasiniz.
-
-### <a name="can-i-use-active-directory-domain-services-ad-ds-to-manage-hololens-user-accounts"></a>HoloLens kullanıcı Active Directory Domain Services (AD DS) kullanabilir miyim?
-
-Hayır. HoloLens cihazlarına Azure Active Directory hesaplarını yönetmek için Azure Active Directory (Azure AD) kullanasınız.
-
-### <a name="is-hololens-capable-of-automated-data-capture-systems-adcs-auto-enrollment"></a>HoloLens Otomatik Veri Yakalama Sistemleri (ADCS) otomatik kayıt özelliğine sahip mi?
-
-Hayır.
-
-### <a name="can-hololens-participate-in-integrated-windows-authentication"></a>HoloLens, tümleşik Windows kimlik doğrulamasına katılabilir mi?
-
-Hayır.
-
-### <a name="does-hololens-support-branding"></a>HoloLens markalamayı destekliyor mu?
-
-Hayır. Ancak, aşağıdaki yaklaşımlardan birini kullanarak bu sorunu geçici olarak çözebilirsiniz:
-
-- Özel bir uygulama oluşturun ve [bilgi noktası modunu etkinleştirin](hololens-kiosk.md). Özel uygulama marka içerebilir ve diğer uygulamaları başlatabilir (uzaktan yardım gibi).  
-- Azure AD 'deki tüm Kullanıcı profili resimlerini şirket logonuz olacak şekilde değiştirin. Ancak, bu, tüm senaryolar için istenmeyebilir.
-
-### <a name="what-logging-capabilities-do-hololens-1st-gen-and-hololens-2-offer"></a>HoloLens (1. gen) ve HoloLens 2 teklifi ne günlüğe kaydediliyor?
-
-Günlüğe kaydetme, geliştirme veya sorun giderme senaryolarında yakalanamayan izlemelerle veya cihazların Microsoft sunucularına gönderdikleri telemetri ile sınırlıdır.
-
-[Listeye geri dön](#list)
-
-## <a name="questions-about-securing-hololens-devices"></a>HoloLens cihazlarını güvenli hale getirme hakkında sorular
-
-[HoloLens 2 güvenlik bilgilerini](security-overview.md)inceleyin.
-HoloLens 1 gen cihazları için lütfen [Bu SSS](hololens1-faq-security.md)'yi gözden geçirin.
-
-[Listeye geri dön](#list)
-
-## <a name="how-do-i-delete-all-spaces"></a>Tüm boşluklar silinsin mi Nasıl yaparım??
-
-*Çok yakında*
-
-[Listeye geri dön](#list)
-
-## <a name="i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator"></a>HoloLens 2 öykünücüsünü yazmak için klavyeyi bulamıyorum veya kullanmıyorum
-
-*Çok yakında*
-
-[Listeye geri dön](#list)
+[Listeye dön](#list)
+
+## <a name="reporting-issues-with-unstable-or-inexact-holograms"></a>Kararsız veya değişken olmayan hologramlarla ilgili sorunları bildirme
+ 
+1. Lütfen sorunun Karma Gerçeklik Yakalama [videosunu](holographic-photos-and-videos.md#capture-a-mixed-reality-video) ve bir videosunu izleyin. Bu video daha sonra dosya Geri Bildirim Merkezi dosya olarak karşıya yükleyebilirsiniz.  
+1. Geri bildirim için  Ayarlar uygulaması -> Gizlilik Tanılaması & telemetrisini etkinleştirin ve İsteğe bağlı tanılama verileri altında iki durumlu düğmenin Açık olarak ayarlanmış olduğundan  ->   emin **olun** 
+1. En son [Windows Holographic OS'ye (20H2](hololens-release-notes.md#windows-holographic-version-20h2)veya daha yüksek) güncelleştirerek en son hologram ölçek ve kararlılık düzeltmelerini elde etmek. Güncelleştirdikten sonra aşağıdaki işlemleri gerçekleştirin:
+    1. Ayarlar uygulaması **->** **System** Hologramları -> tüm Hologramları kaldır'ı seçerek  ->   **tüm Hologramları** kaldır'ı seçin ve yeni bir haritayla çalışmaya başlayabilirsiniz.
+    1. HoloLens'i takarak ve odanızı dolaşarak ve uzaydaki tüm alanlara ve yüzeylere bakarak yeni bir alan haritası oluşturun. Bunu 2-3 dakika için yap.
+    1. IPD ayarlaması gerçekleştirin. Ayarlar Sistem **Yardımcı**  >    >  **Programları'nı seçin.** **Ayarlama'nın** altında Açık **Ayar'ı seçin.**
+    1. Senaryoyu yeniden test eder ve hala devam eder mi diye bakın.
+1. Güncelleştirme sorunu çözene kadar sorunu [Geri Bildirim Merkezi.](hololens-feedback.md) Geri bildirimi doldurduktan sonra, destek **ekibiyle** iletişime geçerek gönderebilirsiniz. Paylaş düğmesini kullanarak kolayca paylaşabilirsiniz.
+
+[Listeye dön](#list)

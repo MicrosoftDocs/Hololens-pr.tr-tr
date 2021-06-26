@@ -10,12 +10,12 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: jarrettr
-ms.openlocfilehash: d68c75dcb2249a67f2e07c77cb1b69997eb0ae72
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 8564fb0483226a16722ada345de325577cda77d6
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380228"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923610"
 ---
 # <a name="connect-hololens-to-a-network"></a>HoloLens 'i ağa bağlama
 
@@ -47,16 +47,10 @@ Wi-Fi ağa bağlı olduğunu doğrulamak için, **Başlangıç** menüsündeki W
 1. Wi-Fi durum için **Başlangıç** menüsünün sol üst kısmına bakın. Wi-Fi durumu ve bağlı ağın SSID 'SI gösterilir.
 
 > [!TIP]
-> Wi-Fi yoksa [hücresel ve 5 g ağlarına da bağlanabilirsiniz](https://docs.microsoft.com/hololens/hololens-cellular).
+> Wi-Fi yoksa [hücresel ve 5 g ağlarına da bağlanabilirsiniz](hololens-cellular.md).
 
 > [!IMPORTANT]
 > Tasarım, kullanıcılar, HoloLens 2 ' nin Wi-Fi gezici davranışını ince ayarlayamez. **Wi-Fi listesini yenilemenin tek yolu Wi-Fi kapalı ve açık olarak geçiş yapmaz**. Bu, bir cihazın Aralık dışına çıkdıktan sonra bir AP 'ye "takılı" kalabileceği gibi birçok sorunu önler.
-
-## <a name="troubleshooting-your-connection-to-wi-fi"></a>Wi-Fi bağlantınızın sorunlarını giderme
-
-Wi-Fi ' a bağlanırken sorunlarla karşılaşırsanız, bkz. [Wi-Fi ile bağlanamıyorum](./hololens-faq.md#i-cant-connect-to-wi-fi).
-
-Cihazdaki bir kuruluşta veya kurumsal hesapta oturum açtığınızda, ilke BT yöneticiniz tarafından yapılandırılmışsa mobil cihaz yönetimi (MDM) ilkesi de uygulayabilir.
 
 ## <a name="connect-hololens-to-enterprise-wi-fi-network"></a>HoloLens 'i kurumsal Wi-Fi ağa bağlama
 
@@ -133,23 +127,7 @@ Ek kaynaklar:
 - WLANv1Profile şeması: [[MS-GPWL]: Kablosuz LAN profili v1 şeması | Microsoft Docs](https://docs.microsoft.com/openspecs/windows_protocols/ms-gpwl/34054c93-cfcd-44df-89d8-5f2ba7532b67)
 - EAP-TLS şeması: [[MS-GPWL]: MICROSOFT EAP TLS şeması | Microsoft Docs](https://docs.microsoft.com/openspecs/windows_protocols/ms-gpwl/9590925c-cba2-4ac5-b9a1-1e5292bb72cb)
 
-## <a name="eap-troubleshooting"></a>EAP sorunlarını giderme
-> [!TIP]
-> Çoğu ağ sorunu, Wi-FI profilinde aşağıdaki 3 ayarlardan birinin yanlış olmasının sonucudur. 
-1. Çift denetim Wi-Fi profilinde doğru ayarlar var:
-   1. EAP türü doğru yapılandırılmış, ortak EAP türleri: EAP-TLS (13), EAP-TTLS (21) ve PEAP (25).
-   1. Wi-Fi SSID adı doğru ve ONALTıLıK dizeyle eşleşiyor.
-   1. EAP-TLS için TrustedRootCA, Server&#39;s güvenilen kök CA sertifikasının SHA-1 karmasını içerir. Windows bilgisayarında &quot;certutil.exe-döküm CERT \_ Dosya \_ adı &quot; komutu, BIR sertifika&#39;s SHA-1 karma dizesi gösterir.
-
-2. EAP oturumunun nerede başarısız olduğunu öğrenmek için erişim noktası veya denetleyici ya da AAA sunucusu günlüklerinde ağ paketi yakalamayı toplayın.
-   1. HoloLens tarafından sağlanan EAP kimliği beklenmiyorsa, kimliğin Wi-Fi profil veya istemci sertifikası aracılığıyla doğru şekilde sağlanmış olup olmadığını kontrol edin.
-   1. Sunucu HoloLens istemci sertifikası 'nı reddederse, cihazda gerekli istemci sertifikasının sağlanıp sağlanmadığını denetleyin.
-   1. HoloLens sunucu sertifikasını reddederse, HoloLens üzerinde sunucu kök CA sertifikasının sağlanıp sağlanmadığını denetleyin.
-1. Kurumsal profile Wi-Fi sağlama paketi aracılığıyla sağlandıysa, sağlama paketini bir Windows 10 BILGISAYARıNA uygulamayı düşünün. Windows 10 bilgisayarında de başarısız olursa, [Windows Client 802.1 x kimlik doğrulaması sorun giderme kılavuzunu](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-802-authentication)izleyin.
-1. Telemetrinizi tam veya Isteğe bağlı olarak (derlemenize bağlı olarak) ayarlayın ve [Geri Bildirim Hub 'ı](https://docs.microsoft.com/hololens/hololens-feedback)aracılığıyla bize geri bildirim gönderin.
-
-### <a name="additional-resources"></a>Ek kaynaklar:
-- [Windows cihazından Wi-Fi ayarlarını dışarı aktarma](https://docs.microsoft.com/mem/intune/configuration/wi-fi-settings-import-windows-8-1#export-wi-fi-settings-from-a-windows-device)
+Wi-Fi 'nize bağlanmakta sorun yaşıyorsanız [sorun giderme](hololens2-enterprise-troubleshooting.md#) sayfamızı denetleyin.
 
 ## <a name="configure-network-proxy"></a>Ağ ara sunucusunu yapılandırma
 
@@ -195,36 +173,36 @@ Proxy 'lerin sağlanması için üç yol vardır:
     1. Wi-Fi ağınızın SSID 'sini girin ve Ekle ' ye tıklayın.
     1. Sol penceredeki Wi-Fi ağınızı seçin ve istediğiniz özelleştirmeleri girin. Etkin özelleştirmeler sol menüde kalın olarak görünür.
     1. Kaydet ve çıkış ' a tıklayın.
-    1. [Sağlama](https://docs.microsoft.com/hololens/hololens-provisioning#applyremove-a-provisioning-package-to-hololens-after-setup) paketini HoloLens'e uygulama.
+    1. Sağlama paketini HoloLens 'e [uygulayın](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup) .
 
-[CSP'ler,](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) hem Windows 10 hem de Microsoft olmayan MDM hizmet sağlayıcılarında Microsoft Intune yönetim görevlerinin ve ilkelerinin çoğunun arkasındadır. Bir sağlama paketi [oluşturmak ve](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd) [](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-packages) HoloLens 2'ye uygulamak için Windows Yapılandırma Tasarımcısı'nın da kullanabilirsiniz.
-HoloLens 2'nize uygulanacak en olası CSP'ler:
+[CSP 'ler](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) , hem Microsoft Intune hem de MICROSOFT dışı MDM hizmet sağlayıcılarındaki Windows 10 için yönetim görevlerinin ve ilkelerinin çoğundan daha gerisinde bulunur. Ayrıca, bir [sağlama paketi](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-packages) oluşturmak ve bunu HoloLens 2 ' ye uygulamak Için [Windows yapılandırma Tasarımcısı](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-install-icd) ' nı kullanabilirsiniz.
+HoloLens 2 ' ye uygulanacak en olası CSP 'Ler şunlardır:
 
-- [WiFi CSP:](https://docs.microsoft.com/windows/client-management/mdm/wifi-csp)profil başına Wi-Fi ara sunucusu 
+- [WIFI CSP](https://docs.microsoft.com/windows/client-management/mdm/wifi-csp): profil başına Wi-Fi proxy 
 
-[HoloLens cihazlarında desteklenen diğer CSP'ler](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens)
+[HoloLens cihazlarında desteklenen diğer CSP 'Ler](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens)
 
 
 
 
 
 ## <a name="vpn"></a>VPN
-VPN bağlantısı, daha güvenli bir bağlantı ve şirket ağı ile İnternet erişimi sağlamanıza yardımcı olabilir. HoloLens 2, yerleşik VPN istemcisini ve Evrensel Windows Platformu (UWP) VPN eklentisini destekler. 
+VPN bağlantısı, şirketinizin ağına ve Internet 'e daha güvenli bir bağlantı ve erişim sağlamaya yardımcı olabilir. HoloLens 2 yerleşik VPN istemcisi ve Evrensel Windows Platformu (UWP) VPN eklentisini destekler. 
 
-Desteklenen Yerleşik VPN protokolleri:
+Desteklenen yerleşik VPN protokolleri:
 - IKEv2
 - L2TP
 - PPTP
 
-Yerleşik VPN istemcisi için kimlik doğrulaması için sertifika kullanılıyorsa, gerekli istemci sertifikasının kullanıcı sertifika deposuna ekleniyor olması gerekir. 3. taraf BIR VPN eklentisinin HoloLens 2'nin destekleyip desteklemediklerini bulmak için Store'a gidip VPN uygulamasını bulun ve HoloLens'in desteklenen bir cihaz olarak listelenmiş olup olduğunu ve Uygulamanın ARM veya ARM64 mimarisini desteklediği Sistem Gereksinimi sayfasından kontrol edin. HoloLens yalnızca Evrensel Windows Platformu üçüncü taraf VPN için uygulama desteği sunar.
+Sertifika, yerleşik VPN istemcisi için kimlik doğrulaması için kullanılıyorsa, gerekli istemci sertifikasının Kullanıcı sertifika deposuna eklenmesi gerekir. Bir 3. taraf VPN eklentisinin HoloLens 2 ' yi destekleyip desteklemediğini bulmak için, Mağaza ' ya giderek VPN uygulamasını bulun ve HoloLens 'in desteklenen bir cihaz olarak listelenip listelenmediğini denetleyin ve uygulama ARM veya ARM64 mimarisini destekler. HoloLens yalnızca 3. taraf VPN için Evrensel Windows Platformu uygulamalarını destekler.
 
- VPN, [Ayarlar/AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)aracılığıyla MDM tarafından yönetilebilir ve [Vpnv2-csp ilkesi aracılığıyla ayarlanır.](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp)
+ VPN, [Ayarlar/AllowVPN](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)aracılığıyla MDM tarafından yönetilebilir ve  [Vpnv2-CSP ilkesi](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp)aracılığıyla ayarlanabilir.
 
-Vpn'i [yapılandırma hakkında daha fazla bilgi için](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) bu kılavuzları [kullanın.](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-guide)  
+[Bu KıLAVUZLARLA](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-guide) [VPN yapılandırma](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) hakkında daha fazla bilgi edinin.  
 
 ### <a name="vpn-via-ui"></a>Kullanıcı arabirimi üzerinden VPN
 
-VPN varsayılan olarak etkin değildir, ancak  Ayarlar uygulaması açarak ve İnternet **-> VPN'e giderek & etkinleştirilebilir.**
+VPN varsayılan olarak etkin değildir, ancak  Ayarlar uygulaması açarak ve İnternet **-& VPN'e > etkinleştirilebilir.**
 1. Bir VPN sağlayıcısı seçin.
 1. Bağlantı adı oluşturun. 
 1. Sunucu adı veya adresinizi girin.
@@ -246,7 +224,7 @@ VPN varsayılan olarak etkin değildir, ancak  Ayarlar uygulaması açarak ve İ
 1. Gelişmiş **düzenleyiciye geç'e tıklayın.**
 1. Çalışma **zamanı ayarları**  ->  **ConnectivityProfiles**  ->  **VPN**  ->  **VPNSettings'i açın.**
 1. VPNProfileName yapılandırma
-1. ProfileType: Yerel **veya Üçüncü** **Taraf'ı seçin.**
+1. Profil Türü: Yerel **veya Üçüncü** **Taraf'ı seçin.**
     1. Yerel profil için **NativeProtocolType'ı seçin,** ardından sunucu, yönlendirme ilkesi, kimlik doğrulama türü ve diğer ayarları yapılandırabilirsiniz.
     1. "Üçüncü Taraf" profili için sunucu URL'sini, VPN eklentisi Uygulama paketi aile adını (önceden tanımlanmış yalnızca 3) ve özel yapılandırmaları yapılandırabilirsiniz.
 1. Paketinizi dışarı aktarın.
