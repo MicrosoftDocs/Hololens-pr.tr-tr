@@ -1,6 +1,6 @@
 ---
-title: Windows Defender uygulama denetimi-WDAC
-description: Windows Defender uygulama denetiminin ne olduğu ve HoloLens karma gerçeklik cihazlarını yönetmek için nasıl kullanılacağı hakkında genel bakış.
+title: Windows Defender Uygulama Denetimi - WDAC
+description: Uygulama Denetimi Windows Defender nin ne olduğu ve karma gerçeklik cihazlarını yönetmek için HoloLens genel bakış.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -12,75 +12,75 @@ ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 23c9a274387424e8f084a4729ee621e130820716
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: a27a16913873c5245f734dbe084eb2b7ed007c20
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379033"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639939"
 ---
-# <a name="windows-defender-application-control---wdac"></a>Windows Defender uygulama denetimi-WDAC
+# <a name="windows-defender-application-control---wdac"></a>Windows Defender Uygulama Denetimi - WDAC
 
-WDAC, BT yöneticisinin cihazlarını cihazlarda uygulamaların başlatılmasını engelleyecek şekilde yapılandırmasına olanak sağlar. Bu, kullanıcının cihazdaki uygulamaları gizleyen bir kullanıcı arabirimi ile sunulduğu, ancak yine de başlatılabileceği, bilgi noktası modu gibi cihaz kısıtlama yöntemlerinden farklıdır. WDAC uygulandığında, uygulamalar tüm uygulamalar listesinde görünmeye devam eder, ancak bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılabilmesini engeller.
+WDAC, bir IT Yöneticisinin cihazlarda uygulama başlatmayı engellemek için cihazlarını yapılandırmasını sağlar. Bu, bilgi noktası modu gibi cihaz kısıtlama yöntemlerinden farklıdır; burada kullanıcıya cihazda uygulamaları gizleyen ancak hala başlatılana bir kullanıcı arabirimi sunulmaktadır. WDAC uygulanırken, uygulamalar Hala Tüm Uygulamalar listesinde görünür durumdadır, ancak WDAC bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılamalarını durdurur.
 
-Bir cihaza birden fazla WDAC ilkesi atanmış olabilir. Bir sistemde birden çok WDAC ilkesi ayarlandıysa, en kısıtlayıcı olanlar geçerli olur. 
+Bir cihaza birden fazla WDAC ilkesi atanabilir. Bir sistemde birden çok WDAC ilkeleri ayarlanırsa, en kısıtlayıcı ilkeler etkili olur. 
 
 > [!NOTE]
-> Son kullanıcılar, WDAC tarafından engellenen bir uygulamayı başlatmayı denediklerinde, HoloLens üzerinde bu uygulamayı başlatamayan hakkında bir bildirim almaz.
+> Son kullanıcılar WDAC tarafından engellenen bir uygulamayı başlatmaya HoloLens uygulamanın başlatılamayacakları konusunda bir bildirim almaz.
 
-Aşağıda, kullanıcıların [Microsoft Intune Ile HoloLens 2 cihazlarda uygulamalara izin vermek veya bunları engellemek IÇIN WDac ve Windows PowerShell](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens)'in nasıl kullanılacağını öğrenme kılavuzu verilmiştir.
+Aşağıda, kullanıcıların wdac ve Windows PowerShell kullanarak 2 cihaz üzerinde uygulamalara izin verme veya uygulamaları engelleme hakkında bilgi HoloLens bir [kılavuz Microsoft Intune.](/mem/intune/configuration/custom-profile-hololens)
 
-Kullanıcılar ilk örnek adımını kullanarak Windows 10 bilgisayarında yüklü olan uygulamaları ararken, sonuçları daraltmak için birkaç deneme yapması gerekebilir.
+Kullanıcılar, ilk örnek adımı kullanarak Windows 10 uygulamaları araysa da sonuçları daraltmak için birkaç deneme yapmaları gerekir.
 
 ```powershell
 $package1 = Get-AppxPackage -name *<applicationname>*
 ``` 
 
-Paketin tam adını bilmiyorsanız, bulmak için ' Get-AppxPackage-Name, en iyi \* tahmin \* ' i birkaç kez çalıştırmanız gerekebilir. Ardından, adı ' $package 1 = Get-AppxPackage-adı gerçek. PackageName ' olarak çalıştırırsınız
+Paketin tam adını bilmiyorsanız, paketi bulmak için birkaç kez 'Get-AppxPackage -name \* YourGueGuess \* ' çalıştırmanız gerekir. Ardından adı '$package 1 = Get-AppxPackage -name Actual.PackageName' çalıştırın
 
-Örneğin, Microsoft Edge için aşağıdakiler çalıştırıldığında birden fazla sonuç döndürülür, ancak bu listeden, ihtiyacınız olan tam adın Microsoft. MicrosoftEdge olduğunu belirleyebilirsiniz.
+Örneğin, aşağıdakini Microsoft Edge birden fazla sonuç dönecektir, ancak bu listeden ihtiyacınız olan tam adın Microsoft.MicrosoftEdge olduğunu tanımlayabilirsiniz.
 
 ```powershell
 Get-AppxPackage -name *edge*
 ``` 
 
-## <a name="package-family-names-for-apps-on-hololens"></a>HoloLens 'teki uygulamalar için paket aile adları
+## <a name="package-family-names-for-apps-on-hololens"></a>HoloLens'da uygulamalar için Paket HoloLens
 
-Yukarıdaki kılavuzda, newPolicy.xml el ile düzenleyebilir ve yalnızca paket aile adlarıyla HoloLens 'te yüklü olan uygulamalar için kurallar ekleyebilirsiniz. Bazen, ilke eklemek istediğiniz masaüstü bilgisayarınızda olmayan, kullanmak için kullanabileceğiniz uygulamalar vardır.
+Yukarıda bağlantılı kılavuzda, uygulama adlarını el newPolicy.xml ve yalnızca paket aile adlarıyla HoloLens uygulamalar için kurallar ekleyebilirsiniz. Bazen, masaüstü bilgisayarınızda ilkeye eklemek istediğiniz uygulamaları kullanmak için kullanabileceğiniz uygulamalar olabilir.
 
-HoloLens 2 cihazları için yaygın olarak kullanılan ve In-Box uygulamaların bir listesi aşağıda verilmiştir.
+2 cihaz için yaygın olarak kullanılan ve In-Box uygulamaları HoloLens listesi ve ardından.
 
-| Uygulama Adı                   | Paket ailesi adı                                |
+| Uygulama Adı                   | Paket Ailesi Adı                                |
 |----------------------------|----------------------------------------------------|
-| 3B görüntüleyici                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
-| Uygulama yükleyicisi              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup>1</sup>         |
+| 3B Görüntüleyici                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
+| Uygulama Yükleyicisi              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup>1</sup>         |
 | Takvim                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Kamera                     | HoloCamera_cw5n1h2txyewy                           |
 | Cortana                    | Microsoft.549981C3F5F10_8wekyb3d8bbwe              |
-| Dynamics 365 kılavuzlar        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
-| Dynamics 365 uzaktan yardım | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
-| Geribildirim Merkezi               | Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe         |
+| Dynamics 365 Kılavuzları        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
+| Dynamics 365 Remote Assist | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
+| Geri Bildirim Merkezi               | Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe         |
 | Dosya Gezgini              | c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy |
 | Posta                       | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Microsoft Store            | Microsoft.WindowsStore_8wekyb3d8bbwe               |
-| TV & Filmler                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
+| Filmler & TV                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
 | OneDrive                   | microsoft.microsoftskydrive_8wekyb3d8bbwe          |
-| Fotoğraflar                     | Microsoft.Windows.Photos_8wekyb3d8bbwe             |
+| Fotoğraflar                     | Microsoft. Windows. Photos_8wekyb3d8bbwe             |
 | Ayarlar                   | HolographicSystemSettings_cw5n1h2txyewy            |
 | İpuçları                       | Microsoft.HoloLensTips_8wekyb3d8bbwe               |
 
-- 1-uygulama yükleyicisi, uygulama yükleyici uygulamasını yalnızca Microsoft Store veya MDM çözümünüzden yüklenen uygulamalar değil, uygulamaları engeller.
+- 1 - Uygulama Yükleyicisi yalnızca Uygulama Yükleyicisi uygulamasını engellemez; Microsoft Store veya MDM çözümünüz gibi diğer kaynaklardan yüklenmiş uygulamaları engellemez.
 
-### <a name="how-to-find-a-package-family-name"></a>Paket aile adını bulma
+### <a name="how-to-find-a-package-family-name"></a>Paket Aile Adı bulma
 
-Bir uygulama bu listede yoksa, bir Kullanıcı, Packagerelativeıd 'sini ve PackageFamilyName Al ' ı öğrenmek için, uygulamayı engellenme olarak yükleyen bir HoloLens 2 ' ye bağlı olan cihaz portalını kullanabilir.
+Bir uygulama bu listede yoksa, bir kullanıcı PackageRelativeID'yi belirlemek ve buradan PackageFamilyName'i almak için, engellenmiş uygulamayı yüklemiş bir HoloLens 2'ye bağlı Cihaz Portalı kullanabilir.
 
-1. Uygulamayı HoloLens 2 cihazınıza yüklersiniz. 
-1. Ayarları aç-> güncelleştirmeler & geliştiriciler Için güvenlik-> ve **Geliştirici modunu** ve ardından **cihaz portalını** etkinleştirir. 
-    1. Daha fazla ayrıntı yönergesi [cihaz portalının kurulumu ve kullanımı](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)hakkında daha fazla bilgi edinin.
-1. Cihaz portalı bağlandıktan sonra, **Görünümler** ' e gidin ve ardından **uygulamalar**' a gidin. 
-1. Yüklü uygulamalar panelinde, açılan listeyi kullanarak yüklü uygulamayı seçin. 
-1. Packagerelativeıd öğesini bulun. 
-1. Uygulama karakterlerini! önüne kopyalayın, bu karakterler PackageFamilyName olacaktır.
+1. Uygulamayı 2. HoloLens yükleyin. 
+1. -Ayarlar -> Update & -> Geliştiriciler için'i açın ve Ardından Geliştirici **modunu ve** ardından **Cihaz portalı'ı etkinleştirin.** 
+    1. Daha fazla ayrıntı yönergeleri için cihaz portalı [kurulumu ve kullanımı hakkında daha fazla bilgi için buraya bakın.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
+1. Bağlandıktan Cihaz Portalı Görünümler'e ve **ardından Uygulamalar'a** **gidin.** 
+1. Yüklü Uygulamalar panelinde, yüklü uygulamayı seçmek için açılan liste kullanın. 
+1. PackageRelativeID'i bulun. 
+1. Uygulama karakterlerini !'den önce kopyalayın; bu karakterler PackageFamilyName'iniz olur.
 
 

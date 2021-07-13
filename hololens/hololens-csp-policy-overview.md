@@ -1,6 +1,6 @@
 ---
-title: CSP 'Leri ve cihaz yönetimine genel bakış
-description: Mobil cihaz yönetimi ve sağlama paketleri kullanarak CSP 'Leri, ilkeyi ve cihaz yönetimini yapılandırmayı öğrenin.
+title: CSP'leri ve Cihaz Yönetimi genel bakış
+description: Mobil uygulama ve sağlama paketlerini kullanarak CSP'leri, ilkeyi ve Cihaz Yönetimi yönetimini yapılandırmayı öğrenin.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -13,47 +13,47 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 60e73a9a70a70c5c583edc73a0add2f0f502ef80
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: b312f9d20c9a75c5e4c1906c4ec55f42fda977f6
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379103"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640466"
 ---
-# <a name="configure-csps-and-device-management-overview"></a>CSP 'Leri ve cihaz yönetimine genel bakış
+# <a name="configure-csps-and-device-management-overview"></a>CSP'leri ve Cihaz Yönetimi genel bakış
 
-BT yöneticileri, HoloLens 2 ' de ilke ayarlarını tanımlayabilir ve uygulayabilir. Kullandığınız yapılandırma ayarları dağıtım senaryosuna göre farklılık gösterir ve şirket cihazları bu en geniş denetim aralığını sunar. Windows 10 ' da yapılandırma hizmeti sağlayıcıları (CSP), cihazdaki yapılandırma ayarlarını okumak, ayarlamak, değiştirmek veya silmek için bir arabirimdir. Bu ayarlar kayıt defteri anahtarları veya dosyalarıyla eşlenir. Bazı yapılandırma hizmeti sağlayıcıları WAP biçimini, bazı destek SyncML ' i ve her ikisini de destekler.
+It Administrators can define and implement policy settings on HoloLens 2. Hangi yapılandırma ayarlarının dağıtım senaryosuna göre farklılık gösterir ve kurumsal cihazlar, EN geniş denetim yelpazesini IT'ye sunar. Bu Windows 10, Yapılandırma Hizmeti Sağlayıcıları (CSP) cihaz yapılandırma ayarlarını okumak, ayarlamak, değiştirmek veya silmek için bir arabirimdir. Bu ayarlar kayıt defteri anahtarları veya dosyalarıyla eşler. Bazı yapılandırma hizmeti sağlayıcıları WAP biçimini, bazıları SyncML'yi ve bazıları da ikisini de destekler.
 
-Windows 10 holographic cihaz yönetimi CSP 'Leri hakkında daha fazla bilgi için, [HoloLens cihazlarında desteklenen CSP](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens)'lerin tam listesine bakın.
-BT yöneticileri cihazlarda Ilke CSP 'sini de yönetebilir, [HoloLens 2 tarafından desteklenen Ilke CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csps-supported-by-hololens2)'lerin tam listesine bakın.
+Cihaz yönetimi CSP'Windows 10 Holographic hakkında daha fazla bilgi için, tüm cihazlarda desteklenen [CSP'HoloLens bakın.](/windows/client-management/mdm/configuration-service-provider-reference#hololens)
+AYRıCA, IT Yöneticileri cihazlarda İlke CSP'lerini yönetebilir, 2. ile desteklenen İlke [CSP'lerinin HoloLens bakın.](/windows/client-management/mdm/policy-csps-supported-by-hololens2)
 
 ## <a name="configuration-methods"></a>Yapılandırma yöntemleri
 
 ### <a name="configure-with-mdm"></a>MDM ile yapılandırma
 
-CSP 'Ler ve Ilkeler, bir MDM sistemine kayıtlı tüm kişisel veya şirket cihazlarından kolayca yönetilebilir. Bir cihaz MDM çözümünüze kaydedildikten sonra bu cihazı veya cihaz yapılandırması kullanarak cihaz kümesini yönetebileceksiniz. [HoloLens CIHAZLARıNıZı MDM aracılığıyla yönetme](hololens-mdm-configure.md)hakkında daha fazla bilgi edinin.
+CSP'ler ve İlkeler, MDM sistemine kayıtlı herhangi bir kişisel veya kurumsal cihazda kolayca yönetilebilir. Bir cihaz MDM çözümünüze kaydolarak cihaz yapılandırmalarını kullanarak bu cihazı veya cihaz kümelerini yönetebilirsiniz. [MDM aracılığıyla cihazlarınızı HoloLens hakkında daha fazla bilgi edinebilirsiniz.](hololens-mdm-configure.md)
 
-### <a name="configure-with-provisioning-packages"></a>Sağlama paketleriyle yapılandırma
+### <a name="configure-with-provisioning-packages"></a>Sağlama Paketleri ile yapılandırma
 
-HoloLens 2 Ayrıca, özel sağlama paketleri aracılığıyla HoloLens 2 cihazları için sınırlı sayıda CSP yapılandırması ayarlamayı destekler. Sağlama paketleri genellikle MDM olmayan yönetilen cihazlar için yararlanılabilir ve her cihaza el ile uygulanması gerekir. [HoloLens için özel sağlama paketleri](https://docs.microsoft.com/hololens/hololens-provisioning)oluşturma hakkında bilgi edinin.
+HoloLens 2, özel Sağlama Paketleri aracılığıyla 2 cihaz için HoloLens CSP yapılandırma kümesi ayarlamayı da destekler. Sağlama Paketleri genellikle MDM olmayan yönetilen cihazlar için kullanılır ve her cihaza el ile uygulanması gerekir. HoloLens için [özel Sağlama Paketleri oluşturma hakkında bilgi HoloLens.](hololens-provisioning.md)
 
 ## <a name="configurations"></a>Yapılandırmalar
 
-### <a name="common-device-restrictions"></a>Ortak cihaz kısıtlamaları
+### <a name="common-device-restrictions"></a>Yaygın cihaz kısıtlamaları
 
-Bazı cihaz kısıtlamaları basittir ve bir işlevi veya cihazla bağlantıyı devre dışı bırakır. Bu konuda daha fazla bilgi edinmek için [ortak cihaz kısıtlamaları](hololens-common-device-restrictions.md) hakkında daha fazla bilgi edinin
+Bazı cihaz kısıtlamaları basit ve bir işlevselliği veya cihazla bağlantıyı devre dışı bırakmak kadar kolaydır. Bunlar hakkında daha fazla bilgi edinmek için yaygın [cihaz kısıtlamaları hakkında daha fazla bilgi edinebilirsiniz.](hololens-common-device-restrictions.md)
 
 ### <a name="kiosk-modes"></a>Bilgi noktası modları
 
-Hangi kimliklerin varsayılan olarak hangilerinin erişebileceğini denetlemek için bilgi noktası modunu kullanın. Kiosks, tek bir uygulama veya birden çok uygulama kullanıcı arabirimi deneyimi için kullanılabilir. Bilgi noktası yapılandırmalarının, cihazı kullanan herkes için tek bir uygulamadan farklı gruplar için farklı uygulama seçimleriyle aralığı vardır. Bilgi noktası modu, "izin verilen uygulamaların" diğer uygulamaları başlatmasını engellemez ve hiçbir zaman amaçlanmamıştır. Bilgi [noktası modlarını ve bunların nasıl kullanılacağını okuyarak](hololens-kiosk.md)daha fazla bilgi edinin.
+Hangi kimliklerin varsayılan olarak hangi uygulamalara erişimi olduğunu kontrol etmek için Bilgi Noktası modunu kullanın. Bilgi noktası, tek bir uygulama veya birden çok uygulama kullanıcı arabirimi deneyimi için kullanılabilir. Bilgi noktası yapılandırmaları, cihazı kullanan herkesin tek bir uygulamasından farklı gruplar için farklı uygulama seçimlerinden farklı seçimlere kadar değişir. Bilgi noktası modu, "izin verilen uygulamaların" diğer uygulamaları başlatmasına engel olmaz ve hiçbir zaman amaçlanmaz. Bilgi noktası modları [ve bunları kullanma hakkında daha fazla bilgi edinebilirsiniz.](hololens-kiosk.md)
 
-### <a name="settings-page-visibility"></a>Ayarlar sayfası görünürlüğü
+### <a name="settings-page-visibility"></a>Ayarlar Sayfa Görünürlüğü
 
-Ayarlara hangi kimliklerin varsayılan olarak erişebileceğini denetlemek için ayarlar uygulama ilkesi ' ni kullanın. Bu ilkeyi kullanarak, ayarlar uygulaması yalnızca seçim sayfalarını gösterecek şekilde veya seçili tüm sayfaları gizleyecek şekilde yapılandırılabilir. [Kullanılabilir sayfaları yapılandırma hakkında bilgi edinin](settings-uri-list.md).
+Hangi Ayarlar varsayılan olarak ayarlara erişimi olduğunu kontrol etmek için bir uygulama ilkesi kullanın. Bu ilkeyi Ayarlar uygulama yalnızca seçili sayfaları gösterecek veya tüm seçili sayfaları gizleyecek şekilde ya da yalıtabilirsiniz. [Kullanılabilir sayfaları yapılandırma hakkında bilgi edinebilirsiniz.](settings-uri-list.md)
 
-Bu özellik şu anda yalnızca [Windows Insider Derlemeleriyle](hololens-insider.md)kullanılabilir. İçin bu özelliği kullanmayı düşündüğünüz cihazların Build 19041.1349 + konumunda olduğundan emin olun.
+Bu özellik şu anda yalnızca [Insider Windows kullanılabilir.](hololens-insider.md) Bu özelliği kullanmayı niyetli cihazların 19041.1349+ derlemede olduğundan emin olun.
 
-### <a name="wdac"></a>Ung
+### <a name="wdac"></a>WDAC
 
-Sistemin bilgi noktası modunda olup olmadığı ne olursa olsun, hangi uygulamaların/işlemlerin çalıştırılmasına izin verildiğini/izin verileceğini denetlemek için WDAC yapılandırmasını kullanın.
-[WDAC için genel bakış bölümüne bakın.](windows-defender-application-control-wdac.md)
+WdAC yapılandırmasını, sistemin bilgi noktası modunda olup olmadığına bakılmaksızın hangi uygulamaların/işlemlerin başlatılacaklarına/izin verilmeyeceklerine göre kontrol etmek için kullanın.
+[WDAC'ye genel bakış sayfamıza bakın.](windows-defender-application-control-wdac.md)

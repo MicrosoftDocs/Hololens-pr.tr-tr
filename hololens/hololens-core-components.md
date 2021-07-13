@@ -12,16 +12,17 @@ ms.localizationpriority: medium
 ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2fb58345f623a0b70c1fda10b9fb550de70f4c6d
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 43162389eae82bc09135c62acd40d71048d14db1
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635798"
+ms.locfileid: "113639089"
 ---
 # <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>ticari bir ortamda HoloLens 2 dağıtımı planlama
 
 ## <a name="overview"></a>Genel Bakış
+
 > [!NOTE]
 > bu genel bakış, bt uzmanlarının bir kuruluşta Microsoft HoloLens 2 cihaz dağıtma ve yönetme ile ilgili hususları anlamalarına yardımcı olmaya yöneliktir. cihaz son kullanıcıları için bkz. [HoloLens 2](hololens2-setup.md) ' yi kullanmaya başlamak için kullanıma hazırlanıyor.
 
@@ -29,7 +30,7 @@ HoloLens 2, kuruluşlar için güçlü, esnek, yerleşik mobil cihaz ve uygulama
 
 aşağıdaki adımlar ve video, kuruluşunuzda HoloLens 2 benimseme sürecinde size rehberlik etmenize yardımcı olabilir.
 
-| | |
+| &nbsp; | &nbsp; |
 |--|--|
 | ![1. Adım](images/1green.png)| <br/> **[ortak dağıtım senaryoları](hololens-requirements.md)**: dağıtım senaryolarını anlayın ve HoloLens 2 cihaz dağıtmak için gereken çekirdek bileşenleri keşfedebilirsiniz. |
 | ![2. Adım](images/2green.png)| <br/> **[hazırlama](#prepare)**: HoloLens 2 için gereken altyapı temelleri hakkında bilgi sahibi olun. |
@@ -37,11 +38,13 @@ aşağıdaki adımlar ve video, kuruluşunuzda HoloLens 2 benimseme sürecinde s
 | ![4. Adım](images/4green.png) | <br/> **[Dağıtım](#deploy)**: cihazlarınızı dağıtmayı ve uygulamalarınızı güvenli ve etkili bir şekilde dağıtmayı öğrenin. |
 | ![5. Adım](images/5green.png) | <br/> **[bakım](#maintain)**: HoloLens 2 cihazlarınızın durumunu doğru bir şekilde korumak ve kurumsal ilkeyle uyumluluğu sağlamak için gerekenleri öğrenin. |
 
+<br/>
+
 > [!VIDEO https://channel9.msdn.com/Shows/IT-Ops-Talk/HoloLens-2-Deployment-Overview/player]
 
 ## <a name="prepare"></a>Hazırlama
 
-HoloLens 2 özelliklerini tam olarak desteklemek için gereken temel altyapı hizmetleri hakkında bilgi edinin. 
+HoloLens 2 özelliklerini tam olarak desteklemek için gereken temel altyapı hizmetleri hakkında bilgi edinin.
 
 | Bileşen | Açıklama |
 |-----------|------------|

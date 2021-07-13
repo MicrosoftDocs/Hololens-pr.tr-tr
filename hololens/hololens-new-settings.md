@@ -1,53 +1,53 @@
 ---
-title: Yeni Ayarlar uygulamasına tanıtma
-description: Yeni Ayarlar uygulaması hakkında bilgi edinebilirsiniz
+title: yeni Ayarlar uygulamasına giriş
+description: yeni Ayarlar uygulaması hakkında bilgi edinin
 author: joyjaz
 ms.author: v-jjaswinski
-keywords: HoloLens, ayarlar, uygulama seçici, birim
+keywords: HoloLens, ayarlar, uygulama seçicisi, birim
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: bf1a2080c15346843b9ea9b2d0dc93154e185107
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: e6da84c180ef596b63b6d41229bd094354ab1221
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380298"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640177"
 ---
-# <a name="new-settings-app"></a>Yeni Ayarlar uygulaması
+# <a name="new-settings-app"></a>yeni Ayarlar uygulaması
 
-[Windows Holographic sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1)ile, Ayarlar uygulamasının yeni bir sürümünü tanıtabilirsiniz. Yeni Ayarlar uygulaması şu alanlarda HoloLens 2 için yeni özellikler ve genişletilmiş ayarlar içerir: Ses, Power & uyku, Ağ & İnternet, Uygulamalar, Hesaplar, Erişim Kolaylığı ve daha fazlası.
+[Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1)ile, Ayarlar uygulamasının yeni bir sürümünü kullanıma sunuyoruz. yeni Ayarlar uygulaması aşağıdaki alanlarda HoloLens 2 için yeni özellikleri ve genişletilmiş ayarları içerir: ses, güç & sleep, ağ & ınternet, uygulamalar, hesaplar, erişim kolaylığı ve daha fazlası.
 
 > [!NOTE]
-> Yeni Ayarlar uygulaması eski Ayarlar uygulamasından ayrı olduğundan, daha önce ortamınıza yerleştirilen tüm Ayarlar pencereleri güncelleştirmeden sonra kaldırılır.
+> yeni Ayarlar uygulaması eski Ayarlar uygulamasından farklı olduğu için, daha önce ortamınıza yerleştirdiğiniz tüm Ayarlar pencereleri güncelleştirme sonrasında kaldırılır.
 
-![Yeni Ayarlar uygulaması giriş sayfası](images/new-settings-app.png)
+![yeni Ayarlar uygulama giriş sayfası](images/new-settings-app.png)
 
 **Yeni özellikler ve ayarlar**
-- Ayarlar araması: Anahtar sözcükleri veya ayarın adını kullanarak Ayarlar giriş sayfasından ayarlar için arama yapın.
-- Sistem > [Renk ayarlama](hololens2-display.md#how-to-use-display-color-calibration)
-    - HoloLens 2 ekranınız için alternatif bir renk profili seçin.
-- System > Sound:
-  - Giriş ve çıkış ses cihazları: Giriş ve çıkış ses cihazlarınızı bağımsız olarak seçin (örneğin, Bluetooth mikrofonları aracılığıyla ses dinleme veya ses girişi için USB-C mikrofonu kullanma).
+- arama Ayarlar: anahtar sözcükler veya ayarın adı kullanılarak Ayarlar giriş sayfasından ayarları arayın.
+- Sistem > [renk ayarlama](hololens2-display.md#how-to-use-display-color-calibration)
+    - HoloLens 2 görüntü için alternatif bir renk profili seçin.
+- Sistem > sesi:
+  - giriş ve çıkış ses cihazları: bağımsız olarak giriş ve çıkış ses cihazlarınızı seçin (örneğin, Bluetooth kulaklık aracılığıyla ses dinleyin veya ses girişi için bir USB-C mikrofonu kullanın).
     > [!NOTE]
-    > Bluetooth mikrofonları HoloLens 2 tarafından desteklenmiyor.
-  - Uygulama hacmi: Her uygulamanın hacmini bağımsız olarak ayarlayın. Bkz. [uygulama başına birim denetimi.](holographic-home.md#per-app-volume-control)
-- Sistem > Power & uykuda: Cihazın bir süre sonra ne zaman uykuda olması gerektiğini seçin.
-- Sistem > Pil: Pil tasarrufu modunu el ile etkinleştirin veya belirli bir noktanın otomatik olarak pil tasarrufu bir pil eşiği ayarlayın.
-- Cihazlar > USB kullanır: USB bağlantılarını varsayılan olarak devre dışı abilirsiniz.
-- Ağ & İnternet:
-  - USB-C Ethernet bağdaştırıcıları artık İnternet'te ağ & görünür.
-  - USB-C Ethernet bağdaştırıcısı ayarları artık IP adresi de dahil olmak üzere kullanılabilir.
-  - Artık HoloLens 2'de uçak modunu etkinleştirebilirsiniz.
-- Uygulamalar: Dosya ve bağlantı türleri için kullanılan varsayılan uygulamaları sıfırlayabilirsiniz. Daha fazla bilgi için [bkz. Varsayılan uygulama seçici.](holographic-home.md#default-app-picker)
-- Hesaplar > Diğer kullanıcılar: Cihaz sahipleri kullanıcı ekleyebilir, standart kullanıcıları cihaz sahiplerine yükseltebilirsiniz, cihaz sahiplerini standart kullanıcılara düşürebilirsiniz ve kullanıcıları kaldırabilir.
-- Erişim Kolaylığı: Metin boyutunu ve bazı görsel etkileri değiştirme.
+    > Bluetooth mikrofonlar HoloLens 2 tarafından desteklenmez.
+  - Uygulama hacmi: her uygulamanın birimini bağımsız olarak ayarlayın. Bkz. [uygulama birimi denetimi başına](holographic-home.md#per-app-volume-control).
+- System > güç & uyku: bir süre işlem yapılmadan sonra cihazın uyku moduna geçmesi gerektiğini seçin.
+- Sistem > pili: pil tasarrufu modunu el ile etkinleştirin veya nokta pil tasarrufu modunun otomatik olarak etkinleştirileceği bir pil eşiği ayarlayın.
+- USB > cihazlar: varsayılan olarak USB bağlantılarını devre dışı bırakabilirsiniz.
+- Internet & ağı:
+  - USB-C Ethernet bağdaştırıcıları artık ağ & Internet 'te görüntülenir.
+  - USB-C Ethernet bağdaştırıcısı ayarları, IP adresi dahil artık kullanılabilir.
+  - artık HoloLens 2 üzerinde uçak modunu etkinleştirebilirsiniz.
+- Uygulamalar: dosya ve bağlantı türleri için kullanılan varsayılan uygulamaları sıfırlayabilirsiniz. Daha fazla bilgi için bkz. [Varsayılan uygulama Seçicisi](holographic-home.md#default-app-picker).
+- Hesaplar diğer kullanıcılar >: cihaz sahipleri kullanıcı ekleyebilir, standart kullanıcıları cihaz sahiplerine yükseltebilir, cihaz sahiplerini standart kullanıcılara indirgeyebilirler ve kullanıcıları kaldırabilir.
+- Erişim kolaylığı: metin boyutunu ve bazı görsel etkileri değiştirme.
 
 **Bilinen sorunlar**
-- Daha önce yerleştirilen Ayarlar pencereleri kaldırılır (yukarıdaki nota bakın).
-- Artık Ayarlar uygulamasıyla cihazınızı yeniden adlandıramazsiniz. IT [yöneticileri, HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) için Windows Autopilot şablonu veya MDM [DevDetail CSP](https://docs.microsoft.com/windows/client-management/mdm/devdetail-csp) Ext/Microsoft/DNSComputerName düğümünü kullanarak cihazları yeniden adlandırabilirsiniz.
-- Ethernet sayfası her zaman bir sanal Ethernet cihazı ("UsbNcm") gösterir.
-- Yeni uygulamanın pil Microsoft Edge, UWP bağdaştırıcı katmanı tarafından desteklenen bir Win32 masaüstü uygulaması olarak yapısı nedeniyle doğru olmayabilir (yakın zamanda düzeltme bek gerekmmektedir).
+- daha önce yerleştirilmiş Ayarlar pencereleri kaldırılır (yukarıdaki nota bakın).
+- cihazınızı artık Ayarlar uygulamayla yeniden adlandıramazsınız. bt yöneticileri, HoloLens 2 cihaz adı şablonu veya MDM [devdetail CSP](/windows/client-management/mdm/devdetail-csp) Ext/Microsoft/dnscomputername düğümü [için Windows Autopilot](hololens2-autopilot.md) kullanarak cihazları yeniden adlandırabilirler.
+- Ethernet sayfasında her zaman sanal bir Ethernet aygıtı ("UsbNcm") gösterilir.
+- yeni Microsoft Edge pil kullanımı, bir UWP bağdaştırıcı katmanı tarafından desteklenen bir Win32 masaüstü uygulaması olarak doğası nedeniyle doğru olmayabilir (kısa süre önce düzeltilmez).
 

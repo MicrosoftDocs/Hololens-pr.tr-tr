@@ -1,11 +1,11 @@
 ---
-title: Sayfa Ayarlar Görünürlüğü
-description: PageVisibilityList için desteklenen URI'ler listemizi ve karma gerçeklik cihazlarının HoloLens takip edin.
+title: sayfa Ayarlar görünürlüğü
+description: HoloLens karışık gerçeklik cihazlarındaki pagevisibilitylist ve Guide için desteklenen urı 'ler listemize göre güncel tutun.
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2020
 ms.topic: article
-keywords: hololens, hololens 2, atanan erişim, bilgi noktası, ayarlar sayfası
+keywords: Hololens, Hololens 2, atanan erişim, bilgi noktası, ayarlar sayfası
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -13,89 +13,89 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5ac3ff27085fd2f7c5bc1de0e461079a673bbb23
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 454d79e8b719feb73d5a39280794dcd76f134952
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113637175"
+ms.locfileid: "113639242"
 ---
-# <a name="page-settings-visibility"></a>Sayfa Ayarlar Görünürlüğü
+# <a name="page-settings-visibility"></a>sayfa Ayarlar görünürlüğü
 
-HoloLens cihazları için yönetilebilir özelliklerden biri, [Ayarlar/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) ilkesi kullanarak Ayarlar uygulama içinde görülen sayfaları kısıtlamaktır. PageVisibilityList, IT Yöneticilerinin System Ayarlar uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesini veya belirtilenler dışında tüm sayfalar için bunu yapmalarını sağlayan bir ilkedir.
+HoloLens cihazların yönetilebilir özelliklerinden biri, Ayarlar uygulamasında görülen sayfaları kısıtlamak için [Ayarlar/pagevisibilitylist ilkesini](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) kullanmaktır. pagevisibilitylist, bt yöneticilerinin sistem Ayarlar uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesine ya da belirtilenler hariç tüm sayfalarda yapılmasına izin veren bir ilkedir.
 
 > [!NOTE]
-> Bu özellik yalnızca [Holographic 20H2 veya Windows 20H2](hololens-release-notes.md#windows-holographic-version-20h2) veya daha yeni sürümlerde kullanılabilir HoloLens 2 cihazlar için kullanılabilir. Bunu kullanmayı niyetli cihazların güncelleştirilmiş olduğundan emin olun.
+> bu özellik, HoloLens 2 cihazları için yalnızca [Windows Holographic, sürüm 20h2](hololens-release-notes.md#windows-holographic-version-20h2) veya üzeri sürümlerde kullanılabilir. Lütfen için kullanmayı planladığınız cihazların güncelleştirildiğinden emin olun.
 
 
 ## <a name="examples"></a>Örnekler
-Sayfalar, yayımlanmış URI'lerin kısaltılmış bir sürümüyle tanımlanır ve bu sürüm URI'den "ms-settings:" ön eki eksi değerdir.
+Sayfalar, yayımlanan URI 'lerin kısaltılmış bir sürümü tarafından tanımlanır. Bu, URI 'nin "MS-Settings:" öneki anlamına gelir.
 
-Aşağıdaki örnekte, sırasıyla "network-wifi" ve "bluetooth" URI'sine sahip olan yalnızca hakkında ve Bluetooth sayfalarına erişime izin verecek bir ilke yer almaktadır:
+Aşağıdaki örnek, yalnızca sırasıyla URI "Network-WiFi" ve "Bluetooth" içeren hakkında ve Bluetooth sayfalarına erişime izin veren bir ilkeyi göstermektedir:
 - `showonly:network-wifi;network-proxy;bluetooth`
 
-Aşağıdaki örnek, işletim sistemi sıfırlama sayfasını gizleyen bir ilkeyi göstermektedir:
+Aşağıdaki örnek, işletim sistemi sıfırlama sayfasını gizleyecek bir ilke gösterir:
 - `hide:reset`
 
 
 ## <a name="deploying-this-policy-via-intune"></a>Bu ilkeyi Intune aracılığıyla dağıtma
 
-Bunlar, Intune'a sağlanmalıdır yapılandırma değerleridir:
+Intune 'a sağlanacak yapılandırma değerleri şunlardır:
 
-- **Ad:** Profil için yöneticinin tercih ettiği görünen ad.
-- **OMA-URI:** Kapsamı dahil olmak üzere ayar sayfasının tam [URI'sı.](/windows/client-management/mdm/policy-configuration-service-provider) Bu sayfada yer alan bu örnekler kapsamı `./Device` kullanıyor.
-- **Değer:** Yalnızca belirtilen sayfaları gizlemeyi veya göstermeyi *belirten* bir dize değeri. Olası değerler ve `hide:<pagename>` `showonly:<pagename>` değerleridir. 
+- **Ad:** Profil için yönetici tarafından tercih edilen görünen ad.
+- **OMA-URI:** Ayar sayfasının [kapsamı](/windows/client-management/mdm/policy-configuration-service-provider)dahil olmak üzere tam URI 'si. Bu sayfadaki Bu örnekler, `./Device` kapsamı kullanıyor.
+- **Değer:** *Yalnızca* belirtilen sayfaların gizlenmesi veya gösterilmesi gerektiğini belirten bir dize değeri. Olası değerler şunlardır `hide:<pagename>` `showonly:<pagename>` . 
  
-Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
+Birden çok sayfa, noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
 
-1. Özel ilke **oluşturun.**
-1. **OMA-URI'yi ayarlarken** tam kapsamlı URI'yi girin. Örneğin: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
-1. Veri seçiminizi şu şekilde seçin: **Dize**
-1. Değer **belirtirken** yukarıdaki kılavuzu kullanın. Örneğin: **`showonly:network-wifi;network-proxy;bluetooth`** veya **`hide:reset`** 
+1. Özel bir **ilke** oluşturun.
+1. **OMA-URI** ayarlandığında, tam kapsamlı URI girin. Örneğin: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
+1. Veri çekmeyi seçerken şunu seçin: **dize**
+1. **Değer** belirtirken Yukarıdaki kılavuzu kullanın. Örneğin: **`showonly:network-wifi;network-proxy;bluetooth`** veya **`hide:reset`** 
 > [!IMPORTANT]
-> Özel cihaz yapılandırmasını cihazın içinde olması amaçlanan bir gruba atadığınızdan emin olun. Bu adım gerçekleştirilene kadar ilke uygulanır ancak uygulanmaz.
+> Özel cihaz yapılandırmasını cihazın içinde olmasını amaçladığı bir gruba atadığınızdan emin olun. Bu adım gerçekleştirilmediğinden, ilke gönderilir ancak uygulanmaz.
 
-Intune HoloLens cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [MDM](hololens-mdm-configure.md) yapılandırmasını yapılandırma.
-
-
-## <a name="deploying-this-policy-via-a-provisioning-package"></a>Bu ilkeyi Sağlama Paketi aracılığıyla dağıtma
-
-Bunlar, Yapılandırma Tasarımcısı'nda Windows değerleridir:
-
-**Değer:** Yalnızca belirtilen sayfaları gizlemeyi veya göstermeyi *belirten* bir dize değeri. Olası değerler ve `hide:<pagename>` `showonly:<pagename>` değerleridir. Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
+ıntune grupları ve cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [HoloLens MDM yapılandırması](hololens-mdm-configure.md) .
 
 
-1. Windows Configuration Designer'da paketinizi oluştururken İlkeler > Ayarlar > **PageVisibilityList'e gidin**
+## <a name="deploying-this-policy-via-a-provisioning-package"></a>Bu ilkeyi bir sağlama paketi aracılığıyla dağıtma
+
+bunlar, Windows yapılandırma tasarımcısı 'nda belirtilecektir yapılandırma değerlerdir:
+
+**Değer:** *Yalnızca* belirtilen sayfaların gizlenmesi veya gösterilmesi gerektiğini belirten bir dize değeri. Olası değerler şunlardır `hide:<pagename>` `showonly:<pagename>` . Birden çok sayfa, noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
+
+
+1. Windows yapılandırma tasarımcısında paketinizi oluştururken **ilkeler > Ayarlar > pagevisibilitylist** ' e gidin
 1. Dizeyi girin: **`showonly:network-wifi;network-proxy;bluetooth`**
-1. Sağlama Paketinizi dışarı aktarın.
-1. Paketi cihazınıza uygulama.
-Sağlama paketi oluşturma ve uygulama hakkında ayrıntılı bilgi için HoloLens [sayfasını ziyaret edin.](hololens-provisioning.md)
+1. Sağlama paketinizi dışarı aktarın.
+1. Paketi cihazınıza uygulayın.
+bir sağlama paketini oluşturma ve uygulama hakkında tam ayrıntılar için [HoloLens sağlama sayfasını](hololens-provisioning.md)ziyaret edin.
 
 
-Seçilen yöntemden bağımsız olarak cihazınızın artık değişiklikleri alması gerekir ve kullanıcılara aşağıdaki Ayarlar sunulacaktır.
+seçtiğiniz yöntemden bağımsız olarak cihazınız artık değişiklikleri almalıdır ve kullanıcılar aşağıdaki Ayarlar uygulamayla sunulacaktır.
 
 ![Ayarlar uygulamasında değiştirilen etkin saatlerin ekran görüntüsü](images/hololens-page-visibility-list.jpg)
 
-Uygulama sayfalarını Ayarlar kendi sayfa seçiminizi gösterecek veya gizleyişini yapılandıracak şekilde yapılandırmak için, Ayarlar URL'leri HoloLens.
+Ayarlar uygulama sayfalarını kendi sayfa seçiminizi gösterecek veya gizleyecek şekilde yapılandırmak için, HoloLens 'de bulunan Ayarlar urı 'lere göz atın.
 
-## <a name="settings-uris"></a>Ayarlar Urı
+## <a name="settings-uris"></a>Ayarlar Þ
 
-HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar vardır. Bu sayfada yalnızca bu sayfada mevcut olan ayarları HoloLens.
+HoloLens cihazların ve Windows 10 cihazların Ayarlar uygulamasında farklı bir sayfa seçimi vardır. Bu sayfada yalnızca HoloLens var olan ayarları bulacaksınız.
 
 ### <a name="accounts"></a>Hesaplar
 | Ayarlar sayfası           | URI                                            |
 |-------------------------|------------------------------------------------|
 | İş veya okul hesabına erişme | `workplace`                         |
-| Iris Kaydı       | `signinoptions-launchirisenrollment` |
-| Oturum Açma Seçenekleri         | ` signinoptions `                   |
+| Iris kaydı       | `signinoptions-launchirisenrollment` |
+| Oturum açma seçenekleri         | ` signinoptions `                   |
 
 ### <a name="apps"></a>Uygulamalar
 | Ayarlar sayfası | URI                          |
 |---------------|------------------------------|
-| Uygulamalar & özellikleri <sup>2</sup>     | `appsfeatures` <br> |
-| Gelişmiş & <sup>2</sup> > uygulamalar ve özellikler     | `appsfeatures-app` <br> |
-| Çevrimdışı & <sup>2</sup> > uygulamalar Haritalar özellikleri     | `maps-maps` <br> |
-| Çevrimdışı & haritalar > 2 Haritalar > uygulamalar <sup>ve özellikler</sup>     | `maps-downloadmaps` <br> |
+| Uygulamalar & Özellikler <sup>2</sup>     | `appsfeatures` <br> |
+| Uygulamalar & Özellikler > Gelişmiş Seçenekler <sup>2</sup>     | `appsfeatures-app` <br> |
+| uygulamalar & özellikler > çevrimdışı Haritalar <sup>2</sup>     | `maps-maps` <br> |
+| uygulamalar & özellikler > çevrimdışı Haritalar > indirme haritaları <sup>2</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Cihazlar
 | Ayarlar sayfası | URI                          |
@@ -107,19 +107,19 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 ### <a name="privacy"></a>Gizlilik
 | Ayarlar sayfası            | URI                                             |
 |--------------------------|-------------------------------------------------|
-| Hesap Bilgileri             | `privacy-accountinfo`              |
+| Hesap bilgileri             | `privacy-accountinfo`              |
 | Uygulama Tanılama        | `privacy-appdiagnostics`              |
-| Arka Plan Uygulamaları        | `privacy-backgroundapps`              |
+| Arka plan uygulamaları        | `privacy-backgroundapps`              |
 | Takvim                 | `privacy-calendar`                    |
-| Çağrı Geçmişi             | `privacy-callhistory`                 |
+| Arama geçmişi             | `privacy-callhistory`                 |
 | Kamera                   | `privacy-webcam`                      |
 | Kişiler                 | `privacy-contacts`                    |
-| Tanılama ve & Geri Bildirimi | `privacy-feedback`                    |
+| Tanılama & geri bildirimi | `privacy-feedback`                    |
 | Belgeler                | `privacy-documents`                   |
 | E-posta                    | `privacy-email`                       |
 | Dosya sistemi              | `privacy-broadfilesystemaccess`       |
 | Genel <sup>2</sup>             | `privacy-general`       |
-| Mürekkep & kişiselleştirme <sup>2</sup>             | `privacy-speechtyping`       |
+| Mürekkeple & yazma kişiselleştirme <sup>2</sup>             | `privacy-speechtyping`       |
 | Konum                 | `privacy-location`                    |
 | Mesajlaşma                | `privacy-messaging`                   |
 | Mikrofon               | `privacy-microphone`                  |
@@ -127,19 +127,19 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 | Bildirimler            | `privacy-notifications`               |
 | Diğer cihazlar            | `privacy-customdevices`               |
 | Resimler                 | `privacy-pictures`                    |
-| Radyo                   | `privacy-radios`                      |
-| Ekran görüntüsü <sup>kenarlıklar 2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
+| Radyolara                   | `privacy-radios`                      |
+| Ekran görüntüsü kenarlıkları <sup>2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
 | Ekran görüntüleri ve uygulamalar <sup>2</sup>             | `privacy-graphicsCaptureProgrammatic`       |
 | Konuşma                   | `privacy-speech`                      |
 | Görevler                    | `privacy-tasks`                       |
 | Kullanıcı hareketleri           | `privacy-backgroundspatialperception` |
 | Videolar                   | `privacy-videos`                      |
-| Ses Etkinleştirme       | `privacy-voiceactivation`             |
+| Ses etkinleştirme       | `privacy-voiceactivation`             |
 
 ### <a name="network--internet"></a>Ağ ve İnternet
 | Ayarlar sayfası | URI                              |
 |---------------|----------------------------------|
-| Uçak Modu <sup>2</sup> | `network-airplanemode`        |
+| Uçak modu <sup>2</sup> | `network-airplanemode`        |
 | Ara sunucu | `network-proxy`        |
 | VPN   | `network-vpn`          |
 | Wi-Fi  | `network-wifi`<br>`network-wifisettings`<br>`network-status`<br>`wifi-provisioning`    |
@@ -189,4 +189,4 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 - <sup>2</sup> - Windows Holographic 21H1 veya daha üst bir üzerinde kullanılabilir.
 
 
-URL'lerin Windows 10 Ayarlar için lütfen başlatma ayarları [belgelerini ziyaret](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.
+URL'lerin Windows 10 Ayarlar için lütfen başlatma ayarları [belgelerini ziyaret](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.

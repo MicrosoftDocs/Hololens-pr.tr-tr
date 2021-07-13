@@ -1,7 +1,7 @@
 ---
-title: Dağıtım Kılavuzu – Remote Assist HoloLens büyük ölçekte buluta bağlı ve 2 dağıtım - Hazırlama
-description: Azure Active Directory ve kimlik HoloLens bulut bağlantılı ağ üzerinden cihaz kaydetmeye hazırlanmayı öğrenin.
-keywords: HoloLens, yönetim, buluta bağlı, Remote Assist, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
+title: dağıtım kılavuzu – buluta bağlı HoloLens 2 dağıtım, uzaktan yardım hazırlama ile uygun ölçekte
+description: azure active directory ve kimlik yönetimi kullanarak bir buluta bağlı ağ üzerinden HoloLens cihazları kaydetmek için hazırlanma hakkında bilgi edinin.
+keywords: HoloLens, yönetim, buluta bağlı, uzaktan yardım, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,68 +14,68 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f747a2893ed3551e91a81bdbf5971deefbf6ce46
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 21fffdc24f8682bc44779e1cebe8cd6eacb59619
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113637141"
+ms.locfileid: "113639667"
 ---
-# <a name="prepare---cloud-connected-guide"></a>Hazırlama - Buluta bağlı Kılavuz
+# <a name="prepare---cloud-connected-guide"></a>Bulut ile bağlantılı Kılavuzu hazırlama
 
-Bu makalenin sonunda Azure AD, MDM'i ayarlayacak ve Azure AD hesaplarını ve ağ gereksinimlerini kullanma hakkında daha fazla bilgi edinebilirsiniz. Kılavuzun bu bölümü, hem sizin hem de kurum 2'nin buluta HoloLens ve Dynamics 365 Remote Assist'i kullanmaya hazır olunmanıza yardımcı olur. Bu, altyapınızı her bir parçasının öneminin üzerine gider ve gerektiğinde bu parçaları ayarlamanıza yardımcı olacak kılavuzlara bağlantılar sağlar.
+Bu makalenin sonuna kadar Azure AD 'yi, MDM 'yi ayarladıktan sonra Azure AD hesaplarını ve ağ gereksinimlerini kullanma hakkında daha fazla bilgi sahibi olmanız gerekir. kılavuzun bu bölümü, sizin ve kuruluşunuzun buluta HoloLens 2 ' ye dağıtmayı ve Dynamics 365 uzaktan yardım 'ı kullanmasını sağlamaya yardımcı olur. Bu, altyapınızın her parçasının önem derecesine giderek, bu parçaları gerektiği gibi ayarlamanıza yardımcı olacak kılavuzlara bağlantılar sağlar.
 
-## <a name="infrastructure-essentials"></a>Altyapı TemelLeri
+## <a name="infrastructure-essentials"></a>Altyapı temelleri
 
-Hem kişisel hem de kurumsal dağıtım senaryolarında MDM sistemi, cihazlarınızı dağıtmak ve yönetmek için gereken Windows 10 Holographic altyapıdır. Azure AD premium aboneliği bir kimlik sağlayıcısı olarak önerilir ve belirli özellikleri desteklemek için gereklidir.
+hem kişisel hem de kurumsal dağıtım senaryolarında, bir MDM sistemi Windows 10 Holographic cihazları dağıtmak ve yönetmek için gerekli olan temel altyapısıdır. Bir Azure AD Premium aboneliği, kimlik sağlayıcısı olarak önerilir ve belirli özellikleri desteklemek için gereklidir.
 
 ### <a name="azure-active-directory"></a>Azure Active Directory
 
-Azure AD, kimlik ve erişim yönetimi sağlayan bulut tabanlı bir dizin hizmetidir. Microsoft Office 365 veya Intune kullanan kuruluşlar zaten üç sürümü olan Azure AD kullanıyor: Ücretsiz, Premium P1 ve Premium P2 (bkz. [Azure Active Directory sürümleri.)](https://azure.microsoft.com/documentation/articles/active-directory-editions) Tüm sürümler Azure AD cihaz kaydını destekler, ancak Premium P1'in MDM otomatik kaydını etkinleştirmek için gerekli olması ve bunu daha sonra bu kılavuzda kullanacağız.
+Azure AD, kimlik ve erişim yönetimi sağlayan bulut tabanlı bir dizin hizmetidir. Microsoft Office 365 veya ıntune kullanan kuruluşlar zaten üç sürümü olan Azure AD kullanıyor: ücretsiz, Premium P1 ve Premium P2 (bkz. [Azure Active Directory sürümleri](https://azure.microsoft.com/documentation/articles/active-directory-editions).) tüm sürümler Azure AD cihaz kaydını destekler, ancak bu kılavuzda daha sonra kullanabilmemiz için MDM otomatik kaydını etkinleştirmek üzere Premium P1 gerekir.
 
 > [!IMPORTANT]
-> Şirket içi AD Azure Active Directory destekleme HoloLens bir cihaza sahip olmak önemlidir. Henüz bir&#39;ayar Azure Active Directory, Azure Active Directory'de [yeni kiracı oluşturma'ya gidin.](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
+> HoloLens cihazlar şirket içi AD birleştirmeyi desteklemediğinden Azure Active Directory olması önemlidir. zaten bir Azure Active Directory ayarlamış&#39;, [Azure Active Directory yeni bir kiracı oluşturma](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)bölümüne gidin.
 
 ## <a name="identity-management"></a>Kimlik Yönetimi
 
-Çalışanlar, bir cihazı başlatmak için yalnızca bir hesap kullanabilir&#39;önce hangi hesabın etkinleştirildikten sonra kuruluş tarafından kontrol etkinleştirilmiş olması gerekir. Seçilen hesap, cihazı kimin kontrol altında olduğunu belirler ve yönetim özelliklerinizi etkiler.
+Çalışanlar, bir cihazı başlatmak için yalnızca bir hesap kullanabilir, böylece kuruluşunuzun öncelikle hangi hesabın etkin olduğunu denetlemelerine&#39;. Seçilen hesap, cihazı kimin denetlediğini ve yönetim olanaklarınızı etkilediğini belirleyecek.
 
-Bu kılavuzda, kullanılan Kimlik [için](/hololens/hololens-identity) Azure AD hesaplarını veya Azure Active Directory seçtik. Azure AD hesaplarının çeşitli avantajları vardır, örneğin:
+bu kılavuzda, Azure AD hesapları kullandığımız [kimlik](/hololens/hololens-identity) veya Azure Active Directory hesaplarını seçtik. Azure AD hesaplarının kullanmak istediğimiz birkaç avantajı vardır, örneğin:
 
-- Çalışanlar, cihazı Azure AD'ye kaydetmek için Azure AD hesabını kullanır ve cihazı kuruluş&#39;MDM çözümüne otomatik olarak Azure AD Premium.
-- Azure AD hesapları Çoklu [Oturum Açma desteği sunar.](/azure/active-directory/manage-apps/what-is-single-sign-on) Bir kullanıcı Remote Assist'te oturum açınca, oturum açık Olan Azure AD kullanıcıdan gelen kimliği tanınır ve kullanıcı kolaylaştırılmış bir deneyim için uygulamada oturum alır.
-- Azure AD hesaplarının İş için [Windows Hello](/hololens/hololens-identity) [kimlik doğrulaması seçenekleri vardır.](/windows/security/identity-protection/hello-for-business/hello-identity-verification) Iris oturum açma kullanıcılarına ek olarak başka bir cihazdan oturum açabilirsiniz veya FIDO güvenlik anahtarlarını kullanabilirler.
+- Çalışanlar, cihazı Azure AD 'ye kaydetmek ve kuruluş&#39;s MDM çözümüne otomatik olarak kaydetmek için Azure AD hesabını kullanır (Azure AD + MDM – Azure AD Premium gerektirir).
+- Azure AD hesapları [Çoklu oturum açmayı](/azure/active-directory/manage-apps/what-is-single-sign-on)destekler. Bir Kullanıcı Uzaktan Yardım oturumu açtığında, oturum açan Azure AD kullanıcısının kimliği tanınacaktır ve Kullanıcı, kolaylaştırılmış bir deneyim için uygulamada oturum açar.
+- Azure AD hesapları, [iş için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification)ek [kimlik doğrulama seçeneklerine](/hololens/hololens-identity) sahiptir. Iris oturum açma 'ya ek olarak, kullanıcılar başka bir cihazdan oturum açabilir veya FIDO güvenlik anahtarlarını kullanabilir.
 
 ### <a name="mobile-device-management"></a>Mobil Cihaz Yönetimi
 
-Enterprise Mobility + Security'nin bir parçası olan Microsoft [Intune,](/mem/intune/fundamentals/what-is-intune)kiracınıza bağlı cihazları yöneten bulut tabanlı bir MDM sistemidir. Intune Office 365 da olduğu gibi, çalışanlar da kimlik yönetimi için Azure AD'i kullanır. Bu nedenle, çalışanlar, intune'da oturum aken kullandığı cihazları intune'a kaydetmek için Office 365. Intune, eksiksiz bir MDM çözümü sağlamak için iOS ve Android gibi diğer işletim sistemlerini çalıştıran cihazları da destekler. Bu kılavuzun amaçları doğrultusunda,&#39;2 ile büyük ölçekte bulut dağıtımını etkinleştirmek için Intune'HoloLens odaklanabilirsiniz.
+Enterprise Mobility + Security bir parçası olan Microsoft [ıntune](/mem/intune/fundamentals/what-is-intune), kiracınıza bağlı cihazları yöneten bulut tabanlı bir MDM sistemidir. Office 365 gibi, ıntune kimlik yönetimi için Azure AD 'yi kullanır, bu nedenle çalışanlar, ıntune 'a Office 365 oturum açmak için kullandıkları cihazları kaydetmek için aynı kimlik bilgilerini kullanır. Intune Ayrıca, tüm MDM çözümünü sağlamak için iOS ve Android gibi diğer işletim sistemlerini çalıştıran cihazları destekler. bu kılavuzun amaçları doğrultusunda, HoloLens 2 ile ölçekli bir bulut dağıtımını etkinleştirmek için ıntune 'u kullanmaya odaklanıyoruz&#39;.
 
 > [!IMPORTANT]
-> Mobile Cihaz Yönetimi. Henüz ayarlamadı&#39;bu kılavuzu izleyin ve [Intune ile Kullanmaya başlayın izleyin.](/mem/intune/fundamentals/free-trial-sign-up)
+> Mobil cihaz yönetiminin olması önemlidir. Zaten bir&#39;ayarladıysanız, bu kılavuzu izleyin ve [Intune ile çalışmaya](/mem/intune/fundamentals/free-trial-sign-up)başlayın.
 
 > [!NOTE]
-> Birden çok MDM sistemi, Windows 10 ve çoğu da kişisel ve kurumsal cihaz dağıtım senaryolarını destekler. Şu anda bu hizmetleri destekleyen Windows 10 Holographic MDM sağlayıcıları şunlardır: AirWatch, MobileIron ve diğerleri. Sektör lideri MDM satıcılarının çoğu Azure AD ile tümleştirmeyi zaten desteklemektedir. Azure AD'i destekleyen MDM satıcılarını [Azure Market.](https://azure.microsoft.com/marketplace/)
+> birden çok MDM sistemi Windows 10 destekler ve çoğu kişisel ve kurumsal cihaz dağıtım senaryolarını destekler. şu anda Windows 10 Holographic destekleyen MDM sağlayıcıları şunlardır: airwatch, mobileıron ve diğerleri. Sektörde önde gelen MDM satıcıları, Azure AD ile tümleştirmeyi zaten desteklemektedir. Azure [Market](https://azure.microsoft.com/marketplace/)'TE Azure AD 'YI destekleyen MDM satıcıları bulabilirsiniz.
 
 ## <a name="network"></a>Ağ
 
-Bu kurulumda, kullanılabilir açık HoloLens ağdan İnternet'e bağlanan 2 cihaz Wi-Fi öngörülmektedir. Bir kullanıcının ağ bağlantısını konuma göre değiştirmesi gerekene için, [wi-Fi'a HoloLens nasıl bağlan gerektiğini öğrenmesi gerekir.](/hololens/hololens-network)
+bu kurulumda, kullanılabilir açık Wi-Fi ağından Internet 'e bağlanan HoloLens 2 cihaz olduğunu tahmin ediyoruz. bir kullanıcının konuma göre ağ bağlantısını değiştirmesi gerektiğinden, [HoloLens cihazlarını Wi-Fi ' y e nasıl bağlayacağınızı](/hololens/hololens-network) öğrenmelidir.
 
-Dynamics 365 Remote Assist için bant genişliği, gecikme süresi, değişim ve paket kaybı gibi video arama deneyiminizi etkileebilecek çeşitli ağ koşulları vardır. Bant genişliği azaltılmış ortamlarda ses ve video çağrıları mümkün olsa da, özellikte düşüşle karşılayabilirsiniz. Dynamics 365 Remote Assist'i HoloLens ağ gereksinimleri şu şekildedir:
+Dynamics 365 uzak yardım için bant genişliği, gecikme süresi, değişim ve paket kaybı da dahil olmak üzere, video çağırma deneyiminizi etkileyebilecek çeşitli ağ koşulları vardır. Ses ve video çağrıları, azaltılmış bant genişliğine sahip ortamlarda mümkün olsa da, özellik performansında düşüş yaşayabilirsiniz. Dynamics 365 uzaktan yardım 'ı kullanırken HoloLens göz önünde bulundurmanız gereken ağ gereksinimleri şunlardır:
 
-**En** düşük: 30mbps'de HD 1080p çözünürlükte eşler arası HD kaliteli video çağrısı için 1,5 Mb/sn yukarı/aşağı gerekir.
+**En az** : 1,5 Mbps artırma/azaltma, HD 1080p 'in 30 fps 'de çözümlenimiyle, eşler arası HD kalitesinde video çağrısı için gereklidir.
 
-**En iyi:** HD 1080p çözünürlüğüne sahip eşler arası HD kalite video çağrısı için 4-5 Mb/sn'nin yukarı/aşağı doğru olması beklenir.
+**En iyi:** HD 1080p çözünürlüklü eşler arası HD kalitesinde video çağrısı için 4-5 Mbps up/azaltma beklenmelidir.
 
 Daha fazla bilgi:
 
 - [Ağ gereksinimleri](/dynamics365/mixed-reality/remote-assist/requirements#network-requirements)
 - [Ağ iyileştirme önerileri](/dynamics365/mixed-reality/remote-assist/requirements#dynamics-365-remote-assist-hololens)
 
-### <a name="optional-connect-your-hololens-to-vpn"></a>İsteğe bağlı: Bağlan VPN HoloLens ye bağlı olarak
+### <a name="optional-connect-your-hololens-to-vpn"></a>isteğe bağlı: HoloLens VPN 'ye Bağlan
 
-Bu kılavuza bağlanan cihazlar ve dış bulut ağı üzerinden ağa bağlanacak. Cihazlarınızı VPN üzerinden bağlamanız&#39;şirket kaynaklarına erişmek için bu olabilir. Cihazlarınızı VPN'ye bağlamak için hem son kullanıcının cihaz kullanıcı arabirimini kullanarak bağlananın hem de cihazların VPN profilini ppkg ya da MDM'den yönettirebilir ve aldırabilirsiniz. VPN'in nasıl&#39;bu makalede ele&#39;, bu nedenle VPN protokolleri veya VPN'i yönetme yolları hakkında daha fazla bilgi edinmek için HoloLens ve VPN hakkında bilgi edinmek için [bu kılavuzları ziyaret edin.](/hololens/hololens-network#vpn)
+Bu kılavuza bağlanan cihazlar, ve dış bulut ağı aracılığıyla ağa bağlanır. Cihazları VPN aracılığıyla bağlamak için gereken&#39;, şirket kaynaklarına erişmek için bu olabilir. Cihazlarınızı VPN 'e bağlamak için kullanabileceğiniz birkaç farklı yol vardır, her ikisi de son kullanıcının cihaz Kullanıcı arabirimini kullanarak bağlanıp VPN profilini bir PPKG veya MDM 'den alabilir. vpn kazanıldı&#39;t 'yi ayarlama bu makalede ele alınmıştır. bu nedenle, farklı vpn protokolleri veya vpn 'yi yönetme yolları hakkında daha fazla bilgi edinmek için d&#39;, [HoloLens ve vpn hakkında bilgi için bu kılavuzlardan birini](/hololens/hololens-network#vpn) ziyaret edin.
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [Buluta bağlı dağıtım - Yapılandırma](hololens2-cloud-connected-configure.md)
+> [Buluta bağlı dağıtım-yapılandırma](hololens2-cloud-connected-configure.md)

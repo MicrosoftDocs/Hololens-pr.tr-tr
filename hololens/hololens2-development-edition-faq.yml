@@ -15,12 +15,12 @@ metadata:
   manager: yannisle
   appliesto:
   - HoloLens 2
-  ms.openlocfilehash: 97f3bbdfec85e64d2895dfb5482ee9dc692c5e4c
-  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.openlocfilehash: be152373fadb6f2b5778616bae0f9bff9356af3d
+  ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 07/12/2021
-  ms.locfileid: "113637312"
+  ms.locfileid: "113639701"
 title: HoloLens 2 geliştirme sürümü sss
 summary: ''
 sections:
@@ -93,15 +93,15 @@ sections:
   - question: >
       HoloLens 2 geliştirme sürümü hakkında nereden daha fazla bilgi edinebilirim?
     answer: >
-      HoloLens 2 geliştirme sürümü belgeleri sayfasını ziyaret edin. [Daha fazla bilgi edinin](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+      HoloLens 2 geliştirme sürümü belgeleri sayfasını ziyaret edin. [Daha fazla bilgi edinin](hololens2-options.md?tabs=device)
   - question: >
       Karma Gerçeklik çözümlerini geliştirme hakkında nereden daha fazla bilgi edinebilirim?
     answer: >
-      Karma Gerçeklik geliştirme belgelerine giriş sayfasını ziyaret edin. [Daha fazla bilgi edinin](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unityhttps://docs.microsoft.com/en-us/windows/mixed-reality/develop/development?tabs=unity)
+      Karma Gerçeklik geliştirme belgelerine giriş sayfasını ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/develop/development?tabs=unity)
   - question: >
       Karma Gerçeklik çözümlerini tasarlama hakkında nereden daha fazla bilgi edinebilirim?
     answer: >
-      Karma Gerçeklik tasarımına giriş belgelerini ziyaret edin. [Daha fazla bilgi edinin](https://docs.microsoft.com/windows/mixed-reality/design/design)
+      Karma Gerçeklik tasarımına giriş belgelerini ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/design/design)
   - question: >
       HoloLens geliştirici sürümü için nereden destek alabilirim?
     answer: >
@@ -130,7 +130,7 @@ sections:
       4. Ürün kodu girin ve bir ürün kodu kullanmak &#39;seçin&#39;
 
 
-      [daha fazla bilgi edinmek](https://docs.microsoft.com/hololens/hololens2-options?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
+      [daha fazla bilgi edinmek](hololens2-options.md?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
   - question: >
       PRO lisansı dışındaki Unity sürümleriyle uygulama oluşturabilir miyim?
     answer: >
@@ -163,7 +163,7 @@ sections:
       4. Ürün kodunu girin ve ürün kodu kullanmak &#39;' a tıklayın&#39;
 
 
-      [daha fazla bilgi edinmek](https://docs.microsoft.com/hololens/hololens2-options?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
+      [daha fazla bilgi edinmek](hololens2-options.md?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
   - question: >
       Nasıl yaparım?, pikselde desteğe başvurun mi?
     answer: >
@@ -190,4 +190,4 @@ sections:
       Azure kredilerinizi kullanarak, Microsoft&#39;giderek genişleyen bulut hizmetleri kümesiyle çalışmalara başlayabilirsiniz. HoloLens 2 Geliştirme Sürümü'ne dahil edilen Azure kredileri, müşterilerin Azure'da karma gerçeklik uygulamaları yapmaya ve test etmeye hızla başlamalarını sağlamaktır. Azure'da binaya ilişkin tüm ayrıntılar için Azure kaynaklarını [ziyaret edin](https://azure.microsoft.com/en-us/resources/)
   - question: >
       Azure karma gerçeklik hizmetleri hakkında nereden daha fazla bilgi edin olabilirim?
-    answer: Microsoft, geliştiricilerin karma gerçeklik çözümleri oluşturmasına ve test sına olanak sağlayan bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)
+    answer: Microsoft, geliştiricilerin karma gerçeklik çözümleri oluşturmasına ve test sına olanak sağlayan bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](/windows/mixed-reality/develop/mixed-reality-cloud-services)

@@ -13,27 +13,27 @@ ms.reviewer: ''
 manager: bradke
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d0d8aa648df7901dec8636942e43aa549e626d7e
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: bd7a7d03c81dced4fb66d8ebb176887811e823c9
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635900"
+ms.locfileid: "113640296"
 ---
 # <a name="license-requirements"></a>Lisans gereksinimleri
 
 ## <a name="hololens-2-device-managed"></a>HoloLens 2 cihaz (yönetilen)
 
-[Azure AD hesabı](https://docs.microsoft.com/azure/active-directory/)
+[Azure AD hesabı](/azure/active-directory/)
 
 > [!IMPORTANT]
 > Active Directory (AD) HoloLens cihazlarını yönetmek için kullanılamaz.
 
-[Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) veya başka bir MDM.
+[Microsoft Intune](/mem/intune/fundamentals/what-is-intune) veya başka bir MDM.
 - [HoloLens 2 için Windows Autopilot](hololens2-autopilot.md)-hem bt yöneticileri hem de son kullanıcılar için sağlama deneyimini basitleştirir. bt yöneticileri HoloLens 2 ilkeyi önceden yapılandırabilir ve ilk önyükleme sonrasında cihazlar, sıfır son kullanıcı etkileşimi ile iş için kullanıma yönelik duruma dağıtılır. 
 
   > [!NOTE]
-  > Windows Autopilot, önce [Azure P1](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) ve [otomatik kayıt](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) 'nin düşük dokunma Autopilot akışı ve cihaz dağıtımı için yapılandırılmasını gerektirir. 
+  > Windows Autopilot, önce [Azure P1](/azure/active-directory/fundamentals/active-directory-whatis) ve [otomatik kayıt](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) 'nin düşük dokunma Autopilot akışı ve cihaz dağıtımı için yapılandırılmasını gerektirir. 
 
 ### <a name="business-use-case"></a>İş kullanım örneği: 
 
@@ -45,11 +45,11 @@ ms.locfileid: "113635900"
 
 Bir Microsoft hesabı (MSA) veya yerel hesap kullanırken bu hesaplar için ek lisans gerekmez.
 
-[Yerel hesap](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts)
+[Yerel hesap](/windows/security/identity-protection/access-control/local-accounts)
 
 - bu hesabın Windows yapılandırma tasarımcısı (wcd) ile bir süre önce [sağlanması](hololens-provisioning.md#provisioning-package-hololens-wizard) gerekir.
 
-[Microsoft hesabı (MSA)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)
+[Microsoft hesabı (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts)
 
 > [!WARNING]
 > Bu hesaplardan birini kullanan bir cihaz için birden fazla kullanıcı desteklenmez.
@@ -65,7 +65,7 @@ Bir Microsoft hesabı (MSA) veya yerel hesap kullanırken bu hesaplar için ek l
 #### <a name="admin"></a>Yönetici
 
 - Azure AD hesabı (aboneliğin satın alınması ve lisans atanması için gereklidir)
-- [Uzaktan Yardım aboneliği](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (veya [Uzaktan Yardım deneme sürümü](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist))
+- [Uzaktan Yardım aboneliği](/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (veya [Uzaktan Yardım deneme sürümü](/dynamics365/mixed-reality/remote-assist/try-remote-assist))
     
 #### <a name="dynamics-365-remote-assist-user"></a>Dynamics 365 uzaktan yardım kullanıcısı
 
@@ -86,14 +86,14 @@ Bir Microsoft hesabı (MSA) veya yerel hesap kullanırken bu hesaplar için ek l
 
 - Ağ bağlantısı
 
-Bu [çapraz kiracı senaryosunu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)uygulamayı planlıyorsanız, bir bilgi engelleri lisansına ihtiyacınız olabilir. Bir bilgi engeli lisansının gerekip gerekmediğini öğrenmek için [Bu makaleye](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) bakın.
+Bu [çapraz kiracı senaryosunu](/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)uygulamayı planlıyorsanız, bir bilgi engelleri lisansına ihtiyacınız olabilir. Bir bilgi engeli lisansının gerekip gerekmediğini öğrenmek için [Bu makaleye](/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) bakın.
 
 ### <a name="dynamics-365-guides"></a>Dynamics 365 kılavuzlar 
 
 #### <a name="admin"></a>Yönetici
 
 - Azure AD hesabı (aboneliğin satın alınması ve lisans atanması için gereklidir)
-- Dynamics 365 [Kılavuzlar aboneliği veya ücretsiz deneme](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one)
+- Dynamics 365 [Kılavuzlar aboneliği veya ücretsiz deneme](/dynamics365/mixed-reality/guides/setup-step-one)
 
 #### <a name="guides-author"></a>Kılavuzlar yazarı
 
