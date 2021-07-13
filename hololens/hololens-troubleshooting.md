@@ -1,6 +1,6 @@
 ---
-title: HoloLens cihaz sorunlarını giderme
-description: HoloLens cihaz sorunları ve sorun giderme teknikleri için en yaygın çözümlerin güncel kalmasını sağlar.
+title: HoloLens Cihaz Sorunlarını Giderme
+description: Cihaz sorunlarını ve sorun giderme tekniklerini takip etmek için HoloLens en yaygın çözümleri takip edin.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 12/02/2019
@@ -12,153 +12,143 @@ manager: jarrettr
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
-keywords: sorunlar, hata, sorun giderme, çözüm, yardım, destek, HoloLens, öykünücü
-ms.openlocfilehash: b69dddf04ac31b69f0b2f8759d095806189f33ab
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+keywords: sorunlar, hata, sorun giderme, düzeltme, yardım, destek, HoloLens, öykünücü
+ms.openlocfilehash: b07514e73e43d267aa856c0fb9a256448e565000
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924630"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635458"
 ---
-# <a name="device-troubleshooting"></a>Cihaz sorunlarını giderme
+# <a name="device-troubleshooting"></a>Cihaz Sorunlarını Giderme
 
-Bu makalede, birkaç yaygın HoloLens sorununa nasıl çözüm yapılacağı açıklanır.
+Bu makalede çeşitli yaygın sorun giderme sorunlarının HoloLens açıklanmıştır.
 
 >[!IMPORTANT]
-> Herhangi bir sorun giderme yordamını başlatmaya başlamadan önce, cihazınızın, mümkünse pil kapasitesi için **yüzde 20 ila 40 oranında** ücretlendirildiğinizden emin olun. Güç düğmesinin altında bulunan [Pil göstergesi ışıkları](hololens2-setup.md#lights-that-indicate-the-battery-level) , cihazda oturum açmadan pil kapasitesini doğrulamaya yönelik hızlı bir yoldur.
+> Herhangi bir sorun giderme yordamına başlamadan önce, mümkünse cihazınızın pil kapasitesinin yüzde **20-40'ını** ücrete tabi olduğundan emin olun. Güç [düğmesinin altında](hololens2-setup.md#lights-that-indicate-the-battery-level) bulunan pil göstergesi ışığı, cihazda oturum açmadan pil kapasitesini doğrulamanın hızlı bir yolu olabilir.
 
 <a id="list"></a>
 
 **Bilinen Sorunlar**
-- [Uzaktan Yardım Videosu 20 dakikadan sonra donuyor](#remote-assist-video-freezes-after-20-minutes)
-- [Oturum açma için otomatik oturum açma sorulur](#auto-login-asks-for-log-in)
-- [Microsoft Edge başlatılamadı](#microsoft-edge-fails-to-launch)
-- [Klavye özel karakterlere geçmez](#keyboard-doesnt-switch-to-special-characters)
-- [Kilitli dosyaların indirilmesi hata göstermiyor](#downloading-locked-files-doesnt-error)
-- [Cihaz portalı dosya yükleme/indirme zaman aşımı](#device-portal-file-uploaddownload-times-out)
-- [Insider derlemesi ile bir cihaz için Insider Preview 'dan kaydolduktan sonra mavi ekran](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
-- [OneDrive resimleri otomatik olarak karşıya yüklememez](#onedrive-doesnt-automatically-upload-pictures)
+- [Remote Assist videosu 20 dakika sonra donuyor](#remote-assist-video-freezes-after-20-minutes)
+- [Otomatik oturum açma, oturum açma bilgilerini sorar](#auto-login-asks-for-log-in)
+- [Microsoft Edge başlatıla](#microsoft-edge-fails-to-launch)
+- [Klavye özel karakterlere geçiş değil](#keyboard-doesnt-switch-to-special-characters)
+- [Kilitli dosyaları indirerek hata göster yok](#downloading-locked-files-doesnt-error)
+- [Cihaz Portalı karşıya yükleme/indirme zamanları dışında](#device-portal-file-uploaddownload-times-out)
+- [Insider derlemesi ile yanıp sönen bir cihazda Insider önizleme kaydından sonra mavi ekran](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+- [OneDrive resimleri otomatik olarak karşıya yüklemez](#onedrive-doesnt-automatically-upload-pictures)
 
 **Genel**
-- [HoloLens yanıt vermiyor veya başlamıyor](#hololens-is-unresponsive-or-wont-start)
-- ["Yetersiz disk alanı" hatası](#low-disk-space-error)
-- [Ayarlama başarısız](#calibration-fails)
-- [HoloLens daha önce başka bir kişi için ayarlandığından oturum açılamıyor](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
+- [HoloLens yanıt vermiyor veya başlatılmayıyor](#hololens-is-unresponsive-or-wont-start)
+- ["Düşük Disk Alanı" hatası](#low-disk-space-error)
+- [HataYazma](#calibration-fails)
+- [Oturum açam daha önce HoloLens başka biri için ayar olduğundan oturum aça bilmiyorum](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
 - [Unity çalışmıyor](#unity-isnt-working)
-- [Windows cihaz portalı düzgün çalışmıyor](#windows-device-portal-isnt-working-correctly)
-- [HoloLens öykünücüsü çalışmıyor](#the-hololens-emulator-isnt-working)
+- [Windows Cihaz Portalı düzgün çalışmıyor](#windows-device-portal-isnt-working-correctly)
+- [HoloLens Emulator çalışmıyor](#the-hololens-emulator-isnt-working)
 
 **Giriş**
-- [Sesli komutlar çalışmıyor](#voice-commands-arent-working)
+- [Ses komutları çalışmıyor](#voice-commands-arent-working)
 - [El girişi çalışmıyor](#hand-input-isnt-working)
 
 **Bağlantı**
-- [Wi-Fi ' a bağlanılamıyor](#cant-connect-to-wi-fi)
+- [Wi-Fi bağlantısı kuramıyor](#cant-connect-to-wi-fi)
 
-**Dış cihazlar** 
-- [Bluetooth cihazları eşleştirme yok](#bluetooth-devices-arent-pairing)
-- [USB-C mikrofonu çalışmıyor](#usb-c-microphone-isnt-working)
-- [Ayarlarda kullanılabilir olarak listelenen cihazlar çalışmıyor](#devices-listed-as-available-in-settings-dont-work)
+**Dış Cihazlar** 
+- [Bluetooth cihazları eşleyemli değil](#bluetooth-devices-arent-pairing)
+- [USB-C Mikrofon çalışmıyor](#usb-c-microphone-isnt-working)
+- [Cihazlarda kullanılabilir Ayarlar cihazlar çalışmıyor](#devices-listed-as-available-in-settings-dont-work)
 
-## <a name="remote-assist-video-freezes-after-20-minutes"></a>Uzaktan Yardım Videosu 20 dakikadan sonra donuyor
+## <a name="remote-assist-video-freezes-after-20-minutes"></a>Remote Assist videosu 20 dakika sonra donuyor
 
 > [!NOTE]
-> Bu bilinen sorunun önem derecesine bağlı olarak, şu anda Windows holographic, sürüm 21H1 kullanılabilirliğini duraklattık. Cihazlarınızı 21 H1 ' e güncelleştirmek istiyorsanız lütfen [sayfanın en üstündeki sürüm Notlarımızda bulunan yönergelere bakın.](hololens-release-notes.md)
+> Remote Assist'in bu sorun için bir düzeltmesi olan daha yeni bir sürümü vardır. Bu [sorunu önlemek için lütfen Remote Assist'i](holographic-store-apps.md#update-apps) en son sürüme güncelleştirin.
 
-[Windows holographic, sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1)' in en son sürümünde, uzaktan yardım 'ın bazı kullanıcıları 20 dakikadan fazla çağrı sırasında video donduruyor demektir. Bu bilinen bir **sorundur**.
+> [!NOTE]
+> Bu Bilinen Sorunun önem derecesi nedeniyle Holographic sürüm 21H1'Windows geçici olarak duraklatıldı. 21H1 derlemesi artık yeniden kullanılabilir, bu nedenle cihazlar bir kez daha en son 21H1 derlemeye güncelleştirilebilir.
+
+[Windows Holographic sürüm 21H1'in](hololens-release-notes.md#windows-holographic-version-21h1)en son sürümünde, Remote Assist'in bazı kullanıcıları 20 dakikadan fazla arama sırasında video donma durumuyla karşılandı. Bu bilinen bir **sorundur.**
 
 ### <a name="workarounds"></a>Geçici Çözümler
 
-#### <a name="restart-in-between-calls"></a>Çağrılar arasında yeniden Başlat
+Remote Assist'i daha yeni bir derlemeye güncelleştiremiyorsanız aşağıdaki adımları deneyin.
 
-Çağrılarınızın uzunluğu 20 dakikadan fazla olursa ve bu sorunu yaşıyorsanız cihazınızı yeniden başlatmayı deneyin. Cihazınızı uzaktan yardım çağrıları arasında yeniden başlatmak cihazınızı yenileyip iyi bir duruma geri yerleştirecek.
+#### <a name="restart-in-between-calls"></a>Çağrılar arasında içinde yeniden başlatma
 
-Windows holographic 'de bir cihazı hızlı bir şekilde yeniden başlatmak için [, sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1) Başlat menüsünü açın ve Kullanıcı simgesini seçin, sonra **Yeniden Başlat**' ı seçin.
+Çağrılarınız 20 dakikadan uzun sürüyorsa ve bu sorunla karşılaşıyorsanız cihazınızı yeniden başlatmayı deneyin. Cihazınızı Remote Assist çağrıları arasında yeniden başlatmak cihazınızı yeniler ve iyi bir durum haline geri döner.
 
-#### <a name="revert-to-an-older-build"></a>Eski bir yapıya dön
+Holographic'te bir cihazı Windows başlatmak için [sürüm 21H1'de](hololens-release-notes.md#windows-holographic-version-21h1) başlat menüsünü açın ve kullanıcı simgesini ve ardından Yeniden Başlat'ı **seçin.**
 
-Bazı müşteriler daha önceki bir işletim sistemi sürümüne geri dönüldükten sonra bu sorunla karşılaşmamıştır. Cihazlarınızın bu sorunla karşılaşdığını buldıysanız, şu adımları deneyin:
+[Listeye dön](#list)
 
+## <a name="auto-login-asks-for-log-in"></a>Otomatik oturum açma, oturum açma bilgilerini sorar
 
-Geçici çözümler:
+Bir HoloLens 2 cihazı, Ayarlar Hesapları Oturum Açma Seçenekleri **->** ve Gerekli altında değeri Hiçbir zaman olarak ayarlandı olarak otomatik olarak  ->    ->   oturum açacaktır.   Bazı kullanıcıların, bir cihazı özellik güncelleştirmesi gibi önemli ölçüde büyük bir güncelleştirmeyle güncelleştiren cihazda yeniden oturum açması gerekebilir. Bu bilinen bir **sorundur.**
 
-- İşletmeniz için uygun ise, tüketici Microsoft hesaplarında otomatik kamera yüklemesi desteklenir. İş veya okul hesabınıza ek olarak Microsoft hesabı oturum açabilirsiniz (OneDrive uygulaması, çift oturum açma desteği sağlar). OneDrive 'daki Microsoft hesabı profilinizde otomatik, arka planda kamera alma 'yı yükleyebilirsiniz.
+Bunun ne zaman oluştuğuna örnek:
 
-- Fotoğraflarınızı otomatik olarak yüklemek için bir tüketici Microsoft hesabı güvenli bir şekilde kullanmıyorsanız, OneDrive uygulamasından iş veya okul hesabınıza el ile fotoğraf yükleyebilirsiniz. Bunu yapmak için OneDrive uygulamasında iş veya okul hesabınızda oturum açtığınızdan emin olun. Düğmeyi seçip **+** **karşıya yükle**' yi seçin. **Kamera rulosu > resimlere** giderek karşıya yüklemek istediğiniz fotoğrafları veya videoları bulun. Karşıya yüklemek istediğiniz fotoğrafları veya videoları seçin ve ardından **Aç** düğmesini seçin.
-
-
-1. [Windows holographic, sürüm 20H2 – Mayıs 2021 güncelleştirmesi için derlemeyi indirin](https://aka.ms/hololens2download/10.0.19041.1146)
-1. [Önceki bir işletim sistemi sürümüne geri dönme yönergelerini](hololens-update-hololens.md#go-back-to-a-previous-version) izleyin
-1. [Cihazdaki işletim sistemi güncelleştirmelerini el ile duraklatın](hololens-updates.md#pause-updates-via-device) ya da birçok CIHAZ için [MDM aracılığıyla erteleme](hololens-updates.md#configure-an-update-deferral-policy)kullanın.
-
-[Listeye geri dön](#list)
-
-## <a name="auto-login-asks-for-log-in"></a>Oturum açma için otomatik oturum açma sorulur
-
-Bir HoloLens 2 cihazı, **Ayarlar**  ->  **hesabı**  ->  **oturum açma seçenekleri** -> aracılığıyla otomatik olarak oturum açmak üzere yapılandırılabilir ve değer **gerekli** ayarı **hiçbir** şekilde ayarlanamaz. Bir cihaz, özellik güncelleştirmesi gibi önemli ölçüde büyük bir güncelleştirmeyle güncelleştirilirken cihazda oturum açmak için bazı kullanıcılar gerekebilir. Bu bilinen bir **sorundur**.
-
-Bunun gerçekleşebileceğini örnek:
-
-- Windows holographic, sürüm 2004 ' den (derleme 19041. xxxx) Windows holographic, sürüm 21H1 (derleme 20346. xxxx) ile cihaz güncelleştirme
-- Bir cihazı aynı ana derlemede büyük bir güncelleştirme alacak şekilde güncelleştirme, örn. Windows holographic, sürüm 2004, Windows holographic, sürüm 20H2
+- Bir cihazı Windows Holographic sürüm 2004 'den (Derleme 19041.xxxx) Windows Holographic, sürüm 21H1'e güncelleştirme (Derleme 20346.xxxx)
+- Bir cihazı aynı büyük derlemede büyük bir güncelleştirmeyi alacak şekilde güncelleştirme, örneğin Windows Holographic, sürüm 2004'Windows Holographic, sürüm 20H2
 - Bir cihazı fabrika görüntüsünden en son görüntüye güncelleştirme
 
-Bunun sırasında gerçekleşmemelidir:
+Bu durum aşağıdakiler sırasında oluşmaz:
 
 - Aylık bakım güncelleştirmesi alan cihazlar
 
-Yöntemlerin etrafında çalışın:
+Yöntemlerle ilgili çalışma:
 
-- PIN, parola, Iris, Web kimlik doğrulaması veya FIDO2 anahtarları gibi oturum açma yöntemleri.
-- Cihaz PIN kodu hatırlanamaz ve diğer kimlik doğrulama yöntemleri kullanılabilir değilse, bir Kullanıcı [el ile yerleştirme modunu](hololens-recovery.md#manual-procedure)kullanabilir.
+- PIN, Parola, Iris, Web Kimlik Doğrulaması veya FIDO2 anahtarları gibi oturum açma yöntemleri.
+- Cihaz PIN'i anımsanamazsa ve diğer kimlik doğrulama yöntemleri kullanılamıyorsa, kullanıcı el [ile ters eğik çizgi uygulama modunu kullanabilir.](hololens-recovery.md#manual-procedure)
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="microsoft-edge-fails-to-launch"></a>Microsoft Edge başlatılamadı
+## <a name="microsoft-edge-fails-to-launch"></a>Microsoft Edge başlatıla
 
 > [!NOTE]
-> Bu sorun başlangıçta Microsoft Edge 'in sevkiyat sürümü göz önünde bulundurularak oluşturulmuştur. Bu sorun [Yeni Microsoft Edge](hololens-new-edge.md)'de çözülebilir. Aksi takdirde, lütfen geri bildirimde bulunun.
+> Bu sorun başlangıçta Microsoft Edge sürümüyle oluşturulmuş. Bu sorun yeni [Microsoft Edge.](hololens-new-edge.md) Doğru değilse lütfen geri bildirim gönderin.
 
-Birkaç müşteri, Microsoft Edge 'in başlatamayacağı bir sorun raporladı. Bu müşteriler için, sorun yeniden başlatma ile devam etmez ve Windows veya uygulama güncelleştirmeleriyle çözümlenmez. Bu sorunla karşılaşıyorsanız ve [Windows 'un güncel olduğunu](hololens-updates.md#manually-check-for-updates)onayladıysanız, lütfen aşağıdaki kategori ve alt kategori Ile [geri bildirim merkezi](hololens-feedback.md) uygulamasından bir hata bildirin: Windows Update indirme, yükleme ve yapılandırma > yükleme ve güncelleştirme.
+Birkaç müşteri, uygulamanın başlatılama Microsoft Edge bir sorun bildirdi. Bu müşteriler için sorun yeniden başlatma sırasında devam eder ve uygulama güncelleştirmeleriyle Windows çözülemez. Bu sorunla karşılaşıyorsanız ve [Windows'nin](hololens-updates.md#manually-check-for-updates)güncel olduğunu onayladıysanız, [lütfen Geri Bildirim Merkezi](hololens-feedback.md) uygulamasından şu kategoriye ve alt kategoriye sahip bir hata kaydedin: > Güncelleştirme'yi yükleme Windows, yükleme ve yapılandırma.
 
-Sorunun şu ana kadar köke neden olmadığı bilinen bir geçici çözüm yoktur. Geri Bildirim Hub 'ı aracılığıyla bir hata dosyalama araştırmasına yardımcı olacak! Bu bilinen bir **sorundur**.
+Şu ana kadar sorunun kök nedenini bulamamamız nedeniyle bilinen bir geçici çözüm yoktur. Geri Bildirim Merkezi aracılığıyla hata Geri Bildirim Merkezi araştırmamıza yardımcı olacak! Bu bilinen bir **sorundur.**
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="keyboard-doesnt-switch-to-special-characters"></a>Klavye özel karakterlere geçmez
+## <a name="keyboard-doesnt-switch-to-special-characters"></a>Klavye özel karakterlere geçiş değil
 
-Kullanıcı bir iş veya okul hesabı seçtiği ve parolasını girerken, OOBE sırasında, &123 düğmesine dokunarak klavye üzerindeki özel karakterlere geçiş yapmaya çalışırken, özel karakterlere değişmediğinden, OOBE sırasında bir sorun vardır. Bu bilinen bir **sorundur**.
+OOBE sırasında, kullanıcı bir iş veya okul hesabı seçtikten ve parolasını girdikten sonra &123 düğmesine dokunarak klavyedeki özel karakterlere geçmeye çalışırken özel karakterlere geçmemeye çalıştığı bir sorun vardır. Bu bilinen bir **sorundur.**
 
-Work-arounds:
--   Klavyeyi kapatın ve metin alanına dokunarak yeniden açın.
--   Parolanızı yanlış girin. Klavye bir dahaki sefer çalışırken beklendiği gibi çalışır.
-- Web kimlik doğrulaması, klavyeyi kapatın ve **başka bir cihazdan oturum aç**' ı seçin.
--   Yalnızca sayı girilirse, bir kullanıcı genişletilmiş bir menü açmak için belirli tuşları basılı tutabilir.
--   USB klavye kullanma.
+Çalışma:
+-   Metin alanına dokunarak klavyeyi kapatın ve yeniden açın.
+-   Parolanızı yanlış girin. Klavye bir sonraki sefer yeniden edilse beklendiği gibi çalışacaktır.
+- Web Kimlik Doğrulaması'nın klavyesini kapatın ve başka **bir cihazdan Oturum açın'ı seçin.**
+-   Yalnızca sayı giriliyorsa, kullanıcı belirli tuşlara basarak ve basılı tutarak genişletilmiş menüyü açabilir.
+-   USB klavyesi kullanma.
 
-Bu, şunları etkilemez:
+Bu durum şunları etkilemez:
 - Kişisel hesap kullanmayı seçen kullanıcılar.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
+
+## <a name="downloading-locked-files-doesnt-error"></a>Kilitli dosyaları indirme hatası yok
+
+> [!NOTE]
+> Bu, Insider **derlemesi** 20348.1403 Windows düzelten bilinen bir sorundur.
+
+Windows Holographic'in önceki derlemesinde kilitli bir dosyayı indirmeye çalışırken sonuç bir HTTP hata sayfası olurdu. Windows Holographic sürüm 21H1 güncelleştirmesinde kilitli bir dosyayı indirmeye çalışıldı. Bunun sonucunda görünür bir şey olmuyor, dosya indir olmuyor ve hata yok.
+
+[Listeye dön](#list)
+
+## <a name="device-portal-file-uploaddownload-times-out"></a>Cihaz Portalı karşıya yükleme/indirme zamanları dışında
+> [!NOTE]
+> Bu, Insider **derlemesi** 20348.1403 Windows düzelten bilinen bir sorundur. Ssl Bağlantısını daha önce geçici çözümün bir parçası olarak devre dışı bırakdıysanız, yeniden etkinleştirmenizi kesinlikle öneririz.
 
 
-## <a name="downloading-locked-files-doesnt-error"></a>Kilitli dosyaların indirilmesi hatası yok
-> ! Bu, Windows Insider Build, sürüm 20348,1403 ' de düzeltilen **bilinen bir sorundur** .
-
-
-Önceki Windows holographic Derlemeleriyle, kilitli bir dosyayı indirmeye çalışırken sonuç bir HTTP hata sayfası olur. Windows holographic, sürüm 21H1 güncelleştirmesinde, kilitli bir dosyayı indirmeye çalışmak, hiçbir şey görünmediğine neden olmaz; dosya indirilmez ve hata vermez. 
-
-[Listeye geri dön](#list)
-
-## <a name="device-portal-file-uploaddownload-times-out"></a>Cihaz portalı dosya yükleme/indirme zaman aşımı
-> ! Bu, Windows Insider Build, sürüm 20348,1403 ' de düzeltilen **bilinen bir sorundur** . Geçici çözümün bir parçası olarak SSL bağlantısını devre dışı bırakırsanız, yeniden etkinleştirmenizi kesinlikle öneririz.
-
-
-Bazı müşteriler, dosyaları karşıya yüklemeye veya indirmeye çalışırken, işlem askıda kalabilir ve sonra zaman aşımına uğrar veya hiç tamamlanmayabilir. Bu, '[dosya kilitli ' bilinen sorundan](#downloading-locked-files-doesnt-error) ayrıdır. Bu, Windows holographic, sürüm 2004, 20H2 ve 21 H1 Pazar sürümlerini etkiler. Sorun, cihaz portalının belirli isteklerin işlenmesinde oluşan bir hataya yol açtı ve varsayılan değer olan https kullanılırken en tutarlı şekilde isabet ediyor. 
+Bazı müşteriler dosyaları karşıya yükleme veya indirme girişiminde bulunurken işlem askıda gibi görünebilir ve sonra zaman uzar veya hiçbir zaman tamamlanmadı. Bu, bilinen 'dosya[kilitli'](#downloading-locked-files-doesnt-error) sorunundan ayrıdır. Bu durum Holographic Windows 2004, 20H2 ve 21H1 sürümleri pazar içinde derlemeleri etkiler. Sorunun kök nedeni, Cihaz Portalı isteklerin işlenmesinde oluşan bir hatadır ve varsayılan https kullanılırken en tutarlı şekilde karşına çıkan sorundur. 
 
 ### <a name="workaround"></a>Geçici çözüm
 
-Wi-Fi ve UsbNcm 'ye eşit olarak uygulanan bu geçici çözüm, "SSL bağlantısı" altında "gerekli" seçeneğinin devre dışı bırakılması. Bunu yapmak için cihaz portalı, **sistem**' e gidin ve **Tercihler** sayfasını seçin. **Cihaz güvenliği** bölümünde, **SSL bağlantısı**' nı bulun ve **gerekli**' ı devre dışı bırakmak için işaretini kaldırın.
+Wi-Fi ve UsbNcm için de aynı şekilde geçerli olan bu geçici çözüm, "SSL Bağlantısı" altında "gerekli" seçeneğini devre dışı bırakmaktır. Bunu yapmak için Cihaz Portalı, **Sistem'e gidin** ve **Tercihler sayfasını** seçin. Cihaz Güvenliği bölümünde SSL **Bağlantısı'nın** **yerini bulun ve Gerekli'yi** devre dışı bırakmak için işaretini **kaldırın.**
 
 Daha sonra Kullanıcı, https://(IP adresi) değil http://, dosya yükleme ve indirme gibi özellikler için de çalışır.
 
@@ -166,10 +156,10 @@ Daha sonra Kullanıcı, https://(IP adresi) değil http://, dosya yükleme ve in
 
 ## <a name="blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build"></a>Insider derlemesi ile bir cihaz için Insider Preview 'dan kaydolduktan sonra mavi ekran
 
-Bu, bir Insider Preview derlemesinde bulunan kullanıcıları etkiler, HoloLens 2 ' yi yeni bir Insider Preview derlemesi ile ve ardından Insider programından kaydını kaldırmış olan kullanıcıları etkiler. Bu bilinen bir **sorundur**.
+bu, bir ınsider preview derlemesinde bulunan kullanıcıları etkiler, yeni bir ınsider preview derlemesi ile HoloLens 2 ' yi geri ve ardından ınsider programından kaydolduğunu etkileyen bir sorundur. Bu bilinen bir **sorundur**.
 
 Bu, şunları etkilemez:
-- Windows Insider 'da kayıtlı olmayan kullanıcılar 
+- Windows ınsider 'da kayıtlı olmayan kullanıcılar 
 - Insiders
     - Insider derlemeleri sürüm 18362. x olduğundan bir cihaz kaydedildiyse
     - Insider 'a imzalanmış bir 19041. x derlemesini düzder ve Insider programı 'nda kayıtlı kal
@@ -180,38 +170,38 @@ Geçici iş:
     - Insider Preview 'da kalın
 - Cihazı kırın
 
-    1. Bağlama sırasında, Hololens 2 ' ye tamamen kapatarak el ile [yanıp sönme moduna](hololens-recovery.md) koyun. Ardından, hacmi tutarken, güç düğmesine dokunun.
+    1. [HoloLens 2 ' ye](hololens-recovery.md) , bağlantı kurulamadı, tamamen güçleyerek manuel moduna koyun. Ardından, hacmi tutarken, güç düğmesine dokunun.
     
-    1. BILGISAYARA bağlanın ve Gelişmiş kurtarma Yardımcısı ' nı açın.
+    1. bilgisayara Bağlan ve gelişmiş kurtarma yardımcısı ' nı açın.
     
-    1. HoloLens 2 ' ye varsayılan yapıya Flash.
+    1. HoloLens 2 ' i varsayılan yapıya yakıp söndür.
 
 [Listeye geri dön](#list)
 
-## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive resimleri otomatik olarak karşıya yüklememez
+## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive otomatik olarak resim karşıya yüklememez
 
 HoloLens için OneDrive uygulaması, iş veya okul hesapları için otomatik kamera yüklemeyi desteklemez. Bu bilinen bir **sorundur**.
 
 Geçici çözümler:
 
-- İşletmeniz için uygun ise, tüketici Microsoft hesaplarında otomatik kamera yüklemesi desteklenir. İş veya okul hesabınıza ek olarak Microsoft hesabı oturum açabilirsiniz (OneDrive uygulaması, çift oturum açma desteği sağlar). OneDrive 'daki Microsoft hesabı profilinizde otomatik, arka planda kamera alma 'yı yükleyebilirsiniz.
+- İşletmeniz için uygun ise, tüketici Microsoft hesaplarında otomatik kamera yüklemesi desteklenir. iş veya okul hesabınıza ek olarak Microsoft hesabı oturum açabilirsiniz (OneDrive uygulama, çift oturum açma desteği sağlar). OneDrive içindeki Microsoft hesabı profilinizde otomatik, arka planda kamera alma 'yı yükleyebilirsiniz.
 
-- Fotoğraflarınızı otomatik olarak yüklemek için bir tüketici Microsoft hesabı güvenli bir şekilde kullanmıyorsanız, OneDrive uygulamasından iş veya okul hesabınıza el ile fotoğraf yükleyebilirsiniz. Bunu yapmak için OneDrive uygulamasında iş veya okul hesabınızda oturum açtığınızdan emin olun. Düğmeyi seçip **+** **karşıya yükle**' yi seçin. **Kamera rulosu > resimlere** giderek karşıya yüklemek istediğiniz fotoğrafları veya videoları bulun. Karşıya yüklemek istediğiniz fotoğrafları veya videoları seçin ve ardından **Aç** düğmesini seçin.
+- fotoğraflarınızı otomatik olarak yüklemek için bir tüketici Microsoft hesabı güvenli bir şekilde kullanmıyorsanız, OneDrive uygulamasından iş veya okul hesabınıza fotoğraf el ile yükleyebilirsiniz. bunu yapmak için OneDrive uygulamasında iş veya okul hesabınızda oturum açtığınızdan emin olun. Düğmesini seçin **+** ve **upload**' yi seçin. **Kamera rulosu > resimlere** giderek karşıya yüklemek istediğiniz fotoğrafları veya videoları bulun. Karşıya yüklemek istediğiniz fotoğrafları veya videoları seçin ve ardından **Aç** düğmesini seçin.
 
 [Listeye geri dön](#list)
 
 ## <a name="hololens-is-unresponsive-or-wont-start"></a>HoloLens yanıt vermiyor veya başlamıyor
 
-HoloLens 'niz başlamazsa:
+HoloLens başlamazsa:
 
-- Güç düğmesinin yanındaki LED 'ler soluk veya yalnızca bir tane daha yanıp sönüyor değilse, [HoloLens 'nizi ücretlemeniz gerekebilir.](hololens2-charging.md#charging-the-device)
+- Güç düğmesinin yanındaki LED 'ler soluk veya yalnızca bir tane kısa süreliğine yanıp sönse, [HoloLens ücretlendirmeniz gerekebilir.](hololens2-charging.md#charging-the-device)
 - Güç düğmesine bastığınızda LED ışığı ışık, ancak ekranda hiçbir şey göremiyorsanız, [cihazın kalıcı olarak sıfırlanması](hololens-recovery.md#hard-reset-procedure)gerekir.
 
-HoloLens 'niz dondurulmuş veya yanıt vermiyorsa:
+HoloLens dondurulmuş hale gelirse veya yanıt vermiyorsa:
 
-- Bir LED 'in beş bir kısmını devre dışı bırakır veya LED 'ler yanıt vermiyorsa 15 saniye boyunca güç düğmesine basarak HoloLens 'nizi kapatın. HoloLens 'nizi başlatmak için, Power düğmesine yeniden basın.
+- bir led 'in beş bir kısmını devre dışı bırakır veya led 'ler yanıt vermiyorsa 15 saniye boyunca güç düğmesine basarak HoloLens kapatın. HoloLens başlatmak için, güç düğmesine yeniden basın.
 
-Bu adımlar çalışmazsa, [HoloLens 2 cihazınızı](hololens-recovery.md) veya [HoloLens (1. gen) cihazınızı](hololens1-recovery.md) kurtarmayı deneyebilirsiniz.
+bu adımlar işe yoksa, [HoloLens 2 cihazınızı](hololens-recovery.md) veya [HoloLens (1. gen) cihazınızı](hololens1-recovery.md) kurtarmayı deneyebilirsiniz.
 
 [Listeye geri dön](#list)
 
@@ -219,10 +209,10 @@ Bu adımlar çalışmazsa, [HoloLens 2 cihazınızı](hololens-recovery.md) veya
 
 Aşağıdakilerden birini veya birkaçını yaparak depolama alanını boşaltmanız gerekir:
 
-- Kullanılmayan bazı boşlukları silin. **Ayarlar**  >  **sistem**  >  **alanları**' na gidin, artık ihtiyacınız olmayan bir alan seçin ve ardından **Kaldır**' ı seçin.
+- Kullanılmayan bazı boşlukları silin. **Ayarlar**  >  **sistem**  >  **alanları**' na gidin, artık ihtiyacınız olmayan bir alan seçin ve ardından **kaldır**' ı seçin.
 - Yerleştirdiğiniz hologramlar bölümünü kaldırın.
 - Fotoğraflar uygulamasındaki bazı resimleri ve videoları silin.
-- HoloLens 'ınızdan bazı uygulamaları kaldırın. **Tüm uygulamalar** listesinde, kaldırmak istediğiniz uygulamayı ve ardından **Kaldır**' ı seçin.
+- HoloLens bazı uygulamaları kaldırın. **Tüm uygulamalar** listesinde, kaldırmak istediğiniz uygulamayı ve ardından **Kaldır**' ı seçin.
 
 [Listeye geri dön](#list)
 
@@ -248,11 +238,11 @@ Ayarlama başarısız olursa, deneyin:
 - Nesneleri (örneğin, saç) vizörü içinde hareket ettirmenin
 - Odadaki bir ışığı açma veya doğrudan güneş dışına taşıma
 
-Tüm yönergeleri izlediyseniz ve ayarlama hala başarısız olursa, Ayarlar ' da ayarlama isteğini devre dışı bırakabilirsiniz. Ayrıca, [geri bildirim merkezinde](hololens-feedback.md)geri bildirimde bulunarak bize bilgi verin.
+tüm yönergeleri izlediyseniz ve ayarlama hala başarısız olursa, Ayarlar ayarlama isteğini devre dışı bırakabilirsiniz. Ayrıca, [geri bildirim merkezinde](hololens-feedback.md)geri bildirimde bulunarak bize bilgi verin.
 
 Ayrıca, [görüntü renk veya parlaklık sorun giderme](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right) için ilgili bilgiler bölümüne bakın.
 
-Gözle ayar konumları sistem tarafından hesaplandığından, ıPD ayarı HoloLens 2 için geçerli değildir. 
+göz konumları sistem tarafından hesaplandığından ıpd 'nin ayarlanması HoloLens 2 için geçerli değildir. 
 
 [Listeye geri dön](#list)
 
@@ -266,101 +256,95 @@ Cihazı daha [ **yanıp sönen moda** yerleştirebilir ve Gelişmiş kurtarma Ya
 ## <a name="unity-isnt-working"></a>Unity çalışmıyor
 
 - HoloLens geliştirme için önerilen en güncel Unity sürümü için [araçları yüklemeyi](/windows/mixed-reality/install-the-tools) inceleyin.
-- Unity HoloLens Technical Preview ile ilgili bilinen sorunlar, [HoloLens Unity forumlarında](https://forum.unity3d.com/threads/known-issues.394627/)belgelenmiştir.
+- unity HoloLens Technical Preview ile ilgili bilinen sorunlar [HoloLens Unity forumlarında](https://forum.unity3d.com/threads/known-issues.394627/)belgelenmiştir.
 
 [Listeye geri dön](#list)
 
-## <a name="windows-device-portal-isnt-working-correctly"></a>Windows cihaz portalı düzgün çalışmıyor
+## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Cihaz portalı düzgün çalışmıyor
 
 - Karma Gerçeklik yakalamadaki canlı önizleme özelliği birkaç saniye gecikme gösterebilir.
 
 - Sanal giriş sayfasında, sanal hareketler bölümünün altındaki hareket ve kaydırma denetimleri işlevsel değildir. Bunların kullanılması hiçbir etkiye sahip olmayacaktır. Sanal giriş sayfasındaki sanal klavye düzgün şekilde çalışmaktadır.
 
-- Ayarlar bölümünde Geliştirici modunu etkinleştirdikten sonra, cihaz Portalını açmak için anahtarın etkinleştirilmesi birkaç saniye sürebilir.
+- Ayarlar geliştirici modunu etkinleştirdikten sonra, cihaz portalını açmak için anahtarın etkinleştirilmesi birkaç saniye sürebilir.
 
 [Listeye geri dön](#list)
 
-## <a name="emulator"></a>Öykünücü
-### <a name="the-hololens-emulator-isnt-working"></a>HoloLens öykünücüsü çalışmıyor
+## <a name="the-hololens-emulator-isnt-working"></a>HoloLens Emulator çalışmıyor
 
-HoloLens öykünücüsü hakkındaki bilgiler geliştirici belgelerimizde bulunur.  [HoloLens öykünücüsünün sorunlarını giderme](/windows/mixed-reality/using-the-hololens-emulator#troubleshooting)hakkında daha fazla bilgi edinin.
+HoloLens öykünücüsü hakkındaki bilgiler geliştirici belgelerimizde bulunur.  [HoloLens öykünücüsünün sorunlarını giderme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-hololens-emulator#troubleshooting)hakkında daha fazla bilgi edinin.
 
 
 - Microsoft Store tüm uygulamalar öykünücü ile uyumlu değildir. Örneğin, Genç ve parçaların öykünücü üzerinde oynatılamaz.
-- Öykünücüsünde PC web kamerasını kullanamazsınız.
+- Emulator PC web kamerasını kullanamazsınız.
 - Windows cihaz portalının canlı önizleme özelliği öykünücü ile çalışmaz. Hala karma gerçeklik Videoları ve görüntülerini yakalayabilirsiniz.
-
-[Listeye geri dön](#list)
-
-## <a name="i-cannot-find-or-use-the-keyboard-to-type-in-the-hololens-2-emulator"></a>HoloLens 2 öykünücüsünü yazmak için klavyeyi bulamıyorum veya kullanmıyorum
-
-*Çok yakında*
 
 [Listeye geri dön](#list)
 
 ## <a name="voice-commands-arent-working"></a>Sesli komutlar çalışmıyor
 
-Cortana, sesli komutlarınıza yanıt vermiyorsa Cortana 'Nın açık olduğundan emin olun. Tüm uygulamalar listesinde,   >    >  değişiklikler yapmak için Cortana menü **Not defteri**  >  **ayarları** ' nı seçin. Ne söyleyebilirim hakkında daha fazla bilgi edinmek için bkz. [HoloLens ile sesinizi kullanma](hololens-cortana.md).
+Cortana sesli komutlarınıza yanıt vermiyorsa Cortana açık olduğundan emin olun. tüm uygulamalar listesinde,   >    >  değişiklikler yapmak için Cortana menü **not defteri**  >  **Ayarlar** ' ni seçin. Ne söyleyebilirim hakkında daha fazla bilgi edinmek için bkz. [HoloLens sesinizi kullanma](hololens-cortana.md).
 
-HoloLens 'te (1. Genel), yerleşik konuşma tanıma özelliği yapılandırılamaz. Her zaman açıktır. HoloLens 2 ' de, cihaz kurulumu sırasında hem konuşma tanıma hem de Cortana 'yı açıp kullanmayacağınızı seçebilirsiniz.
+HoloLens (1. gen) üzerinde, yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açıktır. HoloLens 2 ' de, cihaz kurulumu sırasında hem konuşma tanımayı hem de Cortana açıp kullanmayacağınızı seçebilirsiniz.
 
-HoloLens 2 sesinize yanıt vermiyorsa, konuşma tanımanın açık olduğundan emin olun.   >  **Ayarlar**  >  **Gizlilik**  >  **konuşmayı** Başlat ' a gidin ve **konuşma tanımayı** açın.
+HoloLens 2 sesinize yanıt vermiyorsa, konuşma tanımanın açık olduğundan emin olun.   >  **Ayarlar**  >  **gizlilik**  >  **konuşmayı** başlat ' a gidin ve **konuşma tanımayı** açın.
 
 [Listeye geri dön](#list)
 
 ## <a name="hand-input-isnt-working"></a>El girişi çalışmıyor
 
-HoloLens 'in ellerinizi görmesini sağlamak için bunları hareket çerçevesinde tutmanız gerekir.  Karma Gerçeklik ana sayfası, kollarınızın ne zaman izleneceğini bilmenizi sağlayan geri bildirim sağlar.  Geri bildirim, HoloLens 'in farklı sürümlerinde farklıdır:
-- HoloLens 'te (1. Genel), Gaze imleci bir noktadan halkaya dönüşür
-- HoloLens 2 ' de, elinizdeki bir kurşun kalem 'e yakın olduğunda parmak izi imleci görünür ve SLA 'lar daha fazla olduğunda bir el Ray görünür
+HoloLens kendi ellerinizi görememesini sağlamak için, bunları hareket çerçevesinde tutmanız gerekir.  Karma Gerçeklik ana sayfası, kollarınızın ne zaman izleneceğini bilmenizi sağlayan geri bildirim sağlar.  HoloLens farklı sürümlerinde geri bildirim farklıdır:
+- HoloLens (1. genel) ' de, gaze imleci bir noktadan halka arasında değişir
+- HoloLens 2 ' de, elinizdeki bir kurşun kalem 'e yakın olduğunda parmak izi imleci görünür ve sla 'lar daha fazla olduğunda bir el ray görünür
 
-Birçok modern uygulama, karma gerçeklik ana 'ya benzer giriş desenlerine uyar.  HoloLens 'te el girişi kullanma hakkında daha fazla bilgi edinin [(1. Genel)](hololens1-basic-usage.md#use-hololens-with-your-hands) ve [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
+Birçok modern uygulama, karma gerçeklik ana 'ya benzer giriş desenlerine uyar.  [HoloLens (1. gen)](hololens1-basic-usage.md#use-hololens-with-your-hands) ve [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame)' de el girişi kullanma hakkında daha fazla bilgi edinin.
 
 Birlikte çalışırken, bazı araç türlerinin el ile izleme ile çalışmadığına göz önünde bulundurun.  Yaygın olarak kullanılan bir örnek, artışlarını devralarak kızılötesi ışınına eğilen ve derinlik kamerası tarafından alınmayan siyah bir örnektir.  Çalışmanız lastik içeriyorsa, mavi veya gri gibi daha açık bir renk denemeyi öneririz.  Diğer bir örnek de büyük ölçekli bir örnektir ve bu, elinizin şeklinin gizlenmesi anlamına gelir. En iyi sonuçlar için mümkün olduğunca form sığdırma olarak bulunan gloonları kullanmanızı öneririz.
 
-Vizörü ' in parmak izleri veya kullanım alanları varsa, vizörü 'nizi temizlemek için HoloLens ile birlikte gelen mikro fiber Temizleme havsını kullanın.
+vizörü ' in parmak izleri veya kullanım alanları varsa, HoloLens ile birlikte gelen mikro fiber temizleme havsını kullanarak, vizörü 'yi temizleyin.
 
 [Listeye geri dön](#list)
 
 ## <a name="cant-connect-to-wi-fi"></a>Wi-Fi bağlanılamıyor
 
-HoloLens 'nizi bir Wi-Fi ağa bağlanamadıysanız deneyebileceğiniz bazı şeyler aşağıda verilmiştir:
+HoloLens Wi-Fi ağa bağlanamadıysanız deneyebileceğiniz bazı şeyler aşağıda verilmiştir:
 
-- Wi-Fi açık olduğundan emin olun. Denetlemek için başlangıç hareketini kullanın, ardından **Ayarlar**  >  **Ağ &amp; Internet**  >  **Wi-Fi**' ı seçin. Wi-Fi açık ise, kapatıp yeniden açmayı deneyin.
+- Wi-Fi açık olduğundan emin olun. bunu denetlemek için başlangıç hareketini kullanın, ardından **Ayarlar**  >  **Network &amp; ınternet**  >  **Wi-Fi** öğesini seçin. Wi-Fi açık ise, kapatıp yeniden açmayı deneyin.
 - Yönlendiriciye veya erişim noktasına yaklaşın.
-- Wi-Fi yönlendiricinizi yeniden başlatın ve [HoloLens 'i yeniden başlatın](hololens-recovery.md). Yeniden bağlanmayı deneyin.
+- Wi-Fi yönlendiricinizi yeniden başlatın ve [HoloLens yeniden başlatın](hololens-recovery.md). Yeniden bağlanmayı deneyin.
 - Bu öğelerin hiçbiri işe çalışmadıysanız, yönlendiricinizin en son bellenim sürümünü kullandığını denetleyin. Bu bilgileri üretici web sitesinde bulabilirsiniz.
 
 [Listeye geri dön](#list)
-## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth cihazları eşleştirme yok
 
-[Bluetooth cihazını eşleştirmenize](hololens-connect-devices.md)sorun yaşıyorsanız aşağıdakileri deneyin:
+## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth cihazlar eşleştirmiyor
 
-- **Ayarlar**  >  **cihazlar**' a gidin ve Bluetooth 'un açık olduğundan emin olun. Varsa, devre dışı bırakın ve tekrar açın.
+[Bluetooth bir cihazla eşleştirme](hololens-connect-devices.md)sorunları yaşıyorsanız, aşağıdakileri deneyin:
+
+- **Ayarlar**  >  **cihazlar**' a gidin ve Bluetooth açık olduğundan emin olun. Varsa, devre dışı bırakın ve tekrar açın.
 - Bluetooth cihazınızın tam olarak ücretlendirildiğini veya yeni pillere sahip olduğundan emin olun.
-- Hala bağlanamıyorsanız, [HoloLens 'i yeniden başlatın](hololens-recovery.md).
+- Hala bağlanamıyorsanız [HoloLens yeniden başlatın](hololens-recovery.md).
 
 [Listeye geri dön](#list)
 
 ## <a name="usb-c-microphone-isnt-working"></a>USB-C mikrofonu çalışmıyor
-Bazı USB-C mikrofonların kendilerini bir mikrofon *ve* konuşmacı olarak doğru bir şekilde rapor ettiğini unutmayın. Bu, HoloLens ile değil, mikrofonla ilgili bir sorundur. Bu mikrofonlardan birini HoloLens 'e takarken ses kaybolmuş olabilir. Neyse ki basit bir çözüm vardır.  
+Bazı USB-C mikrofonların kendilerini bir mikrofon *ve* konuşmacı olarak doğru bir şekilde rapor ettiğini unutmayın. Bu, HoloLens ile değil, mikrofonla ilgili bir sorundur. bu mikrofonlardan birini HoloLens içine takarken, ses kaybolmuş olabilir. Neyse ki basit bir çözüm vardır.  
 
-**Ayarlar**  ->  **sistem**  ->  **sesi**' nde yerleşik hoparlörleri **(analog özellik ses sürücüsü)** **varsayılan cihaz** olarak açıkça ayarlayın. Mikrofon kaldırılıp daha sonra yeniden bağlansa, HoloLens bu ayarı unutmalıdır.
+**Ayarlar**  ->  **sistem**  ->  **sesi**' nde, yerleşik hoparlörleri **(Analog özellik ses sürücüsü)** **varsayılan cihaz** olarak açıkça ayarlayın. HoloLens, mikrofon kaldırılıp daha sonra yeniden bağlansa bile bu ayarı unutmalıdır.
 
 ![USB-C mikrofonları sorunlarını giderme](images/usbc-mic-4.png)
 
-## <a name="devices-listed-as-available-in-settings-dont-work"></a>Ayarlarda kullanılabilir olarak listelenen cihazlar çalışmıyor
+## <a name="devices-listed-as-available-in-settings-dont-work"></a>Ayarlar kullanılabilir olarak listelenen cihazlar çalışmıyor
 
-HoloLens (1. gen) Bluetooth ses profillerini desteklemez. Hoparlörler ve kulaklıklar gibi Bluetooth ses cihazları, HoloLens ayarlarında kullanılabilir olarak görünebilir, ancak desteklenmez.
+HoloLens (1. gen) Bluetooth ses profillerini desteklemez. hoparlörler ve kulaklıklar gibi Bluetooth ses cihazları HoloLens ayarlarında kullanılabilir olarak görünebilir, ancak desteklenmez.
 
-HoloLens 2, stereo kayıttan yürütme için Bluetooth A2DP ses profilini destekler. Bluetooth çevresel bir bilgisayardan mikrofon yakalamaya izin veren Bluetooth BT ücretsiz profili, HoloLens 2 ' de desteklenmez.
+HoloLens 2, stereo kayıttan yürütme için Bluetooth A2DP ses profilini destekler. Bluetooth, Bluetooth çevresel bilgisayardan mikrofon yakalamaya izin veren ücretsiz profil HoloLens 2 ' de desteklenmez.
 
-Bluetooth cihazını kullanırken sorun yaşıyorsanız, desteklenen bir cihaz olduğundan emin olun. Desteklenen cihazlar şunları içerir:
+Bluetooth bir cihaz kullanırken sorun yaşıyorsanız, desteklenen bir cihaz olduğundan emin olun. Desteklenen cihazlar şunları içerir:
 
-- İngilizce-dil QWERTY Bluetooth klavyeleri (bunları, Holographic Klavyesini kullandığınız her yerde kullanabilirsiniz).
+- ingilizce-dil QWERTY Bluetooth klavyeler (bunları holographic klavyesini kullandığınız her yerde kullanabilirsiniz).
 - Bluetooth fareler.
-- [HoloLens](hololens1-clicker.md).
+- [HoloLens click](hololens1-clicker.md).
 
-Diğer Bluetooth HID ve GATT cihazlarını, HoloLens 'larınızla birlikte eşleştirin. Ancak, cihazları gerçekten kullanmak için Microsoft Store ' den ilgili yardımcı uygulamaları yüklemek zorunda kalabilirsiniz.
+diğer Bluetooth hıd ve gatt cihazlarını HoloLens ile birlikte eşleştirin. ancak, cihazları gerçekten kullanmak için Microsoft Store ' den ilgili yardımcı uygulamaları yüklemek zorunda kalabilirsiniz.
 
 [Listeye geri dön](#list)

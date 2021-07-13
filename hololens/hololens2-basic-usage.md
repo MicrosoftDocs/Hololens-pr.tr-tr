@@ -1,6 +1,6 @@
 ---
 title: HoloLens 2’de dolaşma
-description: Karma gerçekliği keşfedin ve HoloLens 2 cihazlarını el ile kullanma kılavuzuyla çalışmaya başlama.
+description: Karma gerçekliği keşfedin ve 2 cihazı el ile HoloLens bu kılavuzu kullanmaya başlama.
 ms.assetid: 5f791a5c-bdb2-4c5d-bf46-4a198de68f21
 ms.date: 9/17/2019
 keywords: hololens
@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8acf5659739d58d24add3f299daeacab7132a086
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: d2804742fdcf9d6562fce0c693552d4a9241398f
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924596"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635220"
 ---
 # <a name="getting-around-hololens-2"></a>HoloLens 2’de dolaşma
 
@@ -26,28 +26,28 @@ Hologram dünyasına keşfetmeye hazır mısınız?
 Bu kılavuz aşağıdakilere giriş sağlar:
 
 - Karma gerçeklikle etkileşim kurma
-- HoloLens 2'de hologramlarla etkileşim kurmak için el ve sesinizi kullanma
-- HoloLens Windows 10 de gezinme (Windows Holographic)
+- HoloLens 2'de hologramlarla etkileşim kurmak için HoloLens kullanma
+- HoloLens'Windows 10 (Windows Holographic) gezinme
 
 ## <a name="discover-mixed-reality"></a>Karma gerçekliği keşfetme
 
-HoloLens'de hologramlar dijital dünyayı fiziksel ortamınıza karıştırarak dünyanıza bir parçası gibi bakar ve seslerini sunar. Hologramlar etrafınız dolsa bile her zaman çevrenizi görebilir, serbestçe hareket ediyor ve insanlar ve nesnelerle etkileşim kurabilirsiniz. Bu deneyime "karma gerçeklik" çağrılır.
+Bu HoloLens hologramlar, dijital dünyayı fiziksel ortamınıza karıştırarak dünyanıza bir parçası gibi bakma ve seslerini ifade eder. Hologramlar etrafınız dolsa bile her zaman çevrenizi görebilir, serbestçe hareket ediyor ve insanlar ve nesnelerle etkileşim kurabilirsiniz. Bu deneyime "karma gerçeklik" çağrılır.
 
-Holografik çerçeve, hologramlarınızı, gözlerinizi ayrıntılara en hassas olan yere, görme lensleri ise çevre birimi görüş açınızı net bir şekilde bırakır. Uzamsal ses ile, arkanızda olsa bile bir hologramı dinleyerek tespit etmek için kullanabilirsiniz. HoloLens fiziksel ortamınızı anlayana kadar tablolar ve duvar gibi gerçek nesnelerin üzerine ve çevresine hologramlar yer almaktadır.
+Holografik çerçeve, hologramlarınızı, gözlerinizi ayrıntılara en hassas olan yere, görme lensleri ise çevre birimi görüş açınızı net bir şekilde bırakır. Uzamsal ses ile, arkanızda olsa bile bir hologramı dinleyerek tespit etmek için kullanabilirsiniz. Ayrıca fiziksel HoloLens anlıyoruz, tablolar ve duvar gibi gerçek nesnelerin üzerine ve çevresine hologramlar da ebilirsiniz.
 
-HoloLens'i kullanmak, akıllı telefonunuzu kullanmaya çok benzer. Holografik pencerelere, menülere ve düğmelere dokunmak ve işlemek için ellerinizi kullanabilirsiniz.  
+Bu HoloLens akıllı telefonunuzu kullanmaya çok benzer. Holografik pencerelere, menülere ve düğmelere dokunmak ve işlemek için ellerinizi kullanabilirsiniz.  
 
-Bu temel etkileşimleri biliyor olduktan sonra HoloLens'e çok hızlı bir şekilde geçebilirsiniz.
+Bu temel etkileşimleri biliyor olduktan sonra, HoloLens hızlı bir şekilde tamamlar.
 
 > [!TIP]
-> Şu anda size yakın bir HoloLens varsa, **İpuçları** uygulaması HoloLens üzerinde el etkileşimleri için değişmez uygulamalı öğreticiler sağlar.  
-> Başlangıç hareketini kullanarak Başlat'a **gidin veya** "Başla"ya gidip İpuçları'ı **seçin.**
+> Şu anda size yakın HoloLens varsa, **İpuçları** uygulama, uygulama üzerinde el etkileşimleri için değişmez uygulamalı öğreticiler HoloLens.  
+> Başlat'a gitmek için başlangıç **hareketini kullanın veya** "Başla'ya Git" de **İpuçları.**
 
 ## <a name="the-hand-tracking-frame"></a>El izleme çerçevesi
 
-HoloLens'in iki tarafının da birkaç metreyi görene algılayıcıları vardır. Ellerinizi kullanarak bu çerçevenin içinde tutmanız gerekir, yoksa HoloLens bunları görmez. Ancak siz hareket ettiyken çerçeve de birlikte hareket eder.  
+HoloLens iki tarafının da birkaç metreyi görene algılayıcılar vardır. Ellerinizi kullanırken, bunları bu çerçevenin içinde tutmanız gerekir, HoloLens bunları görmeyebilirsiniz. Ancak siz hareket ettiyken çerçeve de birlikte hareket eder.  
 
-![HoloLens el izleme çerçevesini gösteren resim](./images/hololens-2-gesture-frame.png)
+![El izleme HoloLens gösteren resim](./images/hololens-2-gesture-frame.png)
 
 ## <a name="touch-holograms-near-you"></a>Size yakın hologramlara dokunma
 
@@ -55,7 +55,7 @@ Bir hologram size yakın olduğunda, ellerinizi ona yakın bir yerde getirin ve 
 
 Size **yakın** olan bir hologramı almak için, **başparmak** ve dizin **parmaklarınızı** hologramda sıkıştırın ve basılı tutun. Bırakmak için parmaklarınızı bırakın. Karma gerçeklik **giriş girişlarında** 3D nesneleri ve uygulama pencerelerini taşımak, yeniden boyutlandırmak ve döndürmek için bu hareketle kullanın.
 
-Bir bağlam **menüsünü açmak için,** uygulama kutucuğunun ekran görüntüsünde Başlat menüsü  ekranda olduğu gibi basılı tutun.
+Bir bağlam **menüsünü açmak** için, uygulama kutucuğunun ekran görüntüsünde Başlat menüsü  gibi dokunun ve basılı tutun.
 
 ## <a name="use-hand-ray-for-holograms-out-of-reach"></a>Ulaşılanın dışında hologramlar için el ışığı kullanma
 
@@ -92,7 +92,7 @@ El **ile aşağıdaki eylemleri gerçekleştirmek** için havadan dokunma ve tut
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3Wxng]
 
-Başlangıç hareketi, **Başlat menüsü.**  Başlangıç hareketini gerçekleştirmek için, size dönük olarak ellerinizi tutun. İç bileknizin **üzerinde Bir** Başlat simgesi görünür. Diğer el ile bu simgeye dokunun.  Başlat menüsü, **dosyanın bulunduğu yerde açılır.**
+Başlangıç hareketi, **Başlat menüsü.**  Başlangıç hareketini gerçekleştirmek için, size dönük olarak ellerinizi tutun. İç bileknizin **üzerinde Bir** Başlat simgesi görünür. Diğer el ile bu simgeye dokunun.  Başlat menüsü, **dosyanın nerede olduğunu bakarak açılır.**
 
 > [!TIP]
 >
@@ -103,7 +103,7 @@ Başlangıç hareketi, **Başlat menüsü.**  Başlangıç hareketini gerçekle�
 
 ![Başlat simgesini ve Başlat hareketini gösteren resim](./images/hololens-2-start-gesture.png)
 
-**İlkeyi** Başlat menüsü için, başlangıç hareketi açık Başlat menüsü yap.  Ayrıca, görünüme bakarak Başlat menüsü "Kapat" deysiniz.
+Dosyayı **kapatmak** Başlat menüsü, başlangıç hareketi açıkken Başlat menüsü yap.  Ayrıca, görünüme bakarak Başlat menüsü "Kapat" deysiniz.
 
 ### <a name="one-handed-start-gesture"></a>Tek elle Başlangıç hareketi
 
@@ -111,7 +111,7 @@ Başlangıç hareketi, **Başlat menüsü.**  Başlangıç hareketini gerçekle�
 > Tek elle Başlangıç hareketi için:
 >
 > 1. Kasım 2019 güncelleştirmesi (derleme 18363.1039) veya sonraki bir güncelleştirmeniz gerekir.
-> 1. Göz izlemenin doğru şekilde işleve sahip olması için gözlerinizi cihaza göre ayarlamanız gerekir. Başlangıç simgesinin etrafında dolasma noktaları görmüyorsanız, gözlerinizi cihazda [ayarlamaz.](https://docs.microsoft.com/hololens/hololens-calibration#calibrating-your-hololens-2)
+> 1. Göz izlemenin doğru şekilde işleve sahip olması için gözlerinizi cihaza göre ayarlamanız gerekir. Başlangıç simgesinin etrafında dolasma noktaları görmüyorsanız, gözlerinizi cihazda [ayarlamaz.](/hololens/hololens-calibration#calibrating-your-hololens-2)
 
 Başlangıç hareketini yalnızca bir el ile de gerçekleştirin. Bunu yapmak için, size dönük olarak ellerinizi tutun ve iç bileknizin **Başlangıç** simgesine bakın. **Simgesini takip ederken, başparmak** ve dizin parmaklarınızı sıkıştırın.
 
@@ -121,110 +121,110 @@ Başlangıç hareketini yalnızca bir el ile de gerçekleştirin. Bunu yapmak i�
 
 Tüm bu el etkileşimlerini test etmeye hazır mısınız?
 
-Yüklü uygulamalarınızı uygulamanın Başlat menüsü [](holographic-home.md) holoLens için ek uygulamaları [Microsoft Store.](holographic-store-apps.md)
+Yüklü uygulamalarınızı uygulamanın Başlat menüsü [](holographic-home.md) ve HoloLens için ek uygulamaları [Microsoft Store.](holographic-store-apps.md)
 
-Windows bilgisayarı her zaman masaüstünde deneyimine başladığı gibi, HoloLens de açık olduğunda her zaman karma **gerçeklikte** başlar.  Bu Başlat menüsü kullanarak uygulama pencerelerini açabilir ve yer açabilirsiniz. Ayrıca uygulama başlatıcıları ve 3D içerikler karma gerçeklik giriş giriş sayfalarında da kullanılabilir. Fiziksel alanınıza yerleştirmeleri HoloLens tarafından hatırlanacak.
+Pc'Windows masaüstünde her zaman deneyimine başladığı gibi, HoloLens açık olduğunda her zaman karma **gerçeklikte** başlar.  Bu Başlat menüsü kullanarak uygulama pencerelerini açıp yer ve uygulama başlatıcılarını ve 3D içeriği karma gerçeklik giriş giriş'ine yer açabilirsiniz. Fiziksel alanınıza yerleştirmeleri, fiziksel alanınız tarafından HoloLens.
 
-uygulama **Başlat menüsü** ve ardından Ayarlar uygulama **kutucuğunu** seçin. Önünde bir uygulama penceresi açılır.
+uygulama **Başlat menüsü** açın ve uygulama **kutucuğunu Ayarlar** seçin. Önünde bir uygulama penceresi açılır.
 
-Ayarlar, 2D uygulama penceresi kullanan bir HoloLens uygulaması **örneğidir.**  Bu, pc'de windows uygulamasına çok benzer.
+Ayarlar, 2D uygulama HoloLens bir uygulama **örneğidir.**  Pc'de bir Windows benzerdir.
 
-Artık uygulama kutucuğunu **yeniden Başlat menüsü** ve İpuçları uygulama **kutucuğunu** seçin. Uygulama için **bir** 3D uygulama başlatıcısı önünde görünür. Uygulamayı açmak için başlatıcıda oynat **düğmesini** seçmeniz gerekir.
+Artık uygulama **kutucuğunu Başlat menüsü** ve uygulama **kutucuğunu İpuçları** açabilirsiniz. Uygulama için **bir** 3D uygulama başlatıcısı önünde görünür. Uygulamayı açmak için başlatıcıda oynat **düğmesini** seçmeniz gerekir.
 
-İpuçları, çevreleyici bir uygulama **örneğidir.** Tam ekranlı bir uygulama, karma gerçeklikte çalıştırılırken sizi karma gerçeklikten alır ve gördüğünüz tek uygulama haline gelir.  Çıkmak için giriş düğmesini Başlat menüsü alttaki **karma gerçeklik giriş** düğmesini seçmeniz gerekir.
+İpuçları bir çevreleyici uygulama **örneğidir.** Tam ekranlı bir uygulama, karma gerçeklikte çalıştırılırken sizi karma gerçeklikten alır ve gördüğünüz tek uygulama haline gelir.  Çıkış yapmak için giriş Başlat menüsü alttaki **karma gerçeklik giriş** düğmesini seçmeniz gerekir.
 
 ### <a name="power-menu-from-start"></a>Başlat'tan Güç menüsü
 
-Kullanıcının oturum kapatmasını, kapatmasını ve cihazı yeniden başlatmasını sağlayan yeni bir menü. HoloLens Başlangıç ekranı güncelleştirmenin ne zaman kullanılabilir olduğunu gösteren bir gösterge.
+Kullanıcının oturum kapatmasını, kapatmasını ve cihazı yeniden başlatmasını sağlayan yeni bir menü. Sistem güncelleştirmesini HoloLens Başlangıç ekranı gösteren bir gösterge.
 
 #### <a name="how-to-use"></a>Nasıl kullanılır?
 
-1. Başlangıç hareketini veya "Başlangıç ekranı [Git" ifadesini](hololens2-basic-usage.md#start-gesture) kullanarak HoloLens Başlangıç ekranı'i açın.
+1. [başlangıç hareketini](hololens2-basic-usage.md#start-gesture) kullanarak HoloLens başlangıç ekranını açın veya "başlangıç ekranına git" diyorum.
 
-2. Kullanıcı profili resminin yanındaki üç nokta simgesine (...) dikkatin:
+2. Kullanıcı profili resminin yanındaki üç nokta simgesine (...) dikkat edin:
 
    <img alt="ser context dots, ..." src="./images/powertransition_icon_default_cropped.png" width="586" height="330" />
 
-3. Ellerinizi kullanarak kullanıcı profili resmini veya "Power" sesli komutunu seçin.
+3. Kendi ellerinizi veya "Power" sesli komutunu kullanarak Kullanıcı profili resmini seçin.
 
-4. Cihazı kapatma, Yeniden Başlatma veya Kapatma seçeneklerinin yer alan bir menü görüntülenir:
+4. Oturumu kapatma, cihazı yeniden başlatma veya kapatma seçeneklerinin bulunduğu bir menü görünür:
 
    <img alt="User context menu" src="./images/powertransition_aad_options_cropped.png" width="586" height="330" />
 
-5. HoloLens'inizi kapatmak, yeniden başlatmak veya kapatmak için menü seçeneklerini belirleyin. Cihaz tek bir Microsoft Hesabı [(MSA)](hololens-identity.md)veya yerel hesap için ayarlanmışsa, Oturum açma seçeneği kullanılamıyor olabilir.
+5. Oturumu kapatmak, HoloLens yeniden başlatmak veya kapatmak için menü seçeneklerini belirleyin. Cihaz [tek bir Microsoft hesabı (MSA) veya yerel hesap](hololens-identity.md)için ayarlandıysa, oturumu Kapat seçeneği kullanılamayabilir.
 
-6. Başka bir yere dokunarak veya Başlat hareketiyle Başlat menüsü menüyü kapatabilirsiniz.
+6. başka herhangi bir yere dokunarak veya başlangıç hareketiyle Başlat menüsü kapatarak menüyü kapatın.
 
-[](holographic-home.md) HoloLens 2'Başlat menüsü kullanma ve yönetme hakkında bilgi de dahil olmak üzere karma gerçeklik giriş hakkında daha fazla bilgi edinmek için buraya gidin.
+HoloLens 2 ' de uygulamaları kullanma ve yönetme hakkında bilgi de dahil olmak üzere Başlat menüsü ve karma gerçeklik girişi hakkında [daha fazla bilgi edinmek için buraya gidin](holographic-home.md) .
 
-## <a name="move-resize-and-rotate-holograms"></a>Hologramları taşıma, yeniden boyutlandırma ve döndürme
+## <a name="move-resize-and-rotate-holograms"></a>Hologragram taşıma, yeniden boyutlandırma ve döndürme
 
-Karma gerçeklikte el, el ve ses komutlarınızı kullanarak uygulama pencerelerini ve 3D nesnelerinizi hareket ettirebilir, yeniden boyutlandırabilir ve döndürebilirsiniz.
+Karma Gerçeklik ana 'da, uygulamalı, el ve sesli komutlarınızı kullanarak uygulama Windows ve 3B nesnelerini taşıyabilir, yeniden boyutlandırabilir ve döndürebilirsiniz.
 
-### <a name="moving-holograms"></a>Hologramları taşıma
+### <a name="moving-holograms"></a>Hologramlar taşınıyor
 
-Şu adımları kullanarak bir hologramı veya uygulamayı taşıma:
+Aşağıdaki adımları izleyerek bir hologram veya uygulamayı taşıyın:
 
-1. Dizin parmaklarınızı ve başparmaklarınızı hologramın üzerine sıkıştırarak hologramı tutun veya ellerinizi aşağı doğru yüzün ve sonra bunun üzerinde kendi dizininizi kapatın.  Mavi sınırlayıcı kutusunun herhangi bir yerinde 3D hologramı tutun.  Bir uygulama penceresi için başlık çubuğunu tutun.
-1. İzin vermeden, hologramı konumlandırmak için ellerinizi hareket ettirin. Bir uygulama penceresini bu şekilde taşırken, uygulama penceresi hareket etti olarak otomatik olarak yüz yüze döner ve böylece yeni konumunda kullanımı daha kolay hale getirir.  
-1. Parmaklarınızı bırakarak bırakın.
+1. Dizin parmak ve parmak izini, elinizdeki hologram veya yüzünüzü kaydederek ve sonra da bunun üzerine düşerek kapatılabilen hologram elde edin.  Mavi sınırlayıcı kutusunun içinde herhangi bir yerde 3B hologram elde edin.  Bir uygulama penceresi için başlık çubuğunu alın.
+1. Çalışmaya izin vermeden, hologram ' ı konumlandırmak için elinizin içine taşıyın. Uygulama penceresi bu şekilde taşınırken, uygulama penceresi hareket ederken otomatik olarak, yeni konumunda kullanımını kolaylaştırır.  
+1. Parmaklarınızın yerleştirileceği yere yayınlayın.
 
-### <a name="resizing-holograms"></a>Hologramları yeniden boyutlandırma
+### <a name="resizing-holograms"></a>Hologragram boyutunu değiştirme
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ZYIb]
 
-Yeniden boyutlandırmak için **3D** hologramların ve uygulama pencerelerinin köşelerinde görünen yeniden boyutlandırma tutamaçlarını alıp kullanın.
+Yeniden boyutlandırmak için 3B hologram ve uygulama pencerelerinin köşelerinde görünen **yeniden boyutlandırma tutamaçlarını** alıp kullanın.
 
-Bir uygulama penceresi için, pencere içeriği bu şekilde yeniden boyutlandırılırken buna karşılık gelen boyut artar ve daha kolay okunur hale gelir.
+Bir uygulama penceresi için, pencere içeriğinin boyutları aynı biçimde artar ve okunması daha kolay olur.
 
-Bir uygulama penceresini pencerede daha  fazla içerik görünür olacak şekilde yeniden boyutlandırmak için, uygulama penceresinin kenarlarında ve alt kenarlarında bulunan yeniden boyutlandırma tutamaçlarını kullanın.
+Pencerede **daha fazla içerik** görünmesi için bir uygulama penceresini yeniden boyutlandırmak istiyorsanız, uygulama penceresinin kenarlarındaki ve alt kenarlarından bulunan yeniden boyutlandırma tutamaçlarını kullanın.
 
-Size daha uzak olan bir hologramı yeniden boyutlandırmanın iki yolu vardır. Hologramı iki köşeli olarak kapabilir veya yeniden boyutlandırma denetimlerini kullanabilirsiniz.
+Sizi daha da fazla olan bir hologram yeniden boyutlandırmanın iki yolu vardır. Hologram için iki köşe alabilir ya da yeniden boyutlandırma denetimlerini kullanabilirsiniz.
 
-### <a name="rotating-holograms"></a>Hologramları döndürme
+### <a name="rotating-holograms"></a>Dönen hologragram
 
-3D hologramlar için sınırlayıcı kutunun dikey kenarlarında görünen döndürme tutamaçlarını alıp kullanın.
+3B hologragram 'lar için, sınırlayıcı kutunun dikey kenarlarında görünen döndürme tutamaçlarını alın ve kullanın.
 
-Uygulama pencerelerini hareket ettirerek uygulama pencerelerini otomatik olarak döndürebilir ve yüz yüze görebilirsiniz.
+Uygulama pencereleri için, bir uygulama penceresinin taşınması, otomatik olarak bu işlem tarafından döndürülecektir ve size yol açabilir.
 
-3D hologram veya uygulama penceresini aynı anda hem el ile **hem** de el ile 3D olarak da tutabilirsiniz:
+Ayrıca, aynı anda **hem uygulamalı hem de** bir uygulama penceresi elde edebilir ve ardından:
 
-- Hologramı yeniden boyutlandırmak için ellerinizi birbirine yaklaştırın veya daha fazla ayırın.
-- Hologramı döndürmek için ellerinizi daha yakın ve daha uzak bir yere hareket ettirin.
+- Hologram yeniden boyutlandırmak için ellerinizi bir araya veya daha yakınına taşıyın.
+- Hologram döndürmek için, ellerinizi gövdeinizden daha yakından ve daha uzağa taşıyın.
 
-### <a name="follow-me-stop-following"></a>Beni takip edin, takip etmeyi durdurun
+### <a name="follow-me-stop-following"></a>Beni takip edin, aşağıdakileri durdurun
 
-Hologramlar ve uygulama pencereleri, bunları dünyaya yerleştiren yerde kalır.  Bu, hareket etmek ve bir uygulamanın görünür kalmasını istediğiniz zaman her zaman kullanışlı değildir. Bir uygulamanın sizi takip etmeyi başlatması veya durdurması için, uygulama penceresinin sağ üst köşesindeki (Kapat düğmesinin yanındaki) Beni takip **et'i** seçin.   Sizi takip eden bir uygulama penceresi, sizi tam ekran bir uygulamanın içine de takip eder.
+Hologramlar ve uygulama pencereleri dünyanın dört bir yerinden yerleştirdiğiniz yerde kalır.  Bu, devam etmeniz gerektiğinde ve bir uygulamanın görünür kalmasını istiyorsanız her zaman uygun değildir. Uygulamanızı başlatmak veya durdurmak için uygulama penceresinin sağ üst köşesindeki **beni takip** et ' i seçin ( **Kapat** düğmesinin yanında).  ' I takip eden bir uygulama penceresi de size, bir tam ekran uygulaması olan.
 
-## <a name="use-hololens-with-your-voice"></a>HoloLens'i sesinizi kullanarak kullanma
+## <a name="use-hololens-with-your-voice"></a>sesinizle HoloLens kullanın
 
-Sesinizi kullanarak HoloLens'i el ile kullanarak hızlı bir fotoğraf çekerek veya bir uygulama açmak gibi birçok farklı şeyi yapabiliriz.
+sesinizi, hızlı bir fotoğraf veya uygulama açma gibi HoloLens ile yaptığınız her şeyi gerçekleştirmek için kullanabilirsiniz.
 
-| Bunu yapmak için | Bunu söyle |
+| Bunu yapmak için | Bunu söyleyin |
 | - | - |
-| Başlangıç menüsünü açma | "Başla" |
-| Şunu seçin: | Bakış imlecini getirmek için "seç" diyelim. Ardından, imleci seçmek istediğiniz şeyin üzerine konumlandırmak için kafanızı döndürerek tekrar "seç" diyelim. |
-| Kullanılabilir konuşma komutlarını görme | "Ne diyoruz?" |
+| Başlangıç menüsünü açma | "Başlangıç 'a git" |
+| Şunu seçin: | Gaze imlecini getirmek için "Seç" deyin. Ardından, imleci seçmek istediğiniz şey üzerine konumlandırmak için kafanızı açın ve "Seç" i yeniden söyleyin. |
+| Bkz. kullanılabilir konuşma komutları | "Ne söyleyebilirim?" |
 
- [Daha fazla ses komutuna ve HoloLens ile konuşma kullanma yöntemlerine bakın](hololens-cortana.md)
+ [HoloLens ile konuşmayı kullanma hakkında daha fazla ses komutu ve yolu görün](hololens-cortana.md)
 
-## <a name="swipe-to-type"></a>Türe doğru çekme
+## <a name="swipe-to-type"></a>Türe göre kaydırın
 
-Bazı müşteriler, kullanmak istediğiniz sözcüğün şeklini değiştirerek sanal klavyelerde daha hızlı "yazma" yapmayı bulabilir. Windows [Holographic sürüm 21H1'de](hololens-release-notes.md#windows-holographic-version-21h1)artık tek bir sözcük kaydırmak için parmak ucunu holografik klavyenin düzlemi üzerinden kaydırarak, sözcüğün şeklini çekerek ve ardından klavyenin düzlemi üzerinden parmak ucunu çekebilirsiniz. Sözcüklerin arasındaki klavyeden parmaklarınızı kaldırarak boşluk çubuğuna basmanıza gerek kalmadan sözcükleri takip etmek için kaydırabilirsiniz. Klavyede parmak hareketini takip eden bir çekme izi görüyorsanız özelliğin çalıştığını bilirsiniz.
+Bazı müşteriler, yazmak istediğiniz sözcüğün şeklini çekerek sanal klavyelerde "tür" i daha hızlı bulur. artık [Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1)ile, parmaklarınızın ucunu Holographic klavye düzlesiyle geçirerek bir kerede tek bir sözcük çekerek, sözcüğün şeklini çekerek ve sonra, parmağınızın ucunu klavyenin düzleminden çizerek. Sözcüklerinizi sözcükler arasındaki klavyeden kaldırarak, daha sonra da boşluk çubuğuna basmanız gerekmeden, izleme sözcüklerini çekerek bulabilirsiniz. Parmağınızın klavye üzerindeki hareketini takip eden bir çekme izi görürseniz özelliğin çalıştığını bilirsiniz.
 
-Lütfen unutmayın; bu özelliğin kullanımı ve ana kaynak kullanımı, parmak izinize karşı direnç hissetmeyebilirsiniz (cep telefonu görüntüsü aksine) holografik klavyenin yapısı nedeniyle karmaşık olabilir. Bu özelliği genel sürüm için değerlendiriyor, bu nedenle geri bildiriminiz önemlidir; özelliği yararlı bularak veya yapıcı geri bildirimleriniz olsun lütfen lütfen [Geri Bildirim Merkezi.](hololens-feedback.md)
+Lütfen bu özelliğin, parmağınızla (cep telefonundan farklı olarak) bir holographic klavye için herhangi bir zaman duymayın. Bu özelliği genel yayın için değerlendiriyoruz, bu nedenle geri bildiriminiz önemlidir; özelliği yararlı bul, ya da bir bildirimde bulunan geri bildiriminiz varsa lütfen [Geri Bildirim Hub](hololens-feedback.md)'ı aracılığıyla bize bildirin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tebrikler! HoloLens 2'ye hazır mısınız?
+Tebrikler! HoloLens 2 ' kullanmaya hazırsınız!
 
-Artık HoloLens 2'nizi özel ihtiyaçlarını karşılayacak şekilde yapılandırebilirsiniz.  Denemek istediğiniz diğer şeyler şunlardır:
+artık HoloLens 2 ' 'nizi, özel gereksinimlerinizi karşılayacak şekilde yapılandırabilirsiniz.  Denemek isteyebileceğiniz diğer şeyler şunlardır:
 
-- [Fare ve klavye gibi Bluetooth cihazlarını bağlama](hololens-connect-devices.md)
-- [Mağazadan uygulama yükleme](holographic-store-apps.md)
-- [HoloLens'inizi diğer kişilerle paylaşma](hololens-multiple-users.md)
+- [Bluetooth cihazlarını fare ve klavye gibi bağlama](hololens-connect-devices.md)
+- [Mağaza 'dan uygulama yükleme](holographic-store-apps.md)
+- [HoloLens diğer kişilerle paylaşma](hololens-multiple-users.md)
 
 > [!TIP]
-> Hologram [Tasarlama uygulamasını](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd?rtc=1&activetab=pivot:overviewtab) deneyin.
+> Hologramlar uygulamayı [tasarlamayı](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd?rtc=1&activetab=pivot:overviewtab) deneyin.
 
-BIR IT yöneticisiyseniz, [HoloLens](hololens-requirements.md) 2'yi kuruluşa dağıtmayla ilgili yardım için Yaygın Dağıtım Senaryoları'ni gözden geçirebilirsiniz.
+bt yöneticisiyseniz, kuruluşunuzda HoloLens 2 ' yi dağıtmaya yönelik yardım için [ortak dağıtım senaryolarını](hololens-requirements.md) gözden geçirin.

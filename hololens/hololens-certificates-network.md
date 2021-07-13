@@ -1,6 +1,6 @@
 ---
-title: HoloLens 2 için sertifikaları ve ağ profillerini hazırlama
-description: HoloLens 2 karma gerçeklik cihazlarından ağ sertifikalarını yapılandırmayı, kullanmayı, dağıtmayı ve sorunlarını gidermeyi öğrenin.
+title: HoloLens 2 için sertifikaları ve ağ profillerini hazırlayın
+description: HoloLens 2 karma gerçeklik cihazlarındaki ağ için sertifikaları yapılandırma, kullanma, dağıtma ve sorun giderme hakkında bilgi edinin.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -13,58 +13,58 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: eedb451847757eba02465d7ded4494b9712497ff
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 62eedd0c05bb23f11a4e17a97b4ab5441a2931cf
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111380158"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639276"
 ---
-# <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>HoloLens 2 için sertifikaları ve ağ profillerini hazırlama
+# <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>HoloLens 2 için sertifikaları ve ağ profillerini hazırlayın
 
-Sertifika tabanlı kimlik doğrulaması, HoloLens 2 kullanan müşteriler için yaygın bir gereksinimdir. Wi-Fi'a erişmek, VPN çözümlerine bağlanmak veya kuruluş içi kaynaklara erişmek için sertifikalar gerekli olabilir.
+sertifika tabanlı kimlik doğrulaması, HoloLens 2 kullanan müşteriler için ortak bir gereksinimdir. Wi-Fi ' e erişmek, VPN çözümlerine bağlanmak veya kuruluşunuzdaki iç kaynaklara erişmek için sertifikalara ihtiyaç duyabilirsiniz.
 
-HoloLens 2 cihazları genellikle Azure Active Directory (Azure AD) ile birleştirilip Intune veya diğer MDM sağlayıcısı tarafından yönetiliyor olduğundan, bu sertifikaları MDM çözümünüzle tümleştirilmiş bir Basit Sertifika Kayıt Protokolü (SCEP) veya Ortak Anahtar Şifreleme Standardı (PKCS) sertifika altyapısı kullanarak dağıtmanız gerekir. 
+HoloLens 2 cihaz genellikle Azure Active Directory (Azure AD) ve ıntune veya diğer MDM sağlayıcısı tarafından yönetilen olduğundan, MDM çözümünüz ile tümleştirilmiş bir Basit Sertifika Kayıt Protokolü (SCEP) veya ortak anahtar şifreleme standardı (PKCS) sertifika altyapısını kullanarak bu tür sertifikaları dağıtmanız gerekir. 
 
 >[!NOTE]
-> MDM sağlayıcınız yoksa, [Windows Yapılandırma](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) Tasarımcısı'nda veya [](https://docs.microsoft.com/hololens/hololens-provisioning#steps-for-creating-provisioning-packages) Sertifika Yöneticisi'nde bir sağlama [](https://docs.microsoft.com/hololens/certificate-manager) paketi aracılığıyla Ayarlar > Update & Security > Sertifika Yöneticisi'ne gidip sertifikaları **dağıtabilirsiniz.**
+> MDM sağlayıcınız yoksa, [Windows Configuration Designer](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) 'daki bir [sağlama paketiyle](hololens-provisioning.md#steps-for-creating-provisioning-packages) veya [sertifika yöneticisi](certificate-manager.md) aracılığıyla sertifikaları dağıtmaya devam edebilirsiniz **Ayarlar > & güvenlik > sertifika yöneticisi**' ne gidin.
 
 ## <a name="certificate-requirements"></a>Sertifika gereksinimleri
-Sertifikaları bir SCEP veya PKCS altyapısı aracılığıyla dağıtmak için kök sertifikalar gerekir. HoloLens 2 cihazlarınıza kök sertifikaların da dağıtılmasını gerektiren diğer uygulamalar ve hizmetler vardır. 
+Kök sertifikalar, bir SCEP veya PKCS altyapısı aracılığıyla sertifika dağıtmak için gereklidir. kuruluşunuzdaki diğer uygulamalar ve hizmetler, HoloLens 2 cihazlarınıza da kök sertifikaların dağıtılmasını gerektirebilir. 
 
-## <a name="wi-fi-connectivity-requirements"></a>Wi-Fi bağlantı gereksinimleri
-Bir cihazın kurumsal ağınız için gerekli yapılandırma Wi-Fi otomatik olarak sağlanacak şekilde izin vermek için bir Wi-Fi profili gerekir. Bu profilleri cihazlarınıza dağıtmak için Intune veya diğer MDM sağlayıcısını yapılandırabilirsiniz. Ağ güvenliğiniz için cihazların yerel etki alanına dahil olması gerekirse, HoloLens 2 cihazlarıyla uyumlu olduğundan emin olmak için Wi-Fi ağ altyapınızı da değerlendirmeniz gerekir (HoloLens 2 cihazları yalnızca Azure AD'ye katılmış).
+## <a name="wi-fi-connectivity-requirements"></a>Wi-Fi bağlantısı gereksinimleri
+Bir cihazın kurumsal ağınız için gereken Wi-Fi yapılandırmasıyla otomatik olarak sağlanmasını sağlamak için bir Wi-Fi yapılandırma profiline ihtiyacınız olacaktır. Intune veya diğer MDM sağlayıcısını, bu profilleri cihazlarınıza dağıtmak üzere yapılandırabilirsiniz. ağ güvenliği cihazların yerel etki alanının bir parçası olmasını gerektiriyorsa, HoloLens 2 cihazlarıyla uyumlu olduğundan emin olmak için Wi-Fi ağ altyapınızı değerlendirmeniz gerekebilir (HoloLens 2 cihaz yalnızca Azure AD 'ye katılmış olmalıdır).
 
-## <a name="deploy-certificate-infrastructure"></a>Sertifika altyapısını dağıtma
-SCEP veya PKCS altyapısı zaten yoksa, bir tane hazırlamamız gerekir. Kimlik doğrulaması için SCEP veya PKCS sertifikalarının kullanımını desteklemek için, Intune bir sertifika bağlayıcısı [kullanımını gerektirir.](https://docs.microsoft.com/mem/intune/protect/certificate-connectors)
+## <a name="deploy-certificate-infrastructure"></a>Sertifika altyapısını dağıt
+Hiçbir SCEP veya PKCS altyapısı zaten mevcut değilse, bir tane hazırlamanız gerekir. Kimlik doğrulaması için SCEP veya PKCS sertifikalarının kullanımını desteklemek için Intune 'un bir [sertifika Bağlayıcısı](/mem/intune/protect/certificate-connectors)kullanması gerekir.
 
 > [!NOTE]
-> SCEP'yi bir Microsoft CA ile birlikte kullanırken, Ağ Cihazı Kayıt Hizmeti [(NDES) yapılandırmalı](https://docs.microsoft.com/mem/intune/protect/certificates-scep-configure#set-up-ndes)
+> Bir Microsoft CA ile SCEP kullandığınızda, [ağ cihazı kayıt hizmeti 'ni (NDES)](/mem/intune/protect/certificates-scep-configure#set-up-ndes) da yapılandırmanız gerekir.
 
-Daha fazla bilgi için, [bkz. Configure a certificate profile for your devices in Microsoft Intune.](https://docs.microsoft.com/intune/certificates-configure)
+Daha fazla bilgi için, bkz [. Microsoft Intune cihazlarınız için sertifika profili yapılandırma.](/intune/certificates-configure)
 
 ## <a name="deploy-certificates-and-wi-fivpn-profile"></a>Sertifikaları ve Wi-Fi/VPN profilini dağıtma
 Sertifikaları ve profilleri dağıtmak için şu adımları izleyin:
-1.  Kök ve Ara sertifikaların her biri için bir profil oluşturun (bkz. [Güvenilen sertifika profilleri oluşturma.)](https://docs.microsoft.com/intune/protect/certificates-configure#create-trusted-certificate-profiles) Bu profillerin her biri DD/AA/YYYY biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır. **Sona erme tarihi olmayan sertifika profilleri dağıtılacaktır.**
-1.  Her SCEP veya PKCS sertifikası için bir profil oluşturun (bkz. SCEP sertifika profili oluşturma veya [PKCS](https://docs.microsoft.com/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)sertifika profili oluşturma) Bu profillerden her biri DD/AA/YYYY biçiminde sona erme tarihi içeren bir açıklamaya sahip olmalıdır. **Sona erme tarihi olmayan sertifika profilleri dağıtılacaktır.**
+1.  Kök ve ara sertifikaların her biri için bir profil oluşturun (bkz. [Güvenilen sertifika profilleri oluşturma](/intune/protect/certificates-configure#create-trusted-certificate-profiles).) Bu profillerin her biri GG/AA/YYYY biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır. **Süre sonu tarihi olmayan sertifika profilleri dağıtılmaz.**
+1.  Her SCEP veya PKCS sertifikaları için bir profil oluşturun (bkz. [SCEP sertifika profili oluşturma veya PKCS sertifika profili oluşturma](/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) Bu profillerin her bırı, gg/aa/yyyy biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır. **Süre sonu tarihi olmayan sertifika profilleri dağıtılmaz.**
 
     > [!NOTE]
-    > HoloLens 2'nin paylaşılan bir cihaz, cihaz başına birden çok kullanıcı olduğu kabul edilir ve mümkün olduğunca cihaz kimlik doğrulaması için Kullanıcı sertifikaları yerine Cihaz sertifikaları Wi-Fi önerilir
+    > HoloLens 2 çok sayıda paylaşılan cihaz, cihaz başına birden çok kullanıcı olarak değerlendirildiğinden, mümkün olduğunda Wi-Fi kimlik doğrulaması için kullanıcı sertifikaları yerine cihaz sertifikalarını dağıtmanız önerilir
 
-3.  Her kurumsal ağ için bir profil Wi-Fi (bkz. Ağ ve Windows 10 cihazlar [için Wi-Fi ayarları).](https://docs.microsoft.com/intune/wi-fi-settings-windows) 
+3.  her kurumsal Wi-Fi ağı için bir profil oluşturun (bkz. [Windows 10 ve üzeri cihazlar için Wi-Fi ayarları](/intune/wi-fi-settings-windows)). 
     > [!NOTE]
-    > Mümkün olduğunca Wi-Fi [kullanıcı](https://docs.microsoft.com/mem/intune/configuration/device-profile-assign) grupları yerine Cihaz gruplarına atanmalarını öneririz. 
+    > Wi-Fi profilinin mümkün olduğunda Kullanıcı grupları yerine cihaz gruplarına [atanması](/mem/intune/configuration/device-profile-assign) önerilir. 
 
     > [!TIP]
-    > Ayrıca, kurumsal ağ Wi-Fi bir Windows 10 profili dışarı aktarabilirsiniz. Bu dışarı aktarma, tüm geçerli ayarlarla bir XML dosyası oluşturur. Ardından bu dosyayı Intune'a aktarın ve HoloLens 2 Wi-Fi profil olarak kullanın. Bkz. [Windows cihazları Wi-Fi dışarı ve içeri aktarma.](https://docs.microsoft.com/mem/intune/configuration/wi-fi-settings-import-windows-8-1)
+    > ayrıca, çalışan bir Wi-Fi profilini şirket ağınızdaki bir Windows 10 bilgisayardan dışarı aktarabilirsiniz. Bu dışarı aktarma, tüm geçerli ayarlarla bir XML dosyası oluşturur. ardından, bu dosyayı ıntune 'a aktarın ve HoloLens 2 cihazlarınızın Wi-Fi profili olarak kullanın. bkz [. Windows cihazlar için Wi-Fi ayarlarını dışa ve içeri aktarma.](/mem/intune/configuration/wi-fi-settings-import-windows-8-1)
 
-4.  Her şirket VPN'i için bir profil [oluşturun (Intune kullanarak VPN Windows 10 ve Windows Holographic cihaz ayarlarına bakın).](https://docs.microsoft.com/intune/vpn-settings-windows-10)
+4.  her kurumsal VPN için bir profil oluşturun ( [ıntune kullanarak vpn bağlantıları eklemek için bkz. Windows 10 ve Windows Holographic cihaz ayarları](/intune/vpn-settings-windows-10)).
 
 ## <a name="troubleshooting-certificates"></a>Sertifika sorunlarını giderme
 
-Bir sertifikanın doğru şekilde dağıtıldığından emin olmak için [](certificate-manager.md) lütfen sertifikanın mevcut olduğunu doğrulamak için cihazda Sertifika Yöneticisi'ni kullanın.  
+Bir sertifikanın doğru şekilde dağıtıldığını doğrulamanız gereken olayda Lütfen sertifikanızın mevcut olduğunu doğrulamak için cihazdaki [sertifika yöneticisini](certificate-manager.md) kullanın.  
 
 >[!WARNING]
-> Sertifika Yöneticisi'nde MDM tarafından dağıtılan sertifikaları görüntüleyebizle birlikte, bunları Sertifika Yöneticisi'nde kaldıramazsiniz. Bunları MDM aracılığıyla kaldırmanız gerekir.
+> MDM ile dağıtılan sertifikaları sertifika yöneticisi 'nde görüntüleyebilseniz de, bunları Sertifika Yöneticisi 'nde kaldıramazsınız. MDM aracılığıyla kaldırmanız gerekir.
 
 

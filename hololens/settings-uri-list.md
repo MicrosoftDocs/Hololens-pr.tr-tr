@@ -1,11 +1,11 @@
 ---
-title: Sayfa ayarları görünürlüğü
-description: PageVisibilityList için desteklenen URI 'Ler listemize ve HoloLens karma gerçeklik cihazlarındaki kılavuza göre güncel tutun.
+title: Sayfa Ayarlar Görünürlüğü
+description: PageVisibilityList için desteklenen URI'ler listemizi ve karma gerçeklik cihazlarının HoloLens takip edin.
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2020
 ms.topic: article
-keywords: Hololens, Hololens 2, atanan erişim, bilgi noktası, ayarlar sayfası
+keywords: hololens, hololens 2, atanan erişim, bilgi noktası, ayarlar sayfası
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -13,156 +13,180 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d28994d911532a940d82756aa45609571ee80ac3
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 5ac3ff27085fd2f7c5bc1de0e461079a673bbb23
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924341"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637175"
 ---
-# <a name="page-settings-visibility"></a>Sayfa ayarları görünürlüğü
+# <a name="page-settings-visibility"></a>Sayfa Ayarlar Görünürlüğü
 
-HoloLens cihazlarına yönelik yönetilebilir özelliklerden biri, ayarlar uygulaması içinde görülen sayfaları kısıtlamak için [Settings/PageVisibilityList ilkesini](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) kullanmaktır. PageVisibilityList, BT yöneticilerinin sistem ayarları uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesine ya da belirtilen bu hariç tüm sayfalarda yapılmasına izin veren bir ilkedir.
+HoloLens cihazları için yönetilebilir özelliklerden biri, [Ayarlar/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) ilkesi kullanarak Ayarlar uygulama içinde görülen sayfaları kısıtlamaktır. PageVisibilityList, IT Yöneticilerinin System Ayarlar uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesini veya belirtilenler dışında tüm sayfalar için bunu yapmalarını sağlayan bir ilkedir.
 
 > [!NOTE]
-> Bu özellik, HoloLens 2 cihazları için yalnızca [Windows holographic, sürüm 20H2](hololens-release-notes.md#windows-holographic-version-20h2) veya üzeri sürümlerde ayrılabilir. Lütfen için kullanmayı planladığınız cihazların güncelleştirildiğinden emin olun.
+> Bu özellik yalnızca [Holographic 20H2 veya Windows 20H2](hololens-release-notes.md#windows-holographic-version-20h2) veya daha yeni sürümlerde kullanılabilir HoloLens 2 cihazlar için kullanılabilir. Bunu kullanmayı niyetli cihazların güncelleştirilmiş olduğundan emin olun.
 
-Aşağıdaki örnek, yalnızca, sırasıyla URI "MS-Settings: Network-WiFi" ve "MS-Settings: Bluetooth" içeren hakkında ve Bluetooth sayfalarına erişime izin veren bir ilkeyi göstermektedir:
+
+## <a name="examples"></a>Örnekler
+Sayfalar, yayımlanmış URI'lerin kısaltılmış bir sürümüyle tanımlanır ve bu sürüm URI'den "ms-settings:" ön eki eksi değerdir.
+
+Aşağıdaki örnekte, sırasıyla "network-wifi" ve "bluetooth" URI'sine sahip olan yalnızca hakkında ve Bluetooth sayfalarına erişime izin verecek bir ilke yer almaktadır:
 - `showonly:network-wifi;network-proxy;bluetooth`
 
-Bunu bir sağlama paketi aracılığıyla ayarlamak için:
+Aşağıdaki örnek, işletim sistemi sıfırlama sayfasını gizleyen bir ilkeyi göstermektedir:
+- `hide:reset`
 
-1. Windows yapılandırma Tasarımcısı 'nda paketinizi oluştururken **ilkeler > ayarlar > PageVisibilityList** ' e gidin
+
+## <a name="deploying-this-policy-via-intune"></a>Bu ilkeyi Intune aracılığıyla dağıtma
+
+Bunlar, Intune'a sağlanmalıdır yapılandırma değerleridir:
+
+- **Ad:** Profil için yöneticinin tercih ettiği görünen ad.
+- **OMA-URI:** Kapsamı dahil olmak üzere ayar sayfasının tam [URI'sı.](/windows/client-management/mdm/policy-configuration-service-provider) Bu sayfada yer alan bu örnekler kapsamı `./Device` kullanıyor.
+- **Değer:** Yalnızca belirtilen sayfaları gizlemeyi veya göstermeyi *belirten* bir dize değeri. Olası değerler ve `hide:<pagename>` `showonly:<pagename>` değerleridir. 
+ 
+Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
+
+1. Özel ilke **oluşturun.**
+1. **OMA-URI'yi ayarlarken** tam kapsamlı URI'yi girin. Örneğin: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
+1. Veri seçiminizi şu şekilde seçin: **Dize**
+1. Değer **belirtirken** yukarıdaki kılavuzu kullanın. Örneğin: **`showonly:network-wifi;network-proxy;bluetooth`** veya **`hide:reset`** 
+> [!IMPORTANT]
+> Özel cihaz yapılandırmasını cihazın içinde olması amaçlanan bir gruba atadığınızdan emin olun. Bu adım gerçekleştirilene kadar ilke uygulanır ancak uygulanmaz.
+
+Intune HoloLens cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [MDM](hololens-mdm-configure.md) yapılandırmasını yapılandırma.
+
+
+## <a name="deploying-this-policy-via-a-provisioning-package"></a>Bu ilkeyi Sağlama Paketi aracılığıyla dağıtma
+
+Bunlar, Yapılandırma Tasarımcısı'nda Windows değerleridir:
+
+**Değer:** Yalnızca belirtilen sayfaları gizlemeyi veya göstermeyi *belirten* bir dize değeri. Olası değerler ve `hide:<pagename>` `showonly:<pagename>` değerleridir. Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
+
+
+1. Windows Configuration Designer'da paketinizi oluştururken İlkeler > Ayarlar > **PageVisibilityList'e gidin**
 1. Dizeyi girin: **`showonly:network-wifi;network-proxy;bluetooth`**
-1. Sağlama paketinizi dışarı aktarın.
-1. Paketi cihazınıza uygulayın.
-Bir sağlama paketini oluşturma ve uygulama hakkında tam Ayrıntılar için [Bu sayfayı](hololens-provisioning.md)ziyaret edin.
+1. Sağlama Paketinizi dışarı aktarın.
+1. Paketi cihazınıza uygulama.
+Sağlama paketi oluşturma ve uygulama hakkında ayrıntılı bilgi için HoloLens [sayfasını ziyaret edin.](hololens-provisioning.md)
 
-Bu, OMA-URI kullanılarak Intune aracılığıyla yapılabilir:
 
-1. Özel bir **ilke** oluşturun.
-1. OMA-URI ayarlandığında dizeyi kullanın: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
-1. Veri çekmeyi seçerken şunu seçin: **dize**
-1. Değer şunu yazarken kullanın: **`showonly:network-wifi;network-proxy;bluetooth`**
-1. Özel cihaz yapılandırmasını cihazın içinde olmasını amaçladığı bir gruba atadığınızdan emin olun.
-
-Intune grupları ve cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [HoloLens MDM yapılandırması](hololens-mdm-configure.md) .
-
-Seçtiğiniz yöntemden bağımsız olarak cihazınız artık değişiklikleri almalıdır ve kullanıcılar aşağıdaki ayarlar uygulamasıyla sunulacaktır.
+Seçilen yöntemden bağımsız olarak cihazınızın artık değişiklikleri alması gerekir ve kullanıcılara aşağıdaki Ayarlar sunulacaktır.
 
 ![Ayarlar uygulamasında değiştirilen etkin saatlerin ekran görüntüsü](images/hololens-page-visibility-list.jpg)
 
-Kendi sayfa seçiminizi göstermek veya gizlemek üzere ayarlar uygulama sayfalarını yapılandırmak için, HoloLens 'te bulunan ayarlar URI 'Lere göz atın.
+Uygulama sayfalarını Ayarlar kendi sayfa seçiminizi gösterecek veya gizleyişini yapılandıracak şekilde yapılandırmak için, Ayarlar URL'leri HoloLens.
 
-## <a name="settings-uris"></a>Ayarlar URI 'Leri
+## <a name="settings-uris"></a>Ayarlar Urı
 
-HoloLens cihazlarının ve Windows 10 cihazlarının Ayarlar uygulamasında farklı bir sayfa seçimi vardır. Bu sayfada yalnızca HoloLens 'te var olan ayarları bulacaksınız.
+HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar vardır. Bu sayfada yalnızca bu sayfada mevcut olan ayarları HoloLens.
 
 ### <a name="accounts"></a>Hesaplar
 | Ayarlar sayfası           | URI                                            |
 |-------------------------|------------------------------------------------|
-| İş veya okul hesabına erişme | `ms-settings:workplace`                         |
-| Iris kaydı       | `ms-settings:signinoptions-launchirisenrollment` |
-| Oturum açma seçenekleri         | ` ms-settings:signinoptions `                   |
+| İş veya okul hesabına erişme | `workplace`                         |
+| Iris Kaydı       | `signinoptions-launchirisenrollment` |
+| Oturum Açma Seçenekleri         | ` signinoptions `                   |
 
 ### <a name="apps"></a>Uygulamalar
 | Ayarlar sayfası | URI                          |
 |---------------|------------------------------|
-| Uygulamalar & Özellikler<sup>2</sup>     | `ms-settings:appsfeatures` <br> |
-| Uygulamalar & Özellikler > Gelişmiş Seçenekler <sup>2</sup>     | `ms-settings::appsfeatures-app` <br> |
-| Uygulamalar & Özellikler > çevrimdışı haritalar <sup>2</sup>     | `ms-settings:maps-maps` <br> |
-| Uygulamalar & Özellikler > çevrimdışı haritalar > Indirme haritaları <sup>2</sup>     | `ms-settings:maps-downloadmaps` <br> |
+| Uygulamalar & özellikleri <sup>2</sup>     | `appsfeatures` <br> |
+| Gelişmiş & <sup>2</sup> > uygulamalar ve özellikler     | `appsfeatures-app` <br> |
+| Çevrimdışı & <sup>2</sup> > uygulamalar Haritalar özellikleri     | `maps-maps` <br> |
+| Çevrimdışı & haritalar > 2 Haritalar > uygulamalar <sup>ve özellikler</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Cihazlar
 | Ayarlar sayfası | URI                          |
 |---------------|------------------------------|
-| Bluetooth     | `ms-settings:bluetooth` <br> `ms-settings:connecteddevices` |
-| Fare <sup>2</sup>      | `ms-settings:mouse` <br>  |
-| USB <sup>2</sup>      | `ms-settings:usb` <br>  |
+| Bluetooth     | `bluetooth` <br> `connecteddevices` |
+| Fare <sup>2</sup>      | `mouse` <br>  |
+| USB <sup>2</sup>      | `usb` <br>  |
 
 ### <a name="privacy"></a>Gizlilik
 | Ayarlar sayfası            | URI                                             |
 |--------------------------|-------------------------------------------------|
-| Hesap bilgileri             | `ms-settings:privacy-accountinfo`              |
-| Uygulama Tanılama        | `ms-settings:privacy-appdiagnostics`              |
-| Arka plan uygulamaları        | `ms-settings:privacy-backgroundapps`              |
-| Takvim                 | `ms-settings:privacy-calendar`                    |
-| Arama geçmişi             | `ms-settings:privacy-callhistory`                 |
-| Kamera                   | `ms-settings:privacy-webcam`                      |
-| Kişiler                 | `ms-settings:privacy-contacts`                    |
-| Tanılama & geri bildirimi | `ms-settings:privacy-feedback`                    |
-| Belgeler                | `ms-settings:privacy-documents`                   |
-| E-posta                    | `ms-settings:privacy-email`                       |
-| Dosya sistemi              | `ms-settings:privacy-broadfilesystemaccess`       |
-| Genel <sup>2</sup>             | `ms-settings:privacy-general`       |
-| Mürekkeple & yazma kişiselleştirme <sup>2</sup>             | `ms-settings:privacy-speechtyping`       |
-| Konum                 | `ms-settings:privacy-location`                    |
-| Mesajlaşma                | `ms-settings:privacy-messaging`                   |
-| Mikrofon               | `ms-settings:privacy-microphone`                  |
-| Hareket <sup>2</sup>               | `ms-settings:privacy-motion`                  |
-| Bildirimler            | `ms-settings:privacy-notifications`               |
-| Diğer cihazlar            | `ms-settings:privacy-customdevices`               |
-| Resimler                 | `ms-settings:privacy-pictures`                    |
-| Radyolara                   | `ms-settings:privacy-radios`                      |
-| Ekran görüntüsü kenarlıkları <sup>2</sup>             | `ms-settings:privacy-graphicsCaptureWithoutBorder`       |
-| Ekran görüntüleri ve uygulamalar <sup>2</sup>             | `ms-settings:privacy-graphicsCaptureProgrammatic`       |
-| Konuşma                   | `ms-settings:privacy-speech`                      |
-| Görevler                    | `ms-settings:privacy-tasks`                       |
-| Kullanıcı hareketleri           | `ms-settings:privacy-backgroundspatialperception` |
-| Videolar                   | `ms-settings:privacy-videos`                      |
-| Ses etkinleştirme       | `ms-settings:privacy-voiceactivation`             |
+| Hesap Bilgileri             | `privacy-accountinfo`              |
+| Uygulama Tanılama        | `privacy-appdiagnostics`              |
+| Arka Plan Uygulamaları        | `privacy-backgroundapps`              |
+| Takvim                 | `privacy-calendar`                    |
+| Çağrı Geçmişi             | `privacy-callhistory`                 |
+| Kamera                   | `privacy-webcam`                      |
+| Kişiler                 | `privacy-contacts`                    |
+| Tanılama ve & Geri Bildirimi | `privacy-feedback`                    |
+| Belgeler                | `privacy-documents`                   |
+| E-posta                    | `privacy-email`                       |
+| Dosya sistemi              | `privacy-broadfilesystemaccess`       |
+| Genel <sup>2</sup>             | `privacy-general`       |
+| Mürekkep & kişiselleştirme <sup>2</sup>             | `privacy-speechtyping`       |
+| Konum                 | `privacy-location`                    |
+| Mesajlaşma                | `privacy-messaging`                   |
+| Mikrofon               | `privacy-microphone`                  |
+| Hareket <sup>2</sup>               | `privacy-motion`                  |
+| Bildirimler            | `privacy-notifications`               |
+| Diğer cihazlar            | `privacy-customdevices`               |
+| Resimler                 | `privacy-pictures`                    |
+| Radyo                   | `privacy-radios`                      |
+| Ekran görüntüsü <sup>kenarlıklar 2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
+| Ekran görüntüleri ve uygulamalar <sup>2</sup>             | `privacy-graphicsCaptureProgrammatic`       |
+| Konuşma                   | `privacy-speech`                      |
+| Görevler                    | `privacy-tasks`                       |
+| Kullanıcı hareketleri           | `privacy-backgroundspatialperception` |
+| Videolar                   | `privacy-videos`                      |
+| Ses Etkinleştirme       | `privacy-voiceactivation`             |
 
 ### <a name="network--internet"></a>Ağ ve İnternet
 | Ayarlar sayfası | URI                              |
 |---------------|----------------------------------|
-| Uçak modu <sup>2</sup> | `ms-settings:network-airplanemode`        |
-| Ara sunucu | `ms-settings:network-proxy`        |
-| VPN   | `ms-settings:network-vpn`          |
-| Wi-Fi  | `ms-settings:network-wifi`<br>`ms-settings:network-wifisettings`<br>`ms-settings:network-status`<br>`ms-settings:wifi-provisioning`    |
+| Uçak Modu <sup>2</sup> | `network-airplanemode`        |
+| Ara sunucu | `network-proxy`        |
+| VPN   | `network-vpn`          |
+| Wi-Fi  | `network-wifi`<br>`network-wifisettings`<br>`network-status`<br>`wifi-provisioning`    |
 
 
 
 ### <a name="system"></a>Sistem
 | Ayarlar sayfası      | URI                                |
 |--------------------|------------------------------------|
-| Pil <sup>2</sup>           | `ms-settings:batterysaver`<br>|
-| Pil <sup>2</sup>           | `ms-settings:batterysaver-settings`<br>|
-| Renkler             | `ms-settings:colors`<br>`ms-settings:personalization-colors` |
-| Hologragram <sup>2</sup>  |  `ms-settings:holograms`  |
-| Ayarlama <sup>2</sup> |  `ms-settings:calibration` |
-| Bildirimler & eylemler  | `ms-settings:notifications`          |
-| Paylaşılan deneyimler | `ms-settings:crossdevice` 
-| Ses <sup>2</sup>           | `ms-settings:sound`<br>|
-| Ses > uygulama hacmi ve cihaz tercihi <sup>2</sup>           | `ms-settings:apps-volume`<br>|
-| Ses > ses cihazlarını yönetme <sup>2</sup>           | `ms-settings:sound-devices`<br>|
-| Depolama            | `ms-settings:storagesense`           |
-| Depolama > depolama algılaması yapılandırma <sup>2</sup>           | `ms-settings:storagepolicies`<br>|
+| Pil <sup>2</sup>           | `batterysaver`<br>|
+| Pil <sup>2</sup>           | `batterysaver-settings`<br>|
+| Renkler             | `colors`<br>`personalization-colors` |
+| Hologramlar <sup>2</sup>  |  `holograms`  |
+| <sup>2. Ayar</sup> |  `calibration` |
+| Bildirimler & eylemleri  | `notifications`          |
+| Paylaşılan Deneyimler | `crossdevice` 
+| Ses <sup>2</sup>           | `sound`<br>|
+| Ses > Uygulama birimi ve cihaz tercihi <sup>2</sup>           | `apps-volume`<br>|
+| Ses > Ses cihazlarını yönetme <sup>2</sup>           | `sound-devices`<br>|
+| Depolama            | `storagesense`           |
+| Depolama > Sense <sup>2 Depolama yi Yapılandırma</sup>           | `storagepolicies`<br>|
 
 ### <a name="time--language"></a>Saat & Dili
 | Ayarlar sayfası | URI                                           |
 |---------------|-----------------------------------------------|
-| Tarih & saat <sup>2</sup> | `ms-settings:dateandtime`                  |
-| Klavye <sup>2</sup> | `ms-settings:keyboard`                  |
-| Dil <sup>2</sup> | `ms-settings:language`                  |
-| Dil <sup>2</sup> | `ms-settings:regionlanguage-languageoptions`                  |
-| Dil      | `ms-settings:regionlanguage`<br>`ms-settings:regionlanguage-adddisplaylanguage`<br>`ms-settings:regionlanguage-setdisplaylanguage` |
-| Region        | `ms-settings:regionformatting`                  |
+| Tarih & saat <sup>2</sup> | `dateandtime`                  |
+| Klavye <sup>2</sup> | `keyboard`                  |
+| Dil <sup>2</sup> | `language`                  |
+| Dil <sup>2</sup> | `regionlanguage-languageoptions`                  |
+| Dil      | `regionlanguage`<br>`regionlanguage-adddisplaylanguage`<br>`regionlanguage-setdisplaylanguage` |
+| Region        | `regionformatting`                  |
 
 ### <a name="update--security"></a>Güncelleştirme & Güvenliği
 | Ayarlar sayfası                         | URI                                       |
 |---------------------------------------|-------------------------------------------|
-| Gelişmiş Seçenekler                    | `ms-settings:windowsupdate-options`         |
-| Kurtarma & <sup>2'ye sıfırlama</sup>      | `ms-settings:reset`         |
-| Windows Insider Programı               | `ms-settings:windowsinsider` <br>`ms-settings:windowsinsider-optin`          |
-| Windows Update                        | `ms-settings:windowsupdate`<br> `ms-settings:windowsupdate-activehours`  <br> `ms-settings:windowsupdate-history` <br> `ms-settings:windowsupdate-optionalupdates` <br><sup>1</sup>`ms-settings:windowsupdate-options`<br><sup>1</sup>`ms-settings:windowsupdate-restartoptions` |
-| Windows Update - Güncelleştirmeleri denetler | `ms-settings:windowsupdate-action`          |
+| Gelişmiş Seçenekler                    | `windowsupdate-options`         |
+| Kurtarma & <sup>2'ye sıfırlama</sup>      | `reset`         |
+| Windows Insider Programı               | `windowsinsider` <br>`windowsinsider-optin`          |
+| Windows Update                        | `windowsupdate`<br> `windowsupdate-activehours`  <br> `windowsupdate-history` <br> `windowsupdate-optionalupdates` <br><sup>1</sup>`windowsupdate-options`<br><sup>1</sup>`windowsupdate-restartoptions` |
+| Windows Güncelleştirme - Güncelleştirmeleri denetler | `windowsupdate-action`          |
 
 
-- <sup>1</sup> - Windows Holographic sürüm 21H1'den önceki sürümlerde, aşağıdaki iki URL sizi Gelişmiş seçenekler veya Seçenekler **sayfalarına** **gerçekten de** götürmektedir; yalnızca ana sayfayı Windows Update gösterir.
-  -  ms-settings:windowsupdate-options
-  -  ms-settings:windowsupdate-restartoptions
+- <sup>1</sup> - Windows Holographic sürüm 21H1'den önceki sürümler için, aşağıdaki iki URL sizi Gelişmiş seçenekler veya Seçenekler **sayfalarına** **gerçekten** götürmektedir; Yalnızca Güncelleştirme sayfasındaki ana Windows gösterir.
+  -  windowsupdate-options
+  -  windowsupdate-restartoptions
 
-- <sup>2</sup> - Windows Holographic 21H1 veya üzerinde kullanılabilir.
+- <sup>2</sup> - Windows Holographic 21H1 veya daha üst bir üzerinde kullanılabilir.
 
 
-Ayarlar URL'Windows 10 tam listesi için lütfen başlatma ayarları [belgelerini ziyaret](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.
+URL'lerin Windows 10 Ayarlar için lütfen başlatma ayarları [belgelerini ziyaret](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.

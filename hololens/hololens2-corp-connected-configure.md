@@ -1,7 +1,7 @@
 ---
-title: Dağıtım Kılavuzu - Dynamics 365 Kılavuzları ile kurumsal bağlantılı HoloLens 2 - Yapılandırma
-description: Dynamics 365 Kılavuzları ile kurumsal bir Bağlı ağ üzerinden HoloLens 2 cihazları dağıtmak için yapılandırmaları ayarlamayı öğrenin.
-keywords: HoloLens, yönetim, kurumsal bağlantılı, Dynamics 365 Kılavuzları, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
+title: dağıtım kılavuzu-Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-yapılandır
+description: Dynamics 365 kılavuzlarıyla kurumsal bağlı bir ağ üzerinden HoloLens 2 cihaz dağıtmak üzere yapılandırmaların nasıl ayarlanacağını öğrenin.
+keywords: HoloLens, yönetim, kurumsal bağlı, Dynamics 365 kılavuzlar, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -14,172 +14,172 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 939efc28a0c3255cc9a38af3cd8dd9aa8fc2ac98
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 9457acd2f53d0d3127d6c68d620b660f6e09866d
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111378956"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637090"
 ---
-# <a name="configure---corporate-connected-guide"></a>Yapılandırma - Kurumsal Bağlantılı Kılavuz
+# <a name="configure---corporate-connected-guide"></a>Yapılandırma-kurumsal bağlantılı kılavuz
 
-## <a name="azure-users-and-groups"></a>Azure Kullanıcıları ve Grupları
+## <a name="azure-users-and-groups"></a>Azure kullanıcıları ve grupları
 
-Bu uzantıya göre Azure ve Intune, yapılandırmaları ve lisansları atamaya yardımcı olmak için kullanıcıları ve grupları kullanır. Bu dağıtım akışını doğrulamanın ve bir kılavuz hazır olup olmadığını kontrol etmek için bir&#39;hesabı gerektirebilirsiniz.
+Bu uzantıya göre Azure ve Intune, yapılandırmaların ve lisansların atanmasını sağlamaya yardımcı olmak için kullanıcıları ve grupları kullanır. Bu dağıtım akışını doğrulamak ve bir Kılavuzu yazıp çalıştıracağınızı kontrol etmek için bir kullanıcı hesabı gerekiyor&#39;.
 
-Özellikle lisans atamak için tek bir kullanıcı grubu kullanabiliriz.
+Lisansları atamak için özel olarak tek bir Kullanıcı grubu yapabiliriz.
 
-Henüz&#39;bir kullanıcı grubunda iki Azure AD hesabına erişiminiz yoksa; hızlı başlangıç kılavuzları şu şekildedir:
+&#39;t ' den daha önce kullanabileceğiniz bir kullanıcı grubunda iki Azure AD hesabına erişiminiz varsa; hızlı başlangıç kılavuzlarından bazıları şunlardır:
 
-- [Kullanıcı oluşturma](https://docs.microsoft.com/mem/intune/fundamentals/quickstart-create-user)
-- [Grup oluşturma](https://docs.microsoft.com/mem/intune/fundamentals/quickstart-create-group)
-- [Gruba kullanıcı ekleme](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – Grup oluşturmak için oluşturulan kullanıcıları ekleme
-- [Azure AD'yi Bir Kullanıcı Grubunun cihazlara katılmasına izin](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) verecek şekilde yapılandırma – Yeni kullanıcı grubunun cihazları Azure AD'ye kaydetme izni olduğundan emin olun
+- [Kullanıcı oluşturma](/mem/intune/fundamentals/quickstart-create-user)
+- [Grup oluşturma](/mem/intune/fundamentals/quickstart-create-group)
+- [Gruba kullanıcı ekleme](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – grup oluşturmak için oluşturulan kullanıcılar ekleme
+- [Azure AD 'yi bir Kullanıcı grubunun cihazlara katılmasına izin verecek şekilde yapılandırma](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) -Yeni Kullanıcı grubunun CIHAZLARı Azure AD 'ye kaydetme izni olduğundan emin olun
 
-## <a name="auto-enrollment-on-hololens-2"></a>HoloLens 2'de Otomatik Kayıt
+## <a name="auto-enrollment-on-hololens-2"></a>HoloLens 2 ' de otomatik kayıt
 
-Sorunsuz ve sorunsuz bir deneyim elde etmek için HoloLens 2 cihazları için Azure Active Directory Join (AADJ) ve Intune'a Otomatik Kayıt'ı ayarlama yoludur. Bu, kullanıcıların OOBE sırasında kuruluş oturum açma kimlik bilgilerini girişlerini ve Azure AD'ye otomatik olarak kaydolmalarını ve cihazı MDM'ye kaydetmelerini sağlar.
+sorunsuz ve sorunsuz bir deneyim sunmak için, HoloLens 2 cihazları için Azure Active Directory katılması (asıfatı) ve ıntune 'a otomatik kayıt ayarlamak için gidilecek yol. Bu, kullanıcıların, OOBE sırasında kuruluş oturum açma kimlik bilgilerini girmesini ve Azure AD 'ye otomatik olarak kaydolmasını ve cihazı MDM 'ye kaydetmelerini sağlar.
 
-Microsoft [Endpoint Manager](https://endpoint.microsoft.com/#home)kullanarak, Premium deneme sürümü al'ı seçene kadar hizmetleri seçerek birkaç sayfada gezinebilirsiniz. Otomatik Kayıt P1 için Azure Active Directory Premium 1 ve 2'nin yeterli olduğunu fark olabilir. Intune'ı seçerek otomatik kayıt için kullanıcı kapsamını ve daha önce oluşturulmuş olan grubu seçerek.
+[Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)kullanarak hizmetler ' i seçip Premium deneme sürümü ' nü seçene kadar birkaç sayfaya gidebilirsiniz. otomatik kayıt P1 'nin yeterli olduğunu Azure Active Directory Premium 1 ve 2 ' nin olduğunu fark edebilirsiniz. Intune 'U seçip otomatik kayıt için Kullanıcı kapsamını seçebilir ve daha önce oluşturulmuş olan grubu seçebilirsiniz.
 
-Tüm ayrıntılar ve adımlar için [Intune için otomatik kaydı etkinleştirme kılavuzunu okuyun.](https://docs.microsoft.com/mem/intune/enrollment/quickstart-setup-auto-enrollment)
+Tam ayrıntılar ve adımlar için, [Intune için otomatik kaydı etkinleştirme](/mem/intune/enrollment/quickstart-setup-auto-enrollment)kılavuzunu okuyun.
 
-## <a name="corporate-wi-fi-connectivity"></a>Kurumsal Wi-Fi Bağlantısı
+## <a name="corporate-wi-fi-connectivity"></a>Şirket Wi-Fi bağlantısı
 
-Şirket Wi-Fi bağlantıları genellikle HoloLens 2 kullanan müşteriler için sertifika tabanlı kimlik doğrulaması gerektirir. MDM çözümünüzle tümleştirilmiş bir Basit Sertifika Kayıt Protokolü (SCEP) veya Ortak Anahtar Şifreleme Standardı (PKCS) sertifika altyapısı kullanarak bu sertifikaları dağıtmanız gerekir. Intune'Wi-Fi profilleri, sertifikaları ve ara sunucu ayarlarını dağıtmak, son kullanıcılar için sorunsuz bir deneyim oluşturur.
+şirket Wi-Fi bağlantıları, genellikle HoloLens 2 kullanan müşteriler için sertifika tabanlı kimlik doğrulaması gerektirir. MDM çözümünüz ile tümleştirilmiş bir Basit Sertifika Kayıt Protokolü (SCEP) veya ortak anahtar şifreleme standardı (PKCS) sertifika altyapısını kullanarak bu tür sertifikaları dağıtmanız gerekir. Wi-Fi profillerini dağıtmak için Intune kullanma, sertifikalar ve proxy ayarları, son kullanıcılar için sorunsuz bir deneyim oluşturur.
  
-### <a name="deploy-certificates-and-wi-fi-profiles"></a>Sertifikaları ve Wi-Fi dağıtma
+### <a name="deploy-certificates-and-wi-fi-profiles"></a>Sertifikaları ve Wi-Fi profillerini dağıtma
 
-Sertifikaları ve profilleri Microsoft Endpoint Manager dağıtmak için şu adımları izleyin:
+sertifikaları ve profilleri Microsoft Endpoint Manager aracılığıyla dağıtmak için şu adımları izleyin:
 
-1. Kök ve Ara sertifikaların her biri için bir profil oluşturun (bkz. [Güvenilen sertifika profilleri oluşturma).](https://docs.microsoft.com/intune/protect/certificates-configure#create-trusted-certificate-profiles) Bu profillerin her biri DD/AA/YYYY biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır. 
-
-    > [!CAUTION]
-    > **Sona erme tarihi olmayan sertifika profilleri dağıtılacaktır.**
-
-2.  Her SCEP veya PKCS sertifikası için bir profil oluşturun (bkz. SCEP sertifika profili oluşturma veya [PKCS](https://docs.microsoft.com/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)sertifika profili oluşturma) Bu profillerden her biri DD/AA/YYYY biçiminde sona erme tarihi içeren bir açıklamaya sahip olmalıdır. 
+1. Kök ve ara sertifikaların her biri için bir profil oluşturun (bkz. [Güvenilen sertifika profilleri oluşturma](/intune/protect/certificates-configure#create-trusted-certificate-profiles)). Bu profillerin her biri GG/AA/YYYY biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır.
 
     > [!CAUTION]
-    > **Sona erme tarihi olmayan sertifika profilleri dağıtılacaktır.**
+    > **Süre sonu tarihi olmayan sertifika profilleri dağıtılmaz**.
+
+2. Her SCEP veya PKCS sertifikaları için bir profil oluşturun (bkz. [SCEP sertifika profili oluşturma veya PKCS sertifika profili oluşturma](/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) Bu profillerin her bırı, gg/aa/yyyy biçiminde bir sona erme tarihi içeren bir açıklamaya sahip olmalıdır.
+
+    > [!CAUTION]
+    > **Süre sonu tarihi olmayan sertifika profilleri dağıtılmaz.**
 
     > [!Note]
-    > HoloLens 2'nin paylaşılan bir cihaz (cihaz başına birden çok kullanıcı) olduğu kabul edilir ve mümkün olduğunca Cihaz kimlik doğrulaması için Kullanıcı sertifikaları yerine Cihaz Wi-Fi dağıtmanız önerilir.
+    > HoloLens 2 ' nin paylaşılan bir cihaz olması, yani cihaz başına birden çok kullanıcı olması halinde, mümkün olduğunda Wi-Fi kimlik doğrulaması için kullanıcı sertifikaları yerine cihaz sertifikalarının dağıtılması önerilir.
 
-3.  Kurumsal ağ ağınız için bir profil oluşturun (Wi-Fi ve sonraki cihazlar için [Wi-Fi Windows 10 ayarlarına bakın).](https://docs.microsoft.com/intune/wi-fi-settings-windows) Uygulama Wi-Fi içinde, kuruluş içindeki ara sunucu ayarlarını kullanmayı seçebilirsiniz.
- 
+3. şirket Wi-Fi ağınız için bir profil oluşturun (bkz. [Windows 10 ve üzeri cihazlar için Wi-Fi ayarları](/intune/wi-fi-settings-windows)). Wi-Fi profilinizde, kuruluşunuzun içindeki proxy ayarlarını kullanmayı seçebilirsiniz.
+
     Seçenekleriniz şunlardır:
     - **Hiçbiri**: Hiçbir ara sunucu ayarı yapılandırılmaz.
-    - **El ile yapılandırma:** **Proxy sunucusu IP adresini ve Bağlantı** noktası numarasını **girin.**
-    - **Otomatik olarak yapılandırma:** Proxy otomatik yapılandırma (PAC) betiğine işaret alan URL'yi girin. Örneğin, *http://proxy.contoso.com/proxy.pac* girin.
+    - **El ile yapılandır**: **proxy sunucusu IP adresini** ve **bağlantı noktası numarasını** girin.
+    - **Otomatik olarak Yapılandır**: proxy otomatik yapılandırma (PAC) betiğine işaret eden URL 'yi girin. Örneğin, girin *http://proxy.contoso.com/proxy.pac* .
 
-    PAC dosyaları hakkında daha fazla bilgi için bkz. [Proxy Otomatik Yapılandırma (PAC) dosyası](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Microsoft olmayan bir site açar).
+    PAC dosyaları hakkında daha fazla bilgi için bkz. [proxy otomatik yapılandırma (PAC) dosyası](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Microsoft dışı bir site açar).
  
     > [!Note]
-    > Mümkün olduğunca Wi-Fi kullanıcı grupları yerine Cihaz gruplarına atanmalarını öneririz.
+    > Wi-Fi profilinin mümkün olduğunda Kullanıcı grupları yerine cihaz gruplarına atanması önerilir.
      
     > [!Tip]
-    > Ayrıca, kurumsal ağ Wi-Fi bir Windows 10 profili dışarı aktarabilirsiniz. Bu dışarı aktarma, tüm geçerli ayarlarla bir XML dosyası oluşturur. Ardından bu dosyayı Intune'a aktarın ve HoloLens 2 Wi-Fi profil olarak kullanın. Bkz. [Windows cihazları için Wi-Fi ayarlarını dışarı ve içeri aktarma](https://docs.microsoft.com/mem/intune/configuration/wi-fi-settings-import-windows-8-1).
+    > ayrıca, çalışan bir Wi-Fi profilini şirket ağınızdaki bir Windows 10 bilgisayardan dışarı aktarabilirsiniz. Bu dışarı aktarma, tüm geçerli ayarlarla bir XML dosyası oluşturur. ardından, bu dosyayı ıntune 'a aktarın ve HoloLens 2 cihazlarınızın Wi-Fi profili olarak kullanın. Bkz. [Windows cihazları için Wi-Fi ayarlarını dışarı ve içeri aktarma](/mem/intune/configuration/wi-fi-settings-import-windows-8-1).
 
-1.  [Cihaz](https://docs.microsoft.com/mem/intune/configuration/device-profile-assign) profillerini HoloLens cihaz grubuna attayabilirsiniz.
+1.  cihaz profillerini HoloLens cihaz grubuna [atayın](/mem/intune/configuration/device-profile-assign) .
 
-2.  [](https://docs.microsoft.com/mem/intune/configuration/device-profile-monitor) Intune'da cihaz profillerini izleme.
+2.  Intune 'da cihaz profillerini [izleyin](/mem/intune/configuration/device-profile-monitor) .
 
-Profillerle ilgili sorunlar [Wi-Fi, Intune'da Wi-Fi sorun giderme'ye bakın.](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles)
+Wi-Fi profillerle ilgili sorunlar varsa, referans [Intune 'da Wi-Fi cihaz yapılandırma profillerinde sorun giderin](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).
 
-## <a name="troubleshooting-external-internet-access-when-corp-connected"></a>Corp Bağlıyken Dış İnternet Erişimi Sorunlarını Giderme
-Hizmetler, ayarlanmış bir Ara Sunucudan devam etmeye çalışırken güvenlik duvarı üzerinden bağlanmayı deneyebilir. Bu sorunları gidermek için güvenlik duvarı kurallarınıza uç nokta özellikleri listesini ekleyebilirsiniz.
+## <a name="troubleshooting-external-internet-access-when-corp-connected"></a>Corp bağlıyken dış Internet erişimi sorunlarını giderme
+Hizmetler bir küme proxy 'Sine gitmediğinden, güvenlik duvarından bağlanmayı deneyebilir. Bu sorunları gidermek için güvenlik duvarı kurallarınız için uç nokta özelliklerinin bir listesini ekleyebilirsiniz.
 
-Güvenlik duvarı bağlantı noktaları engellenmişse HoloLens için bazı [yaygın uç](https://docs.microsoft.com/hololens/hololens-offline) noktaları etkinleştirin.
+Güvenlik Duvarı bağlantı noktalarında engellendiyse, HoloLens için bazı ortak [uç noktaları](/hololens/hololens-offline) etkinleştirin.
 
-Kılavuzlara özgü bağlantı noktalarını da etkinleştirabilirsiniz: İnternet'e erişim için gereken [URL'ler Microsoft Dynamics CRM Online.](https://support.microsoft.com/help/2655102/internet-accessible-urls-required-for-connectivity-to-microsoft-dynami)
+Ayrıca, kılavuzların belirli bağlantı noktalarını da etkinleştirebilirsiniz: [Microsoft Dynamics CRM Online bağlantı Için Internet 'e erişilebilir URL 'ler gereklidir](https://support.microsoft.com/help/2655102/internet-accessible-urls-required-for-connectivity-to-microsoft-dynami).
 
 ## <a name="app-deployment"></a>Uygulama Dağıtımı
 
-MDM aracılığıyla LOB uygulaması dağıtmak, kolayca ölçeklenebilir ve oluşturulan bir gruba kayıttan sonra cihazlarınıza otomatik olarak dağıtılabilir bir yöntemdir.
+MDM aracılığıyla LOB uygulaması dağıtmak, kolayca ölçeklendirilebilir ve oluşturulan bir grupta kayıt sırasında cihazlarınıza otomatik olarak dağıtılabilecek bir yöntemdir.
 
-Hala Uygulamalarınızı geliştiriyorsanız veya henüz bir uygulamanız yoksa MRTK örnekleri hub'ını örnek bir uygulama kullanabilirsiniz. Bu örnek uygulama kullanıma hazırdır ve Unity veya Visual Studio. [MRTK Örnekleri Örnek uygulamasını indirin.](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App)
+Uygulamalarınızı hala geliştirdiyseniz veya henüz bir tane yoksa, MRTK örnekleri hub 'ının örnek bir uygulamasını kullanabilirsiniz. Bu örnek uygulama kullanıma hazırdır ve Unity ya da Visual Studio kullanımını gerektirmez. [MRTK örnekleri örnek uygulamasını indirin](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App).
 
-Kendi uygulamalarınızı kullanmayı tercih ediyorsanız veya Karma Gerçeklik için uygulama geliştirmeyle ilgileniyorsanız Karma Gerçeklik geliştirici belgelerimizi [gözden geçirebilirsiniz.](https://docs.microsoft.com/windows/mixed-reality/design/design)
+Kendi uygulamanızı kullanmayı tercih ediyorsanız veya karma gerçeklik için uygulama geliştirmeye ilgileniyorsanız, [karma gerçeklik geliştirici belgelerimizi](/windows/mixed-reality/design/design)gözden geçirebilirsiniz.
 
 > [!NOTE]
-> HoloLens cihazları için Sistem Gereksinimleri, uygulama derlemesi mimarisini temel almaktadır. HoloLens 2 cihazları ARM mimarisini kullanır. Uygulamalarınızı Visual Studio cihaz için doğru mimariyi seçtikten ve gerekli bağımlılıkları dahil edin.
+> HoloLens cihazların sistem gereksinimleri, uygulama yapısı mimarisine dayalıdır. HoloLens 2 cihaz ARM mimarisini kullanır. Visual Studio ' de uygulamalarınızı oluştururken, cihaz için doğru mimariyi seçtiğinizden ve gerekli tüm bağımlılıkları içerdiğinden emin olun.
 
 > [!IMPORTANT]
-> LOB uygulamalarını dağıtırken, sertifikayı Intune'a yüklemek ve uygulamayı kullanmayı amaçlanan gruba atamak da önemlidir, yoksa düzgün yüklenmez.
+> LOB uygulamalarını dağıttığınızda, sertifikayı Intune 'a yüklemek ve uygulamayı kullanmak üzere tasarlanan aynı gruba atamak önemlidir, aksi olarak da düzgün yüklenmez.
 
-### <a name="upload-and-assign-the-app"></a>Uygulamayı Karşıya Yükleme ve Atama
+### <a name="upload-and-assign-the-app"></a>Upload ve uygulamayı atama
 
-1. [MEM yönetim merkezine gidin.](https://endpoint.microsoft.com/#home)
+1. [Mem yönetim merkezine](https://endpoint.microsoft.com/#home)gidin.
 
-2. Uygulamalar **ve**  ->  **Tüm uygulamalar** ve **+ Ekle düğmesini** seçin.
+2. **Uygulamalar**  ->  **tüm uygulamalar** ' ı seçin ve **+ Ekle** düğmesini seçin.
 
-3. Diğer altında İş **yeri uygulaması'nın altında öğesini seçin.** **Seç'e tıklayın.**
+3. Diğer altında, **Iş kolu uygulaması**' nı seçin. **Seç**' e tıklayın.
 
-4. Uygulama paketi dosyasını seçin, bu sizin APPXBUNDLE dosyanızdır veya bu örnekte uygulama _MRTK Örnekleri \_ Hub'ı 2.4.2.0 \_ arm \_ Master.appxbundle'dır._
+4. Uygulama paketi dosyasını seçin, bu, APPXPAKET dosyanız veya bu örnekte uygulamanın _mrtk örnekleri Merkez \_ 2.4.2.0 \_ ARM \_ Master. AppxPackage_ olduğu durumdur.
 
-5. Eksik bağımlılıklar size bildirilecek. Bu durumda, _Microsoft.VCLibs.ARM.14.00.appx dosyasını karşıya yüklememiz gerekir._ Bir dosya seçin **altında bu dosyayı ara.**
+5. Eksik bağımlılıklardan haberdar olursunuz. Bu durumda, _Microsoft. VCLibs. ARM. 14.00. appx_' i karşıya yüklememiz gerekir. **Bir dosya seçin** altında bulun.
 
 6. Tamam'ı seçin.
 
-7. Sonraki ekranda gerekli alanlar otomatik olarak doldurulur. **İleri**’yi seçin.
+7. Sonraki ekranda, gerekli alanlar otomatik olarak doldurulur. **İleri**’yi seçin.
 
-8. Bu uygulamanın grup için gerekli olması için Gerekli'nin altına daha önce oluşturduğunuz grubu ekleyin. Bu, uygulamanın gruptaki kayıtlı cihazlara otomatik olarak indirilir. **İleri**’yi seçin.
+8. Gerekli ' ın altında, bu uygulamayı grup için gerekli hale getirmek için önceden oluşturulmuş grubumuzu ekleyin. Bu, uygulamanın gruptaki kayıtlı cihazlara otomatik olarak indirilmesine neden olur. **İleri**’yi seçin.
 
 9. **Oluştur**’u seçin.
 
-Daha fazla bilgi [edinin: Uygulamaları Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-deploy#assign-an-app)
+Daha fazla bilgi: [Microsoft Intune gruplara uygulama atama](/mem/intune/apps/apps-deploy#assign-an-app)
 
-## <a name="setup-guides-application-licenses-dataverse-and-authoring"></a>Kurulum Kılavuzları: Uygulama lisansları, veri tersi ve yazma
+## <a name="setup-guides-application-licenses-dataverse-and-authoring"></a>Kurulum Kılavuzu: uygulama lisansları, veri deposu ve yazma
 
-Dynamics 365 Kılavuzlarını kullanmak için bazı hazırlıklar yapmak gerekir. Hazırlamamız gereken üç alan vardır; kullanıcılar, veri tersi ve kılavuzların kendileri.
+Dynamics 365 kılavuzlarını kullanabilmeniz için bazı hazırlıklar yapmanız gerekir. Hazırlanmanız gereken üç alan vardır; Kullanıcılar, veri deposu ve kılavuzlar kendi kendilerine ait.
 
 ### <a name="users-and-application-licenses"></a>Kullanıcılar ve uygulama lisansları
 
-Bir kişinin Kılavuzları kullanması için, daha önce bu kılavuzda ayarlayılan bir Azure AD hesabı kullanmaları gerekir.
+Birinin kılavuzlarını kullanabilmesi için, bu kılavuzda daha önce ayarlamış olduğumuz bir Azure AD hesabı kullanmaları gerekir.
 
-Ayrıca oluşturduğunuz kullanıcıya Dynamics 365 Kılavuzları lisansı da atamanız gerekir. Bunu aşağıdaki [Microsoft 365 yönetim merkezi.](https://admin.microsoft.com/AdminPortal/Home) Ayrıca lisansı birincil Azure Hesabınıza da attayın.
+Ayrıca, oluşturduğunuz kullanıcıya Dynamics 365 kılavuzlar lisansı atamanız gerekir. bunu [Microsoft 365 yönetim merkezi](https://admin.microsoft.com/AdminPortal/Home). Ayrıca, lisansı birincil Azure hesabınıza atayın.
 
-Uygulama [lisanslarını uygulamayla](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one#assign-the-dynamics-365-guides-license-to-user-accounts) ilgili adım adım yönergeler için bu kısa kılavuzu resimlerle izleyin.
+Uygulama lisanslarını uygulamaya yönelik adım adım yönergeler için resimlerle birlikte [Bu kısa kılavuzu](/dynamics365/mixed-reality/guides/setup-step-one#assign-the-dynamics-365-guides-license-to-user-accounts) izleyin.
 
-### <a name="set-up-the-dataverse"></a>Veri Ters'i ayarlama
+### <a name="set-up-the-dataverse"></a>Veri deposu ayarlama
 
-Bir üretim [ortamı ayarlamak için iki](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#set-up-a-production-environment-for-purchased-licenses-only) önkolu karşılamanız gerekir. Sistem Yöneticisi [**rolüne**](https://docs.microsoft.com/power-platform/admin/database-security) sahip  olmalı ve Power Apps [**lisansına**](https://docs.microsoft.com/power-platform/admin/signup-question-and-answer) (veya Power Apps içeren Dynamics [**365 Kılavuzları**](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one) lisansına) sahip Power Apps gerekir. Bu kılavuzu takip ettiyseniz Azure AD'i oluşturduktan sonra Sistem Yöneticisi için rol gereksinimlerini karşılarsunuz. Ayrıca önceki adımda bir Kılavuz Lisansı da atatık.
+[Üretim ortamı ayarlamak](/dynamics365/mixed-reality/guides/setup-step-two#set-up-a-production-environment-for-purchased-licenses-only) için iki önkoşulu karşılamanız gerekir. [**sistem yöneticisi**](/power-platform/admin/database-security) rolüne sahip olmanız gerekir **ve** bir [**Power Apps lisansınızın**](/power-platform/admin/signup-question-and-answer) olması gerekir (ya da bir Power Apps lisansı içeren [**Dynamics 365 kılavuz lisansına**](/dynamics365/mixed-reality/guides/setup-step-one) sahip olmanız gerekir). Bu kılavuzun ardından Azure AD 'yi oluşturduktan sonra, Sistem Yöneticisi için rol gereksinimlerini karşılamanız gerekir. Ayrıca, önceki adımda bir kılavuzlar lisansı atandık.
 
-Bir Microsoft [Dataverse ortamı oluşturmak için bu kılavuzda:](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two)
+Bu kılavuzda, [bir Microsoft Dataverse ortamı oluşturmak](/dynamics365/mixed-reality/guides/setup-step-two)için:
 
-1. başlangıç olarak yeni [Power Platform yönetim merkezi](https://admin.powerplatform.microsoft.com/environments) ortamını oluşturma.
-2. Yeni **Ortam'ı oluştururken,** Tür **olarak&#39;'ı** **seçersiniz.**
-3. Bu ortam için veritabanı **oluştur'a geçiş yapmak önemlidir.**  seçeneğini Evet olarak **belirleyin.**
-4. Veritabanı  **ekle iletişim**  kutusunda  **Dynamics 365 uygulamalarını etkinleştir seçeneğini Evet**  olarak  **ayarlayın.**
+1. [Power Platform Yönetim merkezini](https://admin.powerplatform.microsoft.com/environments) kullanarak başlayın ve yeni bir ortam oluşturun.
+2. **Yeni ortam** oluştururken&#39;için **Üretim**' ı  seçin.
+3. **Bu ortam için veritabanı oluştur ' a** geçiş yapmanız önemlidir mi?  seçeneğini  **Evet** yapın.
+4. **Veritabanı Ekle** iletişim kutusunda, **Dynamics 365 uygulamalarını etkinleştir** seçeneğini Evet olarak ayarlayın **.**
 
-Veri deposundaki öğelerin en büyük dosya boyutunu arttırmak isteyeceksiniz. En büyük dosya boyutunu artırmak kılavuzlarınızın daha sonra kullanacağınız daha büyük 3B modellerini veya video dosyalarını karşıya yüklemenizi sağlar. [Karşıya yükleme dosya boyutu üst sınırını değiştirmek için](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)kısa bir kılavuz izleyin.
+Veriverse'inizin en büyük dosya boyutunu artırmak gerekir. Maksimum dosya boyutunu artırmak, kılavuzlarda daha sonra kullanmak üzere daha büyük 3 boyutlu modelleri veya video dosyalarını karşıya yüklemenizi sağlar. En büyük karşıya yükleme [dosyası boyutunu değiştirmek için kısa bir kılavuzu izleyin.](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)
 
-Son olarak, [çözümü yükleyip yapılandırmanız](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution)gerekir. [Power Platform Yönetim merkezinde](https://admin.powerplatform.microsoft.com/environments) **kaynaklar** \& gt; öğesini seçin.  **Dynamics 365 uygulamaları**, listeden **Dynamics 365 kılavuzlarını** seçin ve ardından **Install**' ı seçin.  
+Son olarak, çözümünü yüklemeniz [ve yapılandırmamız gerekir.](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution) Dosyanın [Power Platform yönetim merkezi](https://admin.powerplatform.microsoft.com/environments)Kaynaklar  \& gt; öğesini seçin.  **Dynamics 365 uygulamaları,** listeden **Dynamics 365 Kılavuzları'ı** ve ardından Yükle'yi **seçin.**  
 
-Uygulamaları kullanabilmeniz için önce [Kılavuzlar güvenlik rolü eklemeniz](https://docs.microsoft.com/dynamics365/mixed-reality/guides/assign-role) gerekir.
+Uygulamaları [kullanamadan önce bir](/dynamics365/mixed-reality/guides/assign-role) Kılavuz güvenlik rolü eklemeniz gerekir.
 
-### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Yazma yoluyla bilgisayarınızda bir test kılavuzu oluşturma
+### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Yazma aracılığıyla bilgisayarınızda test kılavuzu oluşturma
 
-Kılavuzlar oluştururken her zaman bilgisayarınızda her zaman başlamanız gerekir. Adımları oluşturma, modeller seçme ve kılavuzun bağlantısının nasıl yapılacağı. Bu, daha sonra, HoloLens cihazınızda yazma modunda kılavuzunuz için içerik yerleştirilerek izlenir. Bu kılavuzun amaçları doğrultusunda, en az adım ve modellerle kısa bir test Kılavuzu yapmayı öneririz.
+Kılavuzlar oluştururken her zaman bilgisayarınızda başlarsınız. Adımları oluşturma, modelleri seçme ve kılavuzun yer bağlantısı oluşturma. Bunu takip eden, kılavuzun içeriğini daha sonra HoloLens cihazınıza yazma moduna yerleştireceğiz. Bu kılavuzun amaçları doğrultusunda, minimum adımlara ve modellere sahip kısa bir test kılavuzu yapmanızı öneririz.
 
-Kılavuzlar için yazma hakkında öğrenmeye başlamak isterseniz [yazma genel bakışı](https://docs.microsoft.com/dynamics365/mixed-reality/guides/authoring-overview)ile buradan başlayın. Ya da hızlı bir izlemeye genel bakış almak için bu kısa videoyu izleyin.
+Kılavuzlar için yazma hakkında bilgi öğrenmeye başlamak için, yazmaya genel bakış ile [buradan başlayabilirsiniz.](/dynamics365/mixed-reality/guides/authoring-overview) Veya hızlı bir genel bakış elde etmek için bu kısa videoyu izleyin.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EC24dMlAy90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="optional-kiosk-mode"></a>İsteğe bağlı: bilgi noktası modu
+## <a name="optional-kiosk-mode"></a>İsteğe bağlı: Bilgi noktası modu
 
-Bilgi noktası modu, bir BT Yöneticisi tarafından yalnızca tek bir uygulamayı veya uygulama seçimini göstermek üzere başlangıç menüsünün Kullanıcı arabirimini yapılandırabilmesine olanak tanıyan bir moddur. Bir bilgi noktası belirli kullanıcılara, gruplara veya cihaz düzeyine de uygulanabilir; Bazı durumlarda, bazı kullanıcıların, düzenli Başlat menüsüne erişmesine izin verirken bazı kullanıcıları da bilgi noktasından hariç tutun.
+Bilgi noktası modu, BIR IT Yöneticisinin başlat menüsünün kullanıcı arabirimini yalnızca tek bir uygulamayı veya uygulama seçimini gösterecek şekilde yapılandırmasını sağlar. Bilgi noktası belirli kullanıcılara, gruplara veya cihaz düzeyinde de uygulanabilir; ve bazı durumlarda belirli kullanıcıları Bilgi Noktası'nın dışında bırakarak normal başlat menüsüne erişmelerini sekleyebilirsiniz.
 
-Bilgi noktası modu, hem kapsam hem de yapılandırma ve ayrıca, bilgi noktası HoloLens 'e dağıtma yöntemlerinden birçok farklı değişkene sahiptir. Tüm bu değişkenler nedeniyle, bilgi noktası modu Bu kılavuz için _isteğe bağlı_ olarak kalmadı ve yeniden ziyaret edilmezler. Kullanılabilir uygulamaları kullanıcılarla kısıtlamak ya da daha fazla bilgi edinmek ve daha fazla bilgi almak istiyorsanız, [HoloLens 'i bir bilgi noktası olarak ayarlamayı](https://docs.microsoft.com/hololens/hololens-kiosk)öğrenmekten çekinmeyin.
+Bilgi noktası modu hem kapsam hem de yapılandırmalar için ayarlanabiliyor ve Bilgi Noktası'nın bilgi noktası dağıtım yöntemleri gibi birçok farklı değişkene HoloLens. Tüm bu değişkenler nedeniyle Bilgi Noktası modu bu kılavuz için _isteğe_ bağlı olarak bırakılacaktır ve yeniden gözden geçirilmesi mümkün olmayacaktır. Kullanılabilir uygulamaları kullanıcılarla kısıtlamak veya daha fazla bilgi edinmek için bir işletmeye ihtiyacınız olduğuna inanıyorsanız, bilgi noktası olarak uygulama ayarlama [hakkında HoloLens edinebilirsiniz.](/hololens/hololens-kiosk)
 
 ## <a name="optional-wdac"></a>İsteğe bağlı: WDAC
 
-WDAC, BT yöneticisinin cihazlarını cihazlarda uygulamaların başlatılmasını engelleyecek şekilde yapılandırmasına olanak sağlar. Bu, kullanıcının cihazdaki uygulamaları gizleyen bir kullanıcı arabirimi ile sunulduğu, ancak yine de başlatılabileceği, bilgi noktası modu gibi cihaz kısıtlama yöntemlerinden farklıdır. WDAC uygulandığında, uygulamalar tüm uygulamalar listesinde görünmeye devam eder, ancak bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılabilmesini engeller.
+WDAC, bir IT Yöneticisinin cihazlarda uygulama başlatmayı engellemek için cihazlarını yapılandırmasını sağlar. Bu, kullanıcıya cihaz uygulamalarını gizleten ancak başlatılana bir kullanıcı arabirimi sunulan Bilgi Noktası modu gibi cihaz kısıtlama yöntemlerden farklıdır. WDAC uygulanırken uygulamalar Hala Tüm Uygulamalar listesinde görünür durumdadır, ancak WDAC bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılamalarını durdurur.
 
-Daha fazla bilgi için başvuru, [Microsoft Intune Ile HoloLens 2 cihazlarındaki uygulamalara izin vermek veya bunları engellemek IÇIN WDac ve Windows PowerShell kullanın](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens).
+Daha fazla bilgi için, [wdac ve Windows PowerShell 2](/mem/intune/configuration/custom-profile-hololens)cihaz üzerinde uygulamalara izin vermek veya HoloLens engellemek için WDAC ve Microsoft Intune.
 
-[Windows Defender uygulama denetimi-WDAC](https://docs.microsoft.com/hololens/windows-defender-application-control-wdac)
+[Windows Defender Uygulama Denetimi - WDAC](/hololens/windows-defender-application-control-wdac)
 
 ## <a name="next-step"></a>Sonraki adım 
 > [!div class="nextstepaction"]
-> [Kurumsal bağlı dağıtım-dağıtım](hololens2-corp-connected-deploy.md)
+> [Kurumsal bağlantılı dağıtım - Dağıtma](hololens2-corp-connected-deploy.md)

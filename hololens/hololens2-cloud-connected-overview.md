@@ -1,7 +1,7 @@
 ---
-title: Uzaktan Yardım ile buluta bağlı HoloLens 2 ' ye genel bakış
-description: Dynamics 365 uzaktan yardım 'ı kullanarak, HoloLens 2 cihazlarını buluta bağlı bir ağ üzerinden kaydetmeyi öğrenin.
-keywords: HoloLens, yönetim, bulut bağlantılı, uzaktan yardım, AAD, Azure AD, MDM, mobil cihaz yönetimi
+title: uzaktan yardım ile buluta bağlı HoloLens 2 ' ye genel bakış
+description: Dynamics 365 uzaktan yardım 'ı kullanarak bir buluta bağlı ağ üzerinden HoloLens 2 cihazı kaydetmeyi öğrenin.
+keywords: HoloLens, yönetim, buluta bağlı, uzaktan yardım, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,28 +14,27 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a44247b4afea747e4b75c974fcae344380909989
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 86d36275d5cf1296ca3e9fec90684a188a29f3f0
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112923542"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635135"
 ---
-# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Dağıtım Kılavuzu – uzaktan yardım ile buluta bağlı HoloLens 2 – genel bakış
+# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>dağıtım kılavuzu – buluta bağlı HoloLens 2 uzaktan yardım ile genel bakış
 
-Bu kılavuz, BT uzmanlarının Microsoft HoloLens 2 cihazlarını kendi kuruluşlarına uzaktan yardım ile planlayıp dağıtmalarına yardımcı olur. Bu, çeşitli HoloLens 2 kullanım örnekleri genelinde kuruluşunuza yönelik kavram kanıtı dağıtımları için bir model olarak görev yapar. Kurulum, [senaryoya A 'ya benzer: bulut bağlantı cihazlarına dağıtın](https://docs.microsoft.com/hololens/common-scenarios#scenario-a). 
+bu kılavuz, bt uzmanlarının kuruluşa uzak yardım ile Microsoft HoloLens 2 cihaz planlaması ve dağıtmalarına yardımcı olur. bu, kuruluşunuz için çeşitli HoloLens 2 kullanım durumlarında kavram kanıtı olan dağıtımlar için bir model olarak görev yapar. Kurulum, [senaryoya A 'ya benzer: bulut bağlantı cihazlarına dağıtın](https://docs.microsoft.com/hololens/common-scenarios#scenario-a). 
 
-Kılavuz sırasında cihazlarınızı cihaz yönetimine kaydetme, gerektiğinde lisans uygulama ve son kullanıcılarınızın cihaz kurulumu üzerinde uzaktan yardım 'ı hemen kullanabildiğini doğrulama konusunda ele alınacaktır. Bunu yapmak için, ayarlama ve çalıştırma için gereken önemli parçaların üzerine giderek, HoloLens 2 ile ölçeklendirerek dağıtım elde edilmesi gerekir. Bu kılavuzda başka cihaz kısıtlaması veya yapılandırma uygulanmaz, ancak bu seçenekleri tamamladıktan sonra araştırmanızı öneririz.
+Kılavuz sırasında cihazlarınızı cihaz yönetimine kaydetme, gerektiğinde lisans uygulama ve son kullanıcılarınızın cihaz kurulumu üzerinde uzaktan yardım 'ı hemen kullanabildiğini doğrulama konusunda ele alınacaktır. bunu yapmak için, kurulumu ve çalışmayı sağlamak için gereken önemli parçaların üzerine gidecektir. HoloLens 2 ile uygun ölçekte dağıtım elde edin. Bu kılavuzda başka cihaz kısıtlaması veya yapılandırma uygulanmaz, ancak bu seçenekleri tamamladıktan sonra araştırmanızı öneririz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-HoloLens 2 ' nin dağıtılması için aşağıdaki altyapının olması gerekir. Aksi takdirde, Azure ve Intune kurulumu bu kılavuza dahildir:
+HoloLens 2 ' i dağıtmak için aşağıdaki altyapının olması gerekir. Aksi takdirde, Azure ve Intune kurulumu bu kılavuza dahildir:
 
-- Wi-Fi
-    - Ağlar genellikle Internet ve bulut hizmetlerine açıktır
-- Azure Active Directory (Azure AD) MDM otomatik kaydıyla birleştir ([Azure AD P1 aboneliği](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) gerekir)
-- MDM (Intune) yönetiliyor
-    - Bir veya daha fazla uygulama MDM aracılığıyla dağıtılır.
+Bu, senaryo A 'ya benzer bir şekilde ayarlanmıştır [: bulut Connect cihazlarına dağıtma](/hololens/common-scenarios#scenario-a), bu, birçok kavram kanıtı sağlamak için iyi bir seçenektir. Bu, şunlar dahil olacaktır:
+
+- Wi-Fi ağlar genellikle Internet ve bulut hizmetlerine tamamen açıktır
+- MDM otomatik kayıt ile Azure AD katılımı--MDM (Intune) yönetilen
 - Kullanıcılar kendi şirket hesabıyla oturum açtığında (Azure AD)
     - Cihaz başına tek veya birden çok Kullanıcı desteklenir.
 
@@ -44,7 +43,7 @@ HoloLens 2 ' nin dağıtılması için aşağıdaki altyapının olması gerekir
 
 ## <a name="learn-about-remote-assist"></a>Uzaktan Yardım hakkında bilgi edinin
 
-Uzaktan Yardım, işbirliğine dayalı bakım ve onarım, uzaktan denetleme ve bilgi paylaşımı ve eğitim sağlar. Kullanıcıları farklı rollerdeki ve konumlardaki uzak yardım 'ı kullanarak bir teknisyen, Microsoft ekiplerinde bulunan uzak ortak çalışan ile bağlanabilir. Bu kişiler, aynı konumda&#39;de olsa da sorunları gerçek zamanlı olarak çözümlemek için video, ekran görüntüleri ve ek açıklamaları birleştirebilirler. Uzak ortak çalışanlar, referans görüntülerini, şemaları ve diğer faydalı bilgileri, teknisyen üzerinde çalışırken kaya ve sorunsuz çalışma sırasında Şemasız bir şekilde bir araya girmek için bu kişilerin fiziksel alanı&#39;ekleyebilir.
+Uzaktan Yardım, işbirliğine dayalı bakım ve onarım, uzaktan denetleme ve bilgi paylaşımı ve eğitim sağlar. Kullanıcıları farklı rollerdeki ve konumlardaki uzak yardım 'ı kullanarak bir teknisyen, Microsoft Teams üzerinde uzak ortak çalışan ile bağlanabilir. Bu kişiler, aynı konumda&#39;de olsa da sorunları gerçek zamanlı olarak çözümlemek için video, ekran görüntüleri ve ek açıklamaları birleştirebilirler. Uzak ortak çalışanlar başvuru görüntülerini, şemaları ve diğer faydalı bilgileri, HoloLens üzerinde çalışırken ve ücretsiz olarak çalışırken şemalara başvurabilmesi için&#39;fiziksel alanı ekleyebilir.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -58,9 +57,9 @@ Uzaktan Yardım, işbirliğine dayalı bakım ve onarım, uzaktan denetleme ve b
 - Uzaktan Yardım lisansı
 - Ağ bağlantısı
 
-#### <a name="microsoft-teams-user"></a>Microsoft ekipleri kullanıcısı
+#### <a name="microsoft-teams-user"></a>Microsoft Teams kullanıcı
 
-- Microsoft ekipleri veya [takımlar Freemıum](https://products.office.com/microsoft-teams/free).
+- Microsoft Teams veya [Teams freemıum](https://products.office.com/microsoft-teams/free).
 - Ağ bağlantısı
 
 Bu [çapraz kiracı senaryosunu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)uygulamayı planlıyorsanız, bir bilgi engelleri lisansına ihtiyacınız olabilir. Bir bilgi engeli lisansının gerekip gerekmediğini öğrenmek için [Bu makaleye](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) bakın.

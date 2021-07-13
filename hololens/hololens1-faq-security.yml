@@ -1,0 +1,131 @@
+### YamlMime:FAQ
+metadata:
+  title: Sık sorulan güvenlik soruları
+  description: HoloLens karma gerçeklik cihazları hakkında sık sorulan güvenlik soruları ve yanıtları ile güncel kalın.
+  ms.assetid: bd55ecd1-697a-4b09-8274-48d1499fcb0b
+  author: pawinfie
+  ms.author: pawinfie
+  ms.date: 02/19/2020
+  keywords: hololens, Windows Mixed Reality, security
+  ms.prod: hololens
+  ms.sitesec: library
+  ms.topic: article
+  audience: ITPro
+  ms.localizationpriority: medium
+  ms.custom:
+  - CI 111456
+  - CSSTroubleshooting
+  manager: bradke
+  ms.openlocfilehash: 108f2e4c0aa9af251ecb6bc5185c7803ae51b5f7
+  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/12/2021
+  ms.locfileid: "113637310"
+title: sık sorulan HoloLens (1. genel) güvenlik soruları
+summary: ''
+sections:
+- name: Yoksayıldı
+  questions:
+  - question: >
+      ne düzeyde veri koruma HoloLens 1 teklif veriyor?
+    answer: >
+      * bkz. [HoloLens (1. genel) BitLocker şifrelemesi](hololens1-encryption.md)
+  - question: >
+      Ne tür bir kablosuz kullanılıyor?
+    answer: >
+      * 802.11 ac ve Bluetooth 4,1 LE
+  - question: >
+      Ne tür bir mimari eklendi?  Örneğin: nokta, kafes ya da başka bir şey var mı?
+    answer: >
+      * Wi-Fi, diğer kablosuz erişim noktalarıyla iletişim kurmak için altyapı modunda kullanılabilir.
+
+      * Bluetooth, müşterilerin uygulaması onu veya diğer Bluetooth cihazlarını destekliyorsa, eşi birden çok HoloLens arasında iletişim sağlamak için kullanılabilir.
+  - question: >
+      FCC ID nedir?
+    answer: >
+      * C3K1688
+  - question: >
+      Cihaz üzerinde hangi sıklık aralığı ve kanallar üzerinde çalışır ve yapılandırılabilir?
+    answer: >
+      * Wi-Fi: sıklık aralığı Kullanıcı tarafından yapılandırılabilir değildir ve kullanım ülkesi ' ne bağlıdır. ABD Wi-Fi hem 2,4 GHz (1-11) kanalları hem de 5 GHz (36-64, 100-165) kanalları kullanır.
+
+      * Bluetooth: Bluetooth standart 2,4-2.48 GHz aralığını kullanır.
+  - question: >
+      Cihaz belirli sıklıklara izin verebilir veya bu frekansları engelleyebilir mi?
+    answer: >
+      * Bu, Kullanıcı/cihaz tarafından denetlenebilir değildir.
+  - question: >
+      Hem iletim hem de alma için güç düzeyi nedir? Ayarlanabilir mi? İşlem aralığı nedir?
+    answer: >
+      * Emisyonlarını test standartlarımızın [burada](https://fccid.io/C3K1688)bulabilirsiniz. İşlem aralığı, erişim noktasına ve ortama oldukça bağlıdır, ancak kabaca daha yüksek kaliteli telefonlardan, tabletlere veya bilgisayarlara eşdeğerdir.
+  - question: >
+      Normal işlem için vergi döngüsü/yaşam süresi nedir?
+    answer: >
+      * 2-3 saat etkin kullanım ve en fazla iki haftalık bekleme süresi
+
+      * Pil ömrü kullanılamıyor.
+  - question: >
+      Bir araç Aralık içinde olmadığında iletme ve alma davranışı nedir?
+    answer: >
+      * HoloLens iletim/alma standart Wi-Fi/Bluetooth düzenine uyar. Kendi aralığının kenarından, girişin tamamen bağlantısı kesilene kadar kesik bir bağlantı olduğunu fark edeceksiniz, ancak aralığa geri döndüğünüzde hızlı bir şekilde yeniden bağlanmanız gerekir.
+  - question: >
+      Fit kare başına dağıtım yoğunluğu nedir?
+    answer: >
+      * Bu, Ağ altyapınıza bağımlıdır.
+  - question: >
+      Cihaz altyapıyı istemci olarak kullanabilir miyim?
+    answer: >
+      * Yes
+  - question: >
+      Hangi protokol kullanılıyor?
+    answer: >
+      * HoloLens herhangi bir özel protokol kullanmaz
+  - question: >
+      İşletim sistemi güncelleştirme sıklığı: HL için işletim sistemi güncelleştirmelerinin sıklığı nedir?  Bir küme zamanlaması var mı?  Microsoft, gerektiğinde güvenlik düzeltme ekleri yayımlar, vb.
+    answer: >
+      * Microsoft, Windows 10 için tam olarak aynı şekilde HoloLens işletim sistemi güncelleştirmeleri sağlar. Yılda bir tane olmak üzere her yıl için genellikle iki önemli güncelleştirme vardır. HoloLens, Windows bir cihaz olduğundan, güncelleştirme kavramı diğer tüm Windows cihazıyla aynıdır. Microsoft, gerektiğinde güvenlik düzeltme eklerini yayınlar ve diğer Windows cihazlarıyla aynı kavramı izler.
+  - question: >
+      İşletim sistemi sağlamlaştırma – işletim sistemini sağlamlaştırmak için hangi seçenekler vardır?  Gereksiz uygulamaları veya hizmetleri kaldırabilir veya kapatabilir miyim?
+    answer: >
+      * HoloLens bir smartphone gibi davranır. diğer modern Windows cihazlara benzer. HoloLens, Microsoft Intune veya mobileıron, airwatch ya da sotı gibi diğer Modern cihaz yönetimi çözümleri tarafından yönetilebilir. Cihaza güvenlik ilkeleri koymak için bu yönetim sistemlerinde ayarlayabileceğiniz Ilkeler vardır ve cihazın güvenliğini sağlamak için bu Ilkeleri kullanabilirsiniz. İsterseniz gereksiz uygulamaları silme seçeneği de vardır.
+  - question: >
+      Yazılım uygulamaları nasıl yönetilecektir ve güncelleştirilir? Microsoft Mağazası 'nda yaşayan uygulamalar için hangi uygulamaların yüklendiğini ve uygulama güncelleştirme işlemini tanımlamak için hangi denetim gerekir?
+    answer: >
+      * HoloLens, yazılım uygulamalarını yalnızca Windows deposu aracılığıyla alır. Yalnızca appx uygulama paketleri yüklenebilir ve bu, HoloLens kullanımı için geliştirilir. bunu, HoloLens cihazı gösteren uygulamanın yanında küçük bir logo ile Microsoft Store görebilirsiniz. Mağaza uygulamalarının yönetimi üzerinde sahip olduğunuz herhangi bir denetim HoloLens için de geçerlidir. Resmi mağaza veya iş için mağaza kavramını kullanabilirsiniz. uygulamalar dışarıdan yüklenmiş olabilir (bir Windows cihazında uygulama yüklemek için el ile gerçekleştirilen işlem) veya bir MDM aracılığıyla yönetilebilir, böylece uygulamalar gerektiğinde otomatik olarak mağaza üzerinden alınır.
+  - question: >
+      HoloLens için depodaki uygulamalara yönelik güncelleştirmelerin sıklığı nedir?
+    answer: >
+      * Microsoft Store aynı kavram ve uygulamaları buradan izlediğimize göre, güncelleştirme çevrimi uygulamanın geliştiricisi tarafından belirlenir. depodaki güncelleştirme mekanizmasını denetlemek için gereken tüm yönetim seçenekleri HoloLens için de geçerlidir.
+  - question: >
+      HoloLens için güvenli bir önyükleme özelliği var mı?
+    answer: >
+      * Yes
+  - question: >
+      Cihazdan çevre birimi desteğini devre dışı bırakmak veya bağlantısını kesmek için bir özellik var mı?
+    answer: >
+      * Yes
+  - question: >
+      Cihazda bağlantı noktalarının kullanımını denetleme veya devre dışı bırakma olanağı var mı?
+    answer: >
+      * HoloLens yalnızca iki bağlantı noktası (kulaklık için bir diğeri ise ücretlendirmesi veya bilgisayarlara bağlanmak için) içerir. İşlev ve kurtarma nedeniyle bağlantı noktasını devre dışı bırakabilme özelliği yoktur.
+  - question: >
+      Virüsten koruma, uç nokta algılama, IP 'ler, uygulama denetimi izin listesi: virüsten koruma, uç nokta algılama, IP 'ler, uygulama denetimi izin verilenler listesi vb.
+    answer: >
+      * Windows Holographic for Business (ticari paket) akıllı ekranı Windows Defender destekler. bir virüsten koruma şirketi uygulamasını Evrensel Windows Platformu oluşturup yayımlayadiyse, HoloLens indirilebilir. Mevcut olduğunda, hiçbir şirket HoloLens için bunu yapmamalıdır.
+
+      * uygulamaların yalnızca belirli uygulamaların indirilebileceği Microsoft Enterprise mağazası kullanılarak yapılmasına izin verme olanağı vardır. Ayrıca, MDM aracılığıyla cihazdaki belirli uygulamaların çalıştırılacağını veya hatta görünebileceğini de kilitleyemezsiniz.
+  - question: >
+      Cihazı, uzun bir süre çevrimdışı ise güncelleştirene kadar, üretim ağından karantinaya alabilir mi?  Örn. Cihaz bir dönem boyunca (altı ay) olmayan ve hiçbir güncelleştirme, düzeltme eki, vb. içermeyen bir çekmecede yer aldı.  Ağ üzerinde çalışmayı denediğinde, ağa katılmayı bilmemiz için önce başka bir ağ üzerinde güncelleştirme yapmanız gerektiğini ve daha sonra bu ağa işaret ederiz.
+    answer: >
+      * Bu, altyapı düzeyinde bir MDM ya da şirket içi sunucu tarafından yönetilebilen bir şeydir. Cihaz, belirtilen bir güncelleştirme sürümünü karşılamıyorsa uyumlu değil olarak işaretlenmiş olabilir.
+  - question: >
+      Microsoft, Microsoft 'un cihaz paylaşımı veya uzaktan destek için cihaza bağlanmasına izin veren bir arka kapı veya hizmetlere erişim içeriyor mu?
+    answer: >
+      * Hayır
+  - question: >
+      Güvenilen iletişim için bir PKI sertifikası üretilirken, bu cihazda yalnızca o cihaza özgü olduğunu ve bu cihaza özel olarak verildiğimiz veya cihazın kimliğine bürünmek için kullanılmamış olması için sertifikanın cihazda oluşturulmasını istiyoruz. Bu doğru HoloLens mı? Değilse, olası bir risk azaltma yoksa?
+    answer: >-
+      * SCEP için CSR, cihazın kendisinde oluşturulur. Intune ve şirket içi SCEP Bağlayıcısı, istemciye gönderilen bir sınama dizesi ekleyerek ve doğrulayarak isteklerin güvenliğini sağlamaya yardımcı olur.
+
+      * HoloLens (1. gen ve 2. gen) bir tpm modülüne sahip olduğundan, bu sertifikalar tpm modülünde depolanır ve ayıklanamaz. Ayrıca, ayıklanamasa da, farklı cihazlarda Sertifika/anahtar kullanılamamasına neden olan farklı bir cihazda sınama dizeleri doğrulanamadı.

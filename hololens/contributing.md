@@ -1,84 +1,84 @@
 ---
 title: Katkıda bulunan yönergeler
-description: GitHub-flavored Markaşağı kullanarak docs.microsoft.com platformunda HoloLens docs 'a nasıl katkıda bulunabileceğinizi öğrenin.
+description: HoloLens markdown kullanarak docs.microsoft.com platformda GitHub nasıl katkıda bulunabilirsiniz?
 author: hferrone
 ms.author: mattwoj
 ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
-ms.openlocfilehash: dd205ab1fe399d6612be982136c80733a5eb087e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 73b6e8bcd634cb4d45171bda0a85f2e991a977c9
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111378982"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635679"
 ---
-# <a name="contributing-to-the-hololens-documentation"></a>HoloLens belgelerine katkıda bulunma
+# <a name="contributing-to-the-hololens-documentation"></a>HoloLens katkıda bulunuyor
 
-[HoloLens belgelerine](https://github.com/MicrosoftDocs/Hololens)hoş geldiniz! Bu depoda oluşturduğunuz veya düzenlediğiniz makaleler **herkese açık olarak görünür.** 
+[HoloLens hoş geldiniz!](https://github.com/MicrosoftDocs/Hololens) Bu repoda oluştur veya düzenleyişle ilgili tüm **makaleler genel olarak görünür.** 
 
-HoloLens docs, Markdıg özellikleriyle GitHub-flavored Markaşağı kullanan docs.microsoft.com platformunda görüntülenir. Bu depoda düzenlediğiniz içerik, ' yi gösteren stilize sayfalarla biçimlendirilir https://docs.microsoft.com/hololens . 
+HoloLens belgeleri, Markdig özellikleriyle GitHub Markdown kullanan docs.microsoft.com platformda görüntülenir. Bu repoda düzenley istediğiniz içerik, /hololens'te yer alan stilleştirilmiş sayfalara biçimlendirilecek.
 
-Bu sayfada, katkıda bulunmak için temel adımlar ve kılavuzlar ve markın temel kavramları için bağlantılar ele alınmaktadır. Katkılarınız için teşekkürler!
+Bu sayfa, katkıda bulunmak için temel adımları ve yönergeleri ve Markdown temel bilgileri bağlantılarını kapsar. Katkılarınız için teşekkürler!
 
-## <a name="available-repos"></a>Kullanılabilir depolar
+## <a name="available-repos"></a>Kullanılabilir repos
 
 | Depo adı | URL |
 | --- | --- |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
-| Karma Gerçeklik | [MicrosoftDocs/Mixed-Reality](https://docs.microsoft.com/windows/mixed-reality) |
-| VR Tutkunmları Kılavuzu | [MicrosoftDocs/Mixed-Reality/colanıast-Guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
+| Karma Gerçeklik | [MicrosoftDocs/karma gerçeklik](/windows/mixed-reality) |
+| VR Meraklıları Kılavuzu | [MicrosoftDocs/mixed-reality/enthusiast-guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 
 ## <a name="before-you-start"></a>Başlamadan önce
 
-Henüz bir tane yoksa [bir GitHub hesabı oluşturmanız](https://github.com/join)gerekir.
+Henüz bir hesabınız yoksa bir hesap oluşturmanız [GitHub gerekir.](https://github.com/join)
 
 >[!NOTE]
->Microsoft çalışanı kullanıyorsanız, GitHub hesabınızı [Microsoft açık kaynak portalındaki](https://repos.opensource.microsoft.com/)Microsoft diğer adınızla ilişkilendirin. **"Microsoft"** ve **"microsoftdocs"** kuruluşları ile birleştirin.
+>Microsoft çalışanıysanız, microsoft GitHub Microsoft Açık Kaynak portalında Microsoft diğer [adınıza bağlamanız gerekir.](https://repos.opensource.microsoft.com/) **"Microsoft" ve** **"MicrosoftDocs" kuruluşlarına** katılın.
 
-GitHub hesabınızı ayarlarken bu güvenlik önlemlerinizi de öneriyoruz:
-- [Github hesabınız için güçlü bir parola](https://github.com/settings/admin)oluşturun.
-- [İki öğeli kimlik doğrulamayı](https://github.com/settings/two_factor_authentication/configure)etkinleştirin.
-- [Kurtarma kodlarınızı](https://github.com/settings/auth/recovery-codes) güvenli bir yerde saklayın.
-- [Ortak profil ayarlarınızı](https://github.com/settings/profile)güncelleştirin.
-   - Adınızı ayarlayın ve e-posta *adresimi göstermek* için *Genel e-postanızı* ayarlamayı düşünün.
-   - Katkıda bulunan docs sayfalarında bir küçük resim gösterildiğinden bir profil resmini karşıya yüklemenizi öneririz.
-- Komut satırını kullanmayı planlıyorsanız, [Windows Için git kimlik bilgileri Yöneticisi 'ni](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest)ayarlamayı göz önünde bulundurun. Bu şekilde, her katkı yaptığınızda parolanızı girmeniz gerekmez.
+Hesap GitHub ayarlarken şu güvenlik önlemlerini de öneririz:
+- Hesap [hesabınız için güçlü bir GitHub oluşturun.](https://github.com/settings/admin)
+- İki [faktörlü kimlik doğrulamasını etkinleştirin.](https://github.com/settings/two_factor_authentication/configure)
+- Kurtarma [kodlarınızı güvenli](https://github.com/settings/auth/recovery-codes) bir yere kaydedin.
+- Genel profil [ayarlarınızı güncelleştirin.](https://github.com/settings/profile)
+   - Adınız olarak ayarlayın ve Genel e-postanızı *E-posta adresimi gösterme olarak ayarlayın.* 
+   - Katkıda bulunmak istediğiniz belge sayfalarında küçük resim gösterildiği için profil resmini karşıya yüklemenizi öneririz.
+- Komut satırı kullanmayı planlıyorsanız, git için [Git Kimlik Bilgileri Yöneticisi'Windows.](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest) Bu şekilde, her katkıda parolanızı girmenize gerek olmayacaktır.
 
-Yayımlama sistemi GitHub 'a bağlıdır, bu nedenle bu adımlar önemlidir. GitHub diğer adınızı kullanarak her bir makaleye yazar ya da katkıda bulunan olarak listelenecektir.
+Yayımlama sistemi, GitHub bu nedenle önemlidir. Diğer adınız kullanılarak her makalenin yazarı veya katkıda bulunanı olarak GitHub listelenirsiniz.
 
-## <a name="editing-an-existing-article"></a>Mevcut bir makaleyi Düzenle
+## <a name="editing-an-existing-article"></a>Mevcut bir makaleyi düzenleme
 
-Bir Web tarayıcısında GitHub aracılığıyla *mevcut bir makaleye* güncelleştirme yapmak için aşağıdaki iş akışını kullanın:
+Web tarayıcısında mevcut bir makalede *güncelleştirmeler yapmak için* GitHub iş akışını kullanın:
 
-1. "Mixed-Reality-docs" klasöründe düzenlemek istediğiniz makaleye gidin.
+1. "mixed-reality-docs" klasöründe düzenlemek istediğiniz makaleye gidin.
 
-2. Sağ üst köşedeki Düzenle düğmesini (kurşun kalem simgesi) seçin. Bu, bir atılabilir dalını ' Ana ' dalından otomatik olarak çatallandıracaktır.
+2. Sağ üst köşesindeki düzenle düğmesini (kalem simgesi) seçerek otomatik olarak "ana" daldan atılabilir bir dal oluşturulur.
 
-   ![Bir makaleyi düzenleyin.](images/editpage.png)
+   ![Bir makaleyi düzenleme.](images/editpage.png)
    
-3. Makalenin içeriğini ["Markaşağı temel bilgiler"](#markdown-basics)e göre düzenleyin.
+3. Makalenin içeriğini ["Markdown temel bilgileri" makalesine göre düzenleyin.](#markdown-basics)
 
-4. Her bir makalenin üst kısmındaki meta verileri güncelleştir:
+4. Her makalenin en üstünde yer alan meta verileri güncelleştirin:
 
-   * **title**: makale görüntülenirken tarayıcı sekmesinde görüntülenen sayfa başlığı. Sayfa başlıkları, SEO ve dizin oluşturma için kullanılır; bu nedenle, gerekli olmadığı takdirde başlığı değiştirmeyin (ancak belgeler genel çalışmadan önce daha az kritik olur).
-   * **Açıklama**: makalenin içeriğine yönelik kısa bir açıklama yazın.
-   * **Yazar**: sayfanın birincil sahibiyseniz, GitHub diğer adınızı buraya ekleyin.
-   * **MS. Author**: sayfanın birincil sahibiyseniz, Microsoft diğer adınızı buraya ekleyin (gerekli değildir @microsoft.com , yalnızca diğer ad).
-   * **MS. Date**: sayfaya önemli içerik ekliyorsanız, açıklama, biçimlendirme, dilbilgisi veya yazım gibi düzeltmeler için değil, tarihi güncelleştirin.
-   * **anahtar sözcükler**: SEO 'e yardımcı anahtar kelimeleri (arama motoru iyileştirmesi). Makalenize özgü, ancak listenizdeki son anahtar sözcükten sonra noktalama olmadan, bir virgül ve boşlukla ayırarak anahtar sözcükler ekleyin. Diğer bir yerde yönetildiği için tüm makalelere uygulanan genel anahtar sözcükler eklemeniz gerekmez. 
+   * **title:** Makale görüntülendiğinde tarayıcı sekmesinde görüntülenen sayfa başlığı. Sayfa başlıkları SEO ve dizin oluşturma için kullanılır, bu nedenle gerekli olmadıkça başlığı değiştirme (belgeler genel hale gelmeden önce bu daha az kritik olsa da).
+   * **açıklama:** Makalenin içeriğine ilişkin kısa bir açıklama yazarak SEO ve bulma desteği sağlar.
+   * **yazar:** Sayfanın birincil sahibiyseniz sayfanın diğer adını buraya GitHub ekleyin.
+   * **ms.author:** Sayfanın birincil sahibiyseniz, Microsoft diğer adını buraya ekleyin (yalnızca diğer adı @microsoft.com için ihtiyacınız yok).
+   * **ms.date:** Sayfaya önemli içerik ekliyorsanız tarihi güncelleştirin, ancak açıklama, biçimlendirme, dil bilgisi veya yazım gibi düzeltmeler için güncelleştirin.
+   * **keywords:** Keywords aid in SEO (search engine optimization). Makalenize özgü olan ancak listenizin son anahtar sözcüğünden sonra noktalama işareti eklemeden virgülle ve boşlukla ayrılmış anahtar sözcükler ekleyin. Tüm makaleler için geçerli olan genel anahtar sözcükler eklemenize gerek yok çünkü bunlar başka bir yerde yönetiliyor. 
    
-5. Makale düzenlemelerinizi tamamladıktan sonra aşağı kaydırın ve **dosya değişikliği öner**' i seçin.
+5. Makale düzenlemelerinizi tamamlandıktan sonra sayfayı aşağı kaydırın ve Dosya değişikliği **öner'i seçin.**
 
-6. Bir sonraki sayfada, otomatik olarak oluşturulan dalınızı ' Ana ' ile birleştirmek için **çekme Isteği oluştur** ' u seçin.
+6. Sonraki sayfada Çekme isteği **oluştur'a seçerek** otomatik olarak oluşturulan dalını 'ana dal' olarak birleştirin.
 
-7. Düzenlemek istediğiniz Sonraki Makale için yukarıdaki adımları tekrarlayın.
+7. Düzenlemek istediğiniz sonraki makale için yukarıdaki adımları tekrarlayın.
 
-## <a name="renaming-or-deleting-an-existing-article"></a>Mevcut bir makaleyi yeniden adlandırma veya silme
+## <a name="renaming-or-deleting-an-existing-article"></a>Mevcut bir makaleyi yeniden markalama veya silme
 
-Değişiklik, var olan bir makaleyi yeniden adlandırabilir veya silecektir, yeniden yönlendirme eklediğinizden emin olun. Bu şekilde, mevcut makaleye bağlantısı olan herkes doğru yerde sona kalır. Yeniden yönlendirmeler, deponun kökündeki .openpublishing.redirection.jsdosya tarafından yönetilir.
+Değişikliğiniz mevcut bir makaleyi yeniden adlandıracak veya secekse, yeniden yönlendirme eklemeye emin olun. Bu şekilde, mevcut makaleye bağlantısı olan herkes yine de doğru yerde olur. Yeniden yönlendirmeler, .openpublishing.redirection.jsdosyasının kökünde yer alan dosyada yer alan dosya tarafından yönetilir.
 
-.openpublishing.redirection.jsbir yeniden yönlendirme eklemek için diziye bir giriş ekleyin `redirections` :
+Yeniden yönlendirmeyi .openpublishing.redirection.jsdizisine bir giriş `redirections` ekleyin:
 
 ```json
 {
@@ -90,32 +90,32 @@ Değişiklik, var olan bir makaleyi yeniden adlandırabilir veya silecektir, yen
         },
 ```
 
-- , `source_path` Kaldırmakta olduğunuz eski makalenin göreli depo yoludur. Yolun ile başladığı `mixed-reality-docs` ve ile bitdiğinizden emin olun `.md` .
+- `source_path`, kaldırmakta olduğunu eski makalenin göreli depo yoludur. Yolun ile başladığından ve ile `mixed-reality-docs` sona erdiğinden emin `.md` olun.
 
-- , `redirect_url` Eski makalenin yeni makaleye yönelik göreli genel URL 'sidir. Bu **URL 'nin** `mixed-reality-docs` `.md` , depo yolu değil genel URL 'ye başvurduğundan veya içermediğinden emin olun. Kullanarak yeni makaledeki bir bölüme bağlama `#section` izin verilir. Ayrıca, gerekirse başka bir sitenin mutlak yolunu da kullanabilirsiniz.
+- `redirect_url`, eski makaleden yeni makaleye göreli genel URL'dir. Depo yolunu değil **genel URL'ye** başvurduğu için bu `mixed-reality-docs` URL'nin veya `.md` içermey olduğundan emin olun. kullanarak yeni makalenin içindeki bir bölüme `#section` bağlamaya izin verilir. Gerekirse burada başka bir sitenin mutlak yolunu da kullanabilirsiniz.
 
-- `redirect_document_id` Belge KIMLIĞINI önceki dosyadan korumak isteyip istemediğinizi belirtir. Varsayılan değer: `false`. `true` `ms.documentid` Yeniden yönlendirilen makaleden öznitelik değerini korumak istiyorsanız kullanın. Belge KIMLIĞINI korumazsanız, sayfa görünümleri ve ranlar gibi veriler hedef makaleye aktarılır. Yeniden yönlendirme birincil olarak bir yeniden adlandırma ise ve yalnızca aynı içeriğin bazılarını ele alan farklı bir makaleye işaretçi değilse bunu yapın.
+- `redirect_document_id` , belge kimliğini önceki dosyadan tutmak isteyip istemeyebilirsiniz. Varsayılan değer: `false`. Yeniden `true` yönlendirilen makaledeki `ms.documentid` öznitelik değerini korumak için kullanın. Belge kimliğini korursanız sayfa görüntülemeleri ve derecelendirmeler gibi veriler hedef makaleye aktarılır. Yeniden yönlendirme öncelikli olarak bir yeniden adlandırma ise ve aynı içeriğin yalnızca bir bölümü kapsayan farklı bir makale işaretçisi ise bunu yapma.
 
-Yeniden yönlendirme eklerseniz, eski dosyayı da silmeyi unutmayın.
+Yeniden yönlendirme eklersiniz, eski dosyayı da silebilirsiniz.
 
-## <a name="creating-a-new-article"></a>Yeni bir makale oluşturma
+## <a name="creating-a-new-article"></a>Yeni makale oluşturma
 
-Bir Web tarayıcısında GitHub aracılığıyla belge deposunda *yeni makaleler oluşturmak* için aşağıdaki iş akışını kullanın:
+Web tarayıcısında yeni *makaleler oluşturmak için* aşağıdaki iş akışını kullanarak GitHub kullanın:
 
-1. MicrosoftDocs/Mixed-Reality ' Ana ' dalından bir çatal oluşturun (sağ üst köşedeki **çatal** düğmesini kullanarak).
+1. MicrosoftDocs/mixed-reality 'master' dalını kullanarak bir mürekkep oluşturun (sağ **üstte yer** alan Fork düğmesini kullanarak).
 
-   ![Ana dalı çatalla.](images/forkbranch.png)
+   ![Ana dalda bir mürekkep.](images/forkbranch.png)
    
-2. "Mixed-Reality-docs" klasöründe, sağ üst köşedeki **yeni dosya oluştur** ' u seçin.
+2. "mixed-reality-docs" klasöründe sağ üst **sırada Yeni dosya oluştur'a** tıklayın.
 
-3. Makale için bir sayfa adı oluşturun (boşluk yerine kısa çizgileri kullanın ve noktalama işaretleri veya kesme işareti kullanmayın) ve ". MD" ekleyin
+3. Makale için bir sayfa adı oluşturun (boşluk yerine kısa çizgi kullanın ve noktalama işareti veya kesme işareti kullanmayın) ve ".md" ifadesini ekleyin
 
-   ![Yeni sayfanızı adlandırın.](images/newpagetitle.png)
+   ![Yeni sayfanıza bir ad girin.](images/newpagetitle.png)
    
    >[!IMPORTANT]
-   >Yeni makaleyi, "Mixed-Reality-docs" klasörü içinden oluşturduğunuzdan emin olun. Bunu, yeni dosya adı satırında "/Mixed-Reality-je/" olup olmadığını denetleyerek doğrulayabilirsiniz.
+   >Yeni makaleyi "mixed-reality-docs" klasöründen oluştursanız emin olun. Yeni dosya adı satırına "/mixed-reality-docs/" ifadesini kontrol ederek bunu onaylayın.
 
-4. Yeni sayfanızın en üstünde aşağıdaki meta veri bloğunu ekleyin:
+4. Yeni sayfanın en üstüne aşağıdaki meta veri bloğu ekleyin:
 
    ```md
    ---
@@ -129,53 +129,53 @@ Bir Web tarayıcısında GitHub aracılığıyla belge deposunda *yeni makaleler
    ---
    ```
 
-5. [Yukarıdaki bölümde](#editing-an-existing-article)yer alan yönergelere göre ilgili meta veri alanlarını girin.
+5. Yukarıdaki bölümde yer alan yönergelere göre ilgili meta veri [alanlarını doldurun.](#editing-an-existing-article)
 
-6. [Markın temel bilgilerini](#markdown-basics)kullanarak Makale içeriği yazın.
+6. Markdown temellerini [kullanarak makale içeriği yazın.](#markdown-basics)
 
-7. `## See also`Makalenin alt kısmına, diğer ilgili makalelerin bağlantılarıyla bir bölüm ekleyin.
+7. Makalenin `## See also` en altına diğer ilgili makalelerin bağlantılarını içeren bir bölüm ekleyin.
 
-8. İşiniz bittiğinde **yeni dosya Kaydet**' i seçin.
+8. Tamamlandığında Yeni dosya **işle'yi seçin.**
 
-9. **Yeni çekme isteği ' ni** seçin ve çatalınızın ' Ana ' dalını microsoftdocs/Mixed-Reality ' Master ' olarak birleştirin (okun doğru şekilde göründüğünden emin olun).
+9. Yeni **çekme isteği'yi** seçin ve mürekkep 'ana' dalını MicrosoftDocs/mixed-reality 'master' ile birleştirin (okun doğru yolu işaret eden olduğundan emin olun).
 
-   ![Çatalınızdan, MicrosoftDocs/Mixed-Reality olarak çekme isteği oluşturun](images/pr-to-master.png)
+   ![Mürekkepten MicrosoftDocs/mixed-reality'ye çekme isteği oluşturma](images/pr-to-master.png)
 
 ## <a name="markdown-basics"></a>Markdown temelleri
 
-Aşağıdaki kaynaklar markın dilini kullanarak belgeleri nasıl düzenleyeceğinizi öğrenmenize yardımcı olur:
+Aşağıdaki kaynaklar, Markdown dilini kullanarak belgeleri düzenlemeyi öğrenmenizi sağlar:
 
 - [Markdown temelleri](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-- [Docs.microsoft.com için Markaşağı yazmak üzere ek kaynaklar](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [Docs.microsoft.com için Markdown yazmak için ek kaynaklar](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>Tablo ekleme
 
-Docs.microsoft.com stilleri tablolarında, satır içi CSS ' yi deneseniz bile kenarlıklar veya özel stilleri olmaz. Kısa bir süre boyunca çalışır, ancak sonunda platform stili tablonun dışına çıkaracaktır. Bu nedenle, önceden planlayın ve tablolarınızı basit tutun. [Markın tablolarının kolay hale gelmesini sağlayan bir site aşağıda verilmiştir](https://www.tablesgenerator.com/markdown_tables).
+Stil tablolarının docs.microsoft.com nedeniyle satır içi CSS'i denesanız bile kenarlıklar veya özel stiller olmayacaktır. Kısa bir süre çalışacak gibi görünür, ancak sonunda platform stili tablodan çıkartır. Bu nedenle plan yapmayı ve tablolarınızı basit tutmaya devam edin. [Markdown tablolarını kolaylaştıran bir site şu şekildedir:](https://www.tablesgenerator.com/markdown_tables).
 
-[Visual Studio Code Için docs Markaşağı uzantısı](https://docs.microsoft.com/teamblog/docs-extension) , belgeleri düzenlemek için [Visual Studio Code kullanıyorsanız (aşağıya bakın)](#using-visual-studio-code) tablo oluşturmayı da kolaylaştırır.
+[Visual Studio Code için Docs Markdown](/teamblog/docs-extension) Uzantısı, belgeleri düzenlemek için Visual Studio Code [(aşağıya bakın)](#using-visual-studio-code) kullanıyorsanız tablo oluşturmayı da kolaylaştırır.
 
 ### <a name="adding-images"></a>Görüntü ekleme
 
-Görüntülerinizi, depodaki "Mixed-Reality-docs/Images" klasörüne yüklemeniz ve sonra makaleye uygun şekilde başvurmanız gerekir. Görüntüler otomatik olarak tam boyutta görünür, bu da büyük görüntülerin makalenin tüm genişliğini doldurmasıdır. Karşıya yüklemeden önce görüntülerinizi önceden boyutlandırmasını öneririz. Önerilen genişlik 600 ile 700 piksel arasındadır; Ancak, yoğun bir ekran görüntüsü veya ekran görüntüsünün bir kesri ise, bu boyut yukarı veya aşağı doğru olmalıdır.
+Görüntülerinizi,po içinde "mixed-reality-docs/images" klasörüne yüklemeli ve ardından makalede uygun şekilde başvurabilirsiniz. Görüntüler otomatik olarak tam boyutlu olarak görüntülenir ve bu da büyük görüntülerin makalenin tüm genişliğini dolduracak olduğu anlamına gelir. Karşıya yüklemeden önce görüntülerinizi önceden boyutlandırmanızı öneririz. Önerilen genişlik 600 ile 700 piksel arasında olsa da, sırasıyla yoğun bir ekran görüntüsü veya ekran görüntüsü kesri olması için boyutu yukarı veya aşağı doğru boyutunuz olmalıdır.
 
 >[!IMPORTANT]
->Birleştirmeden önce görüntüleri yalnızca bir mürekkepli repoya yükleyebilirsiniz. Bu nedenle, bir makaleye görüntü eklemeyi planlıyorsanız, önce [Visual Studio Code'yi](#using-visual-studio-code) kullanarak görüntüleri bir web tarayıcısında kendi fork 'nizin "images" klasörüne eklemeniz veya aşağıdaki adımları tamamlayasınız:
+>Birleştirmeden önce görüntüleri yalnızca bir mürekkepli repoya yükleyebilirsiniz. Bu nedenle, bir makaleye görüntü eklemeyi planlıyorsanız, önce [Visual Studio Code](#using-visual-studio-code) kullanarak görüntüleri bir web tarayıcısında kendi fork 'nizin "images" klasörüne eklemeniz veya aşağıdaki adımları gerçekleştirin:
 >
 >1. MicrosoftDocs/mixed-reality repo'su için bir mürekkep.
 >2. Makaleyi, mürekkeple birlikte düzenledik.
 >3. Makalenize başvurmakta olduğunuz görüntüleri, mürekkepte "mixed-reality-docs/images" klasörüne yükleyin.
 >4. MicrosoftDocs/mixed-reality 'master' dalı ile mürekkeplerinizi birleştirmek için bir çekme isteği oluşturuldu. 
 >
->Kendi forked repo'larınızı ayarlamayı öğrenmek için yeni bir makale [oluşturmaya ilişkin yönergeleri izleyin.](#creating-a-new-article)
+>Kendi forked repo'larınızı ayarlamayı öğrenmek için, yeni bir makale [oluşturmaya ilişkin yönergeleri izleyin.](#creating-a-new-article)
 
 ## <a name="previewing-your-work"></a>Çalışmanızı önizleme
 
-GitHub'da web tarayıcısı aracılığıyla düzenlerken,  işlemeden önce çalışmanızı önizlemek için sayfanın üst kısmından Önizleme sekmesini seçin. 
+Web tarayıcısı GitHub web tarayıcısında düzenlerken, işlemeden önce çalışmanızı önizlemek için sayfanın üst kısmından Önizleme sekmesini seçin.  
 
 >[!NOTE]
 >Değişikliklerinizin önizlemesini review.docs.microsoft.com yalnızca Microsoft çalışanları tarafından kullanılabilir
 
-Microsoft çalışanları: Katkılarınız 'ana' dala birleştirildi mi, içeriği'de genele gitmeden önce gözden https://review.docs.microsoft.com/hololens?branch=master geçirebilirsiniz. Sol sütundaki içindekiler'i kullanarak makalenizi bulun.
+Microsoft çalışanları: Katkılarınız 'ana' dala birleştirildiktan sonra içeriği /hololens?branch=master <'de genele>. Sol sütundaki içindekiler'i kullanarak makalenizi bulun.
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Tarayıcıda düzenleme ve masaüstü istemcisiyle düzenleme karşılaştırması
 
@@ -200,7 +200,7 @@ Bu repo ile çalışacak Visual Studio Code yapılandırmak için şu adımları
     2. yükleme [Visual Studio Code.](https://code.visualstudio.com/)
     3. [Henüz bir sorun yoksa MicrosoftDocs/mixed-reality'den](#creating-a-new-article) bir fork edin.
     4. Mürekkepte Kopyala'ya tıklayın **veya url'yi** indirip kopyalayın.
-2. Visual Studio Code'da kendi mürekkep kopyanızı yerel Visual Studio Code:
+2. Visual Studio Code'da kendi mürekkep kopyanızı Visual Studio Code:
     1. Görünüm menüsünde **Komut** **Paleti'ne tıklayın.**
     2. "Git: Clone" yazın.
     3. Kopyalanan URL'yi yapıştırın.
@@ -212,11 +212,11 @@ Bu repo ile çalışacak Visual Studio Code yapılandırmak için şu adımları
 Aşağıdaki iş akışını kullanarak belgelerde değişiklik Visual Studio Code:
 
 >[!NOTE]
->Yukarıdan itibaren makale [düzenleme](#editing-an-existing-article) ve [oluşturma](#creating-a-new-article) ile ilgili tüm kılavuzlar ve [Markdown'ı](#markdown-basics)düzenlemenin temelleri, Visual Studio Code de geçerlidir.
+>Yukarıdan itibaren [makale düzenleme](#editing-an-existing-article) ve oluşturma ile ilgili tüm kılavuzlar ve [](#creating-a-new-article) [Markdown'ı](#markdown-basics)düzenlemenin temelleri, Visual Studio Code de geçerlidir.
 
 1. Kopyalanan mürekkep resmi bir resm ile güncel olduğundan emin olun.
 
-   1. Bir web tarayıcısında, MicrosoftDocs/mixed-reality 'master' belgesinde bulunan diğer katkıda bulunanlardan gelen son değişikliklerinizi kendi fork'nize eşitlemek için bir çekme isteği oluşturun (okun doğru yolu işaret ettiglerinden emin olun).
+   1. Bir web tarayıcısında, MicrosoftDocs/mixed-reality 'master' belgesinde bulunan diğer katkıda bulunanlardan gelen son değişikliklerinizi kendi fork'nize eşitlemek için bir çekme isteği oluşturun (okun doğru yolu işaret ediyor olduğundan emin olun).
       
       ![MicrosoftDocs/mixed-reality değişikliklerini kendi fork'la eşitleme](images/sync-repos.png)
       
@@ -224,7 +224,7 @@ Aşağıdaki iş akışını kullanarak belgelerde değişiklik Visual Studio Co
       
       ![Eşitle düğmesine tıklayın resmi](images/sync-clone.png)
       
-2. Kopyalanan bir hesabı kullanarak kopyalanmış bir şekilde makale Visual Studio Code.
+2. Visual Studio Code kullanarak kopyalanmış repoda makaleler oluşturun veya Visual Studio Code.
 
    1. Bir veya daha fazla makaleyi düzenleyin (gerekirse "images" klasörüne görüntü ekleyin).
    
@@ -236,7 +236,7 @@ Aşağıdaki iş akışını kullanarak belgelerde değişiklik Visual Studio Co
    
       ![Kaynak Denetiminde "Hepsini işle"yi seçin](images/source-control-commit.png)
       
-   4. Değişikliklerinizi **çıkış** noktasıyla (GitHub'daki çatalı) eşitlemek için eşitle düğmesini seçin.
+   4. Değişikliklerinizi **çıkış** noktası olarak eşitlemek için eşitle düğmesini seçin (GitHub).
       
       ![Eşitle düğmesine tıklayın](images/sync-back.png)
       
@@ -248,7 +248,7 @@ Aşağıdaki iş akışını kullanarak belgelerde değişiklik Visual Studio Co
 
 Aşağıdaki Visual Studio Code uzantıları, belgeleri düzenlerken yararlıdır:
 
-- [Visual Studio Code için Docs Markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) Uzantısı - **Alt+M** kullanarak aşağıdakiler gibi bir belge yazma seçenekleri menüsü açın:
+- [Visual Studio Code için Docs Markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) Uzantısı - **Alt+M** kullanarak aşağıdakiler gibi belge yazma seçenekleri menüsünü açın:
    - Karşıya yüklediğiniz görüntüleri arama ve referans olarak gönderme.
    - Listeler, tablolar ve gibi belgelere özgü çağrılar gibi biçimlendirmeler `>[!NOTE]` ekleyin.
    - İç bağlantılar ve yer işaretleri (bir sayfanın içindeki belirli bölümlere bağlantılar) arama ve başvuru.

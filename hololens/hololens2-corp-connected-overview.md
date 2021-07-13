@@ -1,6 +1,6 @@
 ---
-title: Dağıtım Kılavuzu – Dynamics 365 kılavuzlarıyla kurumsal bağlantılı HoloLens 2-genel bakış
-description: Şirket bağlantılı ağ üzerinden Dynamics 365 kılavuzlarıyla HoloLens 2 cihazlarını kaydetmeyi öğrenin.
+title: dağıtım kılavuzu – Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-genel bakış
+description: kurumsal bağlantılı bir ağ üzerinden Dynamics 365 kılavuzlarıyla HoloLens 2 cihazı kaydetmeyi öğrenin.
 keywords: HoloLens, yönetim, kurumsal bağlı, Dynamics 365 kılavuzlar, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: joyjaz
 ms.author: v-jjaswinski
@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ee6c24f65e5990f1e84a71d86b24dd782cf9f4cc
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: f2f7e1425a208e1f466d995f66118b7e68984242
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379114"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637022"
 ---
-# <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>Dağıtım Kılavuzu-Dynamics 365 kılavuzlarıyla kurumsal bağlantılı HoloLens 2-genel bakış
+# <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>dağıtım kılavuzu-Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-genel bakış
 
-Bu kılavuz, BT uzmanlarının Dynamics 365 kılavuzlarıyla (kılavuzlar) Microsoft HoloLens 2 cihazlarını planlayıp dağıtmalarına yardımcı olur. Bu kılavuz, pilot ve üretim dağıtımları için harika ve [B: kuruluşunuzun ağ Kılavuzu Içinde dağıtma senaryosuna](https://docs.microsoft.com/hololens/common-scenarios#scenario-b-deploy-inside-your-organizations-network) benzer. Kavramın kanıtını test ettikten sonra, HoloLens 'i kuruluşunuzla tümleştirmeyle ileriye gitmek için bu kılavuzu kullanın.
+bu kılavuz, bt uzmanlarının Dynamics 365 kılavuzlarıyla (kılavuzlar) Microsoft HoloLens 2 cihaz planlaması ve dağıtmalarına yardımcı olur. Bu kılavuz, pilot ve üretim dağıtımları için harika ve [B: kuruluşunuzun ağ Kılavuzu Içinde dağıtma senaryosuna](/hololens/common-scenarios#scenario-b-deploy-inside-your-organizations-network) benzer. kavram kanıtlarınızı test ettikten sonra, HoloLens kuruluşunuza tümleştirmeyle ileri doğru gitmek için bu kılavuzu kullanın.
 
 Bu kılavuzda, cihazlarınızın mevcut cihaz yönetimine nasıl kaydedileceğini, gereken lisansları nasıl uygulayacağını ve son kullanıcılarınızın bir Dynamics 365 Kılavuzu çalıştıracağını ve cihaz kurulduktan sonra özel iş kolu uygulamaları kullanmasını nasıl doğrulayacağız. 
 
@@ -33,7 +33,7 @@ Aşağıdaki altyapı zaten yerinde olmalıdır:
 - Wi-Fi
     - İç kaynaklara erişimi olan dahili kurumsal ağ ve internet veya bulut hizmetlerine sınırlı erişim
     - Cihaz tabanlı sertifika kimlik doğrulaması.
-- Azure Active Directory (Azure AD) MDM otomatik kaydıyla birleştir ([Azure AD P1 aboneliği](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) gerekir)
+- Azure Active Directory (azure ad) MDM otomatik kaydıyla birleştir ([azure ad P1 aboneliği](/azure/active-directory/fundamentals/active-directory-whatis) gerekir)
 - MDM (Intune) yönetiliyor
     - Bir veya daha fazla uygulama MDM aracılığıyla dağıtılır.
 - Ağ 
@@ -43,7 +43,8 @@ Aşağıdaki altyapı zaten yerinde olmalıdır:
     - Cihaz başına tek veya birden çok Kullanıcı desteklenir.
 - Belirli kullanım örneklerine göre uygulanan cihaz kilitleme yapılandırmalarının farklı düzeyleri, tam açık tek uygulama bilgi noktası ile uygulanır.
 
-## <a name="guides-licensing-and-requirements"></a>[Kılavuzlar lisanslama ve gereksinimler](https://docs.microsoft.com/dynamics365/mixed-reality/guides/requirements#licensing-and-product-requirements)
+## <a name="guides-licensing-and-requirements"></a>[Kılavuzlar lisanslama ve gereksinimler](/dynamics365/mixed-reality/guides/requirements#licensing-and-product-requirements)
+
 - Azure AD hesabı
 - Dynamics 365 kılavuzlar uygulamalar PC ve HoloLens
 - Dynamics 365 kılavuzlar aboneliği
@@ -72,7 +73,7 @@ Aşağıdaki altyapı zaten yerinde olmalıdır:
 >- [Kullanıcı ve grup oluşturma.](hololens2-corp-connected-configure.md#azure-users-and-groups)
 >- [Otomatik kayıt ayarlama.](hololens2-corp-connected-configure.md#auto-enrollment-on-hololens-2)
 >- [Wi-Fi sertifikaları ve profilleri kurumsal Wi-Fi bağlantı için ayarlama.](hololens2-corp-connected-configure.md#corporate-wi-fi-connectivity)
->- [Iş kolu (LOB) uygulama paketlerini karşıya yükleyin ve atayın.](hololens2-corp-connected-configure.md#app-deployment)
+>- [Upload ve iş kolu (LOB) uygulama paketleri atayın.](hololens2-corp-connected-configure.md#app-deployment)
 >- [Dynamics 365 kılavuzlarını ayarlayın.](hololens2-corp-connected-configure.md#setup-guides-application-licenses-dataverse-and-authoring)
 >- [Bilgi noktası modunu yapılandırma (isteğe bağlı).](hololens2-corp-connected-configure.md#optional-kiosk-mode)
 >- [WDAC yapılandırma (isteğe bağlı).](hololens2-corp-connected-configure.md#optional-wdac)
@@ -84,7 +85,7 @@ Aşağıdaki altyapı zaten yerinde olmalıdır:
 >-  [Yazma ve çalıştırma aracılığıyla kılavuzların doğrulanması.](hololens2-corp-connected-deploy.md#validate-dynamics-365-guides)
 ### <a name="maintain"></a>Bakım
 > [!div class="checklist"]
->- [HoloLens 2 ' i güncelleştirin.](hololens2-corp-connected-maintain.md#update-hololens)
+>- [güncelleştirme HoloLens 2.](hololens2-corp-connected-maintain.md#update-hololens)
 >- [Kılavuzlarını güncelleştirme (Mağaza uygulamaları).](hololens2-corp-connected-maintain.md#how-to-update-dynamics-365-guides-and-other-store-apps)
 >- [LOB uygulamalarını güncelleştirme.](hololens2-corp-connected-maintain.md#how-to-update-lob-apps) 
 >- [Geliştirme planı.](hololens2-corp-connected-maintain.md#development-plan) 

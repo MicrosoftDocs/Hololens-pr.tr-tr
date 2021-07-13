@@ -1,6 +1,6 @@
 ---
-title: HoloLens için Altyapı Yönergeleri
-description: Kablosuz ağ desteği, uzaktan yardım ve mobil cihaz yönetimi dahil olmak üzere HoloLens cihazları için altyapı yönergeleri hakkında bilgi edinebilirsiniz.
+title: HoloLens için altyapı yönergeleri
+description: kablosuz ağ desteği, uzaktan yardım ve mobil cihaz yönetimi dahil HoloLens cihazlara yönelik altyapı yönergeleri hakkında bilgi edinin.
 ms.prod: hololens
 ms.sitesec: library
 author: pawinfie
@@ -14,33 +14,33 @@ manager: bradke
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 4eb55bec56e53de9195ac87e0491eefd91992f3d
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: e3f87c524ce0f8af05ec8c92877d46facd962fb4
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111380157"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639293"
 ---
-# <a name="configure-your-network-for-hololens"></a>HoloLens için Anızı Yapılandırma
+# <a name="configure-your-network-for-hololens"></a>Ağınızı HoloLens için yapılandırma
 
-Belgenin bu bölümü için aşağıdaki kişiler gerekir:
+Belgenin bu bölümü aşağıdaki kişileri gerektirecektir:
 
-1. Ara sunucuda/güvenlik duvarında değişiklik yapma izinlerine sahip Ağ Yöneticisi
-2. Azure Active Directory Yöneticisi
-3. Mobil Cihaz Yöneticisi Yöneticisi
+1. Ara sunucu/güvenlik duvarında değişiklik yapma izinleri olan ağ yöneticisi
+2. Azure Active Directory Yöneticileri
+3. Mobil Device Manager Yöneticisi
 
-## <a name="infrastructure-requirements"></a>Altyapı Gereksinimleri
+## <a name="infrastructure-requirements"></a>Altyapı gereksinimleri
 
-HoloLens, temel olarak Azure ile tümleştirilmiş bir Windows mobil cihazıdır.  En iyi, kablosuz ağ kullanılabilirliği (wi-fi) ve kablosuz ağ erişimi olan ticari ortamlarda Microsoft hizmetleri.
+HoloLens, temel tarafında Azure ile tümleştirilmiş bir mobil cihaz Windows.  kablosuz ağ kullanılabilirliği (wi-fi) ve Microsoft hizmetleri erişimi olan ticari ortamlarda en iyi şekilde çalışmaktadır.
 
-Kritik bulut hizmetleri şunlardır:
+Kritik bulut Hizmetleri şunları içerir:
 
-- Azure active directory (Azure AD)
-- Windows Update (WU)
+- Azure Active Directory (Azure AD)
+- Windows Güncelleştirme (WU)
 
-Ticari müşterilerin HoloLens cihazlarını büyük ölçekte yönetmek için kurumsal mobilite yönetimi (EMM) veya mobil cihaz yönetimi (MDM) altyapısına ihtiyacı olacaktır.  Bu kılavuzda [örnek olarak Microsoft Intune,](https://www.microsoft.com/enterprise-mobility-security/microsoft-intune) ancak Microsoft İlkesi'ne tam destek veren tüm sağlayıcılar HoloLens'i destekleyene kadar her sağlayıcıyı destekler.  Mobil cihaz yönetimi sağlayıcınıza HoloLens 2'ye destek olup olduklarını sorun.
+ticari müşterilerin, HoloLens cihazları ölçekli olarak yönetmesi için enterprise mobility management (EMM) veya mobil cihaz yönetimi (MDM) altyapısına ihtiyacı vardır.  bu kılavuz bir örnek olarak [Microsoft Intune](https://www.microsoft.com/enterprise-mobility-security/microsoft-intune) kullanır, ancak Microsoft Policy için tam desteğe sahip tüm sağlayıcılar HoloLens destekleyebilir.  HoloLens 2 ' i desteklediklerinde mobil cihaz yönetimi sağlayıcınızı sorun.
 
-HoloLens sınırlı bir bulut bağlantısız deneyimi destekler.
+HoloLens, sınırlı sayıda bulut bağlantısı kesik deneyimler destekler.
 
 ### <a name="wireless-network-eap-support"></a>Kablosuz ağ EAP desteği
 
@@ -53,140 +53,140 @@ HoloLens sınırlı bir bulut bağlantısız deneyimi destekler.
 - TTLS-PAP
 - TTLS-TLS
 
-### <a name="hololens-specific-network-requirements"></a>HoloLens'e Özgü Ağ Gereksinimleri
+### <a name="hololens-specific-network-requirements"></a>HoloLens Belirli ağ gereksinimleri
 
-Ağ güvenlik [duvarında bu](hololens-offline.md) uç nokta listesine izin verili olduğundan emin olun. Bu, HoloLens'in düzgün çalışmasını sağlar.
+Ağ güvenlik duvarınız üzerinde bu uç nokta [listesine](hololens-offline.md) izin verildiğinden emin olun. bu, HoloLens düzgün çalışmasını sağlayacaktır.
 
-### <a name="remote-assist-specific-network-requirements"></a>Remote Assist'e Özgü Ağ Gereksinimleri
+### <a name="remote-assist-specific-network-requirements"></a>Belirli ağ gereksinimlerine uzak yardım
 
-1. Remote Assist'in en iyi performansı için önerilen bant genişliği 1,5 Mb/sn'dir. Ek bilgi [için ayrıntılı ağ](https://docs.microsoft.com/MicrosoftTeams/prepare-network) gereksinimlerine bakın.
-**(Ağ hızınız en az 1,5 Mb/sn değilse Remote Assist'in çalışmaya devam eder. Ancak kalite düşük olabilir).**
-1. Microsoft Teams'in çalışmasını sağlamak için ağ güvenlik duvarında bu bağlantı noktalarına ve URL'lere izin verili olduğundan emin olun. bağlantı noktalarının en son [listesiyle güncel kalın.](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)
+1. Uzaktan Yardım 'ın en iyi performansı için önerilen bant genişliği 1,5 MB/sn 'dir. Ek bilgi için [ayrıntılı ağ gereksinimlerine](/MicrosoftTeams/prepare-network) bakın.
+**(Lütfen ağın en az 1,5 Mbps 'Lik ağ hızına sahip olmadığını, uzaktan yardım 'ın çalışmaya devam etmesi gerektiğini unutmayın. Ancak kalite zarar verebilir).**
+1. Microsoft Teams çalışmasını sağlamak için bu bağlantı noktalarına ve url 'lere ağ güvenlik duvarında izin verildiğinden emin olun. [En son bağlantı noktası listesiyle](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)güncel kalın.
 
-- Remote Assist için belirli Ağ [Gereksinimleri hakkında daha fazla bilgi edinebilirsiniz.](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/requirements#network-requirements) 
-- Microsoft Teams için kuruluş [ağına hazırlanma hakkında daha fazla bilgi](https://docs.microsoft.com/MicrosoftTeams/prepare-network)
+- [Uzaktan Yardım için belirli ağ gereksinimleri](/dynamics365/mixed-reality/remote-assist/requirements#network-requirements)hakkında daha fazla bilgi edinin. 
+- [Kuruluşunuzun ağını Microsoft Teams için hazırlama](/MicrosoftTeams/prepare-network) hakkında daha fazla bilgi edinin
 
-### <a name="guides-specific-network-requirements"></a>Kılavuzlar Belirli Ağ Gereksinimleri
+### <a name="guides-specific-network-requirements"></a>Belirli ağ gereksinimlerine kılavuzluk eder
 
 Kılavuzlar yalnızca uygulamayı indirmek ve kullanmak için ağ erişimi gerektirir.
 
 ## <a name="azure-active-directory-guidance"></a>Azure Active Directory Kılavuzu
 
 > [!NOTE]
-> Bu adım yalnızca, şirketiniz HoloLens'i yönetmeyi planlıyorsa gereklidir.
+> Bu adım yalnızca şirketiniz HoloLens yönetimini planlıyorsa gereklidir.
 
-1. Azure AD Lisansına sahip olduğundan emin olmak.
-Ek [bilgi için lütfen HoloLens](hololens-licenses-requirements.md) Lisans Gereksinimleri.
+1. Azure AD lisansına sahip olduğunuzdan emin olun.
+daha fazla bilgi için lütfen [lisans gereksinimlerini HoloLens](hololens-licenses-requirements.md) .
 
-1. Otomatik Kayıt kullanmayı planlıyorsanız Azure AD kaydı [yapılandırmanız gerekir.](https://docs.microsoft.com/intune/deploy-use/.set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment)
+1. Otomatik kayıt kullanmayı planlıyorsanız, [Azure ad kaydı](/intune/deploy-use/.set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment) ' nı yapılandırmanız gerekir.
 
-1. Şirket kullanıcılarının şirket içinde (Azure AD) Azure Active Directory emin olmak.
-Kullanıcı eklemek için [aşağıdaki](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory) yönergelere bakın.
+1. Şirketinizin kullanıcılarının Azure Active Directory (Azure AD) olduğundan emin olun.
+Kullanıcıları eklemek için aşağıdaki [yönergelere](/azure/active-directory/fundamentals/add-users-azure-active-directory) bakın.
 
-1. Benzer lisanslara ihtiyacı olan kullanıcıların aynı gruba eklenmelerini öneririz.
-    1. [Grup Oluşturma](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    1. [Gruplara kullanıcı ekleme](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal)
+1. Benzer lisanslara ihtiyaç duyan kullanıcıların aynı gruba eklenmesini öneririz.
+    1. [Grup oluşturma](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    1. [Gruplara kullanıcı ekleme](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal)
 
-1. Şirket kullanıcılarının (veya kullanıcı grubunun) gerekli lisanslara atanmalarını sağlar.
-Lisans atamanız gerekirse şu yönergeleri [izleyin.](https://docs.microsoft.com/azure/active-directory/fundamentals/license-users-groups)
+1. Şirketinizin kullanıcılarına (veya kullanıcı grubuna) gerekli lisansların atandığından emin olun.
+Lisans atamanız gerekiyorsa, bu [yönergeleri](/azure/active-directory/fundamentals/license-users-groups)izleyin.
 
-1. Bu adımı yalnızca kullanıcıların HoloLens/Mobile cihazlarını size kaydetmesi bekleniyorsa uygulayın (Üç seçenek vardır) Bu adımlar, şirket kullanıcılarının (veya bir kullanıcı grubunun) cihaz ekleyeci olmasını sağlar.
-    1. **1. Seçenek:** Tüm kullanıcılara cihazları Azure AD'ye katma izni verme.
-**Yönetici olarak Azure portal oturum açın**  >  **Azure Active Directory**  >  **Cihazlar**  >  **Cihaz Ayarları**  >
- **Kullanıcılar cihazları Azure AD'ye katabilirsiniz'i All olarak *ayarlayın***
+1. bu adımı yalnızca kullanıcıların HoloLens/mobil cihazını size kaydetmesi bekleniyorsa (üç seçenek bulunur), bu adımlar, şirketinizin kullanıcılarının (veya bir kullanıcı grubunun) cihaz ekleyebileceği şekilde emin olmanızı sağlar.
+    1. **Seçenek 1:** Tüm kullanıcılara cihazları Azure AD 'ye ekleme izni verin.
+**Azure Portal yönetici**  >  olarak oturum açın **Azure Active Directory**  >  **Cihazlar**  >  **cihaz Ayarlar**  >
+ **Kullanıcıları, cihazları Azure AD 'ye *Tüm* kullanıcılara birleştirebileceği şekilde ayarla**
 
-    1. **2. Seçenek:** Seçili kullanıcılara/gruplara cihazları Azure AD'ye katma izni verme **Yönetici olarak Azure portal'da** oturum açma Azure Active Directory Cihazları Cihaz Ayarları Kullanıcılar cihazları Azure AD'ye katarak  >    >    >    >
- **Azure AD'ye** 
- ![ katılabilir](images/azure-ad-image.png)
+    1. **Seçenek 2:** seçili kullanıcılara/gruplara cihazları azure ad 'ye eklemek için yönetici Azure Active Directory cihaz cihazı **olarak Azure portal oturum açma** izni verin  >    >    >  **Ayarlar**  >
+ **kullanıcılar cihazları azure ad 'ye,** 
+ ![ azure ad 'ye katılmış cihazların yapılandırmasını gösteren seçili görüntüye katabilir](images/azure-ad-image.png)
 
-    1. **3. Seçenek:** Tüm kullanıcıların cihazlarını etki alanına eklemesini engelleyebilirsiniz. Bu, tüm cihazların el ile kaydolması gerektirmektedir.
+    1. **Seçenek 3:** Tüm kullanıcıların cihazlarını etki alanına katılmasını engelleyebilirsiniz. Bu, tüm cihazların el ile kaydedilmesi gerektiği anlamına gelir.
 
-## <a name="mobile-device-manager-guidance"></a>Mobil Cihaz Yöneticisi Kılavuzu
+## <a name="mobile-device-manager-guidance"></a>Mobil Device Manager Kılavuzu
 
 ### <a name="ongoing-device-management"></a>Devam eden cihaz yönetimi
 
 > [!NOTE]
-> Bu adım yalnızca, şirket HoloLens'i yönetmeyi planlıyorsa gereklidir.
+> Bu adım yalnızca şirketiniz HoloLens yönetmeyi planlıyorsa gereklidir.
 
-Devam eden cihaz yönetimi, mobil cihaz yönetimi altyapınıza bağlıdır.  Çoğu genel işleve sahiptir ancak kullanıcı arabirimi büyük ölçüde değişiklik gösterebilir.
+Devam eden cihaz yönetimi, mobil cihaz yönetimi altyapınıza göre değişir.  Çoğu genel işlevselliğe sahiptir ancak kullanıcı arabirimi yaygın olarak farklılık gösterebilir.
 
-1. [CSP'ler (Yapılandırma](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) Hizmeti Sağlayıcıları), ağ üzerinde cihazlar için yönetim ayarları oluşturmanıza ve dağıtmanıza olanak tanır. Başvuru için [HoloLens CSP'leri](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) listesine bakın.
+1. [CSP 'ler (yapılandırma hizmeti sağlayıcıları)](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) ağınızdaki cihazlar için yönetim ayarları oluşturmanıza ve dağıtmanıza olanak sağlar. başvuru için [HoloLens csp 'lerin listesine](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices) bakın.
 
-1. [Uyumluluk ilkeleri,](https://docs.microsoft.com/intune/device-compliance-get-started) cihazların kurumsal altyapınıza uyumlu olması için karşılaması gereken kurallar ve ayarlardır. Uyumlu olmayan cihazların şirket kaynaklarına erişimini engellemek için Koşullu Erişim ile bu ilkeleri kullanın. Örneğin BitLocker’ın etkin olmasını gerektiren bir ilke oluşturabilirsiniz.
+1. [Uyumluluk ilkeleri](/intune/device-compliance-get-started) , cihazların kurumsal altyapınızda uyumlu olması için uyması gereken kural ve ayarlardır. Uyumlu olmayan cihazlarda şirket kaynaklarına erişimi engellemek için bu ilkeleri koşullu erişimle birlikte kullanın. Örneğin BitLocker’ın etkin olmasını gerektiren bir ilke oluşturabilirsiniz.
 
-1. [Uyumluluk İlkesi oluşturun.](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows)
+1. [Uyumluluk Ilkesi oluşturun](/intune/protect/compliance-policy-create-windows).
 
-1. Koşullu Erişim, mobil cihazların ve mobil uygulamaların şirket kaynaklarına erişmesine izin verir/erişimini geri verir. CA Dağıtımınızı planlama ve En İyi [Yöntemler belgelerini yararlı](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) [bulabilirsiniz.](https://docs.microsoft.com/azure/active-directory/conditional-access/best-practices)
+1. Koşullu erişim, mobil cihazların ve mobil uygulamaların şirket kaynaklarına erişmesini sağlar/reddeder. Yararlı bulabileceğiniz iki belge, CA dağıtımınızı ve [En Iyi uygulamalarınızı](/azure/active-directory/conditional-access/best-practices) [planlıyor](/azure/active-directory/conditional-access/plan-conditional-access) .
 
-1. [Bu makalede,](https://docs.microsoft.com/intune/fundamentals/windows-holographic-for-business) Intune'un HoloLens için yönetim araçları hakkında bilgi edinebilirsiniz.
+1. [Bu makalede](/intune/fundamentals/windows-holographic-for-business) , ıntune 'un HoloLens için yönetim araçları ele alım.
 
-1. [Cihaz profili oluşturma](https://docs.microsoft.com/intune/configuration/device-profile-create)
+1. [Cihaz profili oluşturma](/intune/configuration/device-profile-create)
 
 ### <a name="manage-updates"></a>Güncelleştirmeleri yönetme
 
-Intune, HoloLens 2 ve HoloLens v1 (Holographic for Business ile) dahil olmak üzere Windows 10 cihazlar için güncelleştirme halkaları adlı bir özellik içerir. Güncelleştirme halkaları, güncelleştirmelerin nasıl ve ne zaman yük olduğunu belirleyen bir grup ayar içerir.
+ıntune, HoloLens 2 ve HoloLens v1 (Holographic for Business ile) dahil Windows 10 cihazları için güncelleştirme halkaları adlı bir özellik içerir. Güncelleştirme halkaları, güncelleştirmelerin nasıl ve ne zaman yükleneceğini tespit eden bir grup ayar içerir.
 
-Örneğin güncelleştirmeleri yüklemek için bir bakım penceresi oluşturabilir veya güncelleştirmeler yüklendikten sonra yeniden başlatmayı seçebilirsiniz.  Güncelleştirmeleri güncelleştirmeye hazır olana kadar süresiz olarak duraklatmayı da seçebilirsiniz.
+Örneğin güncelleştirmeleri yüklemek için bir bakım penceresi oluşturabilir veya güncelleştirmeler yüklendikten sonra yeniden başlatmayı seçebilirsiniz.  Güncelleştirmeleri, güncelleştirmeye hazırsanız süresiz olarak duraklatıp de seçebilirsiniz.
 
-[Intune ile güncelleştirme halkalarını yapılandırma hakkında daha fazla bilgi okuyun.](https://docs.microsoft.com/intune/windows-update-for-business-configure)
+[Intune ile güncelleştirme halkalarını yapılandırma](/intune/windows-update-for-business-configure)hakkında daha fazla bilgi edinin.
 
 ### <a name="application-management"></a>Uygulama yönetimi
 
-HoloLens uygulamalarını yönetmek için:
+HoloLens uygulamalarını yönetme:
 
 1. Microsoft Store  
-  Bu Microsoft Store, HoloLens'de uygulamaları dağıtmanın ve tüketmenin en iyi yolu.  Mağazada zaten bulunan çok çeşitli temel HoloLens uygulamaları vardır veya kendi uygulamalarınızı [yayımlayın.](https://docs.microsoft.com/windows/uwp/publish/)  
-  Mağazada bulunan tüm uygulamalar herkese açık bir şekilde kullanılabilir, ancak kabul edilebilir değilse uygulamanın genel kullanıma İş İçin Microsoft Store.  
+  Microsoft Store, uygulamaları HoloLens dağıtmak ve kullanmak için en iyi yoldur.  mağazada zaten bulunan harika bir çekirdek HoloLens uygulamalar kümesi vardır veya [kendi kendinize yayımlayabilirsiniz](/windows/uwp/publish/).  
+  depodaki tüm uygulamalar herkese açık olarak kullanılabilir, ancak kabul edilebilir değilse İş İçin Microsoft Store kullanıma alın.  
 
-1. [İş İçin Microsoft Store](https://docs.microsoft.com/microsoft-store/)  
-  İş İçin Microsoft Store ve Eğitim, kurumsal ortamınız için özel bir depodur.  Bu araç, Microsoft Store ve HoloLens Windows 10 de yerleşik olarak yer alan uygulamaları kullanarak, uygulamaları bulmanızı, edinmenizi, dağıtmanızı ve yönetmenizi sağlar.  Ayrıca, ticari ortamınıza özgü ancak dünyaya değil, uygulamaları dağıtmanıza da olanak sağlar.
+1. [İş İçin Microsoft Store](/microsoft-store/)  
+  İş İçin Microsoft Store ve eğitim, kurumsal ortamınız için özel bir depodır.  kuruluşunuzun uygulamalarını bulmak, almak, dağıtmak ve yönetmek için Windows 10 ve HoloLens yerleşik Microsoft Store kullanmanıza olanak sağlar.  Ayrıca ticari ortamınıza özgü olan ancak dünyayı olmayan uygulamaları dağıtmanıza imkan tanır.
 
 1. Intune veya başka bir mobil cihaz yönetimi çözümü aracılığıyla uygulama dağıtımı ve yönetimi  
-  Intune dahil olmak üzere çoğu mobil cihaz yönetimi çözümü, iş hattı uygulamalarını doğrudan kayıtlı bir cihaz kümesine dağıtmak için bir yol sağlar.  [Intune uygulaması yüklemesi için bu makaleye bakın.](https://docs.microsoft.com/intune/apps-deploy)
+  Intune dahil olmak üzere çoğu mobil cihaz yönetimi çözümü, iş kolu uygulamalarını doğrudan bir kayıtlı cihaz kümesine dağıtmanın bir yolunu sağlar.  [Intune uygulama yüklemesi](/intune/apps-deploy)için bu makaleye bakın.
 
-1. _önerilmez_ Cihaz Portalı  
-  Uygulamalar doğrudan HoloLens'e de doğrudan sanal Windows Cihaz Portalı.  Geliştirici Modunun cihaz portalını kullanmak için etkinleştirilmesi gerektirildiğinden bu önerilmez.
+1. _önerilmez_ Cihaz portalı  
+  uygulamalar, Windows cihaz portalı kullanılarak doğrudan HoloLens de yüklenebilir.  Bu, geliştirici modunun cihaz portalını kullanmak için etkinleştirilmesi gerektiğinden önerilmez.
 
-[HoloLens'e uygulama yükleme hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/hololens/hololens-install-apps)
+[HoloLens uygulamalar yükleme](hololens-install-apps.md)hakkında daha fazla bilgi edinin.
 
 ### <a name="certificates"></a>Sertifikalar
 
-Sertifikaları MDM sağlayıcınız aracılığıyla dağıtabilirsiniz. Şirketiniz sertifika gerektiriyorsa, Intune PKCS, PFX ve SCEP'yi destekler. Hangi sertifikanın şirket için doğru olduğunu anlamak önemlidir. Hangi sertifikanın [sizin için en](https://docs.microsoft.com/intune/protect/certificates-configure) uygun olduğunu belirlemek için lütfen sertifika yapılandırmaları belgelerini ziyaret edin. HoloLens Kimlik Doğrulaması için sertifika kullanmayı planlıyorsanız, PFX veya SCEP sizin için uygun olabilir.
+Sertifika, MDM sağlayıcınız aracılığıyla dağıtabilirsiniz. Şirketiniz sertifika gerektiriyorsa Intune, PKCS, PFX ve SCEP 'yi destekler. Şirketiniz için hangi sertifikanın doğru olduğunu anlamak önemlidir. Size en uygun sertifikayı öğrenmek için lütfen [sertifika yapılandırması](/intune/protect/certificates-configure) belgelerini ziyaret edin. HoloLens kimlik doğrulaması için sertifika kullanmayı planlıyorsanız PFX veya SCEP sizin için uygun olabilir.
 
-SCEP kullanmak için [aşağıdaki adımlara bakın.](https://docs.microsoft.com/intune/protect/certificates-profile-scep)
+[SCEP](/intune/protect/certificates-profile-scep)kullanımı için aşağıdaki adımlara bakın.
 
-### <a name="how-to-upgrade-to-holographics-for-business-commercial-suite"></a>Holographics for Business Commercial Suite'e Yükseltme
+### <a name="how-to-upgrade-to-holographics-for-business-commercial-suite"></a>Business Commercial Suite için holografik 'e yükseltme
 
 > [!NOTE]
-> Windows Holographics for Business (ticari paket), yalnızca HoloLens 1. nesil cihazlara yöneliktir. Profil HoloLens 2 cihazlarına uygulanmaz.
+> Windows iş için holografik (ticari paket) yalnızca 1. gen cihaz HoloLens yöneliktir. profil HoloLens 2 cihaza uygulanmaz.
 
-Holografik yükseltme belgelerinde ticari pakete yükseltme [yönergelerini](https://docs.microsoft.com/intune/configuration/holographic-upgrade) bulabilirsiniz.
+[Holographic Upgrade](/intune/configuration/holographic-upgrade) belgelerindeki Commercial Suite 'e yükseltme yönergelerini bulabilirsiniz.
 
-### <a name="how-to-configure-kiosk-mode-using-microsoft-intune"></a>Microsoft Intune Kullanarak Bilgi Noktası Modunu Yapılandırma
+### <a name="how-to-configure-kiosk-mode-using-microsoft-intune"></a>Microsoft Intune kullanarak bilgi noktası modunu yapılandırma
 
-1. Eşitleme Microsoft Store Intune'a (Aşağıdaki yönergelere [bakın).](https://docs.microsoft.com/intune/apps/windows-store-for-business)
+1. Microsoft Store ıntune 'a eşitleyin (aşağıdaki [yönergelere](/intune/apps/windows-store-for-business)bakın).
 
-1. Uygulama ayarlarınızı denetleme
-    1. Microsoft Store Business hesabınızla oturum açın
-    1. **> Ürün ve Hizmetleri > Uygulamaları ve Yazılımlarını Yönetme > Eşitlemek istediğiniz uygulamayı seçin > Özel Mağaza Kullanılabilirliği > "Herkes" veya "Belirli Gruplar"ı seçin**
+1. Uygulama ayarlarınızı denetleyin
+    1. Microsoft Store iş hesabınızda oturum açın
+    1. **> ürünlerini ve hizmetlerini > uygulama ve yazılım > yönetme > özel mağaza kullanılabilirliği eşitlemek istediğiniz uygulamayı seçin > "Herkes" veya "belirli gruplar" ı seçin**
         >[!NOTE]
-        >Istediğiniz uygulamayı görmüyorsanız mağazada uygulama arayarak uygulamayı "ala" gerekir. **Sağ üst köşedeki "Ara"** çubuğuna tıklayın > uygulamanın adını yazın ve > tıklayın ve "Al" > seçin.
-    1. Uygulamalarınızı Intune'da > İstemci Uygulamaları **> Uygulamalar'da görmüyorsanız,** uygulamalarınızı [yeniden eşitlemeniz gerekir.](https://docs.microsoft.com/intune/apps/windows-store-for-business#synchronize-apps)
+        >İstediğiniz uygulamayı görmüyorsanız, uygulamanız için depoyu arayarak uygulamayı "almanız" gerekir. **Sağ üst köşedeki "ara" çubuğuna tıklayın > uygulamanın adını yazın > uygulamaya tıklayın > "Al" seçeneğini belirleyin**.
+    1. Uygulamalarınızı **ıntune > Istemci uygulamaları > uygulamalar** ' da görmüyorsanız uygulamalarınızı yeniden [eşitlemeniz](/intune/apps/windows-store-for-business#synchronize-apps) gerekebilir.
 
-1. [Bilgi Noktası modu için cihaz profili oluşturma](https://docs.microsoft.com/intune/configuration/kiosk-settings#create-the-profile)
+1. [Bilgi noktası modu için bir cihaz profili oluşturma](/intune/configuration/kiosk-settings#create-the-profile)
 
 > [!NOTE]
-> "Kullanıcı oturum açma türü" olarak "Azure AD" kullanarak farklı kullanıcıları farklı Bilgi Noktası Modu deneyimleri olacak şekilde yapılandırabilirsiniz. Ancak, bu seçenek yalnızca Çoklu Uygulama bilgi noktası modunda kullanılabilir. Çoklu Uygulama bilgi noktası modu yalnızca bir uygulamayla ve birden çok uygulamayla çalışır.
+> Farklı kullanıcıları, "Kullanıcı oturum açma türü" olarak "Azure AD" kullanarak farklı bilgi noktası modu deneyimleri olacak şekilde yapılandırabilirsiniz. Ancak, bu seçenek yalnızca çok uygulama bilgi noktası modunda kullanılabilir. Çoklu uygulama bilgi noktası modu, birden çok uygulama ile yalnızca bir uygulamayla birlikte çalışır.
 
-![Intune'da Bilgi Noktası Modu Yapılandırmasını gösteren resim](images/aad-kioskmode.png)
+![Intune 'da bilgi noktası modunun yapılandırılmasını gösteren resim](images/aad-kioskmode.png)
 
-Diğer MDM hizmetleri için yönergeler için sağlayıcınızın belgelerine bakın. MDM hizmetinize bilgi noktası ayarlamak için özel bir ayar ve tam XML yapılandırması kullanıyorsanız [HoloLens](hololens-kiosk.md#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) bilgi noktası yönergelerine bakın.
+Diğer MDM Hizmetleri için, yönergeler için sağlayıcınızın belgelerine bakın. MDM hizmetinizde bir bilgi noktası ayarlamak için özel bir ayar ve tam XML yapılandırması kullanmanız gerekiyorsa [HoloLens bilgi noktası](hololens-kiosk.md#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) yönergelerine bakın.
 
-## <a name="certificates-and-authentication"></a>Sertifikalar ve Kimlik Doğrulaması
+## <a name="certificates-and-authentication"></a>Sertifikalar ve kimlik doğrulama
 
-Sertifikalar MDM'ler aracılığıyla dağıtılabilir (MDM Bölümünde "sertifikalar" [bölümüne bakın).](hololens-commercial-infrastructure.md#mobile-device-manager-guidance) Sertifikalar, paket sağlama aracılığıyla HoloLens'e de dağıtılabilir. Daha fazla [bilgi için lütfen bkz. HoloLens](hololens-provisioning.md) Sağlama.
+Sertifikalar, MDM aracılığıyla dağıtılabilir ( [MDM bölümünde](hololens-commercial-infrastructure.md#mobile-device-manager-guidance)"Sertifikalar" konusuna bakın). sertifikalar, paket sağlama aracılığıyla HoloLens da dağıtılabilir. lütfen daha fazla bilgi için [HoloLens sağlama](hololens-provisioning.md) konusuna bakın.
 
-### <a name="additional-intune-quick-links"></a>Ek Intune Hızlı Bağlantıları
+### <a name="additional-intune-quick-links"></a>Ek Intune hızlı bağlantıları
 
-1. [Profil Oluşturma:](https://docs.microsoft.com/intune/configuration/device-profile-create) Profiller, kuruluşta cihazlara gelecek ayarları eklemenize ve yapılandırmanıza olanak tanır.
+1. [Profil oluşturma:](/intune/configuration/device-profile-create) Profiller, kuruluşunuzdaki cihazlara gönderilecek ayarları eklemenize ve yapılandırmanıza olanak tanır.
 

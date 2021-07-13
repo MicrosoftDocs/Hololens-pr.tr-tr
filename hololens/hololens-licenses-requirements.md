@@ -1,6 +1,6 @@
 ---
 title: Lisans gereksinimleri
-description: Mobil cihaz yönetimi, HoloLens ve Uzaktan Yardım için ihtiyacınız olan tüm lisans gereksinimleri ve yönergeleriyle güncel tutun.
+description: mobil cihaz yönetimi, HoloLens ve uzaktan yardım için ihtiyacınız olan tüm lisans gereksinimleri ve yönergeleriyle güncel tutun.
 ms.prod: hololens
 ms.sitesec: library
 author: pawinfie
@@ -12,49 +12,102 @@ ms.date: 1/23/2020
 ms.reviewer: ''
 manager: bradke
 appliesto:
-- HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 2f7af532d2172dcaa6514ee11dbb0d6ab5631929
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: d0d8aa648df7901dec8636942e43aa549e626d7e
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111380233"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635900"
 ---
 # <a name="license-requirements"></a>Lisans gereksinimleri
 
-## <a name="mobile-device-management-mdm-licenses-guidance"></a>Mobil cihaz yönetimi (MDM) lisans Kılavuzu
+## <a name="hololens-2-device-managed"></a>HoloLens 2 cihaz (yönetilen)
 
-HoloLens cihazlarınızı yönetmeyi planlıyorsanız Azure AD 'ye ve MDM 'ye ihtiyacınız olacaktır. Active Director (AD), HoloLens cihazlarını yönetmek için kullanılamaz.
-Intune dışında bir MDM kullanmayı planlıyorsanız [Azure Active Directory bir lisans](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) gerekir.
-MDM 'niz olarak Intune kullanmayı planlıyorsanız, Intune lisanslarını içeren [paketler listesini](https://docs.microsoft.com/intune/fundamentals/licenses) okuyun. **Azure AD 'nin bu paketlerin çoğunluğuna dahil edildiğini lütfen unutmayın.**
+[Azure AD hesabı](https://docs.microsoft.com/azure/active-directory/)
 
-## <a name="identify-the-licenses-needed-for-your-scenario-and-products"></a>Senaryonuz ve ürünleriniz için gereken lisansları belirler
+> [!IMPORTANT]
+> Active Directory (AD) HoloLens cihazlarını yönetmek için kullanılamaz.
 
-### <a name="hololens-1st-gen-licenses-requirements"></a>HoloLens (1. Genel) lisans gereksinimleri
+[Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) veya başka bir MDM.
+- [HoloLens 2 için Windows Autopilot](hololens2-autopilot.md)-hem bt yöneticileri hem de son kullanıcılar için sağlama deneyimini basitleştirir. bt yöneticileri HoloLens 2 ilkeyi önceden yapılandırabilir ve ilk önyükleme sonrasında cihazlar, sıfır son kullanıcı etkileşimi ile iş için kullanıma yönelik duruma dağıtılır. 
 
-HoloLens (1. gen) cihazınızı Windows holographic for Business 'a yükseltmeniz gerekebilir. (Yükseltmeniz gerekip gerekmediğini öğrenmek için bkz. [HoloLens ticari özellikleri](holoLens-commercial-features.md#feature-comparison-between-editions) ).
+  > [!NOTE]
+  > Windows Autopilot, önce [Azure P1](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) ve [otomatik kayıt](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) 'nin düşük dokunma Autopilot akışı ve cihaz dağıtımı için yapılandırılmasını gerektirir. 
 
- Bu durumda, şunları yapmanız gerekir:
+### <a name="business-use-case"></a>İş kullanım örneği: 
 
-- HoloLens Kurumsal Lisans XML dosyası alma
-- XML dosyasını HoloLens 'e uygulayın. Bunu bir [sağlama paketi](hololens-provisioning.md) veya [Mobil Device Manager](https://docs.microsoft.com/intune/configuration/holographic-upgrade) aracılığıyla yapabilirsiniz
+- [Dağıtım senaryosu A](hololens-requirements.md#scenario-a-deploy-to-cloud-connected-devices) -kavram kanıtı veya pilot dağıtım.
 
-### <a name="remote-assist-license-requirements"></a>Uzaktan Yardım lisans gereksinimleri
+- [Dağıtım senaryosu B](hololens-requirements.md#scenario-b-deploy-inside-your-organizations-network) -ölçekli dağıtım.
 
-Gerekli lisanslama ve cihaza sahip olduğunuzdan emin olun. Bu, [gereksinimler](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/requirements) belgelerini iade edebilirsiniz.
+## <a name="hololens-2-device-only-non-managed"></a>HoloLens 2 cihaz-yalnızca (yönetilmeyen)
 
-1. [Uzaktan Yardım lisansı](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist)
-    1. Ya da bir [Uzaktan Yardım denemesi](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist) deneyin
-1. [Ekipler Freemıum/takımlar](https://products.office.com/microsoft-teams/free)
-1. [Azure Active Directory (Azure AD) lisansı](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+Bir Microsoft hesabı (MSA) veya yerel hesap kullanırken bu hesaplar için ek lisans gerekmez.
 
-**[Bu çapraz kiracı senaryosunu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)** uygulamayı planlıyorsanız, bir bilgi engelleri lisansına ihtiyacınız olabilir. Bir bilgi engeli lisansının gerekip gerekmediğini öğrenmek için lütfen [Bu makaleye](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) bakın.
+[Yerel hesap](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts)
 
-### <a name="guides-license-requirements"></a>Kılavuzlar lisans gereksinimleri
+- bu hesabın Windows yapılandırma tasarımcısı (wcd) ile bir süre önce [sağlanması](hololens-provisioning.md#provisioning-package-hololens-wizard) gerekir.
 
-[Güncelleştirilmiş lisanslama ve cihaz gereksinimlerine](https://docs.microsoft.com/dynamics365/mixed-reality/guides/requirements)göz atın.
+[Microsoft hesabı (MSA)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)
 
-1. [Azure Active Directory (Azure AD) lisansı](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-1. [Power BI](https://powerbi.microsoft.com/desktop/)
-1. [Guides](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup)
+> [!WARNING]
+> Bu hesaplardan birini kullanan bir cihaz için birden fazla kullanıcı desteklenmez.
+
+### <a name="business-use-case"></a>İş kullanım örneği: 
+
+- [Dağıtım senaryosu C](hololens-requirements.md#scenario-c-deploy-in-secure-offline-environment) -çevrimdışı veya güvenli dağıtım.
+ 
+## <a name="dynamics-365-licensing-and-requirements"></a>Dynamics 365 lisanslama ve gereksinimleri
+
+### <a name="dynamics-365-remote-assist"></a>Dynamics 365 uzaktan yardım 
+
+#### <a name="admin"></a>Yönetici
+
+- Azure AD hesabı (aboneliğin satın alınması ve lisans atanması için gereklidir)
+- [Uzaktan Yardım aboneliği](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (veya [Uzaktan Yardım deneme sürümü](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist))
+    
+#### <a name="dynamics-365-remote-assist-user"></a>Dynamics 365 uzaktan yardım kullanıcısı
+
+- Azure AD hesabı
+
+- Uzaktan Yardım lisansı 
+
+  > [!NOTE]
+  > Microsoft Teams, uzaktan yardım ile paketlenmiştir
+
+- Ağ bağlantısı
+
+#### <a name="microsoft-teams-user"></a>Microsoft Teams kullanıcı
+
+- Azure AD hesabı
+
+- Microsoft Teams veya [Teams freemıum](https://products.office.com/microsoft-teams/free).
+
+- Ağ bağlantısı
+
+Bu [çapraz kiracı senaryosunu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)uygulamayı planlıyorsanız, bir bilgi engelleri lisansına ihtiyacınız olabilir. Bir bilgi engeli lisansının gerekip gerekmediğini öğrenmek için [Bu makaleye](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) bakın.
+
+### <a name="dynamics-365-guides"></a>Dynamics 365 kılavuzlar 
+
+#### <a name="admin"></a>Yönetici
+
+- Azure AD hesabı (aboneliğin satın alınması ve lisans atanması için gereklidir)
+- Dynamics 365 [Kılavuzlar aboneliği veya ücretsiz deneme](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one)
+
+#### <a name="guides-author"></a>Kılavuzlar yazarı
+
+1. Azure AD hesabı
+1. [Dynamics 365 kılavuzlar lisansı](/dynamics365/mixed-reality/guides/requirements)
+1. Bir PC 'de veya HoloLens yüklü olan Dynamics 365 kılavuzlar uygulaması
+1. [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (analiz panosunu görüntülemek için kullanılır)
+1. Yazar rolü (kılavuz oluşturmak için)
+1. Ağ bağlantısı
+
+#### <a name="guides-user"></a>Kılavuzlar kullanıcısı
+
+1. Azure AD hesabı
+1. [Dynamics 365 kılavuzlar lisansı](/dynamics365/mixed-reality/guides/requirements)
+1. Dynamics 365 kılavuzlar uygulaması HoloLens yüklendi
+1. İşleç rolü (test etmek veya kılavuzlar kullanmak için)
+1. Ağ bağlantısı

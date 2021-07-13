@@ -1,6 +1,6 @@
 ---
 title: Windows Holographic for Business kilidini açma
-description: Yeni sürüme Windows Holographic for Business, HoloLens iş için tasarlanmış ek özellikler sağlar.
+description: Windows Holographic for Business HoloLens iş için tasarlanmış ek özellikler sağlar.
 ms.prod: hololens
 ms.sitesec: library
 author: dansimp
@@ -12,40 +12,40 @@ ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 8d42c935e698f156aed894e4fa5012c9f04d8d49
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: b5ae9b0d6859c0f916b5b906e2e9ec54cad6cbd9
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379052"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635203"
 ---
 # <a name="unlock-windows-holographic-for-business-features"></a>Windows Holographic for Business kilidini açma
 
 > [!IMPORTANT]
-> Bu sayfa yalnızca HoloLens 1. Nesil için geçerlidir.
+> Bu sayfa yalnızca 1. HoloLens için geçerlidir.
 
-Microsoft HoloLens, Windows Holographic (HoloLens için tasarlanmış bir Windows 10 sürümü) ve iş için tasarlanmış ek özellikler sağlayan [Commercial Suite'te](hololens-commercial-features.md)çalışan Development *Edition'da* kullanılabilir.
+Microsoft HoloLens, Windows Holographic 'i (HoloLens için tasarlanmış bir Windows 10 sürümü) ve işletme için tasarlanmış ek özellikler sağlayan [Commercial Suite'te](hololens-commercial-features.md)çalışan *Geliştirme* Sürümü'ne sahiptir.
 
-Commercial Suite'i satın aldığınız zaman, Windows Holographic'i sanal Windows Holographic for Business. Bu lisansı, kuruluşun mobil cihaz yönetimi [(MDM)](#edition-upgrade-by-using-mdm) sağlayıcısını veya sağlama paketini kullanarak [cihaza uygulayabilirsiniz.](#edition-upgrade-by-using-a-provisioning-package)
+Commercial Suite'i satın aldığınız zaman Holographic'i sanal Windows yükselten bir Windows Holographic for Business. Bu lisansı, kuruluşun mobil cihaz yönetimi [(MDM)](#edition-upgrade-by-using-mdm) sağlayıcısını veya sağlama paketini kullanarak [cihaza uygulayabilirsiniz.](#edition-upgrade-by-using-a-provisioning-package)
 
 > [!TIP]
-> Sürüm Windows 10 1803'te Ayarlar Sistemi'ne bakarak HoloLens'in iş sürümüne yükseltildikten sonra bunu **kontrol**  >  **edebilirsiniz.**
+> Sürüm Windows 10 1803'te, HoloLens System 'i seçerek HoloLens'nin iş sürümüne **yükseltil**  >  **Ayarlar.**
 
 ## <a name="edition-upgrade-by-using-mdm"></a>MDM kullanarak sürüm yükseltme
 
 Kurumsal lisans, WindowsLicensing yapılandırma hizmet [sağlayıcısını (CSP)](https://msdn.microsoft.com/library/windows/hardware/dn904983.aspx)destekleyen herhangi bir MDM sağlayıcısı tarafından uygulanabilir. Microsoft MDM API'sini en son sürümü WindowsLicensing CSP'yi destekleyecektir.
 
-Microsoft Intune kullanarak HoloLens'i yükseltmeye ilişkin adım adım yönergeler için bkz. [Windows Holographic](https://docs.microsoft.com/intune/holographic-upgrade)çalıştıran cihazları Windows Holographic for Business.
+Microsoft Intune kullanarak HoloLens yükseltmeye ilişkin adım adım yönergeler için bkz. [Windows Holographic](/intune/holographic-upgrade)çalıştıran cihazları Windows Holographic for Business.
 
  Diğer MDM sağlayıcılarda, ilkeyi ayarlamaya ve dağıtmaya yönelik belirli adımlar farklılık gösterebilir.
 
 ## <a name="edition-upgrade-by-using-a-provisioning-package"></a>Sağlama paketi kullanarak sürüm yükseltmesi
 
-Paket sağlama, Windows Yapılandırma Tasarımcısı aracı tarafından oluşturulan ve bir cihaza belirtilen yapılandırmayı uygulayan dosyalardır.
+Paketleri sağlama, Windows Yapılandırma Tasarımcısı aracı tarafından oluşturulan ve cihaza belirtilen yapılandırmayı uygulayan dosyalardır.
 
 ### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition"></a>Windows Holographic sürümünü yükselten bir sağlama paketi oluşturma
 
-1. [HoloLens için bir sağlama paketi oluşturun.](hololens-provisioning.md)
+1. [Uygulama için bir sağlama HoloLens.](hololens-provisioning.md)
 1. Çalışma zamanı **ayarları**  >  **EditionUpgrade'a gidin** ve **EditionUpgradeWithLicense öğesini seçin.**
 
     ![Sürümü lisans ayarı seçili olarak yükseltin](images/icd1.png)
@@ -83,17 +83,17 @@ Paket sağlama, Windows Yapılandırma Tasarımcısı aracı tarafından oluştu
 
 1. Derleme tamamlandığında Son'a **seçin.**
 
-### <a name="apply-the-provisioning-package-to-hololens"></a>Sağlama paketini HoloLens'e uygulama
+### <a name="apply-the-provisioning-package-to-hololens"></a>Sağlama paketini HoloLens
 
-1. USB kablosunu kullanarak cihazı bir bilgisayara bağlayın. Cihazı başlatın, ancak ilk kurulum deneyiminin **sığdırma** sayfasını (mavi kutuyla ilk sayfa) devam edin. HoloLens, bilgisayarınızda cihaz olarak Dosya Gezgini.
+1. USB kablosunu kullanarak cihazı bir bilgisayara bağlayın. Cihazı başlatın, ancak ilk kurulum deneyiminin **sığdırma** sayfasını (mavi kutuyla ilk sayfa) devam edin. Pc'de HoloLens cihaz olarak Dosya Gezgini.
 
     > [!NOTE]
-    > HoloLens cihazı Windows 10, sürüm 1607 veya önceki bir sürümde çalışıyorsa, cihazda Volume **Down** ve **Power** düğmelerine kısa bir süre basarak ve bırakarak Dosya Gezgini'i açın.
+    > HoloLens 1607 veya önceki bir sürümde Windows 10 çalışıyorsa, cihazda Volume **Down** ve **Power** düğmelerine kısa bir süre basarak ve bırakarak Dosya Gezgini'i açın.
 
 1. Bu Dosya Gezgini sağlama paketini (.ppkg) sürükleyip cihaz depolama alanına bırakın.
 
-1. HoloLens hala uygun **sayfadayken,** kısa bir süre için Volume Down ve **Power** **düğmelerine tekrar** basın ve bırakın.
+1. Bu HoloLens uygun **sayfadayken,** kısa bir süre için  Aşağı Ses  Düzeyi ve Güç düğmelerine tekrar basın ve bırakın.
 
-1. HoloLens, pakete güvenmiyorsanız ve bunu uygulamak mı? Pakete güvenen bir onaylayın.
+1. HoloLens paketine güvenebilir ve uygulamak mı sorabilirsiniz. Pakete güvenen bir onaylayın.
 
 1. Paketin başarıyla uygulanıp uygulanmadı olmadığını gösterir. Başarıyla uygulanmadı ise, paketinizi düzeltebilir ve yeniden sınabilirsiniz. Başarılı olursa, cihaz kurulumuna devam edin.
