@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft HoloLens
-summary: Microsoft HoloLens, sanal ağlarda çalıştıracak ilk tam olarak kendi içinde holografik Windows 10. Artık HoloLens 2'nin kullanıma hazır olmasıyla birlikte, her HoloLens cihazı Microsoft'un bulut ve AI hizmetlerinin güvenilirliği, güvenliği ve ölçeklenebilirliğiyle geliştirilmiş ticari kullanıma hazır yönetim özellikleri sağlar.
+summary: Microsoft HoloLens, Windows 10 çalıştırılacak ilk tamamen kapsanan holographic bilgisayardır. artık HoloLens 2 ' nin kullanıma sunulmasıyla birlikte her HoloLens cihaz, Microsoft 'un bulut ve aı hizmetlerinin güvenilirliği, güvenliği ve ölçeklenebilirliği tarafından geliştirilmiş ticari kullanıma hazır yönetim özellikleri sağlar.
 metadata:
   title: Microsoft HoloLens
-  description: Giriş sayfası Microsoft HoloLens.
+  description: Microsoft HoloLens için giriş sayfası.
   ms.prod: hololens
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,20 +11,20 @@ metadata:
   ms.author: v-jjaswinski
   ms.date: 05/24/2021
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 8cb5b881e880adec2b59bde9b36fa700bfce3a91
-  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.openlocfilehash: a37ddd0867a0ea3dfa6f016e01728f2576663aaf
+  ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
   ms.translationtype: MT
   ms.contentlocale: tr-TR
   ms.lasthandoff: 07/12/2021
-  ms.locfileid: "113637158"
+  ms.locfileid: "113639429"
 landingContent:
-- title: 2. HoloLens hakkında daha fazla şey
+- title: HoloLens 2 ' ye ulaşın
   linkLists:
   - linkListType: learn
     links:
-    - text: HoloLens 2 özellik ve çözüm
+    - text: HoloLens 2 özellikleri ve çözümleri
       url: hololens-commercial-features.md
-    - text: HoloLens 2 seçeneği
+    - text: HoloLens 2 seçenekleri
       url: hololens2-options.md
     - text: HoloLens 2 donanım
       url: hololens2-hardware.md
@@ -32,41 +32,41 @@ landingContent:
     links:
     - text: Yalnızca cihaz
       url: hololens2-options-device-only.md
-    - text: Remote Assist sürümü
+    - text: Uzaktan Yardım sürümü
       url: hololens2-options-remote-assist.md
     - text: Endüstriyel sürüm
       url: hololens2-options-industrial-edition.md
     - text: Geliştirme sürümü
       url: hololens2-options-dev-edition.md
-    - text: HoloLens 2 ile XR10'HoloLens kırp
+    - text: HoloLens 2 ile tribirleştirmek XR10
       url: hololens2-options-trimble-xr10-edition.md
 - title: başlarken
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: İlk kullanım
+    - text: İlk Kullanım zamanı
       url: hololens2-setup.md
     - text: Günlük kullanım
       url: holographic-home.md
-- title: HoloLens 2 dağıtımınızı planlama
+- title: HoloLens 2 dağıtımınızı planlayın
   linkLists:
   - linkListType: architecture
     links:
     - text: Yaygın dağıtım senaryoları
       url: common-scenarios.md
-    - text: Ticari HoloLens 2 dağıtımı planlama
+    - text: ticari bir ortamda HoloLens 2 dağıtımı planlama
       url: hololens-core-components.md
     - text: Autopilot CSS kaydı
       url: hololens2-autopilot-registration-support.md
   - linkListType: deploy
     links:
-    - text: Dağıtım Kılavuzu - Remote Assist HoloLens büyük ölçekte buluta bağlı ve 2 dağıtım
+    - text: dağıtım kılavuzu-buluta bağlı HoloLens 2 dağıtım, uzaktan yardım ile uygun ölçekte
       url: hololens2-cloud-connected-overview.md
-    - text: Dağıtım Kılavuzu - Dış İstemciler (buluta bağlı)
+    - text: Dağıtım Kılavuzu-dış Istemciler (buluta bağlı)
       url: hololens2-deployment-guide.md
-    - text: Dağıtım Kılavuzu - Dynamics 365 HoloLens 2 dağıtımı ile kurumsal bağlantılı dağıtım
+    - text: dağıtım kılavuzu-Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2 dağıtımı
       url: hololens2-corp-connected-overview.md
-    - text: Dağıtım Kılavuzu - Çevrimdışı güvenli
+    - text: Dağıtım Kılavuzu-çevrimdışı güvenli
       url: hololens-common-scenarios-offline-secure.md
 - title: Sorun giderme
   linkLists:
@@ -74,23 +74,23 @@ landingContent:
     links:
     - text: Cihaz
       url: hololens-troubleshooting.md
-    - text: Hologramlar etkileşimler
+    - text: Hologramlar ve etkileşimler
       url: hololens-faq.md
     - text: Göster
       url: hololens2-display.md
     - text: Uygulama ve yönetilen cihazlar
       url: hololens2-enterprise-troubleshooting.md
-    - text: Cihazlardan tanılama bilgilerini toplama HoloLens kullanma
+    - text: HoloLens cihazlarından tanılama bilgilerini toplayın ve kullanın
       url: hololens-diagnostic-logs.md
-    - text: 2' de yeniden başlatma, sıfırlama HoloLens kurtarma
+    - text: HoloLens 2 ' yi yeniden başlatın, sıfırlayın veya kurtarın
       url: hololens-recovery.md
 - title: Kaynaklar
   linkLists:
   - linkListType: whats-new
     links:
-    - text: HoloLens 2 sürüm notu
+    - text: HoloLens 2 sürüm notları
       url: hololens-release-notes.md
-    - text: Insider önizlemesi
+    - text: Insider Preview
       url: hololens-insider.md
   - linkListType: reference
     links:
@@ -98,27 +98,27 @@ landingContent:
       url: hololens2-support.md
     - text: Geri bildirimde bulunun
       url: hololens-feedback.md
-- title: HoloLens 2 ile geliştirme
+- title: HoloLens 2 ile geliştirin
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Karma Gerçeklik nedir?
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality
-    - text: Tasarlamaya ve prototyping'e başlama
-      url: https://docs.microsoft.com/windows/mixed-reality/design
+      url: /windows/mixed-reality/mixed-reality
+    - text: Tasarlamaya ve prototip oluşturmaya başlayın
+      url: /windows/mixed-reality/design
     - text: Karma Gerçeklik geliştirmeye giriş
-      url: https://docs.microsoft.com/windows/mixed-reality/development?tabs=unity
-    - text: Cloud Services Genel Bakış
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality-cloud-services#overview
-    - text: Microsoft Mesh (Önizleme)
-      url: https://docs.microsoft.com/mesh/overview
+      url: /windows/mixed-reality/development?tabs=unity
+    - text: Cloud Services genel bakış
+      url: /windows/mixed-reality/mixed-reality-cloud-services#overview
+    - text: Microsoft ağı (Önizleme)
+      url: /mesh/overview
 - title: Diğer hizmetler
   linkLists:
   - linkListType: reference
     links:
-    - text: Dynamics 365 Remote Assist Belgeleri
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview
-    - text: Dynamics 365 Kılavuzları
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
-    - text: Microsoft Dynamics 365 Karma Gerçeklik
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+    - text: Dynamics 365 uzaktan yardım belgeleri
+      url: /dynamics365/mixed-reality/remote-assist/ra-overview
+    - text: Dynamics 365 kılavuzlar
+      url: /dynamics365/mixed-reality/guides/
+    - text: Microsoft Dynamics 365 karma gerçeklik
+      url: /dynamics365/mixed-reality/
