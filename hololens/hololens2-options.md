@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 32153fd6f7703347f4fe2f9ad41043fbeb9fab3f
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640483"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659038"
 ---
 # <a name="compare-hololens-2-options"></a>HoloLens 2 seçeneklerini karşılaştırın
 
@@ -47,17 +47,6 @@ bir bt uzmanı, yeni bir gerçeklik için deneyim oluşturmaya yönelik bir [gel
 - <sup>2</sup> -Microsoft tarafından kusurlu cihaz alınmadan önce, bir değiştirme cihazını fazla gece veya çabuk gönderim (kullanılabilir seçeneklerin daha hızlı bir şekilde) alın.
 - <sup>3</sup> -HoloLens 2 sürümü ile tribir XR10 için garanti, destek ve sertifika soruları için, [üç yönlü birleştirmek için iletişim kurun](https://fieldtech.trimble.com/en/contact-support).
 
-## <a name="countries-where-hololens-2-is-available"></a>HoloLens 2 ' nin kullanılabildiği ülkeler
-
-<br>
-
-| HoloLens 2 sürümü                  | Desteklenen pazarlar               |
-|-------------------------------------------| ----------------------------------------| 
-| HoloLens 2 | ABD, Kanada, Almanya, Fransa, UK, Irlanda, Çin, Japonya, Avustralya, Italya, Yeni Zelanda, Hollanda, Isviçre, Ispanya, Avusturya, Isveç, Finlandiya, Norveç, Danimarka, Belçika, Portekiz, Polonya, Singapur, Hong Kong, Tayvan ve Güney Kore |
-| uzaktan yardım ile HoloLens 2 | Avustralya, Japonya, Kanada, ABD, Avusturya, Belçika, Danimarka, Finlandiya, Fransa, Almanya, Italya, Hollanda, Norveç, Ispanya, Isveç, Isviçre, UK ve Irlanda <sup>1</sup> 
-| HoloLens 2 endüstriyel sürümü *(başlatma sırasında)* | ABD, Kanada, Almanya, Fransa, UK, Irlanda, Çin, Japonya, Avustralya, Italya, Yeni Zelanda, Hollanda, Isviçre, Ispanya, Avusturya, Isveç, Finlandiya, Norveç, Danimarka, Belçika, Portekiz, Polonya, Singapur, Hong Kong, Tayvan ve Güney Kore |
-| HoloLens 2 geliştirme sürümü | Kanada, Almanya, Fransa, UK, Irlanda, Japonya, Avustralya, Italya, Isviçre ve Yeni Zelanda |
-- <sup>1</sup> bu liste dinamiktir, güncelleştirmeleri geri çek
 
 ## <a name="options-overview"></a>Seçeneklere genel bakış
 

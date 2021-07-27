@@ -12,7 +12,6 @@
 ### [Geliştirme sürümü](hololens2-options-dev-edition.md)
 #### [HoloLens 2 geliştirme sürümü sss](hololens2-development-edition-faq.yml)
 ### [Tribirleştirmek XR10 sürümü](hololens2-options-trimble-xr10-edition.md)
-### [Ticari Özellikler](hololens-commercial-features.md)
 
 # HoloLens kullanma
 ## İlk Kullanım zamanı
@@ -103,39 +102,40 @@
 
 # Sorun giderme
 ## [Cihaz](hololens-troubleshooting.md)
-## [Hologramlar etkileşimler](hololens-faq.md)
+## [Hologramlar ve etkileşimler](hololens-faq.md)
 ## [Görüntüleme](hololens2-display.md)
 ## [Uygulama ve yönetilen cihazlar](hololens2-enterprise-troubleshooting.md#)
 ## [Tanılama günlüklerini etkinleştirme](hololens-diagnostic-logs.md)
-## [Sıfırlama HoloLens 2](hololens-recovery.md)
+## [sıfırlama HoloLens 2](hololens-recovery.md)
 
 # Kaynaklar
+## [HoloLens 2 satın alınacağı yer](hololens2-purchase.md)
 ## [Destek ve yardım seçenekleri](hololens2-support.md)
 ## [Autopilot destek istekleri](hololens2-autopilot-registration-support.md)
-## [HoloLens 2 sürüm notu](hololens-release-notes.md)
+## [HoloLens 2 sürüm notları](hololens-release-notes.md)
 ## [Microsoft HoloLens için Insider önizlemesi](hololens-insider.md)
 ## [Desteklenen diller](hololens2-language-support.md)
-## [Microsoft Mesh ile geliştirme (Önizleme)](/mesh/overview)
-## HoloLens (1. nesil)
-### İlk kullanım
-#### [HoloLens (1. nesil)](hololens1-hardware.md)
-#### [HoloLens (1. nesil) uygun ve rahat](hololens1-fit-comfort-faq.md)
-#### [Temel kullanımlara genel bakış](hololens1-setup.md)
-#### [Kümenizi ayarlama HoloLens (1. nesil)](hololens1-start.md)
-### Günlük Kullanım
-#### [HoloLens (1. nesil) tıklamayı kullanma](hololens1-clicker.md)
-#### [3B Görüntüleyici 'de HoloLens kullanma (1. nesil)](holographic-3d-viewer-beta.md)
-#### [HoloLens (1. nesil)](hololens1-basic-usage.md)
+## [Microsoft ağı ile Geliştirme (Önizleme)](/mesh/overview)
+## HoloLens (1. genel)
+### İlk Kullanım zamanı
+#### [HoloLens hakkında (1. genel)](hololens1-hardware.md)
+#### [HoloLens (1. genel) sığdırma ve rahatlık](hololens1-fit-comfort-faq.md)
+#### [Temel kullanıma genel bakış](hololens1-setup.md)
+#### [HoloLens ayarlama (1. genel)](hololens1-start.md)
+### Günlük kullanım
+#### [HoloLens (1. gen) click kullanın](hololens1-clicker.md)
+#### [HoloLens 'da 3b görüntüleyicisi 'ni kullanın (1. genel)](holographic-3d-viewer-beta.md)
+#### [HoloLens alma (1. genel)](hololens1-basic-usage.md)
 #### [HoloLens için özel uygulamaları yönetme](holographic-custom-apps.md)
-#### [HoloLens yerelleştirilmiş sürümünü yükleme (1. nesil)](hololens1-install-localized.md)
-#### [Windows Holographic for Business kilidini açma](hololens1-upgrade-enterprise.md)
-#### [Sıfırlama HoloLens (1. nesil)](hololens1-recovery.md)
-### HoloLens (1. Nesil) Güvenlik
-#### [Sık sorulan HoloLens (1. nesil) Güvenlik Soruları](hololens1-faq-security.yml)
-#### [HoloLens (1. Nesil) BitLocker Şifrelemesi](hololens1-encryption.md)
-### [HoloLens (1. nesil) için bilinen sorunlar ve geçici çözümler](hololens-known-issues.md)
-### [HoloLens (1. Nesil) sürüm notları](hololens1-release-notes.md)
+#### [HoloLens yerelleştirilmiş sürümünü (1. gen) yükler](hololens1-install-localized.md)
+#### [Windows Holographic for Business özelliklerinin kilidini aç](hololens1-upgrade-enterprise.md)
+#### [HoloLens sıfırla (1. genel)](hololens1-recovery.md)
+### HoloLens (1. genel) güvenlik
+#### [sık sorulan HoloLens (1. genel) güvenlik soruları](hololens1-faq-security.yml)
+#### [HoloLens (1. genel) BitLocker şifrelemesi](hololens1-encryption.md)
+### [HoloLens için bilinen sorunlar ve geçici çözümler (1. genel)](hololens-known-issues.md)
+### [HoloLens (1. genel) sürüm notları](hololens1-release-notes.md)
 
 # Geri bildirimde bulunun
-## [Geri Bildirim Merkezi aracılığıyla bize geri bildirim Geri Bildirim Merkezi](hololens-feedback.md)
+## [Geri Bildirim Hub 'ı aracılığıyla bize geri bildirimde bulunun](hololens-feedback.md)
 ## [HoloLens belgeleri katkıda bulunan kılavuzu](contributing.md)

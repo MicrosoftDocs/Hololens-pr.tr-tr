@@ -1,6 +1,6 @@
 ---
-title: HoloLens için Kullanıcı kimliğini yönetme ve oturum açma
-description: HoloLens cihazlar için kullanıcı kimliği, çoklu kullanıcı desteği, güvenlik, kurumsal kimlik doğrulama ve oturum açma yönetimi hakkında bilgi edinin.
+title: Kullanıcılar için kullanıcı kimliğini ve oturum HoloLens
+description: Cihazlarınızı yönetmek için kullanıcı kimliğini, çok kullanıcı desteğini, güvenliği, kurumsal kimlik doğrulamasını ve oturum HoloLens öğrenin.
 keywords: HoloLens, kullanıcı, hesap, AAD, Azure AD, adfs, microsoft hesabı, msa, kimlik bilgileri, başvuru
 ms.assetid: 728cfff2-81ce-4eb8-9aaa-0a3c3304660e
 author: scooley
@@ -18,101 +18,101 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 4d959d99b65085aea2a776725abdb36e27b43b81
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 1081ed512183592e66e65f2e69323752b822f1c1
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640398"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659191"
 ---
-# <a name="manage-user-identity-and-sign-in-for-hololens"></a>HoloLens için Kullanıcı kimliğini yönetme ve oturum açma
+# <a name="manage-user-identity-and-sign-in-for-hololens"></a>Kullanıcılar için kullanıcı kimliğini ve oturum HoloLens
 
 > [!NOTE]
-> Bu makale, BT profesyonelleri ve teknoloji meraklıları için teknik bir başvurudur. yönergeleri ayarlamak HoloLens arıyorsanız, "[HoloLens ayarlama (1. genel)](hololens1-start.md)" veya "[HoloLens 2](hololens2-start.md)' yi ayarlama" konusunu okuyun.
+> Bu makale, IT Uzmanları ve teknoloji meraklıları için teknik bir başvuru sağlar. Ayarlama yönergelerini HoloLens, " HoloLens[(1. nesil) " veya](hololens1-start.md)"[2.](hololens2-start.md)Nesil'inizi ayarlama" HoloLens okuyun.
 
-diğer Windows cihazları gibi HoloLens her zaman bir kullanıcı bağlamı altında çalışır. Her zaman bir kullanıcı kimliği vardır. HoloLens kimliği, diğer Windows 10 cihazlarıyla neredeyse aynı şekilde davranır. bu makale, HoloLens kimlik için ayrıntılı bir başvurudur ve HoloLens diğer Windows 10 cihazlarından farklı bir şekilde farklılık gösterir.
+Diğer Windows cihazlar gibi, HoloLens her zaman bir kullanıcı bağlamında çalışır. Her zaman bir kullanıcı kimliği vardır. HoloLens diğer cihazlarda olduğu gibi neredeyse aynı şekilde Windows 10 davranır. Bu makale, HoloLens'da kimlik için derinlemesine bir başvurudur ve HoloLens cihazlardan Windows 10 odaklanır.
 
-HoloLens çeşitli kullanıcı kimliklerini destekler. Oturum açmak için bir veya daha fazla kullanıcı hesabı kullanabilirsiniz. İşte HoloLens kimlik türleri ve kimlik doğrulama seçeneklerine genel bakış:
+HoloLens çeşitli kullanıcı kimliklerini destekler. Oturum açma için bir veya daha fazla kullanıcı hesabı kullanabilirsiniz. Kimlik türlerine ve kimlik doğrulama seçeneklerine genel bakış bilgileri burada HoloLens:
 
-| Kimlik türü | Cihaz başına hesaplar | Kimlik doğrulaması seçenekleri |
+| Kimlik türü | Cihaz başına hesap sayısı | Kimlik doğrulaması seçenekleri |
 | --- | --- | --- |
-| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Azure Web kimlik bilgileri sağlayıcısı</li><li>Azure Authenticator uygulaması</li><li>biyometrik (ıris) &ndash; HoloLens 2<sup></sup> </li><li>&ndash;HoloLens (1. gen) için isteğe bağlı sabitle, HoloLens 2 için gereklidir</li><li>Parola</li></ul> |
-| [Microsoft hesabı (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>biyometrik (ıris) &ndash; yalnızca 2 HoloLens</li><li>&ndash;HoloLens (1. gen) için isteğe bağlı sabitle, HoloLens 2 için gereklidir</li><li>Parola</li></ul> |
+| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Azure web kimlik bilgisi sağlayıcısı</li><li>Azure Authenticator Uygulaması</li><li>Biyometri (Iris) &ndash; HoloLens 2 yalnızca<sup>2</sup> </li><li>PIN &ndash; İsteğe bağlı HoloLens (1. nesil), 2. nesil için HoloLens gerekir</li><li>Parola</li></ul> |
+| [Microsoft Hesabı (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biyometrik (Iris) &ndash; HoloLens 2</li><li>PIN &ndash; İsteğe bağlı HoloLens (1. nesil), 2. nesil için HoloLens gerekir</li><li>Parola</li></ul> |
 | [Yerel hesap](/windows/security/identity-protection/access-control/local-accounts) | 1 | Parola |
 
-Buluta bağlı hesaplar (Azure AD ve MSA), Azure hizmetleri 'ni kullanabileceğinden daha fazla özellik sunmaktadır.  
+Buluta bağlı hesaplar (Azure AD ve MSA), Azure hizmetlerini kullanabileceği için daha fazla özellik sunar.  
 > [!IMPORTANT]
-> 1-Azure AD Premium cihazda oturum açmak için gerekli değildir. Ancak, otomatik kayıt ve Autopilot gibi, düşük dokunmalı bir bulut tabanlı dağıtımın diğer özellikleri için gereklidir.
+> 1 - Azure AD Premium için gerekli değildir. Ancak, Auto-enrollment ve Autopilot gibi düşük temaslı bulut tabanlı dağıtımın diğer özellikleri için gereklidir.
 
 > [!NOTE]
-> 2-HoloLens 2 cihaz en fazla 64 Azure AD hesabını destekleyebileceği için, bu hesapların yalnızca 10 ' u ıris kimlik doğrulamasında kayıt olabilir. bu, [iş Windows Hello yönelik diğer biyometrik kimlik doğrulama seçenekleriyle](/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer)hizalanır.
+> 2 - HoloLens 2 cihazı en fazla 64 Azure AD hesabını destekleyene kadar, bu hesaplardan yalnızca 31'i Iris Kimlik Doğrulaması'ya kaydolabilirsiniz. Bu, İş için güvenlik için [diğer Biyometrik kimlik doğrulama Windows Hello hizalanır.](/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer)
 
 ## <a name="setting-up-users"></a>Kullanıcıları ayarlama
 
-yeni bir kullanıcı oluşturmanın en yaygın yolu HoloLens kullanıma hazır deneyimidir (OOBE). kurulum sırasında, HoloLens kullanıcının cihazda kullanmak istedikleri hesabı kullanarak oturum açmasını ister. Bu hesap, bir tüketici Microsoft hesabı veya Azure 'da yapılandırılmış bir kurumsal hesap olabilir. bkz. HoloLens ayarlama [(1. genel)](hololens1-start.md) veya [HoloLens 2](hololens2-start.md).
+Yeni kullanıcı ayarlamanın en yaygın yolu, HoloLens deneyimi (OOBE) sırasındadır. Kurulum sırasında HoloLens kullanıcıdan cihazda kullanmak istediğiniz hesabı kullanarak oturum açmasını ister. Bu hesap bir tüketici hesabı Microsoft hesabı Azure'da yapılandırılmış bir kurumsal hesap olabilir. Bkz. HoloLens [(1. nesil) veya](hololens1-start.md) HoloLens [2.](hololens2-start.md)
 
-diğer cihazlarda Windows gibi, kurulum sırasında oturum açmak cihazda bir kullanıcı profili oluşturur. Kullanıcı profili, uygulamaları ve verileri depolar. aynı hesap, Windows account Manager apı 'lerini kullanarak kenar veya Microsoft Store gibi uygulamalarda çoklu oturum açma olanağı da sağlar.  
+Diğer Windows gibi, kurulum sırasında oturum açma işlemi cihazda bir kullanıcı profili oluşturur. Kullanıcı profili, uygulamaları ve verileri depolar. Aynı hesap, Microsoft Account Manager API'lerini kullanarak Edge veya Microsoft Store uygulamalar için Windows oturum açma da sağlar.  
 
-HoloLens oturum açmak için bir kuruluş veya kuruluş hesabı kullanıyorsanız, HoloLens kuruluşun bt altyapısına kaydeder. Bu kayıt, BT yöneticinizin, mobil cihaz yönetimi 'ni (MDM) HoloLens Grup ilkeleri gönderecek şekilde yapılandırmasına olanak sağlar.
+Bir kuruluş veya kuruluş hesabı kullanarak HoloLens HoloLens kuruluşun IT altyapısına kaydolabilirsiniz. Bu kayıt, IT Yöneticinizin mobil uygulamanıza grup Cihaz Yönetimi göndermesi için Mobile Cihaz Yönetimi 'i (MDM) HoloLens.
 
-varsayılan olarak, diğer Windows 10 cihazlarda olduğu gibi, HoloLens yeniden başlatıldığında veya bekleme modundan devam ettiğinde yeniden oturum açmanız gerekir. bu davranışı değiştirmek için Ayarlar uygulamasını kullanabilirsiniz veya davranış grup ilkesi tarafından denetlenebilir.
+Varsayılan olarak, diğer Windows 10 cihazlarda olduğu gibi, bekleyen cihaz yeniden başlatıldığında veya HoloLens sürdürerek yeniden oturum açmanız gerekir. Ayarlar uygulamasını kullanarak bu davranışı değiştirebilirsiniz veya davranış grup ilkesi tarafından denetlenebilirsiniz.
 
 ### <a name="linked-accounts"></a>Bağlı hesaplar
 
-Windows masaüstü sürümünde olduğu gibi, HoloLens hesabınıza ek web hesabı kimlik bilgileri bağlayabilirsiniz. Bu tür bağlama, kaynaklara veya uygulamalara (mağaza gibi) veya kişisel ve iş kaynaklarına erişimi birleştirmeye daha kolay bir şekilde erişmenizi sağlar. Cihaza bir hesabı bağladığınızda, her uygulamada tek tek oturum açmanıza gerek kalmaması için cihazı uygulamalara kullanma izni verebilirsiniz.
+Uygulamanın Masaüstü sürümünde olduğu Windows, ek web hesabı kimlik bilgilerini HoloLens ebilirsiniz. Bu tür bir bağlantı, uygulamalar arasında veya uygulamalar içinde (Mağaza gibi) kaynaklara erişmeyi veya kişisel ve iş kaynaklarına erişimi birleştirmeyi kolaylaştırır. Cihaza bir hesap bağlamanın ardından, her uygulamada tek tek oturum açmanız gerekmay için cihazı uygulamalara kullanma izni veebilirsiniz.
 
-Bağlantı hesapları, cihazda oluşturulan görüntü veya indirme gibi kullanıcı verilerini ayıramaz.  
+Hesapları bağlama, cihazda oluşturulan görüntüler veya indirmeler gibi kullanıcı verilerini ayırmaz.  
 
-### <a name="setting-up-multi-user-support-azure-ad-only"></a>Çoklu Kullanıcı desteğini ayarlama (yalnızca Azure AD)
+### <a name="setting-up-multi-user-support-azure-ad-only"></a>Çok kullanıcılı desteği ayarlama (yalnızca Azure AD)
 
-HoloLens, aynı Azure AD kiracısından birden çok kullanıcıyı destekler. Bu özelliği kullanmak için, cihazı kurmak üzere kuruluşunuza ait bir hesabı kullanmanız gerekir. Daha sonra, aynı kiracının diğer kullanıcıları, oturum açma ekranından veya Başlat panelindeki Kullanıcı kutucuğuna dokunarak cihazda oturum açabilir. Tek seferde yalnızca bir Kullanıcı oturum açabilir. bir kullanıcı oturum açtığında, önceki kullanıcı oturumunu HoloLens. Cihazdaki ilk Kullanıcı cihaz sahibi olarak kabul edilir. Bu durumda, Azure AD katılımı söz konusu olduğunda [cihaz sahipleri hakkında daha fazla bilgi edinebilirsiniz](security-adminless-os.md#device-owner).
+HoloLens Aynı Azure AD kiracısına sahip birden çok kullanıcıyı destekler. Bu özelliği kullanmak için, cihazı ayarlamak için, kuruluşa ait bir hesap kullansanız gerekir. Daha sonra, aynı kiracıdan diğer kullanıcılar oturum açma ekranından veya Başlat panelindeki kullanıcı kutucuğuna dokunarak cihazda oturum açın. Aynı anda yalnızca bir kullanıcı oturum adedi. Bir kullanıcı oturum HoloLens önceki kullanıcının oturumlarını sildi. Cihaz sahibi olarak kabul edilen cihaz kullanıcısı, Azure AD'ye Katılma dışında cihaz sahipleri [hakkında daha fazla bilgi edinin.](security-adminless-os.md#device-owner)
 
-Tüm kullanıcılar cihazda yüklü olan uygulamaları kullanabilir. Ancak, her bir kullanıcının kendi uygulama verileri ve tercihleri vardır. Bir uygulamayı cihazdan kaldırma, tüm kullanıcılar için kaldırır.  
+Tüm kullanıcılar cihazda yüklü olan uygulamaları kullanabilir. Ancak her kullanıcının kendi uygulama verileri ve tercihleri vardır. Bir uygulamayı cihazdan kaldırmak tüm kullanıcılar için kaldırır.  
 
-Azure AD hesapları ile ayarlanan cihazlar cihazda Microsoft hesabıyla oturum açmaya izin vermez. Kullanılan tüm sonraki hesaplar, cihazla aynı kiracıdan Azure AD hesapları olmalıdır. Bunu destekleyen [uygulamalar için bir Microsoft hesabı kullanarak oturum](hololens-identity.md#setting-up-multi-user-support-azure-ad-only) açabilirsiniz (örneğin, Microsoft Store). Azure AD hesaplarını cihazda oturum açmak için Microsoft hesapları kullanmaya geçiş yapmak için, [cihazı yeniden Flash](hololens-recovery.md#clean-reflash-the-device)etmeniz gerekir.
+Azure AD hesaplarıyla ayarlanmış cihazlar microsoft hesabıyla cihazda oturum açmasına izin vermez. Sonraki tüm hesapların cihazla aynı kiracıdan Azure AD hesapları olması gerekir. Bunu destekleyen [uygulamalarda (örneğin, microsoft hesabı)](hololens-identity.md#setting-up-multi-user-support-azure-ad-only) bir Microsoft Hesabı kullanarak oturum Microsoft Store. Cihazda oturum a0 için Azure AD hesaplarının kullanımından Microsoft Hesapları'nın kullanımına değiştirmek için cihaza [ters eğik çizgi uygulamanız gerekir.](hololens-recovery.md#clean-reflash-the-device)
 
 > [!NOTE]
-> **HoloLens (1. gen)** , [Windows Holographic for Business](hololens-upgrade-enterprise.md)kapsamında [Windows 10 nisan 2018 güncelleştirmesinde](/windows/mixed-reality/release-notes-april-2018) birden çok Azure AD kullanıcısı desteklemeye başladı.
+> **HoloLens (1. nesil),** Windows Holographic for Business kapsamında Nisan [2018 Güncelleştirmesinde Windows 10](/windows/mixed-reality/release-notes-april-2018) Azure AD kullanıcılarını [desteklemeye Windows Holographic for Business.](hololens-upgrade-enterprise.md)
 
-### <a name="multiple-users-listed-on-sign-in-screen"></a>Oturum açma ekranında birden çok Kullanıcı listelendi
+### <a name="multiple-users-listed-on-sign-in-screen"></a>Oturum açma ekranında listelenen birden çok kullanıcı
 
-Daha önce oturum açma ekranında yalnızca en son oturum açan kullanıcının yanı sıra ' diğer Kullanıcı ' giriş noktası gösteriliyordu. Cihazda birden çok kullanıcı oturum açmışsa, bu yeterli olmayan müşteri geri bildirimi aldık. Yine de bunların Kullanıcı adını yeniden yazması gerekiyordu.
+Daha önce Oturum Açma ekranında yalnızca en son oturum açık olan kullanıcının yanı sıra 'Diğer kullanıcı' giriş noktası da gösteri. Cihazda birden çok kullanıcı oturum amışsa bunun yeterli olmadığını ifade etmek için müşteri geri bildirimi aldık. Yine de kullanıcı adlarını yeniden yazmaları gerekirdi.
 
-[Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1)' de tanıtılan, pın girişi alanının sağında bulunan **başka bir kullanıcı** seçerken oturum açma ekranında, daha önce cihazda oturum açan birden çok kullanıcı görüntülenir. bu, kullanıcıların kullanıcı profillerini seçmesini ve ardından Windows Hello kimlik bilgilerini kullanarak oturum açmasını sağlar. Bu diğer kullanıcılar sayfasından, **Hesap Ekle** düğmesi aracılığıyla cihaza yeni bir kullanıcı da eklenebilir.
+[Windows Holographic sürüm 21H1'de](hololens-release-notes.md#windows-holographic-version-21h1)tanıtılan, PIN  girişi alanında sağ tarafta bulunan Diğer kullanıcı'ya seçerek Oturum açma ekranında daha önce cihazda oturummış birden çok kullanıcı görüntülenir. Bu, kullanıcıların kendi kullanıcı profillerini seçmesini ve ardından kendi kullanıcı kimlik bilgilerini kullanarak Windows Hello sağlar. Cihaza hesap ekle düğmesi aracılığıyla bu Diğer kullanıcılar sayfasından da yeni bir **kullanıcı eklenebilir.**
 
-Diğer kullanıcılar menüsünde, diğer kullanıcılar düğmesi cihazda oturum açan son kullanıcıyı görüntüler. Bu Kullanıcı için oturum açma ekranına geri dönmek için bu düğmeyi seçin.
+Diğer kullanıcılar menüsünde, Diğer kullanıcılar düğmesi cihazda oturum açtıran son kullanıcı görüntülenir. Bu kullanıcının Oturum açma ekranına dönmek için bu düğmeyi seçin.
 
 ![Oturum açma ekranı varsayılanı](./images/multiusers1.jpg)
 
 <br>
 
-![Diğer kullanıcılar için oturum açma ekranı](./images/multiusers2.jpg)
+![Diğer kullanıcıların oturum açma ekranı](./images/multiusers2.jpg)
 
-## <a name="removing-users"></a>Kullanıcılar kaldırılıyor
+## <a name="removing-users"></a>Kullanıcıları kaldırma
 
-**Ayarlar** hesaplara giderek, bir kullanıcıyı cihazdan kaldırabilirsiniz  >    >  . Bu eylem Ayrıca, söz konusu kullanıcının tüm uygulama verilerini cihazdan kaldırarak da boş alan geri kazanır.  
+Bir kullanıcının cihazdan kaldırması için Diğer kişiler  >  **Ayarlar'e**  >  **gidip bu hesabı kaldırabilirsiniz.** Bu eylem ayrıca cihazdan kullanıcının uygulama verilerini kaldırarak alan da geri alar.  
 
 ## <a name="using-single-sign-on-within-an-app"></a>Uygulama içinde çoklu oturum açma kullanma
 
-uygulama geliştiricisi olarak, diğer Windows cihazlarda olduğu gibi, [Windows Account Manager apı 'lerini](/uwp/api/Windows.Security.Authentication.Web.Core)kullanarak HoloLens bağlantılı kimliklerden yararlanabilirsiniz. bu apı 'ler için bazı kod örnekleri GitHub kullanılabilir: [Web hesabı yönetim örneği](https://go.microsoft.com/fwlink/p/?LinkId=620621).
+Uygulama geliştiricisi olarak, Windows [Account Manager](/uwp/api/Windows.Security.Authentication.Web.Core)API'lerini kullanarak HoloLens'da bağlı kimliklerden, diğer cihazlarda olduğu gibi Windows faydalanabilirsiniz. Bu API'ler için bazı kod örnekleri GitHub: [Web hesabı yönetim örneği.](https://go.microsoft.com/fwlink/p/?LinkId=620621)
 
-Uygulama bir kimlik doğrulama belirteci istediğinde, hesap bilgileri, iki öğeli kimlik doğrulama vb. için Kullanıcı onayı isteme gibi olabilecek hesap kesintileri ele alınmalıdır.
+Uygulama bir kimlik doğrulama belirteci isteğinde olduğunda hesap bilgileri için kullanıcı onayı, iki faktörlü kimlik doğrulaması vb. talep gibi tüm hesap kesintileri iş gerekir.
 
-Uygulamanız daha önce bağlanmayan belirli bir hesap türü gerektiriyorsa, uygulamanız kullanıcıdan bir tane eklemesini isteyebilir. Bu istek, uygulamanızın kalıcı bir alt öğesi olarak başlatılacak hesap ayarları bölmesini tetikler. 2B uygulamalar için bu pencere, doğrudan uygulamanızın merkezine göre oluşturulur. Unity uygulamaları için bu istek, Kullanıcı alt pencereyi oluşturmak için holographic uygulamanızın dışına çıkar. Bu bölmedeki komutları ve eylemleri özelleştirme hakkında daha fazla bilgi için bkz. [Webaccountcommand sınıfı](/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand).
+Uygulamanıza daha önce bağlı değil belirli bir hesap türü gerektiriyorsa, uygulamanız sistemden kullanıcıdan bir hesap eklemesi istenir. Bu istek, hesap ayarları bölmesinin, uygulamanın kalıcı bir alt uygulaması olarak başlatılmasını tetikler. 2D uygulamalar için bu pencere doğrudan uygulamanın merkezinde işler. Unity uygulamaları için bu istek, alt pencereyi işlemek için kullanıcıyı holografik uygulamanıza kısa bir süre alır. Bu bölmede komutları ve eylemleri özelleştirme hakkında bilgi için bkz. [WebAccountCommand Sınıfı.](/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand)
 
 ## <a name="enterprise-and-other-authentication"></a>Enterprise ve diğer kimlik doğrulaması
 
-uygulamanız NTLM, temel veya Kerberos gibi diğer kimlik doğrulama türlerini kullanıyorsa, kullanıcının kimlik bilgilerini toplamak, işlemek ve depolamak için [Windows kimlik bilgileri kullanıcı arabirimini](/uwp/api/Windows.Security.Credentials.UI) kullanabilirsiniz. Bu kimlik bilgilerini toplamaya yönelik kullanıcı deneyimi, diğer bulut odaklı hesap kesintileri için çok benzerdir ve 2B uygulamanızın üzerinde bir alt uygulama olarak görünür veya Kullanıcı arabirimini göstermek için bir Unity uygulamasını kısaca askıya alır.
+Uygulamanız NTLM, Basic veya Kerberos gibi diğer kimlik doğrulaması türlerini kullanıyorsa, kullanıcının kimlik bilgilerini toplamak, Windows ve depolamak için [Windows](/uwp/api/Windows.Security.Credentials.UI) Kimlik Bilgisi kullanıcı arabirimini kullanabilirsiniz. Bu kimlik bilgilerini toplamaya yönelik kullanıcı deneyimi diğer bulut tabanlı hesap kesintilerine çok benzer ve 2D uygulamanın üzerinde bir alt uygulama olarak görünür veya kullanıcı arabirimini göstermek için bir Unity uygulamasını kısaca askıya alır.
 
-## <a name="deprecated-apis"></a>Kullanım dışı API 'Ler
+## <a name="deprecated-apis"></a>Kullanım dışı API'ler
 
-HoloLens geliştirmenin, masaüstü için geliştirmekten farklı bir şekilde, [onlineidavıd cator](/uwp/api/Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator) apı 'sinin tam olarak desteklenmesinin bir yoludur. Birincil hesap iyi durumda olduğunda API bir belirteç döndürse de, bu makalede açıklananlar gibi kesintiler Kullanıcı için herhangi bir kullanıcı ARABIRIMI görüntülemez ve hesabın kimliğini doğru şekilde doğrulayamamaktadır.
+HoloLens için geliştirmenin Desktop için geliştirmeden farklı olduğu bir yol, [OnlineIDAuthenticator](/uwp/api/Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator) API'sini tam olarak desteklememektir. Api, birincil hesap iyi durumdaysa bir belirteç döndürse de, bu makalede açıklananlar gibi kesintiler kullanıcı için herhangi bir kullanıcı arabirimi görüntülemez ve hesabın kimliğini doğru şekilde doğrulayamaz.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
-### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>HoloLens (1. Gen) üzerinde desteklenen iş Windows Hello?
+### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>İş Windows Hello (1. Nesil) HoloLens için destek var mı?
 
-Windows Hello for Business (oturum açmak için pın kullanılmasını destekler) HoloLens (1. genel) için desteklenir. HoloLens üzerinde Windows Hello iş pın 'inin oturum açmasını sağlamak için:
+Windows Hello için HoloLens (oturum açma için PIN kullanmayı destekler) HoloLens (1. Nesil) desteklemiştir. HoloLens üzerinde Windows Hello iş pın 'inin oturum açmasını sağlamak için:
 
 1. HoloLens cihazın [MDM tarafından yönetilmesi](hololens-enroll-mdm.md)gerekir.
 1. cihazda iş için Windows Hello etkinleştirmeniz gerekir. ([Microsoft Intune yönelik yönergelere bakın.](/intune/windows-hello))
