@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b7e5a7cbaa746f58fe0344dd8bf5b027e2e8cea7
-ms.sourcegitcommit: dc5d6f3802c997749775be04de522af8cb6d0850
+ms.openlocfilehash: 52503c0e1ff8c937211500203b91a30806cd317d
+ms.sourcegitcommit: 74f5b64c67026881c8ae46410f272b22862ff582
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/26/2021
-ms.locfileid: "114693708"
+ms.locfileid: "114696315"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Microsoft HoloLens için Insider önizlemesi
 
@@ -98,7 +98,7 @@ Bu ilkenin yapılandırıldığında, ilkede belirtilen kullanıcının en az bi
 
 ### <a name="pfx-file-support-for-certificate-manager"></a>Sertifika Yöneticisi için PFX dosyası desteği
 
-Windows Insider derlemesi 20348.1405'te tanıtıldı. Artık .pfx sertifikalarını [kullanmak için](certificate-manager.md) Sertifika Yöneticisi'ne destek ekledik. Kullanıcılar Güvenlik Sertifikalarını  >  **Ayarlar'&'a** gidin ve Sertifika yükle'yi seçerek kullanıcı arabirimi  >  artık .pfx sertifika dosyasını destekliyor. 
+Windows Insider derlemesi 20348.1405'te tanıtıldı. Artık .pfx sertifikalarını [kullanmak için](certificate-manager.md) Sertifika Yöneticisi'ne destek ekledik. Kullanıcılar Güvenlik Sertifikalarını Ayarlar'&'a gidin ve Sertifika yükle'yi seçerek kullanıcı arabirimi  >    >  artık .pfx sertifika dosyasını destekliyor. 
 Kullanıcılar özel anahtarla .pfx sertifikasını kullanıcı deposuna veya makine deposuna aktarabilirsiniz.
 
 ### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Gelişmiş tanılama raporunu Ayarlar'da HoloLens
@@ -116,7 +116,7 @@ Artık Windows Insider derlemelerine eklenmiştir, Çevrimdışı Tanılama içi
 
 ![Günlükleri toplamak için yapılan konuşma.](./images/logcollection1.jpg)
 
-![Günlük toplama işlemi tamamlandığında yapılan konuşma.](./images/logcollection2.jpg)
+![Günlük toplama tamamlandığında yapılan konuşma.](./images/logcollection2.jpg)
  
 Kullanıcılar genellikle bir görüntüye erişimi olmayan, oturum açamaz veya hala OOBE'de olan bir geri dönüş günlüğü toplama mekanizması olarak Çevrimdışı Tanılamayı kullanır. Günlükler toplanarak sesli bir ipucu da gösterilir. Bu ses, bildirime ek olarak çalınacak.
 
@@ -126,92 +126,92 @@ Bu yeni görsel geri bildirim eklemesi ile tanılama verilerini toplamanın ve s
 
 ### <a name="use-only-private-store-apps-for-microsoft-store"></a>Yalnızca özel mağaza uygulamalarını Microsoft Store
 
-RequirePrivateStoreOnly ilkesi, uygulama için HoloLens. Bu ilke, Microsoft Store uygulamasının yalnızca özel mağazayı kuruluş için yapılandırılan şekilde yapılandırılması için etkinleştirir. Erişimi yalnızca kullanılabilir yapmış olduğunuz uygulamalarla sınırlama.
+RequirePrivateStoreOnly ilkesi, uygulama için HoloLens. Bu ilke, Microsoft Store uygulamasının yalnızca özel mağazayı kuruluş için yapılandırılan şekilde yapılandırılması için etkinleştirir. Erişimi yalnızca kullanılabilir hale getirdiğiniz uygulamalarla sınırlama.
 
-[ApplicationManagement/RequirePrivateStoreOnly hakkında daha fazla bilgi](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+[ApplicationManagement/RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly) hakkında daha fazla bilgi edinin
 
-### <a name="fixes-and-improvements"></a>Düzeltmeler ve geliştirmeler:
+### <a name="fixes-and-improvements"></a>Düzeltmeler ve geliştirmeler
 
-- Kilitlenmiş [dosyaları indirme istemi Cihaz Portalı için bilinen bir sorun düzeltildi.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
-- Dosya yükleme [ve indirme zaman Cihaz Portalı için bilinen bir sorun düzeltildi.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
-- Cihazlardan uyumluluk özelliklerini raporlamayla ilgili HoloLens ele; Insider derlemeleri üzerinde doğru raporlamanın tetiklanması için yeniden başlatma gerekebilir.  
-- Remote Assist'in yeni flash görüntülere yüklenmiş olan in-box sürümü güncelleştirildi.
+- Bir [cihaz portalı için, kilitli dosyaları indirmede hiçbir istem olmadığı bilinen bir sorun düzeltildi.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
+- [Karşıya dosya yükleme ve indirme zaman aşımları Ile cihaz portalı 'nın bilinen bir sorunu düzeltildi.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
+- HoloLens cihazlarından raporlama uyumluluk özellikleri etrafında sorunları giderir; Insider Derlemeleriyle ilgili doğru raporlama tetiklenmesi için yeniden başlatma gerekebilir.  
+- Uzaktan Yardım 'ın yerleşik sürümü, yeni bir yanıp sönuca yüklenmiş olarak güncelleştirildi.
 
 
-## <a name="start-receiving-insider-builds"></a>Insider derlemelerini almaya başlama
+## <a name="start-receiving-insider-builds"></a>Insider derlemelerini almaya başlayın
 
 > [!NOTE]
-> Yakın zamanda güncelleştirme yaptıysanız lütfen durumu güncelleştirmek ve en son derlemeyi almak için cihazınızı yeniden başlatın.
-> - "Cihazı yeniden başlat" sesli komutu iyi çalışıyor. 
-> - Ayrıca, Ayarlar/Windows Insider Programı.
+> Son zamanlarda güncelleştirmediyseniz, durumu güncelleştirmek ve en son derlemeyi almak için lütfen cihazınızı yeniden başlatın.
+> - "Cihazı yeniden Başlat" ses komutu iyi şekilde çalışmaktadır. 
+> - Ayarlar/Windows ınsider programı ' nda yeniden başlat düğmesini de seçebilirsiniz.
 >
-> Arka uçta karşılaşmış olduğunuz bir hata vardı ve bu sizi yeniden takip ediyor olacak.
+> Arka uçta karşılaştığınız bir hata yaşadık ve bu, izlemeye geri dönecek.
 
-Bir HoloLens 2 cihazında Update   >  **Ayarlar Security &'Windows Insider Programı** gidin ve  >   Kullanmaya başlayın.  Windows Insider olarak kaydetmek için kullanılan hesabı bağlama.
+HoloLens 2 cihazında, **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **Windows ınsider programı** ' na gidin ve **kullanmaya** başlayın ' ı seçin. Windows bir ınsider olarak kaydetmek için kullandığınız hesabı bağlayın.
 
-Windows artık Kanallar'a taşınıyor. Hızlı **halka** Geliştirme **Kanalı,** Yavaş  halka Beta Kanal olur **ve** **Yayın** Önizleme halkası Yayın Önizleme Kanalı **olur.** Eşleme şu şekildedir:
+Windows ınsider artık kanallara taşınıyor. **Hızlı** halka **Geliştirici kanalı** olacaktır, **yavaş** halka **Beta kanalı** olur ve **Yayın Önizleme** halkası **Yayın Önizleme kanalı** olur. Bu, eşlemenin şöyle görünür:
 
-![Windows Insider Kanalları açıklaması](images/WindowsInsiderChannels.png)
+![Windows Insider kanalları açıklaması](images/WindowsInsiderChannels.png)
 
-Daha fazla bilgi için [bkz. Bloglarda Windows Insider Kanallarına](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) Windows.
-Ardından, **geliştirmenin etkin Windows'ı** seçin, **Geliştirme** Kanalı mı yoksa derlemeler mi **almak Beta Kanal** seçin ve program koşullarını gözden geçirin.
-Tamamlamak **için > Şimdi Yeniden Başlat'ı** seçin. Cihazınız yeniden başlatıldıktan sonra, en son **derlemeyi almak Ayarlar > Güncelleştirme & Güvenlik > Güncelleştirmeleri** denetleme'ye gidin.
+daha fazla bilgi için bkz. Windows bloglarda [Windows ınsider kanalları tanıtma](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) .
+sonra, **Windows için etkin geliştirme**' yı seçin, **Dev kanalı** veya **Beta kanalı** derlemeleri almak isteyip istemediğinizi seçin ve program koşullarını gözden geçirin.
+**> şimdi yeniden başlatmak Için Onayla** ' yı seçin. cihazınız yeniden başlatıldıktan sonra, **Ayarlar > güncelleştirme & güvenlik** ' e gidin > en son derlemeyi almak için güncelleştirmeleri denetleyin.
 
-### <a name="update-error-0x80070490-work-around"></a>Hata güncelleştirme 0x80070490 çalışma
+### <a name="update-error-0x80070490-work-around"></a>Güncelleştirme hatası 0x80070490 iş-etrafında
 
-Geliştirme veya Beta kanalında 0x80070490 bir güncelleştirme hatasıyla karşılaşırsanız aşağıdaki kısa vadeli çalışmalara bakın. Bunun için iç kanalınızı taşımanız, güncelleştirmeyi alıp Insider kanalınızı geri taşımanız gerekir.
+Geliştirme veya beta kanalında güncelleştirme yaparken bir güncelleştirme hatası 0x80070490 ile karşılaşırsanız, aşağıdaki kısa süreli çalışmayı deneyin. Insider kanalınızın taşınmasını, güncelleştirmeyi nasıl çekmesini ve ardından Insider kanalını geri taşımayı içerir.
 
-#### <a name="stage-one---release-preview"></a>1. aşama - Yayın Önizlemesi
+#### <a name="stage-one---release-preview"></a>Aşama tek sürüm önizlemesi
 
-1.  Ayarlar, Güncelleştirme &' Windows Insider Programı Yayın Önizleme **Kanalı'Windows Insider Programı seçin.**
+1.  Ayarlar, & güvenlik Windows ınsider programını güncelleştirin, **yayın önizleme kanalını** seçin.
 
-2.  Ayarlar, Update & Security, Windows Update, **Güncelleştirmeleri kontrol edin.** Güncelleştirmeden sonra ikinci aşamaya devam et.
+2.  Ayarlar, güncelleştirme & güvenlik Windows Update, **güncelleştirmeleri denetleyin**. Güncelleştirme sonrasında, ikinci aşamada devam edin.
 
-#### <a name="stage-two---dev-channel"></a>2. aşama - Geliştirme Kanalı
+#### <a name="stage-two---dev-channel"></a>İkinci geliştirme kanalı aşaması
 
-1. Ayarlar Güvenlik güncelleştirme &, Windows Insider Programı Dev **Channel'ı seçin.**
+1. Ayarlar, & güvenlik Windows ınsider programını güncelleştirin, **geliştirme kanalı**' nı seçin.
 
-2. Ayarlar, Update & Security, Windows Update, **Güncelleştirmeleri kontrol edin.**
+2. Ayarlar, güncelleştirme & güvenlik Windows Update, **güncelleştirmeleri denetleyin**.
 
-## <a name="ffu-download-and-flash-directions"></a>FFU indirme ve flash yönler
+## <a name="ffu-download-and-flash-directions"></a>FFU indirme ve Flash yönleri
 
-Uçuş imzalı ffu ile test etmek için, uçuş imzalı ffu'nun yanıp sönmeden önce cihazınızın kilidinin açılması gerekir.
+Bir uçuş imzalı FFU ile test etmek için önce, uçuşdan ayrılmadan önce cihazınızın kilidini açmanız gerekir.
 
-1. Pc'de:
-    1. ffu'dan bilgisayarınıza [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) indirin.
+1. BILGISAYAR üzerinde:
+    1. Hesabınızı ' den bilgisayarınıza indirin [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
     
-    1. arc (Gelişmiş Kurtarma Yardımcı) yükleme Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
+    1. Microsoft Store: ile yay (Gelişmiş kurtarma Yardımcısı) yüklemesini yapın [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
     
-1. HoloLens - Flight Unlock: **Ayarlar**  >  **Update &**  >  **Security'Windows Insider Programı** açın ve cihazı yeniden başlatın.
+1. HoloLens uçuşlamada kilit açma: **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **Windows ınsider programı** ' nı açın ve cihazı yeniden başlatın.
 
-1. Flash FFU - Artık ARC kullanarak uçuş imzalı FFU'nun flash'unu sönersiniz.
+1. Flash FFU-şimdi yay kullanarak uçuştan imzalanmış FFU 'yi yakıp sönebilir.
 
-### <a name="provide-feedback-and-report-issues"></a>Geri bildirim sağlama ve sorunları bildirme
+### <a name="provide-feedback-and-report-issues"></a>Geri bildirim ve rapor sorunları sağlama
 
-Geri bildirim [ve Geri Bildirim Merkezi sağlamak](hololens-feedback.md) için HoloLens uygulama uygulamanızı kullanın. Bu Geri Bildirim Merkezi, mühendislerimizin hızla hata ayıklaması ve sorunu çözmesine yardımcı olmak için tüm gerekli tanılama bilgileri dahil edilir.  Bu sürümün Çince ve Japonca HoloLens aynı şekilde bildiriliyor olması gerekir.
+geri bildirim ve rapor sorunları sağlamak için lütfen HoloLens [geri bildirim merkezi uygulamasını](hololens-feedback.md) kullanın. Geri Bildirim Hub 'ı kullanmak, mühendislerimizin hata ayıklamasına ve sorunu çözmeye yardımcı olmak için gerekli tüm tanılama bilgilerinin eklenmesini sağlar.  HoloLens çince ve japonca sürümü ile ilgili sorunlar aynı şekilde bildirilmelidir.
 
 > [!NOTE]
-> Belgeler klasörünüze erişmek isteyip Geri Bildirim Merkezi istemini kabul edin (istendiğinde **Evet'i** seçin).
+> Belge klasörünüze geri bildirim hub 'ı (sorulduğunda **Evet** ' i seçin) isteyip istemediğinizi soran istemi kabul ettiğinizden emin olun.
 
-## <a name="note-for-developers"></a>Geliştiriciler için not
+## <a name="note-for-developers"></a>Geliştiriciler için göz önünde
 
-Uygulamalarınızı derlemenin Insider derlemelerini kullanarak geliştirmeyi denemeniz HoloLens.  Çalışmaya başlamaya [HoloLens Geliştirici Belgeleri'ne](https://developer.microsoft.com/windows/mixed-reality/development) göz atabilirsiniz. Bu yönergeler, bir derlemenin Insider derlemeleriyle HoloLens.  Unity ve Visual Studio geliştirme için zaten HoloLens kullanabilirsiniz.
+HoloLens Insider derlemelerini kullanarak uygulamalarınızı geliştirmeyi denemeye hoş geldiniz ve önerilir.  başlamak için [HoloLens geliştirici belgelerine](https://developer.microsoft.com/windows/mixed-reality/development) göz atın. Aynı yönergeler HoloLens Insider Derlemeleriyle birlikte çalışır.  HoloLens geliştirme için kullanmakta olduğunuz Unity ve Visual Studio derlemelerin aynısını kullanabilirsiniz.
 
-## <a name="stop-receiving-insider-builds"></a>Insider derlemelerini almayı durdurma
+## <a name="stop-receiving-insider-builds"></a>Insider derlemelerini almayı durdur
 
-Windows Holographic'in Insider derlemelerini artık almak istemiyorsanız, HoloLens'niz bir üretim derlemesi çalıştırıyorsa iptal [](hololens-recovery.md) edebilirsiniz veya Cihazınızı Gelişmiş Kurtarma Yardımcı'sı kullanarak kurtararak cihazınızı Windows Holographic'in Insider olmayan bir sürümüne kurtarabilirsiniz.
+artık Windows Holographic ınsider derlemelerini almak istemiyorsanız, HoloLens bir üretim derlemesi çalıştırırken devre dışı bırakabilirsiniz veya cihazınızı Windows Holographic 'ın ınsider sürümüne kurtarmak için gelişmiş kurtarma yardımcısı 'nı kullanarak [cihazınızı kurtarabilirsiniz](hololens-recovery.md) .
 
 > [!CAUTION]
-> Yeni bir önizleme derlemesini el ile yeniden yükledikten sonra Insider Preview derlemelerinden kaydını kaldıran kullanıcıların mavi ekranla karşına çıkar olduğu bilinen bir sorun vardır. Daha sonra, cihazlarını el ile kurtarmaları gerekir. Etkide olup olmadığınız hakkında tüm ayrıntılar için bu Bilinen Sorun hakkında daha fazla [bilgi edinebilirsiniz.](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+> Yeni bir önizleme derlemesini el ile yeniden yükledikten sonra Insider Preview derlemelerinden kaydolmamış kullanıcıların mavi bir ekran deneymesinin bilinen bir sorunu vardır. Daha sonra cihazlarını el ile kurtarmanız gerekir. Etkilenmiş olmanız veya olmadıysanız ilgili tüm ayrıntılar için lütfen bu [bilinen sorunu](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)izleyin.
 
-Bir üretim HoloLens çalıştığını doğrulamak için:
+HoloLens bir üretim derlemesi çalıştırdığından emin olmak için:
 
-1. System **Ayarlar > Hakkında'> gidin** ve derleme numarasını bulun.
+1. **Ayarlar > sistem >**' e gidin ve derleme numarasını bulun.
 
-1. [Üretim derleme numaraları için sürüm notlarına bakın.](hololens-release-notes.md)
+1. [Üretim derleme numaraları için sürüm notlarına bakın](hololens-release-notes.md).
 
-Insider derlemelerini geri almak için:
+Insider derlemelerini devre dışı bırakmak için:
 
-1. Üretim HoloLens çalıştıran bir Ayarlar > Update **& Security > Windows Insider Programı**'a gidin ve Insider derlemelerini **durdur'a gidin.**
+1. üretim yapısını çalıştıran bir HoloLens, **Ayarlar > & güvenlik > Windows ınsider programı**' na gidin ve **ınsider derlemelerini durdur**' u seçin.
 
-1. Cihazınızı geri almak için yönergeleri izleyin.
+1. Cihazınızı devre dışı bırakmak için yönergeleri izleyin.
