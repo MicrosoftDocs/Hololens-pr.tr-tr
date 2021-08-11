@@ -2,10 +2,10 @@
 title: HoloLens 2 satın alınacağı yer
 description: Mevcut genel ADR kişileri ve ülkelerin listesi.
 keywords: HoloLens 2 satın alma seçeneği, uluslararası satın alma, uluslararası satıcı, ADR
-author: joyjaz
-ms.author: v-jjaswinski
+author: qianw211
+ms.author: v-qianwen
 ms.reviewer: skerawala
-ms.date: 7/08/2021
+ms.date: 8/03/2021
 ms.prod: hololens
 ms.topic: article
 ms.sitesec: library
@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 10ba56d68b0272378d958b5a7cd1fd18f581ac33
-ms.sourcegitcommit: bd55edcc855e20d6709c7e535573f43785155d41
+ms.openlocfilehash: b94172ebbfeea55964a055f62707fe0b6d94a97c53eee717e7ec4da7281bad0e
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114661738"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658823"
 ---
 # <a name="where-to-buy-hololens-2"></a>HoloLens 2 satın alınacağı yer
 
@@ -30,11 +30,12 @@ HoloLens 2, tüm modern bir deneyim sunan sektör lideri çözümler sunan ve Mi
 
 | HoloLens 2 sürümü| Desteklenen Pazar |
 |-------------------------------------------| ----------------------------------------| 
-| HoloLens 2 | ABD, Kanada, Almanya, Fransa, UK, Irlanda, Çin, Japonya, Avustralya, Italya, Yeni Zelanda, Hollanda, Isviçre, Ispanya, Avusturya, Isveç, Finlandiya, Norveç, Danimarka, Belçika, Portekiz, Polonya, Singapur, Hong Kong, Tayvan, Tayland, Vietnam, Malezya ve Güney Kore |
-| uzaktan yardım ile HoloLens 2 | Avustralya, Japonya, Kanada, ABD, Avusturya, Belçika, Danimarka, Finlandiya, Fransa, Almanya, Italya, Hollanda, Norveç, Ispanya, Isveç, Isviçre, UK ve Irlanda <sup>1</sup> 
-| HoloLens 2 endüstriyel sürümü *(başlatma sırasında)* | ABD, Kanada, Almanya, Fransa, UK, Irlanda, Çin, Japonya, Avustralya, Italya, Yeni Zelanda, Hollanda, Isviçre, Ispanya, Avusturya, Isveç, Finlandiya, Norveç, Danimarka, Belçika, Portekiz, Polonya, Singapur, Hong Kong, Tayvan, Tayland, Vietnam, Malezya ve Güney Kore |
-| HoloLens 2 geliştirme sürümü | Kanada, Almanya, Fransa, UK, Irlanda, Japonya, Avustralya, Italya, Isviçre ve Yeni Zelanda |
-- <sup>1</sup> bu liste dinamiktir, güncelleştirmeleri geri çek
+| HoloLens 2 | Avustralya, Avusturya, Belçika, Kanada, Çin, Danimarka, Finlandiya, Fransa, Almanya, Hong Kong, Irlanda, Italya, Japonya, Malezya, Hollanda, Yeni Zelanda, Norveç, Polonya, Portekiz, Singapur, Güney Kore, Ispanya, Isveç, Isviçre, Tayvan, Tayland, UK, ABD ve Vietnam  |
+| uzaktan yardım ile HoloLens 2 | Avustralya, Avusturya, Belçika, Kanada, Danimarka, Finlandiya, Fransa, Almanya, Hong Kong, Irlanda, Italya, Japonya, Kore, Malezya, Hollanda, Yeni Zelanda, Norveç, Singapur, Ispanya, Isveç, Isviçre, Tayvan, Tayland, UK, ABD ve Vietnam  <sup>1</sup> 
+| HoloLens 2 endüstriyel sürümü *(başlatma sırasında)* | Avustralya, Avusturya, Belçika, Kanada, Çin, Danimarka, Finlandiya, Fransa, Almanya, Hong Kong, Irlanda, Italya, Japonya, Malezya, Hollanda, Yeni Zelanda, Norveç, Polonya, Portekiz, Singapur, Güney Kore, Ispanya, Isveç, Isviçre, Tayvan, Tayland, UK, ABD ve Vietnam  |
+| HoloLens 2 geliştirme sürümü | Avustralya, Kanada, Fransa, Almanya, Irlanda, Italya, Japonya, Yeni Zelanda, Isviçre ve UK |
+
+&nbsp;&nbsp;&nbsp;<sup>1</sup> bu liste dinamiktir, güncelleştirmeleri geri çek
 
 ## <a name="find-an-authorized-hololens-2-reseller"></a>yetkili HoloLens 2 satıcısı bulma
 bölgeye göre HoloLens 2 kullanılabilirliği ve satın alma seçenekleri için aşağıdaki tablolara bakın.
@@ -109,4 +110,4 @@ bölgeye göre HoloLens 2 kullanılabilirliği ve satın alma seçenekleri için
 | | İçgörü | Sheila Hofer<br><sheila.hofer@insight.com> | [satın alma HoloLens 2-öngörü](https://ch.insight.com/en-gb/productinfo/games-accessories/0010985150-00000001) | [HoloLens 2 endüstriyel sürümü satın alın-öngörü](https://ch.insight.com/en-gb/productinfo/games-accessories/0011395310-00000001) | 
 | **UK/Irlanda** | Beçtle | Jacob Emarasi<br><jacob.emery@bechtle.com><br>Michael Stas<br><michael.stas@bechtle.com><br>TORI Batı<br><tori.west@bechtle.com> | [satın alma HoloLens 2-beçtle](https://www.bechtle.com/gb/shop/microsoft-hololens-2-smart-glasses--4342628-01--p) | [HoloLens 2 endüstriyel sürümü satın alın-bechtle](https://www.bechtle.com/gb/shop/microsoft-hololens-2-ind-ed-smartglasses--4525629-01--p) | 
 | | CDW | Flannery Devine Gibbons<br><f.gibbons@uk.cdw.com><br>Abdullah hayat<br><a.hayat@uk.cdw.com> |  |  | 
-| | İçgörü | Malti Patel<br><malti.patel@insight.com> | [satın alma HoloLens 2-öngörü](https://www.uk.insight.com/shop/microsoft/devices-and-hardware/hololens) | [HoloLens 2 endüstriyel sürümü satın alın-öngörü](https://www.uk.insight.com/en-gb/apps/nbs/results.php?K=hololens%202) |
+| | İçgörü | Malti Patel<br><malti.patel@insight.com> | [Satın HoloLens 2 - Insight](https://www.uk.insight.com/shop/microsoft/devices-and-hardware/hololens) | [HoloLens 2 Industrial Edition Satın Alma - Insight](https://www.uk.insight.com/en-gb/apps/nbs/results.php?K=hololens%202) |

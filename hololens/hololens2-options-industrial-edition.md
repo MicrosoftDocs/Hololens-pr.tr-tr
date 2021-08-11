@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 686510fdda8bb09182d7e32188bb9eef9022828c
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 7d9af1fb7d2c87b13cee926c3172ed2ce5411d9da73ab4b880efb1bd837ca3e5
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639582"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659009"
 ---
 # <a name="hololens-2-industrial-edition"></a>HoloLens 2 Industrial Edition
 
@@ -32,7 +32,7 @@ HoloLens 2 Industrial Edition, aşağıdakiler dahil olmak üzere daha geniş bi
 - **Temiz oda ortamları:** HoloLens 2 Industrial Edition, ISO 14644-1 Sınıf 5 temiz oda sayısına kadar değişen standartlarla desteklemektedir. Bu standartlarda yabancı parçacık miktarının sınırlı ve kısıtlı olduğu ve bu alanlardaki nesnelerin doldurma, outgassing ve kalıcı saklama sınırları vardır.
 - **Tehlikeli Konumlar:** HoloLens 2 Industrial Edition; yanıcı gazların, buharların veya sıvıların bulunduğu ancak normal işlemler sırasında genellikle görülemeyen yoğunluklarda mevcut olan ortamları destekler ve UL Sınıf I, 2. Bölüm A, B, C ve D PULOC sertifikalarını içerir.
 
-Yükseltilmiş cihaza ek olarak, HoloLens 2 Industrial Edition hızlı değiştirme programı için 2 yıl & garanti sunar.
+HoloLens 2 Industrial Edition, yükseltilen cihaza ek olarak hızlı değiştirme programı için 2 & garanti sunar.
 
 ![Temiz bir odada kullanılan Industrial Edition](./images/ie-small-pic.png)
 
@@ -40,7 +40,7 @@ HoloLens [2 Industrial Edition SSS bölümünü gözden geçirin.](hololens2-ind
 
 ## <a name="cleaning-and-handling-hololens-2"></a>Temizleme ve İşleme HoloLens 2
 
-HoloLens 2 Industrial Edition; %70' isopropyl isopropyl ve su çözümüyle temizlenerek cihazın kuru yüzeyleri (visor, brow pad ve head head gibi) temizlenebilir. Daha fazla bilgi için bkz. [HoloLens 2 temizleme hakkında SSS.](/hololens/hololens2-maintenance)
+HoloLens 2 Industrial Edition; %70 isopropyl isopropyl ve su çözümüyle temizlenerek cihazın visor, brow pad ve head head gibi sabit yüzeyleri temizlenebilir. Daha fazla bilgi için bkz. [HoloLens 2 temizleme hakkında SSS.](/hololens/hololens2-maintenance)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

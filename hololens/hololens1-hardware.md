@@ -13,12 +13,12 @@ manager: jarrettr
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 02496d90f2dee320e62a99e07527f32b7a209a69
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: f76c8bb669f45ddde539c0149159287724b73707765703bf310530adb4e300c6
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639973"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662132"
 ---
 # <a name="hololens-1st-gen-hardware"></a>HoloLens (1. gen) donanım
 
@@ -145,44 +145,44 @@ Ortamı anlamak için aşağıdakiler kullanılarak:
 - Microsoft Edge
 - Fotoğraflar
 - Ayarlar
-- Windows Lerimi
-- Ayarları
-- Hareketleri öğrenin
+- Windows Geribildirim
+- Kalibrasyon
+- Learn Gestures
 
 ## <a name="device-certifications"></a>Cihaz sertifikaları
 
 ### <a name="safety"></a>Güvenlik
 
-HoloLens test edilmiştir ve ansı z 87.1, CSA z 94.3 ve EN 166 temel etki koruması gereksinimleriyle uyumlu olacak şekilde bulunur.
-- [SAR bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+HoloLens, ANSI Z87.1, CSA Z94.3 ve EN 166'nın temel etki koruma gereksinimlerine uygun olduğu test edilmiştir ve bulundu.
+- [SAR Bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
-## <a name="care-and-cleaning"></a>İlgilenme ve Temizleme
+## <a name="care-and-cleaning"></a>Bakım ve temizleme
 
-HoloLens dikkatle işleyin. HoloLens kaldırmak, taşımak ve ayarlamak için, ek yükün olmadığı cihaz kolları 'nı kullanın &mdash; . Vizörü, toz ve parmak izi baskılarını ücretsiz tutmak ve dokunmaktan kaçının. Yinelenen Temizleme, vizörü 'e zarar verebilir, bu nedenle cihazınızı temiz tutmaya çalışın.
+Kendi HoloLens kullanın. Cihazlarınızı kaldırmak, taşımak ve ayarlamak HoloLens ek yük değil cihaz &mdash; kolu kullanın. Mengeneyi tozdan ve parmak izinden uzak tutmak ve dokunmamak için. Tekrarlanan temizleme, görünüre zarar verebilir, bu nedenle cihazınızı temiz tutmaya çalışabilirsiniz.
 
-HoloLens herhangi bir temizlik veya solipçi kullanmayın ve su içinde alt birleşmeyin ya da doğrudan buna su uygulayın.
+Uygulamanıza temizleme veya HoloLens kullanmayın ve su içine ya da doğrudan su uygulamanın.
 
-Vizörü 'i temizlemek için, ortası veya Goat saç lens fırçası veya ampul stili lens 'i kullanarak tüm toz 'yi kaldırın. Küçük miktarda karışık bir su ile mikro fiber bezle, daha sonra bir dairesel hareket halinde daha fazla hareket etmek için kullanın.
+Mengeneyi temizlemek için, keçi veya keçi kılı fırça veya ampul stilinde bir lens seçici kullanarak herhangi bir tonunu kaldırın. Mikrofiberi az miktarda distile suyla hafifçe hafifletin ve ardından bunu kullanarak mengeneyi dairesel bir hareketle hafifçe temizleyin.
 
-Yayın bandı ve cihaz kolları dahil olmak üzere cihazın geri kalanını temizlemek için, hafif SOAP ve su ile LINT ile ücretsiz bir kumaş moistened kullanın. HoloLens yeniden kullanmadan önce, bir daha kullanmaya tamamen izin verin.
+Baş bant ve cihaz kolu da dahil olmak üzere cihazın geri kalanını temizlemek için, soap ve su ile birlikte lintsiz bir su ile temizlenir. Yeniden HoloLens önce uygulamanıza tamamen kurutmaya izin ver.
 
-![Vizörü 'ın nasıl temizleyeceğini gösteren resim](images/hololens-cleaning-visor.png)
+![Mengeneyi temizlemeyi gösteren resim](images/hololens-cleaning-visor.png)
 
 ## <a name="finding-the-serial-number"></a>Seri numarasını bulma
 
-HoloLens (1. gen) cihazların seri numarası doğru merceği altında yazdırılır.
-1. Bu cihazı, kafanız aşındaymış gibi tuttuğunuz sırada tutun. Cihaz ileri ve yukarı doğru.
-1. Lens ile hala devam eden bir yandan, alt tarafı görmeniz için cihazı ters çevirin.
-1. Sağ lens artık sol tarafta kalacak ve bu, bantta merceği altında yazdırılacak olan seri numarasıdır. 
+HoloLens (1. nesil) cihazların seri numarası sağ lensin altına yazdırılır.
+1. Cihazı kendi başına takacakmış gibi önünde tutun. Cihazın ileriye ve dik bir şekilde bakarak.
+1. Lens hala ileriye dönükken, alt tarafı görmek için cihazı baş aşağı çevirin.
+1. Sağ lens artık sol tarafta olacak ve bantta lensin altına seri numarası yazdırılacak. 
 
-Seri numarası, bağlı bir BILGISAYAR aracılığıyla da bulunabilir:
+Seri numarası bağlı bir bilgisayar üzerinden de bulunabilir:
 
 1. Cihazı takın
-1. Dosya Gezgini 'nde **Bu bilgisayara** gidin
-1. HoloLens cihazının **özellikler** ' i sağ tıklayıp seçin
-1. Bu, cihazın seri numarasını görüntüler. Aşağıda bu ekran görüntüsünde olduğu gibi.
+1. Dosya **gezgininde Bu bilgisayara** gidin
+1. Cihazın Özellikler'e **sağ** tıklayın HoloLens seçin
+1. Bu, cihazın seri numarasını görüntüler. Aşağıdaki ekran görüntüsünde olduğu gibi.
 
    <img src="images/hl1-serial-number.png" width="400" height="600" alt="Properties page in Windows 10 for HoloLens-3TNKV"/>
 
 > [!div class="nextstepaction"]
-> [HoloLens ayarlama ve başlatma (1. genel)](hololens1-setup.md)
+> [Kümenizi ayarlama ve HoloLens (1. nesil)](hololens1-setup.md)

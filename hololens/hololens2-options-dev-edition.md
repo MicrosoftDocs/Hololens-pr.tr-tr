@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 613f0a24d1d0d0740ebc448b2c92238a76350958
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: a4e2bc30d1141fcc1c6a648ccc7c3573f6afda2ba3f5cd413a8e9a69203ea617
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639684"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658882"
 ---
 # <a name="hololens-2-development-edition"></a>HoloLens 2 Geliştirme Sürümü
 
@@ -32,7 +32,7 @@ HoloLens 2'nin ücretsiz Unity yazılımı denemeleriyle bulut hizmetleri için 
 
 HoloLens 2 Geliştirme Sürümü, HoloLens 2, 500 ABD doları Azure kredisi, 3 aylık Unity Pro Deneme Sürümü ve 3 aylık PiXYZ eklenti denemesi içerir:
 
-| Paket özelliği | Açıklama |
+| Paket özelliği | Description |
 |---|---|
 |  [Unity](https://unity.com/) | Gerçek zamanlı bir 3D geliştirme platformu.   |
 |  [Unity için Pixyz eklentisi](https://www.pixyz-software.com/plugin/) | Mühendislik CAD dünyalarını geliştirme &amp; dünyasına bağlamak için bir köprü.   |

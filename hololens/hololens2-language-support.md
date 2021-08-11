@@ -1,6 +1,6 @@
 ---
 title: HoloLens 2 için desteklenen diller
-description: HoloLens 2'nin desteklediği tüm diller, klavye düzenlerini değiştirme ve Windows görüntüleme dilini güncelleştirme hakkında bilgi öğrenin.
+description: 2 ' nin desteklediği tüm diller HoloLens, klavye düzenlerini değiştirme ve Windows görüntüleme dilini güncelleştirme hakkında bilgi edinin.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -10,28 +10,28 @@ ms.localizationpriority: medium
 ms.custom:
 - CI 115225
 - CSSTroubleshooting
-keywords: localize, dil desteği, görüntüleme dili, klavye dili, IME, klavye düzeni
+keywords: yerelleştirin, dil desteği, görüntüleme dili, klavye dili, IME, klavye düzeni
 ms.date: 03/12/2020
 audience: ITPro
 ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: dc3de0c95f17c821816bad278de5717bc24a2c29
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 32f4cce668b2f8a483dbef3f4b41a0ceb8267dcc202f2be9d32ecec4061d0c21
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379113"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659565"
 ---
 # <a name="supported-languages-for-hololens-2"></a>HoloLens 2 için desteklenen diller
 
-HoloLens 2 aşağıdaki dillerde yerelleştirilmiştir. Yerelleştirme özellikleri arasında konuşma komutları ve dikte, klavye düzenleri ve uygulamalar içinde OCR tanıma yer almaktadır.
+HoloLens 2 aşağıdaki dillere yereldir. Yerelleştirme özellikleri, uygulamalar içinde konuşma komutları ve dikte, klavye düzenleri ve OCR tanımayı içerir.
 
 - Basitleştirilmiş Çince (Çin)
 - İngilizce (Avustralya)
 - İngilizce (Kanada)
-- İngilizce (Great English)
+- İngilizce (Büyük Britanya)
 - İngilizce (ABD)
 - Fransızca (Kanada)
 - Fransızca (Fransa)
@@ -40,43 +40,43 @@ HoloLens 2 aşağıdaki dillerde yerelleştirilmiştir. Yerelleştirme özellikl
 - Japonca (Japonya)
 - İspanyolca (İspanya)
 
-HoloLens 2 aşağıdaki dilleri de destekler. Ancak, bu destek konuşma komutlarını veya dikte özelliklerini içermez.
+HoloLens 2 ayrıca aşağıdaki dilleri destekler. Ancak, bu destek konuşma komutları veya dikte özellikleri içermez.
 
 - Geleneksel Çince (Tayvan ve Hong Kong)
 - Felemenkçe (Hollanda)
 - Korece (Kore)
 
-HoloLens 2'nin bazı özellikleri Windows görüntüleme dilini kullanır. Windows görüntüleme dili, Windows ve yerelleştirmeyi destekleyen uygulamalar için aşağıdaki ayarları etkiler:
+HoloLens 2 ' nin bazı özellikleri Windows görüntü dilini kullanır. Windows görüntü dili, Windows ve yerelleştirmeyi destekleyen uygulamalar için aşağıdaki ayarları etkiler:
 
 - Kullanıcı arabirimi metin dili.
 - Konuşma dili.
-- Ekran klavyenin varsayılan düzeni.
+- Ekran klavyesi varsayılan düzeni.
 
-## <a name="change-the-language-or-keyboard-layout"></a>Dili veya klavye düzenini değiştirme
+## <a name="change-the-language-or-keyboard-layout"></a>Dili veya klavye yerleşimini değiştirme
 
-Kurulum işlemi HoloLens'inizi belirli bir bölge ve dil için yapılandırıyor. Bu yapılandırmayı, Ayarlar'ın **Time & dil bölümünü** kullanarak **değiştirebilirsiniz.**
+kurulum işlemi, belirli bir bölge ve dil için HoloLens yapılandırır. bu yapılandırmayı, **Ayarlar** **zaman & dili** bölümünü kullanarak değiştirebilirsiniz.
 
 > [!NOTE]  
-> Konuşma ve dikte diliniz Windows görüntüleme diline bağlıdır (ve ile aynıdır).
+> konuşma ve dikte diliniz, Windows görüntüleme diliyle bağımlıdır (ve aynıdır).
 
 ### <a name="to-change-the-windows-display-language"></a>Windows görüntüleme dilini değiştirmek için
 
-1. Başlat menüsünü **açın** ve Ayarlar Saat ve   >  **dil Dili'ne**  >  **tıklayın.**
-2. **Windows görüntüleme dili'ne** ve ardından bir dil seçin.  
+1. **başlat** menüsünü açın ve ardından **Ayarlar**  >  **saat ve dil**  >  **dili**' ni seçin.
+2. **Windows görüntüleme dili**' ni seçin ve ardından bir dil seçin.  
 
-Desteklenen dil menüde yoksa şu adımları izleyin:  
+Aradığınız desteklenen dil menüde değilse, şu adımları izleyin:  
 
-1. Tercih **edilen diller'in** altında Dil **ekle'yi seçin.**
+1. **Tercih edilen diller** altında **Dil ekle**' yi seçin.
 2. Dili bulun ve ekleyin.
-3. Windows **görüntüleme dili menüsünü** yeniden seçin ve ardından önceki adımda ekley istediğiniz dili seçin.
+3. **Windows görüntü dili** menüsünü yeniden seçin ve ardından önceki adımda eklediğiniz dili seçin.
 
-### <a name="to-change-the-keyboard-layout"></a>Klavye düzenini değiştirmek için
+### <a name="to-change-the-keyboard-layout"></a>Klavye yerleşimini değiştirmek için
 
-Klavye düzeni eklemek veya kaldırmak için Başlat menüsünü  **açın** ve ayarlar Saat ve dil  >  **&**  >  **seçin.**
+klavye düzeni eklemek veya kaldırmak için **başlat** menüsünü açın ve **Ayarlar**  >  **saat & dil**  >  **klavyesi**' ni seçin.
 
-HoloLens'inizde birden fazla klavye düzeni varsa Düzen **tuşuna** basın. **Düzen** tuşu, ekran klavyenin sağ alt köşesindedir.
+HoloLens birden fazla klavye düzeni varsa aralarında geçiş yapmak için **düzen** tuşunu kullanın. **Düzen** tuşu, ekran klavyesi 'nin sağ alt köşesindedir.
 
 > [!NOTE]  
-> Ekran klavyesi, Japonca gibi dillerde karakterler girmek için Giriş Yöntemi Düzenleyicisi'ni (IME) kullanabilir. Ancak HoloLens, IME kullanan dış Bluetooth klavyelerini desteklemez.
+> Ekran klavyesi, Japonca gibi dillerde karakter girmek için Giriş Yöntemi Düzenleyicisi 'Ni (IME) kullanabilir. ancak HoloLens, ıme kullanan harici Bluetooth klavyeleri desteklemez.
 >  
-> IME'i ekran klavyesi ile birlikte kullansanız da, İngilizce yazarak Bluetooth klavyesini kullanmaya devam edersiniz. Klavyeler arasında geçiş yapmak için tilde karakter düğmesine ( ) **~** basın.
+> ıme 'yi ekran klavyesi ile birlikte kullanırken, ingilizce yazmak için Bluetooth klavye kullanmaya devam edebilirsiniz. Klavyeler arasında geçiş yapmak için, tilde karakteri düğmesine ( **~** ) basın.

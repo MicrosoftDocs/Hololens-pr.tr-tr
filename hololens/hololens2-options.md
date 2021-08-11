@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 sürümleri
-description: her bir HoloLens 2 cihaz sürümünün aynı veya farklı olduğunu ve kendinizinkini aldıktan sonra ne yapılacağını öğrenin.
-keywords: HoloLens 2 satın alma seçenekleri, HoloLens seçenekler, geliştirici sürümü
+title: HoloLens 2 sürüm
+description: Her bir HoloLens 2 cihaz sürümünün aynı veya farklı olduğunu ve kendi cihazlarınızı edindikten sonra ne yapacaklarını öğrenin.
+keywords: HoloLens 2 satın alma seçeneği, HoloLens seçenekleri, Developer Edition
 author: evmill
 ms.author: v-evmill
 ms.reviewer: evmill
@@ -14,74 +14,74 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: 4ba759dfa491725011977c39d6e51ed583a21919ea271f0c3d6482c0847938fb
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659038"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658925"
 ---
-# <a name="compare-hololens-2-options"></a>HoloLens 2 seçeneklerini karşılaştırın
+# <a name="compare-hololens-2-options"></a>2 HoloLens Karşılaştırma
 
-HoloLens, *hologramlar tarafından desteklenen* ve işbirliğini geliştiren uygulamalar ve çözümler sağlayan bir karma gerçeklik aygıtıdır. HoloLens 2 ' yi kullanarak, daha akıllı bir şekilde çalışmak için yeni üretkenlik ve yenilik özelliklerine sahip bir deneyim yaşayın.
+HoloLens hologramlar tarafından desteklenen ve *işbirliğini geliştiren* uygulamalar ve çözümler sağlayan bir karma gerçeklik cihazıdır. 2 HoloLens den daha akıllı çalışmak için yeni üretkenlik ve yenilik yüksekliklerini (amaca uygun şekilde) deneyimlersiniz.
 
-bir bt uzmanı, yeni bir gerçeklik için deneyim oluşturmaya yönelik bir [geliştirici](https://www.microsoft.com/hololens/developers) veya bir sonraki yenilikle ilgili bir [iş karar](https://www.microsoft.com/hololens/apps) veren olan bir [bt uzmanı](https://www.microsoft.com/hololens/apps) , HoloLens 2 de bilgi işlem için yeni gerçeklik.
+Bir sonraki sektör çözümlerinizi arayan bir [BILIŞIM](https://www.microsoft.com/hololens/apps) uzmanı, yeni bir gerçeklik için deneyimler oluşturmak isteyen bir geliştirici veya bir sonraki yeniliğiniz hakkında düşünme konusunda iş karar veren bir geliştirici olun ( HoloLens 2, bilgi işlem için yeni gerçekliğinizdir). [](https://www.microsoft.com/hololens/developers) [](https://www.microsoft.com/hololens/apps)
 
 <br>
 
-|                                                      | HoloLens 2 | uzaktan yardım ile HoloLens 2 | HoloLens 2 endüstriyel sürümü | uzaktan yardım ile HoloLens 2 endüstriyel sürümü | HoloLens 2 ile tribirleştirmek XR10 | HoloLens 2 geliştirme sürümü |
+|                                                      | HoloLens 2 | HoloLens 2 ile Remote Assist | HoloLens 2 Industrial Edition | HoloLens 2 Industrial Edition with Remote Assist | HoloLens 2 ile XR10'HoloLens kırp | HoloLens 2 Geliştirme Sürümü |
 |------------------------------------------------------|------------|-------------------------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|
 | **HoloLens 2 cihaz (bir cihaz)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
-| **Dynamics 365 uzaktan yardım (bir bilgisayar)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
-| **ISO 14644-1 sınıfı 5 temiz oda sınıflandırması**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| **UL Class ı, Bölüm 2-gruplar A, B, C ve D tehlıkelı Loc ortamları**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| **Hard hat tümleşik (40 + ülkede PPE uyumlu)** |            |                               |                               |                                                  |               ✔️              |                                |
-| **Gürültü-ses çıkışı iptal ediliyor**                        |            |                               |                               |                                                  |               ✔️              |                                |
+| **Dynamics 365 Remote Assist (bir bilgisayar)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
+| **ISO 14644-1 Sınıf 5 temiz oda sınıflandırması**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **UL Sınıf I, 2. Bölüm A, B, C ve D SISLOC ortamları**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| **Hard hat tümleşik (40'dan fazla ülkede PPE uyumlu)** |            |                               |                               |                                                  |               ✔️              |                                |
+| **Gürültüyü iptal etme ses çıkışı**                        |            |                               |                               |                                                  |               ✔️              |                                |
 | **Geliştirici yetkilendirmeleri <sup>1</sup>**                             |            |                               |                               |                                                  |                              |                ✔️               |
-| **Hızlı değiştirme programı <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Hızlı Değiştirme Programı <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
 | **Ticari kullanım hakları**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| [**Garan**](hololens2-hardware.md#warranty-information)                                             |   1 yıllık   |             1 yıllık            |             2 yıl            |                      2 yıl                      |            1-yıl <sup>3</sup>            |             1 yıllık             |
-| **Cihaz satın alma limiti**                                |    Hiçbiri    |              Hiçbiri             |              Hiçbiri             |                       Hiçbiri                       |             Hiçbiri             |       İşlem başına bir      |
+| [**Garanti**](hololens2-hardware.md#warranty-information)                                             |   1 Yıllık   |             1 Yıllık            |             2 Yıllık            |                      2 Yıllık                      |            1-Yıl <sup>3</sup>            |             1 Yıllık             |
+| **Cihaz satın alma sınırı**                                |    Hiçbiri    |              Hiçbiri             |              Hiçbiri             |                       Hiçbiri                       |             Hiçbiri             |       İşlem başına bir tane      |
 
-- <sup>1</sup> -Unity Pro ve pikselleri eklentisine $500 Azure kredisi ve 3 aylık deneme sürümleri dahildir.
-- <sup>2</sup> -Microsoft tarafından kusurlu cihaz alınmadan önce, bir değiştirme cihazını fazla gece veya çabuk gönderim (kullanılabilir seçeneklerin daha hızlı bir şekilde) alın.
-- <sup>3</sup> -HoloLens 2 sürümü ile tribir XR10 için garanti, destek ve sertifika soruları için, [üç yönlü birleştirmek için iletişim kurun](https://fieldtech.trimble.com/en/contact-support).
+- <sup>1</sup> - Unity Pro ve Pixyz Eklentisi için 500 ABD doları Azure kredisi ve 3 aylık denemeler içerir.
+- <sup>2</sup> - Hatalı cihaz Microsoft tarafından alınmadan önce bir değiştirme cihazı gece veya hızlandırılmış gönderim (kullanılabilir seçeneklerden daha hızlı) alın.
+- <sup>3</sup> - HoloLens 2 sürümüne sahip Trimble XR10 için garanti, destek ve sertifikasyon soruları için [Trimble ile iletişime geçin.](https://fieldtech.trimble.com/en/contact-support)
 
 
-## <a name="options-overview"></a>Seçeneklere genel bakış
+## <a name="options-overview"></a>Seçeneklere Genel Bakış
 
-**[HoloLens 2 (yalnızca cihaz)](hololens2-options-device-only.md)**: HoloLens 2, Microsoft 'un bulut ve aı hizmetlerinin güvenilirlik, güvenlik ve ölçeklenebilirlik özelliklerine göre geliştirilen en rahat ve modern karma gerçeklik deneyimini sunmaktadır.
+**[HoloLens 2 (yalnızca cihaz)](hololens2-options-device-only.md)**: HoloLens 2, Microsoft'un sunduğu bulut ve AI hizmetlerinin güvenilirliği, güvenliği ve ölçeklenebilirliğiyle geliştirilmiş, en rahat ve çevreleyici karma gerçeklik deneyimini sunar.
 
-**[HoloLens 2, Dynamics 365 uzaktan yardım](hololens2-options-remote-assist.md)**: HoloLens 2 ve Microsoft 'un en son karma gerçeklik iletişim uygulaması ile birlikte sunulan bir gün içinde kullanmaya başlayın. Tüm şirketinizin daha üretken ve yenilik yapın daha verimli olmasına yardımcı olun. Artık, sektör ortaklarından Dynamics 365 ve çözümleri ile karışık gerçeklik yaşayın.
+**[HoloLens 2 ile Dynamics 365 Remote Assist:](hololens2-options-remote-assist.md)** Kullanmaya başlayın HoloLens 2 ve Microsoft'un karma gerçeklik iletişim uygulaması ile ilk günden itibaren birlikte kullanılabilir. Tüm şirketinizin daha üretken ve daha fazla amaca sahip yeniliklere sahip olması için yardımcı olun. Şimdi Dynamics 365 ve sektör iş ortaklarının çözümleriyle karma gerçeklikten deneyim edin.
 
-**[HoloLens 2 endüstriyel sürüm](hololens2-options-industrial-edition.md)**: ıso class 6 ile ıso sınıfı 8 ' e kadar, HoloLens 2 endüstriyel sürümü, 2 yıllık garanti ve hızlı bir değiştirme programı ile desteklenir ve bu arada, 2 yıllık bir garanti ile desteklenir.
+**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** ISO Sınıfı 6 ile ISO Sınıfı 8 arasında değişen standartlara sahip temiz oda ortamlarını destekleyecek şekilde tasarlanmış, tasarlanmış ve test edilmiş olan HoloLens 2 Industrial Edition, UL Sınıf I, Bölüm 2 sertifikalıdır ve 2 yıllık garanti ve hızlı bir değişim programıyla desteklenir.
 
-**[HoloLens 2 ile üç aylık](hololens2-options-trimble-xr10-edition.md)** hale getirmeli XR10: kirli, yüksek ve güvenli kontrollü ortamlarda çalışanlar için oluşturulan amaç, HoloLens 2 ile üç aylık çalışma sitenize karma gerçeklik kazandırır.
+HoloLens 2 ile kırpabilir **[XR10:](hololens2-options-trimble-xr10-edition.md)** Kirli, yüksek sesle ve güvenlik denetimli ortamlarda çalışanlar için özel olarak inşa edilen HoloLens 2 ile Trimble XR10, karma gerçekliği iş sitenize getirir.
 
-**[HoloLens 2 geliştirme sürümü](hololens2-options-dev-edition.md)**: bu teklifle, HoloLens 2 ' nin ücretsiz Unity yazılımının ücretsiz denemelerinden ve bulut hizmetleri için Azure kredileriyle birleştiren karma gerçeklik için oluşturmaya başlayın. Temel bilgilerin ötesine nasıl gidebileceğinizi ve karma gerçeklik için geliştirmeye nasıl başlayacağınızı öğrenin.
+**[HoloLens 2 Geliştirme](hololens2-options-dev-edition.md)** Sürümü: HoloLens 2'nin ücretsiz Unity yazılımı denemeleriyle bulut hizmetleri için Azure kredilerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
 
-[HoloLens 2 portföyü](https://www.microsoft.com/hololens/buy)hakkında bilgi edinin.
+2 portföyümüz hakkında [HoloLens öğrenin.](https://www.microsoft.com/hololens/buy)
 
-## <a name="explore-solutions"></a>Çözümleri keşfet
+## <a name="explore-solutions"></a>Çözümleri keşfetme
 
-HoloLens karma gerçeklik cihazları için oluşturulmuş bu ek çözümleri keşfet.
+Karma gerçeklik cihazları için HoloLens bu ek çözümleri keşfedin.
 
 | Çözüm | Kısa açıklama                                                                                |
 |----------|---------------------------------------------------------------------------------------------------|
-| [HoloLens için Dynamics 365](https://www.microsoft.com//hololens/apps)          | Çalışanları güçlendirin ve işlemleri iyileştirin.                                                        |
-| [Dynamics 365 uzaktan yardım](https://dynamics.microsoft.com/mixed-reality/remote-assist/)          | Farklı konumlardan birlikte çalışarak teknisyenlerin işbirliğini daha verimli bir şekilde destekleyin. |
-|   [Dynamics 365 kılavuzlar](https://dynamics.microsoft.com/mixed-reality/guides/)        | Eğitimin ihtiyaçlarını geliştirme ve çalışanların nasıl çalıştığını öğrenin.                          |
-|  [Karma Gerçeklik için Azure Cloud Services](/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Azure Cloud Services kullanarak bir çözüm geliştirmeyi öğrenin.                                       |
-|  [HoloLens 2 için geliştirmeye başlayın](/windows/mixed-reality/develop/development?tabs=unity)         | Gereksinimlerinize uyacak bir karma gerçeklik çözümü oluşturun.                                                 |
+| [Dynamics 365 for HoloLens](https://www.microsoft.com//hololens/apps)          | Çalışanları güçlendirme ve operasyonları iyileştirme.                                                        |
+| [Dynamics 365 Remote Assist](https://dynamics.microsoft.com/mixed-reality/remote-assist/)          | Teknisyenlerin farklı konumlardan birlikte çalışarak daha verimli bir şekilde işbirliği yapmalarını sağlamak. |
+|   [Dynamics 365 Kılavuzları](https://dynamics.microsoft.com/mixed-reality/guides/)        | Etkili eğitim ihtiyaçlarını geliştirin ve çalışanların performansını öğrenin.                          |
+|  [Azure Cloud Services Gerçeklik için Azure Cloud Services](/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Azure Cloud Services kullanarak çözüm Azure Cloud Services.                                       |
+|  [HoloLens 2 için geliştirmeye başlama](/windows/mixed-reality/develop/development?tabs=unity)         | İhtiyaçlarınızı karşılamak için karma gerçeklik çözümü oluşturma.                                                 |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-cihaz son kullanıcıları için, kullanmaya başlamak için [HoloLens 2](hololens2-setup.md) ' yi kullanıma hazırlama bölümüne bakın.
+Cihaz son kullanıcıları için kullanmaya [başlamaya hazır HoloLens 2.0'a](hololens2-setup.md) bakın.
 
 > [!div class="nextstepaction"]
-> [HoloLens 2 ' ye kullanıma hazırlanın](hololens2-setup.md)
+> [HoloLens 2'nizi kullanıma hazır hale get](hololens2-setup.md)
 
-BT yöneticileri için cihazları kuruluşunuza dağıtmak, güçlü karma gerçeklik deneyimlerini de kaldırır. HoloLens 2 dağıtım gereksinimlerini ve senaryolarını bir dizi altyapı yapılandırmasında inceleyerek başlayın.
+IT yöneticileri için, cihazları kuruma dağıtmak güçlü karma gerçeklik deneyimlerinin kilidini açmanızı sağlar. Kullanmaya başlayın çeşitli IT HoloLens 2 dağıtım gereksinimlerini ve senaryolarını gözden geçirerek bu yapılandırmayı gözden geçirebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [ticari bir ortamda HoloLens 2 dağıtma](hololens-requirements.md)
+> [Ticari HoloLens 2'yi dağıtma](hololens-requirements.md)
