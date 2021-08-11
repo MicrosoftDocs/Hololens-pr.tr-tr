@@ -1,6 +1,6 @@
 ---
-title: HoloLens BitLocker Şifrelemesi
-description: Karma gerçeklik cihazlarınıza depolanmış dosyaları korumak için BitLocker cihaz HoloLens etkinleştirmeyi öğrenin.
+title: HoloLens BitLocker şifreleme
+description: HoloLens karma gerçeklik cihazlarınızda depolanan dosyaları korumak için BitLocker cihaz şifrelemesini nasıl etkinleştirebileceğinizi öğrenin.
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -13,92 +13,92 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 37efab3ef3d68a9641320e144619008612f6efa2
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 4b07bb87b34ec966472bcbde000106590570fd7e7063ab503724884fa266bb34
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635254"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662666"
 ---
-# <a name="hololens-1st-gen-bitlocker-encryption"></a>HoloLens (1. Nesil) BitLocker Şifrelemesi
+# <a name="hololens-1st-gen-bitlocker-encryption"></a>HoloLens (1. genel) BitLocker şifrelemesi
 
-HoloLens (1. nesil) ve HoloLens 2' nin her ikisi de BitLocker kullanarak cihaz şifrelemeyi destekler, ancak BitLocker her zaman HoloLens 2'de etkinleştirilir.
+HoloLens (1. gen) ve HoloLens 2 her ikisi de bitlocker kullanılarak cihaz şifrelemesini destekler, ancak bitlocker her zaman HoloLens 2 ' de etkindir.
 
-Bu makale, BitLocker'ı HoloLens (1. nesil) etkinleştirmenizi ve yönetmenizi sağlayacaktır.
+bu makale HoloLens (1. gen) üzerinde BitLocker 'ı etkinleştirmenize ve yönetmenize yardımcı olur.
 
-Bu HoloLens (1. nesil) BitLocker cihaz şifrelemeyi el ile veya mobil cihaz yönetimi (MDM) kullanarak etkinleştirebilirsiniz. Dosyalarda depolanan dosyaları ve [bilgileri korumak için BitLocker](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) cihaz şifrelemeyi etkinleştirmek için bu HoloLens. Cihaz şifrelemesi, BitLocker yapılandırma hizmeti sağlayıcısında (CSP) [EncryptionMethodByDriveType 3](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) yöntemine eşdeğer olan AES-CBC 128 şifreleme yöntemini kullanarak verilerinizin korunmasına yardımcı olur. Doğru şifreleme anahtarına (parola gibi) sahip personel bu anahtarın şifresini çözebilir veya bir veri kurtarma işlemi gerçekleştirebilirsiniz.
+HoloLens (1. gen) ' de, BitLocker cihaz şifrelemesini el ile veya mobil cihaz yönetimi (MDM) kullanarak etkinleştirebilirsiniz. HoloLens depolanan dosya ve bilgileri korumak için [BitLocker cihaz şifrelemesini](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) etkinleştirmek üzere bu yönergeleri izleyin. Cihaz şifreleme, BitLocker yapılandırma hizmeti sağlayıcısı 'nda (CSP) [Encryptionmethodbydrivetype yöntemi 3](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) ile eşdeğer olan AES-CBC 128 şifreleme yöntemini kullanarak verilerinizi korumanıza yardımcı olur. Doğru şifreleme anahtarına (parola gibi) sahip personel, şifresini çözebilir veya bir veri kurtarma işlemi gerçekleştirebilir.
 
-## <a name="enable-device-encryption-using-mdm"></a>MDM kullanarak cihaz şifrelemeyi etkinleştirme
+## <a name="enable-device-encryption-using-mdm"></a>MDM kullanarak cihaz şifrelemesini etkinleştirme
 
-Cihaz şifrelemesi gerektiren bir Cihaz Yönetimi uygulamak için Mobile Cihaz Yönetimi (MDM) sağlayıcınızı kullanabilirsiniz. İlke [CSP'sinde güvenlik/RequireDeviceEncryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) ayarı, kullanmak için ilkedir.
+Cihaz şifrelemesi gerektiren bir ilkeyi uygulamak için mobil cihaz yönetimi (MDM) sağlayıcınızı kullanabilirsiniz. Kullanılacak ilke, Ilke CSP 'deki [güvenlik/RequireDeviceEncryption ayarıdır](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) .
 
-[Microsoft Intune kullanarak cihaz şifrelemeyi etkinleştirme yönergelerine bakın.](/intune/compliance-policy-create-windows#windows-holographic-for-business)
+[Microsoft Intune kullanarak cihaz şifrelemesini etkinleştirme yönergelerine bakın.](/intune/compliance-policy-create-windows#windows-holographic-for-business)
 
-Diğer MDM araçları için yönergeler için MDM sağlayıcınızın belgelerine bakın. MDM sağlayıcınız cihaz şifrelemesi için özel URI gerektiriyorsa aşağıdaki yapılandırmayı kullanın:
+Diğer MDM araçları için, yönergeler için MDM sağlayıcınızın belgelerine bakın. MDM sağlayıcınız cihaz şifreleme için özel URI gerektiriyorsa, aşağıdaki yapılandırmayı kullanın:
 
-- **Ad:** istediğiniz bir ad
-- **Açıklama:** isteğe bağlı
-- **OMA-URI:**`./Vendor/MSFT/Policy/Config/Security/RequireDeviceEncryption`
-- **Veri türü:** tamsayı
-- **Değer:**`1`
+- **Ad**: seçtiğiniz bir ad
+- **Açıklama**: isteğe bağlı
+- **OMA-URI**: `./Vendor/MSFT/Policy/Config/Security/RequireDeviceEncryption`
+- **Veri türü**: tamsayı
+- **Değer**: `1`
 
-## <a name="enable-device-encryption-using-a-provisioning-package"></a>Sağlama paketi kullanarak cihaz şifrelemeyi etkinleştirme
+## <a name="enable-device-encryption-using-a-provisioning-package"></a>Sağlama paketini kullanarak cihaz şifrelemesini etkinleştirme
 
-Paketleri sağlama, Windows Yapılandırma Tasarımcısı aracı tarafından oluşturulan ve cihaza belirtilen yapılandırmayı uygulayan dosyalardır. 
+sağlama paketleri, bir cihaza belirtilen yapılandırmayı uygulayan Windows configuration Designer aracı tarafından oluşturulan dosyalardır. 
 
 ### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition-and-enables-encryption"></a>Windows Holographic sürümünü yükselten ve şifrelemeyi sağlayan bir sağlama paketi oluşturma
 
-1. [Uygulama için bir sağlama HoloLens.](hololens-provisioning.md)
-1. Çalışma zamanı **ayarları**  >  **İlkeler**  >  **Güvenliği'ne** gidin ve **GerekliCimaCip Şifrele'yi seçin.**
+1. [HoloLens için bir sağlama paketi oluşturun.](hololens-provisioning.md)
+1. **Çalışma zamanı ayarları**  >  **ilkeleri**  >  **güvenliği**' ne gidin ve **requiredeviceencryption**' ı seçin.
 
-    ![Cihaz şifreleme ayarının evet olarak yapılandırılması gerektir](images/device-encryption.png)
+    ![Cihaz şifreleme ayarını Evet olarak yapılandırmak iste](images/device-encryption.png)
 
-1. Commercial Suite'i satın aldığınız zaman sağlanan XML lisans dosyasını bulun.
+1. Ticari paketi satın aldığınızda sağlanmış olan XML lisans dosyasını bulun.
 
-1. Commercial Suite'i satın aldığınız zaman sağlanan XML lisans dosyasına göz atabilir ve dosyayı seçin.
+1. Ticari paketi satın aldığınızda sağlanmış olan XML Lisans dosyasına gidin ve seçin.
     > [!NOTE]
-    > Sağlama [paketinde ek ayarları yapılandırabilirsiniz.](hololens-provisioning.md)
+    > [Sağlama paketinde ek ayarlar](hololens-provisioning.md)yapılandırabilirsiniz.
 
 1. **Dosya** menüsünde **Kaydet**’e tıklayın. 
 
-1. Proje dosyalarının hassas bilgiler içerenin açık olduğu uyarıyı okuyun ve Tamam'a **tıklayın.**
+1. Proje dosyalarının hassas bilgiler içerebileceğini belirten uyarıyı okuyun ve **Tamam**' ı tıklatın.
 
     > [!IMPORTANT]
-    > Bir sağlama paketi derlemek için proje dosyalarına ve sağlama paketi (.ppkg) dosyasına hassas bilgiler dahildir. .ppkg dosyasını şifreleme seçeneğiniz olsa da proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamalı ve artık gerekli olmadığı zaman proje dosyalarını silebilirsiniz.
+    > Bir sağlama paketi oluşturduğunuzda, proje dosyaları ve sağlama paketi (. ppkg) dosyasına hassas bilgileri dahil edebilirsiniz. . Ppkg dosyasını şifreleme seçeneğiniz olsa da, proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamanız ve artık gerekli olmadığında proje dosyalarını silmeniz gerekir.
 
-1. Dışarı Aktar **menüsünde** Sağlama **paketi'ne tıklayın.**
-1. **Sahip'i** **IT Yöneticisi** olarak değiştirerek bu sağlama paketinin önceliğe diğer kaynaklardan bu cihaza uygulanan paket sağlamadan daha yüksek bir öncelik ayarlayın ve ardından Sonraki'yi **seçin.**
-1. Paket Sürümü için **bir değer ayarlayın.**
+1. **Dışarı aktar** menüsünde, **sağlama paketi**' ne tıklayın.
+1. Bu sağlama paketinin, diğer kaynaklardan bu cihaza uygulanan sağlama paketlerinden daha yüksek önceliği ayarlayabileceği **BT Yöneticisi** olarak **sahibini** değiştirin ve ardından **İleri**' yi seçin.
+1. **Paket sürümü** için bir değer ayarlayın.
 
     > [!TIP]
-    > Mevcut paketlerde değişiklik yapabilirsiniz ve sürüm numarasını, daha önce uygulanan paketleri güncelleştirmek için değiştirebilirsiniz.
+    > Mevcut paketlerde değişiklik yapabilir ve sürüm numarasını daha önce uygulanan paketleri güncelleştirecek şekilde değiştirebilirsiniz.
 
-1. Sağlama **paketi için güvenlik ayrıntılarını seçin'de, Sonraki**'ye **tıklayın.**
-1. Hazır **olduktan** sonra sağlama paketinin gitmelerini istediğiniz çıkış konumunu belirtmek için Sonraki'ye tıklayın. Varsayılan olarak, Windows ICD proje klasörünü çıkış konumu olarak kullanır.
+1. **Sağlama paketinin güvenlik ayrıntılarını seçin** sayfasında **İleri**' ye tıklayın.
+1. Oluşturulduktan sonra sağlama paketinin gitmesini istediğiniz çıkış konumunu belirtmek için **İleri** ' ye tıklayın. varsayılan olarak, Windows icd, çıkış konumu olarak proje klasörünü kullanır.
 
-    İsteğe bağlı olarak, varsayılan çıkış konumunu değiştirmek için Gözat'a tıkabilirsiniz.
+    İsteğe bağlı olarak, varsayılan çıkış konumunu değiştirmek için, Araştır ' ı tıklatabilirsiniz.
 
 1. **İleri**’ye tıklayın.
-1. Paketi **derlemeye** başlamak için Derleme'ye tıklayın. Proje bilgileri derleme sayfasında görüntülenir ve ilerleme çubuğu derleme durumunu gösterir.
-1. Derleme tamamlandığında Son'a **tıklayın.**
+1. Paketi oluşturmaya başlamak için **Oluştur** ' a tıklayın. Proje bilgileri yapı sayfasında görüntülenir ve ilerleme çubuğu derleme durumunu gösterir.
+1. Oluşturma tamamlandığında **son**' a tıklayın.
 
-### <a name="apply-the-provisioning-package-to-hololens"></a>Sağlama paketini HoloLens
+### <a name="apply-the-provisioning-package-to-hololens"></a>Sağlama paketini HoloLens Uygula
 
-1. Bağlan USB aracılığıyla bir bilgisayara bağlayın ve cihazı başlatın, ancak ilk  kurulum deneyiminin sığdırma sayfasını (mavi kutuyla ilk sayfa) devam edin.
-1. Volume Down ve Power düğmelerine **aynı anda kısa** bir süre **basın** ve bırakın.
-1. HoloLens, bilgisayar üzerinde bir Dosya Gezgini olarak gösterir.
-1. Bu Dosya Gezgini sağlama paketini (.ppkg) sürükleyip cihaz depolama alanına bırakın.
-1. Sığdırma sayfasındayken Ses **Düzeyi Kapalı ve** Güç **düğmelerine** tekrar kısa bir süre basın **ve bırakın.**
-1. Cihaz, pakete güvenebilir ve uygulamak mı isteyebilirsiniz? Pakete güvenen bir onaylayın.
-1. Paketin başarıyla uygulanıp uygulanmadı olmadığını gösterir. Başarısız olursa, paketinizi düzeltebilir ve yeniden sınabilirsiniz. Başarılı olursa cihaz kurulumuna devam edin.
+1. cihazı USB ile bilgisayara Bağlan ve cihazı başlatın, ancak ilk kurulum deneyiminin (mavi kutu ile ilk sayfa) durumunu aşan **bir sayfadan devam** etmez.
+1. **Sesi** ve **Güç** düğmelerini aynı anda bir daha bas ve serbest bırakın.
+1. HoloLens, bilgisayardaki dosya gezgini 'nde bir cihaz olarak gösterilir.
+1. Dosya Gezgini 'nde, sağlama paketini (. ppkg) cihaz depolamasına sürükleyin ve bırakın.
+1. **Sığdır** sayfasında, **birimi aşağı** ve **Güç** düğmelerine aynı anda tekrar basın ve serbest bırakın.
+1. Cihaza güveniyorsanız ve uygulamayı uygulamak istiyorsanız bu cihaz sizi sorar. Pakete güvendiğinizden emin olun.
+1. Paketin başarıyla uygulanıp uygulanmadığını görürsünüz. Başarısız olursa paketinizi düzelleyebilir ve yeniden deneyebilirsiniz. Başarılı olursa, cihaz kurulumuna devam edin.
 
 > [!NOTE]
-> Cihaz Ağustos 2016'dan önce satın alındı ise cihazda Microsoft hesabı ile oturum açmanız, en son işletim sistemi güncelleştirmesini almanız ve sağlama paketini uygulamak için işletim sistemi sıfırlamanız gerekir.
+> Cihaz 2016 Ağustos 'Tan önce satın alındıysa, Microsoft hesabı cihazda oturum açmanız, en son işletim sistemi güncelleştirmesini almanız ve ardından sağlama paketini uygulamak için işletim sistemini sıfırlamanız gerekir.
 
-## <a name="verify-device-encryption"></a>Cihaz şifrelemeyi doğrulama
+## <a name="verify-device-encryption"></a>Cihaz şifrelemesini doğrulama
 
-Şifreleme, veri HoloLens. Cihaz şifreleme durumunu doğrulamak için:
+Şifreleme HoloLens sessiz. Cihaz şifreleme durumunu doğrulamak için:
 
-- Bu HoloLens Sistem **Hakkında'Ayarlar**  >    >  **gidin.** Cihaz **şifrelenirse** **BitLocker** etkinleştirilir. 
+- HoloLens üzerinde **Ayarlar**  >  **sistem**  >  **hakkında** bölümüne gidin. Cihaz şifrelenirse **BitLocker** **etkinleştirilir** . 
 
-    ![BitLocker'ın etkin olduğunu gösteren ekran hakkında](images/about-encryption.png)
+    ![BitLocker 'ın etkin olduğunu gösteren ekran hakkında](images/about-encryption.png)

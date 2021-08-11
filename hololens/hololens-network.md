@@ -10,12 +10,12 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: jarrettr
-ms.openlocfilehash: c2a2fe1a20a4e9baa194b1037ccb6649d324b990
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: a230538a2bbf33481ef33c992a5b6c76107bb3829774744bc7e9a888f9102692
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640228"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663101"
 ---
 # <a name="connect-hololens-to-a-network"></a>bir ağa HoloLens Bağlan
 
@@ -200,46 +200,46 @@ Sertifika, yerleşik VPN istemcisi için kimlik doğrulaması için kullanılıy
 
 [Bu KıLAVUZLARLA](/windows/security/identity-protection/vpn/vpn-guide) [VPN yapılandırma](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) hakkında daha fazla bilgi edinin.  
 
-### <a name="vpn-via-ui"></a>Kullanıcı arabirimi aracılığıyla VPN
+### <a name="vpn-via-ui"></a>Kullanıcı arabirimi üzerinden VPN
 
-vpn varsayılan olarak etkinleştirilmemiştir, ancak **Ayarlar** uygulaması açılarak ve **ağ & Internet-> VPN**'ye gidilerek el ile etkinleştirilebilir.
+VPN varsayılan olarak etkin değildir, ancak Ayarlar uygulaması **açarak ve İnternet** **-& VPN'e > etkinleştirilebilir.**
 1. Bir VPN sağlayıcısı seçin.
-1. Bir bağlantı adı oluşturun. 
-1. Sunucu adınızı veya adresinizi girin.
+1. Bağlantı adı oluşturun. 
+1. Sunucu adı veya adresinizi girin.
 1. VPN türünü seçin.
-1. Oturum açma bilgilerinin türünü seçin. 
-1. İsteğe bağlı olarak Kullanıcı adı ve parola ekleyin.
-1. VPN ayarlarını uygulayın. 
+1. Oturum açma bilgileri türünü seçin. 
+1. İsteğe bağlı olarak kullanıcı adı ve parola ekleyin.
+1. VPN ayarlarını uygulama. 
 
 ![HoloLens VPN ayarları](./images/vpn-settings-ui.jpg)
 
-### <a name="vpn-set-via-provisioning-package"></a>Sağlama paketi aracılığıyla VPN kümesi
+### <a name="vpn-set-via-provisioning-package"></a>Sağlama Paketi aracılığıyla VPN kümesi
 
 > [!TIP] 
-> Windows Holographic, sürüm 20h2 ' de VPN bağlantısı için bir ara sunucu yapılandırma sorunu düzeltildi. Bu akışı kullanmak istiyorsanız, lütfen cihazları bu yapıya yükseltmeyi göz önünde bulundurun.
+> Holographic Windows sürüm 20H2'de VPN bağlantısı için ara sunucu yapılandırma sorunu düzeltilmiştir. Bu akışı kullanmak için lütfen cihazları bu derlemeye yükseltmeyi göz önünde bulundurabilirsiniz.
 
-1. Windows yapılandırma tasarımcısını başlatın.
-1. **HoloLens cihazları sağla**' yı ve ardından hedef **cihaz ' ı seçin.**
-1. Paket adı ve yolunu girin.
-1. **Gelişmiş düzenleyiciye geç ' e** tıklayın.
-1. **Çalışma zamanı ayarları**  ->  **connectivityprofiles**  ->  **VPN**  ->  **vpnsettings**' i açın.
+1. Yapılandırma Windows'i başlatma.
+1. Cihazları **HoloLens'a tıklayın,** ardından hedef cihaz'ı ve Sonraki'yi **seçin.**
+1. Paket adını ve yolunu girin.
+1. Gelişmiş **düzenleyiciye geç'e tıklayın.**
+1. Çalışma **zamanı ayarları**  ->  **ConnectivityProfiles**  ->  **VPN**  ->  **VPNSettings'i açın.**
 1. VPNProfileName yapılandırma
-1. ProfileType: **Native** veya **üçüncü taraf** seçeneğini belirleyin.
-    1. Yerel profil için **Nativeprotocoltype**' ı seçin, ardından sunucu, yönlendirme ilkesi, kimlik doğrulama türü ve diğer ayarları yapılandırın.
-    1. "Üçüncü taraf" profili için sunucu URL 'SI, VPN eklentisi uygulama paketi aile adı (yalnızca 3 önceden tanımlanmış) ve özel yapılandırma için yapılandırın.
+1. ProfileType: Yerel **veya Üçüncü** **Taraf'ı seçin.**
+    1. Yerel profil için **NativeProtocolType'ı seçin,** ardından sunucu, yönlendirme ilkesi, kimlik doğrulama türü ve diğer ayarları yapılandırabilirsiniz.
+    1. "Üçüncü Taraf" profili için sunucu URL'sini, VPN eklentisi Uygulama paketi aile adını (önceden tanımlanmış yalnızca 3) ve özel yapılandırmaları yapılandırabilirsiniz.
 1. Paketinizi dışarı aktarın.
-1. HoloLens Bağlan ve. ppkg dosyasını cihaza kopyalayın. 
-1. HoloLens, Başlat menüsü açıp **Ayarlar**  ->  **hesap**  ->  **erişimi iş veya okul**  ->  **sağlama paketi ekle veya kaldır** ' ı seçerek vpn. ppkg 'yi uygulayın-> VPN paketinizi seçin.
+1. Bağlan HoloLens ve .ppkg dosyasını cihaza kopyalayın. 
+1. Bu HoloLens, Başlat menüsü'yi açarak ve Ayarlar Hesap Erişimi iş veya okul Sağlama paketi ekle veya kaldır -> VPN paketinizi seçin öğesini seçerek VPN .ppkg'yi  ->    ->    ->   uygulayabilirsiniz.
 
 
 ### <a name="setting-up-vpn-via-intune"></a>Intune aracılığıyla VPN ayarlama
-Başlamak için Intune belgelerini izlemeniz yeterlidir. bu adımları izleyerek lütfen HoloLens cihazların desteklediği yerleşik VPN protokollerini aklınızda bulundurun. 
+Çalışmaya devam etmek için Intune belgelerini takip edin. Bu adımları takip edin ve bu cihazları destekleyen yerleşik VPN HoloLens unutmayın. 
 
-[Intune 'DA VPN sunucularına bağlanmak IÇIN VPN profilleri oluşturun](/mem/intune/configuration/vpn-settings-configure).
+[Intune'da VPN sunucularına bağlanmak için VPN profilleri oluşturun.](/mem/intune/configuration/vpn-settings-configure)
 
-[ıntune kullanarak VPN bağlantıları eklemek için Windows 10 ve Windows cihaz ayarlarını](/mem/intune/configuration/vpn-settings-windows-10)kullanın.
+[Windows 10 kullanarak WINDOWS eklemek için Holographic cihaz ayarlarını kullanın ve kullanın.](/mem/intune/configuration/vpn-settings-windows-10)
 
-İşiniz bittiğinde [, lütfen profili atamayı](/mem/intune/configuration/device-profile-assign)unutmayın.
+Bittiğinde lütfen profilini [atamayı unutmayın.](/mem/intune/configuration/device-profile-assign)
 
 ### <a name="vpn-via-3rd-party-mdm-solutions"></a>3. taraf MDM çözümleri aracılığıyla VPN
 3. taraf VPN bağlantısı örneği:
@@ -331,58 +331,58 @@ Yerel IKEv2 VPN örneği:
         </Item>
       </Add>
 ```
-## <a name="disabling-wi-fi-on-hololens-1st-gen"></a>HoloLens Wi-Fi devre dışı bırakma (1. genel)
+## <a name="disabling-wi-fi-on-hololens-1st-gen"></a>Wi-Fi 'de HoloLens devre dışı bırakma (1. nesil)
 
-### <a name="using-the-settings-app-on-hololens"></a>HoloLens Ayarlar uygulamasını kullanma
+### <a name="using-the-settings-app-on-hololens"></a>Ayarlar'da HoloLens
 
-1. **Başlat** menüsünü açın.
-1. **başlat menüsünün sağ** tarafındaki **tüm uygulamalar** listesinden **Ayarlar** uygulamayı **başlat** ' ı seçin. **Ayarlar** uygulama, sizin için otomatik olarak eklenir.
-1. **Internet & ağı**' nı seçin.
-1. **Kapalı** konuma taşımak için Wi-Fi kaydırıcı anahtarını seçin. Bu, Wi-Fi radyoın RF bileşenlerini kapatır ve HoloLens tüm Wi-Fi işlevlerini devre dışı bırakır.
+1. Başlat **menüsünü** açın.
+1. **Başlat Ayarlar** **menüsünden** veya Sağdan Tüm **Uygulamalar** listesinden uygulamanın **seçerek** uygulamayı seçin. Ayarlar  uygulaması otomatik olarak önüne yerleştirilir.
+1. Ağ **ve İnternet & seçin.**
+1. Kaydırıcıyı Wi-Fi kaydırıcısını seçerek Kapalı **konuma taşıyın.** Bu, Wi-Fi radyonun RF bileşenlerini devre dışı Wi-Fi tüm HoloLens.
 
     > [!WARNING]
-    > Wi-Fi radyo devre dışı bırakıldığında, HoloLens otomatik olarak bu [alanları](hololens-spaces.md)yükleyemeyecektir.
+    > Wi-Fi radyo devre dışı HoloLens alanlarınızı otomatik olarak [yükleyemez.](hololens-spaces.md)
 
-1. Wi-Fi Radyoyu açmak ve Microsoft HoloLens Wi-Fi işlevselliğini geri yüklemek için kaydırıcı anahtarını **Açık** konuma taşıyın. Seçilen Wi-Fi radyo durumu (**Açık** veya **kapalı**), yeniden başlatmalar arasında kalır.
+1. Kaydırıcı anahtarını Açık konuma **hareket ettirerek** Wi-Fi açma ve Wi-Fi geri yükleme işlevlerini Microsoft HoloLens. Seçilen radyo Wi-Fi ( Açık **veya Kapalı)** yeniden başlatmalarda kalıcı olur. 
 
-## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Wi-Fi ağda HoloLens IP adresini tanımlama
+## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Ağ ağ üzerinde HoloLens IP Wi-Fi tanımlama
 
-### <a name="by-using-the-settings-app"></a>Ayarlar uygulamasını kullanarak
+### <a name="by-using-the-settings-app"></a>Ayarlar kullanarak
 
-1. **Başlat** menüsünü açın.
-1. **başlat menüsünün sağ** tarafındaki **tüm uygulamalar** listesinden **Ayarlar** uygulamayı **başlat** ' ı seçin. **Ayarlar** uygulama, sizin için otomatik olarak eklenir.
-1. **Internet & ağı**' nı seçin.
-1. Kullanılabilir Wi-Fi ağları listesinin altına aşağı kaydırın ve **donanım özellikleri**' ni seçin.
+1. Başlat **menüsünü** açın.
+1. **Başlat Ayarlar** **menüsünden** veya Sağdan Tüm **Uygulamalar** listesinden uygulamanın **seçerek** uygulamayı seçin. Ayarlar  uygulaması otomatik olarak önüne yerleştirilir.
+1. Ağ **ve İnternet & seçin.**
+1. Kullanılabilir ağların listesinin altına inin ve Wi-Fi **özellikler'i seçin.**
 
-    ![Wi-Fi ayarlarındaki donanım özellikleri](./images/wifi-hololens-hwdetails.jpg)
+    ![Wi-Fi ayarlarında donanım özellikleri](./images/wifi-hololens-hwdetails.jpg)
 
-   IP adresi, **IPv4 adresi**' nin yanında görünür.
+   IP adresi, **IPv4 adresinin yanında görünür.**
 
-### <a name="by-using-voice-commands"></a>Sesli komutları kullanarak
+### <a name="by-using-voice-commands"></a>Ses komutlarını kullanarak
 
-cihazlarınıza bağlı olarak, ıp adresinizi göstermek için yerleşik sesli komutları veya Cortana kullanabilirsiniz. [19041,1103](hololens-release-notes.md#windows-holographic-version-2004) konuşduktan sonra "IP adresim nedir?" ve görüntülenir. önceki derlemeler veya HoloLens (1. gen) için "Hey Cortana, ıp adresim nedir?" deyin Cortana, ıp adresinizi görüntüler ve okur.
+Cihaz derlemenize bağlı olarak, IP adresinizi görüntülemek için yerleşik ses komutlarını Cortana komutlarını kullanabilirsiniz. [19041.1103](hololens-release-notes.md#windows-holographic-version-2004) sonrasındaki derlemelerde "IP adresim nedir?" görüntülenir. Önceki derlemeler veya HoloLens (1. nesil) için "Hey Cortana, IP adresim nedir?" ve Cortana IP adresinizi görüntüler ve okur.
 
-### <a name="by-using-windows-device-portal"></a>Windows cihaz portalını kullanarak
+### <a name="by-using-windows-device-portal"></a>Windows Cihaz Portalı
 
-1. Bilgisayarınızdaki bir Web tarayıcısında [cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal.md#networking)açın.
-1. **Ağ** bölümüne gidin.  
-   Bu bölüm, IP adresinizi ve diğer ağ bilgilerini görüntüler. Bu yöntemi kullanarak, IP adresini geliştirme bilgisayarınızda kopyalayabilir ve yapıştırabilirsiniz.
+1. Bilgisayarınızda bir web tarayıcısında, cihaz [portalını açın.](/windows/mixed-reality/using-the-windows-device-portal.md#networking)
+1. Ağ **bölümüne** gidin.  
+   Bu bölümde IP adresiniz ve diğer ağ bilgileri görüntülenir. Bu yöntemi kullanarak IP adresini kopyalayıp geliştirme bilgisayarınıza yapıştırabilirsiniz.
 
-## <a name="change-ip-address-to-static-address"></a>IP adresini statik adres olarak değiştir
-### <a name="by-using-settings"></a>Ayarlar kullanarak
+## <a name="change-ip-address-to-static-address"></a>IP Adresini statik adres olarak değiştirme
+### <a name="by-using-settings"></a>Ayarlar
  
-1. **Başlat** menüsünü açın.
-1. **başlat menüsünün sağ** tarafındaki **tüm uygulamalar** listesinden **Ayarlar** uygulamayı **başlat** ' ı seçin. **Ayarlar** uygulama, sizin için otomatik olarak eklenir.
-1. **Internet & ağı**' nı seçin.
-1. Kullanılabilir Wi-Fi ağları listesinin altına aşağı kaydırın ve **donanım özellikleri**' ni seçin.
-1. **IP ayarlarını Düzenle** penceresinde, Ilk alanı **el ile** olarak değiştirin.
-1. İstenen IP yapılandırmasını kalan alanlara girin ve **Kaydet**' e tıklayın.
+1. Başlat **menüsünü** açın.
+1. **Başlat Ayarlar** **menüsünden** veya Sağdan Tüm **Uygulamalar** listesinden uygulamanın **seçerek** uygulamayı seçin. Ayarlar  uygulaması otomatik olarak önüne yerleştirilir.
+1. Ağ **ve İnternet & seçin.**
+1. Kullanılabilir ağların listesinin altına inin ve Wi-Fi **özellikler'i seçin.**
+1. IP ayarlarını **düzenle penceresinde** ilk alanı El ile olarak **değiştirin.**
+1. Kalan alanlara istenen IP yapılandırmasını girin ve Kaydet'e **tıklayın.**
 
-### <a name="by-using-windows-device-portal"></a>Windows cihaz portalını kullanarak
+### <a name="by-using-windows-device-portal"></a>Windows Cihaz Portalı
 
-1. Bilgisayarınızdaki bir Web tarayıcısında [cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal.md#networking)açın.
-1. **Ağ** bölümüne gidin.
-1. **IPv4 yapılandırma** düğmesini seçin.
-1. **AŞAĞıDAKI IP adresini kullan** ' ı seçin ve istenen TCP/IP yapılandırmasını girin.
-1. **AŞAĞıDAKI DNS sunucusu adreslerini kullan** ' ı seçin ve gerekirse tercih edilen ve alternatif DNS sunucusu adreslerini girin.
+1. Bilgisayarınızda bir web tarayıcısında, cihaz [portalını açın.](/windows/mixed-reality/using-the-windows-device-portal.md#networking)
+1. Ağ **bölümüne** gidin.
+1. **IPv4 Yapılandırması düğmesini** seçin.
+1. Aşağıdaki **IP adresini kullan'ı seçin** ve istediğiniz TCP/IP yapılandırmasını girin.
+1. Aşağıdaki **DNS sunucusu adreslerini kullan'ı seçin** ve gerekirse Tercih edilen ve Alternatif DNS sunucusu adreslerini girin.
 1. **Kaydet**’e tıklayın. 

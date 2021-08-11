@@ -1,6 +1,6 @@
 ---
 title: Sertifika Yöneticisi
-description: 2 karma gerçeklik cihazına el ile sertifika yükleme, HoloLens kaldırmayı öğrenin.
+description: HoloLens 2 karma gerçeklik cihazlarındaki sertifikaları el ile yüklemeyi, yönetmeyi ve kaldırmayı öğrenin.
 author: evmill
 ms.author: v-evmill
 manager: yannisle
@@ -12,51 +12,51 @@ ms.date: 10/13/2020
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8b1869e786e3f3324494cecbfd596f61811e1893
-ms.sourcegitcommit: 78e5f26014e55c13fee9c2b75a80810fd2e77877
+ms.openlocfilehash: 438a132a6bafd8c93b148b9c2c817ec93cc3bc73651f08275acc130695fa09c1
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009332"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665191"
 ---
 # <a name="certificate-manager"></a>Sertifika Yöneticisi
 
-- Yeni Sertifika Yöneticisi aracılığıyla cihaz güvenliği ve uyumluluğu için geliştirilmiş denetim, tanılama ve doğrulama aracı. Bu özellik, ticari ortamlarda büyük ölçekte sertifikalarınızı dağıtmanıza, sorun gidermenize ve doğrulamanıza olanak tanır.
+- Yeni Sertifika Yöneticisi aracılığıyla cihaz güvenliği ve uyumluluğu için geliştirilmiş denetim, tanılama ve doğrulama araçları. Bu özellik, ticari ortamlarda sertifikalarınızı bir ölçekte dağıtmanıza, gidermenize ve doğrulamanıza olanak sağlar.
 
-Holographic Windows sürüm 20H2'de, HoloLens 2 Ayarlar ekliyoruz. Ayarlar > **Security & Sertifikaları'> gidin.** Bu özellik, cihazınıza sertifikaları görüntülemek, yüklemek ve kaldırmak için basit ve kullanımı kolay bir yol sağlar. Yeni Sertifika Yöneticisi ile yöneticiler ve kullanıcılar artık cihazların güvenli ve uyumlu kalmasını sağlamak için denetim, tanılama ve doğrulama araçlarını iyileştirdi. 
+Windows Holographic, sürüm 20h2 ' de, HoloLens 2 Ayarlar uygulamasına bir sertifika yöneticisi ekliyoruz. **Ayarlar > güncelleştirme & güvenlik > sertifikaları**' na gidin. Bu özellik, cihazınızdaki sertifikaları görüntülemek, yüklemek ve kaldırmak için basit ve kolay bir yol sağlar. Yeni Sertifika Yöneticisi ile yöneticiler ve kullanıcılar artık cihazların güvenli ve uyumlu kalmasını sağlamak için daha fazla denetim, tanılama ve doğrulama araçları geliştirmiştir. 
 
--   **Denetim:** Bir sertifikanın doğru şekilde dağıtıldığından emin olmak veya sertifikanın uygun şekilde kaldırıldığından emin olmak. 
--   **Tanılama:** Sorunlar ortaya çıktığında, cihazda uygun sertifikaların mevcut olduğunu doğrulama zaman kazandırır ve sorun gidermeye yardımcı olur. 
--   **Doğrulama:** Bir sertifikanın hedeflenen amaca hizmet ettiği ve işlevsel olduğunu doğrulamak, sertifikaları daha büyük ölçekte dağıtmadan önce özellikle ticari ortamlarda önemli ölçüde zaman tasarrufu sağlar.
+-   **Denetim:** Bir sertifikanın doğru şekilde dağıtıldığını doğrulama veya uygun şekilde kaldırıldığını doğrulama özelliği. 
+-   **Tanılama:** Sorun ortaya çıktığında, cihazda uygun sertifikaların mevcut olduğunu doğrulamak zaman kazandırır ve sorun gidermeye yardımcı olur. 
+-   **Doğrulama:** Bir sertifikanın hedeflenen amaca hizmet ettiği ve işlevsel olduğu doğrulanıyor, özellikle de daha büyük ölçekte sertifika dağıtmadan önce ticari ortamlarda önemli bir zaman kazandırabilir.
 
-Listede belirli bir sertifikayı hızla bulmak için ad, depolama veya sona erme tarihine göre sıralama seçenekleri vardır. Kullanıcılar sertifikayı doğrudan da arayabilir. Tek tek sertifika özelliklerini görüntülemek için sertifikayı seçin ve Bilgi'ye **tıklayın.** 
+Listedeki belirli bir sertifikayı hızlı bir şekilde bulmak için ada, depoya veya sona erme tarihine göre sıralama seçenekleri vardır. Kullanıcılar ayrıca bir sertifikayı doğrudan arayabilir. Ayrı sertifika özelliklerini görüntülemek için sertifikayı seçin ve **bilgi**'ye tıklayın. 
 
-Sertifika yüklemesi şu anda .cer ve .crt dosyalarını desteklemektedir. Cihaz Sahipleri Sertifikaları Yerel Makineye ve Geçerli Kullanıcıya yükleyebilir;  diğer tüm kullanıcılar yalnızca Geçerli Kullanıcı'ya yükleyebilir.
+Sertifika yüklemesi şu anda. cer ve. CRT dosyalarını desteklemektedir. Cihaz sahipleri, sertifikaları yerel makineye ve geçerli kullanıcıya yükleyebilir;  diğer tüm kullanıcılar yalnızca geçerli kullanıcıya yüklenebilir.
 
-## <a name="to-install-a-certificate"></a>Sertifika yüklemek için: 
+## <a name="to-install-a-certificate"></a>Bir sertifika yüklemek için: 
 
-1.  Bağlan 2 HoloLens bilgisayara bağlayın.
-1.  Yüklemek istediğiniz sertifika dosyasını dosyanın 2. HoloLens.
-1.  Ayarlar **App > Update & Security > 'a** gidin ve Sertifika yükle'yi seçin.
-1.  Dosyayı **İçeri Aktar'a** tıklayın ve sertifikayı kaydeden konuma gidin.
-1.  Mağaza **Konumu'.**
-1.  Sertifika **Deposu'ları seçin.**
+1.  HoloLens 2 ' 'nizi bir bilgisayara Bağlan.
+1.  yüklemek istediğiniz sertifika dosyasını HoloLens 2 ' deki bir konuma yerleştirin.
+1.  **Ayarlar App > Update & güvenlik > sertifikaları**' na gidin ve sertifika yüklemeyi seçin.
+1.  **Dosyayı Içeri aktar** ' a tıklayın ve sertifikayı kaydettiğiniz konuma gidin.
+1.  **Depo konumunu** seçin.
+1.  **Sertifika deposunu** seçin.
 1.  **Yükle**'ye tıklayın.
 
-Sertifikanın artık cihaza yüklenmiş olması gerekir.
+Sertifikanın artık cihaza yüklü olması gerekir.
 
-![Sertifikalar altındaki Ayarlar görüntüleyici.](images/certificate-viewer-device.jpg)
+![sertifikalar altındaki Ayarlar uygulamasındaki sertifika görüntüleyicisi.](images/certificate-viewer-device.jpg)
 
-![Sertifika kullanıcı arabirimini kullanarak sertifikayı Ayarlar.](images/certificate-device-install.jpg)
+![Ayarlar bir sertifikayı yüklemek için sertifika kullanıcı arabirimini nasıl kullanacağınızı gösteren resim.](images/certificate-device-install.jpg)
 
 ## <a name="to-remove-a-certificate"></a>Bir sertifikayı kaldırmak için:
 
 > [!WARNING]
-> Sertifika Yöneticisi'ni kullanarak, kullanıcılar yalnızca doğrudan Ayarlar kaldırabilir. Bir sertifika başka bir şekilde yüklendiyse, aynı mekanizma tarafından da kaldırılması gerekir ve Sertifika Yöneticisi'ne kaldırılamaz. Sertifika Yöneticisi'nde MDM tarafından dağıtılan sertifikaları görüntüleyebizle birlikte, bunları Sertifika Yöneticisi'nde kaldıramazsiniz. Bunları MDM aracılığıyla kaldırmanız gerekir.
+> kullanıcılar, sertifika yöneticisi 'ni kullanarak yalnızca Ayarlar kullanıcı arabiriminden doğrudan yüklenmiş sertifikaları kaldırabilir. Bir sertifika başka yollarla yüklendiyse aynı mekanizmaya de kaldırılmalıdır ve Sertifika Yöneticisi 'nden kaldırılamaz. MDM ile dağıtılan sertifikaları sertifika yöneticisi 'nde görüntüleyebilseniz de, bunları Sertifika Yöneticisi 'nde kaldıramazsınız. MDM aracılığıyla kaldırmanız gerekir.
 
-1. Ayarlar **App > Update and Security > Certificates 'a gidin.**
-1. Arama kutusunda sertifikayı adıyla ara.
+1. **Ayarlar App > Update ve Security > sertifikalarına** gidin.
+1. Arama kutusunda Sertifikayı ada göre arayın.
 1. Sertifikayı seçin.
-1. **Kaldır'a tıklayın**
-1. Onay **istendiğinde** Evet'i seçin.
+1. **Kaldır** 'a tıklayın
+1. Onay sorulduğunda **Evet** ' i seçin.
 

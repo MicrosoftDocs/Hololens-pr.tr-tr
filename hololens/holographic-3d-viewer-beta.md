@@ -1,6 +1,6 @@
 ---
-title: HoloLens 'de 3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
-description: HoloLens (1. Nesil) üzerinde Beta 3B Görüntüleyici tarafından desteklene dosya ve özellik türlerini ve uygulamanın nasıl kullan ve sorun giderilenlerini açıklar.
+title: HoloLens 'da 3b görüntüleyici Beta kullanma (1. genel)
+description: HoloLens (1. gen) üzerindeki 3b görüntüleyici Beta 'nın desteklediği dosya ve özellik türlerini ve uygulamanın nasıl kullanılacağını ve nasıl giderileceğini açıklar.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -13,137 +13,137 @@ audience: ITPro
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 00e99d3f67e9e4371da12612b9b01c3ce58e71bd
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: d25a87bd210535e36e18f165b5461141c40aa292a07c560018ba7c0cbf76f6ba
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635492"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664936"
 ---
-# <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>HoloLens 'de 3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
+# <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>HoloLens 'da 3b görüntüleyici Beta kullanma (1. genel)
 
-3B Görüntüleyici Beta, 3D modelleri HoloLens (1. nesil) görüntülemenizi sağlar. Desteklenen .fbx *dosyalarını Microsoft Edge,* OneDrive ve diğer uygulamalardan açabilir ve görüntüebilirsiniz.
+3b görüntüleyici Beta, HoloLens (1. gen) üzerindeki 3b modelleri görüntülemenize olanak sağlar. *desteklenen* . fbx dosyalarını Microsoft Edge, OneDrive ve diğer uygulamalardan açabilir ve görüntüleyebilirsiniz.
 
 >[!NOTE]
->Bu makale, .fbx **dosyalarını destekleyen** ve yalnızca HoloLens (1. nesil) olan tam kapsamlı Unity 3B Görüntüleyici Beta uygulaması için geçerlidir. HoloLens 2'de önceden yüklenmiş **3B Görüntüleyici** uygulaması, karma gerçeklik giriş bölmesinde özel .glb 3B [](/windows/mixed-reality/creating-3d-models-for-use-in-the-windows-mixed-reality-home#asset-requirements-overview) modellerin açılmasını destekler (diğer ayrıntılar için bkz. Varlık gereksinimlerine genel bakış.
+>bu makale,. fbx dosyalarını destekleyen ve yalnızca HoloLens (1. gen) ' de kullanılabilen, modern Unity **3b görüntüleyici Beta** uygulaması için geçerlidir. HoloLens 2 ' deki önceden yüklenmiş **3b görüntüleyici** uygulaması, karma gerçeklik ana bilgisayarında özel. glb 3d modellerini açmayı destekler (daha fazla bilgi için [varlık gereksinimlerine genel bakış](/windows/mixed-reality/creating-3d-models-for-use-in-the-windows-mixed-reality-home#asset-requirements-overview) bölümüne bakın.
 
 >[!IMPORTANT]
->3B Görüntüleyici Beta, Microsoft Store (1. nesil HoloLens için sürümde kullanılabilir durumda kalsa da, artık etkin geliştirme aşamasında değildir ve artık desteklemektedir.
+>3b görüntüleyici Beta, HoloLens için Microsoft Store (1. gen) kullanılabilir kalacağından, artık etkin bir geliştirme aşamasındadır ve artık desteklenmez.
 
-3B Görüntüleyici Beta'da 3D modeli açma konusunda sorun varsa veya 3D modelinizin bazı özellikleri desteklenmiyorsa, aşağıdaki Desteklenen içerik [belirtimleri'ne](#supported-content-specifications) bakın.
+3B görüntüleyici beta sürümünde bir 3B modeli açmada sorun yaşıyorsanız veya 3B modelinizin bazı özellikleri desteklenmiyorsa, aşağıdaki [desteklenen içerik belirtimleri](#supported-content-specifications) bölümüne bakın.
 
-3D modelleri 3B Görüntüleyici Beta ile kullanmak üzere derlemek veya iyileştirmek için aşağıdaki [3D](#optimizing-3d-models-for-3d-viewer-beta) modelleri 3B Görüntüleyici Beta için iyileştirme.
+3B Viewer Beta ile kullanım için 3B modelleri derlemek veya iyileştirmek için bkz. aşağıdaki [3B Viewer Beta Için 3B modellerini iyileştirme](#optimizing-3d-models-for-3d-viewer-beta) .
 
-Bu modelde 3D modeli açmanın iki HoloLens. Daha [fazla bilgi için aşağıdaki FBX HoloLens FBX](#viewing-fbx-files-on-hololens) dosyalarını görüntüleme.
+HoloLens bir 3B model açmak için iki yol vardır. daha fazla bilgi için bkz. aşağıda [HoloLens fbx dosyalarını görüntüleme](#viewing-fbx-files-on-hololens) .
 
-Bu konuları okuduktan sonra sorun ediyorsanız aşağıdaki Sorun [giderme'ye](#troubleshooting) bakın.
+Bu konuları okuduktan sonra sorun yaşıyorsanız, aşağıdaki [sorun giderme](#troubleshooting) bölümüne bakın.
 
 ## <a name="supported-content-specifications"></a>Desteklenen içerik belirtimleri
 
 ### <a name="file-format"></a>Dosya biçimi
 
 - FBX biçimi
-- En yüksek FBX sürümü 2015.1.0
+- Maksimum FBX sürümü 2015.1.0
 
 ### <a name="file-size"></a>Dosya boyutu
 
 - En az 5 KB
-- En fazla 500 MB
+- Maksimum 500 MB
 
 ### <a name="geometry"></a>Geometri
 
-- Yalnızca çokgen modeller. Alt bölüm yüzeyleri veya BESB'ler yok
-- Sağ el ile koordinat sistemi
-- Dönüştürme matrislerini yalıtma desteklenmiyor
+- Yalnızca Çokgen modeller. Alt bölme yüzeyleri veya NURBs yok
+- Sağ elli koordinat sistemi
+- Dönüştürme matrislerini kırpma desteklenmiyor
 
 ### <a name="textures"></a>Dokular
 
-- Doku eşlemeleri FBX dosyasına ekli olmalı
+- Doku haritaları FBX dosyasına katıştırılmalıdır
 - Desteklenen görüntü biçimleri
   - JPEG ve PNG görüntüleri
-  - BMP görüntüleri (24 bit RGB gerçek renk)
-  - TGA görüntüleri (24 bit RGB ve 32 bit RGBQ gerçek renk)
-- 2048x2048 en yüksek doku çözünürlüğü
-- En fazla bir eşlemli harita, bir normal harita ve mesh başına bir yansıma küpü haritası
-- Doku dokularında alfa kanal, piksellerin %50'nin altına inerse atılır
+  - BMP görüntüleri (24 bit RGB True-Color)
+  - TGA görüntüleri (24 bit RGB ve 32-bit RGBQ gerçek renk)
+- Maksimum dok48x2048 doku çözünürlüğü
+- Her ağ için en fazla bir dağıtılmış harita, bir normal harita ve bir yansıma küpü Haritası
+- Dağıtma dokularıyla alfa kanalı, %50 altındaysa piksellerin atılmasına neden olur
 
 ### <a name="animation"></a>Animasyon
 
-- Tek tek nesnelerde ölçeklendirme/döndürme/çeviri animasyonu
-- Deri ile Cilde (sıkı) animasyon
-  - Köşe başına en fazla 4 etki
+- Ayrı nesnelerde ölçek/döndürme/çeviri animasyonu
+- Kaplama ile iskelet (Rigged) animasyonu
+  - Köşe başına en fazla 4 etkiler
 
 ### <a name="materials"></a>Malzemeler
 
-- Lambert ve Piser malzemeleri, ayarlanabilir parametrelerle birlikte de desteklendi
+- Lambda ve Phong malzemeleri, ayarlanabilir parametrelerle desteklenir
 - Lambert için desteklenen malzeme özellikleri
-  - Ana Doku (RGB + Alfa Testi)
-  - Yayma Rengi (RGB)
-  - Ortam Rengi (RGB)
-- Piser için desteklenen malzeme özellikleri
-  - Ana Doku (RGB + Alfa Testi)
-  - Yayma Rengi (RGB)
-  - Ortam Rengi (RGB)
-  - Specular Color (RGB)
-  - Hazır olma
-  - Yansıtma
-- Özel malzemeler desteklenmiyor
-- Örgü başına en fazla bir malzeme
+  - Ana doku (RGB + Alfa testi)
+  - Dağıtma rengi (RGB)
+  - Çevresel renk (RGB)
+- Phong için desteklenen malzeme özellikleri
+  - Ana doku (RGB + Alfa testi)
+  - Dağıtma rengi (RGB)
+  - Çevresel renk (RGB)
+  - Yansımalı renk (RGB)
+  - Parlaklık
+  - Reflectivity
+- Özel malzemeler desteklenmez
+- Her ağ için en fazla bir malzeme
 - En fazla bir malzeme katmanı
 - Dosya başına en fazla 8 malzeme
 
 ### <a name="file-and-model-limitations"></a>Dosya ve model sınırlamaları
 
-Dosya boyutunun yanı sıra beta sürümünde aynı anda açabilirsiniz model, köşe ve tire sayısı için sabit 3B Görüntüleyici:
+3B görüntüleyici Beta 'da eşzamanlı olarak kullanılabilecek model, köşe ve kafeslerin sayısını ve dosya boyutunda sabit sınırlar vardır:
 
-- Model başına en fazla 500 MB dosya boyutu
-- Köşeler: Tüm açık modellerde 600.000 birleşik
-- Tireler: Tüm açık modellerde 1.600 birleşik
-- Aynı anda en fazla 40 model açılır
+- model başına 500 MB en büyük dosya boyutu
+- Köşeler: 600.000 tüm açık modellerde birleştirilmiş
+- Kafesler: 1.600 tüm açık modellerde birleştirilmiş
+- Tek seferde en fazla 40 Model açık
 
-## <a name="optimizing-3d-models-for-3d-viewer-beta"></a>3B Görüntüleyici Beta için 3D 3B Görüntüleyici iyileştirme
+## <a name="optimizing-3d-models-for-3d-viewer-beta"></a>3B Görüntüleyicisi Beta için 3B modellerini iyileştirme
 
-### <a name="special-considerations"></a>Dikkat edilmesi gereken özel noktalar
+### <a name="special-considerations"></a>Özel Konular
 
-- Doku eşlemelerinde siyah malzemelerden veya siyah alanlardan kaçının. Hologramlar, bu nedenle HoloLens siyahı (ışık yokluğu) saydam olarak işler.
-- Oluşturma aracınızı FBX'e aktarmadan önce, tüm geometrinin görünür ve açık olduğundan ve geometri içeren hiçbir katmanın kapalı veya şablona sahip olmadığını emin olun. Görünürlüğün kabul edilene bir şey olmadığını.
-- Düğümler arasında çok büyük çeviri uzaklıklarından kaçının (örneğin, 100.000 birim). Bu, modelin taşınırken/ölçeklendirirken/döndürülürken hareket uzemesini sağlar.
+- Doku haritalarının siyah malzemelerinden veya siyah alanlarından kaçının. Hologramlar hafif yapılır, bu nedenle HoloLens siyahların (ışık yokluğu) saydam hale getirilir.
+- Oluşturma aracınızdan FBX 'e vermeden önce tüm geometrinin göründüğünden ve kilidinin açık olduğundan ve geometri içeren katmanların kapalı veya şablonlu olduğundan emin olun. Görünürlük dikkate alınmıyor.
+- Düğümler arasında çok büyük çeviri uzaklıklarını önleyin (örneğin, 100.000 birim). Bu, modelin taşınmakta/ölçeklendirildiğinde/döndürüldüğünde değişmesine neden olabilir.
 
 ### <a name="performance-optimization"></a>Performansı en iyi duruma getirme
 
-en iyi sonuçları elde etmek için içerik yazma sırasında performansı göz 3B Görüntüleyici ve HoloLens beta uygulamasında doğrular. 3B Görüntüleyici Beta, içeriği gerçek zamanlı olarak işler ve performans, HoloLens özelliklerine tabi olur.  
+en iyi sonuçlar için yazma işlemi sırasında HoloLens üzerinde içerik yazarken ve 3b görüntüleyici Beta uygulamasında doğrulama yaparken performansı göz önünde bulundurun. 3b görüntüleyici Beta, içeriğin gerçek zamanlı ve performansa HoloLens donanım özelliklerine tabidir.  
 
-3D modelde performansı etkileyen birçok değişken vardır. 3B Görüntüleyici Beta, 150.000'den fazla köşe veya 400'den fazla meshes varsa yükte bir uyarı gösterir. Animasyonların diğer açık modellerin performansı üzerinde etkisi olabilir. Ayrıca, Beta sürümünde aynı anda açabilirsiniz toplam sayı modelleri, köşeleri ve meshes için de sabit sınırlar 3B Görüntüleyici (bkz. [Dosya ve model sınırlamaları).](#file-and-model-limitations)  
+3B modelde performansı etkileyebilecek birçok değişken vardır. 150.000 ' den fazla köşe veya 400 ' den fazla yer varsa 3B görüntüleyici Beta, yükleme sırasında bir uyarı gösterir. Animasyonların diğer açık modellerin performansına etkisi olabilir. Ayrıca, 3B görüntüleyici Beta 'da eşzamanlı olarak açabilme toplam sayı modelleri, köşeleri ve kafeslerde de sabit sınırlar vardır (bkz. [dosya ve model sınırlamaları](#file-and-model-limitations)).  
 
-Model karmaşıklığı nedeniyle 3D modeli iyi çalışmıyorsa şunları göz önünde bulundurarak:
+Model karmaşıklığı nedeniyle 3B model iyi çalışmıyorsa şunları göz önünde bulundurun:
 
 - Çokgen sayısını azaltma
-- Zorlu animasyonda yer alan yerlerin sayısını azaltma
-- Kendi kendine kapanmayı önleme
+- Rigged animasyonunda kemik sayısını azaltma
+- Kendinden occlusiyon
 
-Beta sürümünde çift taraflı işleme 3B Görüntüleyici, ancak performans nedeniyle varsayılan olarak kapalıdır. Bu, Ayrıntılar sayfasındaki **Çift Taraflı** düğme aracılığıyla **açık** olabilir. En iyi performans için içeriğinize çift taraflı işlemeye gerek yok.
+Çift taraflı işleme, 3B görüntüleyici beta sürümünde desteklenir, ancak performans nedenleriyle varsayılan olarak devre dışıdır. Bu, **Ayrıntılar** sayfasındaki **çift taraflı** düğme aracılığıyla açılabilir. En iyi performansı elde etmek için içeriğinizdeki çift taraflı işleme gereksinimini önleyin.
 
-### <a name="validating-your-3d-model"></a>3D modelinizi doğrulama
+### <a name="validating-your-3d-model"></a>3B modeliniz doğrulanıyor
 
-Modelinizi, 3B Görüntüleyici Beta'da açarak HoloLens. Modelinizin  desteklenmeyen içerikle ilgili özelliklerini ve uyarılarını (varsa) görüntülemek için Ayrıntılar düğmesini seçin.
+HoloLens üzerinde 3B görüntüleyici Beta 'da açarak modelinizi doğrulayın. Modelinizin özelliklerini ve desteklenmeyen içerik (varsa) uyarılarını görüntülemek için **Ayrıntılar** düğmesini seçin.
 
-### <a name="rendering-3d-models-with-true-to-life-dimensions"></a>Gerçek hayattaki boyutlara sahip 3B modelleri işleme
+### <a name="rendering-3d-models-with-true-to-life-dimensions"></a>Gerçek-ömür boyutları ile 3B modeller işleme
 
-Varsayılan olarak, 3B Görüntüleyici Beta 3D modelleri kullanıcıya göre uygun boyutta ve konumda görüntüler. Ancak gerçek hayattan yaşam ölçümleriyle 3B modelin işlemesi önemlidir (örneğin, bir oda içindeki evlerin modellerini değerlendirirken), içerik oluşturucu bu modelin hem uygulama hem de kullanıcı tarafından yeniden boyutlandırmasını önlemek için dosyanın meta verilerinde bir bayrak ayarlayan bir bayrak olabilir.
+Varsayılan olarak, 3B görüntüleyici Beta, 3B modellerini kullanıcıya göre rahat bir boyutta ve konumda görüntüler. Ancak, gerçek-yaşam ölçümlerine sahip bir 3B modelin işlenmesi önemliyse (örneğin, bir odada mobilya modellerini değerlendirirken), içerik Oluşturucu bu modelin hem uygulama hem de Kullanıcı tarafından yeniden boyutlandırılmasına engel olmak için dosyanın meta verileri içinde bir bayrak ayarlayabilir.
 
-Modelin ölçeklendirimsini önlemek için, sahnenin Microsoft_DisableScale adlı herhangi bir nesnesine boole özel özniteliği ekleyin ve true olarak ayarlayın. 3B Görüntüleyici Beta, FBX dosyasına ek olarak FbxSystemUnit bilgilerini dikkate alar. Beta'3B Görüntüleyici ölçeği FBX birimi başına 1 ölçüm olarak ölçeklendirin.
+Modelin ölçeklendirilmesini engellemek için, Microsoft_DisableScale adlı sahnedeki herhangi bir nesneye bir Boole özel özniteliği ekleyin ve bunu true olarak ayarlayın. daha sonra 3B görüntüleyici Beta, FBX dosyasına bakmış olan FbxSystemUnit bilgilerine göre değişir. 3B görüntüleyici beta sürümündeki ölçek, FBX birimi başına 1 ölçüm 'tir.
 
-## <a name="viewing-fbx-files-on-hololens"></a>FBX dosyalarını HoloLens
+## <a name="viewing-fbx-files-on-hololens"></a>HoloLens üzerinde FBX dosyalarını görüntüleme
 
-### <a name="open-an-fbx-file-from-microsoft-edge"></a>Dosyadan FBX Microsoft Edge
+### <a name="open-an-fbx-file-from-microsoft-edge"></a>Microsoft Edge bir FBX dosyası açın
 
-FBX dosyaları doğrudan bir web sitesinden, Microsoft Edge üzerinden HoloLens.
+fbx dosyaları, HoloLens Microsoft Edge kullanılarak doğrudan bir web sitesinden açılabilir.
 
-1. Bu Microsoft Edge, görüntülemek istediğiniz FBX dosyasını içeren web sayfasına gidin.
-1. İndirilen dosyayı seçin.
-1. İndirme işlemi tamamlandığında, dosyayı **Beta'da** açmak Microsoft Edge aç düğmesini 3B Görüntüleyici seçin.
+1. Microsoft Edge ' de, görüntülemek istediğiniz fbx dosyasını içeren web sayfasına gidin.
+1. İndirilecek dosyayı seçin.
+1. indirme işlemi tamamlandığında, dosyayı 3b görüntüleyici Beta sürümünde açmak için Microsoft Edge **aç** düğmesini seçin.
 
-İndirilen dosyaya daha sonra dosyada İndirilenler kullanılarak erişilebilir ve Microsoft Edge. 3D modeli kaydetmek ve sürekli erişim sağlamak için dosyayı bilgisayarınıza indirin ve OneDrive kaydedin. Dosya daha sonra OneDrive uygulamasından HoloLens.
+İndirilen dosyaya daha sonra Microsoft Edge karşıdan yüklemeler kullanılarak yeniden açılabilir. bir 3b modeli kaydetmek ve devam etmek için dosyayı bilgisayarınızda indirin ve OneDrive hesabınıza kaydedin. Dosya daha sonra OneDrive uygulamasından HoloLens.
 
 > [!NOTE]
 > İndirilebilir FBX modellerine sahip bazı web siteleri bunları sıkıştırılmış ZIP biçiminde sağlar. 3B Görüntüleyici Beta ZIP dosyalarını doğrudan açamaz. Bunun yerine, FBX dosyasını ayıklamak için bilgisayarınızı kullanın ve dosyayı OneDrive kaydedin. Dosya daha sonra OneDrive uygulamasından HoloLens.
@@ -181,7 +181,7 @@ Daha fazla bilgi için [bkz. Desteklenen içerik belirtimleri](#supported-conten
 
 ### <a name="i-experience-performance-drops-while-viewing-my-3d-model"></a>3D modelimi görüntülerken performans düşüşleri yaşanıyor
 
-3D modeli yüklerken ve görüntülerken performans, modelin karmaşıklığından, aynı anda açık olan model sayısından veya etkin animasyonlarla model sayısından etkilenebilir.
+3D modeli yüklerken ve görüntülerken performans, modelin karmaşıklığından, model sayısının aynı anda açılmasından veya etkin animasyonlarla model sayısından etkilenebilir.
 
 Daha fazla bilgi için bkz. Beta ve Dosya ve model [3B Görüntüleyici için 3D](#optimizing-3d-models-for-3d-viewer-beta) [modelleri iyileştirme.](#file-and-model-limitations)
 

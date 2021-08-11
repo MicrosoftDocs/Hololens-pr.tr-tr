@@ -1,132 +1,132 @@
 ---
-title: HoloLens 2 ekran sorunlarını giderme
-description: HoloLens 2 için beklentiler görüntülenir. En iyi görüntü kalitesi için ekranları yapılandırmaya yönelik kılavuz.
+title: HoloLens 2 Görüntü Sorunlarını Giderme
+description: 2 ekran HoloLens için beklentiler. En iyi görüntü kalitesi için ekranları yapılandırma kılavuzu.
 author: BrandonBray
 ms.author: branbray
 ms.date: 8/13/2020
 ms.topic: article
-keywords: görüntüleme, ayarlama, rahatlık, görseller, kalite, IPD
+keywords: görüntüleme, ayarlama, konfor, görseller, kalite, ipd
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 548f484043f2b1cb62ce0e0cfb6450a956d412b3
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 3567c1f33f10240a9cacbf258669a0e3274f4c6bb3c90fc1317a57a3a415fc7f
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636937"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659968"
 ---
-# <a name="hololens-2-display-troubleshooting"></a>HoloLens 2 ekran sorunlarını giderme
+# <a name="hololens-2-display-troubleshooting"></a>HoloLens 2 Görüntü Sorunlarını Giderme
 
 ## <a name="overview"></a>Genel Bakış
-HoloLens 2 ekranı, waveguides ve açık projektörlerin bir birleşimidir. Kullanıcılar, kulaklık taktığında (örneğin, vizörü içindeki mercekler) dalga kılavuzlarını gözden geçirin. Hafif projektörler, Brow 'ın üzerindeki kutunun içindedir. HoloLens 2, görüntüyü aydınlatmak için lazer ışığı kullanır.
+İlk HoloLens 2 ekranı dalga kılavuzlarının ve ışık projektörlerinin bir birleşimidir. Kullanıcılar başlığı takmışken dalga kılavuzlarını (göz içindeki lensleri) bakar. Işık yansıtıcıları,gözün üzerindeki kasanın içindedir. HoloLens 2' de ekranda güneş ışığını kullanır.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Aşağıda gösterilen en yüksek görsel kalite kalitesi kalitesini sağlamak için aşağıdaki adımları uygulayın:
+Ekranlarda sunulan en yüksek görsel hologram kalitesini sağlamak için aşağıdaki adımları uygulayın:
 
-* **Ekran parlaklığını artırın.** Hologramlar, ekran en parlak test düzeyinde olduğunda en iyi şekilde görünür. HoloLens takdığınızda parlaklık düğmeleri, tüm vizörü 'ın temple yakın tarafında bulunur.
-* **Daha yakından gözlerinize göz katın.** Gözlerinizi en yakın konuma göre aşağı doğru kaydırın.
-* **Kaydırma vizörü aşağı.** Bir tebede aşağı doğru hareket ettirmenize, bu da vizörü 'ın burun yakınına yaklaştırmasını deneyin.
-* **[Göz ayarlamayı Çalıştır.](hololens-calibration.md#calibrating-your-hololens-2)** Görüntü, ekranda görüntüleri iyileştirmek için ınterpupilılmi (ıPD) ve gözle göz çıkarması kullanır. Göz ayarlama 'yı çalıştırmazsanız görüntü kalitesi daha kötü hale getirilebilir. göz ayarlama 'yı çalıştırmak için **Ayarlar**  >  **sistem**  >  **ayarlama**  >  **çalışma göz ayarlama**' ya gidin.
-* **Görüntü renk ayarlamayı çalıştırın**. [Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1) ve sonraki sürümlerinde, HoloLens 2 görüntü için **alternatif bir renk profili seçebilirsiniz** . Bu, özellikle daha düşük ekran parlaklığı düzeylerinde renklerin daha doğru görünmesine yardımcı olabilir. ekran renk ayarlaması, **Ayarlar** uygulamasında, **sistem > ayarlama** sayfasında bulunabilir.
+* **Ekranın parlaklığını artırma.** Hologramlar en parlak düzeyde olduğunda en iyi görünen görüntü. Düğmeyi HoloLens parlaklığı düğmeleri, mabedin yakınındaki mengenin sol tarafında bulunur.
+* **Visor'ı gözlere yaklaştırın.** Gözlerinizi en yakın konuma getirin.
+* **Mengeneyi aşağı kaydır.** Baş aşağı doğru hareket ettirin ve bu da mengenin buruna daha yakın bir yere inlmesiyle sonuçlandır.
+* **[Göz ayarlamayı çalıştırın.](hololens-calibration.md#calibrating-your-hololens-2)** Ekranda, görüntüde görüntüleri iyileştirmek için aralıklar arası mesafeniz (IPD) ve göz bakışı kullanır. Göz ayarlaması çalıştırdıysanız görüntü kalitesi daha kötü hale getirebilir. Göz gözlüklerini çalıştırmak için Sistem **Ayarlar**  >  **Çalıştırma göz**  >    >  **ayarına gidin.**
+* **Görüntü rengi ayarı çalıştırın.** [Holographic Windows sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve sonra, 2  ekran için alternatif bir HoloLens profili seçin. Bu, renklerin özellikle daha düşük ekran parlaklığı düzeylerinde daha doğru görünmesine yardımcı olabilir. Ekran rengi ayarı, sistem **Ayarlar** Sayfasındaki > **bulunabilir.**
 
     > [!NOTE]
-    > Bu ayar, görüntüleme bellenimine yeni bir renk profili kaydederken bu, cihaz başına bir ayardır (ve her kullanıcı hesabı için benzersiz değildir).
+    > Bu ayar görüntü üretici yazılımınıza yeni bir renk profili kaydedeci, cihaz başına bir ayardır (ve her kullanıcı hesabı için benzersiz değildir).
 
-### <a name="how-to-use-display-color-calibration"></a>Ekran renk ayarı 'nı kullanma
-1. **Ayarlar** uygulamasını başlatın ve **sistem > ayarlaması**' na gidin.
-1. **Ekran renk ayarlaması** altında, **görüntü renk ayarlama Çalıştır** düğmesini seçin.
-1. Ekran renk ayarlama deneyimi başlatılır ve bu işlem, vizörü ' inizin doğru konumda olduğundan emin olmanızı sağlar.
-1. Yönerge iletişim kutularında ilerledikten sonra, ekran otomatik olarak %30 oranında gri olacak.
+### <a name="how-to-use-display-color-calibration"></a>Görüntü rengi ayarlamayı kullanma
+1. Ayarlar uygulamasını **başlatarak** **System > Birimi'ne gidin.**
+1. Renk **ayarı görüntüle'nin** altında Renk **görüntüleme düzenini çalıştır düğmesini** seçin.
+1. Ekran rengi ayarlama deneyimi başlatacak ve sizi, mengenenizin doğru konumda olduğundan emin olmak için teşvik eder.
+1. Yönerge iletişim kutularına devam ettikten sonra, ekranınız otomatik olarak %30 parlaklığa soluk görüntülenir.
     > [!TIP]
-    > ortamınızdaki soluk sahneyi görmekte sorun yaşıyorsanız, cihazın sol tarafındaki parlaklık düğmelerini kullanarak HoloLens 2 ' nin parlaklık düzeyini el ile ayarlayabilirsiniz.
-1. Her renk profilini hemen denemek ve gözlerinize en iyi şekilde bakmak için düğmeler 1-6 ' i seçin (Bu, genellikle sahnenin gri tonlamalı bir şekilde görünmesine yardımcı olan profil ve beklenen şekilde görünür.)
+    > Ortamınız soluk sahneyi görme konusunda sorun taşıyorsanız, cihazın sol tarafındaki parlaklığı düğmeleri kullanarak HoloLens 2'nin parlaklığını el ile ayarlayabilirsiniz.
+1. Her renk profilini anında denemek için 1-6 düğmelerini seçin ve en iyi görüneni bulun (bu genellikle sahnenin en nötr görünmesine yardımcı olan profil anlamına gelir ve gri tonlama deseni ve ten rengi beklendiği gibi görünür.)
 
-    ![Renk ayarlama sahnesini görüntüle](images/color-cal-ui.png)
+    ![Renk ayarı sahneyi görüntüleme](images/color-cal-ui.png)
     
-6. Seçili profille memnun olduğunuzda **kaydet & çıkış** düğmesini seçin
-1. Değişiklik yapmayı tercih ediyorsanız, **iptal & çıkış** düğmesini seçin ve değişiklikleriniz geri döndürülecek
+6. Seçilen profilden memnun değilken Kaydet ve Çıkış **&** seçin
+1. Değişiklik yapmamayı tercih ederseniz, İptal et **düğmesini & ve** değişiklikleriniz geri döndürülecek
 
 > [!TIP]
-> Görüntü renk ayarlama ayarını kullanırken göz önünde bulundurmanız gereken bazı yararlı ipuçları aşağıda verilmiştir:
-> - istediğiniz zaman Ayarlar ekran renk ayarlamayı yeniden çalıştırabilirsiniz
-> - cihazdaki herkes renk profillerini değiştirme ayarını daha önce kullanmışsa, en son değişikliğin tarih/saati Ayarlar sayfasında yansıtılır
-> - Ekran renk ayarı 'nı yeniden çalıştırdığınızda, daha önce kaydedilen renk profili vurgulanacaktır ve profil 0 görünmez (profil 0 ' ın özgün renk profilini gösterdiği gibi)
-> - görüntüleme özgün renk profiline geri dönmek istiyorsanız, Ayarlar sayfasından bunu yapabilirsiniz (bkz. [renk profilini sıfırlama](#how-to-reset-color-profile))
+> Burada, görüntü rengi ayarıyla ilgili bazı yararlı ipuçlarına göz ayın:
+> - Ekran renklerini istediğiniz zaman Ayarlar yeniden çalıştırarak
+> - Cihaz üzerinde herhangi biri renk profillerini değiştirmek için daha önce bu ayarı kullandısa, en son değişikliğin tarih/saat ayarı Ayarlar yansıtılandır
+> - Görüntü rengi ayarlamayı yeniden çalıştırarak daha önce kaydedilen renk profili vurgulanır ve Profil 0 görünmez (Profil 0, ekranın özgün renk profilini temsil ettiği için)
+> - Ekranın özgün renk profiline geri dönmek için bu işlemi Ayarlar sayfasından (bkz. renk profilini [sıfırlama)](#how-to-reset-color-profile)
 
 ### <a name="how-to-reset-color-profile"></a>Renk profilini sıfırlama
 
-HoloLens 2 ' ye kaydedilmiş özel renk profili yoksa, cihazın özgün renk profilini geri yükleyebilirsiniz:
-1. **Ayarlar** uygulamasını başlatın ve **sistem > ayarlaması**' na gidin.
-1. **Ekran renk ayarlaması** altında **varsayılan renk profilini Sıfırla** düğmesini seçin.
-1. iletişim kutusu açıldığında, HoloLens 2 ' yi yeniden başlatmaya hazırsanız **yeniden başlat** ' ı seçin ve değişikliklerinizi uygulayın.
+HoloLens 2'ye kaydedilen özel renk profili sizi memnun HoloLens cihazın özgün renk profilini geri yükleyebilirsiniz:
+1. Ayarlar uygulamasını **başlatarak** **System > Birimi'ne gidin.**
+1. Renk **ayarı görüntüle altında** Varsayılan renk **profiline sıfırla düğmesini** seçin.
+1. İletişim kutusu açıldığında, 2. **sunucuya** yeniden başlatmaya ve değişikliklerinizi HoloLens Yeniden Başlat'ı seçin.
 
-### <a name="top-display-color-calibration-known-issues"></a>En üstteki ekran renk ayarlaması bilinen sorunları
+### <a name="top-display-color-calibration-known-issues"></a>Bilinen en çok görünen renk ayarı sorunları
 
-- Ayarlar sayfasında, bu sayfa Ayarlar yeniden yükleninceye kadar, renk profilinin en son ne zaman değiştirildiğini söyleyen durum dizesi güncel olmayacaktır 
-    - **geçici çözüm**: başka bir Ayarlar sayfası seçin ve ardından ayarlama sayfasını yeniden seçin.
-- HoloLens 2, ekran renk ayarlamayı çalıştırırken uyku moduna geçtiğinde, daha sonra karışık gerçeklik evliğine devam eder ve ekran parlaklığı düzeyi soluk kalır.
-- Beklenen şekilde çalışmadan önce cihazınızın sol tarafındaki parlaklık düğmelerine birkaç kez doğru bir şekilde basmanız gerekebilir.
-- Yerelleştirme tüm pazarlar için tamamlanmadı
+- Ayarlar sayfasında, renk profilinin en son ne zaman değiştirdiğini size söyleyen durum dizesi, ilgili sayfayı yeniden yükleyene kadar güncel Ayarlar 
+    - **Geçici** çözüm: Ayarlar sayfayı seçin ve Sonra Ayar sayfasını yeniden seçin.
+- Ekran HoloLens 2'niz çalışırken uykuda olursa, daha sonra karma gerçeklik giriş ekranına devam eder ve ekran parlaklığı düzeyiniz soluk görüntülenir.
+- Cihazınızın sol tarafındaki parlaklık düğmelerine beklendiği gibi çalışmadan önce birkaç kez yukarı/aşağı basabilirsiniz.
+- Tüm pazarlar için yerelleştirme tamamlanmadı
 
 ## <a name="faq"></a>SSS
 
-### <a name="what-are-the-patterns-that-occasionally-flash-in-the-bottom-corners-of-the-display"></a>Ekranın alt köşelerinde zaman zaman yanıp sönebildiğiniz desenler nelerdir?
+### <a name="what-are-the-patterns-that-occasionally-flash-in-the-bottom-corners-of-the-display"></a>Ekranın alt köşelerinde zaman zaman yanıp sönen desenler hangileridir?
 
-bazen HoloLens 2 ' 'niz, ekranın sol alt köşesinde farklı desenler gösterecektir. Örnekler aşağıda gösterilmiştir (animasyonlu GIF 'Ler). bu model, en iyi deneyim için ekranı ayarlamak üzere HoloLens 2 cihazınızın normal işleminin bir parçasıdır.
+Bazen, HoloLens 2'niz ekranın sol alt ve sağ köşelerinde farklı desenler gösterir. Örnekler aşağıda gösterilmiştir (animasyonlu GIF). Bu düzen, ekranı en iyi deneyim için ayarlamak HoloLens 2 cihazınızın normal çalışma şeklidir.
 
-![Biphao deseninin](./images/DAT-Biphase-Fiducial.gif) ![COĞRAFI model](./images/DAT-GEO-Fiducial.gif)
+![İki aşamalı desen](./images/DAT-Biphase-Fiducial.gif) ![COĞRAFI desen](./images/DAT-GEO-Fiducial.gif)
 
-### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>neden HoloLens 2 görüntümdeki doğru bir fotoğrafımı alamıyor?
+### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>Neden HoloLens 2 ekranımı doğru bir şekilde HoloLens alamayım?
 
-HoloLens 2 görünümü insan gözü tarafından görüntülenmek üzere tasarlanmıştır. Cihazda, bir kullanıcının gözüyle uyum sağlayan etkin bir renk düzeltme sistemi vardır. İnsan gözle karşılaştırıldığında, kameralar ortamları farklı ve aşağıda, kameranın yakaladığı ve kullanıcının gördüğü her türlü tutarsızlığı etkileyebilecek bazı faktörlerdir.
+HoloLens 2 ekranı, insan gözü tarafından görüntülenmek üzere tasarlanmıştır. Cihazın, kullanıcının gözüne uyum sağlanmış etkin bir renk düzeltme sistemi vardır. İnsan gözüyle karşılaştırıldığında kameraların ortamları farklı ve aşağıda görmesi, kameranın yakalaması ile kullanıcının gördüğü şeyler arasındaki tutarsızlığı etkileyebilen bazı faktörlerdir.
 
-* **Göz konumu.** HoloLens 2 görüntüsü, kullanıcının gözle bulunduğu konum için özel olarak tasarlanmıştır. HoloLens 2, kullanıcının göz konumuna uyum sağlamak için göz izleme teknolojisini kullanır. Birkaç milimetre tarafından yanlış konumlandırılmış bir kamera görüntü bozulmaya neden olabilir. Kamera ile doğru konumlandırma zor olur ve cihazın renk düzeltmesini gerçekleştirdiği tam konum ve gözle eşleşmesi gerekir.
-* **Göz taşıma.** Görüntü, Kullanıcı gösteriminin renkleri ayarlamak için hareket halinde uyum sağlar. Görüntü üzerinde gösterilen özellikler, kullanıcının merkezine, kenarına veya ekran köşesine bakmış olmasına bağlı olarak farklılık gösterebilir. Tek bir görüntü yakalama, en iyi şekilde yalnızca görüntünün bir göz önünde bir yön ile eşleşen eksen için nasıl göründüğünü gösterebilir.
-* **Binsel görüntüleme.** HoloLens 2 görüntüsü her iki gözle de görüntülenmek üzere tasarlanmıştır. Beyinde iki görüntü görmeye uyum sağlar ve bunları birlikte kullanır. Yalnızca bir görüntünün görüntüleri diğer görüntüden alınan bilgileri yoksayar.
-* **Kamera etkilenme süresi.** Kameranın etkilenme süresi saniyenin 1/120'in tam katı olması gerekir. HoloLens görüntü karesi hızı 120 Hz 'dir. HoloLens 2 ' nin görüntüleri çizme biçimi nedeniyle, tek bir karenin yakalanması, insanların görsel deneyimiyle eşleşecek kadar da yeterli değildir. Aynı zamanda, cihaz her seferinde (mikro hareketlerle) hareket ettirildiğinde, sistem görüntü üzerindeki görüntüyü hologragram sabitlerine kadar yeniden projeler. birden çok çerçeveyi yakalama, HoloLens hareket ettirirken, genellikle bir laboratuar kurulumu gerektirir.
-* **Kamera açıklık boyutu.** Doğru görüntüyü yakalamak için kameranın açıklık boyutu en az 3 mm olmalıdır. Küçük apertures ile cep telefonu kameraları, insan gözlükinden daha küçük bir alandan hafif bir şekilde tümleştirin. Cihaz, büyük apertures tarafından gözlenen desenler için renk düzeltmeleri uygular. Küçük apertures ile, uygunluk desenleri daha net ve sistem tarafından uygulanan renk düzeltmelere karşın görünür durumda kalır.
-* **Kamera giriş Pupıl.** Doğru bir görüntüyü yakalamak için kameranın girişinde en az 3 mm çapı olmalıdır. Aksi halde, kamera göz önünde görünmeyen bazı yüksek frekanslı desenleri yakalar. Giriş Pupıl 'nin her ikisi de kameranın önünde olmalıdır ve yakalanan görüntüde Aberrations ve diğer çeşitliliğe ulaşmaktan kaçınmak için göz atması mesafesinin üzerinde konumlandırılmış.
-* **Kamera konumu.** HoloLens 2 görüntüsünü görüntüleme gereksinimlerini karşılayan kameralar daha büyüktür ve renk düzeltilmiş görüntüsünü gözlemlemek için kameranın HoloLens 2 görüntüsüne yeterince yakın bir şekilde konumlandırılması zordur. kamera yanlış bir yer alıyorsa, renk düzeltmesi HoloLens 2 ekran yakalamanın olumsuz etkileyebilir.
-* **Görüntü düzeltme.** Tipik dijital kameralar ve akıllı telefon kameralar, snappier sonucu sağlamak üzere kontrast ve renk sağlayan bir ton çoğaltma eğrisi (TRC) uygular. bir HoloLens 2 görüntüsüne uygulandığında, bu ton eğrisi tek tek olmayan özellikleri artırır.
+* **Göz konumu.** HoloLens 2 ekranı, kullanıcının göz konumu için özel olarak tasarlanmıştır. Bu HoloLens 2, kullanıcının göz pozisyonuna uyum sağlamak için göz izleme teknolojisini kullanır. Birkaç milimetrenin yanlış konumlandırmış olduğu bir kamera, görüntü bozulmasına yol açabilirsiniz. Kamerayla doğru konumlandırma zordur ve cihazın renk düzeltmesi gerçekleştirecek olduğu konum ve göz düzeltmesi ile tam olarak eşleşmesi gerekir.
+* **Göz hareketi.** Ekran, renkleri ayarlamak için kullanıcının gözü hareketine uyum sağlar. Ekranda gösterilenler, kullanıcının ekranın merkezine, kenarına veya köşesine bakarak farklılık gösterebilir. Tek bir görüntü yakalama en iyi şekilde yalnızca göz bakışı yönüyle eşleşen eksen için ekranın nasıl göründüğünü gösterebilir.
+* **Dürbün görüntüleme.** HoloLens 2 ekranı, her iki göz ile de görüntülenmek üzere tasarlanmıştır. Beyin, iki görüntü görmeye uyum sağlar ve bunları bir araya okur. Yalnızca bir ekranın görüntüleri diğer ekrandan gelen bilgileri yoksayar.
+* **Kameraya maruz kalma süresi.** Kameranın maruz kalma süresi, saniyenin 1/120'sinde tam olarak katlarıdır. Görüntü HoloLens hızı 120Hz'tir. HoloLens 2'nin görüntü çekme yolu nedeniyle tek bir karenin yakalanması, bir insanın görsel deneyimiyle eşleşmek için de yeterli değildir. Aynı zamanda, cihaz hiç hareket ederse (hatta mikromoveyalar) sistem hologramları kararlı hale getirecek şekilde görüntü üzerinde yeniden projelenir. Birden çok karenin yakalanması ve HoloLens bir laboratuvar kurulumu gerekir.
+* **Kamera ölçüsü boyutu.** Doğru bir görüntüyü yakalamak için kameranın en az 3 mm boyutunda olması gerekir. Küçük cep telefonu kameraları, insan gözüne göre daha küçük bir alandan gelen ışığı tümleştirin. Cihaz, daha büyük büyük büyükler tarafından gözlemlenen desenler için renk düzeltmesi uygular. Küçük görüntülerle, tekdüzlük desenleri daha nettir ve sistem tarafından uygulanan renk düzeltmelerine rağmen görünür durumda kalır.
+* **Kamera giriş gözbebeği.** Doğru bir görüntü yakalamak için kameranın giriş gözbebeği en az 3 mm uzunluğunda olmalıdır. Aksi takdirde kamera, göze görünmeyebilen bazı yüksek frekanslı desenleri yakalar. Giriş gözbebeğinin konumu, yakalanan görüntüye sapmalar ve diğer çeşitlemeler katmak için hem kameranın önünde hem de göz yardım uzaklığında yer alıyor olması gerekir.
+* **Kamera konumu.** HoloLens 2 görüntüsünü görüntüleme gereksinimlerini karşıleyen kameralar daha büyüktür ve düzeltilen rengi gözlemlemek için kamerayı HoloLens 2 ekranına kadar konumlandırmak zordur. Kamera yanlış yerde ise renk düzeltmesi, 2 ekran görüntüsünde HoloLens etkileniyor olabilir.
+* **Görüntü düzeltme.** Tipik dijital kameralar ve akıllı telefon kameraları, daha hızlı bir sonuç elde etmek için karşıtlığı ve rengi artıran bir ton yeniden üretme eğrisi (TRC) sunar. Bu ton eğrisi, HoloLens 2 ekranına uygulandığında tekdüzdüz olmayanları da iyiler.
 
-hepsi, özelleştirilmiş endüstriyel kameraların HoloLens 2 görüntülerinden temsili görüntüleri yakalaması için yine de mümkündür. Ne yazık ki akıllı telefon, tüketici ve profesyonel kameralar, 2. oturumda kullanıcının gördüğü görüntülerle HoloLens yakalamaz.
+Tüm bunlar, özelleştirilmiş endüstriyel kameraların 2 ekrandan temsili görüntüleri yakalaması HoloLens mümkündür. ne yazık ki, smartphone, tüketici ve profesyonel kameralar, kullanıcının HoloLens 2 ' de gördüğü şekilde eşleşen resimleri yakalamaz.
 
-### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Göz alıcısı görüntü kalitesini görüntülemek için ne yapar?
+### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Görüntü kalitesini göstermek için göz ayarlama nedir?
 
-HoloLens 2 görüntüsü, görüntüleri kullanıcının gözüne göre etkin bir şekilde doğrular. [Göz kılı](hololens-calibration.md) iki önemli giriş sağlar: (1) kullanıcının etkileşim uzaklığı (IPD) ve (2) her bir gözün bakarak yönü. Göz ayarı olmadan sistem varsayılan olarak göz hareketi olmayan nominal bir göz pozisyonuna sahiptir. Etkin renk düzeltmesi ile düzeltme arasındaki fark, kullanıcının kendi fiziksel durumuna bağlıdır. Örneğin, sistem varsayılanı ile aynı IPD'ye sahip kullanıcılar daha az renk düzeltmesi geliştirmesi görebilir. IpD değeri sistem varsayılan ayarından çok daha dar veya daha geniş olan kullanıcılar görüntü görüntüsünde daha fazla değişiklik görebilir.
+HoloLens 2, kullanıcı gözlerinizin konumunu temel alarak etkin renkte renkleri düzeltir. [Göz ayarlama](hololens-calibration.md) iki önemli giriş sağlar: (1) kullanıcının ınterpupilılmi (IPD) ve (2) her bir gözle arama yönü. Göz ayarlama olmadan sistem, göz önünde olmayan bir gözle varsayılan olarak kabul edin. Etkin renk düzeltme ve düzeltme olmadan fark, kullanıcının kendi zevklerine göre değişir. Örneğin, sistem varsayılanı ile aynı ıPD 'ye sahip kullanıcılar daha az renk düzeltme geliştirmesi görür. Daha dar veya daha geniş bir sistem sistemi olan kullanıcılar, ekran görüntüsünde daha fazla değişiklik görür.
 
-[Holographic sürüm 20H2 Windows](hololens-release-notes.md#windows-holographic-version-20h2) yeni bir özelliğin göz konumunu otomatik [olarak algılamaya başlayacağını unutmayın.](hololens-calibration.md#auto-eye-position-support) 
+[Windows Holographic version 20h2 sürümündeki](hololens-release-notes.md#windows-holographic-version-20h2) yeni bir özellik, [gözle otomatik olarak algılanacaktır](hololens-calibration.md#auto-eye-position-support). 
 
-### <a name="what-are-the-display-differences-between-hololens-1st-gen-and-hololens-2"></a>HoloLens (1. nesil) ile 2. nesil arasındaki HoloLens nedir?
+### <a name="what-are-the-display-differences-between-hololens-1st-gen-and-hololens-2"></a>HoloLens (1. gen) ve HoloLens 2 arasındaki görüntüleme farkları nelerdir?
 
-Müşterilerin Microsoft'a verdiği en önemli istekler arasında HoloLens 1(1) görünüm alanını artırmak ve (2) parlaklığı artırmaktır. Teknolojideki gelişmeler, Microsoft'un görünüm alanını iki katına çıkaran dalga kılavuzlar üretmesine ve üç kat daha parlak bir ekrana sahip ışık projektörleri üretmesine izin verdi. Donanım, görüntü kalitesi için bir üç takasın taban çizgisini ayarlar: (1) görünüm alanı, (2) parlaklık ve (3) renk tekdüzması. Devam eden teknoloji ilerlemesi, başka bir alandan ödün vermeden tüm alanlarda iyileştirmelere olanak sağlar. Aradaki süre içinde, mevcut teknoloji bu takaslar için kullanılabilir sınırları ayarlar.
+önde gelen istekler arasında HoloLens 1 ' den sonra Microsoft 'un verdiği müşteriler, (1) görünüm alanını artırın ve (2) parlaklığı artırın. Teknoloji geliştirmeleri, Microsoft 'un, görünümün alanını iki katına çıkarmış ve en fazla üç kat daha parlakla hafif projektörler üreten dalga kılavuzlarını üretmesine izin verir. Donanım, görüntüleme görüntüsü kalitesi: (1), görünüm alanı, (2) parlaklığı ve (3) renk bütünlüğü için bir esneklik için temeli ayarlar. Devam eden teknoloji gelişmeleri, başka bir alandan ödün vermeden tüm alanlarda iyileştirmeler yapılmasına izin verir. Bu arada, mevcut teknoloji bu avantajları için kullanılabilen sınırları ayarlar.
 
-### <a name="what-improvements-are-coming-that-will-improve-hololens-2-image-quality"></a>2 görüntü kalitesini geliştirecek HoloLens geliştirmeler geliyor?
+### <a name="what-improvements-are-coming-that-will-improve-hololens-2-image-quality"></a>HoloLens 2 görüntü kalitesini iyileştirecek geliştirmeler ne olur?
 
-Görüntü kalitesini geliştirmek için birçok araştırmamız devam ederken, gelecek güncelleştirmelerde aşağıdaki alanların gelmesi beklenir:
+Görüntü kalitesini geliştirecek birçok araştırma yaptığımız için aşağıdaki alanların yaklaşan güncelleştirmelere gelmesi beklenmektedir:
 
-* **Otomatik Göz Konumu.** Bu özellik, göz yordamlarının arka planda yer almalarını sağlar. Kullanıcıların artık etkin renk düzeltmesi için göz rengi düzeltmesi çalıştırması gerekmeyecek. Bunun yerine yalnızca çalışır.
-* **Renk Düzeltmesi Geliştirmeleri.** Bu güncelleştirme daha koyu renklerin (örneğin koyu gri) renk değerlerine odaklanır. Şu anda, dimmer renkleri kırmızı bir ton alır. Bu sorun, tüm ekran soluk görüntüye sahip olduğunda da gerçekleşir; tüm ekran kırmızı renkler alır. Bu sorun, bu koyu renkler için kırmızı renk kanalında çok fazla etkinliğin sonucudur. Bu dimmer renklerine göre lazer eğrisi eğrilerini nitelendirtik ve kullanıcıya bir yordam sunmak için çalışıyoruz. Sonuç, renk spektrumu genelinde daha fazla renk doğruluğu elde etmektir. Beyaz arka planların tam parlaklığa sahip görünümünü değiştirmez. Uygulamalarda koyu mod tasarım desenlerinin kullanımını önerip kullanmaya devam edeceğiz.
-* **Okuma Modu.** Uygulama geliştiricilerinin daha yüksek angular çözüm elde etmek için görüntüleme alanı arasında takas yapmak mümkündür. Uygulama geliştiricileri, içeriğin ekranın çizim çözünürlüğünde işlenecek şekilde projeksiyon matrisini geçersiz kabilirsiniz. Bu özellik, görünüm alanında %30 azalmaya ve buna karşılık gelen angular çözümleme artışına neden olur. Karma Gerçeklik Araç Seti'ne bu özelliği tanıtmak [için çalışmalar devam ediyor.](https://github.com/Microsoft/MixedRealityToolkit-Unity) Kullanılabilir olduğunda, okuma modu 2 işletim HoloLens herhangi bir işletim sistemi üzerinde çalışır; işletim sistemi güncelleştirmesini bağımlı değildir.
+* **Otomatik göz konumu.** Bu özellik, göz ayarlama yordamlarını arka planda gerçekleştirecektir. Kullanıcıların, etkin renk düzeltmesinin çalışması için artık gözle değişiklik ayarlamasını çalıştırmaları gerekmez. Bunun yerine yalnızca çalışacaktır.
+* **Renk ayarlama geliştirmeleri.** Bu güncelleştirme, koyu renklerin renk değerlerine odaklanır (örneğin, koyu gri). Şu anda renkleri karartma kırmızı bir ton seçin. Bu sorun, tüm ekran soluk olduğu için de gerçekleşir. tüm ekran kırmızı renkleri kullanır. Bu sorun, daha koyu renkler için kırmızı renk kanalında çok fazla etkinliğin bir sonucudur. Lazer Aydınlatma eğrilerini bu renk, renkler üzerinde niteliyoruz ve bir Kullanıcı ayar yordamı sunmak üzere çalışmaktadır. Sonuç, parlaklık spektrumu genelinde daha fazla renk doğruluğu olacaktır. Tam parlaklığa göre beyaz arka planların görünümünü değiştirmez. Uygulamalarda koyu modlu tasarım düzenlerini kullanmaya devam ediyoruz.
+* **Okuma modu.** Uygulama geliştiricilerinin, daha yüksek Ansal çözüm elde etmek için Görünüm alanını zorunluluğunu getirir. Uygulama geliştiricileri, içeriğin ekran çizim çözünürlüğünde işlenmesi için İzdüşüm matrisini geçersiz kılabilir. Bu özellik, görünüm alanı ve angular çözünürlüğünde karşılık gelen artış %30 oranında azalmayla sonuçlanır. Bu özelliği [karma gerçeklik araç seti](https://github.com/Microsoft/MixedRealityToolkit-Unity)'ne tanıtmak için iş devam eden bir çalışmadır. kullanılabilir olduğunda okuma modu herhangi bir HoloLens 2 işletim sisteminde çalışır; bir işletim sistemi güncelleştirmesine bağlı değildir.
 
-İşletim sistemi güncelleştirmeleri otomatik olarak teslim edilir. Ayrıca, insider önizleme programı aracılığıyla yazılım geliştirmenin erken yayınlarını da testabilirsiniz.
+İşletim sistemi güncelleştirmeleri otomatik olarak dağıtılır. Ayrıca, Insider Preview programı aracılığıyla yazılım geliştirme 'nin erken sürümlerini test edebilirsiniz.
 
-### <a name="what-guidance-is-available-for-developers-to-apply-dark-mode-design-principles"></a>Geliştiricilerin koyu mod tasarım ilkelerini uygulayacakları kılavuzlar hangileridir?
+### <a name="what-guidance-is-available-for-developers-to-apply-dark-mode-design-principles"></a>Geliştiricilerin koyu modda tasarım ilkelerini uygulaması için hangi rehberlik vardır?
 
-Beyaz arka planlardan kaçınan kullanıcılar en iyi deneyime sahip olur. Koyu mod, uygulamalar tarafından siyah veya koyu renkli arka planlar kullanmak için kullanılan bir tasarım ilkesidir. Sistem ayarları varsayılan olarak koyu moddur ve Sistem Rengi'ne **Ayarlar**  >  **ayarlanabilir.**  >  
+Kullanıcılar beyaz arka planların önlenmesiyle en iyi deneyimlere sahip olur. Koyu mod, uygulamalar tarafından siyah veya koyu renkli bir arka plan kullanmak için kullanılan bir tasarım ilkesidir. sistem ayarları varsayılan olarak koyu modda ve **Ayarlar**  >  **sistem**  >  **rengine** giderek ayarlanabilir.
 
-Geliştiricilerin koyu mod tasarım yönergelerini izlemesi önerilir:
+Geliştiricilerin koyu modda tasarım kılavuzunu izlemesi önerilir:
 
-* [Ekranlar için geliştirici HoloLens yönergeleri](/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
+* [HoloLens ekranlar için geliştirici tasarımı yönergeleri](/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
 * [Önerilen yazı tipi boyutları](/windows/mixed-reality/typography#recommended-font-size)
 
-Bir hologram için beyaz arka plan gerekli olduğunda, hologram boyutunu ekranın tam görünüm alanından küçük tutabilirsiniz. Bu boyut, kullanıcıların hologramı ekranın merkezine koymalarını sağlar.
+Bir hologram beyaz bir arka plan gerektirdiğinde, hologram boyutunu görünümün tam alanından daha küçük tutun. Bu boyut, kullanıcıların hologram görüntüsünü ekran merkezine yerleştirmeye olanak tanır.
 
-### <a name="how-do-you-clean-a-hololens-2-display"></a>2. bir HoloLens nasıl temizlenir?
+### <a name="how-do-you-clean-a-hololens-2-display"></a>HoloLens 2 görüntüsünü nasıl temizleyirsiniz?
 
-Bir mikrofiber yalıtarak göz gözlerini tamamen temizleyin. Visor'ı temizlemek için %70 isopropylfaz kullanarak bir sigarayı hafife çekin ve sonra da güneş ışığını temizleyin. [HoloLens 2 temizleme hakkında SSS bölümünü okuyun.](hololens2-maintenance.md)
+Bir mikro fiber bezi kullanarak, vizörü 'yi yavaşça temizleyin. Vizörü 'yi temizlemek için %70 ısopropyıl alkol kullanarak bir bezle, sonra da vizörü 'yi silebilirsiniz. [HoloLens 2 temizleme sss](hololens2-maintenance.md)bölümünde tam kılavuzu okuyun.

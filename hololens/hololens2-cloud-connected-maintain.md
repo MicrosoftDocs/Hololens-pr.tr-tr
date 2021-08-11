@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 941de296d59713c098718b16431fa793bd1b60e6
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 879f89d84bbae5b4cc187bc8b1fca627036269145b1c2dd82787e3789fef259d
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635169"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115660366"
 ---
 # <a name="maintain---cloud-connected-guide"></a>Bakım - Buluta bağlı Kılavuz
 
@@ -56,9 +56,9 @@ Bu kılavuzda Mobile Cihaz Yönetimi (MDM) ayarlama konusundan söz ediliyordu a
 
 Kullanabileceğiniz başka karmaşık cihaz kısıtlamaları da vardır. Örneğin:
 
-- Ayarlar uygulamasında görüntülenecek sayfaları, [AyarlarSayfaVisibility](settings-uri-list.md)kullanarak sınırlandırarak, kullanıcıların yalnızca kendi bağlantılarını değiştirme gibi ayarlamaları gereken ayarlara erişmesine Wi-Fi sağlar.
+- Ayarlar uygulamasında görüntülenecek sayfaları, [AyarlarSayfaVisibility](settings-uri-list.md)kullanarak sınırlandırma; kullanıcıların yalnızca kendi bağlantılarını değiştirme gibi ayarlamaları gereken ayarlara erişmesine Wi-Fi sağlar.
 - Bir [cihazda kullanıcılara](hololens-kiosk.md) sunulan kullanıcı arabirimini sınırlamak için Bilgi Noktası modunu kullanın. Bilgi Noktası'nın tek bir uygulamayı veya özel başlangıç sayfası olan birden çok uygulamayı gösterecek şekilde ayarlaması gerekir. Bilgi noktası, farklı kullanıcılara farklı deneyimler de sunabilirsiniz.  
-- [Windows veya işlemlerin tamamen başlatılmasını](windows-defender-application-control-wdac.md) tutmak için Uygulama Denetimi'ne (WDAC) tıklayın.
+- Windows uygulama veya işlemlerin tamamen başlatılmasını tutmak için Uygulama Denetimi'ne [(WDAC)](windows-defender-application-control-wdac.md) tıklayın.
 
 Farklı cihaz yönetimi veya cihaz kısıtlama yöntemleri hakkında daha fazla bilgi edinmek için bir sonraki adıma geçin ve Genel Bakış makalemizi Cihaz Yönetimi okuyun.
 

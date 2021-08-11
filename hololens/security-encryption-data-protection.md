@@ -1,39 +1,39 @@
 ---
-title: Şifreleme ve Veri Koruması
-description: BitLocker ve Azure tümleştirmesi dahil olmak üzere HoloLens 2 cihaz üzerinde şifreleme ve veri koruma hakkında bilgi edinin.
+title: Şifreleme ve veri koruması
+description: BitLocker ve Azure tümleştirmesi dahil olmak üzere HoloLens 2 cihazda şifreleme ve veri koruması hakkında bilgi edinin.
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: güvenlik, hololens, Şifreleme, Veri Koruması, BitLocker Cihazı, BitLocker, bitlocker, bitlocker şifrelemesi, azure tümleştirmesi,
+keywords: Güvenlik, Hololens, şifreleme, veri koruma, BitLocker cihazı, BitLocker, BitLocker, BitLocker şifrelemesi, Azure tümleştirmesi,
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e156fc21bfd1541dd8718a7349e7ba82b45576be
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: cd1d3ae238924537b1d36f4acdf239f0dc644326827d2c6041ceb94b013b3801
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639378"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665514"
 ---
 # <a name="encryption-and-data-protection"></a>Şifreleme ve veri koruması
 
-Şifreleme ve Veri Koruması, cihaz kaybolur veya çalınırsa verileri korur ve yetkisiz uygulamaların hassas bilgilere erişmesini önler.
+Şifreleme ve veri koruma, cihaz kaybolduğunda veya çalındığında verileri korur ve yetkisiz uygulamaların hassas bilgilere erişmesini önler.
 
 ## <a name="bitlocker-device-encryption"></a>BitLocker cihaz şifrelemesi
 
-BitLocker, Salt Okunur (RO) medyanın bütünlüğünü ve yazılabilir medyanın gizlilik korumasını sağlamak için kullanılan tam hacimli bir şifreleme özelliğidir.  İlk kurulduğundan beri, çevrimdışı saldırılar sırasında verilere yetkisiz erişime karşı etkili bir koruma olmuştur. HoloLens 2, verileri cihaza yetkisiz fiziksel Cihaz Şifrelemesi korumak için Varsayılan olarak Bitlocker Cihaz Şifrelemesi'yi (BDE) etkinleştirir. Gelecekteki ihtiyaçları karşılamak için her zaman gelişen Microsoft, bu teknolojiye yatırım yapmaya ve geliştirmeye devam etmektedir.
+BitLocker, yazılabilir medyanın salt okuma (RO) medyası ve gizlilik koruması 'nın bütünlük korumasına yönelik tam birim şifreleme özelliğidir.  Bu tarihten itibaren, çevrimdışı saldırı sırasında verilere yetkisiz erişime karşı etkili bir kalkan oldu. HoloLens 2, varsayılan olarak, cihaza herhangi bir yetkisiz fiziksel erişimden verileri korumak için Bitlocker cihaz şifrelemesini (BDE) sağlar. Gelecek ihtiyaçlarını karşılamak için her zaman gelişen Microsoft, bu teknolojiyi yatırım yapmaya ve geliştirmeye devam etmektedir.
 
-BDE, cihazın durumla ayrılmış düzeninde yer alan tüm birimlerde AES-XTS-256 şifrelemesi kullanılan bir veri koruma özelliğidir. BDE, durumla ayrılmış bir düzende cihaz düzeyinde şifreleme sağlar. BitLocker Cihaz Şifrelemesi işletim sisteminde ve sabit veri birimlerinde otomatik olarak etkinleştirilir ve CIHAZıN her zaman korunması için, IT yöneticileri bile kapatamaz.
+BDE, cihazın durum ile ayrılmış düzeninde tüm birimlerde AES-XTS-256 şifrelemesini kullanan bir veri koruma özelliğidir. BDE, durum ile ayrılmış bir düzende cihaz düzeyinde şifreleme sağlar. BitLocker cihaz şifrelemesi, işletim sistemi ve sabit veri birimlerinde otomatik olarak etkinleştirilir ve cihazın her zaman korunması için BT yöneticileri tarafından bile devre dışı bırakılamaz.
 
-Daha sonra BDE şifreleme anahtarları, ikili dosyaların ve cihazın önyüklemesi için gereken verilerin saydam bir şekilde şifresini çözmek için kullanılır. İşletim sistemi biriminin kilidi açılır ve sistem önyüklerken, diğer birimlere otomatik kilit açma koruyucusunun bir bireye özgü bir sürümü kullanılarak erişilebilir hale gelir. Kullanıcı gizliliğini korumak için başka koruyucu yoktur ve sürücünün kilidi yalnızca aynı cihazdan açabilirsiniz. Gerekli birimlerde Salt Okunur (RO) zorlaması, ilk önyüklemeden başlayarak hemen uygulanır ve uygulanır. Bitlocker kurtarma anahtarı, 2 yaşam döngüsünde HoloLens gerekli değildir.
+Daha sonra BDE şifreleme anahtarları, ikili dosyaları ve cihazı önyüklemek için gereken verileri saydam bir şekilde çözmek için kullanılır. İşletim sistemi biriminin kilidi açık olduğundan ve bir sistem önyüklenirken, diğer birimler, otomatik kilit açma koruyucunun birime özgü bir sürümü kullanılarak erişilebilir hale gelir. Kullanıcı gizliliğini korumak için başka bir koruyucu yoktur ve sürücü yalnızca aynı cihazda açılabilir. Gerekli birimlerde salt okuma (RO) zorlaması, ilk önyüklemeden başlayarak hemen uygulanır ve uygulanır. HoloLens 2 yaşam döngüsünde Bitlocker kurtarma anahtarı gerekli değildir.
 
 ## <a name="azure-integration"></a>Azure tümleştirmesi 
 
-HoloLens 2, müşterilerin cihazlarını Azure hizmetleriyle tümleştirebilirsiniz. 2 HoloLens Azure arasındaki iletişimler, kendisiyle bulut hizmetleri arasında seyahat eden verileri korumak için TLS (Aktarım Katmanı Güvenliği) protokolünü kullanır ve bu da güçlü kimlik doğrulaması, ileti gizliliği ve bütünlük sağlar. Tüm Azure hizmetleri TLS 1.2'yi ve müşterilerin yalnızca TLS 1.2'yi kullanmakta olduğu tüm hizmetleri yalnızca TLS 1.2 trafiğini kabul eder. Azure'ın geçişte olan verilere ilişkin şifreleme standartları, Azure şifrelemeye genel [bakış içinde ayrıntılı olarak açık edilmiştir.](/azure/security/fundamentals/encryption-overview) Azure veri güvenliği ve şifrelemesi için en iyi [yöntemler hakkında daha fazla bilgi edinmek için Azure belgelerini ziyaret edin.](/azure/security/fundamentals/data-encryption-best-practices) 
+HoloLens 2, müşterilerin cihazlarını Azure hizmetleriyle tümleştirmelerini sağlar. HoloLens 2 cihaz ile Azure arasındaki iletişimler arasında, güçlü kimlik doğrulaması, ileti gizliliği ve bütünlük sağlayan kendisi ile bulut hizmetleri arasında hareket eden verileri korumak için TLS (aktarım katmanı güvenliği) protokolü kullanılır. Tüm Azure hizmetleri TLS 1,2 ' i ve müşterilerin yalnızca TLS 1,2 kullandığı tüm hizmetleri tam olarak destekler ve yalnızca TLS 1,2 trafiğini kabul eder. Azure 'un yoldaki veriler için şifreleme standartları [Azure şifrelemesi 'ne genel bakış](/azure/security/fundamentals/encryption-overview)bölümünde ayrıntılı olarak açıklanmıştır. [Azure veri güvenliği ve şifreleme için en iyi uygulamalar](/azure/security/fundamentals/data-encryption-best-practices)hakkında daha fazla bilgi edinmek için Azure belgelerini ziyaret edin. 
 
-OneDrive 2 ile bulut tümleştirmesi örneği olan HoloLens, dosya ve belgelerinizin İnternet'e bağlandıktan sonra buluta otomatik olarak yükleneceği bir otomatik karşıya yükleme özelliğine sahiptir. Dosyaların otomatik eşitlemesi duraklatma ilkesi aracılığıyla kapatılamaz, ancak UX aracılığıyla doğrudan yapılandırılabilir. 
+OneDrive, HoloLens 2 ile bulut tümleştirmesine örnek olarak, ınternet 'e bağlıyken dosya ve belgelerinizin otomatik olarak buluta yüklenebildiği bir otomatik karşıya yükleme özelliğine sahiptir. Dosyaların otomatik eşitlemesini duraklatma, ilke aracılığıyla kapatılamaz ancak doğrudan UX aracılığıyla yapılandırılabilir. 

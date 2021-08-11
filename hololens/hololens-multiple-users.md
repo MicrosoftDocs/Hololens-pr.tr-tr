@@ -1,6 +1,6 @@
 ---
-title: HoloLens'inizi birden çok kişi ile paylaşma
-description: HoloLens'i birden çok Azure Active Directory veya tek bir hesap kullanan birden çok kullanıcı tarafından paylaşılacak şekilde yapılandırabilirsiniz.
+title: HoloLens birden çok kişiyle paylaşma
+description: HoloLens birden çok Azure Active Directory hesabı veya tek bir hesabı kullanan birden çok kullanıcı tarafından paylaşılacak şekilde yapılandırabilirsiniz.
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -13,46 +13,46 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 39de72bb704ff500b0262f2268d003a08d520eb2
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 821ef2d17531226177e508b1428af82012c16406e9fbce3ed1a5617c767adfe8
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379068"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663078"
 ---
-# <a name="share-your-hololens-with-multiple-people"></a>HoloLens'inizi birden çok kişi ile paylaşma
+# <a name="share-your-hololens-with-multiple-people"></a>HoloLens birden çok kişiyle paylaşma
 
-Bir HoloLens'i birçok kişi ile paylaşmak veya birçok kişinin bir Dizi HoloLens cihazı paylaşması yaygın bir durumdur.  Bu makalede, bir cihazı paylaşmanın farklı yolları açıklanmıştır.
+birçok kişi ile bir HoloLens paylaşmak veya birçok kişinin bir dizi HoloLens cihazı paylaşması yaygındır.  Bu makalede, bir cihazı paylaşmak için kullanabileceğiniz farklı yollar açıklanmaktadır.
 
-## <a name="share-with-multiple-people-each-using-their-own-account"></a>Her biri kendi hesabını kullanarak birden çok kişi ile paylaşma
+## <a name="share-with-multiple-people-each-using-their-own-account"></a>Her biri kendi hesabını kullanan birden fazla kişiyle paylaşma
 
-Önkoşul: HoloLens cihazı 1803 Windows 10 veya sonraki bir sürümü çalıştırmış olması gerekir.  HoloLens'in (1. nesil) sürümüne [de Windows Holographic for Business.](hololens-upgrade-enterprise.md)
+**önkoşul**: HoloLens cihaz Windows 10, sürüm 1803 veya sonraki bir sürümü çalıştırmalıdır.  HoloLens (1. gen) [Windows Holographic for Business sürümüne de yükseltilmelidir](hololens-upgrade-enterprise.md).
 
-Kullanıcılar kendi kullanıcı Azure Active Directory (Azure AD) hesaplarını kullanırsa, birden çok kullanıcı cihazda kendi kullanıcı ayarlarını ve kullanıcı verilerini saklayabilirsiniz.
+kendi Azure Active Directory (Azure AD) hesaplarını kullandıklarında, birden çok kullanıcı kendi kullanıcı ayarlarını ve kullanıcı verilerini cihazda tutabilir.
 
-HoloLens'iniz üzerinde birden çok kişinin kendi hesaplarını kullanabileceğini emin olmak için aşağıdaki adımları izleyin:
+birden çok kişinin HoloLens kendi hesaplarını kullanabilmesini sağlamak için, yapılandırmak için aşağıdaki adımları izleyin:
 
-1. Cihazın 1803 veya Windows 10 çalıştırıla olduğundan emin olun.
+1. cihazın Windows 10, sürüm 1803 veya sonraki bir sürümü çalıştırdığından emin olun.
    > [!IMPORTANT]
-   > HoloLens (1. nesil) cihazı kullanıyorsanız, cihazı sanal [Windows Holographic for Business.](hololens1-upgrade-enterprise.md)
-1. Cihazı ayarsanız, cihazı iş veya okul **sahibim'i seçin ve** bir Azure AD hesabı kullanarak oturum açın.
-1. Kurulumu tamamladikten sonra, hesap ayarlarının **(** Ayarlar Hesapları ) Diğer  >  **kullanıcılar'ın** olduğundan **emin olun.**
+   > HoloLens (1. gen) bir cihaz kullanıyorsanız, [cihazı Windows Holographic for Business sürümüne yükseltin](hololens1-upgrade-enterprise.md).
+1. Cihazı ayarlarken, **iş veya okul** zamanı ' nı seçin ve bır Azure AD hesabı kullanarak oturum açın.
+1. kurulumu tamamladıktan sonra hesap ayarlarının (**Ayarlar**  >  **hesapları**) **diğer kullanıcıları** içerdiğinden emin olun.
 
-HoloLens'i kullanmak için her kullanıcı şu adımları izler:
+HoloLens kullanmak için, her kullanıcı şu adımları izler:
 
-1. Cihazı başka bir kullanıcı kullanıyorsa, aşağıdakilerden birini yapın:
-   - Bekleme moduna dönmek için güç düğmesine bir kez basın ve ardından kilit ekranına dönmek için güç düğmesine tekrar basın
-   - HoloLens 2 kullanıcıları, geçerli kullanıcının oturumlarını Başlat menüsü için kullanıcı kutucuğunu seçerek kullanıcı kutucuğunu seçerek kullanıcıdan yardım alan kullanıcılar olabilir.
+1. Başka bir Kullanıcı cihazı kullanıyorsa aşağıdakilerden birini yapın:
+   - Bekleme moduna geçmek için güç düğmesine bir kez basın ve ardından kilit ekranına dönmek için güç düğmesine tekrar basın
+   - HoloLens 2 kullanıcı, geçerli kullanıcının oturumunu kapatmak için Başlat menüsü kullanıcı kutucuğunu seçebilir.
 
-1. Cihazda oturum açma için Azure AD hesabı kimlik bilgilerinizi kullanın.  
-    Cihazı ilk kez kullandıysanız HoloLens'i [kendi gözünize](hololens-calibration.md) ayarlamanız gerekir.
+1. Cihazda oturum açmak için Azure AD hesabı kimlik bilgilerinizi kullanın.  
+    bu cihaz ilk kez kullanılıyorsa, HoloLens kendi gözlerinize [ayarlamanız](hololens-calibration.md) gerekir.
 
-Cihaz kullanıcılarının listesini görmek veya bir kullanıcıyı cihazdan kaldırmak için Ayarlar Hesapları **Diğer**  >  **kullanıcılar'a**  >  **gidin.**
+cihaz kullanıcılarının listesini görmek veya bir kullanıcıyı cihazdan kaldırmak için **Ayarlar**  >  **hesapları**  >  **diğer kullanıcılar**' a gidin.
 
-## <a name="share-with-multiple-people-all-using-the-same-account"></a>Hepsi aynı hesabı kullanarak birden çok kişi ile paylaşma
+## <a name="share-with-multiple-people-all-using-the-same-account"></a>Aynı hesabı kullanan birden fazla kişiyle paylaşma
 
-Ayrıca, tek bir kullanıcı hesabı kullanırken birden çok kullanıcı HoloLens cihazı paylaşabilir.
+tek bir kullanıcı hesabı kullanırken birden çok kullanıcı da HoloLens bir cihaz paylaşabilir.
 
-**HoloLens 2'de,** yeni bir kullanıcı cihazı ilk kez başına koyarken (aynı hesabın oturum açık tutularak) yeni kullanıcıdan görüntüleme deneyimini hızla ayarlamasını ve kişiselleştirmesini istenir. Cihaz, gelecekte her kullanıcının görüntüleme deneyiminin kalitesini ve rahatsını otomatik olarak iyileştirecek şekilde ayar bilgilerini depolar. Kullanıcıların cihazı yeniden ayarlaması gerek değildir.
+**HoloLens 2**' de, yeni bir kullanıcı cihazı ilk kez baş üzerine yerleştirirken (aynı hesabı oturum açrken), cihaz yeni kullanıcıdan görüntüleme deneyimini hızlı bir şekilde ayarlama ve kişiselleştirmesini ister. Cihaz, gelecekte her kullanıcının görüntüleme deneyiminin kalitesini ve rahatlığını otomatik olarak en iyi hale getirebilmesi için ayarlama bilgilerini depolayabilirler. Kullanıcıların cihazı yeniden ayarlama gereksinimi yoktur.
 
-**HoloLens'te (1. nesil)** hesap paylaşan kullanıcıların Ayarlar uygulamasında yeniden ölçeklendirme istemesi gerekir.  Ayarlama hakkında daha fazla [bilgi edinin.](hololens-calibration.md)
+**HoloLens (1. genel)** kullanıcının bir hesabı paylaşan kullanıcıların, Ayarlar uygulamada brate 'i yeniden yapması istenir.  [Ayarlama](hololens-calibration.md)hakkında daha fazla bilgi edinin.

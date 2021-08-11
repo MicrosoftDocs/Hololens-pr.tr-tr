@@ -1,9 +1,9 @@
 ---
 title: HoloLens 2 donanım
-description: Microsoft HoloLens 2'nin, Microsoft HoloLens çalışan bir holografik Microsoft bilgisayarının en son evrimini Windows 10.
+description: Windows 10 çalıştıran bir untethered holographic Microsoft bilgisayarının en son gelişini Microsoft HoloLens 2 ' yi oluşturan bileşenler hakkında bilgi edinin.
 ms.assetid: 651d0430-bfbc-4685-a4fd-db7c33ce9325
 ms.date: 10/20/2020
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -12,47 +12,47 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 4c476a2adc8f03c37e17e6324960318b4806534e
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 759ef671e9a831e23809d5974595ce5928433e3e50ddb26e25a7a74ebe2559a3
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639752"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659979"
 ---
-# <a name="about-hololens-2"></a>Yaklaşık HoloLens 2
+# <a name="about-hololens-2"></a>HoloLens 2 hakkında
 
-![HoloLens 2 yan görünüm](images/hololens2-breakdown.png)
+![HoloLens 2 yan görünümü](images/hololens2-breakdown.png)
 
-Microsoft HoloLens 2, bir holografik bilgisayardır.  Karma gerçeklikte işbirliği yapmak için daha fazla seçenekle eşleştirilmiş daha rahat ve çevreleyici bir deneyim sağlamak için HoloLens (1. nesil) tarafından başlayan holografik bilgi işlem yolculuğunu iyi hale getiriyor. HoloLens 2, kullanıcılara, yöneticilere ve geliştiricilere sağlam, yüksek performans ve güvenli bir platform sağlayan Windows 10'nin "aromasını" temel alan Windows [Holographic OS](hololens-release-notes.md)üzerinde çalışır. 
+Microsoft HoloLens 2 bir untethered holographic bilgisayardır.  karma gerçeklik 'te işbirliği için daha rahat ve modern bir deneyim sunmak üzere HoloLens (1. gen) tarafından başlatılan holographic bilgi işlem yolculuğunu iyileştirir. HoloLens 2, kullanıcılara, yöneticilere ve geliştiricilere güçlü, performanslı ve güvenli bir platform sağlayan bir Windows 10 "flavor" temel alan [Windows Holographic OS](hololens-release-notes.md)üzerinde çalışır. 
 
 > [!NOTE]
-> Son Windows 11 duyurusu, 11'in bilgisayar sürümüne Windows. Kısa süre [](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) önce Mayıs 2021'de HoloLens 2'ye büyük bir işletim sistemi güncelleştirmesi başlattık ve bu düşüş için müşteri geri bildirimlerine dayanarak gelecek bir sürüm üzerinde çalışıyoruz.
+> son Windows 11 duyurusu, Windows bilgisayar sürümüne odaklanmıştı. kısa süre önce 2021 mayıs ' de HoloLens 2 ' ye [büyük bir işletim sistemi güncelleştirmesi](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) başlattık ve bu fall için müşteri geri bildirimlerine bağlı olarak yaklaşan bir sürüm üzerinde çalışıyoruz.
 
-2. kullanıcı hesabını kullanmak için HoloLens gerekir.
+HoloLens 2 kullanmak için bir kullanıcı hesabı gerekir.
 
 ## <a name="hololens-components"></a>HoloLens bileşenleri
 
-- **Visor**. Algılayıcıların HoloLens görüntüler içerir. Mengeneyi takarak yalıtarak HoloLens.
-- **Baş bant**. Bağlantı HoloLens için ayarlama tekerleğini kullanarak baş bandı genişletin. Bağlantı HoloLens baş bant rahat olana kadar sağa dönerek ayarlama tekerleğini sıkın.
-- **Parlaklığı düğmeleri.** Düğmeyi HoloLens parlaklığı düğmeleri, mabedin yakınındaki mengenin sol tarafında bulunur.
-- **Ses düğmeleri.** Düğmeyi HoloLens ses düğmeleri, mabedin yakınındaki mengenenin sağ tarafında bulunur.
-- **Güç düğmesi.** Güç düğmesi HoloLens arka dış örtün sağ tarafında bulunur.
-- **USB-C bağlantı noktası.** Usb-HoloLens usb-c bağlantı noktası, Güç düğmesinin altındaki arka dış kapakın sağ tarafında bulunur.
+- **Vizörü**. HoloLens sensörleri ve ekranlar içerir. HoloLens takırken, vizörü 'yi döndürebilirsiniz.
+- **Yayın bandı**. HoloLens koymak için, bir ayarlama tekerleği ' nı kullanarak, yayın bandı ' ni genişletin. HoloLens yerinde olduğunda, yayın bandı rahat olana kadar, ayarlamayı doğru bırakarak ayarlama tekerleğini güçlendir.
+- **Parlaklık düğmeleri**. HoloLens takdığınızda parlaklık düğmeleri, tüm vizörü 'ın temple yakın tarafında bulunur.
+- **Ses düğmeleri**. HoloLens takdığınızda, ses düğmeleri, tüm vizörü 'ın temple yakınınızda sağ tarafında bulunur.
+- **Güç düğmesi**. HoloLens eklendiğinde, güç düğmesi arka dıştaki kapağının sağ tarafında bulunur.
+- **USB-C bağlantı noktası**. HoloLens eklendiğinde, USB-C bağlantı noktası güç düğmesinin altındaki arka dıştaki kapağının sağ tarafında bulunur.
 
-## <a name="in-the-box"></a>Kutuda
+## <a name="in-the-box"></a>Kutusunda
 
-- **[Brow pad](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Gerektiğinde,row pad'i kaldırabilir ve değiştirebilirsiniz.
-- **[Ek yük.](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)** Hareket ederken cihazın HoloLens cihazın yerinde tutmaya yardımcı olmak için ek yük yükünü kullanın. Uzun süre HoloLens cihazın takması, cihazın daha rahat yıpranmasına neden olabilir.
-- **[USB-C kablo ve kablo.](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)** Güç kaynağı, güç çıkışına takın. Usb-C kablosunu kullanarak HoloLens güç kaynağına veya cihazı bilgisayarınıza HoloLens bağlayın.
-- **Mikrofiber işlemcisi.** Bu şekilde kullanarak HoloLens temizlenir.
+- **[Brow paneli](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Gerektiğinde Brow panelini kaldırabilir ve değiştirebilirsiniz.
+- **[Ek gider strap](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)**. taşıma sırasında HoloLens çalışırken, cihazı yerinde tutmaya yardımcı olmak için ek yük oluşturma strap 'yi kullanın. genişletilmiş dönemler için HoloLens takdığınızda, ek yük, cihazı aşmadan daha rahat hale gelebilir.
+- **[USB-C cihazınızın şarj cihazına ve kablo](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)**. Güç kaynağı, güç prizine takılır. HoloLens, ücretlendirmeye yönelik güç kaynağına bağlamak veya HoloLens bilgisayarınıza bağlamak için USB-C kablosunu kullanın.
+- **Mikro fiber bezi**. HoloLens vizörü ' nı temizlemek için kullanın.
 
-### <a name="power-supply-details"></a>Güç Kaynağı ayrıntıları
+### <a name="power-supply-details"></a>Güç kaynağı ayrıntıları
 
-Cihazla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı 18W'lara sahip bir güç kaynağıdır.  2A'da 9V sağlar.
+Aygıtla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı bir 18W şarj aygıtı.  Bu, 2A 'daki 9V sağlar.
 
-Ücretlendirme hızı ve hızı, cihazın çalıştır olduğu ortama bağlı olarak değişebilir.
+Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
 
-Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W pille bağlı olması gerekir.
+Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 15W Charger 'a bağlanmalıdır.
 
 ## <a name="device-specifications"></a>Cihaz belirtimleri
 
@@ -60,54 +60,54 @@ Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W 
 
 |   | &nbsp; |
 |---|---|
-| **Optik** | Holografik lensleri görme (waveguides) |
-| **Holografik çözümleme** | 2k 3:2 hafif altyapılar |
-| **Holografik yoğunluk** | >2,5k radyan (radyan başına ışık noktaları) |
-| **Göz tabanlı işleme** | 3D göz konumu için görüntüleme iyileştirmesi |
+| **Optik** | Bkz. holographic merceklerden (waveguides) |
+| **Holographic çözümü** | 2k 3:2 hafif motorları |
+| **Holographic yoğunluğu** | >2,5 k yarıçapına (açık bir sayı başına hafif punto) |
+| **Göz tabanlı işleme** | 3B göz konumu için iyileştirmeyi görüntüleme |
 
-### <a name="sensors"></a>Sensör
+### <a name="sensors"></a>Sensörlerden
 
 |   | &nbsp; |
 |---|---|
-| **Baş izleme** | 4 görünür ışık kamerası |
-| **Göz izleme** | 2 Kameralı (IR) kameralar |
-| **Derinlik** | 1 MP Uçuş Süresi derinlik algılayıcısı |
-| **Inertial ölçüm birimi (IMU)** | İvme ölçer, jiroscope, ölçer |
-| **Kamera** | 8 MP halat, 1080p30 video |
+| **Baş izleme** | 4 görünür açık kameralar |
+| **Göz izleme** | 2 kızılötesi (IR) kameralar |
+| **Derinliğini** | 1-MP uçuş zamanı derinliği algılayıcısı |
+| **Inertial ölçü birimi (ıMU)** | İvme ölçer, cayroscope, manyetik tometer |
+| **Kamera** | 8-MP Stills, 1080p30 video |
 
-![HoloLens 2 Algılayıcı](images/hololens2-front-view.png)
+![HoloLens 2 sensör](images/hololens2-front-view.png)
 
 > [!NOTE]
-> Resimde çağrılan algılayıcılardan herhangi birini kaplayın. Baş izleme kameraları çok geniş bir FOV'ye sahip, bunların çevrelerinde hiçbir şey olmalı ve bunları kapatamaz.
+> Resimde çağrılan sensörlerden hiçbirini kapsamayın. Baş izleme kameralarının çok geniş bir FOV olması, bunları kapsamayan ek olarak hiçbir şeyin etrafında olmaması gerekir.
 
 ### <a name="audio-and-speech"></a>Ses ve konuşma
 
 |   | &nbsp; |
 |---|---|
-| **Mikrofon dizisi** | 5 kanal |
+| **Mikrofon dizisi** | 5 Kanal |
 | **Hoparlörler** | Yerleşik uzamsal ses |
 
 ### <a name="compute-and-connectivity"></a>İşlem ve bağlantı
 
 |   | &nbsp; |
 |---|---|
-| **Yonga üzerinde sistem** | Qualcomm Snapdrag 850 İşlem Platformu [ayrıntıları](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) |
-| **Holografik işleme birimi** | İkinci nesil özel olarak yapılmış holografik işleme birimi |
+| **Yongadaki sistem** | Qualcomm Snapej850 Işlem platformu [ayrıntıları](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) |
+| **Holographic işleme birimi** | İkinci nesil özel oluşturulmuş holographic işleme birimi |
 | **Bellek** | 4 GB LPDDR4x sistem DRAM |
-| **Depolama** | 64 GB UFS 2.1 |
-| **Wi-Fi** | 802.11ac 2x2 |
+| **Depolama** | 64-GB UFS 2,1 |
+| **Wi-Fi** | 802.11 AC 2x2 |
 | **Bluetooth** | 5.0 |
-| **USB** | USB Type-C DRP |
+| **USB** | USB türü-C DRP |
 
 ### <a name="power"></a>Güç
 
 |   | &nbsp; |
 |---|---|
-| **Pil Ömrü** | 2-3 saat etkin kullanım. İki haftaya kadar bekleme süresi. |
-| **Pil teknolojisi** | [Lithium piller](https://www.microsoft.com/download/details.aspx?id=43388) |
-| **Ücretlendirme davranışı** | Ücretlendirme işlemi tamamıyla işlevseldir |
-| **Soğutma türü** | Pasif soğutmalı (fan yok) |
-| **Güç çekme** | Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W pille bağlı olması gerekir. |
+| **Pil ömrü** | etkin kullanım 2-3 saat. En fazla iki haftalık bekleme süresi. |
+| **Pil teknolojisi** | [Lityum piller](https://www.microsoft.com/download/details.aspx?id=43388) |
+| **Ücretlendirme davranışı** | Şarj edildiğinde tamamen işlevsel |
+| **Soğutma türü** | Yoğun şekilde soğutulan (fansız) |
+| **Power Draw** | Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 15W Charger 'a bağlanmalıdır. |
 
 ### <a name="fit"></a>Sığdırma
 

@@ -1,7 +1,7 @@
 ---
-title: Karma Gerçeklik fotoğraflarını ve videoları yakalayın, kaydedin ve paylaşabilirsiniz
-description: HoloLens karma gerçeklik cihazlarını kullanarak, karma gerçeklik fotoğraflarını ve videoları nasıl yakaleyeceğinizi, kaydedeceğinizi ve görüntüleyebileceğinizi öğrenin. Miracast veya toplanan dosyalar aracılığıyla nasıl paylaşılacağını öğrenin.
-keywords: Hololens, fotoğraf, video, yakalama, MRC, karma gerçeklik yakalama, fotoğraflar, kamera, Miracast, Stream, Livestream, demo, kayıt
+title: Karma gerçeklik fotoğraflarını ve videolarını yakalama, kaydetme ve paylaşma
+description: Karma gerçeklik cihazlarını kullanarak karma gerçeklik fotoğraflarını ve videolarını yakalamayı, kaydetmeyi ve görüntülemeyi HoloLens öğrenin. Verilerle veya toplanan Miracast nasıl paylaşabilirsiniz?
+keywords: hololens, photo, video, capture, mrc, mixed reality capture, photos, camera, miracast, stream, livestream, demo, record
 ms.assetid: 1b636ec3-6186-4fbb-81b2-71155aef0593
 ms.prod: hololens
 ms.sitesec: library
@@ -15,174 +15,174 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: daced6fab65f779b7bd670bf1275f99ae5311d3f
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 54e9959c03b69db39ff2738e5d4f41f9740ae562b38e8d85998521a4733edad7
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635968"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664868"
 ---
-# <a name="create-mixed-reality-photos-and-videos"></a>Karma Gerçeklik fotoğrafları ve videoları oluşturun
+# <a name="create-mixed-reality-photos-and-videos"></a>Karma gerçeklik fotoğrafları ve videoları oluşturma
 
-HoloLens kullanıcılara dijital dünyanın gerçek dünyasını karıştırma deneyimi sağlar.  Karma gerçeklik yakalama (MRC), bu deneyimi bir fotoğraf veya video olarak yakalamanıza ya da diğer kişilerle gerçek zamanlı olarak gördüklerinizi paylaşmanıza olanak sağlar.
+HoloLens kullanıcılara gerçek dünyayı dijital dünyayla karıştırma deneyimi sunar.  Karma gerçeklik yakalama (MRC), bu deneyimi fotoğraf veya video olarak yakalama veya diğer kullanıcılarla gerçek zamanlı olarak paylaşma özelliği sunar.
 
-Karma gerçeklik yakalama, diğer kişilerin gördüğünüz hologramlar görebilmesi için birinci kişi bir görünüm noktasını kullanır. Üçüncü kişi görünümü için [Spectator View](/windows/mixed-reality/spectator-view)kullanın. Spectator görünümü, tanıtımlar için özellikle faydalıdır.
+Karma gerçeklik yakalama, diğer kişilerin sizin gördüğünüz hologramları görene kadar birinci kişi bakış açısı kullanır. Üçüncü kişi görünümü için izleyici [görünümünü kullanın.](/windows/mixed-reality/spectator-view) Spectator görünümü özellikle tanıtımlar için yararlıdır.
 
-Videoları arkadaşlar ve iş arkadaşlarınızla paylaşmak eğlencede olsa da, videolar diğer kişilerin bir uygulama kullanmasına ya da uygulama ve deneyimlerle ilgili sorunları iletmenize yardımcı olabilir.
+Arkadaşlarınızla iş arkadaşlarınız arasında video paylaşmak eğlencelidir ancak videolar diğer insanlara bir uygulamayı kullanmayı veya sorunları uygulamalarla ve deneyimlerle iletişim kurmayı öğretmeye de yardımcı olabilir.
 
 > [!NOTE]
-> karma gerçeklik yakalama deneyimlerini başlatamadıysanız ve HoloLens bir iş cihazından, sistem yöneticinizle görüşün. Kameraya erişim şirket ilkesiyle kısıtlanabilir.
+> Karma gerçeklik yakalama deneyimlerini başlatamıyorsanız ve HoloLens bir iş cihazı ise sistem yöneticinize başvurun. Kameraya erişim şirket ilkesi aracılığıyla kısıtlanabilir.
 
-## <a name="capture-a-mixed-reality-photo"></a>Karma Gerçeklik fotoğrafını yakalama
+## <a name="capture-a-mixed-reality-photo"></a>Karma gerçeklik fotoğrafı yakalama
 
-HoloLens bir karışık gerçeklik fotoğrafı almanın birkaç yolu vardır; donanım düğmeleri, ses veya Başlat menüsü kullanabilirsiniz.
+HoloLens'da karma gerçeklik fotoğrafı HoloLens; donanım düğmeleri, ses veya ses Başlat menüsü.
 
 ### <a name="hardware-buttons-to-take-photos"></a>Fotoğraf çekmek için donanım düğmeleri
 
-Geçerli görünümlerinizin hızlı bir fotoğrafını almak için, aynı anda ses ve ses düzeyi düğmelerine basın.  bu, bir ekran görüntüsü veya yazdırma ekranının HoloLens sürümü gibi bir bittir.
+Geçerli görünümle ilgili hızlı bir fotoğraf almak için aynı anda ses yukarı ve ses düzeyi aşağı düğmelerine basın.  Bu, ekran görüntüsünün HoloLens ekran görüntüsü sürümüne benzer.
 
-- [HoloLens 2 üzerinde düğme konumları](hololens2-hardware.md)
-- [HoloLens üzerindeki düğme konumları (1. genel)](hololens1-hardware.md#hololens-components)
+- [HoloLens 2'de düğme konumları](hololens2-hardware.md)
+- [HoloLens (1. nesil) üzerinde düğme konumları](hololens1-hardware.md#hololens-components)
 
 > [!NOTE]
-> **Birim yukarı** ve **ses azaltma** düğmelerinin üç saniye boyunca tutulması, fotoğraf almak yerine video kaydetmeye başlar. Kaydı durdurmak için hem **birim yukarı** hem de **Birim aşağı** düğmelerine aynı anda dokunun.
+> Ses **düzeyinin üç** saniye **boyunca yüksek** ve ses düzeyi düşük tutularak fotoğraf çekiliyor yerine video kaydediliyor. Kaydı durdurmak için aynı anda hem **ses yukarı hem** de ses düzeyi **aşağı** düğmelerine dokunun.
 
 ### <a name="voice-commands-to-take-photos"></a>Fotoğraf çekmek için sesli komutlar
 
-HoloLens 2 ' de, sürüm 2004 (ve üzeri) ile: "bir resim al" deyin.
+2. HoloLens 2004 (ve sonraki sürümler) için "Fotoğraf çek" diyelim.
 
-HoloLens (1. gen) veya HoloLens 2, sürüm 1903, "Hey Cortana, bir resim alın."
+HoloLens (1. nesil) veya HoloLens 2. sürüm 1903'te " Hey Cortana, fotoğraf çek" gibi bir ifadeyle devam edin.
 
-### <a name="start-menu-to-take-photos"></a>fotoğraf çekmek için Başlat menüsü
+### <a name="start-menu-to-take-photos"></a>Başlat menüsü fotoğraf çek
 
-Başlangıç hareketini kullanarak **Başlat**' a gidin ve ardından **Kamera** simgesini seçin.
+Başlat hareketini kullanarak **Başlat'a gidin** ve Kamera **simgesini** seçin.
 
-Havadan yakalamak istediğiniz yönü işaret edin ve ardından fotoğraf çekmek için [AIR ' e dokunun](hololens2-basic-usage.md#touch-holograms-near-you) . AIR 'e dokunmanıza ve ek fotoğraflar yakalamaya devam edebilirsiniz. Yakaladığınız tüm fotoğraflar cihazınıza kaydedilir.
+Kafanızı yakalamak istediğiniz yöne, ardından havadan [dokunarak fotoğraf](hololens2-basic-usage.md#touch-holograms-near-you) çekin. Havadan dokunmaya ve ek fotoğraflar yakalamaya devam edersiniz. Yakalamanız gereken tüm fotoğraflar cihazınıza kaydedilir.
 
-Fotoğraf yakalamayı sonlandırmak için başlangıç hareketini yeniden kullanın.  
+Fotoğraf yakalamayı sona ert için Başlangıç hareketini yeniden kullanın.  
 
-## <a name="capture-a-mixed-reality-video"></a>Karma Gerçeklik videosu yakalama
+## <a name="capture-a-mixed-reality-video"></a>Karma gerçeklik videosu yakalama
 
-HoloLens, karışık gerçeklik videosunu kaydetmek için birkaç yol vardır. donanım düğmeleri, ses veya Başlat menüsü kullanabilirsiniz.
+Karma gerçeklik videosunu HoloLens; donanım düğmeleri, ses veya ses Başlat menüsü.
 
 ### <a name="hardware-buttons-to-record-videos"></a>Videoları kaydetmek için donanım düğmeleri
 
-Bir videoyu kaydetme işleminin en hızlı yolu, üç saniyelik bir geri sayıma başlamadan önce **hacmi yukarı** ve **ses aşağı** düğmelerini aynı anda basılı tutmaktır. Kaydı durdurmak için her iki düğmeye aynı anda dokunun.
+Video kaydetmenin en hızlı yolu, üç  saniyelik  geri sayım başlayana kadar ses düzeyi yukarı ve ses düzeyi aşağı düğmelerini aynı anda basılı tutmaktır. Kaydı durdurmak için iki tuşa da aynı anda dokunun.
 
 > [!NOTE]
-> **Birim yukarı** ve **ses azaltma** düğmelerine aynı anda hızlı bir şekilde basmak, video kaydetmek yerine bir fotoğraf alacak.
+> Ses düzeyi **yukarı ve ses** düzeyi aşağı **düğmelerine** aynı anda hızla basılarak video kaydı yerine fotoğraf çekebilirsiniz.
 
-### <a name="voice-to-record-videos"></a>Videoları kaydetmek için ses
+### <a name="voice-to-record-videos"></a>Videoları kaydetmek için seslendirme
 
-HoloLens 2, sürüm 2004 (ve üzeri), "kaydı başlat" deyin. Kaydı durdurmak için "Kaydı Durdur" deyin.
+2 HoloLens sürüm 2004 (ve sonrası) için "Kaydı başlat" de. Kaydı durdurmak için "Kaydı durdur" diyelim.
 
-HoloLens (1. gen) veya HoloLens 2, sürüm 1903, "Hey Cortana, kaydı başlat." kaydı durdurmak için "Hey Cortana, kaydı durdur" deyin.
+HoloLens (1. nesil) veya HoloLens 2. sürüm 1903'te " Hey Cortana, kaydı başlat". Kaydı durdurmak için "Hey Cortana, kaydı durdur" diyelim.
 
-### <a name="start-menu-to-record-videos"></a>videoları kaydetmek için Başlat menüsü
+### <a name="start-menu-to-record-videos"></a>Başlat menüsü kaydetme
 
-Başlangıç hareketini kullanarak **Başlat**' a gidin, ardından **video** simgesini seçin. Kafanızı yakalamak istediğiniz yöne getirin, sonra kayda başlamak için [AIR ' e dokunun](hololens2-basic-usage.md#touch-holograms-near-you) . Üç saniyelik bir geri sayım olacaktır ve kaydınız başlatılır.
+Başlat hareketini kullanarak **Başlat'a gidin** ve Video **simgesini** seçin. Kafanızı yakalamak istediğiniz yöne, ardından havadan [dokunarak kaydı](hololens2-basic-usage.md#touch-holograms-near-you) başlatabilirsiniz. Üç saniyelik geri sayım olacak ve kaydınız başlayacaktır.
 
-Kaydı durdurmak için başlangıç hareketini kullanın ve vurgulanan **video** simgesini seçin. Video cihazınıza kaydedilir.
-
-> [!NOTE]
-> **yalnızca HoloLens için geçerlidir (1. genel)**  
-> [Windows 10 Ekim 2018 Güncelleştirmesi](/windows/mixed-reality/release-notes-october-2018) , başlangıç hareketini ve Windows düğmesinin HoloLens (1. gen) üzerinde nasıl davranacağını değiştirir. güncelleştirmeden önce, başlangıç hareketi veya Windows düğmesi bir video kaydını durdurabilir. güncelleştirme sonrasında, başlangıç hareketi veya Windows düğmesi **başlangıç** menüsünü açar (veya bir modern uygulamanız varsa **hızlı eylemler menüsünü** ), buradan kaydı durdurmak için vurgulanan **video** simgesini seçebilirsiniz.
-
-## <a name="share-what-you-see-in-real-time"></a>Gerçek zamanlı olarak gördüklerinizi paylaşma
-
-arkadaşlarınızla ve iş arkadaşlarınızla gerçek zamanlı olarak HoloLens gördüklerinizi paylaşabilirsiniz. Kullanılabilecek birkaç yöntem vardır:
-
-1. TV 'de izlemek için Miracast özellikli bir cihaza veya bağdaştırıcıya bağlanma.
-1. bir PC 'de izlemek için [Windows cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal) kullanma
-1. bir PC 'de izlemek için [Microsoft HoloLens yardımcı uygulamasını](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) kullanma.
-1. Ön hat çalışanlarının uzak bir uzman 'a gördüklerine akışını sağlayan [Microsoft Dynamics 365 uzaktan yardım](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) uygulamasını dağıtma. Bu durumda, uzak uzman daha sonra ön satır çalışan verbbüne veya dünyasına açıklama ekleyebilir.
+Kaydı durdurmak için Başlat hareketini kullanın ve vurgulanan **Video simgesini** seçin. Video cihazınıza kaydedilir.
 
 > [!NOTE]
-> Windows cihaz portalı veya Microsoft HoloLens yardımcı uygulama aracılığıyla gördüklerinizi paylaşmak için HoloLens [geliştirici modunda](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal)olması gerekir.
+> **Yalnızca HoloLens (1. nesil) için geçerlidir**  
+> Bu [Windows 10 Ekim 2018 Güncelleştirmesi,](/windows/mixed-reality/release-notes-october-2018) Başlangıç hareketi ve Windows düğmesinin HoloLens (1. nesil) değiştirir. Güncelleştirmeden önce Başlat hareketi veya Windows düğmesi bir video kaydını durdurur. Ancak güncelleştirmeden sonra Başlat hareketi veya Windows düğmesi  Başlat menüsünü  (veya çevreleyici bir uygulamadaysanız hızlı eylemler menüsünü) açar. Buradan vurgulanan **video** simgesini seçerek kaydı durdurabilirsiniz.
 
-### <a name="stream-video-with-miracast"></a>Miracast ile video akışı
+## <a name="share-what-you-see-in-real-time"></a>Gördüğünüzleri gerçek zamanlı olarak paylaşma
 
-başlangıç hareketini kullanarak **başlat**' a gidin ve **Bağlan** simgesini seçin. görüntülenen seçicisinden, bağlanmak istediğiniz Miracast etkinleştirilmiş cihazı veya bağdaştırıcıyı seçin.
+İş arkadaşlarınızla ve iş arkadaşlarınızla HoloLens gerçek zamanlı olarak paylaşabilirsiniz. Kullanılabilir birkaç yöntem vardır:
 
-paylaşımı durdurmak için başlangıç hareketini kullanın ve vurgulanan **Bağlan** simgesini seçin. Akış yaptığınız için hiçbir şey cihazınıza kaydedilmez.
+1. Tv'Miracast izlemek için etkin bir cihaza veya bağdaştırıcıya bağlanma.
+1. Bir [Windows Cihaz Portalı](/windows/mixed-reality/using-the-windows-device-portal) izlemek için Windows Cihaz Portalı kullanma
+1. Bir [Microsoft HoloLens izlemek için yardımcı](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) uygulamayı kullanma.
+1. Ön satır çalışanlarının uzak bir uzmana göre akış oluşturmalarını sağlayan [Microsoft Dynamics 365 Remote Assist](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) uygulamasını dağıtma. Bundan sonra uzak uzman ön satır çalışanına sözlü olarak veya kendi dünyasında not ek açıklamalarıyla yol da kullanabilir.
 
 > [!NOTE]
-> Miracast desteği, [Windows 10 Ekim 2018 Güncelleştirmesi](/windows/mixed-reality/release-notes-october-2018)başlayarak HoloLens (1. gen) üzerinde etkinleştirildi.
+> Windows Cihaz Portalı veya Microsoft HoloLens yardımcı uygulama aracılığıyla HoloLens geliştirici modunda [olması gerekir.](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal)
 
-### <a name="real-time-video-with-windows-device-portal"></a>Windows cihaz portalı ile gerçek zamanlı video
+### <a name="stream-video-with-miracast"></a>Miracast ile video akışı Miracast
 
-Windows cihaz portalı aracılığıyla paylaşım için geliştirici modunun HoloLens etkinleştirilmiş olması gerektiğinden, geliştirici [modunu ayarlamak ve Windows cihaz portalında gezinmek](/windows/mixed-reality/using-the-windows-device-portal)için geliştirici belgelerimizin yönergelerini izleyin.
+Başlat hareketini kullanarak **Başlat'a gidin** ve ardından Başlangıç **Bağlan** seçin. Görüntülenen seçiciden, bağlanmak Miracast cihaz veya bağdaştırıcıyı seçin.
+
+Paylaşımı durdurmak için Başlat hareketini kullanın ve vurgulanan **simgeyi Bağlan** seçin. Akışta olduğundan cihazınıza hiçbir şey kaydedilamaz.
+
+> [!NOTE]
+> Miracast ile başlayan HoloLens (1. nesil) üzerinde [Windows 10 Ekim 2018 Güncelleştirmesi.](/windows/mixed-reality/release-notes-october-2018)
+
+### <a name="real-time-video-with-windows-device-portal"></a>Windows Cihaz Portalı ile gerçek zamanlı video
+
+uygulama aracılığıyla Windows Cihaz Portalı için geliştirici modunun HoloLens gerektirdiği için, Geliştirici modunu ayarlamak için geliştirici belgelerimizde verilen yönergeleri izleyin ve [Windows Cihaz Portalı.](/windows/mixed-reality/using-the-windows-device-portal)
 
 ### <a name="microsoft-hololens-companion-app"></a>Microsoft HoloLens yardımcı uygulama
 
-Microsoft HoloLens yardımcı uygulama aracılığıyla paylaşım, HoloLens üzerinde geliştirici modunun etkinleştirilmesini gerektirdiğinden geliştirici [modunu ayarlamak](/windows/mixed-reality/using-the-windows-device-portal)için geliştirici belgelerimizin yönergelerini izleyin. sonra, [Microsoft HoloLens yardımcı uygulamasını](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) indirin ve HoloLens bağlanmak için uygulama içindeki yönergeleri izleyin.
+Microsoft HoloLens yardımcı uygulaması aracılığıyla paylaşım yapmak için geliştirici modunun HoloLens geliştirici belgelerimizde yer alan yönergeleri izleyerek [Geliştirici modunu ayarlayın.](/windows/mixed-reality/using-the-windows-device-portal) Ardından, Microsoft HoloLens [yardımcı uygulamasını](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) indirin ve uygulamanın içindeki yönergeleri izleyerek uygulamanıza HoloLens.
 
-uygulama HoloLens ile kurulduktan sonra, uygulamanın ana menüsünde **canlı akış** seçeneğini belirleyin.
+Uygulama uygulama uygulamanıza uygun HoloLens, **uygulamanın** ana menüsünden Canlı akış seçeneğini belirleyin.
 
-## <a name="view-your-mixed-reality-photos-and-videos"></a>Karma Gerçeklik fotoğraflarınızı ve videolarınızı görüntüleyin
+## <a name="view-your-mixed-reality-photos-and-videos"></a>Karma gerçeklik fotoğraflarınızı ve videolarınızı görüntüleme
 
-Karma Gerçeklik fotoğrafları ve videoları cihazın "kamera rulosu" a kaydedilir. dosya gezgini uygulamasıyla bu klasörün içeriklerine HoloLens gidebilirsiniz ( **resimlere > kamera rulosu**).
+Karma gerçeklik fotoğrafları ve videoları cihazın "KameraLı Zar At" cihazına kaydedilir. Dosya Gezgini uygulamasıyla bu klasörün içeriğine HoloLens göz atabilirsiniz (Resimler ve **Kamera >'a gidin).**
 
-Karma Gerçeklik fotoğraflarınızı ve videolarınızı, HoloLens önceden yüklenmiş olan Fotoğraflar uygulamasında da görüntüleyebilirsiniz. Bir fotoğrafı dünyayı sabitlemek için Fotoğraflar uygulamasında seçip **karışık dünyada yerleştir**' i seçin. Yerleştirildikten sonra fotoğrafı dünyanın dört bir yanındaki taşıyabilirsiniz.
+Karma gerçeklik fotoğraflarınızı ve videolarınızı, HoloLens'a önceden yüklenmiş olan Fotoğraflar uygulamasında da görüntü HoloLens. Dünyanıza bir fotoğraf sabitlemek için Fotoğraflar uygulamasında bunu seçin ve Karma dünyada **yer'i seçin.** Fotoğraf yerleştirildikten sonra dünyanız için hareket ettirin.
 
-karma gerçeklik fotoğraflarınızı ve videolarınızı HoloLens bağlı bir bilgisayara görüntülemek ve/veya kaydetmek için, [Windows cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture) veya bilgisayarınızın [dosya gezginini MTP aracılığıyla](/windows/mixed-reality/release-notes-april-2018#new-features-for-hololens)kullanabilirsiniz.
+Karma gerçeklik fotoğraflarınızı ve videolarınızı HoloLens'a bağlı bir bilgisayara görüntülemek ve/veya kaydetmek için MTP [aracılığıyla Windows Cihaz Portalı](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture) veya bilgisayarınızın Dosya Gezgini [kullanabilirsiniz.](/windows/mixed-reality/release-notes-april-2018#new-features-for-hololens)
 
-### <a name="use-file-explorer-to-get-your-pictures-videos-and-files"></a>Resimlerinizi, videolarınızı ve dosyalarınızı almak için dosya Gezgini 'ni kullanın
+### <a name="use-file-explorer-to-get-your-pictures-videos-and-files"></a>Resimlerinizi Dosya Gezgini videolarınızı ve dosyalarınızı almak için Dosya Gezgini'i kullanma
 
-diğer mobil cihazlara benzer şekilde, daha kolay aktarım için HoloLens kitaplıklara (fotoğraflar, videolar, belgeler) erişmek üzere dosya gezgini 'ni açmak üzere bilgisayarınıza HoloLens bağlayın. Bu yöntemin kullanımı kolaydır ve cihaz portalının veya Wi-Fi kullanımını gerektirmez.
+Diğer mobil cihazlara benzer şekilde, HoloLens bilgisayarınıza bağ Dosya Gezgini kolay aktarım için HoloLens kitaplıklarına (fotoğraflar, videolar, belgeler) erişin. Bu yöntemin kullanımı kolaydır ve cihaz portalı veya Wi-Fi kullanımı gerektirmez.
 
 1. Cihazın kilidini açın.
-1. cihazı USB üzerinden bir bilgisayara Bağlan.
-1. Dosya Gezgini, bilgisayarınızda açık olmalıdır.
-1. şuraya gidin: bu bilgisayar \\ *yourholomersname*\ınternal Depolama \resim\camera rulosu
+1. Bağlan USB aracılığıyla bir bilgisayara bağlayın.
+1. Dosya Gezgini bilgisayarınızda açabilirsiniz.
+1. Şu bilgisayara gidin: \\ *Yourhololensname*\Internal Depolama\Pictures\Camera Roll
 1. Bilgisayarınıza ihtiyacınız olan dosyaları kopyalayın.
 
 İpuçları:
-- hiçbir dosya görmüyorsanız, verilerinize erişim sağlamak için lütfen HoloLens oturum açarak emin olun.
-- Belgeler klasöründeki [Tanılama dosyaları](hololens-diagnostic-logs.md#offline-diagnostics) gibi diğer klasörlerdeki diğer dosyaları da alabilirsiniz.
-- bilgisayarınızdaki dosya gezgini 'nden cihaz özelliklerini seçerek Windows Holographic OS sürüm numarasını (bellenim sürümü), cihaz seri numarası ve pil yüzdesini görebilirsiniz.
-- Kuruluşunuz [bağlantı/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) 'ı devre dışı BıRAKMAK için MDM 'yi kullanmışsa, cihazınıza bağlanamazsınız.
+- Herhangi bir dosya görmüyorsanız, verilerinize erişimi etkinleştirmek için HoloLens oturum HoloLens emin olun.
+- Belgeler klasöründen tanılama dosyaları gibi diğer [klasörlerdeki diğer dosyaları](hololens-diagnostic-logs.md#offline-diagnostics) da edinebilirsiniz.
+- Bilgisayarınızda Dosya Gezgini cihaz özellikleri'ne bakarak Holographic işletim sistemi sürüm numarası (üretici yazılımı sürümü), cihaz seri numarası Windows pil yüzdesini görmek için Cihaz özellikleri'ne bakabilirsiniz.
+- Cihazınız [Bağlantı/AllowUSBConnection'ı](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) devre dışı bırakmak için MDM kullandı ise cihazınıza bağlanamaz.
 
-## <a name="share-your-mixed-reality-photos-and-videos"></a>Karma Gerçeklik fotoğraflarınızı ve videolarınızı paylaşma
+## <a name="share-your-mixed-reality-photos-and-videos"></a>Karma gerçeklik fotoğraflarınızı ve videolarınızı paylaşma
 
-[Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1)' den önce, karma gerçeklik fotoğrafını veya videosunu yakaladıktan sonra bir önizleme görüntülenir. Paylaşma yardımcısını açmak için önizlemenin üzerindeki **paylaşma** simgesini seçin. Buradan, bu fotoğrafı veya videoyu paylaşmak istediğiniz bitiş noktasını seçebilirsiniz.
+[Holographic Windows sürüm 21H1'den](hololens-release-notes.md#windows-holographic-version-21h1)önce, karma gerçeklik fotoğrafı veya video yakalandikten sonra bir önizleme görüntülenir. Paylaşım **yardımcıyı** getirmek için önizlemenin üzerindeki Paylaş simgesini seçin. Buradan, o fotoğrafı veya videoyu paylaşmak istediğiniz uç noktasını seçin.
 
-Windows Holographic, sürüm 21h1 ile, karma gerçeklik fotoğrafını veya videosunu yakaladıktan sonra önizleme görüntülenir. Paylaşma yardımcısını açmak için önizlemenin üzerindeki **paylaşma** simgesini seçin. buradan, bu fotoğrafı veya videoyu paylaşmak istediğiniz bitiş noktasını (posta, OneDrive vb.) seçebilirsiniz. -> System -HoloLens Paylaşılan Deneyimler'e gidip Ayarlar cihazlarınızı > **etkinleştirebilirsiniz.** Diğer ayrıntılar için, [Windows 10'da yakındaki cihazlarla Windows 10.](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9)
+Holographic Windows sürüm 21H1'de karma gerçeklik fotoğrafı veya video yakalandikten sonra bir önizleme görüntülenir. Paylaşım **yardımcıyı** getirmek için önizlemenin üzerindeki Paylaş simgesini seçin. Buradan, bu fotoğrafı veya videoyu paylaşmak istediğiniz uç OneDrive (Posta, posta, posta vb.) seçin. ayrıca, **Ayarlar > sistem > paylaşılan deneyimler**' a giderek HoloLens yakındaki cihazlarla paylaşmak için de etkinleştirebilirsiniz. Daha fazla ayrıntı için [Windows 10 ' de Yakındaki cihazlarla paylaşma](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9)konusunu okuyun.
 
 > [!TIP] 
-> Karma gerçeklik fotoğraflarınızı ve videolarınızı otomatik olarak karşıya yük OneDrive karma gerçeklik fotoğraf ve videolarını da paylaşabilirsiniz. Henüz OneDrive uygulama HoloLens kişisel bir Microsoft hesabı ile **oturum [](https://account.microsoft.com)** açın. Uygulama simgesini **Ayarlar** Kamera karşıya **yükle'yi seçin.** Kamera karşıya yükleme'nizi açma. Karma gerçeklik fotoğraflarınız ve videolarınız artık uygulamayı OneDrive her HoloLens.
+> ayrıca, karma gerçeklik fotoğraflarınızı ve videolarınızı otomatik olarak karşıya yükleyerek OneDrive karma gerçeklik fotoğraflarını ve videoları paylaşabilirsiniz. OneDrive uygulamayı HoloLens açın ve henüz yapmadıysanız **kişisel bir [Microsoft hesabı](https://account.microsoft.com)** oturum açın. **Ayarlar** simgesini seçin ve **kamera karşıya yükleme**' yi seçin. Kamerayı karşıya yüklemeyi açın. karma gerçeklik fotoğraflarınız ve videolarınız, uygulamayı HoloLens her başlattığınızda OneDrive karşıya yüklenir.
 
 > [!NOTE]
-> Kamera karşıya yüklemeyi yalnızca OneDrive kişisel bir kullanıcıyla OneDrive oturum Microsoft hesabı. Bu özelliği etkinleştirmek HoloLens bir iş veya okul hesabıyla bir Microsoft hesabı hesabı OneDrive bir kişisel hesap eklersiniz.
+> OneDrive, kişisel Microsoft hesabı ile OneDrive oturum açtıysanız yalnızca kamera karşıya yüklemeyi etkinleştirebilirsiniz. bir iş veya okul hesabıyla HoloLens ayarlarsanız, bu özelliği etkinleştirmek için OneDrive uygulamasına kişisel bir Microsoft hesabı ekleyebilirsiniz.
 
-## <a name="limitations-of-mixed-reality-capture"></a>Karma gerçeklik yakalama sınırlamaları
+## <a name="limitations-of-mixed-reality-capture"></a>Karma Gerçeklik yakalamanın sınırlamaları
 
-- Karma gerçeklik yakalaması kullanırken, sanal HoloLens kare hızı yarıya inecek ve yarıya inecek.
-- Fotoğraf/video kamerası başka bir uygulama tarafından zaten kullanıyorsa, canlı akış sırasında veya sistem kaynakları düşükse fotoğrafların ve videoların çözünürlüğü azaltabilirsiniz.
+- karma gerçeklik yakalama kullanılırken, HoloLens kare hızı 30 Hz 'e yarıya iner.
+- Fotoğraf ve video kamerası zaten başka bir uygulama tarafından kullanılıyorsa, canlı akış sırasında veya sistem kaynakları azaldığında fotoğraf ve videoların çözümlenmesi azalabilir.
 
-### <a name="maximum-recording-length"></a>Maksimum kayıt uzunluğu
+### <a name="maximum-recording-length"></a>En fazla kayıt uzunluğu
 
-HoloLens Holographic sürüm 20H2 Windows den önceki 2 cihazda, cihaza kaydedilen videolar en fazla beş dakika uzunluğundaydı.
+Windows Holographic, sürüm 20h2 ' den önceki HoloLens 2 cihazda, cihazda kayıtlı videolar en fazla beş dakikalık uzunlukla sınırlandırılmıştır.
 
-Müşteri geri bildirimleri nedeniyle karma gerçeklik yakalamalarının kayıt [uzunluğunu artırıldı.](holographic-photos-and-videos.md) Karma gerçeklik yakalamaları artık varsayılan olarak 5 dakikayla sınırlı olmayacaktır, ancak bunun yerine kullanılabilir disk alanı temel alarak maksimum kayıt uzunluğunu hesaplar. Cihaz, toplam disk alanını %80'e kadar olan kullanılabilir disk alanını temel alarak maksimum video kayıt süresini tahmin eder.
+Müşteri geri bildirimi nedeniyle, [karma gerçeklik yakalamalarından](holographic-photos-and-videos.md)oluşan kayıt uzunluğunu artırdık. Karma Gerçeklik yakalamaları artık varsayılan olarak 5 dakikaya göre sınırlandırılamaz, bunun yerine kullanılabilir disk alanına göre en fazla kayıt uzunluğunu hesaplar. Cihaz, toplam disk alanının %80 ' suna kadar kullanılabilir disk alanına göre maksimum video kaydetme süresini tahmin edecektir.
 
 > [!NOTE]
-> Aşağıdaki HoloLens biri gerçekleşirse varsayılan video kayıt uzunluğunu (5 dakika) kullanır:
-> - Tahmini maksimum kayıt süresi, varsayılan 5 dakikadan küçüktür.
-> - Kullanılabilir disk alanı toplam disk alanı %20'den azdır.
+> aşağıdakilerden biri gerçekleşirse HoloLens varsayılan video kayıt uzunluğunu (5 dakika) kullanacaktır:
+> - Tahmini en fazla kayıt süresi varsayılan 5 dakikadan daha küçüktür.
+> - Kullanılabilir disk alanı, toplam disk alanının %20 ' inden daha az.
 
-## <a name="default-file-format-and-resolution"></a>Varsayılan dosya biçimi ve çözümü
+## <a name="default-file-format-and-resolution"></a>Varsayılan dosya biçimi ve çözümlemesi
 
 ### <a name="default-photo-format-and-resolution"></a>Varsayılan fotoğraf biçimi ve çözünürlüğü
 
-|  Cihaz  |  Biçimlendir  |  Uzantı  |  Çözüm  |
+|  Cihaz  |  Biçimlendir  |  Dahili numara  |  Çözüm  |
 |----------|----------|----------|----------|
-| HoloLens 2 | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 3904x2196px |
-| HoloLens (1. nesil) | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408x792px |
+| HoloLens 2 | [JPEG](https://en.wikipedia.org/wiki/JPEG) | .jpg | 3904x2196px |
+| HoloLens (1. genel) | [JPEG](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408x792px |
 
-### <a name="recorded-video-format-and-resolution"></a>Kaydedilen video biçimi ve çözünürlüğü
+### <a name="recorded-video-format-and-resolution"></a>Kayıtlı video biçimi ve çözünürlüğü
 
-| Cihaz | Biçimlendir | Uzantı | Çözüm | Hız | Ses |
+| Cihaz | Biçimlendir | Dahili numara | Çözüm | Hız | Ses |
 |----------|----------|----------|----------|----------|----------|
-| HoloLens 2 | [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1920x1080px | 30fps | 48kHz Stereo |
-| HoloLens (1. nesil) |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1216x684px | 24fps | 48kHz Stereo |
+| HoloLens 2 | [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1920x1080px | 30fps | 48kHz stereo |
+| HoloLens (1. genel) |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1216x684px | 24 fps | 48kHz stereo |

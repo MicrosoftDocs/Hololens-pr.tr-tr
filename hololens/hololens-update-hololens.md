@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 güncelleştirme
-description: HoloLens derleme numaranızı nasıl denetleyeceğinizi, cihaz güncelleştirmeleriyle güncel tutmanın yanı sıra Insider programı programına katılıp güncelleştirmeleri geri alma hakkında bilgi edinin.
-keywords: Nasıl yapılır, güncelleştirme, geri alma, HoloLens, denetim oluşturma, derleme numarası
+title: güncelleştirme HoloLens 2
+description: HoloLens yapı numaranızı nasıl denetleyeceğinizi, cihaz güncelleştirmeleriyle güncel tutmaya, ınsiders programına katılmayı ve güncelleştirmeleri geri almayı öğrenin.
+keywords: nasıl yapılır, güncelleştirme, geri alma, HoloLens, denetimi oluşturma, derleme numarası
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -14,22 +14,22 @@ ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a27eb1d5eb32a6654f60aac98090cba1aab529d3
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 7e63fcab4c64f151684a634bb24d9fc31826f6805d52b23c5672add0b6269430
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924120"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662842"
 ---
-# <a name="update-hololens-2"></a>HoloLens 2 güncelleştirme
+# <a name="update-hololens-2"></a>güncelleştirme HoloLens 2
 
-HoloLens, diğer Windows 10 cihazlarında olduğu gibi Windows Update kullanır. HoloLens 'niz, bekleyen bir yerde olsa bile, Internet 'e bağlıyken ve Internet 'e bağlandığında sistem güncelleştirmelerini otomatik olarak indirip yükler.
+HoloLens, diğer Windows 10 cihazlarda olduğu gibi Windows Update kullanır. HoloLens, bir kez prize takılıyken ve Internet 'e bağlıyken, bekleme durumunda olsa da sistem güncelleştirmelerini otomatik olarak indirip yükleyecek.
 
-Bu makale, için HoloLens araçları aracılığıyla izlenecek:
+bu makalede, için HoloLens araçları izlenecek yol gösterilecektir:
 
 - geçerli işletim sistemi sürümünüzü görüntüleme (derleme numarası)
 - Güncelleştirmeler denetleniyor
-- HoloLens 'i el ile güncelleştirme
+- HoloLens el ile güncelleştirme
 - daha eski bir güncelleştirmeye geri dönme
 
 ## <a name="check-your-operating-system-version-build-number"></a>İşletim sistemi sürümünüzü denetleyin (derleme numarası)
@@ -46,29 +46,29 @@ Ayarlarda dilediğiniz zaman güncelleştirmeleri kontrol edebilirsiniz.  Kullan
 
 Bir güncelleştirme varsa, yeni sürümü indirmeye başlayacaktır. İndirme işlemi tamamlandıktan sonra yüklemeyi tetiklemek için **Şimdi yeniden Başlat** düğmesini seçin. Cihazınız %40 ' in altında ve takılı değilse, yeniden başlatma güncelleştirmeyi yüklemeye başlamacaktır.
 
-HoloLens, güncelleştirmeyi yüklerken, dönen Gears ve ilerleme göstergesi görüntülenir. Bu süre boyunca HoloLens 'i kapatmayın. Yüklemeyi tamamladıktan sonra otomatik olarak yeniden başlatılır.
+HoloLens güncelleştirmeyi yüklerken, dönen gears ve ilerleme göstergesi görüntülenir. bu süre boyunca HoloLens kapatmayın. Yüklemeyi tamamladıktan sonra otomatik olarak yeniden başlatılır.
 
-HoloLens tek seferde bir güncelleştirme uygular.  HoloLens uygulamanız en son arka planda birden fazla sürümdaysanız, tam olarak güncel olması için güncelleştirme işlemini birden çok kez çalıştırmanız gerekebilir.
+HoloLens tek seferde bir güncelleştirme uygular.  HoloLens en son arka planda birden çok sürümdaysanız, tamamen güncel hale getirmek için güncelleştirme işlemini birden çok kez çalıştırmanız gerekebilir.
 
 ## <a name="go-back-to-a-previous-version"></a>Önceki bir sürüme geri dön
 
-Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek isteyebilirsiniz. Önerilen adımlar şunlardır:
+bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek isteyebilirsiniz. Önerilen adımlar şunlardır:
 
 1. Sorununuzu giderip çözebilecekleri hakkında bilgi için desteğe başvurun.
     1. **Isteğe bağlı** veya **tam** telemetri etkinleştirildiğinden emin olun; bu durum, mühendislerin tanılanması için daha fazla işlem yapılabilir ve kolay hale gelir.
     1. [Dosya geri bildirimi](hololens-feedback.md) mümkün olduğunca açıklayıcı bir şekilde yapılır. Bilgilerinizi bir yere göz atın veya paylaşma özelliğini kullanarak, hatayı destek ile paylaşabilirsiniz.
     1. [Desteğe](https://aka.ms/hlsupport)başvurun. Sorununuzun önceki bir sürüme dönerek çözülmesi gereken bir sorun varsa, cihazınızı Flash için sizin için bir tane sağlayabilirsiniz.
 
-1. Bu işe çalışmadıysanız, [HoloLens 2 ' yi Gelişmiş kurtarma Yardımcısı ile sıfırlayın veya](hololens-recovery.md)yeniden yapın.
+1. bu işe çalışmadıysanız, [gelişmiş kurtarma yardımcısı ile HoloLens 2 ' yi sıfırlayın veya flash](hololens-recovery.md)'u yeniden yapın.
     1. Bilgisayarınızda, [Gelişmiş kurtarma Yardımcısı](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) ' nı Microsoft Store indirin.
-    1. Bilgisayarınıza takılı telefonlarınızın veya Windows cihazlarının olmadığından emin olun.
+    1. bilgisayarınıza takılı telefonlarınızın veya Windows cihazların olmadığından emin olun.
     1. Flash yapmak istediğiniz sürümü seçin:
-        1. [En son HoloLens 2 sürümünü](https://aka.ms/hololens2download)indirebilirsiniz.
+        1. [en son HoloLens 2 sürümü](https://aka.ms/hololens2download)indirebilirsiniz.
         1. YAY ana bilgisayarlarının varsayılan derlemesini kullanabilirsiniz. (Bu seçeneği belirlerseniz sonraki adımı atlayın.)
         1. Size sağlanmış olan bir yapı desteği kullanabilirsiniz.
     1. Bu İndirmeleri bitirdiğinizde **Dosya Gezgini**  >  **İndirmeleri**' ni açın. İndirdiğiniz zip klasörüne sağ tıklayın ve sıkıştırmayı açmak için **Tümünü** Ayıkla ' yı seçin  >   .
-    1. USB-A-USB-C kablosu kullanarak HoloLens 'nizi bilgisayarınıza bağlayın. (HoloLens 'nizi bağlamak için başka kablolar kullanıyor olsanız bile, bu en iyi şekilde geçerlidir.)
-    1. Gelişmiş kurtarma Yardımcısı, HoloLens 'nizi otomatik olarak algılar. **Microsoft HoloLens** kutucuğunu seçin.
+    1. usb-a-usb-C kablosu kullanarak bilgisayarınızı bilgisayarınıza HoloLens Bağlan. (HoloLens bağlamak için başka kablolar kullanıyor olsanız bile, bu en iyi şekilde geçerlidir.)
+    1. Gelişmiş kurtarma Yardımcısı HoloLens otomatik olarak algılar. **Microsoft HoloLens** kutucuğunu seçin.
     1. Sonraki ekranda, **el ile paket seçimi** ' ni seçin ve ardından adım 4 ' te sıkıştırmışın klasörde bulunan yükleme dosyasını seçin. (. FFU uzantılı bir dosyayı arayın.)
     1. **Yazılım yüklemesi**' ni seçin ve yönergeleri izleyin.
 
@@ -77,8 +77,8 @@ Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek 
 
 Ayrıca, şu anda yüklü olan yayında kalmak isterseniz, güncelleştirmeleri el ile de [duraklatabilirsiniz](hololens-updates.md#pause-updates-via-device). Bu, mühendisliğe sorunu çözmesi için mühendislik ekibi zamanına verecektir.
 
-## <a name="windows-insider-program-on-hololens"></a>HoloLens üzerinde Windows Insider programı
+## <a name="windows-insider-program-on-hololens"></a>Windows HoloLens Insider programı
 
-HoloLens 'te en son özellikleri görmek mi istiyorsunuz?  Öyleyse, Windows Insider programına katılarak; HoloLens yazılım güncelleştirmelerinin önizleme yapılarına genel kullanıma açık olmadan önce erişim sağlayacaksınız.
+HoloLens en son özellikleri görmek mi istiyorsunuz?  bu durumda Windows ınsider programına katın; HoloLens yazılım güncelleştirmelerinin önizleme yapılarına genel kullanıma açık olmadan önce erişim alacaksınız.
 
-[Microsoft HoloLens Için Windows Insider Preview](hololens-insider.md)' i alın.
+[Microsoft HoloLens için Windows ınsider önizlemesi alın](hololens-insider.md).

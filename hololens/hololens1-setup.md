@@ -1,6 +1,6 @@
 ---
-title: Yeni bir HoloLens
-description: HoloLens (1. nesil) karma gerçeklik cihazınızı ilk kez hazırlamayı, ayarlamayı ve ayarlamayı öğrenin.
+title: Yeni bir HoloLens hazırla
+description: HoloLens (1. gen) karma gerçeklik cihazınızı ilk kez hazırlamayı, ayarlamayı ve ayarlamayı öğrenin.
 ms.prod: hololens
 ms.sitesec: library
 author: JesseMcCulloch
@@ -12,100 +12,100 @@ ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - Hololens (1st gen)
-ms.openlocfilehash: f5b16e579eca725158ed99ef7a912b72a7cab7ab
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 03a84f1035154660fe51ec5be07c3f32f4746564b95616ec45ef3978fb49b911
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639956"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662313"
 ---
-# <a name="get-your-hololens-1st-gen-ready-to-use"></a>Yeni HoloLens (1. nesil) kullanıma hazır hale
+# <a name="get-your-hololens-1st-gen-ready-to-use"></a>HoloLens (1. genel) kullanıma hazırlama
 
-İlk kez bir HoloLens (1. nesil) ayarlamak için birlikte izleyin.
+HoloLens (1. gen) ' i ilk kez ayarlamak için kullanın.
 
-## <a name="charge-your-hololens-1st-gen"></a>HoloLens (1. nesil)
+## <a name="charge-your-hololens-1st-gen"></a>HoloLens ücretlendirin (1. genel)
 
-Cihazlarınızı ücretlendirmek HoloLens, dahil edilen Micro USB kablosunu kullanarak güç besleme noktasını ücretlendirme bağlantı noktasına bağlayın. Ardından güç beslemeyi bir güç çıkışına takın. Cihaz ücretlendirmeye devam edinca pil göstergesi dalga düzeninde yanacak.
+HoloLens ücretlendirmesi için, dahil edilen mikro USB kablosunu kullanarak güç kaynağını şarj bağlantı noktasına bağlayın. Ardından güç kaynağını bir güç prizine takın. Cihaz şarj edildiğinde, pil göstergesi bir dalga düzeninde açılır.
 
-![Mikro USB kablosunun cihaza nasıl ekli olduğunu gösteren HoloLens](./images/hololens-charging.png)
+![Mikro USB kablosunun HoloLens nasıl iliştirigösterdiğini gösteren resim](./images/hololens-charging.png)
 
-Pil HoloLens, pil göstergesi pil düzeyini artışlarla gösterir. Beş ışığın yalnızca biri açık olduğunda pil düzeyi yüzde 20'nin altında olur. Pil düzeyi kritik düzeyde düşükse ve cihazı açmayı denersiniz, bir ışık kısa bir süre yanıp söner ve sonra gider.
+HoloLens açık olduğunda, pil göstergesi pil düzeyini artımlar halinde gösterir. Beş ışığının yalnızca biri açık olduğunda, pil düzeyi yüzde 20 ' nin altında olur. Pil düzeyi kritik düzeyde düşükse ve cihazı açmaya çalışırsanız, bir ışık kısa bir süre yanıp söndürmez ve sonra da çıkar.
 
 > [!TIP]
-> Geçerli pil düzeyinizi tahmin etmek için "Hey Cortana, ne kadar pil kaldı?" gibi bir tahminde bulunuyoruz.
+> geçerli pil düzeyinizi tahmin etmek için, "Hey Cortana, ne kadar pil kaldığını?" deyin.
 
-Cihazla birlikte gelen güç kaynağı ve USB kablosu, cihazınızı (1. nesil) HoloLens en iyi yollardır.  Güç kaynağı 18W güç sağlar (9V 2A).
+aygıtla birlikte gelen güç kaynağı ve USB kablosu, HoloLens (1. gen) en iyi şekilde ücretlendiriyoruz.  Güç kaynağı, 18W (9V 2A) gücü sağlar.
 
-Ücretlendirme hızı ve hızı, cihazın çalıştır olduğu ortama bağlı olarak değişebilir.
+Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
 
-## <a name="adjust-fit"></a>Fit'i ayarlama
+## <a name="adjust-fit"></a>Sığdırmayı ayarla
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/be3cb527-f2f1-4f85-b4f7-a34fbaba980d]
 
 | &nbsp; | &nbsp; |
 |:--- |:--- |
-|1. Baş bandı yaklaşık 20-30 dereceye kadar döndürün.|![Birinci adım, baş bandı döndürme](./images/FitGuideStep1.png)|
-|2. Baş bandı geri itin. Zaman içinde bant bozayana kadar geri çekmeden ya da bandın arkasındaki bandı işlemeyin.|![İkinci adım, baş bandı geri itme](./images/FitGuideStep2.png)|
-|3. Baş bandın tamamına kadar genişletmek için ayarlama tekerleğini döndür. |![Üçüncü adım, baş bandı genişletmek için ayarlama tekerleğini kullanın](./images/FitGuideStep3.png)|
-|4. Cihazı cihaz koluyla tutun ve kafanıza yer açın. Baş bandın en üst kısmında olduğundan emin olun ve ardından ayarlama tekerleğini sıkılaştırin.|![Dördüncü adım, cihazı tak ve baş bandı ayarla](./images/FitGuideStep4.png)|
-|5. Visor'ı geriye kaydırın ve cihazın uygun olup oalrakma durumunu kontrol edin. Baş bant, kuaförü en üstünde, kıl çizginizin hemen altında, konuşmacılar size göre yukarıda yer alsa iyi olur. Lenslerin, gözlerinizi ortalamış olması gerekir.|![5. adım, visor'ı geriye kaydırın ve uygun olup oalrak kontrol edin](./images/FitGuideSetep5.png)|
+|1. yayın bandını yaklaşık 20-30 derece kadar döndürün.|![Birinci adım, yayın bandı döndürme](./images/FitGuideStep1.png)|
+|2. yayın bandını geri gönderin. Bunu geri çekin veya menteşonun arkasındaki bandı, bu da bandı bölebilir.|![İkinci adımda, yayın bandını geri gönderin](./images/FitGuideStep2.png)|
+|3. yayın bandını tüm şekilde genişletmek için ayarlama tekerleğini açın. |![Üçüncü adımda, yayın bandı genişletmek için ayarlama tekerleğini kullanın](./images/FitGuideStep3.png)|
+|4. Cihazı cihaz kolları ile tutun ve kafaya yerleştirin. Yayın bandının, Forehead 'nizin üstünde bulunduğundan emin olun ve ardından ayarlama tekerleğini güçlendir.|![4. adım, cihaza yerleştirme ve yayın bandı ayarlama](./images/FitGuideStep4.png)|
+|5. vizörü geri kaydırın ve ardından cihazın sığdırmasını denetleyin. Headband, büyük bir çizginin altında, kulakanlarınızın üzerindeki hoparlörlerle birlikte, en üst kısımdaki bir ana hat olmalıdır. Mercekler, gözlerinizin üzerinden ortalanmalıdır.|![Beş adımda, vizörü geri çekin ve sığdırma](./images/FitGuideSetep5.png)|
 
-## <a name="turn-on-your-hololens"></a>HoloLens
+## <a name="turn-on-your-hololens"></a>HoloLens açın
 
-Düğmeyi açmak veya kapatmak HoloLens açmak veya bekleme moduna koymak için güç düğmesini kullanın.
+HoloLens açmak ve kapatmak veya bekleme moduna almak için güç düğmesini kullanın.
 
-![Güç düğmesini HoloLens görüntüsü](./images/hololens-power.png)
+![HoloLens güç düğmesini gösteren resim](./images/hololens-power.png)
 
-Cihazınız yanıt vermiyorsa veya başlatılmazsa bkz. Yeniden [başlatma, sıfırlama veya](hololens-restart-recover.md)kurtarma HoloLens.
+Cihazınız yanıt vermezse veya başlamazsa, bkz. [yeniden başlatma, sıfırlama veya kurtarma HoloLens](hololens-restart-recover.md).
 
-Düğmeniz HoloLens veya beklemede olduğunda, bir saniye süreyle güç düğmesine basarak düğmeyi kapatın. Aç değilse takın ve en az 30 dakika ücrete alın.
+HoloLens kapalıyken veya bekleme modundayken, bir saniye boyunca güç düğmesine basarak etkinleştirin. Açık değilse, en az 30 dakika içinde takın ve ücretlendirin.
 
 > [!TIP]
-> Yeniden başlatmak HoloLens "Hey Cortana, cihazı yeniden başlat" gibi bir ifade kullanın.
+> HoloLens yeniden başlatmak için "Hey Cortana, cihazı yeniden başlat" deyin.
 
-### <a name="put-hololens-in-standby"></a>Bir HoloLens bekleme moduna geçirme
+### <a name="put-hololens-in-standby"></a>HoloLens bekleme moduna alın
 
-Düğmenizi HoloLens açıkken bekleme moduna koymak için güç düğmesine bir kez basın. Pil göstergeleri yanıp söner. Beklemeden uyandırmak için güç düğmesine yeniden basın.
+açık durumdayken HoloLens bekleme konumuna koymak için, bir kez power düğmesine basın. Pil göstergeleri yanıp söndürme. Bekleme modundan çıkarmak için, güç düğmesine yeniden basın.
 
-HoloLens, 3 dakika beklemede kaldıktan sonra otomatik olarak bekleme moduna geçer. Bekleme durumundayken, 4 saat sonra veya pil düzeyi yüzde 10 azaldıktan sonra otomatik olarak kapanır.
+HoloLens, 3 dakika sonra işlem yapılmadan sonra otomatik olarak bekleme moduna geçer. Bekleme modundayken, 4 saat sonra veya pil düzeyi yüzde 10 ' dan sonra otomatik olarak kapanır.
 
-### <a name="shut-down-hololens"></a>HoloLens
+### <a name="shut-down-hololens"></a>HoloLens kapat
 
-Güç düğmesini kapatmak (kapatmak HoloLens için güç düğmesini dört saniye boyunca basılı tutun. Pil göstergeleri tek tek kapanıyor ve cihaz kapatıyor.
+HoloLens kapatmak (devre dışı bırakmak) için, güç düğmesini dört saniye boyunca tutun. Pil göstergeleri bir tane tarafından devre dışı bırakır ve cihaz kapanır.
 
-HoloLens, pil düzeyi takılı olsa bile yüzde bir düzeyine düştüğünde otomatik olarak kapanır. Pili yüzde üç olarak yeniden HoloLens.
+HoloLens, prize takılı olsa bile, pil düzeyi bir yüzde olarak düşerse otomatik olarak kapanır. pili yüzde üç oranında yeniden ücretlendirdikten sonra HoloLens yeniden açabilirsiniz.
 
-## <a name="adjust-volume-and-brightness"></a>Ses düzeyini ve parlaklığı ayarlama
+## <a name="adjust-volume-and-brightness"></a>Hacmi ve parlaklığı ayarla
 
-Parlaklığı ve ses düğmeleri, cihazın sağ tarafta, parlaklığı ise &mdash; sol taraftadır.
+Parlaklık ve ses düğmeleri, sol taraftaki cihaz kolları hacminin en üstünde yer alır &mdash; .
 
-![HoloLens gösteren resim](./images/hololens-buttons.jpg)
+![HoloLens düğmelerini gösteren resim](./images/hololens-buttons.jpg)
 
-## <a name="hololens-indicator-lights"></a>HoloLens gösterge ışığı
+## <a name="hololens-indicator-lights"></a>gösterge ışıkları HoloLens
 
-![Gösterge ışıklarının HoloLens resmi](./images/hololens-lights.png)
+![HoloLens gösterge ışıklarının gösterildiği resim](./images/hololens-lights.png)
 
-Gösterge ışığının sizin için ne anlama HoloLens emin değil misiniz? İşte biraz yardım.
+HoloLens gösterge ışıklarının ne anlama geldiğinden emin değil misiniz? İşte bazı yardım.
 
-|Işıklar bunu ne zaman yapar? |Şu anlama gelir: |
+|Işıklar bunu yaparken |Bu anlamı |
 |---|---|
-|Dışarı doğru ortayı kaydırın. |HoloLens başlıyor. |
-|Lit (hepsi veya bazıları) olarak kalır. |HoloLens ve kullanıma hazırdır. Pil ömrü yüzde 20 artışlarla gösterilir. |
-|Kaydırın, sonra açık ve sonra kaydırın. |HoloLens ve ücretlendirme devam etti. Pil ömrü yüzde 20 artışlarla gösterilir. |
-|Tek tek kapatın. |HoloLens kapatılıyor. |
-|Hepsini aynı anda kapatın. |HoloLens bekleme moduna geçer. |
-|Hepsi yanıp sönüyor, kısa süre yanıp sönüyor ve hepsi kapatıyor. |Pil kritik bir şekilde düşüktür. HoloLens ücret ödemesi gerekir. |
-|Tüm kaydırmalar, ardından biri yanıp söner, sonra da tüm kaydırmalar. |Pil kritik bir şekilde düşüktür. HoloLens ücretlendirme. |
+|Merkezden dışarıya doğru kaydırın. |HoloLens başlatılıyor. |
+|Açık kalır (tümü veya bazıları). |HoloLens açık ve kullanıma hazırdır. Pil ömrü yüzde 20 artışla gösterilmiştir. |
+|Kaydırma yapın, sonra da kaydırın. |HoloLens açık ve doluyor. Pil ömrü yüzde 20 artışla gösterilmiştir. |
+|Birini bir tane devre dışı bırakın. |HoloLens kapatılıyor. |
+|Tümünü bir kez devre dışı bırakın. |HoloLens bekleme moduna geçiyor. |
+|Tüm hafif ve sonra bir yanıp söndü, sonra da hepsi kapanır. |Pil kritik düzeyde düşüktür. HoloLens ücret ödemeniz gerekir. |
+|Tüm kaydırma, sonra bir yanıp sönme, sonra tüm kaydırma. |Pil kritik düzeyde düşüktür. HoloLens doluyor. |
 
-## <a name="safety-and-comfort"></a>Güvenlik ve konfor
+## <a name="safety-and-comfort"></a>Güvenlik ve rahatlık
 
-### <a name="use-in-safe-surroundings"></a>Güvenli bir yerde kullanma
+### <a name="use-in-safe-surroundings"></a>Güvenli sursörde kullanma
 
-Güvenlik HoloLens ve tehlikeleri yok etmeden güvenli bir alanda kullanın. Bunu, net bir görünüm alanına ihtiyacınız olduğunda ve bir araçla çalışırken veya tehlikeli olabilecek diğer etkinliklerde olduğu gibi tüm dikkati çeken durumlarda kullanmayın.
+HoloLens engellerin ve bağımsız tehlikeleri ücretsiz olan güvenli bir alanda kullanın. Açık bir görünüm alanı ve tam ilgilenmeniz gerektiğinde (örneğin, bir araç çalıştırırken veya başka potansiyel tehlikeli etkinlikler yaparken) bunu kullanmayın.
 
 ### <a name="stay-comfortable"></a>Rahat kalın
 
-İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamazsanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareket şikayeti, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
+ilk birkaç oturumu HoloLens kısa tutun ve kesmelerden haberdar olun. Rahatımız yaşarsanız, daha iyi hissetene kadar durun ve geri kalanını yaşayın. Bu, nausea, hareket altına göre, fezlik, disyönlendirmenin, headache, fatıg, göz yorgunluğu veya kurutma gözlerinizin geçici bir bölümünü içerebilir.
 
 > [!div class="nextstepaction"]
-> [Yapılandırmanızı başlatma ve HoloLens (1. nesil)](hololens1-start.md)
+> [HoloLens başlatın ve yapılandırın (1. genel)](hololens1-start.md)

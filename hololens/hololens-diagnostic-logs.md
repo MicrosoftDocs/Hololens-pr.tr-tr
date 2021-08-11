@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 082a263bdd7eba694c13124abf40763644c83dfa
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 96fe9492da035747a22123ee1cd0c1481cd821a4f2e549b6414a21810ec268d6
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640449"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665310"
 ---
 # <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>Cihazlardan tanılama bilgilerini toplama HoloLens kullanma
 
@@ -90,7 +90,7 @@ Kullanıcı, uygulamanın geri dönüş tanılama davranışını  da Ayarlar ya
 
 ### <a name="os-update-troubleshooter"></a>Işletim Sistemi Güncelleştirme Sorun Gidericisi
 [Holographic, Windows 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve daha sonra derlemelerde:
-- Ayarlar uygulamasındaki önceki sorun gidericilere ek olarak, işletim sistemi güncelleştirmeleri için yeni Ayarlar yeni bir sorun giderici eklenmiştir. **-Ayarlar -> Update & Security -> Troubleshoot -> Windows Update 'e** gidin ve Başlat'ı **seçin.** Bu sayede, SORUN GİDERme veya destekle ilgili sorun giderme konusunda daha iyi yardımcı olmak için işletim sistemi güncelleştirmeleriyle sorunlarınızı yeniden üretirken izlemeleri toplamanıza olanak sağlar.
+- Ayarlar uygulamasındaki önceki sorun gidericilere ek olarak, işletim sistemi güncelleştirmeleri için yeni Ayarlar eklenmiştir. **-Ayarlar -> Update & Security -> -> Windows Update'e** gidin ve Başlat'ı **seçin.** Bu sayede, SORUN GİDERme veya destekle ilgili sorun giderme konusunda daha iyi yardımcı olmak için işletim sistemi güncelleştirmeleriyle sorunlarınızı yeniden üretirken izlemeleri toplamanıza olanak sağlar.
 ### <a name="prerequisites"></a>Önkoşullar
 
 - Ayarlar  uygulaması cihaza yüklenir ve kullanıcı tarafından kullanılabilir.
@@ -110,56 +110,56 @@ Tanılama bilgileri, kullanıcı silene kadar bu konumlarda kalır.
 
 ## <a name="diagnosticlog-csp"></a>DiagnosticLog CSP
 
-Mobil Cihaz Yönetimi (MDM) ortamında, IT yöneticisi DiagnosticLog yapılandırma hizmet [sağlayıcısını (CSP)](/windows/client-management/mdm/diagnosticlog-csp) kullanarak kayıtlı HoloLens yapılandırabilirsiniz. IT yöneticisi, kayıtlı cihazlardan günlükleri toplamak için bu ayarları yapılandırabilirsiniz.
+mobil cihaz yönetimi (MDM) ortamında, bt yöneticisi, kayıtlı HoloLens cihazlarda tanılama ayarlarını yapılandırmak için [diagnosticlog yapılandırma hizmeti sağlayıcısını (CSP)](/windows/client-management/mdm/diagnosticlog-csp) kullanabilir. BT Yöneticisi bu ayarları kayıtlı cihazlardan Günlükler toplayacak şekilde yapılandırabilir.
 
 Daha fazla bilgi:
-- [Bir Windows cihazdan tanılama toplama](/mem/intune/remote-actions/collect-diagnostics)
-- [Intune Genel Önizleme - Windows 10 Cihaz tanılaması](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-public-preview-windows-10-device-diagnostics/ba-p/2179712#:~:text=This%20first%20release%20of%20device%20diagnostics%20utilizes%20the,taking%20about%205%20minutes%20from%20start%20to%20finish.)
+- [Windows cihazdan tanılama toplama](/mem/intune/remote-actions/collect-diagnostics)
+- [ıntune genel önizleme-Windows 10 cihaz tanılaması](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-public-preview-windows-10-device-diagnostics/ba-p/2179712#:~:text=This%20first%20release%20of%20device%20diagnostics%20utilizes%20the,taking%20about%205%20minutes%20from%20start%20to%20finish.)
 
 ### <a name="prerequisites"></a>Önkoşullar
 
 - Cihaz bir ağa bağlı.
-- Cihaz, DiagnosticLog CSP'yi destekleyen bir MDM ortamına kayıtlıdır.
+- Cihaz, DiagnosticLog CSP 'yi destekleyen bir MDM ortamına kaydedilir.
 
-### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve saklama
+### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve bekletme
 
-Cihaz yönetilen ortamın bir parçası olduğundan, kullanıcı tanılama bilgilerine yönetici erişimini örtülü olarak onaylar.
+Cihaz yönetilen ortamın bir parçası olduğundan, Kullanıcı tanılama bilgilerine yönetici erişimini örtülü olarak onaylar.
 
-IT yöneticisi, aşağıdaki ilkeleri de içeren veri depolama, saklama ve erişim ilkelerini yapılandırmak için DiagnosticLog CSP'yi kullanır:
+BT Yöneticisi, aşağıdakileri yöneten ilkeler de dahil olmak üzere veri depolama, bekletme ve erişim ilkelerini yapılandırmak için DiagnosticLog CSP 'yi kullanır:
 
-- Tanılama bilgilerini depo alan bulut altyapısı.
-- Tanılama bilgileri için saklama süresi.
-- Tanılama bilgilerine erişimi kontrol altına alan izinler.
+- Tanılama bilgilerini depolayan bulut altyapısı.
+- Tanılama bilgileri için bekletme süresi.
+- Tanılama bilgilerine erişimi denetleyen izinler.
 
 ## <a name="offline-diagnostics"></a>Çevrimdışı tanılama
-Cihazın Geri Bildirim Merkezi veya Ayarlar Sorun Gidericisi aracılığıyla tanılama toplayamayabilecek durumlarda tanılamaları el ile toplayabilirsiniz. Bunun gerekli olduğu senaryolardan biri, cihazın Wi-Fi veya yukarıda belirtilen diğer yöntemlere erişe erişiminizin bulunamaz olduğu durumdur. Tanılama, microsoft destek mühendisinin sorunları yalıtmanıza yardımcı olan kilitlenme dökümlerini ve günlüklerini cihazdan toplar.
+cihazın geri bildirim merkezi veya Ayarlar sorun giderici aracılığıyla tanılama toplayamadığı durumlarda tanılamayı el ile toplayabilirsiniz. Bunun gerekli olduğu bir senaryo, cihazın Wi-Fi bağlanamadır veya yukarıda bahsedilen diğer yöntemlere erişemezsiniz. Tanılama, Microsoft destek mühendisinin sorunları yalıtmasına yardımcı olan kilitlenme dökümünü ve günlüklerini cihazdan toplar.
 
-Bu, cihaz USB kablosuyla Dosya Gezgini bilgisayara bağlanarak cihazda ortaya çıktıktan sonra çalışır.
+Bu, cihazın bir USB kablosu aracılığıyla bir BILGISAYARA bağlandıktan sonra Dosya Gezgini 'nde gösterdiği zaman çalışır.
 
 > [!NOTE]
-> Çevrimdışı Tanılama oluşturma ve yönetim, işletim sistemi sürümünüze bağlı olarak farklı şekilde denetlenmektedir. Daha önce telemetri ayarı tarafından denetlendi, ancak artık doğrudan MDM ilkesi aracılığıyla denetlendi. Ayar veya MDM ilkesi aracılığıyla devre dışı bırakılırsa, tanılama günlükleri bu mekanizma kullanılarak topılamaz.
+> Çevrimdışı tanılama oluşturma ve Yönetimi işletim sistemi sürümünüze bağlı olarak farklı şekilde denetlenir. Daha önce telemetri ayarı tarafından denetlenmişti, ancak artık MDM ilkesi aracılığıyla doğrudan denetleniyor. Ya ayar ya da MDM ilkesi aracılığıyla devre dışı bırakılmışsa, bu mekanizma kullanılarak tanılama günlükleri toplanamaz.
 
-[Holographic sürüm 20H2 Windows den önceki davranış:](hololens-release-notes.md#windows-holographic-version-20h2)
- - Çevrimdışı tanılama yalnızca kullanıcı OOBE'den geçiyor veya [System\AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) ilke değeri Tam olarak ayarlanmış olduğunda etkinleştirilir (Temel, OOBE'de varsayılan HoloLens). 
-- Çevrimdışı tanılamayı devre dışı bırakmak için App **Ayarlar Gizlilik > sayfasına** gidin ve Tanılama Verileri'> **Temel'i seçin.**  Çevrimdışı tanılamanın telemetri ayarına bağlı olduğu derlemelerde, yalnızca herhangi bir günlüğün toplanmış olup olmadığını etkiler. Hangi dosyaların toplanmış olduğunu etkilemez.
-- Cihaz kilitliyse günlükler görünmez.
+[Windows Holographic, sürüm 20h2 '](hololens-release-notes.md#windows-holographic-version-20h2)den önceki davranış:
+ - Çevrimdışı tanılama yalnızca Kullanıcı OOBE veya [System\allowtelemetri](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) Ilkesi değeri Full olarak ayarlandığında etkinleştirilir (temel, Hololens varsayılan değeridir). 
+- çevrimdışı tanılamayı devre dışı bırakmak için **Ayarlar uygulama > gizlilik** sayfasına gidin ve **tanılama verileri**' nde **temel** ' yı seçin. Çevrimdışı tanılama 'nın telemetri ayarına bağlı olduğu derlemeler üzerinde yalnızca herhangi bir günlüklerin toplanıp toplanmadığını etkiler. Hangi dosyaların toplandığını etkilemez.
+- Cihaz kilitliyse Günlükler görünmez.
 
-[Holographic, Windows 20H2](hololens-release-notes.md#windows-holographic-version-20h2) ve daha sonra derlemelerde:
-- Geri Dönüş Tanılama etkinleştirildiğinde, [mixedreality/FallbackDiagnostics](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-fallbackdiagnostics) ayarına karşılık gelen MDM ilkesi tarafından denetlenecek
-- Cihaz kilitliyse günlükler görünmez.
+derlemeler [Windows Holographic, sürüm 20h2](hololens-release-notes.md#windows-holographic-version-20h2) ve sonraki sürümler:
+- Geri dönüş tanılaması etkin olduğunda, karşılık gelen [Mixedreality/FallbackDiagnostics](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-fallbackdiagnostics) ayarı ile belırlı bir MDM ilkesi tarafından kontrol edilir
+- Cihaz kilitliyse Günlükler görünmez.
 
 Daha fazla bilgi edinmek için bu videoyu izleyin.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Gathering-Diagnostic-Files-on-HoloLens2/player]
 
-Tanılamaları toplamak için şu adımları izleyin:
-1.  Bağlan USB kablosuyla bilgisayarınıza bağlayın.
-2.  Bilgisayarınızda Dosya Gezgini 'Bu Bilgisayar \İç Ağ' **\<hololens-device> Depolama.**
-3.  İç **Depolama** klasörü göster yoksa, cihaz kullanıcının oturum açmasını bekler. POWER düğmesini 10 saniye boyunca basılı tutarak cihazda oturum açın veya güç döngüsü açın.
-4.  **Power + Volume Down düğmelerine basın ve hemen** bırakın.
-5.  Cihazın zip arşivlerini hazırlaması için bir dakika bekleyin. (Cihaz zip arşivlerini üretirken HololensDiagnostics.temp adlı geçici bir dosya görünür hale gelir. Bu dosyaya erişme veya dosyayı kaydetme. İşlem tamam olduğunda zip arşivleri ile değiştirilir.)
-6.  Dosya gezginini yenileyin ve **'\Documents' klasörüne** gidin.
-7.  Tanılama ZIP dosyalarını kopyalayın ve Microsoft destek ekibiyle paylaşın.
+Tanılamayı toplamak için aşağıdaki adımları izleyin:
+1.  cihazı USB kablosuyla bilgisayarınıza Bağlan.
+2.  bilgisayarınızda dosya gezgini ' nde, **' bu bilgisayar \<hololens-device> \ iç Depolama '** bölümüne gidin.
+3.  **dahili Depolama** klasörü görünmüyorsa, cihaz bir kullanıcının oturum açmasını bekliyor. GÜÇ düğmesini 10 saniye boyunca tutarak oturum açın veya güç döngüsünü yapın.
+4.  **Power + Volume aşağı** düğmelerini birlikte basılı tutarak hemen serbest bırakın.
+5.  Cihazın ZIP arşivlerini hazırlaması için bir dakika bekleyin. (Cihaz ZIP arşivlerini oluştururken HololensDiagnostics. TEMP adlı geçici bir dosya görünür hale gelebilir. Bu dosyaya erişme veya dosyayı kaydetme. İşlem tamamlandığında, bu, ZIP arşivlerine göre değişir.)
+6.  Dosya gezginini yenileyin ve **' \Documents '** klasörüne gidin.
+7.  Tanılama ZIP dosyalarını kopyalayın ve Microsoft destek ekibi ile paylaşabilirsiniz.
 
 > [!NOTE]
-> Tanılama ZIP dosyalarının bazıları PII içerebilir.
+> Tanılama ZIP dosyalarından bazıları PII içerebilir.

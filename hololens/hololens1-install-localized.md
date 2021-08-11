@@ -1,6 +1,6 @@
 ---
-title: HoloLens'in yerelleştirilmiş sürümlerini yükleme
-description: HoloLens'in yerelleştirilmiş sürümlerini (1. nesil) Çince ve Japonca sürümler de dahil olmak üzere yükleme hakkında bilgi.
+title: HoloLens yerelleştirilmiş sürümlerini yükler
+description: çince ve japonca sürümleri dahil olmak üzere HoloLens (1. gen) yerelleştirilmiş sürümlerini yüklemeyi öğrenin.
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -13,32 +13,32 @@ ms.reviewer: ''
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 74eb003aafd23218b90988abe113d35f1fc3035a
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: fe29e4ed611f86764f0db576b1a8794fa0ceec3047cadd26f502209faadea8b0
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379171"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115661817"
 ---
-# <a name="install-localized-versions-of-hololens-1st-gen"></a>HoloLens'in yerelleştirilmiş sürümlerini yükleme (1. nesil)
+# <a name="install-localized-versions-of-hololens-1st-gen"></a>HoloLens yerelleştirilmiş sürümlerini (1. gen) yükler
 
-HoloLens'in Çince veya Japonca sürümüne geçmek için Windows Cihaz Kurtarma Aracı'nı (WDRT) kullanarak dil derlemesini bir bilgisayara indirmeniz ve ardından HoloLens cihazınıza yüklemeniz gerekir.
+HoloLens çince veya japonca sürümüne geçiş yapmak için Windows cihaz kurtarma aracı 'nı (wdrt) kullanarak bir bilgisayardaki dilin yapısını indirip HoloLens yüklemeniz gerekir.
 
 > [!IMPORTANT]
-> HoloLens'in Çince veya Japonca derlemelerini yüklemek için WDRT'nin kullanılması, kişisel dosyalar ve ayarlar gibi mevcut verileri HoloLens'inize siler. 
+> HoloLens çince veya japonca derlemeleri yüklemek için wdrt kullanmak, kişisel dosyalar ve ayarlar gibi mevcut verileri HoloLens siler. 
 
-1. Bilgisayarınızda Windows Cihaz Kurtarma Aracı'nı [(WDRT) indirip yükleyin.](https://support.microsoft.com/help/12379)
-1. Bilgisayarınıza istediğiniz dil için paketi indirin: Basitleştirilmiş [Çince veya](https://aka.ms/hololensdownload-ch) [Japonca.](https://aka.ms/hololensdownload-jp)
-1. İndirme işlemi tamam olduğunda İndirmeler'i **Dosya Gezgini**  >  **seçin.** Az önce indirdiğiniz sıkıştırılmış klasöre sağ tıklayın ve Sıkıştırmayı açmak **için Tüm**  >  **Ayıkla'yı** seçin.
-1. HoloLens'inizi, birlikte gönderilen mikro USB kablosunu kullanarak bilgisayarınıza bağlayın. (HoloLens'inizi bağlamak için başka kablolar kullanıyorsanız bile bu en iyi şekilde çalışır.)
-1. Araç HoloLens'inizi otomatik olarak algıladikten sonra, Microsoft HoloLens seçin.
-1. Sonraki ekranda El ile paket **seçimi'ne** tıklayın ve 4. adımda sıkıştırmasını açmak istediğiniz   klasörde bulunan yükleme dosyasını seçin. (".ffu" uzantısına sahip bir dosya bulun.) 
-1. Yazılım **yükle'yi** seçin ve yönergeleri izleyin. 
-1. Derleme yüklendikten sonra HoloLens kurulumu otomatik olarak başlatılır. Cihazı açın ve kurulum yönergelerini izleyin. 
+1. bilgisayarınızda [Windows cihaz kurtarma aracı 'nı (wdrt)](https://support.microsoft.com/help/12379)indirip yükleyin.
+1. Bilgisayarınıza istediğiniz dilin paketini indirin:  [Basitleştirilmiş Çince](https://aka.ms/hololensdownload-ch) veya [Japonca](https://aka.ms/hololensdownload-jp).
+1. İndirme tamamlandığında **Dosya Gezgini**  >  **İndirmeleri**' ni seçin. İndirdiğiniz zip klasörüne sağ tıklayın ve sıkıştırmayı açmak için **Tümünü** Ayıkla ' yı seçin  >   .
+1. HoloLens ile birlikte gelen mikro USB kablosunu kullanarak bilgisayarınıza Bağlan. (HoloLens bağlamak için başka kablolar kullanıyor olsanız bile, bu en iyi şekilde geçerlidir.)
+1. araç HoloLens otomatik olarak algıladıktan sonra Microsoft HoloLens kutucuğunu seçin.
+1. Sonraki ekranda, **el ile paket seçimi**' ni seçin   ve 4. adımda sıkıştırdığı klasörde bulunan yükleme dosyasını seçin. (". FFU" uzantısına sahip bir dosyayı arayın.) 
+1.  **Yazılım yüklemesi** ' ni seçin ve yönergeleri izleyin. 
+1. yapı yüklendikten sonra HoloLens kurulum otomatik olarak başlatılır. Cihaza yerleştirin ve kurulum yönergelerini izleyin. 
 
-Kurulumu tamamlasanız Ayarlar Güncelleştirmesi & Security Windows Insider Programı 'a gidin ve en son önizleme derlemelerini alacak şekilde  >    >  yapılandırıldığından emin olun. İngilizce önizleme derlemeleri gibi, Windows Insider Programı ve Japonca HoloLens sürümlerini de en son önizleme derlemeleriyle güncel tutar.
+kurulum ile işiniz bittiğinde **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **Windows ınsider programı**' na gidin ve en son önizleme sürümlerini alacak şekilde yapılandırılıp yapılandırılmadığını denetleyin. ingilizce önizleme yapıları gibi Windows ınsider programı, en son önizleme derlemeleriyle güncel HoloLens çince ve japonca sürümlerini güncel tutar.
 
 > [!NOTE]
 >  
-> - Ayarlar uygulamasını kullanarak İngilizce, Japonca ve Çince arasındaki sistem dilini değiştiremezsiniz. Cihaz sistemi dilini değiştirmenin desteklenen tek yolu yeni bir derlemenin yanıp sönmesidir.
-> - Basitleştirilmiş Çince veya Japonca metin girmek için ekran üzerinde Pinyin klavyesini kullanabilirsiniz ancak Basitleştirilmiş Çince veya Japonca metinler girmek için Bluetooth donanım klavyesi kullanmak şu anda desteklenmiyor.  Ancak, Çince veya Japonca HoloLens'te, İngilizce yazacak bir Bluetooth klavyesi kullanmaya devam edersiniz (bir donanım klavyesini İngilizce yazacak şekilde iki durumlu yapmak için ~ tuşuna basın).
+> - ingilizce, japonca ve çince arasındaki sistem dilini değiştirmek için Ayarlar uygulamasını kullanamazsınız. Yeni bir derlemeyi yanıp sönen, cihaz sistemi dilini değiştirmek için desteklenen tek yoldur.
+> - basitleştirilmiş çince veya japonca metin girmek için ekran üzerindeki Pinyin klavyesini kullanabilir, ancak basitleştirilmiş çince veya japonca metin yazmak için Bluetooth bir donanım klavyesi kullanmak şu anda desteklenmez.  öte yandan, çince veya japonca HoloLens, ingilizce yazmak için bir Bluetooth klavye kullanmaya devam edebilirsiniz (bir donanım klavyesini ingilizce yazmak üzere değiştirmek için ~ tuşuna basın).

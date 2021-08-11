@@ -13,12 +13,12 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1c043b721590e8245f694b3e4f6e5b6ce57f1ecf
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: bf0256ae24733fac7eb80a634edc78a33fcc1538d3d4a1db3c9b50fc01893c74
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639361"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665429"
 ---
 # <a name="security-engineering"></a>Güvenlik mühendisliği
 
@@ -32,6 +32,6 @@ Microsoft, şirketin mühendislik protokollerini iyileştirmeye, uyumluluğu ele
 
 Güvenlik güncelleştirmeleri ve düzeltme ekleri her ayın ikinci Salı günü yayımlanıyor. Microsoft tarafından bildirilen bir güvenlik açığına ilişkin sonraki adımları değerlendirmek için kullanılan ölçütleri anlamak için Microsoft Güvenlik Yanıt Merkezi Güvenlik Bakım Ölçütleri [sayfasına bakın.](https://www.microsoft.com/msrc/windows-security-servicing-criteria) 
 
-MDM aracılığıyla HoloLens 2 güncelleştirmelerini yönetme hakkında rehberlik için bkz. MDM [güncelleştirmelerini HoloLens yönetme.](hololens-updates.md) HoloLens 2 için işletim sistemi güncelleştirme tempos, Windows 10; yılda iki güncelleştirme vardır, biri Spring'te, diğeri Fall'te 4 güncelleştirme 2 güncelleştirmeden biri olur. Cihazların işletim sistemi güncelleştirmeleri sırasında nasıl güvenli hale getirildikleri hakkında daha fazla bilgi için bkz. [Durum ayrımı ve yalıtımı.](security-state-separation-isolation.md) 
+MDM aracılığıyla HoloLens 2 güncelleştirmelerini yönetme hakkında rehberlik için bkz. MDM [güncelleştirmelerini HoloLens yönetme.](hololens-updates.md) HoloLens 2 için işletim sistemi güncelleştirme tempos, Windows 10; yılda iki güncelleştirme vardır, biri Spring'te, diğeri Fall'te 2 güncelleştirme olur. Cihazların işletim sistemi güncelleştirmeleri sırasında nasıl güvenli hale getirildikleri hakkında daha fazla bilgi için bkz. [Durum ayrımı ve yalıtımı.](security-state-separation-isolation.md) 
 
-IT yöneticileri, güncelleştirme ilkesi hakkında daha fazla bilgi edinmek için İlke [CSP - Güncelleştirme sayfasından bilgi edinmektedir.](/windows/client-management/mdm/policy-csp-update) 
+IT yöneticileri İlke CSP -Güncelleştirme sayfasında güncelleştirme [ilkesi hakkında daha fazla bilgi edinmektedir.](/windows/client-management/mdm/policy-csp-update) 

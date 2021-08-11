@@ -1,7 +1,7 @@
 ---
-title: Dosyalarda dosyaları bulma ve HoloLens
-description: Karma gerçeklik Dosya Gezgini dosyaları HoloLens, görüntülemek ve yönetmek için HoloLens'i nasıl kullanabileceğinizi öğrenin.
-keywords: nasıl kullanılır, dosya seçici, dosyalar, fotoğraflar, videolar, resimler, OneDrive, depolama, dosya gezgini, hololens
+title: HoloLens dosya bulma ve kaydetme
+description: karma gerçeklik cihazındaki dosyaları açmak, görüntülemek ve yönetmek için HoloLens dosya gezgini 'ni nasıl kullanacağınızı öğrenin.
+keywords: nasıl yapılır, dosya seçici, dosyalar, fotoğraflar, videolar, resimler, OneDrive, depolama, dosya gezgini, hololens
 ms.assetid: 77d2e357-f65f-43c8-b62f-6cd9bf37070a
 author: mattzmsft
 ms.author: mazeller
@@ -16,89 +16,89 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 18dc962b869dafaea9ff9c605eef51fcbb35bfb2
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: ad210c9d31d8d7c226345618b6dfabf8457ee2398882935920d7b3217259a644
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636189"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664885"
 ---
-# <a name="find-open-and-save-files-on-hololens"></a>Dosyalarda dosyaları bulma, açma ve HoloLens
+# <a name="find-open-and-save-files-on-hololens"></a>HoloLens dosya bulun, açın ve kaydedin
 
-Fotoğraflar ve videolar HoloLens dosyalar, doğrudan HoloLens cihazınıza kaydedilir. Bunları, aşağıdakiler üzerinde dosyaları yönetirken olduğu gibi görüntü Windows 10:
+fotoğraflar ve videolar dahil HoloLens oluşturduğunuz dosyalar doğrudan HoloLens cihazınıza kaydedilir. Windows 10 dosyaları yönettiğiniz şekilde görüntüleyin ve yönetin:
 
-- Yerel klasörlere Dosya Gezgini için Dosya Gezgini uygulamasını kullanma.
-- Bir uygulamanın depolama alanı içinde.
-- Özel bir klasörde (video veya müzik kitaplığı gibi).
-- Uygulama ve dosya seçici içeren bir depolama hizmeti kullanma (örneğin, OneDrive).
-- MTP (Medya Aktarım Protokolü) HoloLens usb kablosu kullanarak bilgisayarınıza bağlı bir masaüstü bilgisayar kullanma.
+- Yerel klasörlere erişmek için dosya Gezgini uygulamasını kullanma.
+- Bir uygulamanın depolama alanında.
+- Özel bir klasörde (örneğin, video veya müzik kitaplığı).
+- Uygulama ve dosya seçici (OneDrive gibi) içeren bir depolama hizmeti kullanma.
+- MTP (medya aktarım protokolü) desteğini kullanarak bir USB kablosu kullanarak HoloLens bağlı masaüstü bilgisayar kullanma.
 
-## <a name="view-files-on-hololens-using-file-explorer"></a>Dosyaları HoloLens kullanarak Dosya Gezgini
+## <a name="view-files-on-hololens-using-file-explorer"></a>dosya gezgini 'ni kullanarak HoloLens dosyaları görüntüleme
 
-> HoloLens HoloLens Nisan [2018 Güncelleştirmesi (RS4) HoloLens (1. nesil) Windows 10 2.](/windows/mixed-reality/release-notes-april-2018)nesil tüm cihazlar ve HoloLens.
+> [HoloLens için Windows 10 nisan 2018 güncelleştirmesi (RS4)](/windows/mixed-reality/release-notes-april-2018)itibariyle tüm HoloLens 2 cihazlara ve HoloLens (1. gen) geçerlidir.
 
-3 Dosya Gezgini, HoloLens ve resimler dahil olmak üzere cihazınızın dosyalarını görüntülemek ve yönetmek için Dosya Gezgini'de dosyaları kullanın. Başlamak **için Başlangıç**   >  **Tüm uygulamalar**   >  **Dosya Gezgini'a** gidin.
+cihazınızdaki dosyaları görüntülemek ve yönetmek için, 3b nesneler, belgeler ve resimler dahil HoloLens dosya gezgini 'ni kullanın. Başlamak için    >  **tüm uygulamalar**   >  **Dosya Gezgini** ' ni Başlat ' a gidin.
 
 > [!TIP]
-> Listede dosya yoksa Dosya Gezgini sol üst **bölmede Bu** Cihaz'ı seçin.
+> Dosya Gezgini 'nde listelenen dosya yoksa, sol üst bölmedeki **Bu cihazı** seçin.
 
-Dosyalarda hiç dosya görmüyorsanız Dosya Gezgini filtre etkin olabilir (sol bölmede saat simgesi vurgulanmış). Bunu düzeltmek için sol **bölmede (saat** simgesinin altında) Bu Cihaz belge simgesini seçin veya menüyü açıp Bu **Cihaz'ı seçin.**
+Dosya Gezgini 'nde herhangi bir dosya görmüyorsanız, "son" filtre etkin olabilir (saat simgesi sol bölmede vurgulanır). Bu hatayı onarmak için sol bölmedeki (saat simgesinin altında) **Bu cihaz** belgesi simgesini seçin veya menüyü açın ve **Bu cihazı** seçin.
 
-## <a name="find-and-view-your-photos-and-videos"></a>Fotoğraf ve videolarınızı bulma ve görüntüleme
+## <a name="find-and-view-your-photos-and-videos"></a>Fotoğraflarınızı ve videolarınızı bulun ve görüntüleyin
 
-[Karma gerçeklik yakalama](holographic-photos-and-videos.md) özelliği, karma gerçeklik fotoğraf ve videolarını HoloLens.  Bu fotoğraflar ve videolar cihazın Kamera Rulosu klasörüne kaydedilir.
+[Karma gerçeklik yakalama](holographic-photos-and-videos.md) , Hololens üzerinde karma gerçeklik fotoğraflarını ve videoları almanızı sağlar.  Bu fotoğraflar ve videolar cihazın kamera rulosu klasörüne kaydedilir.
 
-Fotoğraflara ve videolara şu şekilde HoloLens erişebilirsiniz:
+HoloLens ile alınan fotoğraflara ve videolara erişebilirsiniz:
 
-- Doğrudan Fotoğraflar uygulaması aracılığıyla Kamera [Roll'e erişin.](holographic-photos-and-videos.md)
-- fotoğraf ve videolarınızı bulut depolama alanına yüklemek için fotoğraf ve videolarınızı OneDrive.
-- Karma Gerçeklik Yakalama sayfasının [Windows Cihaz Portalı.](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture)
+- doğrudan [Fotoğraflar uygulaması](holographic-photos-and-videos.md)aracılığıyla kamera rulonuza erişme.
+- Fotoğraflarınızı ve videolarınızı OneDrive ile eşitleyerek, fotoğraf ve videoları bulut depolamaya yükleyin.
+- [Windows cihaz portalının](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture)karma gerçeklik yakalama sayfasını kullanma.
 
 ### <a name="photos-app"></a>Fotoğraflar uygulaması
 
-Fotoğraflar uygulaması, Başlat menüsündeki varsayılan **uygulamalardan biridir** ve yeni uygulamalarla birlikte HoloLens. İçeriği görüntülemek için [Fotoğraflar uygulamasını kullanma hakkında daha fazla bilgi edinebilirsiniz.](holographic-photos-and-videos.md)
+Fotoğraflar uygulaması, **Başlangıç** menüsündeki varsayılan uygulamalardan biridir ve HoloLens ile yerleşik olarak sunulur. [İçeriği görüntülemek Için Fotoğraflar uygulamasını kullanma](holographic-photos-and-videos.md)hakkında daha fazla bilgi edinin.
 
-Fotoğrafları diğer cihazlarla [OneDrive için](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) Microsoft Store uygulamasından da yükleyebilirsiniz.
+fotoğrafları diğer cihazlara eşitlemek için Microsoft Store [OneDrive uygulamayı](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) da yükleyebilirsiniz.
 
-### <a name="onedrive-app"></a>OneDrive uygulama
+### <a name="onedrive-app"></a>OneDrive uygulaması
 
-[OneDrive](https://onedrive.live.com/) fotoğraflarınıza ve videolarınızı herhangi bir cihazla ve herhangi bir kullanıcıyla paylaşmanıza, yönetmenize ve paylaşmanıza olanak sağlar. Bu uygulamada yakalanan fotoğraflara ve videolara erişmek HoloLens, [OneDrive uygulamanıza](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) Microsoft Store'den HoloLens. İndirildikten sonra, OneDrive'yi açın ve **Kamera**  >  **Ayarlar'ı seçin** ve Kamera karşıya **yükleme'yi açın.**
+[OneDrive](https://onedrive.live.com/) , fotoğraf ve videolarınızı dilediğiniz cihazla ve herhangi bir kullanıcıyla erişmenizi, yönetmenizi ve paylaşmanızı sağlar. HoloLens yakalanan fotoğraflara ve videolara erişmek için, [OneDrive uygulamayı](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) HoloLens Microsoft Store indirin. indirildikten sonra OneDrive uygulamasını açın ve kamera karşıya   >  **yükleme** Ayarlar seçin ve **kamera karşıya yüklemeyi** açın.
 
-### <a name="connect-to-a-pc"></a>Bağlan bilgisayara yükleme
+### <a name="connect-to-a-pc"></a>bir bilgisayara Bağlan
 
-HoloLens nisan [2018](/windows/mixed-reality/release-notes-april-2018) veya sonraki bir Windows 10 güncelleştirmesi çalıştıracaksa, MTP (medya aktarım protokolü) kullanarak cihazdaki fotoğraflara ve videolara göz atmak için USB kablosu kullanarak HoloLens'nizi bir Windows 10 bilgisayarına bağlanabilirsiniz. Cihazda bir PIN veya parola ayarlanmışsa dosyalara göz atmak için cihazın kilidinin açık olduğundan emin olun.  
+HoloLens [Windows 10 nisan 2018 güncelleştirmesini](/windows/mixed-reality/release-notes-april-2018) veya sonrasını çalıştırıyorsa, MTP 'yi (medya aktarım protokolü) kullanarak cihazdaki fotoğraflara ve videolara taramak için bir USB kablosu kullanarak HoloLens Windows 10 bilgisayara bağlayabilirsiniz. Cihazınızda bir PIN veya parola ayarladıysanız, dosyalara gözatabilmeniz için cihazın kilidinin açık olduğundan emin olmanız gerekir.  
 
-Windows Cihaz Portalı'ı etkinleştirdiyseniz, cihazınıza depolanmış fotoğraflara ve videolara göz atmak, almak ve yönetmek için kullanabilirsiniz. [](/windows/mixed-reality/using-the-windows-device-portal)
+[Windows cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal)etkinleştirdiyseniz, cihazınızda depolanan fotoğrafları ve videoları taramak, almak ve yönetmek için bu uygulamayı kullanabilirsiniz.
 
-## <a name="access-files-within-an-app"></a>Uygulama içindeki dosyalara erişme
+## <a name="access-files-within-an-app"></a>Bir uygulama içindeki dosyalara erişme
 
-Bir uygulama, dosyaları cihazınıza kaydederse, bu uygulamayı kullanarak cihazınıza erişebilirsiniz.
+Bir uygulama aygıtınızdaki dosyaları kaydederse, bunlara erişmek için bu uygulamayı kullanabilirsiniz.
 
-### <a name="requesting-files-from-another-app"></a>Başka bir uygulamadan dosya isteği
+### <a name="requesting-files-from-another-app"></a>Başka bir uygulamadan dosya isteme
 
-Bir uygulama, dosya seçicilerini kullanarak bir dosyayı kaydetmeyi veya başka bir uygulamanın [dosyasını açmayı talep ediyor olabilir.](/windows/mixed-reality/app-model#file-pickers)
+Bir uygulama, dosya [etiketlerini](/windows/mixed-reality/app-model#file-pickers)kullanarak bir dosyayı kaydetmek veya başka bir uygulamadan dosya açmak isteyebilir.
 
 ### <a name="known-folders"></a>Bilinen klasörler
 
-HoloLens, uygulamaların erişim [izni talep](/windows/mixed-reality/app-model#known-folders) etmek için sahip olduğu bir dizi bilinen klasörü destekler.
+HoloLens, uygulamaların erişim izni isteyebildiği bir dizi [bilinen klasörü](/windows/mixed-reality/app-model#known-folders) destekler.
 
-## <a name="view-hololens-files-on-your-pc"></a>Bilgisayarınız HoloLens dosyaları görüntüleme
+## <a name="view-hololens-files-on-your-pc"></a>bilgisayarınızda HoloLens dosyaları görüntüleme
 
-Diğer mobil cihazlara benzer şekilde, HoloLens MTP (Medya Aktarım Protokolü) kullanarak masaüstü bilgisayarınıza bağlayın ve kolay aktarım için Dosya Gezgini kitaplıklarına erişmek için HoloLens'i açın.
+diğer mobil cihazlara benzer şekilde, MTP 'yi (medya aktarım protokolü) kullanarak masaüstü PC 'nize HoloLens bağlayın ve kolay aktarım için HoloLens kitaplıklarınıza erişmek üzere bilgisayarda dosya gezgini 'ni açın.
 
-Bilgisayarınızda HoloLens dosyalarınızı Dosya Gezgini görmek için:
+bilgisayarınızda dosya gezgini 'nde HoloLens dosyalarınızı görmek için:
 
-1. Oturum HoloLens, ardından bilgisayarla birlikte gelen USB kablosunu kullanarak bilgisayara HoloLens.
+1. HoloLens oturum açın ve HoloLens ile birlikte gelen USB kablosunu kullanarak bilgisayara takın.
 
-1. ile **dosyaları görüntülemek için Cihazı Aç'ı Dosya Gezgini** veya Dosya Gezgini açın ve cihaza gidin.
+1. **Dosya Gezgini ile dosyaları görüntülemek Için cihazı aç**' ı SEÇIN veya bilgisayarda dosya Gezgini 'ni açın ve cihaza gidin.
 
-Bilgisayarınızla ilgili bilgileri görmek HoloLens, bilgisayarınızda bulunan Dosya Gezgini cihaz adına sağ tıklayın ve Ardından Özellikler'i **seçin.**
+HoloLens hakkındaki bilgileri görmek için, bilgisayarınızda dosya gezgini ' nde cihaz adına sağ tıklayın ve ardından **özellikler**' i seçin.
 
 > [!NOTE]
-> HoloLens (1. nesil) dış sabit sürücülere veya SD kartlara bağlanmayı desteklemez.
+> HoloLens (1. gen), dış sabit sürücülere veya SD kartlara bağlanmayı desteklemez.
 
-## <a name="sync-to-the-cloud"></a>Buluta eşitleme
+## <a name="sync-to-the-cloud"></a>Buluta Eşitle
 
-Fotoğrafları ve diğer dosyaları HoloLens buluta eşitlemek için, OneDrive'yi HoloLens. Daha OneDrive için, bu sayfayı Microsoft Store arama HoloLens.
+HoloLens fotoğrafları ve diğer dosyaları buluta eşitlemek için HoloLens OneDrive kurun ve ayarlayın. OneDrive almak için HoloLens Microsoft Store arama yapın.
 
-HoloLens uygulama dosyalarını ve verilerini yüklemez, bu nedenle önemli şeylerinizi veri kaynağınıza kaydetmek OneDrive. Bu şekilde, cihazınızı sıfırlar veya bir uygulamayı kaldırırsanız, bilgileriniz de geri döner.
+HoloLens uygulama dosyalarını ve verileri yedeklemediğinden önemli öğelerinizi OneDrive kaydetmek iyi bir fikirdir. Bu şekilde, cihazınızı sıfırlayabilir veya bir uygulamayı kaldırırsanız, bilgileriniz yedeklenir.

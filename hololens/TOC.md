@@ -25,6 +25,8 @@
 #### [HoloLens çalıştırmak için sesinizi kullanın](hololens-cortana.md)
 #### [HoloLens dosya bulun, açın ve kaydedin](holographic-data.md)
 #### [Karma Gerçeklik fotoğrafları ve videoları oluşturun](holographic-photos-and-videos.md)
+#### [yeni Ayarlar uygulaması](hololens-new-settings.md)
+#### [Yeni Microsoft Edge](hololens-new-edge.md)
 ### Uygulamaları yönetme
 #### [Uygulamaları bulma, yükleme ve kaldırma](holographic-store-apps.md)
 #### [HoloLens 2 için özel uygulamaları yönetme](hololens2-holographic-custom-apps.md)

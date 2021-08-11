@@ -1,6 +1,6 @@
 ---
 title: Geri bildirimde bulunun
-description: HoloLens ve Windows Mixed Reality geliştiricileri için geri bildirim hub 'ını kullanarak eyleme dönüştürülebilir geri bildirimler oluşturun.
+description: geri bildirim Hub 'ını kullanarak HoloLens ve Windows Mixed Reality geliştiricileri için eyleme dönüştürülebilir geri bildirimler oluşturun.
 ms.assetid: b9b24c72-ff86-44a9-b30d-dd76c49479a9
 author: mattzmsft
 ms.author: mazeller
@@ -17,30 +17,30 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f8704b7e1b75cd08bc282eb0c2df22b8266cb9fd
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 1f59c76fa760710d1b1333e1318784f5a488851b640c1cbd4ed6f673ae60029a
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379085"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664203"
 ---
 # <a name="feedback-for-hololens"></a>HoloLens için geri bildirim
 
 Beğendiğimiz özellikleri, ne yapmanız gerektiğini ve bir şeyin daha iyi olduğunu bize bildirmek için geri bildirim merkezini kullanın. Mühendislik ekibi hataları izlemek ve onarmak için aynı mekanizmayı kullanır, bu nedenle lütfen gördüğünüz hataları raporlamak için geri bildirim merkezini kullanın. Biz dinliyoruz!
 
-Geri Bildirim Hub 'ı, mühendislik ekibini hatalara yönelik olarak uyarmak ve gelecekteki güncelleştirmelerin sistem durumu ve sorunsuz bir şekilde hatasız olduğundan emin olmak için mükemmel bir yoldur. Ancak, geri bildirim hub 'ı bir yanıt sağlamaz. Anında yardıma ihtiyacınız varsa lütfen geri bildirimde bulunun, geri bildiriminiz için belirttiğiniz Özet hakkında bir göz atın ve [HoloLens desteği](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) ile takip edın-URL 'ye doğrudan bir bağlantı paylaşmak Için geri bildirim hub 'ında **paylaşma** özelliğini kullanın. Geri Bildirim Hub 'ı günde çok veri alır. URL, geri bildirimlerinizi hızlı bir şekilde belirlememize yardımcı olur.
+Geri Bildirim Hub 'ı, mühendislik ekibini hatalara yönelik olarak uyarmak ve gelecekteki güncelleştirmelerin sistem durumu ve sorunsuz bir şekilde hatasız olduğundan emin olmak için mükemmel bir yoldur. Ancak, geri bildirim hub 'ı bir yanıt sağlamaz. anında yardıma ihtiyacınız varsa lütfen geri bildirimde bulunun, geri bildiriminiz için belirttiğiniz özet hakkında bir göz atın ve ardından [HoloLens desteği](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) ile izleyin. URL 'ye doğrudan bir bağlantı paylaşmak için geri bildirim Hub 'ında **paylaşma** özelliğini kullanın. Geri Bildirim Hub 'ı günde çok veri alır. URL, geri bildirimlerinizi hızlı bir şekilde belirlememize yardımcı olur.
 
 > [!NOTE]  
 >  
-> - Geri Bildirim Hub 'ının güncel sürümüne sahip olduğunuzdan emin olun. Bunu yapmak için   >  **Microsoft Store** Başlat ' ı seçin ve ardından üç nokta (**...**) simgesini seçin. Ardından, **indirmeler ve güncelleştirmeler**  >  **Al güncelleştirmelerini** seçin.  
+> - Geri Bildirim Hub 'ının güncel sürümüne sahip olduğunuzdan emin olun. bunu yapmak için   >  **Microsoft Store** başlat ' ı seçin ve ardından üç nokta (**...**) simgesini seçin. Ardından, **indirmeler ve güncelleştirmeler**  >  **Al güncelleştirmelerini** seçin.  
 >  
-> - Sorunları çözmek için mümkün olan en iyi verileri sağlamak üzere cihaz telemetrinizi **Isteğe bağlı** olarak ayarlamanız önemle tavsiye ederiz. Bu değeri, hazır olmayan deneyim (OOBE) sırasında veya ayarlar uygulamasını kullanarak ayarlayabilirsiniz. Ayarları kullanarak bunu yapmak için, **Başlat**  >  **ayarları**  >  **Gizlilik**  >  **uygulaması tanılama**  >  **'** yı seçin.
+> - Sorunları çözmek için mümkün olan en iyi verileri sağlamak üzere cihaz telemetrinizi **Isteğe bağlı** olarak ayarlamanız önemle tavsiye ederiz. bu değeri, hazır olmayan deneyim (OOBE) sırasında veya Ayarlar uygulamasını kullanarak ayarlayabilirsiniz. bunu Ayarlar kullanarak yapmak için,   >    >  **üzerinde gizlilik**  >  **uygulaması tanılama**  >  Ayarlar başlat ' ı seçin.
 
 ## <a name="use-the-feedback-hub"></a>Geri Bildirim Hub 'ını kullanma
 
 1. **Başlat menüsünü açmak** için **Başlangıç** hareketini kullanın ve ardından **geri bildirim merkezi**' ni seçin. Uygulama ortamınızda açılır.
 
-   ![HoloLens başlangıç menüsünde geri bildirim uygulaması](./images/hololens2-feedbackhub-tile.png)
+   ![HoloLens Başlat menüsü geri bildirim uygulaması](./images/hololens2-feedbackhub-tile.png)
    > [!NOTE]  
    > **Geri Bildirim Hub 'ını** görmüyorsanız **tüm uygulamalar** ' ı seçerek cihazdaki uygulamaların tüm listesini görüntüleyin.
 
@@ -52,10 +52,10 @@ Geri Bildirim Hub 'ı, mühendislik ekibini hatalara yönelik olarak uyarmak ve 
 
 1. **Geri bildiriminizi özetlemeniz** durumunda geri bildiriminiz için kısa bir özet girin. **Daha sonra açıkla daha** ayrıntılı bilgi kutusuna ayrıntılar ekleyin. Sağladığınız daha fazla ayrıntı, bu sorunun nasıl üretileceği ve sahip olduğu etkilerden daha fazla yararlı olacaktır. İşiniz bittiğinde **İleri**' yi seçin.
 
-1. **Kategori** seçin listesinden bir konu seçin ve ardından bir alt kategori **seçin** öğesinden bir alt kategori seçin. Aşağıdaki tabloda, Windows holographic kategorisinde bulunan kategoriler açıklanmaktadır.
+1. **Kategori** seçin listesinden bir konu seçin ve ardından bir alt kategori **seçin** öğesinden bir alt kategori seçin. aşağıdaki tabloda Windows Holographic kategorisinde bulunan kategoriler açıklanmaktadır.
 
    > [!NOTE]  
-   > **Ticari müşteriler**: MDM, sağlama veya diğer cihaz yönetimi ile ilgili bir hatayı raporlamak Için **Kurumsal Yönetim** kategorisini ve **cihaz** alt kategorisini seçin.
+   > **ticari müşteriler**: MDM, sağlama veya diğer cihaz yönetimi ile ilgili bir hatayı raporlamak için **Enterprise yönetim** kategorisini ve **cihaz** alt kategorisini seçin.
 
    |Kategori |Açıklama |
    | --- | --- |
@@ -63,7 +63,7 @@ Geri Bildirim Hub 'ı, mühendislik ekibini hatalara yönelik olarak uyarmak ve 
    |Hologram doğruluğu, kararlılık ve güvenilirlik |Hologram 'ın boşluk halinde görünme hakkında geri bildirim. |
    |Uygulamaları başlatma, yerleştirme, ayarlama ve çıkma |2B veya 3B uygulamaları başlatma veya durdurma hakkında geri bildirim. |
    |Miracast |Miracast hakkında geri bildirim. |
-   |Boşluklar ve kalıcılık |HoloLens 'in boşlukları nasıl tanıdığını ve alanda hologramlar koruduğunu gösteren geri bildirim. |
+   |Boşluklar ve kalıcılık |HoloLens alanları nasıl tanıdığını ve uzayda hologramlar nasıl koruduğunu gösteren geri bildirimde bulunun. |
    |Başlat menüsü ve tüm uygulamalar listesi |**Başlangıç** menüsü ve tüm uygulamalar listesi hakkında geri bildirim. |
    |Yüzey eşleme |Yüzey eşleme hakkında geri bildirim. |
    |Resim ve video alma |Karma Gerçeklik yakalamaları hakkında geri bildirim. |

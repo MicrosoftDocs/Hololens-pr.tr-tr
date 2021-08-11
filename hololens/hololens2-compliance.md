@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 uyumluluğu ve GDPR
+title: HoloLens 2 Uyumluluk ve GDPR
 description: GDPR belgeleri
-keywords: HoloLens, GDPR, gizlilik, pıı
+keywords: HoloLens, GDPR, gizlilik, PII
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: skerewala, evmiller
@@ -14,54 +14,54 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 684a97a4fcdc3aaf830f164c54fb3079e296c78c
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 3365e69c8408b75a5d4e1177df938f435dec05d9dc181c698d7991159645d15a
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113637124"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115660157"
 ---
-# <a name="hololens-2-privacy-statement"></a>HoloLens 2 gizlilik bildirimi
+# <a name="hololens-2-privacy-statement"></a>HoloLens 2 Gizlilik Bildirimi
 
-GDPR 'ın temel öğelerinden biri, ' tasarıma göre veri koruması ' ' dır. bu kavram, genellikle taşınabilirlik, sınırsız internet bağlantısı ve açık iletişim kanalları nedeniyle HoloLens 2 gibi mobil cihazlara uygulanır. HoloLens 2 ' nin [güvenliği](/hololens/security-architecture) , gelişmiş, yenilikçi güvenlik ve gizlilik koruması, hem Microsoft 'un [gizlilik ve GDPR düzenlemelerine](https://privacy.microsoft.com/)yönelik yaklaşımını dahil olmak üzere uçtan uca olacak şekilde yeniden tasarlanmıştır.
+GDPR'nin temel öğeleriden biri de 'tasarıma göre veri koruması'dır. Bu kavram özellikle taşınabilirlik, sınırsız internet bağlantısı ve açık iletişim kanalları nedeniyle HoloLens 2 gibi mobil cihazlar için geçerlidir. Sonuç olarak, HoloLens 2'nin güvenliği, Microsoft'un gizlilik ve GDPR düzenlemelerine yaklaşımını da içeren gelişmiş, yenilikçi güvenlik ve gizlilik koruması sağlayacak şekilde yeniden [tasarlandı.](https://privacy.microsoft.com/) [](/hololens/security-architecture)
 
  >[!NOTE]
-> bu belge HoloLens (1. gen) için uygulanmıyor.
+> Bu belge, HoloLens (1. nesil) için geçerli değildir.
 
-## <a name="privacy-overview"></a>Gizliliğe Genel Bakış
+## <a name="privacy-overview"></a>Gizlilik genel bakış
 
-HoloLens 2, bir modern karma gerçeklik ortamında uygulamalar ve çözümler çalıştıran Windows Holographic çalıştıran, kendi içinde bulunan bir Windows bilgisayardır. Bu, güvenli bir çevrimdışı cihaz olarak kullanılabilir veya kuruluşunuzda [yönetilen bir cihaz](/mem/intune/fundamentals/windows-holographic-for-business) olarak dağıtılabilir. HoloLens 2 ve Microsoft 'un verilerinizi nasıl kullandığını ve nasıl koruduğunu anlamak için aşağıdaki bağlantılara bakın:
+HoloLens 2, uygulamaları ve çözümleri çevreleyici bir karma gerçeklik ortamında Windows Holographic çalıştıran, kendi içinde Windows bir bilgisayardır. Güvenli bir çevrimdışı cihaz olarak kullanılabilir veya kuruluş içinde yönetilen [cihaz](/mem/intune/fundamentals/windows-holographic-for-business) olarak dağıtılabilir. HoloLens 2 ve Microsoft'un verilerinizi nasıl kullandığını ve korumalarını anlamak için aşağıdaki bağlantılara bakın:
 
-1. [Microsoft gizlilik bildirimi-HoloLens](https://privacy.microsoft.com/privacystatement) – sol gezinti menüsündeki **Enterprise ve geliştirici** bölümünü genişletin ve **Enterprise ve geliştirici yazılımı ve gereçleri**' ni seçin. **HoloLens** bölümüne gidin.
+1. [Microsoft Gizlilik Bildirimi - HoloLens](https://privacy.microsoft.com/privacystatement) – sol gezinti **menüsündeki Enterprise** ve geliştirici bölümünü genişletin ve Enterprise yazılım **ve gereçlerini seçin.** HoloLens **bölümüne** gidin.
 2. [Windows 10 ve çevrimiçi hizmetler](https://privacy.microsoft.com/windows10privacy)
-3. [Windows 10 & gizlilik uyumluluğu kılavuzu](/windows/privacy/windows-10-and-privacy-compliance)
+3. [Windows 10 & Gizlilik Uyumluluğu Kılavuzu](/windows/privacy/windows-10-and-privacy-compliance)
 4. [Intune’da gizlilik ve kişisel veriler](/mem/intune/protect/privacy-personal-data)
 
 ## <a name="network-security"></a>Ağ Güvenliği
-HoloLens 2 [ortak dağıtım senaryolarından](/hololens/common-scenarios)sonra verileriniz, [Azure 'un birinci sınıf uyumluluğuyla](/azure/compliance/) ve yasal/yasal standartlar tümleştirmesiyle korunacaktır. Azure AD ve Dynamics 365 Uzaktan Yardım ' ı yeni kullanıyorsanız, [GDPR Için Azure ve dynamics 365 sorumluluk hazırlığı denetim listesine](/compliance/regulatory/gdpr-arc-azure-dynamics)başvurun.
+Aşağıdaki HoloLens 2 [Yaygın](/hololens/common-scenarios)Dağıtım Senaryosu'nun ardından, verileriniz [Azure'ın](/azure/compliance/) birinci sınıf uyumluluğu ve yasal/mevzuat standartları tümleştirmesi ile korunacaktır. Azure AD ve Dynamics 365 Remote Assist'i yeni başladıysanız, GDPR için Azure ve [Dynamics 365](/compliance/regulatory/gdpr-arc-azure-dynamics)sorumluluk hazırlığı denetim listesine bakın.
 
-ayrıca, Windows Defender güvenlik duvarı cihaz bağlantısının güvenliğini sağlamak için kritik işlevler sunar. HoloLens 2 ile güvenlik duvarı her zaman etkindir ve bunu programlı olarak veya kullanıcı arabiriminden devre dışı bırakma yöntemi yoktur. HoloLens 2, [ıntune](/mem/intune/protect/device-compliance-get-started)kullanılarak yönetilen bir cihaz olarak dağıtıldığında, mobil tehdit savunması çözümü olarak [Microsoft Intune olan uç nokta](/mem/intune/protect/advanced-threat-protection) tümleştirmesiyle birlikte daha fazla uyumluluk işlevselliği kullanılabilir.
+Ayrıca, Windows Defender Güvenlik Duvarı, cihaz bağlantısının güvenliğini sağlamak için kritik işlevler sunar. Güvenlik HoloLens 2 ile güvenlik duvarı her zaman etkinleştirilir ve bunu program aracılığıyla veya kullanıcı arabirimi aracılığıyla devre dışı bırakmanın hiçbir yolu yoktur. HoloLens [2, Intune](/mem/intune/protect/device-compliance-get-started)kullanılarak yönetilen bir cihaz olarak dağıtıldığında, Mobile Threat Defense çözümü olarak Microsoft Intune uç nokta tümleştirmesi [ile daha fazla](/mem/intune/protect/advanced-threat-protection) uyumluluk işlevi kullanılabilir.
 
-HoloLens 2 [güvenliği ve mimarisi](/hololens/security-architecture)hakkında daha fazla bilgi edinin.
+HoloLens 2 güvenlik ve mimarisi hakkında [daha fazla bilgi.](/hololens/security-architecture)
 
-## <a name="os-security"></a>İşletim sistemi güvenliği
-güncelleştirmeler otomatik olarak yapılır (varsayılan olarak) HoloLens 2 ' nin en son sürümü olan Windows Holographic ve yüklü tüm uygulamalar ile her zaman güncel olması önerilir. IŞLETIM sistemimizin güvenle nasıl tasarlandığına ilişkin daha fazla bilgi edinmek için aşağıdakilere bakın:
+## <a name="os-security"></a>Işletim Sistemi Güvenliği
+Güncelleştirmeler otomatik olarak yapılır (varsayılan olarak), HoloLens 2'niz her zaman Windows Holographic'in ve yüklü uygulamaların son sürümüyle günceldir. Işletim sistemimizin güvenli bir şekilde nasıl tasarlanma hakkında daha fazla bilgi için aşağıdakilere bakın:
 
-1. [Durum ayrımı ve yalıtımı](/hololens/security-state-separation-isolation)
-1. [Yönetici-daha az işletim sistemi](/hololens/security-adminless-os)
-1. [Parola kullanımını sınırlandırma](/hololens/security-limiting-password-use)
+1. [Durum ayrımı ve yalıtım](/hololens/security-state-separation-isolation)
+1. [Yönetici olmayan işletim sistemi](/hololens/security-adminless-os)
+1. [Parola kullanımını sınırlama](/hololens/security-limiting-password-use)
 
 ## <a name="physical-security"></a>Fiziksel Güvenlik
-HoloLens 2 ' nin [BitLocker şifrelemesi](/hololens/security-encryption-data-protection)tarafından korunan flash belleği vardır. Cihazınız ve yerel verileri, [Gelişmiş kurtarma Yardımcısı](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8#activetab=pivot:overviewtab) kullanılarak çevrimdışı hale gelir veya yönetilen bir cihaz olarak dağıtılmışsa MDM aracılığıyla uzaktan temizlenir.
+HoloLens 2, BitLocker şifrelemesi ile korunan flash [belleğe sahip.](/hololens/security-encryption-data-protection) Cihazınız ve yerel verileri, Gelişmiş Kurtarma Yardımcısı kullanılarak çevrimdışı olarak gönderilip veya yönetilen bir cihaz olarak dağıtılmışsa MDM üzerinden uzaktan silinebiliyor. [](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8#activetab=pivot:overviewtab)
 
 ## <a name="data-protection"></a>Veri Koruma
-Windows güncelleştirmeleri otomatik olarak çalıştırılır (varsayılan olarak) ve [Azure tümleştirmesi](/hololens/security-encryption-data-protection#Azure-integration) , verileri kendisi ile bulut arasında seyahat eden şekilde korur.
+Windows güncelleştirmeler otomatik olarak (varsayılan olarak) çalışır ve [Azure tümleştirmesi](/hololens/security-encryption-data-protection#Azure-integration) kendisiyle bulut arasında seyahat eden verileri korur.
 
-HoloLens 2 ' yi dış istemcilere dağıttığınızda, [Dynamics 365 uzaktan yardım](/hololens/hololens2-deployment-guide) , önemli şirket verileri ve kaynaklarınızın hem ayrı hem de güvenli olmasını sağlar.
+[Dynamics 365 Remote Assist,](/hololens/hololens2-deployment-guide) HoloLens 2'yi dış istemcilere dağıtırken hassas şirket verilerinizin ve kaynaklarınızı ayrı ve güvenli bir şekilde sağlar.
 
-Tanılama verilerinin Microsoft ile paylaşılması, MDM veya OOBE sırasında Kullanıcı tarafından el ile yapılandırılabilir. İki seçenek vardır: Isteğe bağlı Tanılama verileri ve gerekli Tanılama verileri. özgün tanılama ayarınız, sorun giderme amacıyla daha sonra değiştiriliyorsa, **Ayarlar > gizlilik-> tanılama & geri bildirimi** veya bt yöneticisi (MDM) tarafından yönetilen bir cihaz ise kullanıcı tarafından değiştirilebilir. [Windows 10 tanılama, geri bildirim ve gizlilik](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-10-28808a2b-a31b-dd73-dcd3-4559a5199319)hakkında daha fazla bilgi için bkz..
+Tanılama verilerini Microsoft ile paylaşmak MDM tarafından veya OOBE sırasında kullanıcı tarafından el ile yalıtılabilir. İki seçenek vardır: İsteğe bağlı tanılama verileri ve Gerekli tanılama verileri. Sorun giderme amacıyla özgün tanılama ayarınızı daha sonra değiştirmeniz gerekirse, yönetilen bir cihazsa **Ayarlar -> Gizlilik -> Tanılama** & Geri Bildirimi veya IT Yöneticisi (MDM) içinde kullanıcı tarafından değiştirilebilir. Tanılama, geri [bildirim ve gizlilik hakkında daha fazla bilgi için bkz. Windows 10.](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-10-28808a2b-a31b-dd73-dcd3-4559a5199319)
 
 > [!Important]
-> Cihaz tanılama günlükleri, tipik işlemler sırasında kullanıcının hangi işlemler veya uygulamalar tarafından başlatıldığı hakkında bilgi gibi kişisel olarak tanımlanabilen bilgileri (PII) içerir. birden çok kullanıcı bir HoloLens cihazını paylaşıyorsa (örneğin, kullanıcılar farklı Microsoft Azure Active Directory (Azure AD) hesapları kullanarak aynı cihazda oturum açtığında) tanılama günlükleri, birden fazla kullanıcı için geçerli olan pıı bilgilerini içerebilir.
+> Cihaz tanılama günlükleri, kullanıcının tipik işlemler sırasında başladığı işlemler veya uygulamalar gibi kişisel bilgileri (PII) içerir. Birden çok kullanıcı bir HoloLens cihazı paylaştığında (örneğin, kullanıcılar farklı Microsoft Azure Active Directory (Azure AD) hesapları kullanarak aynı cihazda oturum açtığında), tanılama günlükleri birden çok kullanıcı için geçerli olan PII bilgilerini içerebilir.
 
-HoloLens 2 ' den tanılama verilerini toplamak için [birkaç koleksiyon yöntemi ve veri saklama ilkesi](/hololens/hololens-diagnostic-logs) vardır.  microsoft 'un tanılama verilerini nasıl toplayıp kullandığı hakkında daha fazla bilgi için bkz. [microsoft gizlilik bildirimi-tanılama](https://privacy.microsoft.com/privacystatement) -sol gezinti menüsünde **Windows** ' i genişletin ve **tanılama**' yı seçin. **Tanılama** bölümüne gidin.
+HoloLens [2'den tanılama verilerini toplamak](/hololens/hololens-diagnostic-logs) için çeşitli toplama yöntemleri ve veri saklama HoloLens vardır.  Microsoft'un tanılama verilerini nasıl toplayıp kullandığı hakkında daha fazla bilgi için bkz. [Microsoft Gizlilik](https://privacy.microsoft.com/privacystatement) Bildirimi - Tanılama - sol gezinti **menüsünde** Windows'yi genişletin ve Tanılama'yı **seçin.** Tanılama **bölümüne** gidin.

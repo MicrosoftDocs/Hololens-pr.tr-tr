@@ -1,7 +1,7 @@
 ---
-title: Dağıtım Kılavuzu – Remote Assist HoloLens büyük ölçekte buluta bağlı ve 2 dağıtım - Yapılandırma
-description: Remote Assist ile bulut bağlantılı bir ağ üzerinden HoloLens cihazları büyük ölçekte kaydetmek için yapılandırmaları ayarlamayı öğrenin.
-keywords: HoloLens, yönetim, buluta bağlı, Remote Assist, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
+title: dağıtım kılavuzu – buluta bağlı HoloLens 2 dağıtım, uzaktan yardım-yapılandırma ile uygun ölçekte
+description: uzaktan yardım ile bir buluta bağlı ağ üzerinden HoloLens cihazları kaydetmek üzere yapılandırmaların nasıl ayarlanacağını öğrenin.
+keywords: HoloLens, yönetim, buluta bağlı, uzaktan yardım, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,49 +14,49 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: eb96f1cdc799551297c0373268e8cc8f35c6bd06
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 8e6999157c6f5a396812df26f748c771581b61d63709918abb2ae45063810ef8
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635152"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115660551"
 ---
-# <a name="configure---cloud-connected-guide"></a>Yapılandırma - Buluta bağlı Kılavuz
+# <a name="configure---cloud-connected-guide"></a>Yapılandırma-buluta bağlı Kılavuzu
 
-Kılavuzun bu bölümünde,&#39;için Otomatik Kaydı ayarlama ve hem Intune hem de Remote Assist için lisansları uygulama adımlarını aktarabilirsiniz.
+Kılavuzun bu bölümünde, kiracınız için otomatik kaydı nasıl ayarlayacağınızı ve hem Intune hem de uzaktan yardım için lisansların nasıl uygulanacağını&#39;.
 
-## <a name="azure-users-and-groups"></a>Azure Kullanıcıları ve Grupları
+## <a name="azure-users-and-groups"></a>Azure kullanıcıları ve grupları
 
-Bu uzantıya göre Azure ve Intune, yapılandırmaları ve lisansları atamaya yardımcı olmak için kullanıcıları ve grupları kullanır. Bu dağıtım akışını doğrulamanın ve bir kullanıcıdan diğerine Remote Assist çağrısı yapmak için iki kullanıcı&#39;gerekir.
+Bu uzantıya göre Azure ve Intune, yapılandırmaların ve lisansların atanmasını sağlamaya yardımcı olmak için kullanıcıları ve grupları kullanır. Bu dağıtım akışını doğrulamak ve bir kullanıcıdan başka bir kullanıcıya Uzaktan Yardım çağrısı yapabilmek için, iki kullanıcı hesabına ihtiyacınız vardır&#39;.
 
-Lisans atama amacıyla tek bir kullanıcı grubu kullanabiliriz. Her iki kullanıcıyı da aynı gruba katarak Intune ve Remote Assist için bir lisans uygulayabiliriz.
+Lisans atama amacıyla tek bir Kullanıcı grubu yapabiliriz. Her iki kullanıcıyı aynı gruba birleştirebiliriz ve bu gruba Intune ve uzak yardım için bir lisans uygulayabiliriz.
 
-Henüz&#39;bir kullanıcı grubunda iki Azure AD hesabına erişiminiz yoksa; hızlı başlangıç kılavuzları şu şekildedir:
+&#39;t ' den daha önce kullanabileceğiniz bir kullanıcı grubunda iki Azure AD hesabına erişiminiz varsa; hızlı başlangıç kılavuzlarından bazıları şunlardır:
 
 - [Kullanıcı oluşturma](/mem/intune/fundamentals/quickstart-create-user)
 - [Grup oluşturma](/mem/intune/fundamentals/quickstart-create-group)
-- [Gruba kullanıcı ekleme](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – Grup oluşturmak için oluşturulan kullanıcıları ekleme
-- [Azure AD'yi Bir Kullanıcı Grubunun cihazlara katılmasına izin](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) verecek şekilde yapılandırma – Yeni kullanıcı grubunun cihazları Azure AD'ye kaydetme izni olduğundan emin olun
+- [Gruba kullanıcı ekleme](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – grup oluşturmak için oluşturulan kullanıcılar ekleme
+- [Azure AD 'yi bir Kullanıcı grubunun cihazlara katılmasına izin verecek şekilde yapılandırma](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) -Yeni Kullanıcı grubunun CIHAZLARı Azure AD 'ye kaydetme izni olduğundan emin olun
 
-## <a name="auto-enrollment-on-hololens-2"></a>HoloLens 2'de Otomatik Kayıt
+## <a name="auto-enrollment-on-hololens-2"></a>HoloLens 2 ' de otomatik kayıt
 
-Sorunsuz ve sorunsuz bir deneyim elde etmek için, Azure Active Directory 2 cihaz için Intune'a Azure Active Directory Join (AADJ) ve HoloLens Otomatik Kayıt'ı ayarlama yoludur. Bu, kullanıcıların OOBE sırasında kuruluş oturum açma kimlik bilgilerini girişine ve Azure AD'ye otomatik olarak kaydolmasına ve cihazı MDM'ye kaydetmesine olanak sağlar.
+sorunsuz ve sorunsuz bir deneyim sunmak için, HoloLens 2 cihazları için Azure Active Directory katılması (asıfatı) ve ıntune 'a otomatik kayıt ayarlamak için gidilecek yol. Bu, kullanıcıların, OOBE sırasında kuruluş oturum açma kimlik bilgilerini girmesini ve Azure AD 'ye otomatik olarak kaydolmasını ve cihazı MDM 'ye kaydetmelerini sağlar.
 
-bu [Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)kullanarak Hizmetler'i seçerek deneme sürümü için Bir Premium seçene kadar Premium gezinebilirsiniz. Otomatik Kayıt P1 için Azure Active Directory Premium 1 ve 2'nin yeterli olduğunu fark olabilir. Intune'ı seçerek otomatik kayıt için kullanıcı kapsamını ve daha önce oluşturulmuş olan grubu seçerek.
+[Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)kullanarak hizmetler ' i seçip Premium deneme sürümü ' nü seçene kadar birkaç sayfaya gidebilirsiniz. otomatik kayıt P1 'nın yeterli olduğunu Azure Active Directory Premium 1 ve 2 olduğunu fark edebilirsiniz. Intune 'U seçip otomatik kayıt için Kullanıcı kapsamını seçebilir ve daha önce oluşturulmuş olan grubu seçebilirsiniz.
 
-Tüm ayrıntılar ve adımlar için [Intune için otomatik kaydı etkinleştirme kılavuzunu okuyun.](/mem/intune/enrollment/quickstart-setup-auto-enrollment)
+Tam ayrıntılar ve adımlar için, [Intune için otomatik kaydı etkinleştirme](/mem/intune/enrollment/quickstart-setup-auto-enrollment)kılavuzunu okuyun.
 
-## <a name="application-licenses"></a>Uygulama Lisansları
+## <a name="application-licenses"></a>Uygulama lisansları
 
-Uygulama lisansı, kullanıcıların şirket tarafından satın alınan Uygulamaları yüklemelerini veya ücretsiz deneme sürümünden uygulamanın tam sürümüne yükseltmelerini sağlar. Uygulama lisansları kullanıcılara, kullanıcı gruplarına veya cihaz gruplarına uygulanabilir. Uzaktan&#39;kullanmak için, kuruluşta kullanıcılar için Remote Assist lisansları gerekir. Bu kılavuzun amacı doğrultusunda, yukarıda Azure Kullanıcıları ve Grupları'nda oluşturduğumuz kullanıcı grubuna Remote Assist [lisansları atayacak.](hololens2-cloud-connected-configure.md#azure-users-and-groups)
+Uygulama lisansı, kullanıcının satın alınan uygulamaları yüklemesine veya ücretsiz bir deneme sürümünden bir uygulamanın tam sürümüne yükseltmesine olanak tanır. Uygulama lisansları, kullanıcılar, Kullanıcı grupları ya da cihaz gruplarına uygulanabilir. Kuruluşunuzdaki kullanıcıların uzaktan yardım 'ı kullanabilmesi için uzaktan yardım lisanslarının&#39;gerekir. Bu kılavuzun amacı doğrultusunda, yukarıda oluşturduğunuz kullanıcı grubuna [Azure kullanıcıları ve grupları](hololens2-cloud-connected-configure.md#azure-users-and-groups)'Nda uzaktan yardım lisansları atayacağız.
 
-Lisans gereksinimleri, kullanıcının bir cihazdan Remote Assist çağrısı mı yaptığına veya cihazın uzaktan ortak Microsoft Teams. Varsayılan olarak Remote Assist ve Teams onay kutularının her ikisi de işaretlenir. Bu kılavuzun amaçları doğrultusunda, varsayılan kutuları işaretli bırakmanızı öneririz.
+Kullanıcının bir cihazdan uzaktan yardım araması yapıp yapmayacak veya Microsoft Teams bir uzak ortak çalışan olması durumunda, lisansların gereksinimleri farklı olabilir. varsayılan olarak, uzaktan yardım ve Teams onay kutuları her ikisi de işaretlenir. Bu kılavuzun amaçları doğrultusunda, varsayılan kutuları Denetlenmeye ayrıldık.
 
-1. Rol başına farklı Lisanslama [ve ürün gereksinimleri hakkında daha fazla bilgi edinebilirsiniz.](/dynamics365/mixed-reality/remote-assist/requirements#licensing-and-product-requirements-per-role) Birkaç farklı Türde Remote Assist lisansı olduğundan, ihtiyaçlarınıza uygun lisansları edinebilirsiniz.
-2. &#39;lisansını [edinmeniz gerekir.](/dynamics365/mixed-reality/remote-assist/buy-remote-assist)
-3. [Lisanslarınızı gruba](/dynamics365/mixed-reality/remote-assist/deploy-remote-assist) uygulama.
+1. [Rol başına farklı lisanslama ve ürün gereksinimleri](/dynamics365/mixed-reality/remote-assist/requirements#licensing-and-product-requirements-per-role)hakkında daha fazla bilgi edinin. Birkaç farklı türde uzak yardım lisansı bulunur, bu nedenle gereksinimlerinize göre doğru olanları almanızı unutmayın.
+2. [Lisansı edinmeniz](/dynamics365/mixed-reality/remote-assist/buy-remote-assist)&#39;ll gerekir.
+3. [Lisanslarınızı gruba uygulayın](/dynamics365/mixed-reality/remote-assist/deploy-remote-assist) .
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [Buluta bağlı dağıtım - Dağıtma](hololens2-cloud-connected-deploy.md)
+> [Buluta bağlı dağıtım-dağıt](hololens2-cloud-connected-deploy.md)

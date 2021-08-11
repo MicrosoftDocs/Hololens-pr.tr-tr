@@ -16,12 +16,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 7f712c571df1170badf3bfc832e43881278eec90
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: d9a0901a916ec33c076eeae33b680406a45f7feefe82442da1f346e78bc9b383
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640143"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663794"
 ---
 # <a name="configure-hololens-by-using-a-provisioning-package"></a>sağlama paketi kullanarak HoloLens yapılandırma
 
@@ -241,7 +241,7 @@ Windows yapılandırma tasarımcısı ' nda, Windows Holographic için bir sağl
 | --- | --- |
 | **Sertifikalar** | HoloLens bir sertifika dağıtın.  |
 | **ConnectivityProfiles** | HoloLens için bir Wi-Fi profili dağıtın.   |
-| **Sürümgüncelleştir** | [Windows Holographic for Business yükseltin.](hololens1-upgrade-enterprise.md)  |
+| **EditionUpgrade** | [Windows Holographic for Business yükseltin.](hololens1-upgrade-enterprise.md)  |
 | **İlkeler** | HoloLens geliştirici moduna izin verin veya bunu engelleyin. [Windows Holographic for Business tarafından desteklenen ilkeler](/windows/client-management/mdm/policy-configuration-service-provider#hololenspolicies) |
 
 ## <a name="app-install-via-provisioning-package"></a>Sağlama paketi aracılığıyla uygulama yüklemesi

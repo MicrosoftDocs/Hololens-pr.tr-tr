@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 4840535030cc81f222cb25357474f1c751426e91
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: d6eb706c50e97a81910180c70be1d9dbc52bc6603cbc77ad130c1dd3b6a9010e
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635237"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115661814"
 ---
 # <a name="restart-reset-or-recover-hololens-1st-gen"></a>Yeniden başlatma, sıfırlama veya HoloLens (1. Nesil)
 
@@ -45,7 +45,7 @@ HoloLens'ı yeniden başlatmanın en güvenli yolu, Cortana kullanarak yeniden b
 
 1. Kendi HoloLens.
 1. Kullanıcının oturum açtığından ve cihazın kilidini açmak için parola beklemey olduğundan emin olun.
-2. "Hey Cortana, yeniden başlat" veya "Hey Cortana, yeniden başlat" diyelim.
+2. "Hey Cortana, yeniden başlat" veya "Hey Cortana, yeniden başlat" de.
 3. Cortana yanıt verir ve onaylamanızı istenir. Sorudan sonra bir ses çalması için bekleyin ve ardından "Evet" der. Cihaz yeniden başlatılır.
 
 ### <a name="use-the-power-button-to-do-a-safe-restart"></a>Güvenli yeniden başlatma yapmak için güç düğmesini kullanma
@@ -99,7 +99,7 @@ HoloLens 1'in önceki bir sürümüne dönmek için şu adımları izleyin:
 1. Yazılım **yükle'yi** seçin ve yönergeleri izleyin.
 
 > [!NOTE]
-> WDRT, güvenlik sorunlarınızı algılamazsa HoloLens yeniden başlatmayı deneyin. Bu işe uymazsa **Cihazım** algılanmadı'yi seçin, Microsoft HoloLens'ı seçin ve yönergeleri izleyin.
+> WDRT, uygulamanızı algılaya HoloLens bilgisayarınızı yeniden başlatmayı deneyin. Bu işe uymazsa Cihazım algılanmadı'yi  **seçin,** Microsoft HoloLens'ı seçin ve yönergeleri izleyin.
 
 ## <a name="reset-to-factory-settings"></a>Fabrika ayarlarına sıfırlama
 
@@ -122,7 +122,7 @@ Yeniden başlatma ve sıfırlama sonrasında cihaz sorun devam ediyorsa, bilgisa
 
 Sıfırlama için HoloLens veriler bir .iso, .wim veya .vhd dosyasına benzer bir Tam Flash Güncelleştirme (FFU) içinde paketlenmiştir. [FFU görüntü dosyası biçimleri hakkında bilgi edinmek için.](/windows-hardware/manufacture/desktop/wim-vs-ffu-image-file-formats)
 
-Windows Cihaz Kurtarma Aracı'nı kullanarak HoloLens (1. nesil) bilgisayarınıza yeni bir işletim sistemi yükleyebilirsiniz. Bu aracı kullanmadan önce yeniden başlatma veya sıfırlama HoloLens düzeltin.
+Windows Cihaz Kurtarma Aracı'nı kullanarak HoloLens (1. nesil) bilgisayarınıza yeni bir işletim sistemi yükleyebilirsiniz. Bu aracı kullanmadan önce, yeniden başlatma veya sıfırlama HoloLens düzeltin.
 
 Kurtarma işlemi biraz zaman alır. Bu bittiğinde, Windows Holographic yazılımının en son sürümü yüklenir.
 
@@ -136,14 +136,14 @@ Aracı kullanmak için en az 4 GB boş Windows 10 veya sonraki bir bilgisayarda 
 
 Cihaz HoloLens (1. nesil) otomatik olarak algılanmazsa Cihazım **algılanmadı seçeneğini seçin.** Ardından yönergeleri izleyerek cihazı kurtarma moduna alın.
 
-### <a name="manual-flashing-mode"></a>El ile flashing modu
+### <a name="manual-flashing-mode"></a>El ile yanıp sönme modu
 
-Cihazınız algılanmazsa, cihazı yanıp sönme moduna koymak için şu adımları izleyin:
+Cihazınız algılanmazsa, cihazı yanıp sönen moda koymak için şu adımları izleyin:
 
 1. Cihazı herhangi bir güç kaynağından çıkarın.
 1. Cihaz açıksa, tamamen **kapatana** kadar güç düğmesini basılı tutun.
-2. **Ses** düğmesini basılı tutun ve **Power** düğmesine kısaca dokunun. Cihazın başlaması ve yalnızca ortadaki ışığı görüntülemesi gerekir.
+2. Birimi **yukarı doğru** tutun ve güç düğmesine kısa bir **süre** dokunun. Cihazın başlaması ve yalnızca ortadaki LED'i görüntülemesi gerekir.
 3. Cihazı bilgisayarınıza takın.
-4. Windows cihaz kurtarma aracını açın.
-5. **Cihazımı** seçin ve **HoloLens**. 
+4. Windows Kurtarma Aracı'nı açın.
+5. Cihazım **algılanmadı'yi seçin ve** sonra **HoloLens.** 
 6. Cihazınızı kurtarmak için yönergeleri izleyin.

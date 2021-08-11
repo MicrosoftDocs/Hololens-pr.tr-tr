@@ -7,12 +7,12 @@ description: Küçük ve büyük ölçekli kurumsal müşterilere yönelik karma
 ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
-ms.openlocfilehash: 0ddc4eb15036a4f5aa2ecf86893d5f671584f9bf
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: 43940fca03dec957c2afc6108e1ce77979aa000c1366bdc873056107d0b7da20
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659106"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658728"
 ---
 # <a name="what-are-the-mixed-reality-support-and-help-options"></a>Karışık gerçeklik desteği ve yardım seçenekleri nelerdir?
 
@@ -38,7 +38,7 @@ Arama kullanarak sorununuz için bir yanıt bulamazsanız, Microsoft Q&A 'ya yen
 
 - [Azure Spatial Anchors](/answers/topics/azure-spatial-anchors.html)
 - [Azure Remote Rendering](/answers/topics/azure-remote-rendering.html)
-- [Azure nesne bağlantıları](/answers/topics/azure-object-anchors.html)
+- [Azure Object Anchors](/answers/topics/azure-object-anchors.html)
 - [HoloLens Program](/answers/topics/hololens-development.html)
 - [Windows Ürün](/answers/products/windows)
 
@@ -56,7 +56,7 @@ Stack Overflow için yeni bir soru gönderirseniz, soruyu oluştururken lütfen 
 - [Windows Mixed Reality](https://stackoverflow.com/questions/tagged/windows-mixed-reality)
 - [Azure Spatial Anchors](https://stackoverflow.com/questions/tagged/azure-spatial-anchors)
 - [Azure Remote Rendering](https://stackoverflow.com/questions/tagged/azure-remote-rendering)
-- [Azure nesne bağlantıları](https://stackoverflow.com/questions/tagged/azure-object-anchors)
+- [Azure Object Anchors](https://stackoverflow.com/questions/tagged/azure-object-anchors)
 - [Karma Gerçeklik araç seti (MRTK)](https://stackoverflow.com/questions/tagged/MRTK)
 
 #### <a name="other-communities"></a>Diğer topluluklar:
@@ -107,9 +107,9 @@ Stack Overflow için yeni bir soru gönderirseniz, soruyu oluştururken lütfen 
 | Portekiz |    + 351 800600087 |    Mon-Cum, 09:00:00 |
 | ABD |  866-425-4709 |  Mon-Cum, 00-6PM, PST |
 | Kanada |  877-345-2661 |  Mon to Cum, 06:00 -18:00, PST |
-| Çin |   400-805-6783 |  Mon to Cum, 09:00-18:00 |
+| Çin |   400-805-6783 |  Mon-Cum, 09:00-18:00 |
 | Japonya |   0120-03-5241 |  Mon to Cum, 09:00 ile 17:30 |
-| Avustralya |   1800-217-709 |  Mon-Cum, 08:00 -20:00 |
+| Avustralya |   1800-217-709 |  Mon to Cum, 08:00 -20:00 |
 | Singapur |   1800 622-1816 | Mon to Cum, 08:30 - 17:30 |
 | Yeni Zelanda | 0800 471 640 |  Mon-Cum, 08:00-18:00 |
 
@@ -139,7 +139,7 @@ Azure Spatial Anchors, Azure Object Anchors veya Azure portal için Azure Object
 
     1. Sorun hakkında daha fazla bilgi için sayfanın altındaki **Sonraki:** Çözümler'e tıklayın.
 
-    2. Size ulaşmanın tercih ettiğiniz yolunun yanı sıra formu mümkün olduğunca kesin ve ayrıntılı bir şekilde doldurun.
+    2. Formu mümkün olduğunca hassas ve ayrıntılı bir şekilde doldurun ve size ulaşmak için tercih ettiğiniz yolu kullanın.
 
     3. Önceki bölümlerde dolduran tüm bilgileri gözden geçirin ve şimdi destek isteğini gönderin.
 

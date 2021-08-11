@@ -14,12 +14,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 6c279664fa6051fab2f5e2e8f61e70b55704ae7c
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 3c17ad2397d87660cb2013604029864f9c36abdbf520710c4fe5952e3440e3a5
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640415"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664239"
 ---
 # <a name="enroll-hololens-in-mdm"></a>MDM'HoloLens kayıt
 
@@ -54,13 +54,13 @@ Cihaz MDM sunucunuza kaydedile Ayarlar uygulama artık cihazın cihaz yönetimin
 
 Kurumda bir [Azure Premium](https://azure.microsoft.com/overview/)aboneliği varsa, kimlik doğrulaması için bir Azure AD belirteci kabul eden bir MDM çözümü (şu anda yalnızca Microsoft Intune ve AirWatch'da desteklemektedir) Azure Active Directory (Azure AD) kullanıyorsa, IT yöneticiniz Azure AD'yi, kullanıcı Azure AD hesabıyla oturum atıktan sonra MDM kaydına otomatik olarak izin verecek şekilde yapılandırabilirsiniz. [Azure AD kaydı yapılandırmayı öğrenin.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
-Otomatik kayıt etkinleştirildiğinde ek el ile kayıt gerekmez. Kullanıcı bir Azure AD hesabıyla oturum açınca, ilk çalıştırma deneyimi tamamladıktan sonra cihaz MDM'ye kaydolacak.
+Otomatik kayıt etkinleştirildiğinde ek el ile kayıt gerekmez. Kullanıcı bir Azure AD hesabıyla oturum açınca, ilk çalıştırma deneyimini tamamladıktan sonra cihaz MDM'ye kaydolacak.
 
-Bir cihaz Azure AD'ye Katılmış olduğunda, cihaz sahibi olarak kabul [edilenleri etkileyebilir.](security-adminless-os.md#device-owner)
+Bir cihaz Azure AD'ye Katılmış olduğunda, cihaz sahibini kabul [edenleri etkileyebilir.](security-adminless-os.md#device-owner)
 
 ## <a name="unenroll-hololens-from-intune"></a>Intune'HoloLens kaydı
 
-Kayıt yöntemine bağlı olarak, cihazınızın kaydı silinene kadar kullanılabilir olabilir.
+Kayıt yöntemine bağlı olarak cihazınızın kaydı silinene kadar kullanılabilir olabilir.
 
 Cihazınız bir Azure AD hesabına veya Autopilot'a kaydedildiyse, Intune'dan kayıttan silinamaz. Azure AD'den HoloLens veya Azure AD kiracılarından farklı bir kiracıya yeniden katılmayı isterseniz cihazı [sıfırlamanız/ters eğik](hololens-recovery.md#reset-the-device) çizgiyle sıfırlamanız gerekir.
 
