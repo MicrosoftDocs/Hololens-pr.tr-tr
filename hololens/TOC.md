@@ -34,6 +34,7 @@
 #### [Görsel kalite ve rahatlık geliştirme](hololens-calibration.md)
 #### [Fiziksel alanları HoloLens eşleme](hololens-spaces.md)
 #### [HoloLens ortamı konuları](hololens-environment-considerations.md)
+#### [Platformlar taşınıyor](hololens2-moving-platform.md)
 ### Bağlan HoloLens 2
 #### [bir ağa HoloLens Bağlan](hololens-network.md)
 #### [Bluetooth ve USB-C cihazlarına Bağlan](hololens-connect-devices.md)
