@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 Platform modu taşınıyor
-description: platformlar taşınıyor HoloLens kullanma
-keywords: platformlar, dinamik hareket, Hololens, hareketli platform modu
+title: HoloLens 2 Platform Modunu Taşıma
+description: Taşıma platformlarında HoloLens kullanma
+keywords: taşıma platformları, dinamik hareket, hololens, hareketli platform modu
 author: evmill
 ms.author: v-evmill
 ms.reviewer: yabahman
@@ -14,71 +14,73 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2c0e6e285b2eb86342450e8f05876e0cc3bccfe8
-ms.sourcegitcommit: 5cb3230e02e703584e50358cb0f0b5f33a51b169
+ms.openlocfilehash: 9c37baa6fb63e9b049378799515ef107ed0ea7a8
+ms.sourcegitcommit: 7b666c63a0367032a4a3f366b7f9029b2613e345
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "121858639"
+ms.lasthandoff: 08/18/2021
+ms.locfileid: "122401214"
 ---
-# <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Düşük dinamik hareket taşıma platformları üzerine platform modunu taşıma
+# <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Düşük Dinamik Hareket Hareketli Platformlarında Platform Modunu Taşıma
 
-**ınsider build 20348,1411** ' de, HoloLens 2 ' de düşük dinamik hareket taşınan platformları izlemek için beta desteği ekledik. derlemeyi yükledikten ve platformu taşıma modunu etkinleştirdikten sonra, büyük ve büyük deniz mavisi gibi daha önce erişilemeyen ortamlarda HoloLens 2 ' yi kullanabilirsiniz. Şu anda özelliği, yalnızca bu taşıma platformlarının etkinleştirilmesini hedeflenmiştir. Başka ortamlarda özelliği kullanmayı denediğinize hiçbir şey engel olmadıysa, bu özellik önce bu ortamlar için destek eklemeye odaklanılmıştır.
+**Insider 20348.1411** derlemesinde, HoloLens 2'de düşük dinamik hareket hareketli platformlarında izlemeye yönelik beta desteği ekledik. Derlemeyi yükledikten ve Platform Modunu Taşıma'ya etkinleştirdikten sonra, HoloLens 2'nizi büyük gemiler ve büyük deniz gemileri gibi daha önce erişilemeyen ortamlarda kullanabilirsiniz. Şu anda bu özellik yalnızca bu hareketli platformların etkinleştirilmesini hedeflemektedir. Özelliği başka ortamlarda kullanmaya çalışmanıza engel olan bir şey yoktur ancak özellik önce bu ortamlar için destek eklemeye odaklanmaktadır.
 
 > [!NOTE]
-> bu özellik şu anda yalnızca Windows [ınsiders](hololens-insider.md)aracılığıyla kullanılabilir.
+> Bu özellik şu anda yalnızca Windows [Insiders aracılığıyla kullanılabilir.](hololens-insider.md)
 
-Bu makalede şunları ele alınmaktadır:
+Bu makale şunları kapsar:
 
-1. [Hareketli platformun neden gereklidir?](#why-moving-platform-mode-is-necessary)
-1. [Taşıma platformu modunu etkinleştirme](#enabling-moving-platform-mode)
+1. [Taşıma Platformu Neden Gereklidir?](#why-moving-platform-mode-is-necessary)
+1. [Platform Modunu Taşımayı Etkinleştirme](#enabling-moving-platform-mode)
 
-## <a name="why-moving-platform-mode-is-necessary"></a>Platform modunun neden gereklidir?
+## <a name="why-moving-platform-mode-is-necessary"></a>Platform Modunu Taşıma Neden Gereklidir?
 
-HoloLens, kararlı hologramlar göstermek için [6 derece serbestlik](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) (X, Y, Z çevirisi ve döndürme, sıklık, yaw dönüşü) ile baş konumunuzu izleyebilmelidir. bunu yapmak için, iki ayrı kaynaktaki iki benzer bilgi parçasını takip HoloLens izler:
+HoloLens hologramları göstermek için [6](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) derece serbestlik (X, Y, Z çeviri ve roll, pitch, yaw rotasyon) ile baş pozisyonunu izleyebiliyor olması gerekir. Bunu yapmak için HoloLens farklı kaynaklardan iki benzer bilgi parçası izlersiniz:
 
-1. , Örneğin, HoloLens kullandığınız fiziksel Oda, ortamı izleyen görünür açık kameralar
-1. Inertial ölçü birimi (ıMU),-dünya üzerindeki baş hareket ve yönlerinizi izleyen bir ivometer, jroscope ve manyetik tometreden oluşur
+1. Görünür ışık kameraları: Ortamı takip eder( örneğin, fiziksel oda) HoloLens
+1. Inertial Measurement Unit (IMU) : Dünya'ya göre baş hareketlerinizi ve yönünizi takip eden bir ivmeölçer, jiroscope ve ölçerden oluşan bir inertial Measurement Unit (IMU)
 
-Bu iki kaynaktan alınan bilgiler, daha düşük bir gecikme süresi ve sorunsuz hologramlar oluşturmak için yüksek sıklıkta baş konumunuzu izlemek üzere bileşik bir şekilde yapılır.
+Bu iki kaynağın bilgileri, sorunsuz hologramlar işlemek için düşük gecikme süresinde ve yeterince yüksek sıklıkta baş konumunuz izlemek için bileşiktir.
 
-Ancak, bu yaklaşım önemli bir varsayımına dayanır; ortam (kameralar tarafından izlenen), dünya ile (ıMU 'nin ölçüm yapabilen) sabit olarak kalır. Bu durum, su içindeki bir bot 'ta olduğu gibi, her iki kaynaktan da bulunan bilgiler birbirleriyle çakışabilir ve izleyicide kayıp oluşmasına neden olabilir. Bu çakışma, swimmy hologram veya hatta izleme kaybından yanlış konum bilgileri ve sonuçları üretir.
+Ancak, bu yaklaşım kritik bir varsayıma dayanır; ortam (kameralar tarafından izlendi) Dünya'ya göre sabit kalır (bu, IMU'ya göre ölçümler yapmak için kullanılır). Böyle bir durumla karşılamayacaksa, tıpkı suların içinde yer alan bir deniz üzerinde her iki kaynakta yer alan bilgiler çakışabilir ve izleyicinin kaybolabilir. Bu çakışma yanlış konum bilgileri üretir ve bunun sonucunda hologramlarım yüzer ve hatta kaybı takip edin.
 
-Platform modunun taşınması bu sorunu düzeltir. Taşıma platformu modunu etkinleştirdiğinizde, bu, izleyicimizin her zaman birbirini tamamen kabul etmesi için sensör girdilerimize güvenemiz bir ipucu olan. Bunun yerine, Visual Tracking 'e daha fazla güvenmelidir ve ıconkou inertial hareket verilerini hızlıca tanımlayabilir ve IMU girişini kullanabilmek&#39;uygun şekilde filtrelemeniz gerekir.
+Platform Modu'na taşıma bu sorunu çözümler. Hareketli Platform Modu'na etkinleştirerek izleyicimize algılayıcı girişlerimizi kullanarak her zaman tamamen aynı görüşe sahip olamayabilirsiniz. Bunun yerine, IMU girişini yeniden kullanamadan önce görsel izlemeye daha fazla güvenmemiz, tutarsız verimsel olmayan verileri hızla tanımlamamız ve&#39;uygun şekilde filtrelememiz gerekir.
 
-## <a name="supported-environments-and-known-limitations"></a>Desteklenen ortamlar ve bilinen sınırlamalar
+## <a name="supported-environments-and-known-limitations"></a>Desteklenen Ortamlar ve Bilinen Sınırlamalar
 
-Platform modunun taşınması, inertial ve Visual Data Conflict 'in çalışmalarını akıllıca işlemek için geliştirilmiştir. Bu, şu anda düşük dinamik hareket yaşayan büyük deniz mavisi ' tir. Yani, kesinlikle sınırlamalar ve desteklenmeyen senaryolar vardır.
+Taşıma Platformu Modu, veri çakışması ve veri çakışması durumlarını akıllı bir şekilde işlemek için geliştirilmişken, şu anda düşük dinamik hareketle karşılaşan büyük deniz kuvvetlerinin kapsamına girer. Bu, kesinlikle sınırlamalar ve desteklenmeyen senaryolar olduğu anlamına gelir.
 
 ### <a name="known-limitations"></a>Bilinen Sınırlamalar
 
-- Taşıma platformu modu (MPD) için desteklenen tek ortamlar, düşük dinamik hareket yaşayan büyük deniz mavisi ortamlardır. Diğer bir deyişle, çok yaygın ortamlar/durumlar, yüksek frekanslı hareket ve yüksek hızlandırma ve [Jerk](https://en.wikipedia.org/wiki/Jerk_(physics))seviyeleri nedeniyle henüz **desteklenmemiştir** . Örneğin: düzler, traıns, Araba, Bisiklet, veri yolları, küçük Boats, yükseltme vb.
-- mpb etkinleştirildiğinde, özellikle kesik kesik bir su olduğunda, Hologramlar biraz zaman alabilir.
-- Hiçbir şey, kullanıcıların desteklenmeyen ortamlarda MPD kullanmayı denemelerini engeller, ancak cihaz desteklenmeyen alanda izlemeyi koruyabilmezse kullanıcılar istenmeyen yan etkilerle karşılaşabilir. Örneğin, MPD ile kullanıcılar, bu, daha önce imkansız olsa da, katları değiştirirken bir Asansör&#39;bulunabilir. Ne yazık ki MPD cihazın izlemeyi korumasını sağlar, ancak şu anda eşleme yönetimini işlemez. Böylece kullanıcılar, bir Asansör içindeki yüzlerin değiştirilmesinin, cihazın üst ve alt zeminleri karıştırabilmesini ve harita kalitesini olumsuz yönde etkilemesini sağlayacaktır.
+- Hareketli Platform Modu(MPM) için desteklenen tek ortamlar, düşük dinamik hareketle karşılaşan büyük deniz gemileridir. Başka bir deyişle, birçok yaygın  ortam/durum henüz yüksek frekanslı hareket ve yüksek hızlanma ve ivme düzeyleri nedeniyle [desteklenmemektedir.](https://en.wikipedia.org/wiki/Jerk_(physics)) Örneğin: düzlemler, trenler, arabalar, bisikletler, otobüsler, küçük asansörler, vb.
+- Hologramlar MPM etkinleştirildiğinde, özellikle de dalgalı sularda biraz sallanıyor olabilir.
+- Hiçbir şey, kullanıcıların desteklenmeyen ortamlarda MPM kullanmaya denemesini önlese de, cihaz desteklenmeyen alanda izlemeyi sürdürebilirse kullanıcılar istenmeyen yan etkilerle karşılanabilir. Örneğin, MPM'de kullanıcılar,&#39;değiştirirken asansörde kullanabileceğini, ancak bu daha önce mümkün değildi. Ne yazık ki MPM, cihazın izlemesini sürdürmesini sağlar ancak şu anda harita yönetimini işlemez. Bu nedenle kullanıcılar, bir asansörde zeminlerin değiştirilmesinin cihazın üst ve alt katları karıştırmasını ve harita kalitesini olumsuz yönde etkileyeceğini bulabilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Platform modunu taşımaya yönelik Beta desteği yalnızca birkaç önkoşul gerektirir:
+Platform Modunu Taşıma için beta desteği yalnızca birkaç önkoşul gerektirir:
 
-1. [En son Insiders yapısını yay aracılığıyla](hololens-insider.md#ffu-download-and-flash-directions) veya [cihazınızı kaydederek ve güncelleştirerek](hololens-insider.md#start-receiving-insider-builds)oluşturma 20348,1411 veya daha yeni bir sürüm oluşturun.
-   - Note: Bu derleme Şu anda yalnızca [Insider geliştirme kanalında](hololens-insider.md#start-receiving-insider-builds)kullanılabilir.
-2. [Geliştirici modunu ve cihaz portalını](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal) etkinleştir
+1. Arc aracılığıyla en son [Insiders](hololens-insider.md#ffu-download-and-flash-directions) derlemesini ya da cihazınızı kaydederek ve güncelleştirerek derleme 20348.1411 [veya daha yenisini yükleyin.](hololens-insider.md#start-receiving-insider-builds)
+   - Not: Bu derleme şu anda yalnızca [Insider Dev Channel'da kullanılabilir.](hololens-insider.md#start-receiving-insider-builds)
+2. Geliştirici [Modunu ve Cihaz Portalı](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 
-## <a name="enabling-moving-platform-mode"></a>Taşıma platformu modunu etkinleştirme
+## <a name="enabling-moving-platform-mode"></a>Platform Modunu Taşımayı Etkinleştirme
 
-Platform modunu taşımayı etkinleştirmek için önce [cihaz portalını etkinleştirin](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+Taşıma Platformu modunu etkinleştirmek için önce ['yi Cihaz Portalı.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 
-1. Sol taraftaki menüde **sistem** Accordion seçin
-2. **Platform modunu taşıma** sayfasını seçin ve **hareketli platform modu** onay kutusunu işaretleyin
+1. Sol **menüden** Sistem uyumu'nı seçin
+2. Platform **Modunu Taşıma sayfasını** seçin ve Platform Modunu **Taşıma onay** kutusunu işaretleyin
 
-![İlk görüntü](.\images\moving-platform-1.png) ![İkinci görüntü](.\images\moving-platform-2.png)
+   ![İlk görüntü](.\images\moving-platform-1x.png)
+ 
+     ![İkinci görüntü](.\images\moving-platform-2x.png)
 
-3. Bir uyarıyla istendiğinde **Tamam** ' ı seçin.
+3. Uyarı istendiğinde Tamam'ı **seçin**
 
-![Üçüncü görüntü](.\images\moving-platform-3.png)
+   ![Üçüncü görüntü](.\images\moving-platform-3x.png)
 
-4. Cihazınızı yeniden başlatarak, en üstteki cihaz portalı **Güç** menüsü aracılığıyla ya da aşağıdaki sesli komutu yayımlayarak &quot; cihazı yeniden başlatın &quot; ve Evet ' i seçin &quot; &quot; .
+4. Cihazınızı yeniden başlatın. Bu işlemi sağ üst Cihaz Portalı **Power** menüsü aracılığıyla veya aşağıdaki sesli komutla cihazı yeniden başlat ve &quot; &quot; Evet'i &quot; seçerek gerçekleştirebilirsiniz. &quot;
 
-![Dördüncü görüntü](.\images\moving-platform-4.png)
+   ![Dördüncü görüntü](.\images\moving-platform-4x.png)
 
-Cihaz portalında hareketli platform modu seçeneğini göremiyorsanız, bu durumda henüz doğru yapıda değilsiniz demektir. [Önkoşullar](#prerequisites) bölümüne bakın.
+Platform Modunu Taşıma seçeneğini Cihaz Portalı, büyük olasılıkla doğru derlemede olmadığınız anlamına gelir. [Önkoşullar bölümüne](#prerequisites) bakın.

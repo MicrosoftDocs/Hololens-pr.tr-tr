@@ -75,7 +75,7 @@
 ### [Şifreleme ve veri koruması](security-encryption-data-protection.md)
 ### [Ağ güvenliği](security-network-security.md)
 ### [Güvenlik Mühendisliği ](security-engineering.md)
-### [HoloLens 2 gizlilik bildirimi](hololens2-compliance.md)
+### [HoloLens 2 gizlilik ve veri koruması](hololens2-privacy.md)
 ## Aygıt Yönetimi
 ### [HoloLens cihazlarını yönetmek için MDM kullanma](hololens-mdm-configure.md)
 ## Cihaz Kaydetme
@@ -127,10 +127,10 @@
 #### [Kümenizi ayarlama HoloLens (1. nesil)](hololens1-start.md)
 ### Günlük Kullanım
 #### [HoloLens (1. nesil) tıklamayı kullanma](hololens1-clicker.md)
-#### [3B Görüntüleyici 'de HoloLens kullanma (1. nesil)](holographic-3d-viewer-beta.md)
+#### [3B Görüntüleyici 'de HoloLens (1. nesil) kullanma](holographic-3d-viewer-beta.md)
 #### [HoloLens (1. nesil)](hololens1-basic-usage.md)
 #### [HoloLens için özel uygulamaları yönetme](holographic-custom-apps.md)
-#### [HoloLens'nin yerelleştirilmiş sürümünü yükleme (1. nesil)](hololens1-install-localized.md)
+#### [HoloLens yerelleştirilmiş sürümünü yükleme (1. nesil)](hololens1-install-localized.md)
 #### [Windows Holographic for Business kilidini açma](hololens1-upgrade-enterprise.md)
 #### [Sıfırlama HoloLens (1. nesil)](hololens1-recovery.md)
 ### HoloLens (1. Nesil) Güvenlik
