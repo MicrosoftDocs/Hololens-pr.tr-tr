@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
-  title: HoloLens 2 geliştirme sürümü sss
-  description: HoloLens 2 geliştirme sürümü karma gerçeklik cihazı hakkında en sık sorulan sorularla güncel kalın.
+  title: HoloLens 2 Geliştirme Sürümü hakkında SSS
+  description: HoloLens 2 Development Edition karma gerçeklik cihazı hakkında en sık sorulan soruları takip edin.
   keywords: Hololens 2 purchasing options, HoloLens options, Developer Edition
   author: evmill
   ms.author: v-evmill
@@ -15,179 +15,179 @@ metadata:
   manager: yannisle
   appliesto:
   - HoloLens 2
-  ms.openlocfilehash: 92a7afe20808afa57282a1f073c326bbf9550d6b345cd27a236c59300f7dcbf9
-  ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+  ms.openlocfilehash: 85631d756285f4111016e39dc946733bb1e12d3c
+  ms.sourcegitcommit: 6b3b455f66a2b4d5b42f4674a5ff940a2a01c294
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "115659754"
-title: HoloLens 2 geliştirme sürümü sss
+  ms.lasthandoff: 08/20/2021
+  ms.locfileid: "122610259"
+title: HoloLens 2 Geliştirme Sürümü hakkında SSS
 summary: ''
 sections:
 - name: Genel sorular
   questions:
   - question: >
-      HoloLens 2 geliştirme sürümü ile nasıl edinebilirim?
+      HoloLens 2 Development Edition ile ne elde yapabilirim?
     answer: >
-      HoloLens 2 geliştirme sürümü bir HoloLens 2, $500 Azure kredileri, 3 aylık Unity Pro deneme sürümü ve 3 aylık pikseller eklenti denemesi içerir.
+      HoloLens 2 Geliştirme Sürümü, HoloLens 2, 500 ABD doları Azure kredisi, 3 aylık Unity Pro deneme sürümü ve 3 aylık Pixyz Eklenti denemesi içerir.
   - question: >
-      HoloLens 2 ile HoloLens 2 geliştirme sürümü arasındaki fark nedir?
+      HoloLens 2 ve HoloLens 2 Geliştirme Sürümü arasındaki fark nedir?
     answer: >
-      bir üretim ayarında HoloLens 2 (commercial edition) ile kullanılacak dahili kurumsal uygulamaları derlemek ve test etmek için yalnızca HoloLens 2 geliştirme sürümünü kullanabilirsiniz. Geliştirme sürümü satın almanın bir parçası olarak Microsoft, kendi takdirine bağlı olarak, kullanıma alma işlemi sırasında tanımlanan belirli yetkilendirmeler sağlar. Bu yetkilendirmeler, belirli indirim kredilerini kullanma hakkını veya belirli Microsoft ya da üçüncü taraf hizmetlere veya araçlara sınırlı bir süre için deneme erişimi içerir. [Daha fazla bilgi edinin](hololens2-options-dev-edition.md)
+      Bir üretim ayarında HoloLens 2 (ticari sürüm) ile kullanılacak iç kurumsal uygulamaları derlemek ve test etmek için yalnızca HoloLens 2 Geliştirme Sürümünü kullanabilirsiniz. Microsoft, Development Edition'ı satın alma işleminin bir parçası olarak, yalnızca kendi takdirine bağlı olarak, satın alma işlemi sırasında belirlenen belirli yetkilendirmeleri size sağ edebilir. Bu yetkilendirmeler belirli indirim kredilerini kullanma veya belirli Microsoft ya da üçüncü taraf hizmet ya da araçlara sınırlı bir süre için deneme erişimi hakkı içerir. [Daha fazla bilgi edinin](hololens2-options-dev-edition.md)
   - question: >
-      HoloLens 2 ' nin herhangi bir sürümü geliştirmek için kullanılabilir mi?
+      Geliştirmek için HoloLens 2'nin herhangi bir sürümü kullanılabilir mi?
     answer: >
-      Evet. HoloLens 2 ' nin herhangi bir sürümü, uygulama geliştirmek için kullanılabilir.
+      Evet. Uygulama geliştirmek HoloLens 2'nin herhangi bir sürümü kullanılabilir.
   - question: >
-      $500, Azure kredileri, 3 aylık Unity Pro deneme sürümü ve 3 aylık pikseller eklenti deneme sürümü için nasıl gönderilir?
+      500 ABD doları Azure kredimi, 3 aylık Unity Pro denememi ve 3 aylık Pixyz Eklenti denememi nasıl alırsınız?
     answer: >
-      İndirimli kredileriniz veya deneme erişiminiz, ürün sevk irsaliyesindeki 2 iş günü içinde satın alırken kullanılan e-postaya gönderilir.
+      İndirim kredileri veya deneme erişimi, HoloLens 2 Geliştirme Sürümü'nize dahil edilir.
   - question: >
-      deneme kredilerini almak için HoloLens 2 (yalnızca cihaz) cihazını HoloLens 2 geliştirme sürümüne yükseltebilir miyim?
+      Deneme kredilerini almak için HoloLens 2 (yalnızca cihaz) cihazımı HoloLens 2 Geliştirme Sürümü'ne "yükseltebilirsiniz"?
     answer: >
-      Hayır, cihaz aktarım planları sunmuyoruz. Herhangi bir sürümden başka bir sürüme aktarım yeteneği yoktur.
+      Hayır, cihaz aktarım planları sun sunuyoruz. Herhangi bir sürümden başka bir sürüme aktarım olanağı yoktur.
   - question: >
-      Unity Pro nedir?
+      Unity Pro?
     answer: >
-      Unity Pro, küçük/orta ölçekli studios/firms 'lerin gerçek zamanlı 3b platformudur. Teknik ve teknik olmayan yetenekler karışımı olan takımlar için tasarlanmıştır. [Daha fazla bilgi edinin](https://store.unity.com/products/unity-pro)
+      Unity Pro, küçük/orta ölçekli stüdyolar/şirketler için gerçek zamanlı bir 3D platformdur. Teknik becerilere ve teknik olmayan becerilere sahip ekipler için tasarlanmıştır. [Daha fazla bilgi edinin](https://store.unity.com/products/unity-pro)
   - question: >
-      Piksellerle hangi eklenti nedir?
+      Pixyz Eklentisi nedir?
     answer: >
-      Pikseller eklentisi neredeyse tüm biçimleri okur ve dönüştürür, bunları en iyi duruma getirir ve Unity 'ye koyar ve gerçek zamanlı uygulamalar için kullanıma hazırlama varlıkları sağlamak için bu değeri kullanır. [Daha fazla bilgi edinin](https://unity.com/products/pixyz)
+      Pixyz Eklentisi hemen her biçimi okur ve dönüştürür, unity'ye iyiler ve koyar ve gerçek zamanlı uygulamalar için kullanıma hazır varlıklar sağlamak üzere hazır hale getirmek üzere hazırlar. [Daha fazla bilgi edinin](https://unity.com/products/pixyz)
   - question: >
-      HoloLens 2 geliştirme sürümü için finansmanı mi var?
-    answer: "evet, [HoloLens 2 geliştirme sürümü için finans](https://ms.liftforward.com/hololens?product=hololens-development-edition) artık yalnızca Birleşik Devletler kullanılabilir. \n"
+      HoloLens 2 Development Edition için uygun mu?
+    answer: "Evet, [HoloLens 2 Geliştirme Sürümü](https://ms.liftforward.com/hololens?product=hololens-development-edition) artık yalnızca Birleşik Devletler. \n"
   - question: >
-      HoloLens 2 geliştirme sürümü yetkilendirmelerimin hakkında sorularla iletişim Who.
+      Who 2 Development Edition yetkilendirmelerim HoloLens ilgili sorularla bağlantı kurarak bağlantı kurarak ne yapabilirim?
     answer: >
-      Yetkilendirmelerle ilgili herhangi bir soru ile, 866-425-4709 adresinden satış Uzmanlarınıza başvurun.
-  - question: "şirketimizin birden çok HoloLens 2 geliştirme sürümü cihazı satın alabilir mi? \n"
-    answer: "Bu cihaz, karma gerçeklik çözümleri oluşturmakta geliştiriciler içindir. Müşteri başına bir satın alma işlemi sayısı sınırlıyoruz. şirketiniz birden çok geliştirme sürümü cihazı satın almak istiyorsa, şirket adına HoloLens 2 geliştirme sürümü cihazları satın almak için ayrı işlemler gerektirir. \n"
-  - question: "HoloLens 2 geliştirme sürümü cihazımın müşterilerime gösterilmesini sağlayabilir miyim? \n"
+      Yetkilendirmelerle ilgili tüm sorularınız için 866-425-4709, Mon to Cum, 06:00 ile 18:00, PST arasında satış uzmanınıza ulaşın.
+  - question: "Şirketim birden çok HoloLens 2 Geliştirme Sürümü cihazı satın alabilir mi? \n"
+    answer: "Bu cihaz, karma gerçeklik çözümleri geliştiren geliştiricilere yöneliktir. Müşteri işlemi başına bir satın alma sınırlaması vardır. Şirketiniz birden çok Geliştirme Sürümü cihazı satın almak istiyorsa, şirket adına HoloLens 2 Geliştirme Sürümü cihazları satın almak için ayrı işlemler gerektirir. \n"
+  - question: "HoloLens 2 Development Edition cihazımı müşterilerime gösterebilir miyim? \n"
     answer: >
-      Evet, bu cihaz, karma gerçeklik çözümlerini prototip ve test etmek için kullanılmak üzere tasarlanmıştır.
-  - question: "HoloLens 2 geliştirme sürümünü nereden alabilirim? \n"
-    answer: "HoloLens 2 geliştirme sürümü özel olarak Microsoft Store satılabilir.  \n"
-  - question: "HoloLens 2 geliştirme sürümünü döndürebilir miyim?  \n"
+      Evet, bu cihazın karma gerçeklik çözümlerini üretmek ve test etmek için kullanılmak üzere tasarlanmıştır.
+  - question: "HoloLens 2 Development Edition'ı nereden satın alabilirim? \n"
+    answer: "HoloLens 2 Development Edition yalnızca Microsoft Store.  \n"
+  - question: "HoloLens 2 Development Edition sürümümi iade miyim?  \n"
     answer: >
-      tüm satışlar nihai ve HoloLens 2 geliştirme sürümünde kullanılabilir para iadesi yoktur.
+      Tüm satışlar nihaidir ve 2 Geliştirme Sürümü'HoloLens para iadesi yoktur.
   - question: >
-      geliştirici sürümü HoloLens 2 ' den farklı donanım gereksinimlerine sahip mi?
-    answer: "Hayır, bu cihaz bir donanım gereksinimleri perspektifinden aynı. Geliştirme sürümü, ticari bir ayarda uygulamaların geliştirme ve/veya test etme sürecinde dağıtılmasına izin verilir. \n"
+      Developer Edition'ın 2. sürümden farklı donanım HoloLens var mı?
+    answer: "Hayır, bu cihaz donanım gereksinimleri açısından aynı. Geliştirme Sürümünün, ticari bir ortamda uygulama geliştirme ve/veya test etme amacıyla dağıtılmasına izin verilir. \n"
   - question: >
-      HoloLens 2 geliştirme sürümü üzerinde geliştirme için nasıl karışık gerçeklik araç seti – Unity 'yi kullanabilirim?
+      HoloLens 2 Development Edition sürümümde geliştirmek için Karma Gerçeklik Araç Seti – Unity'HoloLens kullanabilirim?
     answer: >
       MRTK-Unity, Unity’deki platformlar arası MR uygulama geliştirmesini hızlandırmak için kullanılan, bileşen ve özelliklerden oluşan bir küme sağlayan Microsoft tabanlı bir projedir. [Daha fazla bilgi edinin](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
   - question: >
-      HoloLens 2 geliştirme sürümü üzerinde geliştirme için karma gerçeklik araç setini (gerçek olmayan uıxt) nasıl kullanabilirim?
+      HoloLens 2 Development Edition'da geliştirmek için Karma Gerçeklik Araç Seti – Unreal UXT'i nasıl kullanabilirim?
     answer: >
-      MRTK-Unreal, yayımlanacak ilk UX araçları bileşenidir ve şu anda yalnızca HoloLens 2 ' de desteklenir. Bileşen eklentisi, giriş simülasyonu, etkileşim aktörleri, bas özellikli düğme bileşenleri, izleme bileşenleri ve davranış bileşenlerine ilişkin ortak UX özelliklerinin kod, şema ve örnek varlıklarını içerir. [Daha fazla bilgi edinin](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/WelcomeToUXTools.html)
+      MRTK-Unreal ilk UX Araçları bileşenidir ve şu anda yalnızca 2. sürümde HoloLens. Bileşen eklentisi; giriş simülasyonu, el etkileşimi aktörleri, basabilir düğme bileşenleri, manipülatör bileşenleri ve davranış bileşenlerini takip etmek için ortak UX özelliklerinin kod, şema ve örnek varlıklarını içerir. [Daha fazla bilgi edinin](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/WelcomeToUXTools.html)
   - question: >
-      HoloLens 2 geliştirme sürümü için işletim sistemi sürümleri HoloLens 2 ile aynı mı?
+      HoloLens 2 Geliştirme Sürümü için işletim sistemi sürümleri, HoloLens 2 ile aynı mı?
     answer: >
       Evet.
   - question: >
-      HoloLens 2 geliştirme sürümü cihazındaki yayınlanan (dışarıdan yükleme veya mağaza) uygulamaları çalıştırabilir miyim?
+      Yayımlanan (kenardan yükleme veya depolama) uygulamaları HoloLens 2 Geliştirme Sürümü cihazımda çalıştırabilirsiniz?
     answer: >
-      HoloLens 2 geliştirme sürümü hüküm ve koşullarına sahipseniz, evet, yayımlanan herhangi bir uygulamayı geliştirici sürümünde çalıştırabilirsiniz. Bu SKU için dışarıdan yüklenen veya depolanmış uygulamaların kullanımını sınırlandırmıyoruz.
+      HoloLens 2 Development Edition hüküm ve koşullarına bağlı olarak bağlıysanız evet, Developer Edition'da yayımlanan herhangi bir uygulamayı çalıştırabilirsiniz. Bu SKU için yan yüklenen veya depolanan uygulamaların kullanımını sınırlamayız.
   - question: >
-      HoloLens 2 geliştirme sürümü hakkında nereden daha fazla bilgi edinebilirim?
+      HoloLens 2 Development Edition hakkında daha fazla bilgi nereden öğrenebilirim?
     answer: >
-      HoloLens 2 geliştirme sürümü belgeleri sayfasını ziyaret edin. [Daha fazla bilgi edinin](hololens2-options.md?tabs=device)
+      HoloLens 2 Geliştirme Sürümü belge sayfasını ziyaret edin. [Daha fazla bilgi edinin](hololens2-options.md?tabs=device)
   - question: >
-      Karma Gerçeklik çözümlerini geliştirme hakkında nereden daha fazla bilgi edinebilirim?
+      Karma Gerçeklik çözümleri geliştirme hakkında nereden daha fazla bilgi öğrenebilirim?
     answer: >
-      Karma Gerçeklik geliştirme belgelerine giriş sayfasını ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/develop/development?tabs=unity)
+      Karma Gerçeklik geliştirme belgelerine giriş'i ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/develop/development?tabs=unity)
   - question: >
-      Karma Gerçeklik çözümlerini tasarlama hakkında nereden daha fazla bilgi edinebilirim?
+      Karma Gerçeklik çözümleri tasarlama hakkında daha fazla bilgi nereden öğrenebilirim?
     answer: >
-      Karma Gerçeklik tasarımına giriş belgelerini ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/design/design)
+      Karma Gerçeklik'e Giriş tasarım belgelerini ziyaret edin. [Daha fazla bilgi edinin](/windows/mixed-reality/design/design)
   - question: >
-      HoloLens geliştirici sürümü için nereden destek alabilirim?
+      HoloLens Developer Edition için nereden destek ayim?
     answer: >
-      Desteği [buradan edinebilirsiniz.](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=96bfb202-bc79-741b-bf7a-774d8b767782)
+      Destek için buraya [tıklayın.](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=96bfb202-bc79-741b-bf7a-774d8b767782)
 - name: Unity
   questions:
   - question: >
-      Unity denemem ile neler dahildir?
+      Unity deneme sürümüme ne dahildir?
     answer: >
-      üç takvimdeki bir aylık unity Pro deneme sürümü, uzmanların oluşturulması, çalışması ve yeniden kullanılması için unity&#39;s tam çözümüne erişim sağlar. ilgili Unity Pro denemesine kullanılacak son tarih yok.
+      Üç takvimli bir aylık Unity Pro deneme sürümü, uzmanların oluşturması,&#39;ve para kazanmaları için Unity&#39;çözümüne erişmenizi sağlar. İlgili Unity Pro deneme sürümü için son tarih yoktur.
 
 
-      bu teklif yeni kullanıcılara yöneliktir ve kurulu Unity Pro abonelikleri için geçerlidir. Unity Pro deneme sürümü, kullanıma hazır hale getirilmeyecek ek koşullara tabi olabilir. Geçerli [terimler &amp; koşullarını](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) ve [Gizlilik ilkesini](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)gözden geçirin.
+      Bu teklif yeni kullanıcılara özeldir ve unity abonelikleri için Pro değildir. Unity Pro deneme sürümü, kullanımda kullanılabilir olacak ek koşullara tabi olabilir. Geçerli hüküm koşullarını [ve &amp; gizlilik](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) [ilkesi'ne gözden geçirme.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
   - question: >
-      Unity Pro deneme sürümünü nasıl kullanabilirim?
+      Unity Pro deneme sürümüm Pro kullanabilirim?
     answer: >
-      Kullanılacak yönler
+      Kullanma yönergeleri
 
 
-      1. İd.unity.com ziyaret edin
+      1. Id.unity.com
 
-      2. Unity KIMLIĞINIZLE oturum açın veya hesap oluşturun
+      2. Unity Kimliğiniz ile oturum açın veya hesap oluşturun
 
-      3. Ürün kodu kullanmak &#39;seçin&#39;
+      3. Ürün &#39;kullan'ı&#39;
 
-      4. Ürün kodu girin ve bir ürün kodu kullanmak &#39;seçin&#39;
+      4. Ürün kodunu girin ve Ürün kodu &#39;kullan'ı&#39;
 
 
-      [daha fazla bilgi edinmek](hololens2-options.md?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
+      Daha fazla HoloLens için 2 Geliştirme Sürümü belgelerini [ziyaret edin](hololens2-options.md?tabs=device)
   - question: >
-      PRO lisansı dışındaki Unity sürümleriyle uygulama oluşturabilir miyim?
+      UNITY'nin PRO lisansı dışında sürümleriyle uygulama derleye miyim?
     answer: >
-      Evet, tüm uyumlu Unity sürümleriyle uygulamalar oluşturabilirsiniz.
+      Evet, Unity'nin tüm uyumlu sürümleriyle uygulama derlemek için kullanabilirsiniz.
   - question: >
-      Unity desteği 'ne Nasıl yaparım? misiniz?
+      Nasıl yaparım? Unity desteğine başvurun mu?
     answer: >
-      Unity KIMLIĞINIZ, hesabınız, kuruluşunuz ve abonelikleriniz hakkında sorularınız hakkında yardım almak için support.unity3d.com ziyaret edin.
-- name: Pikselde
+      Unity kimliğiniz, hesabınız, kuruluşlarınız ve abonelikleri hakkında sorularınız için yardım almak için bu sayfayı support.unity3d.com.
+- name: Pixyz
   questions:
   - question: >
-      Pikselle eklenti denemesine neler dahildir?
+      Pixyz Eklenti denememe ne dahildir?
     answer: >
-      En iyi şekilde kullanılan kafesler, sınırlı çokgen sayısı ve otomatik UV ile kullanıma uygun varlıklar oluşturmak için pikseller 'e erişim sağlayan üç takvimdeki bir aylık pikselle bir eklenti denemesi. İlgili pikselde eklenti denemesine kullanılacak son tarih yok.
+      Pixyz'e erişim sağlayan üç takvimli bir ay olan Pixyz Eklentisi deneme sürümü, mükemmel yalıtılmış meshes, sınırlı poligon sayısı ve otomatik TAKİP ile kullanıma hazır varlıklar oluşturmanızı sağlar. İlgili Pixyz eklenti denemesi için son tarih yoktur.
 
 
-      Bu teklif, yeni kullanıcılara yöneliktir ve belirlenen piksellerde abonelik için yığın oluşturmaz. Piksellerin eklentisi, ödeme sırasında yapılacak ek koşullara tabi olabilir. Geçerli [terimler &amp; koşullarını](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) ve [Gizlilik ilkesini](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)gözden geçirin.
+      Bu teklif yeni kullanıcılara özeldir ve Pixyz aboneliklerini kurmak için üzerine yığmaz. Pixyz eklentisi kullanımda yapılacak ek koşullara tabi olabilir. Geçerli hüküm koşullarını [ve &amp; gizlilik](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) [ilkesi'ne gözden geçirme.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
   - question: >
-      Pikselde eklenti deneme sürümünü nasıl kullanabilirim?
+      Pixyz Eklenti denememi nasıl kullanabilirim?
     answer: >
-      Kullanılacak yönler
+      Kullanma yönergeleri
 
 
-      1. İd.unity.com ziyaret edin
+      1. Id.unity.com
 
-      2. Piksellerinizi kullanarak oturum açın veya bir hesap oluşturun
+      2. Pixyz'iniz ile oturum açın veya hesap oluşturun
 
-      3. Ürün kodu kullanmak &#39;tıklayın&#39;
+      3. Ürün &#39;kodu kullan'a&#39;
 
-      4. Ürün kodunu girin ve ürün kodu kullanmak &#39;' a tıklayın&#39;
+      4. Ürün kodunu girin ve Ürün kodu &#39;kullan'a&#39;
 
 
-      [daha fazla bilgi edinmek](hololens2-options.md?tabs=device) için HoloLens 2 geliştirme sürümü belgelerini ziyaret edin
+      Daha fazla HoloLens için 2 Geliştirme Sürümü belgelerini [ziyaret edin](hololens2-options.md?tabs=device)
   - question: >
-      Nasıl yaparım?, pikselde desteğe başvurun mi?
+      Nasıl yaparım? Pixyz desteğine başvuracak mısınız?
     answer: >
-      Unity KIMLIĞINIZ, hesabınız, kuruluşunuz ve abonelikleriniz hakkında sorularınız hakkında yardım almak için lütfen support.unity3d.com ziyaret edin
+      Unity kimliğiniz, hesabınız, kuruluşlarınız ve abonelikleri hakkında sorularınızla ilgili yardım almak için lütfen şu sayfayı ziyaret support.unity3d.com
 
 
-      Pixyz'e özgü destek için (denemenizi [](http://pixyz-software.com/support) kullandıktan sonra) lütfen Pixyz-software.com/support
+      Pikselleme özgü destek için (deneme sürümünüzü yükselttikten sonra) lütfen [Pixyz-Software.com/support](http://pixyz-software.com/support) ziyaret edin
 - name: Azure
   questions:
   - question: >
-      500 ABD doları olan Azure kredimi nasıl kullanabilirim?
+      $500 Azure kredimi nasıl kullanabilirim?
     answer: >
-      500 ABD doları Azure kredinizi kullanmak için, Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
+      $500 Azure kredilerinizi kullanmak için Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
 
 
-      Abonelik Azure Pass ve [teklif ayrıntılarını](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [gözden geçirebilirsiniz.](https://azure.microsoft.com/en-us/offers/azure-pass/)
+      Azure Pass [Abonelik Sözleşmesi](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) ve [Teklif Ayrıntıları](https://azure.microsoft.com/en-us/offers/azure-pass/)' nı gözden geçirin.
   - question: >
-      500 ABD doları olan Azure kredimin süresi ne zaman dolar?
+      $500 Azure kredisi ne zaman dolacak?
     answer: >
-      500 ABD doları azure kredinizin süresi, Azure anahtar kodunuzu etkinleştirdikten 90 gün sonra dolar.
+      $500 Azure krediniz, Azure anahtar kodunuzu etkinleştirdikten sonra 90 gün sonra sona eriyor.
   - question: >
-      Azure kredilerimi kullanarak ne yapabilirim?
+      Azure kredilerimle ne yapabilirim?
     answer: >
-      Azure kredilerinizi kullanarak, Microsoft&#39;giderek genişleyen bulut hizmetleri kümesiyle çalışmalara başlayabilirsiniz. HoloLens 2 Geliştirme Sürümü'ne dahil edilen Azure kredileri, müşterilerin Azure'da karma gerçeklik uygulamaları yapmaya ve test etmeye hızla başlamalarını sağlamaktır. Azure'da binaya ilişkin tüm ayrıntılar için Azure kaynaklarını [ziyaret edin](https://azure.microsoft.com/en-us/resources/)
+      Azure kredileriniz sayesinde, Microsoft&#39;s 'yi sürekli genişleyen bulut hizmetleri kümesiyle oluşturmaya başlayabilirsiniz. HoloLens 2 geliştirme sürümüne dahil edilen azure kredileri, müşterilerin azure 'da karışık gerçeklik uygulamaları oluşturmaya ve test etmeye hemen başlayın. Azure 'da oluşturma hakkında ayrıntılı bilgi için [Azure kaynaklarını](https://azure.microsoft.com/en-us/resources/) ziyaret edin
   - question: >
-      Azure karma gerçeklik hizmetleri hakkında nereden daha fazla bilgi edin olabilirim?
-    answer: Microsoft, geliştiricilerin karma gerçeklik çözümleri oluşturmasına ve test sına olanak sağlayan bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](/windows/mixed-reality/develop/mixed-reality-cloud-services)
+      Azure Karma Gerçeklik hizmetleri hakkında nereden daha fazla bilgi edinebilirim?
+    answer: Microsoft, geliştiricilerin karma gerçeklik çözümlerini oluşturup test etmelerine olanak tanımak için bir dizi karma gerçeklik hizmeti sunar. [Daha fazla bilgi](/windows/mixed-reality/develop/mixed-reality-cloud-services)
