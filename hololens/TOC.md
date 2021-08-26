@@ -93,7 +93,7 @@
 ### [sağlama paketlerini kullanarak HoloLens yapılandırma](hololens-provisioning.md)
 ### [Ortak cihaz kısıtlamaları](hololens-common-device-restrictions.md)
 ### [bilgi noktası olarak HoloLens ayarlama](hololens-kiosk.md)
-### [Genel atanan erişim-bilgi noktası](hololens-global-assigned-access-kiosk.md)
+### [HoloLens Bilgi noktası başvuru bilgileri](hololens-kiosk-reference.md)
 ### [Windows Defender Uygulama denetimi-WDAC](windows-defender-application-control-wdac.md)
 ### [HoloLens için sayfa Ayarlar CSP ve urı 'ler](settings-uri-list.md)
 ## Ağ & bağlantısı
