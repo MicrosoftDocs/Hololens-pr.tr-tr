@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5104a489cebee56938cb1968f253e7e9447e2452
-ms.sourcegitcommit: 6b3b455f66a2b4d5b42f4674a5ff940a2a01c294
+ms.openlocfilehash: cd46e162971ea709d865b2ac998cc7a517d231ec
+ms.sourcegitcommit: 18f6c00a57a6b4608dadcec418d1970455d8ee3a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122610155"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122989218"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Düşük dinamik hareket taşıma platformları üzerine platform modunu taşıma
 
@@ -27,6 +27,8 @@ ms.locfileid: "122610155"
 
 > [!NOTE]
 > bu özellik şu anda yalnızca [Windows ınsiders](hololens-insider.md)aracılığıyla kullanılabilir.
+
+![Platform örneği taşınıyor.](./images/mpm-compare.gif)
 
 Bu makalede şunları ele alınmaktadır:
 

@@ -14,12 +14,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 5ded375d88740b9367eec87e4e902c423f131689
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: a368c622c137374ea9cc544490d3492fa9d3f8c1
+ms.sourcegitcommit: 749d617f3f0ce3e6363ff6cd1a03f87b9280f418
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122858992"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122979364"
 ---
 # <a name="enroll-hololens-in-mdm"></a>MDM 'ye HoloLens kaydetme
 
@@ -68,4 +68,4 @@ Cihazınız, bir iş hesabı veya yalnızca cihaz yönetimine kaydolmuş yerel b
 
 ## <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>Windows cihazlar için MDM kaydının engellenmediğinden emin olun
 
-Autopilot 'in başarılı olması için HoloLens cihazlarınızın kaydolmasını sağlayabilirsiniz. HoloLens Windows bir cihaz olarak değerlendirildiğinden, dağıtımınızı engelleyebilen bir kayıt kısıtlaması olmaması gerekir. [Bu kısıtlamalar listesini gözden geçirin](/mem/intune/enrollment/enrollment-restrictions-set) ve cihazlarınızı kaydedeceksiniz emin olun.
+kayıt işleminin başarılı olabilmesi için HoloLens cihazlarınızın kaydedebileceği emin olmanız gerekir. HoloLens Windows bir cihaz olarak değerlendirildiğinden, dağıtımınızı engelleyebilen bir kayıt kısıtlaması olmaması gerekir. [Bu kısıtlamalar listesini gözden geçirin](/mem/intune/enrollment/enrollment-restrictions-set) ve cihazlarınızı kaydedeceksiniz emin olun.
