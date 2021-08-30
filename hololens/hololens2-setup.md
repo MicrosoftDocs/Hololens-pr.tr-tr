@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 13f7000f608e6375efce201f1edd1627900ecdda2f86ddca8a174ac0b8e43ceb
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 77c061c53806e7410d73ecf3aaa20d74c217ea33
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658939"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190421"
 ---
 # <a name="get-your-hololens-2-ready-to-use"></a>HoloLens 2 ' ye kullanıma hazırlanın
 
@@ -42,7 +42,7 @@ HoloLens 2 ' ye kafaya yerleştirin. Gözeyede aşdığınızda, bunları açık
 
 Gerekirse, ayarlama tekerleğini açıp daha sonra ek yükü strap 'yi gevyana ekleyerek başlık bandı ' ni genişletin.
 
-![HoloLens 2 sığdırma ve ayarlama](images/hololens2-fit.png)
+![2 ve ayarlamaları HoloLens.](images/hololens2-fit.png)
 
 ### <a name="attach-and-detach-the-overhead-strap"></a>Ek yükü strap 'yi iliştirme ve ayır
 
@@ -52,7 +52,7 @@ Ek yükün önünü ayırmak için, strap 'yi kaldırır ve Brow panelinde Retra
 
 Ek yükü strap 'nin geri ayrılması için her bağlantı sekmesinin altındaki düğmeye basın ve yavaşça çekin. Yeniden iliştirmek için bağlantı sekmelerini tıkladıkları sürece yuvalara geri gönderin.
 
-![HoloLens 2 baş strap 'yi ekle veya kaldır](images/hololens2-headstrap.png)
+![HoloLens 2 baş strap 'yi ekleyin veya kaldırın.](images/hololens2-headstrap.png)
 
 ## <a name="turn-on-the-hololens-2"></a>HoloLens 2 ' ye aç
 
@@ -102,25 +102,25 @@ HoloLens gösterge ışıklarının ne anlama geldiğinden emin değil misiniz? 
 | - | - | - |
 | AÇIK | Tek Güç düğmesine basın | Cihaz UYKU'ya geçişler ve tüm gösterge ışıklarını kapatma |
 | AÇIK | 3 dakika hareket yok | Cihaz UYKU'ya geçiş ve tüm gösterge ışıklarını kapatma |
-| Uyku | Tek Güç düğmesi Tuşuna basın | Cihaz AÇıK'a geçişler ve gösterge ışıklarını aç |
+| UYKU | Tek Güç düğmesi Tuşuna basın | Cihaz AÇıK'a geçişler ve gösterge ışıklarını aç |
 
 ### <a name="lights-to-indicate-problems"></a>Sorunları göstermek için lambalar
 
 | Bunu yapmak için | Işıklar bunu yapar | Bunun anlamı |
 | - | - | - |
-| Güç düğmesine basabilirsiniz. | Bir ışık beş kez yanıp söner, sonra da kapalıdır. | Bu HoloLens kritik bir şekilde düşüktür. Ücretlerinizi HoloLens. |
+| Güç düğmesine basabilirsiniz. | Bir ışık beş kez yanıp söner, sonra da kapalıdır. | Pilin HoloLens kritik bir şekilde düşüktür. Ücretlerinizi HoloLens. |
 | Güç düğmesine basabilirsiniz. | Beş ışığın hepsi beş kez yanıp söner, sonra da kapat. |  HoloLens doğru başlatamaz ve hata durumuna geldi. [Cihazınızı kurtarmak için işletim](hololens-recovery.md) sistemini yeniden yükleyin. |
-| Güç düğmesine basabilirsiniz. | 1., 3. ve 5. lambalar sürekli olarak yanıp söner. |  HoloLens bir donanım hatası olabilir. De [destekle iletişime geçin.](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb) |
+| Güç düğmesine basabilirsiniz. | 1., 3. ve 5. lambalar sürekli yanıp söner. |  HoloLens bir donanım hatası olabilir. De [destekle iletişime geçin.](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb) |
 
 ## <a name="safety-and-comfort"></a>Güvenlik ve konfor
 
-### <a name="use-hololens-in-safe-surroundings"></a>Güvenli HoloLens için güvenlik bilgileri kullanma
+### <a name="use-hololens-in-safe-surroundings"></a>Güvenli HoloLens güvenli bir yerde kullanma
 
-Güvenlik HoloLens güvenli bir alanda kullanın. Bu, engellerden ve tehlikelerden kaynaksızdır. Net bir görünüm alanına ihtiyacınız olduğunda veya tüm dikkati çekerken (örneğin, bir araçla çalışırken veya diğer tehlikeli etkinlikler yaparken) bunu kullanmayın.
+Güvenlik HoloLens güvenli bir alanda, hiçbir engel ve tehlikeleri yok etmeden kullanın. Net bir görünüm alanına ihtiyacınız olduğunda veya tüm dikkatlerinizi çekerken (örneğin, bir araçla çalışırken veya diğer tehlikeli etkinlikler yaparken) bunu kullanmayın.
 
 ### <a name="stay-comfortable"></a>Rahat kalın
 
-İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamazsanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareket şikayeti, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
+İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamadıysanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareketsizlik, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
 
 Ürün [güvenliği uyarıları ve yönergelerine bakın.](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions)
 

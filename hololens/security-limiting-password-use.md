@@ -14,12 +14,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: a4ceaa1a741ec63153cd9112d04547165b46b0fa72c32ee7f9580f15368a2f88
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 24cd9b81d0d99afaa0479787b846b423310c6739
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665491"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190472"
 ---
 # <a name="limiting-password-use"></a>Parola kullanımını sınırlandırma
 
@@ -52,7 +52,7 @@ Windows Hello kimlik bilgileri oluşturulduğunda, kimlik sağlayıcısıyla gü
 
 Daha fazla bilgi için aşağıdaki bilgi grafiğine bakın:
 
-  ![Windows Hello Oturum açma](images/security-hello-sign-in.png)
+  ![Windows Hello Oturum açın.](images/security-hello-sign-in.png)
   
 Yukarıda sunulan grafikte, nonce 'in "bir kez sayı" olduğunu ve rastgele veya yarı rastgele oluşturulmuş bir sayı olduğunu unutmayın. Windows Hello biyometri veya pın kimlik bilgileri kurulduktan sonra, üzerinde sağlanmakta olan cihazdan ayrılmayın. kullanıcının Windows Hello pın 'i çalınsa bile, bir kimlik avı saldırısında olduğu gibi, [kullanıcının fiziksel cihazı olmadan](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)bu kullanılamaz.
 
@@ -68,7 +68,7 @@ Bir uygulama aracılığıyla bir kimlik eklendikten sonra, kullanıcı onayı i
 
 Web hesabı Yöneticisi API 'Leri uygulama hakkında daha fazla bilgi için, [Web hesabı Yöneticisi API 'Leri uygulama](/windows/uwp/security/web-account-manager)' ya gidin.
 
-  ![Güvenlik API 'SI](images/security-api-img.png)
+  ![Güvenlik API 'SI.](images/security-api-img.png)
   
 Özelleştirilmiş kimlik doğrulama gereksinimlerine sahip uygulama paketleri için, web hesabı Yöneticisi (WAM) çerçevesi özel kimlik sağlayıcılarına göre genişletilebilir. kullanıcılar, bu kimlik sağlayıcısıyla tümleştirilmiş diğer uygulamalarda SSO 'yu etkinleştirmek için, Microsoft Store Evrensel Windows Platformu (UWP) uygulaması olarak paketlenmiş özel kimlik sağlayıcısını indirebilir.
 
@@ -91,7 +91,7 @@ Her iki seçenek de iki öğeli kimlik doğrulamayı tek bir adımda sunar, hem 
 
 ### <a name="strong-authentication-with-fido2-security-key"></a>FIDO2 güvenlik anahtarıyla güçlü kimlik doğrulaması
 
-  ![FıDO img](images/security-fido2-whfb-smaller.png)
+  ![FIDO img.](images/security-fido2-whfb-smaller.png)
 
 1. kullanıcı FIDO2 güvenlik anahtarını HoloLens 2 ' ye takar
 1. Windows FIDO2 güvenlik anahtarını algılar

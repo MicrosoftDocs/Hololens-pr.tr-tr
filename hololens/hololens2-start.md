@@ -1,9 +1,9 @@
 ---
-title: HoloLens 2 ' 'nizi ayarlama
-description: HoloLens 2 ' 'nizi Microsoft (MSA) veya Azure Active Directory (AAD) hesabıyla Wi-Fi ağ üzerinden ilk kez ayarlama hakkında bilgi edinin.
+title: 2. HoloLens ayarlama
+description: Microsoft (MSA) veya HoloLens (AAD) hesabıyla Wi-Fi ağ üzerinden Azure Active Directory 2'nizi ayarlamayı öğrenin.
 ms.assetid: 507305f4-e85a-47c5-a055-a3400ae8a10e
 ms.date: 6/09/2021
-keywords: HoloLens
+keywords: hololens
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -12,49 +12,49 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6f50874c39d8bffa43ff94101c81dcffe3dc1b3c34c69e940ed503dc7bd8b4ba
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 8f07ed42c873b62b3b4201c2756b55bbb29707d3
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659505"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189775"
 ---
-# <a name="set-up-your-hololens-2"></a>HoloLens 2 ' 'nizi ayarlama
+# <a name="set-up-your-hololens-2"></a>2. HoloLens ayarlama
 
-HoloLens ilk kez açtığınızda, cihazınızı ayarlama, bir kullanıcı hesabı ile oturum açma ve HoloLens ayarlarınız için ayarlama adımları gösterilecektir.  bu bölümde, HoloLens 2 ilk kurulum deneyimi gösterilmektedir.
+HoloLens'nizi ilk kez açtıktan sonra cihazınızı ayarlama, bir kullanıcı hesabıyla oturum açma ve HoloLens ayarlama adımlarını takip edersiniz.  Bu bölümde, ilk 2 HoloLens deneyimin üzerinden geçebilirsiniz.
 
-sonraki bölümde, HoloLens nasıl çalışacağınızı ve hologramlar ile nasıl etkileşime gireceğini öğreneceksiniz. bu makaleye yönelik daha fazla bilgi almak için bkz. [HoloLens 2](hololens2-basic-usage.md).
+Sonraki bölümde, yeni çalışma ve hologramlarla etkileşim HoloLens etmeyi öğrenirsiniz. Bu makaleye atlamak için bkz. [2. HoloLens.](hololens2-basic-usage.md)
 
 ## <a name="before-you-start"></a>Başlamadan önce
 
-Başlamadan önce, aşağıdakilerin kullanılabilir olduğundan emin olun:
+Başlamadan önce aşağıdakilerin kullanılabilir olduğundan emin olun:
 
-**Bir ağ bağlantısı**. kurmak için HoloLens bir ağa bağlamanız gerekir. HoloLens 2 ile, Wi-Fi veya ethernet kullanarak bağlanabilirsiniz (USB-C-ethernet bağdaştırıcısı gerekir). İlk kez bağlandığınızda, bir Web sitesine gidilmesini veya bağlanmak için sertifikaları kullanmayı gerektirmeyen açık veya parola korumalı bir ağa ihtiyacınız vardır. [HoloLens tarafından kullanılan web siteleri hakkında daha fazla bilgi edinin](hololens-offline.md).
+**Bir ağ bağlantısı.** Bunu ayarlamak için ağ HoloLens ağına bağlamanız gerekir. HoloLens 2 ile, Wi-Fi veya Ethernet kullanarak bağlanabilirsiniz (USB-C-Ethernet bağdaştırıcısı gerekir). İlk kez bağlanacaksanız, bir web sitesine gezinmeyi veya bağlanmak için sertifikaları kullanmayı gerektirmeyen açık veya parola korumalı bir ağa ihtiyacınız vardır. [tarafından kullanan web siteleri hakkında daha fazla HoloLens bilgi edinebilirsiniz.](hololens-offline.md)
 
-**Bir Microsoft hesabı**. ayrıca, kuruluşunuz cihazın sahibi olan bir Microsoft hesabı (veya iş hesabınızla HoloLens oturum açmanız gerekir. Bir Microsoft hesabı yoksa, [account.Microsoft.com](https://account.microsoft.com) adresine gidin ve birini ücretsiz olarak ayarlayın.
+**Bir Microsoft hesabı.** Ayrıca, bir HoloLens (veya cihazın sahibi Microsoft hesabı iş hesabınızla) oturum açmanız gerekir. Henüz bir Microsoft hesabı account.microsoft.com ücretsiz olarak ayarlayın. [](https://account.microsoft.com)
 
-**Güvenilir ve Iyi bir şekilde bir arada olan tehlikeli bir alan**. [Sistem durumu ve güvenlik bilgileri](https://go.microsoft.com/fwlink/p/?LinkId=746661).
+**Tarak tehlikeleri olmayan güvenli, iyi bir şekilde ışık alan.** [Sağlık ve güvenlik bilgileri.](https://go.microsoft.com/fwlink/p/?LinkId=746661)
 
-en rahat hale getirmenize yardımcı olmak için HoloLens ile birlikte gelen **isteğe bağlı rahatlar** . [Daha fazla uyum ve rahatlık](hololens2-setup.md#adjust-fit).
+**En rahat uyuma** sahip olmak için HoloLens isteğe bağlı konfor donatıları. [Fit ve konfor hakkında daha fazla bilgi.](hololens2-setup.md#adjust-fit)
 
 ## <a name="set-up-windows"></a>Windows'u Kurma
 
-HoloLens 2 ' yi ilk kez başlattığınızda, ilk göreviniz Windows Holographic ayarlaması olur.  HoloLens başlattığınızda, müzik duyacaktır ve bir Microsoft logosu görürsünüz.
+İlk olarak 2. HoloLens ilk kez holographic'i ayarlamak Windows görevidir.  Çalışmanıza baş HoloLens müzik dinleyecek ve bir Microsoft logosuyla karşınıza gelecektir.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGGk]
 
 <br/>
 <img src="images/01-magic-moment.png" width="500px" alt="First screen during first boot">
 
-Etrafında bir Hummingbird görürsünüz.
+Etrafında bir kuş uçuşu olduğunu göreceğiz.
 
 <img src="images/hummingbird-1.png" width="500px" alt="Hummingbird flying">
 
-Bu işlem, elinizin ardından gelir.
+Bu, sizin ellerinizi takip eder.
 
 <img src="images/hummingbird-2.png" width="500px" alt="Hummingbird flying close up">
 
-Microsoft logosu olan bir düğme görünür. düğmeye basın ve HoloLens 2 aşağıdaki adımlarda size yol gösterir:
+Microsoft logosu olan bir düğme gösterir. Düğmeye basın ve HoloLens 2'ye tıklayarak aşağıdaki adımları izleyin:
 
 1. Dilinizi seçin.
 
@@ -64,56 +64,56 @@ Microsoft logosu olan bir düğme görünür. düğmeye basın ve HoloLens 2 aş
 
     <img src="images/05-region.png" width="500px" alt="Select region">
 
-1. HoloLens gözlerinize ayarlayın.  Ayarlamayı atlamayı seçerseniz, bir sonraki oturum açışınızda sorulur. 
+1. Göz HoloLens ayarlama.  Ayarlamayı atlarsanız, bir sonraki oturum aç adımınız istenir. 
 
-    1. İlk olarak, vizörü 'nizi ayarlayacaksınız.
+    1. İlk olarak, mengenenizi ayarlaycaz.
     
     <img src="images/06-et-corners.png" width="500px" alt="Calibration selection screen">
     
-    2. Ayarlamak için, bir dizi hedefe (Gems olarak adlandırılır) bakacaksınız. Ayarlama sırasında gözlerinizin yanıp sönmesini veya kapatılmasını, ancak odanın veya fiziksel alandaki diğer nesneler üzerinde ne zaman daha fazla bir sorun olduğunu deneyebilirsiniz. HoloLens, holographic dünyasını daha iyi işleyebilmesi için göz konumlarınızın hakkında bilgi edinmek üzere bu işlemi kullanır. 
+    2. Ayarlamak için bir hedef kümesine (gems olarak adlandırılır) bakacağız. Ayarlama sırasında yanıp sönmeniz veya gözlerinizi kapatmanız, ancak oda veya fiziksel alanda diğer nesnelere göz atmamaya çalışmanız sorun değil. HoloLens holografik dünyanızı daha iyi hale getirmek için göz konumunuz hakkında bilgi edinmek için bu süreci kullanır. 
 
         <img src="images/07-adjust-eyes.png" width="500px" alt="Adjust for your eyes">
 
-        Ayarlandıktan sonra hologramlar, başlarınızın baş vardiyaları gibi doğru şekilde görünür. Ayarlama bilgileri cihazda yerel olarak depolanır ve herhangi bir hesap bilgileriyle ilişkili değildir. Daha fazla bilgi için bkz. [ayarlama verileri ve güvenliği](hololens-calibration.md#calibration-data-and-security).
+        Ayarlama sonrasında hologramlar, kafanıza gelen güneşliği değiştirse bile doğru şekilde görünür. Ayar bilgileri cihazda yerel olarak depolanır ve hiçbir hesap bilgisiyle ilişkili değildir. Daha fazla bilgi için [bkz. Ayar verileri ve güvenliği.](hololens-calibration.md#calibration-data-and-security)
 
         <img src="images/calibration-complete.png" width="500px" alt="Calibration is complete">
 
-1. internet 'e Bağlan (Wi-Fi veya ethernet bağlantınızı seçin).
+1. Bağlan İnternet'e bağlanın (Wi-Fi ethernet bağlantınızı seçin).
 
-     HoloLens saat diliminizi Wi-Fi ağından elde edilen bilgilere göre otomatik olarak ayarlar. kurulum bittikten sonra, Ayarlar uygulamasını kullanarak saat dilimini değiştirebilirsiniz.
+     HoloLens ağdan alınan bilgilere göre saat diliminizi otomatik olarak Wi-Fi ayarlar. Kurulum tamam olduktan sonra, Ayarlar uygulamasını kullanarak saat Ayarlar değiştirebilirsiniz.
 
-    ![Wi-Fi'ye bağlanma](images/11-network.png)
+    ![Bağlan Wi-Fi'a bağlanın.](images/11-network.png)
 
     > [!NOTE] 
-    > Devam ederseniz Wi-Fi adımı ve sonrasında kurulum sırasında farklı bir ağa geçiş yapmanız gerekiyorsa, 2019 veya üzeri bir işletim sistemi sürümü çalıştırıyorsanız bu adıma geri dönmek için **Birim aşağı** ve **Güç** düğmelerine aynı anda basabilirsiniz. Önceki sürümler için [cihazı sıfırlamanız](hololens-recovery.md) veya Wi-Fi ağının otomatik olarak bağlanmasını engellemek için kullanılabilir olmayan bir konumda yeniden başlatmanız gerekebilir.
+    > Wi-Fi adımını geçmeniz ve daha sonra kurulum sırasında farklı bir ağa geçmeniz gerekirse, Ekim  2019 veya sonraki bir işletim sistemi sürümünü çalıştırıyorsanız bu adıma geri dönmek için Aynı anda Ses Düzeyi Kapalı ve Güç düğmelerine basabilirsiniz.  Önceki sürümlerde cihazı sıfırlamanız veya cihazın otomatik olarak bağlanmasını önlemek için Wi-Fi ağın kullanılabilir olmadığını bir konumda yeniden başlatmanız gerekir. [](hololens-recovery.md)
     > 
-    > ayrıca, HoloLens kurulum sırasında iki dakikalık bir kimlik bilgisi zaman aşımı olduğunu unutmayın. Kullanıcı adı/parolanın iki dakika içinde girilmesi gerekir, aksi takdirde Kullanıcı adı alanı otomatik olarak temizlenir.
+    > Ayrıca, Kurulum HoloLens kimlik bilgisi zaman aşımının iki dakika olduğunu unutmayın. Kullanıcı adı/parola iki dakika içinde girilir, aksi takdirde kullanıcı adı alanı otomatik olarak temizlenir.
 
-1. HoloLens 2, varsa, bir Autopilot profilini arar ve uygular. Bu ekranda bir işlem yapılması gerekmez.
+1. HoloLens 2, varsa bir Autopilot profili araması yapacak ve uygulayacak. Bu ekranda eylem gerekmez.
  
-    ![Autopilot profili arama](images/autopilot-profile-search.png) 
+    ![Autopilot profil araması.](images/autopilot-profile-search.png) 
 
-1. Lisanslama ekranında **kabul et** ' e tıklayın.
+1. **Lisanslama** ekranında Kabul Et'e tıklayın.
 
-    ![Windows lisans sözleşmesi](images/windows-license-agreement.png)
+    ![Windows lisans sözleşmesi.](images/windows-license-agreement.png)
 
-1. Kullanıcı hesabınızda oturum açın. **Çalışmam veya okulum ile bu** arasında seçim yapmanız ve sahibi **olmam** gerekir.
+1. Kullanıcı hesabınızla oturum açın. İş veya okul sahibi **ve sahibi** benim arasında **seçim seçimlerini siz seçersiniz.**
 
-    ![Kullanıcı ayarla](images/13-device-owner.png)
-    - **Çalışmam veya okulumu** seçtiğinizde, BIR Azure AD hesabıyla oturum açın. kuruluşunuz Azure AD Premium kullanıyorsa ve otomatik mdm kaydı yapılandırmışsa, HoloLens mdm 'ye otomatik olarak kaydeder. kuruluşunuz Azure AD Premium kullanmıyorsa otomatik MDM kaydı kullanılamaz. bu durumda, [HoloLens cihaz yönetimine el ile kaydetmeniz](hololens-enroll-mdm.md#different-ways-to-enroll)gerekir.
+    ![Kullanıcı ayarlama.](images/13-device-owner.png)
+    - İş veya **okul sahibim'i seçtiğiniz zaman** bir Azure AD hesabıyla oturum açın. Kuruluş otomatik MDM Azure AD Premium yapılandırmışsa ve otomatik MDM kaydı HoloLens MDM'ye otomatik olarak kaydolacaktır. Kuruluşta otomatik Azure AD Premium MDM kaydı kullanılamaz. Bu durumda, cihaz yönetimine [el ile HoloLens gerekir.](hololens-enroll-mdm.md#different-ways-to-enroll)
 
-        1. Kurumsal hesap bilgilerinizi girin.
-        1. Gizlilik bildirimini ve Son Kullanıcı Lisans sözleşmesini kabul edin.
-        1. Azure AD kimlik bilgilerinizi kullanarak oturum açın. Bu, kuruluşunuzun oturum açma sayfasına yönlendirebilir.
+        1. Kuruluş hesabı bilgilerini girin.
+        1. Gizlilik bildirimini ve son kullanıcı lisans sözleşmelerini kabul edin.
+        1. Azure AD kimlik bilgilerinizi kullanarak oturum açma. Bu, kuruluş oturum açma sayfasına yeniden yönlendirebilirsiniz.
         1. Cihazı ayarlamaya devam edin.
 
-    - Sahip **olduğumu** seçtiğinizde bir Microsoft hesabı oturum açın. kurulum tamamlandıktan sonra, [cihaz yönetimi 'ne HoloLens el ile](hololens-enroll-mdm.md#different-ways-to-enroll)kaydedebilirsiniz.
+    - **Sahibim'i seçerseniz,** bir kullanıcıyla oturum Microsoft hesabı. Kurulum tamamlandıktan sonra, cihaz [yönetimine HoloLens el ile kaydedebilirsiniz.](hololens-enroll-mdm.md#different-ways-to-enroll)
 
-        1. Microsoft hesabı bilgilerinizi girin.
-        2. Parolanızı girin. Microsoft hesabı [iki adımlı doğrulama (2FA)](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)gerektiriyorsa, doğrulama işlemini doldurun.
+        1. Aşağıdaki Microsoft hesabı girin.
+        2. Parolanızı girin. İki Microsoft hesabı doğrulama [(2FA) gerektiriyorsa](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)doğrulama işlemini tamamlar.
 
         
-1. **İleri**' ye tıklayarak Iris oturum açma kurulumu. Göz ayarlamaya benzer bir deneyimle karşılaşırsınız. Tarama tamamlandığında **bitti** ' yi seçin. Bu adımı atlamak için **Atla** ' yı da seçebilirsiniz.
+1. Sonraki 'yi seçerek Iris oturum açma **kurulumu.** Göz alıcıya benzer bir deneyimden geçerek devam edersiniz. Tarama **tamamlandığında** Bitti'yi seçin. Bu adımı atlamak için **Atla'yi** de seçin.
     
     <img src="images/setup-iris.png" width="500px" alt="Iris setup">
 
@@ -121,29 +121,29 @@ Microsoft logosu olan bir düğme görünür. düğmeye basın ve HoloLens 2 aş
 
      
   
-1. Cihazda oturum açmak için bir PIN ayarlayacaksınız. Bu PIN cihaza özeldir. 
+1. Cihazda oturum açmak için bir PIN ayarlarsanız. Bu PIN cihaza özeldir. 
 
-    ![Kurulum Windows Hello](images/setup-windows-hello.png)
+    ![Kurulum Windows Hello.](images/setup-windows-hello.png)
 
-    ![pın Windows Hello ayarla](images/windows-hello-pin.png)
+    ![Pin'Windows Hello kurulumu.](images/windows-hello-pin.png)
 
-    ![Windows Hello Kurulum başarılı](images/windows-hello-successful.png) 
+    ![Windows Hello Kurulum başarılı.](images/windows-hello-successful.png) 
 
     
-1. HoloLens 2 ' de konuşmayı etkinleştirmek isteyip istemediğinizi seçin.
+1. 2. satırda konuşmayı etkinleştirip HoloLens seçin.
 
     <img src="images/22-do-more-with-voice.png" width="500px" alt="Enable Cortana">
 
-1. HoloLens 2 ' de konumun etkinleştirilip etkinleştirilmeyeceğini seçin.
+1. 2. konumda konumun etkinleştirip HoloLens seçin.
     
     <img src="images/setup-location-services.png" width="500px" alt="Enable location services">
 
-1. Telemetri düzeyinizi seçin. Mümkünse, lütfen Isteğe bağlı telemetrisini etkinleştirin. bu bilgiler, HoloLens mühendislik ekibine gerçekten yardımcı olur.
+1. Telemetri düzeyinizi seçin. Varsa, lütfen İsteğe bağlı telemetri'yi etkinleştirin. Bu bilgiler mühendislik ekibine HoloLens yardımcı olur.
 
     <img src="images/24-telemetry.png" width="500px" alt="Telemetry level">
 
 
-1. HoloLens 2 ' de başlangıç hareketini nasıl kullanacağınızı öğrenin.
+1. HoloLens 2'de başlangıç HoloLens öğrenin.
 
     <img src="images/26-01-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 1">
 
@@ -151,13 +151,13 @@ Microsoft logosu olan bir düğme görünür. düğmeye basın ve HoloLens 2 aş
     
     > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3Wxng]
     
-    Tebrikler!  Kurulum tamamlanmıştır ve HoloLens kullanmaya hazırsınız!
+    Tebrikler!  Kurulum tamamlandı ve HoloLens!
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. karma gerçeklik ile hemen etkileşim kurmaya başlayın ve HoloLens Windows 10 gezinerek, bt etkileşimlerine yönelik uygulamalı öğreticiler için **İpuçları** uygulamasına göz atın. başlamak için başlangıç hareketini kullanın veya "başlat 'a git" deyin ve İpuçları ' yi seçin.
+1. Karma Gerçeklik ile hemen etkileşime Windows 10 HoloLens uygulamanıza giderek İpuçları uygulamalı  etkileşimler için uygulamalı öğreticilere göz atabilirsiniz. Başlat'a gitmek için başlangıç hareketi kullanın veya "Başla'ya Git" de İpuçları.
 
-1. HoloLens 2 ' yi okumaya devam etmek için aşağıya tıklayın.
+1. 2.0'da çalışmaya devam etmek için HoloLens tıklayın.
 
 > [!div class="nextstepaction"]
 > [HoloLens 2’de dolaşma](hololens2-basic-usage.md)

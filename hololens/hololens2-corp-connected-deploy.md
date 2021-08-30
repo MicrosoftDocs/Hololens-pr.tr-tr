@@ -1,7 +1,7 @@
 ---
-title: dağıtım kılavuzu – Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-dağıt
-description: Dynamics 365 kılavuzlarıyla kurumsal bağlantılı ağ üzerinden HoloLens 2 cihaz dağıtımlarını ayarlamayı öğrenin.
-keywords: HoloLens, yönetim, kurumsal bağlı, Dynamics 365 kılavuzlar, AAD, Azure AD, MDM, mobil cihaz yönetimi
+title: Dağıtım Kılavuzu – Dynamics 365 kılavuzları HoloLens 2 kurumsal bağlantılı bağlantı - Dağıtma
+description: Dynamics 365 Kılavuzları ile HoloLens bağlı ağ üzerinden 2 cihaz dağıtmayı öğrenin.
+keywords: HoloLens, yönetim, kurumsal bağlantılı, Dynamics 365 Kılavuzları, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -14,104 +14,104 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f9435ce94986a851bb7744eeea48fa6e411454f5090d7ae11c869ba6f27dc942
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 7df2b00b2d87be7b9ad4a5d84c83251ec0ebec4d
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660217"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189690"
 ---
-# <a name="deploy---corporate-connected-guide"></a>Dağıtım-kurumsal bağlantılı kılavuz
+# <a name="deploy---corporate-connected-guide"></a>Dağıtma - Kurumsal Bağlantılı Kılavuz
 
-Her dağıtımın önemli bir kısmı, son kullanıcı için sorunsuz bir deneyim sağlamak üzere dağıtımınızı test etmeden önce doğru şekilde ayarlamış olmasını sağlamaktır.
+Her dağıtımın önemli bir kısmı, son kullanıcı için sorunsuz bir deneyim sağlamak amacıyla dağıtımınızı kendiniz test etmeden önce düzgün bir şekilde ayarlanmış olmasını sağlamaktır.
 
-MDM aracılığıyla Wi-Fi sertifikasını dağıtmakta olduğumuz için, başlangıçta, açık bir Wi-Fi ağa veya sertifikayı gerektirmeyen bir ağa HoloLens ve cihaz kaydetmeniz gerekir. HoloLens, OOBE ve kaydolduktan sonra cihaz, daha önce yapılandırılmış olan ağ sertifikasını ve LOB 'u alır ve cihaz tarafından her ikisinin de alındığını doğrulayabilecektir.
+Wi-Fi sertifikasını MDM aracılığıyla dağıtıyor olduğundan, başlangıçta HoloLens'yi ayarlamamız ve açık Wi-Fi ağına veya sertifika gerektirmeyen bir ağa cihaz kaydetmemiz gerekir. Cihaz HoloLens OOBE ve Kayıtlı tamamlandıktan sonra, cihaz daha önce yapılandırılan ağ sertifikasını ve LOB'u alacak ve her ikisinin de cihaz tarafından alınmakta olduğunu doğrulayabileceksiniz.
 
-Daha sonra, bir test kılavuzunu yazıp çalıştıracağınızı doğrulayabileceksiniz.
+Daha sonra hem yazma hem de test kılavuzu çalıştırabilirsiniz.
 
-## <a name="enrollment-validation"></a>Kayıt doğrulama
+## <a name="enrollment-validation"></a>Kayıt Doğrulama
 
-Artık her şey Azure AD ve MDM kaydı için düzgün şekilde yapılandırıldığından, Rest artık bir snap olmalıdır. Wi-Fi bağlantıya ve HoloLens cihazına ve daha önce yapılandırılmış Azure AD kullanıcı hesaplarından birine ihtiyacınız vardır.
+Artık Azure AD ve MDM Kaydı için her şey düzgün yapılandırıldığından, geri kalanı hemen yapılandırıldı. Önceden yapılandırılmış Azure AD kullanıcı Wi-Fi bir HoloLens bağlantısına ve HoloLens cihazına ihtiyacınız vardır.
 
-Cihazınız şu anda bir fabrika ayarları durumunda oturmazsa, [cihazı](/hololens/hololens-recovery#clean-reflash-the-device)yeniden oluşturmak için iyi bir zaman olurdu.
+Cihazınız şu anda fabrika ayarları durumuna göre değilse, şimdi cihaza başvuru yapmak [için iyi bir zaman olabilir.](/hololens/hololens-recovery#clean-reflash-the-device)
 
-1. Cihazınız OOBE 'olduktan sonra, etkileşime başlamanız ve istemleri takip etmeniz gerekir.
+1. Cihazınız OOBE'ye başladıktan sonra etkileşime geçmeye ve istemleri takip edin.
 
-2. Wi-Fi ' a katılması için sertifika gerektirmeyen açık bir Wi-Fi ağa Bağlan. Bu işlem, cihazın ilk kurulumdan sonra kuruluşun Wi-Fi kullanılacak sertifikayı indirmesini sağlar.
+2. Bağlan Wi-Fi'Wi-Fi katılmasını gerektirmeyen açık bir ağ bağlantısına bağlanın. Bu, cihazın ilk kurulumdan sonra kuruluşun Wi-Fi indirmesine olanak sağlar.
 
-3. **bu HoloLens sahip Who** sorulduğunda kritik istem ne olur? **Çalışmalarımı veya okulumu** seçin ve Azure AD hesabınızın kimlik bilgilerini girin.
+3. Kritik istem, bu dosyanın **sahibi Who sorul HoloLens?** İş **veya okul sahibim'i seçin** ve Azure AD hesabı kimlik bilgilerinizi girin.
 
-4. Kayıt başarılı olduğunda, bir PIN ayarlamanız istenir. Bu PIN, bu kullanıcı için bu cihaz için benzersizdir. Ayrıca, Iris taramaları, ses verileri ve telemetri ayarları istenir ve son olarak, Başlat menüsünü açmayı ve OOBE 'yi tamamlamayı öğreneceksiniz.
+4. Kayıt başarılı olduğunda bir PIN'i ayarlamanız istenir. Bu PIN, bu kullanıcı için bu cihaz için benzersizdir. Iris taramaları, ses verileri ve telemetri ayarları da istenecek ve son olarak başlat menüsünü açıp OOBE'nin nasıl tamamlanabileceklerini öğrenebilirsiniz.
 
-5. karma gerçeklik ana sayfasına girdikten sonra, yeni öğrendiğiniz **başlangıç hareketini** kullanarak Başlat menüsü açın.
+5. Karma Gerçeklik Giriş'e girdiktan sonra, öğrendiği Başlat menüsü **başlat hareketini kullanarak** giriş girişlerini açın.
 
-6. **Ayarlar** uygulamayı seçip **sistem**' i seçin. HoloLens 2 cihazınız, daha &quot; &quot; sonra altı karakterli bir dize olmak üzere, sizin için göreceğiniz ilk bilgi parçasıdır.
+6. Uygulamanın **Ayarlar** Sistem'i **seçin.** Göreceğiniz ilk bilgi Cihaz adınızdır. Bu bilgiler, HoloLens 2 cihazınız için HOLOLENS ve ardından altı karakter dizesi &quot; &quot; olacak.
 
-7. Bu adı bir yere göz atın.
+7. Bu adı not alır.
 
-    ![HoloLens 2 Ayarlar ekran](./images/hololens2-settings-about.jpg)
+    ![HoloLens 2 Ayarlar ekran.](./images/hololens2-settings-about.jpg)
 
-8. Cihazınızın Azure AD 'ye başarıyla katıldığını doğrulayın. İki yol vardır;
+8. Cihazınızın Azure AD'ye başarıyla katıldığını doğrulayın. İki yol vardır:
 
-    1.  Ayarlar uygulaması. **Ayarlar** **hesap**  ->  **erişimi iş veya okul**' yi seçin. Bu ekrandan, &quot; nameofAAD&#39;s Azure AD 'ye bağlı olarak bakarak başarıyla kaydolduğunu doğrulayabilirsiniz. İle bağlandı *yourusername@nameofAAD.onmicrosoft.com* . Bu, cihazınızın kuruluşunuza katıldığını doğrular&#39;s Azure AD.
+    1.  Uygulama Ayarlar. Bu **Ayarlar** Hesaplar **İş veya okula**  ->  **erişim'i seçin.** Bu ekrandan, Azure AD'nin adofAAD adına bağlandı ifadesini &quot; görerek&#39;şekilde kaydolabilirsiniz. tarafından *yourusername@nameofAAD.onmicrosoft.com* bağlandı. Bu işlem, cihazınızın Azure AD'de&#39;olduğunu doğrular.
 
-    1. [Azure Portal](https://portal.azure.com/#home). **Azure Active Directory**  ->  **cihazlar**  ->  **tüm cihazlar**' a gidin ve cihaz adında arama yapın. Katılım türü altında, ' Azure AD 'ye katılmış ' olarak gösterilir.
-        ![Azure AD 'de JOIN türünü doğrulama](./images/hololens2-devices-all-devices.png)
+    1. [Azure portal.](https://portal.azure.com/#home) Cihazlar **Azure Active Directory**  ->    ->  **cihazlar'a gidin** ve cihaz adını arayın. Birleştirme Türü altında 'Azure AD'ye Katılmış' olarak gösterir.
+        ![Azure AD'de Birleştirme Türünü doğrulayın.](./images/hololens2-devices-all-devices.png)
 
-9. Cihazınızın MDM 'ye kayıtlı olduğunu doğrulayın. İki yol vardır;
+9. Cihazınızın MDM'ye kayıtlı olduğunu doğrulayın. İki yol vardır:
 
-    1. **Ayarlar** **hesap**  ->  **erişimi iş veya okul**' yı seçin. Bu ekrandan, &quot; nameofAAD&#39;s Azure AD 'ye bağlı olarak bakarak başarıyla kaydolduğunu doğrulayabilirsiniz. İle bağlandı *yourusername@nameofAAD.onmicrosoft.com* . Bu Access iş veya okul hesabından, &quot; nameofAAD&#39;s Azure AD ' a bağlı ' yı seçerek. İle bağlandı yourusername@nameofAAD.onmicrosoft.com &quot; ve **bilgi** düğmesini seçin.
+    1. Bu **Ayarlar** Hesaplar İş **veya okula**  ->  **erişim'i seçin.** Bu ekrandan, Azure AD'nin adofAAD adına bağlandı ifadesini &quot; görerek&#39;şekilde kaydolabilirsiniz. tarafından *yourusername@nameofAAD.onmicrosoft.com* bağlandı. Bu Access iş veya okul hesabından Azure &quot; AD'nin adofAAD&#39;'yi seçin. Bağlanarak yourusername@nameofAAD.onmicrosoft.com &quot; bağlandıktan sonra **Bilgi düğmesini** seçin.
 
-    1. [Microsoft Endpoint Manager yönetim merkezi](https://endpoint.microsoft.com/#home). Oturum açın ve  **cihazlar**  ' ın ardından  **tüm cihazlar**' ı seçin. buradan HoloLens cihazınızda&#39;adına arama yapabilirsiniz. HoloLens ıntune 'da listelenmiş olarak görebilmeniz gerekir.
+    1. [Microsoft Endpoint Manager Yönetim Merkezi'ni seçin.](https://endpoint.microsoft.com/#home) Oturum açma ve **Cihazlar'ı ve** ardından Tüm **cihazlar'ı seçin.** Buradan, cihazınızın adını HoloLens&#39;arayabilirsiniz. Intune'da listelenmiş HoloLens görüyor olması gerekir.
 
-        ![Azure AD 'de Intune tarafından yönetilen doğrulama](./images/hololens2-devices-all-devices2.png)
+        ![Azure AD'de Intune tarafından yönetileni doğrulayın.](./images/hololens2-devices-all-devices2.png)
 
 
-## <a name="wi-fi-certificate-validation"></a>Wi-Fi sertifikası doğrulaması
+## <a name="wi-fi-certificate-validation"></a>Wi-Fi doğrulama
 
-Artık cihaz Wi-Fi sertifikasını almış olmalıdır. Yapabileceğiniz en basit doğrulama, sertifikayı&#39;aldığınız Wi-Fi bağlantıya bağlanmaya çalışır. **Ayarlar** uygulamasını açın ve **ağ &amp; ınternet**  ->  **Wi-fi** ' a gidin ve Wi-fi bağlantısını seçin. bağlandıktan sonra Microsoft Edge uygulamasını açın ve bir web sitesine gidebileceğiniz onaylayın.
+Şu an için cihazın sertifikayı almış Wi-Fi gerekir. En basit doğrulama, sertifikayı hangi sertifikayı Wi-Fi bağlantınıza&#39;denemedir. Ayarlar **uygulamasını** açın ve Ağ **&amp;**  ->  **İnterneti Wi-Fi'a** gidin ve Wi-fi bağlantısını seçin. Bağlandıktan sonra Microsoft Edge açın ve bir web sitesine gidebilirsiniz.
 
-Sertifikayı cihazda aldığınızı onaylamak için, [sertifika yöneticisini](/hololens/certificate-manager)kullanabilirsiniz.
+Cihazda sertifikayı aldığınızı onaylamak için Sertifika Yöneticisi'ni [kullanabilirsiniz.](/hololens/certificate-manager)
 
-## <a name="validate-lob-app-install"></a>LOB uygulaması yüklemesini doğrula
+## <a name="validate-lob-app-install"></a>LOB uygulaması yükleme doğrulama
 
-yönetilen bir uygulamanın yükleme ilerlemesini görmek için, uygulamanın yüklü olup olmadığını görürsünüz veya Ayarlar denetleyin. bir LOB uygulamasını grubumuza gerekli bir yükleme olarak yapılandırarak, HoloLens atanan gruptaki bir kullanıcıyla kaydettikten sonra, uygulama HoloLens otomatik olarak indirilir.
+Yönetilen bir uygulamanın yükleme ilerlemesini görmek için uygulamanın yüklü olup Ayarlar. Lob uygulamasını grubumuz için gerekli bir yükleme olarak yapılandırarak, HoloLens'i atanan gruptaki bir kullanıcıya kaydettikten sonra uygulama otomatik olarak HoloLens.
 
-Başlat menüsü açın ve **tüm uygulamalar**' ı seçin. Sahip olduğunuz uygulama sayısına bağlı olarak, **sayfa yukarı** veya **sayfa aşağı** düğmelerini kullanmanız gerekebilir.
+Dosyayı açın ve **Başlat menüsü'yi Tüm uygulamalar.** Sahip olduğu uygulama sayısına bağlı olarak sayfa yukarı veya sayfa aşağı **düğmelerini** **kullanabilirsiniz.**
 
-uygulamanın cihazda yüklenmesini doğrulamak için, **Ayarlar**  ->  **hesapları**  ->  **işe veya okula erişim** aracılığıyla yapabilirsiniz; hesabı sonra **bilgi** düğmesini seçip, ardından aşağı kaydırarak cihaz MDM 'den cihaza uygulanmış farklı yapılandırma ve uygulamaları görebilirsiniz.
+Uygulamanın cihaza yüklemesini doğrulamak için **Ayarlar** Hesapları İş veya okula erişim yoluyla bunu yapabiliriz; hesabı ve ardından Bilgi düğmesini seçin ve aşağı kaydırarak  ->    ->  MDM'den  cihaza uygulanan farklı yapılandırmaları ve uygulamaları görüntüebilirsiniz.
 
-Yüklemeyi Intune 'dan doğrulamak için, [mem portalı](https://endpoint.microsoft.com/#home)  ->  **uygulamalar** -   -> *uygulama*  ->  **cihaz yüklemesi durum** sayfasından > tüm uygulamalar ' a gidin.
+Intune'dan yüklemeyi doğrulamak [için, MEM portalı](https://endpoint.microsoft.com/#home)  ->  **Uygulamalar** -> Tüm **uygulamalar**  -> *TheNameOfApp Cihazınız* yükleme durumu  ->  **sayfasına** gidin.
 
-Daha fazla bilgi [için bkz. HoloLens Için Intune uygulama dağıtımı](/hololens/app-deploy-intune)
+Daha fazla bilgi: HoloLens için [Intune Uygulama Dağıtımı](/hololens/app-deploy-intune)
 
-## <a name="validate-dynamics-365-guides"></a>Dynamics 365 kılavuzlarını doğrulama
+## <a name="validate-dynamics-365-guides"></a>Dynamics 365 Kılavuzlarını Doğrulama
 
-HoloLens, yazma ve çalıştırma üzerinde kılavuzlar uygulamasının modları vardır. Kullanmadan önce bir kılavuz yazmayı gerçekleştirmeniz gerekir.
+Kılavuzlar uygulaması için HoloLens, yazma ve çalıştırma modları vardır. Çalıştırmadan önce bir kılavuz yazmayı bitirmeniz gerekir.
 
-### <a name="authoring-the-guide"></a>Kılavuzu yazma
+### <a name="authoring-the-guide"></a>Kılavuzu Yazma
 
-Bu hızlı doğrulama için çok gerekli değildir. Bilgisayarınızda hazırladığınız Kılavuzu seçmeniz yeterlidir. Hızlı bir doğrulama için [kılavuza bağlantı](/dynamics365/mixed-reality/guides/hololens-app-anchor)oluşturmanız gerekir. bir holographic bağlayıcısını kullanabilirsiniz. Daha sonra, [adımlarınızı ve modellerinizi yerleştirmeniz](/dynamics365/mixed-reality/guides/hololens-app-orientation)gerekir.
+Bu hızlı doğrulama için çok fazla şey yapmaya gerek yok. Bilgisayarınızda hazırlığınız olan kılavuzu seçmeniz gerekir. Kılavuzu [sabitleniz gerekir.](/dynamics365/mixed-reality/guides/hololens-app-anchor)Hızlı bir doğrulama için holografik sabit noktası kullanabilirsiniz. Daha sonra, adımlarınızı [ve modellerinizi yere sizin de yerniz.](/dynamics365/mixed-reality/guides/hololens-app-orientation)
 
 >[!NOTE]
-> BILGISAYARDA oturum açmak ve HoloLens yazmak için **yazma** rolüne ihtiyacınız olacak. Işleç rolü salt okunurdur ve bılgısayar uygulamasına erişimi yoktur.
+> Pc'de **oturum açmanız** ve oturum açmanız için Yazma rolüne ve HoloLens. İşleç rolü salt okunur bir roldür ve bilgisayar uygulamasına erişimi yoktur.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/poE7s7_zWDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### <a name="operating-the-guide"></a>Kılavuzu çalıştırma
+### <a name="operating-the-guide"></a>Kılavuzu Çalıştırma
 
-Hologramlar hazır olduktan sonra, kılavuzumuzu test edebilirsiniz. 
-- **Operatör modunu** seçin
-- Kılavuzunuz adımlarında tıklayın.
+Hologramlarınız tamam olduktan sonra kılavuzu çalıştırmayı test edin. 
+- **İşleç modunu seçin**
+- Kılavuzun adımlarına tıklayın.
 
-Kılavuzu nasıl çalıştıracaksınız hakkında daha ayrıntılı yönergeler için şu kaynaklara göz atın:
+Kılavuzun nasıl çalıştırıla ilgili daha ayrıntılı rehberlik için şu kaynaklara göz atabilirsiniz:
 
-[Dynamics 365 kılavuzlarındaki bir Kılavuzu çalıştırma konusuna genel bakış](/dynamics365/mixed-reality/guides/operator-overview)
+[Dynamics 365 Kılavuzlarında kılavuzu çalıştırmaya genel bakış](/dynamics365/mixed-reality/guides/operator-overview)
 
-[Adım kartıyla Dynamics 365 kılavuzlarındaki bir operatör olarak yönlendirilirsiniz](/dynamics365/mixed-reality/guides/operator-step-card-orientation)
+[Dynamics 365 Kılavuzlarında operatör olarak Adım kartına yönelin](/dynamics365/mixed-reality/guides/operator-step-card-orientation)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9s41BKGHVL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## <a name="next-step"></a>Sonraki adım 
 > [!div class="nextstepaction"]
-> [Kurumsal bağlantı dağıtımı-koru](hololens2-corp-connected-maintain.md)
+> [Kurumsal bağlantılı dağıtım - Bakım](hololens2-corp-connected-maintain.md)

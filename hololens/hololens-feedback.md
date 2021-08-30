@@ -1,6 +1,6 @@
 ---
 title: Geri bildirimde bulunun
-description: geri bildirim Hub 'ını kullanarak HoloLens ve Windows Mixed Reality geliştiricileri için eyleme dönüştürülebilir geri bildirimler oluşturun.
+description: HoloLens'ı Windows Mixed Reality geliştiriciler için eyleme değiştirilebilir geri Geri Bildirim Merkezi.
 ms.assetid: b9b24c72-ff86-44a9-b30d-dd76c49479a9
 author: mattzmsft
 ms.author: mazeller
@@ -17,75 +17,75 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 1f59c76fa760710d1b1333e1318784f5a488851b640c1cbd4ed6f673ae60029a
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 214b2b9cda33eb074b06a9157429d1f52bfe0716
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664203"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189435"
 ---
 # <a name="feedback-for-hololens"></a>HoloLens için geri bildirim
 
-Beğendiğimiz özellikleri, ne yapmanız gerektiğini ve bir şeyin daha iyi olduğunu bize bildirmek için geri bildirim merkezini kullanın. Mühendislik ekibi hataları izlemek ve onarmak için aynı mekanizmayı kullanır, bu nedenle lütfen gördüğünüz hataları raporlamak için geri bildirim merkezini kullanın. Biz dinliyoruz!
+Bu Geri Bildirim Merkezi kullanarak hangi özellikleri çok seviyor, hangi özellikleri olmadan ve nasıl daha iyi bir şey yapa biliyor olabiliriz. Mühendislik ekibi, hataları izlemek ve düzeltmek için aynı mekanizmayı dahili olarak kullanır, bu nedenle Geri Bildirim Merkezi tüm hataları rapor etmek için lütfen bu özelliği kullanın. Dinliyoruz!
 
-Geri Bildirim Hub 'ı, mühendislik ekibini hatalara yönelik olarak uyarmak ve gelecekteki güncelleştirmelerin sistem durumu ve sorunsuz bir şekilde hatasız olduğundan emin olmak için mükemmel bir yoldur. Ancak, geri bildirim hub 'ı bir yanıt sağlamaz. anında yardıma ihtiyacınız varsa lütfen geri bildirimde bulunun, geri bildiriminiz için belirttiğiniz özet hakkında bir göz atın ve ardından [HoloLens desteği](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) ile izleyin. URL 'ye doğrudan bir bağlantı paylaşmak için geri bildirim Hub 'ında **paylaşma** özelliğini kullanın. Geri Bildirim Hub 'ı günde çok veri alır. URL, geri bildirimlerinizi hızlı bir şekilde belirlememize yardımcı olur.
+Geri Bildirim Merkezi, mühendislik ekibini hatalara karşı uyarma ve gelecekteki güncelleştirmelerin daha sağlıklı ve tutarlı bir şekilde hatadan daha serbest olduğundan emin olmak için harika bir yol sağlar. Ancak Geri Bildirim Merkezi yanıt sağlamaz. Hemen yardıma ihtiyacınız varsa lütfen geri bildirim gönderin, geri bildiriminiz için sağladığınız özeti not edin ve  [HoloLens](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) desteğiyle devam edin. URL'nin doğrudan bağlantısını paylaşmak için Geri Bildirim Merkezi'daki Paylaş özelliğini kullanın. Geri Bildirim Merkezi çok fazla veri alır. URL, geri bildiriminizi hızla tanımlamamıza yardımcı olur.
 
 > [!NOTE]  
 >  
-> - Geri Bildirim Hub 'ının güncel sürümüne sahip olduğunuzdan emin olun. bunu yapmak için   >  **Microsoft Store** başlat ' ı seçin ve ardından üç nokta (**...**) simgesini seçin. Ardından, **indirmeler ve güncelleştirmeler**  >  **Al güncelleştirmelerini** seçin.  
+> - Geçerli sürüme sahip olduğundan emin Geri Bildirim Merkezi. Bunu yapmak için Başlangıç **ve**  >  **Microsoft Store** ve ardından üç noktayı (**... ) seçin.** Ardından İndirmeler ve **güncelleştirmeler**  >  **Güncelleştirmeleri al'ı seçin.**  
 >  
-> - Sorunları çözmek için mümkün olan en iyi verileri sağlamak üzere cihaz telemetrinizi **Isteğe bağlı** olarak ayarlamanız önemle tavsiye ederiz. bu değeri, hazır olmayan deneyim (OOBE) sırasında veya Ayarlar uygulamasını kullanarak ayarlayabilirsiniz. bunu Ayarlar kullanarak yapmak için,   >    >  **üzerinde gizlilik**  >  **uygulaması tanılama**  >  Ayarlar başlat ' ı seçin.
+> - Sorunları düzeltmek için mümkün olan en iyi verileri sağlamak için, cihaz telemetrinizi İsteğe Bağlı olarak ayarlamanızı **kesinlikle öneririz.** Bu değeri İlk İlk Deneyim (OOBE) sırasında veya uygulamanın ilk Ayarlar ayarlayın. Bu seçeneği kullanarak bunu yapmak Ayarlar, Üzerinde **Ayarlar** Gizlilik  >  **Uygulaması**  >    >  **Tanılaması'Ayarlar'ı**  >  **seçin.**
 
-## <a name="use-the-feedback-hub"></a>Geri Bildirim Hub 'ını kullanma
+## <a name="use-the-feedback-hub"></a>Geri Bildirim Merkezi
 
-1. **Başlat menüsünü açmak** için **Başlangıç** hareketini kullanın ve ardından **geri bildirim merkezi**' ni seçin. Uygulama ortamınızda açılır.
+1. Başlat **hareketini** kullanarak Başlat menüsünü **açın** ve ardından Başlat'ı **Geri Bildirim Merkezi.** Uygulama ortamınız içinde açılır.
 
-   ![HoloLens Başlat menüsü geri bildirim uygulaması](./images/hololens2-feedbackhub-tile.png)
+   ![HoloLens Başlat menüsü.](./images/hololens2-feedbackhub-tile.png)
    > [!NOTE]  
-   > **Geri Bildirim Hub 'ını** görmüyorsanız **tüm uygulamalar** ' ı seçerek cihazdaki uygulamaların tüm listesini görüntüleyin.
+   > **Geri Bildirim Merkezi'ı görmüyorsanız,** **cihaza** uygulama listesini görmek için Tüm Uygulamalar'ı seçin.
 
-1. Başka birinin benzer geri bildirim vermiş olup olmadığını görmek için **geri bildirim** arama kutusuna konu hakkında birkaç anahtar sözcük girin.
-1. Benzer geri bildirimler bulursanız, onu seçin, **yorum yaz** kutusuna sahip olduğunuz ek bilgileri ekleyin ve ardından **upoy**' ı seçin.
-1. Benzer bir geri bildirim bulamazsanız **Yeni geri bildirim Ekle**' yi seçin.
+1. Başka birinin benzer geri bildirimlerde olup olmadığını görmek için Geri Bildirim arama kutusuna konu hakkında birkaç **anahtar sözcük** girin.
+1. Benzer bir geri bildirim bulursanız bunu seçin, Yorum yaz kutusuna sahip olduğunuz ek bilgileri **ekleyin** ve ardından **Upvote seçeneğini kullanın.**
+1. Benzer bir geri bildirim bulamazsanız Yeni geri bildirim **ekle'yi seçin.**
 
-   ![Yeni geri bildirim Ekle](./images/hololens-feedback-1.png)
+   ![Yeni geri bildirim ekleyin.](./images/hololens-feedback-1.png)
 
-1. **Geri bildiriminizi özetlemeniz** durumunda geri bildiriminiz için kısa bir özet girin. **Daha sonra açıkla daha** ayrıntılı bilgi kutusuna ayrıntılar ekleyin. Sağladığınız daha fazla ayrıntı, bu sorunun nasıl üretileceği ve sahip olduğu etkilerden daha fazla yararlı olacaktır. İşiniz bittiğinde **İleri**' yi seçin.
+1. Geri **bildiriminizi özetleme** alanına geri bildiriminizin kısa bir özetini girin. Ardından Ayrıntıları Daha ayrıntılı **açıkla kutusuna** ekleyin. Bu sorunu yeniden oluşturma ve sahip olduğu etki gibi daha fazla ayrıntı sağlarken geri bildiriminiz o kadar faydalı olur. Bitirdikten sonra, Sonraki'yi **seçin.**
 
-1. **Kategori** seçin listesinden bir konu seçin ve ardından bir alt kategori **seçin** öğesinden bir alt kategori seçin. aşağıdaki tabloda Windows Holographic kategorisinde bulunan kategoriler açıklanmaktadır.
+1. Kategori **seçin'den bir konu seçin** ve ardından Alt kategori seçin'den bir alt kategori **seçin.** Aşağıdaki tabloda Holographic kategorisindeki Windows açıklanmıştır.
 
    > [!NOTE]  
-   > **ticari müşteriler**: MDM, sağlama veya diğer cihaz yönetimi ile ilgili bir hatayı raporlamak için **Enterprise yönetim** kategorisini ve **cihaz** alt kategorisini seçin.
+   > **Ticari müşteriler:** MDM, sağlama veya diğer cihaz yönetimi yönleriyle ilgili bir hatayı rapor etmek için **Enterprise Management** kategorisini ve **Cihaz** alt kategorisini seçin.
 
    |Kategori |Açıklama |
    | --- | --- |
-   |Göz izleme |Göz izleme, Iris oturum açma veya ayarlama hakkında geri bildirim. |
-   |Hologram doğruluğu, kararlılık ve güvenilirlik |Hologram 'ın boşluk halinde görünme hakkında geri bildirim. |
-   |Uygulamaları başlatma, yerleştirme, ayarlama ve çıkma |2B veya 3B uygulamaları başlatma veya durdurma hakkında geri bildirim. |
-   |Miracast |Miracast hakkında geri bildirim. |
-   |Boşluklar ve kalıcılık |HoloLens alanları nasıl tanıdığını ve uzayda hologramlar nasıl koruduğunu gösteren geri bildirimde bulunun. |
-   |Başlat menüsü ve tüm uygulamalar listesi |**Başlangıç** menüsü ve tüm uygulamalar listesi hakkında geri bildirim. |
-   |Yüzey eşleme |Yüzey eşleme hakkında geri bildirim. |
-   |Resim ve video alma |Karma Gerçeklik yakalamaları hakkında geri bildirim. |
-   |Video hologram yürütme |Video hologram kayıttan yürütmesi hakkında geri bildirim. |
+   |Göz izleme |Göz izleme, iris oturum açma veya ayarlama hakkında geri bildirim. |
+   |Hologram doğruluğu, kararlılığı ve güvenilirliği |Hologramların uzayda nasıl görünt olduğu hakkında geri bildirim. |
+   |Uygulamaları başlatma, yerleştirme, ayarlama ve uygulamalardan çıkma |2D veya 3D uygulamaları başlatma veya durdurma hakkında geri bildirim. |
+   |Miracast |Miracast. |
+   |Boşluklar ve kalıcılık |Uzayların alanları HoloLens hologramları nasıl koruyarak koruyarak alanla ilgili geri bildirim. |
+   |Başlat menüsü ve tüm uygulamalar listesi |Başlat menüsü **ve tüm** uygulamalar listesi hakkında geri bildirim. |
+   |Yüzey eşlemesi |Yüzey eşlemesi hakkında geri bildirim. |
+   |Fotoğraf ve video çekmek |Karma gerçeklik yakalamaları hakkında geri bildirim. |
+   |Video hologramı kayıttan yürütme |Video hologramı kayıttan yürütme hakkında geri bildirim. |
    |Diğer tüm sorunlar |Diğer tüm sorunlar. |
 
-1. Benzer geri bildirimleri aramanız istenebilir. Sorununuz diğer kullanıcılardan geri bildirimde bulunursa, bu geri bildirimi seçin. Aksi takdirde, **Yeni geri bildirim** ' i seçip **İleri**' yi seçin.
+1. Benzer geri bildirim için aramanız istenebilirsiniz. Sorun diğer kullanıcılardan gelen geri bildirimlere benziyorsa bu geri bildirimi seçin. Aksi takdirde Yeni geri **bildirim'i ve** ardından Sonraki'yi **seçin.**
 
-1. İstenirse, sorunun en iyi açıklamasını seçin.
+1. İstendiğinde sorunun en iyi açıklamasını seçin.
 
-1. Geri bildirimlerinize ilgili verileri ekleyin veya sorunu yeniden oluşturun. Aşağıdaki seçeneklerden herhangi birini seçebilirsiniz:
+1. Geri bildiriminize tüm ilgili verileri ekleme veya sorunu yeniden oluşturma. Aşağıdaki seçeneklerden birini seçebilirsiniz:
 
-   - **Bir ekran görüntüsü ekleyin**. Açıkladığınız durumu gösteren bir ekran görüntüsü eklemek için bu seçeneği belirleyin.
-   - **Dosya ekleyin**. Veri dosyalarını eklemek için bu seçeneği belirleyin. Sorununuz için uygun olan dosyalarınız varsa veya sorununuzu yeniden üretmemize yardımcı olabilecek dosyalar ekleyin.
-   - **Sorunum yeniden oluştur**. Sorunu kendiniz yeniden oluşturmak için bu seçeneği belirleyin. **Sorunum yeniden oluştur**' u seçtikten sonra aşağıdaki adımları izleyin:  
+   - **Ekran görüntüsü ekleme.** Bu seçeneği seçerek, açık istediğiniz durumu gösteren bir ekran görüntüsü iliştirin.
+   - **Bir dosyası iliştirin.** Veri dosyaları eklemek için bu seçeneği belirleyin. Problemle ilgili veya sorunlarınızı yeniden oluşturmamıza yardımcı olacak dosyalarınız varsa, bunları iliştirin.
+   - **Sorunum yeniden oluşturun.** Sorunu kendiniz yeniden oluşturasanız bu seçeneği belirleyin. Sorunum yeniden **oluştur'ı seçdikten** sonra şu adımları izleyin:  
 
-     1. **Hakkındaki verileri dahil et** ' i seçin ve en uygun veri türlerinin listelendiğinden emin olun. Çoğu durumda, varsayılan seçimler geri bildiriminiz için seçtiğiniz kategori ve alt kategori 'yi temel alır.  
-     1. **Kaydı Başlat**' ı seçin.
+     1. Hakkında **veri dahil edin'i** seçin ve en uygun veri türlerinin listelenmiş olduğundan emin olun. Çoğu durumda, varsayılan seçimler geri bildiriminiz için seçtiğiniz kategoriyi ve alt kategoriyi temel almaktadır.  
+     1. Kaydı **Başlat'ı seçin.**
 
-     1. Sorunu yeniden üretin. Bu, modern bir uygulama girmeniz gerektiği anlamına gelir. İşiniz bittiğinde geri bildirim sayfasına dönersiniz.
-     1. **Kaydı Durdur**' u seçin. Kayıt duraklarından sonra mühendislik ekibine geri bildiriminiz için bağlı olan verileri görebilirsiniz.
+     1. Sorunlarınızı yeniden üretin. Bu, çevreleyici bir uygulama girmenizin gerek olduğu anlamına geliyorsa endişelenmeyin. Bitirinca geri bildirim sayfasına geri dönersiniz.
+     1. Kaydı **durdur'a seçin.** Kayıt durduktan sonra, mühendislik ekibi için geri bildiriminize eklenen verileri görüntüebilirsiniz.
 
-1. Geri bildiriminizi alabilmemiz için etkin bir internet bağlantınızın olduğundan emin olun. **Gönder**' i seçin ve işiniz bitti demektir.
+1. Geri bildiriminizi almak için etkin bir İnternet bağlantınız olduğundan emin olun. **Gönder'i** seçin ve tamamla'ya tıklayın.
 
-1. Kısaltılmış URL 'YI Microsoft desteği veya iş arkadaşlarınızla paylaşmak için **Share** düğmesini kullanın.
+1. Kısaltılmış  URL'yi Microsoft desteğiyle veya iş arkadaşlarınızla paylaşmak için Paylaş düğmesini kullanın.

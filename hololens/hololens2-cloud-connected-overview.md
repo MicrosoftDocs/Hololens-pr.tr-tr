@@ -14,18 +14,18 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8bba313e7b5ee3d055c2b6ff2c60810baf428ecfa7d5554a1efb4e0aa9e1e98b
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 66e543dd699edbd54ab41474f3ea86fa313bf6ba
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660325"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189656"
 ---
 # <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Dağıtım Kılavuzu – Remote Assist ile buluta HoloLens 2 – Genel Bakış
 
-Bu kılavuz, BT uzmanlarının Kuruluşlarına Remote Assist ile Microsoft HoloLens 2 cihaz planlamalarına ve dağıtmalarına yardımcı olur. Bu, 2 farklı kullanım örneğinde farklı kullanım örneklerinde kuruluşa yapılan kavram kanıtı dağıtımları HoloLens bir model olarak görev yapacaktır. Kurulum, Senaryo [A: Bulut bağlantısı cihazlarına dağıtma ile benzerdir.](common-scenarios.md#scenario-a) 
+Bu kılavuz, BT uzmanlarının Kuruluşlarına Remote Assist ile Microsoft HoloLens 2 cihazı planlamalarına ve dağıtmalarına yardımcı olur. Bu, 2 farklı kullanım örneğinde farklı kullanım örneklerinde kuruluşa yapılan kavram kanıtı dağıtımları HoloLens bir model olarak görev yapacaktır. Kurulum, Senaryo [A: Bulut bağlantısı cihazlarına dağıtma ile benzerdir.](common-scenarios.md#scenario-a) 
 
-Kılavuz sırasında cihaz yönetiminize cihaz kaydetme, gerektiğinde lisans uygulama ve son kullanıcılarının cihaz kurulumu sırasında Remote Assist'i hemen kullanabileceğini doğrulamayı da kapsıyoruz. Bunu yapmak için, kurulum ve çalışma için gereken önemli altyapı parçalarının üzerinden geçerek 2. adımla büyük ölçekte dağıtım HoloLens. Bu kılavuzda başka hiçbir cihaz kısıtlaması veya yapılandırma uygulanmaz, ancak bitirdikten sonra bu seçenekleri keşfetmeniz teşvik edilecektir.
+Kılavuz sırasında cihaz yönetiminize cihaz yönetimine cihaz kaydetmeyi, gerektiğinde lisansları uygulamayı ve cihaz kurulumu sırasında son kullanıcılarının Remote Assist'i hemen kullanabileceğini doğrulamayı da kapsıyoruz. Bunu yapmak için, kurulum ve çalışma için gereken önemli altyapı parçalarının üzerinden geçerek 2. adımla büyük ölçekte dağıtıma HoloLens. Bu kılavuzda başka hiçbir cihaz kısıtlaması veya yapılandırma uygulanmaz, ancak bitirdikten sonra bu seçenekleri keşfetmeniz teşvik edilecektir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -34,16 +34,16 @@ HoloLens 2'yi dağıtmak için aşağıdaki altyapının yerinde olması gerekir
 Bu, Senaryo [A:](/hololens/common-scenarios#scenario-a)Bulut bağlantısı cihazlarına dağıtmaya benzer bir kurulumdur. Bu, şunları içerecek birçok Kavram Kanıtı dağıtımı için iyi bir seçenektir:
 
 - Wi-Fi ağlar genellikle İnternet ve Bulut hizmetleri için tamamen açıktır
-- MDM Otomatik Kaydı ile Azure AD'ye Katılma—MDM ile yönetilen (Intune)
+- MDM Otomatik Kaydı ile Azure AD'ye Katılma— MDM ile yönetilen (Intune)
 - Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
     - Cihaz başına tek veya birden çok kullanıcı desteği vardır.
 
-:::image type="content" alt-text="Buluta bağlı senaryo" source="./images/deployment-guides-revised-scenario-a.png" lightbox="./images/deployment-guides-revised-scenario-a.png":::
+:::image type="content" alt-text="Buluta bağlı senaryo." source="./images/deployment-guides-revised-scenario-a.png" lightbox="./images/deployment-guides-revised-scenario-a.png":::
 
 
 ## <a name="learn-about-remote-assist"></a>Remote Assist hakkında bilgi
 
-Remote Assist işbirliğine dayalı bakım ve onarım, uzaktan incelemenin yanı sıra bilgi paylaşımı ve eğitim sağlar. Farklı rollerdeki ve konumlarda bulunan insanları birbirine bağlayarak Remote Assist kullanan bir teknisyen, uzaktan işbirliği yapan bir Microsoft Teams. Aynı konumda olmayan sorunları gerçek zamanlı olarak çözmek için video, ekran görüntüleri ve ek açıklamaları bir araya ekleyebilirler. Uzak ortak çalışanlar, teknisyenin fiziksel alanıyla ilgili başvuru görüntüleri, şemalar ve diğer yararlı bilgileri ekler. Bu bilgiler, teknisyenin fiziksel alanı üzerinde çalışırken şemaya başvurarak HoloLens.
+Remote Assist işbirliğine dayalı bakım ve onarım, uzaktan incelemenin yanı sıra bilgi paylaşımı ve eğitim sağlar. Farklı rollerdeki ve konumlarda bulunan insanları birbirine bağlayarak Remote Assist kullanan bir teknisyen, uzaktan işbirliği yapan bir Microsoft Teams. Aynı konumda olmayan sorunları gerçek zamanlı olarak çözmek için video, ekran görüntüleri ve ek açıklamaları bir araya ekleyebilirler. Uzak ortak çalışanlar, teknisyenin fiziksel alanıyla ilgili başvuru görüntüleri, şemalar ve diğer yararlı bilgileri eklemenin bir yandan şemaya başvurarak diğer yandan çalışma sırasında kafadan ve el ile HoloLens.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

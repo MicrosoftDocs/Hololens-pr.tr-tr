@@ -14,12 +14,12 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 keywords: ayarlama, rahatlık, görseller, kalite, ipd, HoloLens, Windows Mixed Reality, VR kulaklıklar
-ms.openlocfilehash: 5ba00d873b8a42c3397315a62492b14ab04ded367ccdd05af8be4f68c56627e2
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b3d917c71ac7441aeaf8dcbc25748ee07b9fbfa3
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664804"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189214"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Görsel kalite ve rahatlık geliştirme
 
@@ -64,7 +64,7 @@ birden çok kullanıcı, her kişiye ait cihaz kurulumuna gerek duymadan HoloLen
 1. Ayarlar uygulama **başlamak** için sabitlenmemişse **tüm uygulamalar**' ı seçin.
 1. **Ayarlar**' yi seçin ve ardından **sistem**  >  **ayarlama**  >  **göz ayarlama**  >  **çalışma gözü ayarlaması**' nı seçin.
 
-   ![gözle çalıştır ayarı seçeneğini gösteren Ayarlar uygulaması](./images/C-Settings.Calibration.png)
+   ![göz önünde çalıştır ayarı seçeneğini gösteren Ayarlar uygulaması.](./images/C-Settings.Calibration.png)
 
 ### <a name="auto-eye-position-support"></a>Otomatik göz konumu desteği
 
@@ -131,7 +131,7 @@ HoloLens (1. gen) cihazınızı ayarlarken, Cortana herkendisini tanıtdıktan s
 
 ayarlama işlemi sırasında HoloLens, parmağınızı her göz için bir dizi altı hedefe hizalamanızı ister. HoloLens, bu işlemi, ipd 'yi gözleriniz için doğru şekilde ayarlamak üzere kullanır.
 
-![İkinci adımda ıPD Finger hizalama ekranı](./images/ipd-finger-alignment-300px.jpg)
+![İkinci adımda ıPD Finger hizalama ekranı.](./images/ipd-finger-alignment-300px.jpg)
 
 ### <a name="manually-start-the-calibration-process"></a>Ayarlama işlemini el ile başlatma
 
@@ -143,9 +143,9 @@ Ayar uygulamasını çalıştırmak için **Başlat** menüsünü kullanmak içi
 1. Tüm uygulamaları görüntülemek için öğesini seçin **+** .
 1. **Ayarlama** seçeneğini belirleyin.
 
-   ![Kabuktan ayarlama uygulamasına erişme](./images/calibration-shell.png)
+   ![Kabuktan ayarlama uygulamasına erişme.](./images/calibration-shell.png)
 
-   ![Başlatıldıktan sonra canlı küp olarak görünen ayarlama uygulaması](./images/calibration-livecube-200px.png)
+   ![Başlatıldıktan sonra canlı küp olarak görünen ayarlama uygulaması.](./images/calibration-livecube-200px.png)
 
 Ayarlar uygulamasını kullanarak ayarlama uygulamasını çalıştırmak için aşağıdaki adımları izleyin:
 
@@ -154,7 +154,7 @@ Ayarlar uygulamasını kullanarak ayarlama uygulamasını çalıştırmak için 
 1. **Ayarlar**'ı seçin.
 1. **Sistem**  >  **yardımcı programları**  >  **açma ayarlama** seçeneğini belirleyin.
 
-   ![Ayarlar uygulamasından ayarlama uygulaması başlatılıyor](./images/calibration-settings-500px.jpg)
+   ![Ayarlar uygulamasından ayarlama uygulaması başlatılıyor.](./images/calibration-settings-500px.jpg)
 
 ## <a name="immersive-headsets"></a>Modern kulaklıklar
 

@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a4e2bc30d1141fcc1c6a648ccc7c3573f6afda2ba3f5cd413a8e9a69203ea617
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: ee2b87823324f3183d86763d47b38ca0503f0aeb
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658882"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190353"
 ---
 # <a name="hololens-2-development-edition"></a>HoloLens 2 Geliştirme Sürümü
 
-HoloLens 2'nin ücretsiz Unity yazılımı denemeleriyle bulut hizmetleri için Azure kredilerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
+HoloLens 2'den ücretsiz Unity yazılımı denemeleri ile bulut hizmetleri için Azure kredilerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
 
 ## <a name="learn-about-the-development-edition"></a>Geliştirme Sürümü hakkında bilgi alın
 
@@ -36,9 +36,9 @@ HoloLens 2 Geliştirme Sürümü, HoloLens 2, 500 ABD doları Azure kredisi, 3 a
 |---|---|
 |  [Unity](https://unity.com/) | Gerçek zamanlı bir 3D geliştirme platformu.   |
 |  [Unity için Pixyz eklentisi](https://www.pixyz-software.com/plugin/) | Mühendislik CAD dünyalarını geliştirme &amp; dünyasına bağlamak için bir köprü.   |
-| [Azure hizmetleri için 500 ABD doları Azure kredisi](https://azure.microsoft.com/resources/) | HoloLens 2 Geliştirme Sürümü'ne dahil olan Azure kredileri, Azure'da karma gerçeklik uygulamaları geliştirme ve test etmeye hızlı bir şekilde başlamayı sağlar. |
+| [Azure hizmetleri için 500 ABD doları Azure kredisi](https://azure.microsoft.com/resources/) | HoloLens 2 Geliştirme Sürümü'ne dahil olan Azure kredileri, Azure'da karma gerçeklik uygulamaları geliştirmeye ve test etmeye hızlı bir şekilde başlamanızdır. |
 
-![HoloLens 2 Geliştirme Sürümü](./images/hololens-2-dev-ed.png)
+![HoloLens 2 Geliştirme Sürümü.](./images/hololens-2-dev-ed.png)
 
 ## <a name="redeem-your-credits"></a>Kredilerinizi kullanma
 
@@ -63,12 +63,12 @@ Benzersiz bir kod almış oluruz. Pixyz Eklenti denemesini kullanma yönergeleri
 Karma Gerçeklik için [Azure kredinizi kullanmak](https://azure.microsoft.com/topic/mixed-reality/) istediğiniz bazı yaygın Azure ürünleri burada vemektedir.
 Azure kredilerini kullanma: 500 ABD doları Azure kredinizi kullanmak için, Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin.](hololens2-development-edition-faq.yml#how-can-i-redeem-my--500-azure-credit-)
 
-- [Azure Spatial Anchors 3D içeriği eşleye, paylaşarak ve kalıcı olarak kalıcı olarak bulunduran uygulamalar derlemeye nasıl yardımcı olduğunu öğrenin](https://azure.microsoft.com/services/spatial-anchors/)
+- [Azure Spatial Anchors'nin 3D içeriği eşleen, paylaşan ve kalıcı olarak bulunduran uygulamalar oluşturmanıza nasıl yardımcı olduğunu öğrenin](https://azure.microsoft.com/services/spatial-anchors/)
 - [Bu Azure Remote Rendering kaliteli, etkileşimli 3D içeriği nasıl işleyebilirsiniz, bunu cihazlarınıza gerçek zamanlı olarak nasıl akışla sebilirsiniz?](https://azure.microsoft.com/services/remote-rendering/)
 
 ## <a name="get-started-developing"></a>Kullanmaya başlayın geliştirme
 
-Altyapınızı seçin, araçlarınızı indirin ve klavyenizi kapatın. Karma Gerçeklik ekosistemi'ne hoş geldiniz. Artık oluşturma zamanı.
+Altyapınızı seçin, araçlarınızı indirin ve klavyenizi kapatın. Karma Gerçeklik ekosistemi'ne hoş geldiniz. Şimdi oluşturma zamanı.
 
 |     Checkpoint                              |     Sonuç                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -89,7 +89,7 @@ Altyapınızı seçin, araçlarınızı indirin ve klavyenizi kapatın. Karma Ge
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. Karma Gerçeklik ile hemen etkileşime Windows 10 HoloLens uygulamanıza giderek İpuçları etkileşimler için  uygulamalı öğreticilere göz atabilirsiniz. Başlat'a gitmek için başlangıç hareketi kullanın veya "Başla'ya Git" de İpuçları.
+1. Karma Gerçeklik ile hemen etkileşime Windows 10 HoloLens uygulamanıza giderek İpuçları uygulamalı  etkileşimler için uygulamalı öğreticilere göz atabilirsiniz. Başlat'a gitmek için başlangıç hareketi kullanın veya "Başla'ya Git" de İpuçları.
 1. 2.0'da çalışmaya devam etmek için HoloLens tıklayın.
 
 > [!div class="nextstepaction"]

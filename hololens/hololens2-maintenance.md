@@ -1,6 +1,6 @@
 ---
-title: HoloLens 2 Temizleme SSS
-description: HoloLens 2 cihazınızı Temizleme ve sürdürme hakkında sık sorulan sorular için güncel yanıtlar alın.
+title: HoloLens 2 temizleme hakkında SSS
+description: 2. cihazlarınızı temizleme ve bakımını yapmak için sık sorulan tüm sorularınıza HoloLens yanıtlarını elde edin.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 4/14/2020
@@ -15,19 +15,19 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a110f711d402432e727be6f342156e7dee733157
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 8b14ebd9639495d2b174678518b4562a2b3c85fa
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379014"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189452"
 ---
-# <a name="hololens-2-cleaning-faq"></a>HoloLens 2 Temizleme SSS
+# <a name="hololens-2-cleaning-faq"></a>HoloLens 2 temizleme hakkında SSS
 
 > [!IMPORTANT]  
-> Microsoft, COVLOT-19 gibi pathogens 'in herhangi bir yerinde mücadele ürününün verimliliğini belirlemeyi yapamaz. Olası bulaşmalardan nasıl güvende kalabilmek için lütfen yerel genel sistem durumu yetkilinizin kılavuzuna bakın.  
+> Microsoft, COVID-19 gibi mücadelelerde herhangi bir dezenfektan ürünün ne kadar etkili olduğunu belirlemez. Lütfen yerel genel sağlık yetkilinizin olası bulaşmalara karşı nasıl güvende kalıla ilgili kılavuzuna bakın.  
 
-## <a name="hololens-2-use-and-care"></a>HoloLens 2 kullanım ve bakım
+## <a name="hololens-2-use-and-care"></a>HoloLens 2 Kullanma ve Bakım
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
@@ -35,60 +35,60 @@ ms.locfileid: "111379014"
 
 **Cihazı temizlemek için**
 
-1. Cihazın yüzeyini tamamen silmek için kuru, LINT-Free mikro fiber bezi kullanarak tüm toz 'yi kaldırın.
+1. Cihazın yüzeyini silmek için kuru, lintsiz bir mikrofiber alet kullanarak herhangi bir tonunu kaldırın.
 
-   ![Brow panelinden tutarken temizle](images/hl2-cleaning.png)
+   ![Row paneliyle tutarken temizleyin.](images/hl2-cleaning.png)
 
-2. Tıp "70%" ısopropyıl alkol 'i kullanarak bezden daha hafif bir şekilde bağlantı sağlar ve ardından cihazın yüzeyini tamamen silmek için moistened bezini kullanın.
+2. Tıbbi "%70" isopropil sigarayı kullanarak bunu hafifçe vurgulayın ve sonra cihazın yüzeyini tamamen silmek içinönizleli tedaviyi kullanın.
 
-3. Cihazın tamamen kurulamasına izin verin.
+3. Cihazın tamamen kurumasını sağlar.
 
-**Broç panelini temizlemek için**
+**Row pad'i temizlemek için**
 
-1. Su ve hafif, antibir soap kullanarak bir bezle, sonra da moistened bezi kullanarak Broç panelini temizleyin.
-1. Broç 'nin tamamen kurumasını sağlayın.
+1. Su ve bir su, bir suyla bir suyla su, bir suyla soap kullanın ve sonra da siliş dolguslarını temizlemek için silişleni kullanın.
+1. Göz panelinin tamamen kurumasını s izin ver.
 
-## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>HoloLens vizörü ' I temizlemek için herhangi bir mercek temizleyiciyi kullanabilir miyim?
+## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>Güneşliği temizlemek için herhangi bir lens HoloLens kullanabilir miyim?
 
-Hayır. Mercek temizleyiciler, vizörü 'daki birlikte ele alınabilir. Vizörü 'i temizlemek için şu adımları izleyin:  
+Hayır. Lens temizleyiciler, koruyucuda yer alan küskünlere karşı dayanıklı olabilir. Mengeneyi temizlemek için şu adımları izleyin:  
 
-1. Her türlü toz 'yi, bir tloınt-Free mikro fiber bezi kullanarak, vizörü 'yi tamamen silmek için kaldırın.
-1. Tıp "%70" ısopropyıl alkol 'i kullanarak bir bezle, sonra da vizörü 'ı hafif bir şekilde temizleyin.
-1. Tüm vizörü için tamamen izin verin.
+1. Kuru lintsiz bir mikrofiber kullanarak herhangi bir tonunu çıkararak mengeneyi hafifçe silin.
+1. Tıbbi "%70" isopropil sıvıyı kullanarak hafifçe ürkürür ve sonra güneş ışığını yavaşça temizleyin.
+1. Mengenenin tamamen kurumasını sağlayın.
 
-## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Cihazı temizlemek için bulaşantları kullanabilir miyim?
+## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Cihazı temizlemek için temizleme temizlemelerini kullanabilir miyim?
 
-Evet, temizler Bleach içermiyorsa. Bleach disbulaşmasını [temizleme işlemlerini, HoloLens yüzeylerini tamamen silmek](#hololens-2-use-and-care)için kullanabilirsiniz.  
-
-> [!CAUTION]  
-> HoloLens yüzeylerini temizlemek için Bleach içeren bir disbulaşmasını Temizleme kullanmaktan kaçının. Başka hiçbir şey yoksa, kritik durumlarda Bleach temizler 'in kullanılması kabul edilebilir. Ancak Bleach, HoloLens vizörü veya diğer yüzeylerine zarar verebilir.
-
-## <a name="can-i-use-alcohol-to-clean-the-device"></a>Cihazı temizlemek için alkol kullanabilir miyim?
-
-Evet. "%70" ısopropyıl alkol ve su çözümünü kullanarak, izlim dahil olmak üzere cihazın sabit yüzeylerinin temizlenmesini sağlayabilirsiniz. Idim alkol ve su karışımını kullanarak bezsel bir bezle, daha sonra cihazın yüzeyini temizleyin
-
-## <a name="is-the-brow-pad-replaceable"></a>Broç yüzeyi değiştirilebilir mi?
-
-Evet. Broş Pad, cihaza manyetik olarak eklenir. Bunu ayırmak için, yayın bandından daha fazla çekin. Bunu değiştirmek için yeniden yerleştirin.
-
-![Broç panelini kaldırma veya değiştirme](images/hololens2-remove-browpad.png)
-
-## <a name="how-can-i-clean-the-brow-pad"></a>Broç panelini nasıl temizleyebilirim?
-
-Broç panelini temizlemek için su ve hafif bir antibiotik soap kullanarak moistened bir kumayi kullanarak temizleyin. Yeniden kullanmadan önce bu yüzeyi tamamen serbest bırakın.
-
-## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Cihazı silmek için Ultraviolet (UV) ışığını kullanabilir miyim?
-
-En fazla 0,5-0,6 mW/cm<sup>2</sup>yoğunluğu düzeyinde 265nm üzerinde çalışan ve Ozone 'u göstermemiş olan UVC Ile UVC, HoloLens2 'yi temizler. Lütfen üreticinin özelliklerini işleme ve pozlama süresi konusunda izleyin.
+Evet, temizlemelerde bir şey yoksa. Temizleme temizleme temizlemesi olmayan temizlemeleri kullanarak [yüzeyleri HoloLens kullanabilirsiniz.](#hololens-2-use-and-care)  
 
 > [!CAUTION]  
-> En yüksek UV-A ve UV-B pozlaması, cihazın görüntü kalitesini düşürebilir ve vizörü 'e zarar verebilir. UV-A ve UV-B yarıçapının aşırı pozlaması, etkilenme süresi ve yoğunluğu sırasıyla aşağıdaki etkilere sahiptir:
+> Dış yüzeyleri temizlemek için temizleme içeren temizlemeleri HoloLens kaçının. Başka bir şey mevcut değilken kritik durumlarda silme silmeleri kullanmak kabul edilebilir. Bununla birlikte, maysi, HoloLens yüzeylere zarar verebilir.
+
+## <a name="can-i-use-alcohol-to-clean-the-device"></a>Cihazı temizlemek için sigara kullanabilir miyim?
+
+Evet. "%70" isopropyl mengene ve su çözümünü kullanarak cihazın sabit yüzeylerini (visor dahil) temizebilirsiniz. Isopropyl'in bir karışımını ve su karışımını kullanarak hafifçe vurgulayın ve ardından cihazın yüzeyini yavaşça temizleyin
+
+## <a name="is-the-brow-pad-replaceable"></a>Row paneli değiştirilebilir mi?
+
+Evet. Row paneli cihaza manyetik olarak takılıdır. Ayırmak için baş banttan yavaşça çekin. Değiştirmek için tekrar yerine yasla.
+
+![Row pad'i kaldırın veya değiştirin.](images/hololens2-remove-browpad.png)
+
+## <a name="how-can-i-clean-the-brow-pad"></a>Row pad'i nasıl temiz edim?
+
+Row pad'i temizlemek için, su ve sıcak bir soap kullanılarak kaldıran bir örtü kullanarak temizleyin. Yeniden kullanmadan önce göz panelinin tamamen kurumasını s bırakın.
+
+## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Cihazı sanitize etmek için ultraviyole (LI) ışığı kullanabilir miyim?
+
+0,5-0,6mW/cm 2 yoğunluk düzeyinde 265nm'de çalışan VE ozone<sup></sup>yaymayan, HOLOLens2'nin sağlıksız hale getirmek için KULLANILANC LED'ini kullanan ZAMANIC koruması. Lütfen işleme ve maruz kalma süresiyle ilgili üreticinin belirtimlerini izleyin.
+
+> [!CAUTION]  
+> Yüksek DÜZEYLERDE THELI-A ve EKRANA-B maruz kalma, cihazın görüntü kalitesini düşürebilir ve cihazın görünürde hasar görmesine neden olabilir. ZAMAN-A ve ZAMAN-B'ye fazla maruz kalmanın, maruz kalma süresi ve yoğunluğuna göre aşağıdaki etkileri vardır:
 >  
-> 1. Broş paneli ve cihaz kapanışları renklendirilir.
-> 1. Hatalar, vizörü 'da ve algılayıcı penceresinde yansıtmalı koruma (AR) ile birlikte görüntülenir.
-> 1. Hatalar, vizörü ve algılayıcı pencerelerinin temel malzemeleriyle görüntülenir.
-> 1. Ekran performansını düşürür.
+> 1. Göz paneli ve cihaz kapanışları renksiz hale geldi.
+> 1. Hatalar, koruyucuda ve algılayıcı pencerelerde yansıtıcı önleyici (AR) olarak görünür.
+> 1. Hatalar, menünün temel malzemesinde ve algılayıcı pencerelerde görünür.
+> 1. Görüntü performansı düşer.
 
-## <a name="is-the-rear-pad-replaceable"></a>Arka panel değiştirilebilir mi?
+## <a name="is-the-rear-pad-replaceable"></a>Arka paneli değiştirilebilir mi?
 
 Hayır.

@@ -1,9 +1,9 @@
 ---
-title: HoloLens (1. gen) donanım
-description: Windows 10 çalıştıran bir untethered holographic Microsoft bilgisayarının en son evrimi olan Microsoft HoloLens (1. gen) oluşturan bileşenler hakkında bilgi edinin.
+title: HoloLens (1. nesil) donanım
+description: Microsoft HoloLens çalıştıran bir holografik Microsoft bilgisayarının en son evrimi olan Microsoft HoloLens'i (1. nesil) Windows 10.
 ms.assetid: 527d494e-2ab6-46ca-bd5a-bfc6b43cc833
 ms.date: 09/16/2019
-keywords: HoloLens
+keywords: hololens
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
@@ -13,105 +13,105 @@ manager: jarrettr
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: f76c8bb669f45ddde539c0149159287724b73707765703bf310530adb4e300c6
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 587253a7ec3d3959e7861fedc474d6a2e39dd369
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662132"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189911"
 ---
-# <a name="hololens-1st-gen-hardware"></a>HoloLens (1. gen) donanım
+# <a name="hololens-1st-gen-hardware"></a>HoloLens (1. nesil) donanım
 
-![Microsoft HoloLens (1. genel)](images/see-through-400px.jpg)
+![Microsoft HoloLens (1. nesil).](images/see-through-400px.jpg)
 
-Microsoft HoloLens (1. gen), dünyanın ilk tam untethered holographic bilgisayardır. HoloLens, holographic deneyimleri aracılığıyla kişisel bilgi işlem kullanarak size yeni yollar sunar. HoloLens, gerçek dünyaya sizin etrafında sabitlenmiş 3b hologragram sunmaya yönelik son derece optik ve sensörlerin karıştırmalarını sağlar.
+Microsoft HoloLens (1. nesil), dünyanın ilk tam olarak yersiz holografik bilgisayarıdır. HoloLens, holografik deneyimler aracılığıyla kişisel bilgi işlemi yeni yöntemlerle yeniden tanımlar. HoloLens, çevrelenmiş gerçek dünyaya sabitlenmiş 3D hologramlar sunmak için son teknoloji optik ve algılayıcıları bir karışımını bir kez daha sağlar.
 
 ## <a name="hololens-components"></a>HoloLens bileşenleri
 
-![Kutunun içeriğini gösteren resim](images/hololens-box-contents.png)
+![Kutunun içeriğini gösteren resim.](images/hololens-box-contents.png)
 
 HoloLens aşağıdaki özellikleri içerir:
 
-- **Vizörü**. HoloLens sensörleri ve ekranlar içerir. HoloLens çalışırken vizörü 'ı döndürebilirsiniz.
-- **Yayın bandı**. HoloLens üzerine koymak için, bir ayarlama tekerleği kullanarak, yayın bandı ' ni genişletin. HoloLens yerinde olduğunda, yayın bandı rahat olana kadar ayarlama tekerleğini güçlendir.
-- **Parlaklık düğmeleri**. HoloLens takdığınızda, parlaklık düğmeleri cihazın sol tarafındadır.
-- **Ses düğmeleri**. HoloLens takdığınızda, birim düğmeleri cihazın sağ tarafında bulunur.
-- **Cihaz kolları**. HoloLens seçtiğinizde ya da kapattığınızda, her zaman attık veya cihazı cihaz kolları ile tutacaktır.
+- **Visor**. Algılayıcıların HoloLens görüntüler içerir. Maskeyi takan bir yandan da HoloLens.
+- **Baş bant**. Bağlantı HoloLens için ayarlama tekerleğini kullanarak baş bandı genişletin. Bağlantı HoloLens baş bant rahat olana kadar ayarlama tekerleğini sıkılaştır.
+- **Parlaklığı düğmeleri.** Cihazın sol tarafında HoloLens düğmelerini takabilirsiniz.
+- **Ses düğmeleri.** Düğmeyi tak HoloLens ses düğmeleri cihazın sağ tarafında bulunur.
+- **Cihaz kolu**. Cihazı alır, alır veya çıkarsanız HoloLens her zaman cihazın koluyla kavray veya tut.
 
-## <a name="in-the-box"></a>Kutusunda
+## <a name="in-the-box"></a>Kutuda
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/c7ceb904-9d5f-4194-9e10-e8a949dbad7d]  
 
 HoloLens kutusu aşağıdaki öğeleri içerir:
 
-- **Burun yüzeyleri**. Burun şekline uyan bir burun yüzeyi seçin ve eyegiyinizi uygun hale getirir.
-- **Ek gider strap**. ' yi taşırken HoloLens çalışırken, cihazı yerinde tutmaya yardımcı olmak için ek yük oluşturma strap 'yi kullanın. ayrıca, HoloLens uzatılmış dönemler için çok fazla şekilde yüklüyorsanız, ek yükün kullanılması cihazı daha rahat hale getirir.
-- **MIKRO USB kablosu**. HoloLens güç kaynağına bağlamak için mikro USB kablosunu kullanın veya HoloLens bilgisayarınıza bağlamak için kullanın.
-- **Güç kaynağı**. Bir güç prizine takılır.
-- **Mikro fiber bezi**. HoloLens vizörü ' nı temizlemek için havlu kullanın.
+- **Burun yüzeyleri.** Burun şeklinize uyan ve göz derinize uyum sağlayan bir burun paneli seçin.
+- **Ek yük.** Hareket ederken cihazın HoloLens cihazın yerinde tutmaya yardımcı olmak için ek yük yükünü kullanın. Ayrıca, uzun süre HoloLens cihazın daha rahat yıpranması için ek yük yükünü kullanmak da kullanılabilir.
+- **Mikro USB kablosu.** Mikro USB kablosunu kullanarak cihazı HoloLens güç kaynağına bağlayın veya cihazı bilgisayarınıza bağlamak HoloLens kullanın.
+- **Güç kaynağı.** Bir güç çıkışına takın.
+- **Mikrofiber işlemcisi.** Mengenenizi temizlemek için HoloLens kullanın.
 
 >[!TIP]
->[click](hololens1-clicker.md) , ayrı bir kutuya HoloLens (1. Gen) ile birlikte gelir.
+>[Tıkıcı,](hololens1-clicker.md) HoloLens (1. Nesil) ile birlikte ayrı bir kutu içinde birlikte görüntülenir.
 
-### <a name="power-supply-details"></a>Güç kaynağı ayrıntıları
+### <a name="power-supply-details"></a>Güç Kaynağı ayrıntıları
 
-Aygıtla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı bir 18W şarj aygıtı.  2A 'da 9V sağlar.
+Cihazla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı 18W'lara sahip bir güç kaynağıdır.  2A'da 9V sağlar.
 
-Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
+Ücretlendirme hızı ve hızı, cihazın çalıştır olduğu ortama bağlı olarak değişebilir.
 
-Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 15W Charger 'a bağlanmalıdır.
+Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W pille bağlı olması gerekir.
 
 ## <a name="device-specifications"></a>Cihaz belirtimleri
 
 ### <a name="display"></a>Göster
 
-![HoloLens, bkz. holographic lenler](images/displays-400px.jpg)
+![HoloLens holografik lenslere sahiptir.](images/displays-400px.jpg)
 
 | &nbsp; | &nbsp; |
 |---|---|
-| **Optik** | Bkz. holographic merceklerden (waveguides) |
-| **Holographic çözümü** | 2 HD 16:9 hafif altyapı oluşturan 2.3 Toplam ışık noktası |
-| **Holographic yoğunluğu** | \>2.5 k radanlar (her yarıçapa başına hafif punto) |
-| **Göz tabanlı işleme** | Otomatik pupılcal uzaklığı ayarlaması |
+| **Optik** | Holografik lensleri görme (waveguides) |
+| **Holografik çözümleme** | 2,3 milyon toplam ışık noktası üreten 2 HD 16:9 hafif motor |
+| **Holografik yoğunluk** | \>2,5 bin radyan (radyan başına açık noktalar) |
+| **Göz tabanlı işleme** | Otomatik gözbebekleri mesafe ayarlama |
 
-### <a name="sensors"></a>Sensörlerden
+### <a name="sensors"></a>Sensör
 
-![HoloLens, ortamını ve kullanıcı eylemlerini anlamak için sensörlerdir](images/sensor-bar-400px.jpg)
+![HoloLens ve kullanıcı eylemlerini anlamak için algılayıcılar vardır.](images/sensor-bar-400px.jpg)
 
-- 1 inertial ölçü birimi (ıMU)
-- 4 ortam kameraları anlama
-- 1 Derinlik kamera
-- 1 2MP Foto/HD video kamera
+- 1 ilk ölçüm birimi (IMU)
+- 4 ortam anlama kameraları
+- 1 derinlik kamerası
+- 1 2MP fotoğraf / HD video kamerası
 - Karma gerçeklik yakalama
-- 4 mikrofonlar
-- 1 çevresel ışık algılayıcısı
+- 4 mikrofon
+- 1 ortam ışığı algılayıcısı
 
 ### <a name="input-output-and-connectivity"></a>Giriş, çıkış ve bağlantı
 
-- Yerleşik hoparlörler
-- Audio 3.5 mm jak
+- Yerleşik konuşmacılar
+- Ses 3,5 mm jack
 - Birim yukarı/aşağı
-- Parlaklığı artırma/azaltma
+- Parlaklığı yukarı/aşağı
 - Açma/kapama düğmesi
-- Pil durumu LED 'Leri
-- Wi-Fi 802.11 AC
-- Mikro USB 2,0
-- Bluetooth 4,1 LE
+- Pil durumu LED'leri
+- Wi-Fi 802.11ac
+- Micro USB 2.0
+- Bluetooth 4.1 LE
 
 ### <a name="power"></a>Güç
 
-- Pil ömrü
+- Pil Ömrü
 - 2-3 saat etkin kullanım
 - 2 haftaya kadar bekleme süresi
-- Şarj edildiğinde tamamen işlevsel
-- Yoğun şekilde soğutulan (fansız)
+- Ücretlendirme işlemi tamamıyla işlevseldir
+- Pasif soğutmalı (fan yok)
 
 ### <a name="processors"></a>İşlemciler
 
-![Microsoft HoloLens için ana kart](images/motherboard-400px.jpg)
+![Microsoft HoloLens için ana Microsoft HoloLens.](images/motherboard-400px.jpg)
 
-- TPM 2,0 ile Intel 32 bit mimarisi desteği
-- Özel yerleşik Microsoft holographic Işleme birimi (HPU 1,0)
+- TPM 2.0 desteğine sahip Intel 32 bit mimarisi
+- Özel olarak inşa edilen Microsoft Holographic Processing Unit (HPU 1.0)
 
 ### <a name="memory"></a>Bellek
 
@@ -122,22 +122,22 @@ Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 
 
 |   | &nbsp; |
 |---|---|
-| **Boyutlandırma** | Ayarlanabilir bant ile tek boyut. Gözlük üzerine uyar |
+| **Boyutlandırma** | Ayarlanabilir bant ile tek boyut. Gözlüklerin üzerine sığar |
 | **Ağırlık** | 579 gram |
 
 ## <a name="device-capabilities"></a>Cihaz özellikleri
 
-Kullanıcı eylemlerini anlamak için aşağıdakileri kullanma:
+Kullanıcı eylemlerini anlamak için aşağıdakini kullanma:
 
-- Gaze izleme
+- Bakış izleme
 - Hareket girişi
 - Ses desteği
 
-Ortamı anlamak için aşağıdakiler kullanılarak:
+Ortamı anlamak için aşağıdakini kullanma:
 
 - Uzamsal ses
 
-## <a name="pre-installed-software"></a>Önceden yüklenmiş yazılım
+## <a name="pre-installed-software"></a>Önceden yüklenmiş yazılımlar
 
 - Windows 10
 - Windows Mağazası
@@ -145,44 +145,44 @@ Ortamı anlamak için aşağıdakiler kullanılarak:
 - Microsoft Edge
 - Fotoğraflar
 - Ayarlar
-- Windows Geribildirim
-- Kalibrasyon
-- Learn Gestures
+- Windows Lerimi
+- Ayarları
+- Hareketleri öğrenin
 
 ## <a name="device-certifications"></a>Cihaz sertifikaları
 
 ### <a name="safety"></a>Güvenlik
 
-HoloLens, ANSI Z87.1, CSA Z94.3 ve EN 166'nın temel etki koruma gereksinimlerine uygun olduğu test edilmiştir ve bulundu.
-- [SAR Bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+HoloLens test edilmiştir ve ansı z 87.1, CSA z 94.3 ve EN 166 temel etki koruması gereksinimleriyle uyumlu olacak şekilde bulunur.
+- [SAR bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
-## <a name="care-and-cleaning"></a>Bakım ve temizleme
+## <a name="care-and-cleaning"></a>İlgilenme ve Temizleme
 
-Kendi HoloLens kullanın. Cihazlarınızı kaldırmak, taşımak ve ayarlamak HoloLens ek yük değil cihaz &mdash; kolu kullanın. Mengeneyi tozdan ve parmak izinden uzak tutmak ve dokunmamak için. Tekrarlanan temizleme, görünüre zarar verebilir, bu nedenle cihazınızı temiz tutmaya çalışabilirsiniz.
+HoloLens dikkatle işleyin. HoloLens kaldırmak, taşımak ve ayarlamak için, ek yükün olmadığı cihaz kolları 'nı kullanın &mdash; . Vizörü, toz ve parmak izi baskılarını ücretsiz tutmak ve dokunmaktan kaçının. Yinelenen Temizleme, vizörü 'e zarar verebilir, bu nedenle cihazınızı temiz tutmaya çalışın.
 
-Uygulamanıza temizleme veya HoloLens kullanmayın ve su içine ya da doğrudan su uygulamanın.
+HoloLens herhangi bir temizlik veya solipçi kullanmayın ve su içinde alt birleşmeyin ya da doğrudan buna su uygulayın.
 
-Mengeneyi temizlemek için, keçi veya keçi kılı fırça veya ampul stilinde bir lens seçici kullanarak herhangi bir tonunu kaldırın. Mikrofiberi az miktarda distile suyla hafifçe hafifletin ve ardından bunu kullanarak mengeneyi dairesel bir hareketle hafifçe temizleyin.
+Vizörü 'i temizlemek için, ortası veya Goat saç lens fırçası veya ampul stili lens 'i kullanarak tüm toz 'yi kaldırın. Küçük miktarda karışık bir su ile mikro fiber bezle, daha sonra bir dairesel hareket halinde daha fazla hareket etmek için kullanın.
 
-Baş bant ve cihaz kolu da dahil olmak üzere cihazın geri kalanını temizlemek için, soap ve su ile birlikte lintsiz bir su ile temizlenir. Yeniden HoloLens önce uygulamanıza tamamen kurutmaya izin ver.
+Yayın bandı ve cihaz kolları dahil olmak üzere cihazın geri kalanını temizlemek için, hafif SOAP ve su ile LINT ile ücretsiz bir kumaş moistened kullanın. HoloLens yeniden kullanmadan önce, bir daha kullanmaya tamamen izin verin.
 
-![Mengeneyi temizlemeyi gösteren resim](images/hololens-cleaning-visor.png)
+![Vizörü 'ın nasıl temizleyeceğini gösteren resim.](images/hololens-cleaning-visor.png)
 
 ## <a name="finding-the-serial-number"></a>Seri numarasını bulma
 
-HoloLens (1. nesil) cihazların seri numarası sağ lensin altına yazdırılır.
-1. Cihazı kendi başına takacakmış gibi önünde tutun. Cihazın ileriye ve dik bir şekilde bakarak.
-1. Lens hala ileriye dönükken, alt tarafı görmek için cihazı baş aşağı çevirin.
-1. Sağ lens artık sol tarafta olacak ve bantta lensin altına seri numarası yazdırılacak. 
+HoloLens (1. gen) cihazların seri numarası doğru merceği altında yazdırılır.
+1. Bu cihazı, kafanız aşındaymış gibi tuttuğunuz sırada tutun. Cihaz ileri ve yukarı doğru.
+1. Lens ile hala devam eden bir yandan, alt tarafı görmeniz için cihazı ters çevirin.
+1. Sağ lens artık sol tarafta kalacak ve bu, bantta merceği altında yazdırılacak olan seri numarasıdır. 
 
-Seri numarası bağlı bir bilgisayar üzerinden de bulunabilir:
+Seri numarası, bağlı bir BILGISAYAR aracılığıyla da bulunabilir:
 
 1. Cihazı takın
-1. Dosya **gezgininde Bu bilgisayara** gidin
-1. Cihazın Özellikler'e **sağ** tıklayın HoloLens seçin
-1. Bu, cihazın seri numarasını görüntüler. Aşağıdaki ekran görüntüsünde olduğu gibi.
+1. Dosya Gezgini 'nde **Bu bilgisayara** gidin
+1. HoloLens cihazının **özellikler** ' i sağ tıklayıp seçin
+1. Bu, cihazın seri numarasını görüntüler. Aşağıda bu ekran görüntüsünde olduğu gibi.
 
    <img src="images/hl1-serial-number.png" width="400" height="600" alt="Properties page in Windows 10 for HoloLens-3TNKV"/>
 
 > [!div class="nextstepaction"]
-> [Kümenizi ayarlama ve HoloLens (1. nesil)](hololens1-setup.md)
+> [HoloLens ayarlama ve başlatma (1. genel)](hololens1-setup.md)

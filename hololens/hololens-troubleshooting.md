@@ -13,12 +13,12 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 keywords: sorunlar, hata, sorun giderme, çözüm, yardım, destek, HoloLens, öykünücü
-ms.openlocfilehash: c634b90b03468073887397b59f072258ad7a3ccc
-ms.sourcegitcommit: 5cb3230e02e703584e50358cb0f0b5f33a51b169
+ms.openlocfilehash: 6ac86acf85e8e4fc1b97473732ea358d3d612d12
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "121858551"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190030"
 ---
 # <a name="device-troubleshooting"></a>Cihaz sorunlarını giderme
 
@@ -286,11 +286,11 @@ HoloLens öykünücüsü hakkındaki bilgiler geliştirici belgelerimizde bulunu
 
 Cortana sesli komutlarınıza yanıt vermiyorsa Cortana açık olduğundan emin olun. tüm uygulamalar listesinde,   >    >  değişiklikler yapmak için Cortana menü **not defteri**  >  **Ayarlar** ' ni seçin. Ne söyleyebilirim hakkında daha fazla bilgi edinmek için bkz. [HoloLens sesinizi kullanma](hololens-cortana.md).
 
-Bu HoloLens (1. nesil) yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açık. 2 HoloLens de, cihaz kurulumu sırasında hem konuşma tanımayı hem de Cortana açma tercih edebilirsiniz.
+Bu HoloLens (1. nesil) yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açık. 2 HoloLens de, cihaz kurulumu sırasında hem konuşma tanımayı hem de Cortana açıp açmayabilirsiniz.
 
-HoloLens 2'niz sesinize yanıt vermiyorsa Konuşma tanıma'nın açık olduğundan emin olun. Gizlilik **Konuşmasında**  >    >    >  **Ayarlar'ye gidin** ve Konuşma **tanıma'ya gidin.**
+HoloLens 2'niz sesinize yanıt vermiyorsa Konuşma tanıma'nın açık olduğundan emin olun. Gizlilik **Konuşmasında**  >    >    >  **Ayarlar'a gidin** ve Konuşma **tanıma'ya gidin.**
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 ## <a name="hand-input-isnt-working"></a>El girişi çalışmıyor
 
@@ -298,47 +298,47 @@ Bu HoloLens emin olmak için bunları hareket çerçevesinde tutmanız gerekir. 
 - Genel HoloLens (1. nesil) üzerinde bakış imleci bir noktadan halkaya değişir
 - 2. HoloLens imleç, elimle bir görüntüye yaklaşacaksa bir el imleç görünür ve kayıntılar daha uzak olduğunda bir el imleç görünür
 
-Birçok çevreleyici uygulama, Karma Gerçeklik Giriş'e benzer giriş desenlerini takip eder.  HoloLens [(1. nesil) ve HoloLens](hololens1-basic-usage.md#use-hololens-with-your-hands) [2. nesil'de el HoloLens bilgi.](hololens2-basic-usage.md#the-hand-tracking-frame)
+Birçok çevreleyici uygulama, Karma Gerçeklik Giriş'e benzer giriş desenlerini takip eder.  HoloLens [(1. nesil) ve 2. nesil'de](hololens1-basic-usage.md#use-hololens-with-your-hands) el HoloLens [daha fazla bilgi.](hololens2-basic-usage.md#the-hand-tracking-frame)
 
-Maske takıyorsanız, bazı maske türlerinin el izleme ile çalışmay olduğunu unutmayın.  Yaygın olarak karşılaşılan bir örnek olarak, derin kamera tarafından alınmayacak olan siyah renkli silikonlar, renkli renkli ışığın içine alınarak alınma eğilimindedir.  Çalışmanız silikonla ilgili ise mavi veya gri gibi daha açık bir renkle çalışmanızı öneririz.  Bir diğer örnek de, el şeklinizi karartma eğiliminde olan büyük baggy eldivenleridir. En iyi sonuçlar için mümkün olduğunca forma uygun olan eldivenlerin kullanılması önerilir.
+Maske takıyorsanız, bazı maske türlerinin el izleme ile çalışmay olduğunu unutmayın.  Yaygın olarak kullanılan bir örnek de, derin kamera tarafından alınmayacak olan siyah renkli silikonlardır.  Çalışmalarınız silikon silikon içeriyorsa mavi veya gri gibi daha açık bir renkle çalışmanızı öneririz.  Bir diğer örnek de, el şeklinizi karartma eğiliminde olan büyük baggy eldivenleridir. En iyi sonuçlar için mümkün olduğunca forma uygun olan eldivenler kullanılması önerilir.
 
-Mengenenizin parmak izleri veya burması varsa, güneşliğinizi güzelce temizlemek için HoloLens mikrofiber temizlemeyi kullanın.
+Mengenenizin parmak izi veya muzlaları varsa, havayla birlikte gelen mikrofiber temizleme HoloLens ile birlikte kullanın.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 ## <a name="cant-connect-to-wi-fi"></a>Wi-Fi'a bağlanamıyor
 
-Aşağıdakiler, HoloLens ağına Wi-Fi deneyin:
+Aşağıdakiler, HoloLens ağınıza bağlanamıyorsanız denemeniz Wi-Fi:
 
 - Bu Wi-Fi emin olun. Kontrol etmek için Başlangıç hareketini kullanın ve ağ **Ayarlar**  >  **&amp; Wi-Fi'ı**  >  **seçin.** Bu Wi-Fi, kapatmayı ve sonra tekrar açmayı deneyin.
 - Yönlendiriciye veya erişim noktasına yaklaşın.
-- Ağ yönlendiricinizi Wi-Fi ve ardından [ile yeniden HoloLens.](hololens-recovery.md) Yeniden bağlanmayı deneyin.
-- Bunlardan hiçbiri çalışmıyorsa yönlendiricinizin en son bellenim sürümünü kullana olduğundan emin olun. Bu bilgileri üretici web sitesinde bulabilirsiniz.
+- Wi-Fi yönlendiricinizi yeniden başlatın ve ardından [ile HoloLens.](hololens-recovery.md) Yeniden bağlanmayı deneyin.
+- Bunlardan hiçbiri çalışmıyorsa, yönlendiricinizin en son üretici yazılımını kullanmaya devam edin. Bu bilgileri üretici web sitesinde bulabilirsiniz.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 ## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth cihazlar eşlenmli değil
 
-Bir Bluetooth cihazı [eşleştirmeyle ilgili Bluetooth](hololens-connect-devices.md)aşağıdakini deneyin:
+Bir Bluetooth cihazı [eşleştirmeyle ilgili sorun](hololens-connect-devices.md)Bluetooth aşağıdakini deneyin:
 
-- **Cihazlar Ayarlar a**  >  **gidin** ve Bluetooth emin olun. Varsa, tekrar kapatın ve tekrar açma.
+- Cihazlar Ayarlar a   >  **gidin** ve Bluetooth emin olun. Varsa, tekrar kapatın ve tekrar açma.
 - Cihaz cihazınızın tamamen Bluetooth veya yeni pillere sahip olduğundan emin olun.
 - Hala bağlanamıyorsanız, [HoloLens.](hololens-recovery.md)
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 ## <a name="usb-c-microphone-isnt-working"></a>USB-C Mikrofon çalışmıyor
 Bazı USB-C mikrofonlarının kendilerini hem mikrofon hem de konuşmacı olarak yanlış şekilde *raporlasalar.* Bu, mikrofonla ilgili değil mikrofonla ilgili HoloLens. Bu mikrofonlardan birini HoloLens ses kaybolabilir. Neyse ki basit bir düzeltme var.  
 
 Sistem   ->  **Ayarlar'de** yerleşik konuşmacıları (Analog Özellik Ses  ->   **Sürücüsü)** Varsayılan cihaz olarak **açıkça ayarlayın.** HoloLens mikrofon daha sonra kaldırılarak yeniden bağlansa bile bu ayarı hatırlamanız gerekir.
 
-![USB-C mikrofon sorunlarını giderme](images/usbc-mic-4.png)
+![USB-C mikrofon sorunlarını giderme.](images/usbc-mic-4.png)
 
 ## <a name="devices-listed-as-available-in-settings-dont-work"></a>Cihazlarda kullanılabilir Ayarlar cihazlar çalışmıyor
 
-HoloLens (1. nesil) ses profillerini Bluetooth desteklemez. Bluetooth ve mikrofonlu HoloLens gibi görünebilir, ancak bunlar desteklenmiyordur.
+HoloLens (1. nesil) ses profillerinin Bluetooth desteklemez. Bluetooth ve mikrofonlu HoloLens gibi görünebilir, ancak bunlar desteklenmiyor.
 
-HoloLens 2, stereo kayıttan Bluetooth A2DP ses profilini destekler. Bluetooth çevre biriminden mikrofon yakalamayı sağlayan Bluetooth Ücretsiz HoloLens profili, 2. HoloLens desteklenmiyor.
+HoloLens 2, stereo Bluetooth için A2DP ses profilini destekler. 2 Bluetooth bir çevre biriminden mikrofon yakalamayı Bluetooth Ücretsiz HoloLens profili desteklenmiyor.
 
 Bluetooth cihazı kullanırken sorun Bluetooth desteklenen bir cihaz olduğundan emin olun. Desteklenen cihazlar aşağıdakileri içerir:
 
@@ -348,4 +348,4 @@ Bluetooth cihazı kullanırken sorun Bluetooth desteklenen bir cihaz olduğundan
 
 DIĞER cihazlarınızı BLUETOOTH GATT cihazlarıyla kendi cihazlarınızı HoloLens. Ancak, cihazları gerçekten kullanmak için ilgili yardımcı uygulamaları Microsoft Store uygulamaları yüklemeniz gerekir.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)

@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 27fd7f81d2868134344c7563ebc0a93133a18c0a217d6eff820b5f322e9271a7
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662915"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189248"
 ---
 # <a name="common-deployment-scenarios"></a>Ortak dağıtım senaryoları
 
@@ -39,7 +39,7 @@ kuruluşunuz dahilinde HoloLens benimsemek için bir iş kararı oluşturucu, bt
 
 Bu senaryo, yönetilen mobil cihazların bir şirket içinde dağıtılmasıyla karşılaştırılabilir. HoloLens 2, öncelikli olarak kurumsal ağa harici ortamlarda kullanılmak üzere dağıtılır. Şirket kaynaklarına erişilmez veya VPN aracılığıyla sınırlı olabilir.
 
-[![Senaryo bir diyagram](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
+[![Senaryo bir diyagram.](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 
@@ -75,9 +75,9 @@ Kısa vadeli veya uzun vadeli dış kullanım için uzak bir siteye cihaz dağı
 
 bu senaryo, çoğu Windows 10 pc için klasik bir dağıtımla aynıdır. HoloLens 2, birincil kurumsal kaynaklara erişimi olan kurumsal ağda kullanılmak üzere dağıtılır. Internet ve bulut hizmetleri sınırlı olabilir. 
 
-[![Senaryo B1 diyagramı](images/deployment-guides-revised-scenario-b-01-1.png)](images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
+[![Senaryo B1 diyagramı.](images/deployment-guides-revised-scenario-b-01-1.png)](images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
-[![Senaryo B2 diyagramı](images/deployment-guides-revised-scenario-b-02-1.png)](images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
+[![Senaryo B2 diyagramı.](images/deployment-guides-revised-scenario-b-02-1.png)](images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 
@@ -111,7 +111,7 @@ buna karşılık gelen kurumsal bağlantı kılavuzu, mevcut cihaz yönetimine H
 
 Bu, yüksek oranda güvenli veya gizli konumlar için tipik bir dağıtımdır. HoloLens 2, ağ veya internet erişimi olmadan birincil olarak çevrimdışı kullanım için dağıtılır.
 
-[![Çevrimdışı güvenli diyagram 1](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
+[![Çevrimdışı güvenli diyagram 1.](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 

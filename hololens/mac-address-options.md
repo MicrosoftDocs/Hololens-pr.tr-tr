@@ -1,6 +1,6 @@
 ---
-title: Enterprise MAC adresi kısıtlanmış Wi-Fi ortamında HoloLens cihazların kaydı
-description: HoloLens 2 cihazlarındaki ağ için MAC adresi
+title: Enterprise MAC HoloLens kısıtlı Wi-Fi Ortamında Wi-Fi kaydı
+description: HoloLens 2 cihazlardaki ağ için MAC adresi
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -13,137 +13,137 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1be1a8aa021c2a588b120fc9fa148b6c5dafd2840bbefa0d8ea9701751834521
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: d21a63aae94f5ea5269f61fe319a9036626de1b4
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665595"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189538"
 ---
-# <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Enterprise MAC adresi kısıtlanmış Wi-Fi ortamında HoloLens cihazların kaydı
+# <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Enterprise MAC HoloLens kısıtlı Wi-Fi Ortamında Wi-Fi kaydı
 
-Bu belgede, Wi-Fi MAC adresleriyle kısıtlanmış müşteri ortamlarında belirlediğimiz ve kablosuz ağların katılması için sertifikaların gerekli olduğu ortak bir senaryo açıklanır.
+Bu belgede, müşterinin ortamlarında, iletişimin MAC adresleriyle Wi-Fi veya Kablosuz ağlara katılmak için sertifikaların gerekli olduğu yaygın bir senaryo açıklanmıştır.
 
 ## <a name="example-scenario"></a>Örnek Senaryo
 
-Güvenli ortamlarda birçok müşteri, kablosuz veya kablolu ağlarda yalnızca onaylanan cihazların (MAC adreslerine bağlı olarak) başarıyla bağlanmasına izin veren kısıtlamalara sahiptir. Bu, bir kablosuz erişim noktasında veya bir DHCP sunucusu üzerinden MAC adresi filtreleme aracılığıyla zorlanabilir. Ayrıca, bazı kablosuz ağlar PEAP ile korunabilir, bu da kablosuz ağda kimlik doğrulamadan önce bir sertifikanın cihaza uygulanmasını gerektirir.
+Güvenli ortamlardaki birçok müşteri, Kablosuz veya kablolu ağlarında yalnızca onaylanan cihazların (MAC Adreslerine göre) başarıyla bağlanmasına izin verecek kısıtlamalara sahiptir. Bu, Bir Kablosuz Erişim Noktası'nın MAC Adresi filtrelemesi yoluyla veya bir DHCP sunucusu aracılığıyla zorlanan bir durum olabilir. Ayrıca, bazı Kablosuz ağlar PEAP ile korunarak Kablosuz ağ kimlik doğrulamadan önce cihaza bir sertifikanın uygulanması gerekir.
 
-bu senaryoda, iki temel gereksinim, HoloLens cihazları ağa birleştirilirken gecikme veya el ile müdahale gerektirebilir:
+Bu senaryoda iki temel gereksinimler, cihazların ağa katılmalarını sağlarken gecikmelere neden olabilir HoloLens el ile müdahale gerektirmektedir:
 
-- Cihazın kablosuz ağa başarıyla katılmasını sağlamak için kablosuz PEAP sertifikasının cihaza uygulanması gerekir.
-- HoloLens Wi-Fi bağdaştırıcısının MAC adresi kayıtlı olmalıdır.
+- Kablosuz PEAP sertifikası, cihazın kablosuz ağa başarıyla katılmadan önce cihaza uygulanması gerekir.
+- HoloLens Wi-Fi mac adresi kayıtlı olması gerekir.
 
-Yukarıdaki gereksinimlerle ilgili temel sorunlar şunlardır:
+Yukarıdaki gereksinimlerle ilgili temel zorluklar:
 
-1. MAC adresi şu anda yalnızca cihazdaki Ayarlar uygulamadan veya başarılı bir kayıttan sonra ıntune 'dan tanımlanabilir.
+1. MAC Adresi şu anda yalnızca cihaz Ayarlar veya başarılı bir kayıttan sonra Intune'dan belirlenmektedir.
 
-2. MAC adresi olmadan, cihaz kayıt işlemine başlamak için Wi-Fi ağa katılamaz.
+2. MAC adresi olmadan cihaz kayıt işleminin başlaması için Wi-Fi Ağına katamaz.
 
-3. Bu güçlüklere yönelik el ile yapılan geçici çözümler, bir teknisyenin cihazla etkileşimini gerektirir.
+3. Bu zorlukların el ile geçici çözümleri için teknisyenin cihazla etkileşim kurması gerekir.
 
 ## <a name="solutions"></a>Çözümler
 
-Ortamda kullanılabilir olan altyapıya bağlı olarak bu durumu geliştirmenin birçok yolu vardır.
+Ortamdaki altyapıya bağlı olarak bu durumu geliştirmenin birçok yolu vardır.
 
 | Çözüm | Avantajlar | Gereksinimler |
 | --- | --- | --- |
-| Ethernet bağdaştırıcısı ile paketi sağlama | , OOBE deneyimini geliştirir ve daha hızlı bir teknisyen deneyimi sağlar. | uyumlu USB-C Hub + Ethernet bağdaştırıcısı HoloLens ve teknisyen, MAC yakalama ve OOBE sonlandırması için cihazla etkileşime geçmek zorunda kalır |
-| Ethernet üzerinden Intune kaydıyla Autopilot | Bu, tek adımlı bir bağlantıdır ve cihazın müşteri ortamına kaydı olur. MAC yakalama, cihazla etkileşime gerek kalmadan tamamlanabilir | ıntune, müşteri AAD kiracısı ve HoloLens uyumlu bir USB-C Ethernet bağdaştırıcısı için etkinleştirildi |
-| MAC adreslerinin otomatik raporlaması | Cihazlar Intune kiracısına kaydedildiğinde, bir komut dosyası MAC adresini teknisyene rapor edebilir. | Intune PowerShell cmdlet 'leri |
+| Ethernet Adaptor ile Paket Sağlama | OOBE deneyimini iyiler ve daha hızlı bir teknisyen deneyimi sağlar. | HoloLens UYUMLU USB-C Hub + Ethernet uyarıcısı, teknisyenin yine de MAC yakalama ve OOBE sonlaştırma için cihazla etkileşim kurması gerekir |
+| Ethernet üzerinden Intune Kaydı ile Autopilot | Bu tek adımlı bir bağlantıdır ve cihazın müşteri ortamına kaydıdır. MAC yakalama, cihazla etkileşime gerek kalmadan tamamlanır | Müşteri AAD kiracısı ve uyumlu bir USB-C Ethernet HoloLens intune etkinleştirildi |
+| MAC Adreslerinin otomatik raporlaması | Cihazlar Intune kiracısına kaydediken, bir betik MAC adresini teknisyene bildirebilirsiniz. | Intune PowerShell cmdlet'leri |
 
-## <a name="provisioning-package-with-ethernet-adaptor"></a>Ethernet bağdaştırıcısı ile paketi sağlama
+## <a name="provisioning-package-with-ethernet-adaptor"></a>Ethernet Adaptor ile Paket Sağlama
 
 > [!NOTE] 
-> Kablolu ağ aynı zamanda MAC kısıtlamalarına tabidir, USB-C hub + Ethernet bağdaştırıcısının MAC adresinin de önceden onaylanmış olması gerekir. Diğer cihazlardan ağa erişime izin verecek olduğundan, Bu bağdaştırıcıyla ilgilenmelidir.
+> Kablolu ağ da MAC kısıtlamalarına tabi ise, USB-C Hub + Ethernet bağdaştırıcısının MAC adresinin de önceden onaylanması gerekir. Diğer cihazlardan ağa erişime izin verecek şekilde bu bağdaştırıcıyla dikkat edin.
 
 ### <a name="requirements"></a>Gereksinimler
 
 - Müşteri ağına erişimi olan kablolu ağ bağlantı noktası
-- HoloLens Ethernet bağdaştırıcısı ile uyumlu USB-C hub 'ı; ek sürücü veya uygulama yüklemesi gerektirmeyen herhangi bir bağdaştırıcı uygun olmalıdır.
-- Şunu içeren sağlama paketi:
-  - Kablosuz ağ bilgilerini ve sertifikayı içeren
-  - Kuruluşun Azure AD için kayıt bilgilerini isteğe bağlı olarak içeren
-  - Diğer gerekli sağlama ayarlarını içeren
+- HoloLens Ethernet bağdaştırıcısı ile uyumlu USB-C Hub — Ek sürücü veya uygulama yüklemesi gerektirmeyen tüm bağdaştırıcılar uygun olmalıdır.
+- Şunları içeren Sağlama Paketi:
+  - Kablosuz Ağ bilgilerini ve Sertifikayı İçeren
+  - İsteğe bağlı olarak kuruluşun Azure AD'si için kayıt bilgilerini içerir
+  - Gerekli diğer sağlama ayarlarını içeren
 
 ### <a name="process"></a>İşleme
 
-Işlem, cihazın yazılım düzeyine bağlı olarak farklılık gösterebilir. Cihazda [mayıs 2004 Güncelleştirmesi](hololens-release-notes.md#windows-holographic-version-2004)varsa aşağıdaki adımları izleyin.
+İşlem, cihazın yazılım düzeyine bağlı olarak değişebilir. Cihazda Mayıs [2004 güncelleştirmesi varsa](hololens-release-notes.md#windows-holographic-version-2004)aşağıdaki adımları izleyin.
 
-1. Sağlama paketini USB Stick köküne yerleştirin ve hub 'a takın.
+1. Sağlama paketini USB çubuğu köküne yer ve Hub'a takın.
 2. Bağlan Hub + Ethernet bağdaştırıcısına Ethernet kablosu.
-3. Bağlan HoloLens cihaza USB-C Hub 'ı.
-4. HoloLens açın ve cihaza yerleştirin.
-5. Sağlama paketini uygulamak için **ses azaltma ve güç düğmesine** basın.
-6. teknisyen artık OOBE 'yi izleyebilir ve tamamlandığında, cihazın MAC adresini almak için Ayarlar uygulamasını açın.
+3. Bağlan Usb-C Hub'HoloLens cihaz.
+4. Cihazı HoloLens cihazı açın.
+5. Sağlama **Paketini uygulamak için Birim Kapalı ve** Güç düğmesine basın.
+6. Teknisyen artık OOBE'yi takip eder ve tamamlandığında Ayarlar App'i açıp cihazın MAC Adresini alabilir.
 
-Cihazda [mayıs 2004 güncelleştirmesinden](hololens-release-notes.md#windows-holographic-version-2004)önce bir işletim sistemi derlemesi varsa aşağıdaki adımları izleyin.
+Cihazın Mayıs [2004](hololens-release-notes.md#windows-holographic-version-2004)güncelleştirmesi öncesinde bir işletim sistemi derlemesi varsa aşağıdaki adımları izleyin.
 
-1. HoloLens açın ve cihazı bir bilgisayara takın.
-2. Cihazın bılgısayarda bir dosya depolama cihazı olarak gösterilmesi gerekir.
-3. Sağlama paketini cihaza Kopyala
-4. Bağlan Hub 'a Ethernet kablosu.
-5. Bağlan HoloLens cihaza USB-C Hub 'ı.
-6. HoloLens koy
-7. Sağlama paketini uygulamak için **ses azaltma ve güç** düğmesine basın.
-8. teknisyen artık OOBE 'yi izleyebilir ve tamamlandığında, cihazın MAC adresini almak için Ayarlar uygulamasını açın.
+1. Cihazı açın HoloLens bilgisayara takın.
+2. Cihaz, pc'de bir dosya depolama cihazı olarak göster gerekir.
+3. Sağlama Paketini Cihaza Kopyalama
+4. Bağlan Hub'a Ethernet kablosu.
+5. Bağlan Usb-C Hub'HoloLens cihaz.
+6. İlkeyi HoloLens
+7. Sağlama **Paketini uygulamak için Birim** Kapalı ve Güç düğmesine basın.
+8. Teknisyen artık OOBE'yi takip eder ve tamamlandığında Ayarlar App'i açıp cihazın MAC Adresini alabilir.
 
 ### <a name="benefits"></a>Avantajlar
 
-Bu, cihazın "tek dokunmasına" olanak sağlayarak doğru sağlama paketini uygulayabilir ve cihazın MAC adresini toplar. [Aşağıdaki kılavuzdan sonra sağlama paketleri oluşturulabilir.](hololens-provisioning.md)
+Bu, doğru sağlama paketini uygulamak ve cihazın MAC adresini toplamak için cihazın "Tek dokunmasına" olanak sağlar. [Sağlama paketleri buradaki kılavuzdan sonra oluşturulabilir.](hololens-provisioning.md)
 
-## <a name="autopilot-with-intune-enrollment"></a>Intune kaydı ile Autopilot
+## <a name="autopilot-with-intune-enrollment"></a>Intune Kaydı ile Autopilot
 
 ### <a name="requirements"></a>Gereksinimler
 
 - Müşteri ağına erişimi olan kablolu ağ bağlantı noktası
-- Windows Holographic 2004 çalıştıran HoloLens cihazları
+- HoloLens Holographic 2004 çalıştıran Windows cihazlar
 - HoloLens Uyumlu USB-C Ethernet bağdaştırıcısı
-- Intune, müşteri kiracısı için ayarlanır ve etkinleştirilir
-- Autopilot için kaydedilmiş ve müşteri kiracısına aktarılan cihaz
-- Cihaz için tanımlanan Intune Ilkeleri:
-   - Kablosuz ağ bilgilerini ve sertifikayı içeren
-   - Diğer gerekli sağlama ayarlarını içeren
+- Intune müşteri Kiracısı için ayarlanmış ve etkinleştirilmiştir
+- Autopilot için kaydedilen ve Müşteri Kiracısına aktarılan cihaz
+- Cihaz için tanımlanan Intune İlkeleri:
+   - Kablosuz Ağ bilgilerini ve Sertifikayı İçeren
+   - Gerekli diğer sağlama ayarlarını içeren
 
-Bu, Gelişmiş ağ gereksinimlerine sahip bir müşterinin cihazları uygulamalı, ölçeklenebilir bir yaklaşımda kaydetmesine olanak sağlar
+Bu, gelişmiş ağ gereksinimlerine sahip bir müşterinin cihazları el ile ve ölçeklenebilir bir yaklaşımla kaydetmesine olanak tanır
 
-Aşağıdaki gibi ek önkoşulların olması gerekir:
-1. [Autopilot önizlemesi Için kiracıyı etkinleştirin](hololens2-autopilot.md).
-1. ıntune içindeki sağlama paketinin yerini alacak HoloLens ilkeleri oluşturun.
-1. HoloLens ıntune ilkelerini oluşturun.
-1. Cihazları doğru gruba atayın.
+Aşağıdaki gibi ek önkullar gerekir:
+1. [Autopilot önizlemesi için Kiracıyı etkinleştirin.](hololens2-autopilot.md)
+1. Intune'HoloLens Paketi'nin yerini alacak yeni ilkeler oluşturun.
+1. Intune HoloLens oluşturma.
+1. Cihazları doğru gruba attayabilirsiniz.
 
 ### <a name="process"></a>İşleme
 
-1. ethernet kablosunu bağdaştırıcıya Bağlan ve bağdaştırıcıyı HoloLens 2 cihazında USB-C bağlantı noktasına takın.
+1. Bağlan ethernet kablosunu bağdaştırıcıya takın ve bağdaştırıcıyı 2 cihazında USB-C bağlantı noktasına HoloLens takın.
 
-2. HoloLens açın.
+2. İlkeyi HoloLens.
 
-3. Cihazın, Ethernet bağdaştırıcısı aracılığıyla otomatik olarak OOBE sırasında internet 'e bağlanması gerekir. Autopilot yapılandırmasını algılar ve Azure AD ve Intune ile otomatik olarak kayıt yaptırmalıdır.
+3. Cihazın Ethernet uyarıcısı aracılığıyla OOBE sırasında otomatik olarak İnternet'e bağlanması gerekir. Autopilot yapılandırmasını algılaması ve Azure AD ile Intune'a otomatik olarak kaydolması gerekir.
 
-4. Cihaz gereken Wi-Fi sertifikaları ve diğer yapılandırmaları Intune aracılığıyla uygular.
+4. Cihaz, Gerekli Sertifikaları Wi-Fi yapılandırmayı Intune aracılığıyla gerekli şekilde uygulayacak.
 
-5. bu, tamamlandığında, ıntune (Endpoint Manager) portalını yükleyebilir ve **giriş > cihazları-> aygıa > donanımlarındaki** cihaz özellikleri sayfasına gidebilir.
+5. Tamamlandığında, teknisyen Intune (Endpoint Manager) Portalı'Endpoint Manager'i yükleyebilirsiniz ve Giriş **-> Cihazlar -> DeviceName -> Donanım** sayfasındaki cihaz özellikleri sayfasında detaya inebilirsiniz.
 
-6. Wi-Fi MAC adresi Intune portalında görünür olacaktır.
+6. Mac Wi-Fi adresi, Intune Portalı'nın içinde görünür.
 
-   ![Intune aracılığıyla MAC adresi](images/mac-address-intune.jpg)
+   ![Intune aracılığıyla MAC Adresi.](images/mac-address-intune.jpg)
 
-7. Teknisyen, bu MAC adresini izin verilen bir cihaz olarak ekler.
+7. Teknisyen bu MAC adresini izin verilen bir cihaz olarak ekler.
 
 ### <a name="benefits"></a>Avantajlar
 
-bu, teknisyen için "kafa dışı" dağıtım deneyimine, cihazın Azure AD 'ye ve ıntune 'a kaydolmasına veya HoloLens ortamıyla el ile etkileşime girmesine gerek kalmadan Azure AD ve ıntune 'a kayıtlı olmasını sağlayacak şekilde izin verir.
+Bu, teknisyenin cihazı takmasına veya cihaz ortamıyla el ile etkileşim kurmasına gerek kalmadan cihazın kutudan Azure AD'ye ve Intune'a kaydolmasına olanak sağlayan bir "Tura" dağıtım deneyimi HoloLens sağlar.
 
-## <a name="reporting-of-mac-addresses-to-the-technician"></a>MAC adreslerinin teknisyene raporlaması
+## <a name="reporting-of-mac-addresses-to-the-technician"></a>MAC adreslerini Teknisyene bildirme
 
 ### <a name="requirements"></a>Gereksinimler
 
-- müşteri kiracısında "ıntune Graph PowerShell" yetkilendirmesi
-- ıntune Graph PowerShell 'i teknisyen makinesine yükleme.
+- Müşteri Kiracısına karşı "Intune Graph PowerShell" yetkilendirmesi
+- Teknisyenler makinesine Intune Graph PowerShell yüklemesi.
 - [https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0)
-- Intune 'un "yönetilen cihazlar" öğelerine okuma erişimi. (Yardım masası Işleci veya üzeri ya da özel bir rol)
+- Intune'daki "Yönetilen Cihazlar" öğelerine okuma erişimi. (Yardım Masası Operatörü veya üstü ya da özel bir rol)
 
-Mevcut olduğunda, yeni bir cihazın Intune içindeki kaydına bağlı olarak bir Otomasyon komutu tetiklemenin "basit" bir yolu yoktur. Bu nedenle, bu komut teknisyene Portal üzerinde oturum açıp el ile almak zorunda kalmadan MAC adresini almanın basit bir yolunu sağlar.
+Şu anda, Intune'da yeni bir cihazın kaydına bağlı olarak otomasyon komutunu tetiklemenin "basit" bir yolu yoktur. Bu nedenle, bu komut teknisyene portalda oturum açmak ve el ile almak zorunda kalmadan MAC adresini almak için basit bir yol sağlar.
 
 ```powershell
 Import-Module Microsoft.Graph.Intune
@@ -153,9 +153,9 @@ Connect-MSGraph
 Get-IntuneManagedDevice -Filter "model eq 'Hololens 2'" | where {$_.enrolledDateTime -gt (get-date).AddDays(-30)}  | select deviceName, wiFiMacAddress 
 ```
 
-bu, son 30 güne kayıtlı olan tüm HoloLens cihazlarının adını ve MAC adresini döndürür.
+Bu, son 30 gün içinde HoloLens cihazların adını ve MAC adresini geri verir.
 
-![PowerShell aracılığıyla MAC adresi](images/mac-address-powershell.jpg)
+![PowerShell aracılığıyla MAC Adresi.](images/mac-address-powershell.jpg)
 
 ### <a name="process"></a>İşleme
 
