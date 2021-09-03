@@ -17,21 +17,21 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f717a0323d1b141423fab52e49a38407ba617d02
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.openlocfilehash: e856ac74e959743e8d05ea6acf583700a6450373
+ms.sourcegitcommit: 37611ac0a4efaf69816a734e16b763c810655f1a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189350"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "123411353"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Bilgi HoloLens bilgi noktası olarak ayarlama
 
 ## <a name="what-is-kiosk-mode"></a>Bilgi noktası modu nedir?
 
-Bilgi noktası modu, bir kullanıcı oturum aken başlat menüsünde hangi uygulamaların gösterildiğini kontrol HoloLens. Desteklenen 2 senaryo vardır:
+Bilgi noktası modu, kullanıcı oturum aken başlat menüsünde hangi uygulamaların gösterildiğini kontrol etmek için HoloLens. Desteklenen 2 senaryo vardır:
 
 1. **Tek uygulama bilgi noktası** modu – Başlat menüsü görüntülenmez ve kullanıcı oturum açsa tek bir uygulama otomatik olarak başlatılır. <br> *Örnek:* Yalnızca Dynamics 365 Kılavuzları uygulamasını çalıştıran bir cihaz.
-2. **Birden çok uygulama bilgi** Başlat menüsü – Başlat menüsü bilgi noktası yapılandırmasında belirtilen uygulamaları gösterir. İsterseniz otomatik olarak başlatilecek bir uygulama seçilebilir. <br> *Örnek kullanım:* Başlat menüsünde yalnızca Mağaza uygulamasını, Geri Bildirim Merkezi ve Ayarlar gösteren bir cihaz.
+2. **Birden çok uygulama bilgi** noktası modu Başlat menüsü bilgi noktası yapılandırmasında belirtilen uygulamaları gösterir. İsterseniz otomatik olarak başlatilecek bir uygulama seçilebilir. <br> *Örnek kullanım:* Başlat menüsünde yalnızca Mağaza uygulamasını, Geri Bildirim Merkezi ve Ayarlar gösteren bir cihaz.
 
     <img alt="Multi app kiosk example" src=".\images\multi-app-kiosk.jpg" width="411" height="500" />
 
@@ -44,22 +44,22 @@ Aşağıdaki tablo, farklı bilgi noktası modlarında özellik özelliklerini l
 |Tek uygulamalı bilgi noktası |Devre dışı |Devre dışı |Devre dışı |Devre dışı   |Devre dışı |Etkin* |
 |Çoklu uygulama bilgi noktası |Etkin |Etkin*  |Kullanılabilir*  |Kullanılabilir* |Kullanılabilir*   |Etkin*  |
 
-\*Devre dışı özellikleri etkinleştirme veya ses komutlarının devre dışı bırakılmış özelliklerle ve Cortana etkileşim kurma hakkında daha fazla bilgi HoloLens bkz. uygulamalar için [AUMID'ler.](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids)
+\*Devre dışı bırakılmış özellikleri etkinleştirme veya ses komutlarının devre dışı bırakılmış özelliklerle etkileşim kurma ve Cortana hakkında daha fazla bilgi HoloLens bkz. uygulamalar için [AUMID'ler.](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids)
 
 ## <a name="key-general-considerations-before-configuring-kiosk-mode"></a>Bilgi noktası modunu yapılandırmadan önce dikkat edilmesi gereken önemli genel noktalar
 
-1. HoloLens HoloLens (AAD) hesapları, Microsoft Hesapları (MSA) HoloLens Azure Active Directory yerel hesapları destekler. Ayrıca, geçici olarak oluşturulan konuk/ziyaretçi adı verilen hesaplar da de desteklemektedir (yalnızca AAD'ye katılma cihazları için). Daha fazla bilgi [için daha fazla bilgi için kullanıcı kimliğini yönetme ve HoloLens.](hololens-identity.md)
+1. Ortamınız içinde HoloLens oturum açmanın HoloLens kullanıcı hesabı Azure Active Directory (AAD) hesaplarını, Microsoft Hesaplarını (MSA) ve Yerel hesapları destekler. Ayrıca, geçici olarak oluşturulan konuk/ziyaretçi adı verilen hesaplar da de desteklemektedir (yalnızca AAD'ye katılma cihazları için). Daha fazla bilgi [için daha fazla bilgi için kullanıcı kimliğini yönetme ve HoloLens.](hololens-identity.md)
 2. Bilgi noktası modu deneyiminin hedeflerini belirleme : bunun herkes, tek bir kullanıcı, belirli kullanıcılar veya AAD gruplarının üyesi olan kullanıcılar vb. olup olmadığını belirleme.
 3. Birden çok uygulama bilgi noktası modu için, başlat menüsünde gösterılacak uygulamaları belirleyin. Her uygulama için [uygulamanın Uygulama Kullanıcı Modeli Kimliği (AUMID)](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) gerekir.
-4. Bilgi noktası modunun çalışma zamanı sağlama paketleri HoloLens Mobile Cihaz Yönetimi (MDM) sunucusu aracılığıyla Cihaz Yönetimi olup olmadığını belirler.
+4. Bilgi noktası modunun çalışma zamanı sağlama paketleri HoloLens (MDM) sunucusu aracılığıyla Cihaz Yönetimi olup olmadığını belirler.
 
 ## <a name="security-considerations"></a>Güvenlik konuları
 
 Bilgi noktası modu bir güvenlik yöntemi olarak değil, kullanıcı oturum açma deneyiminde başlangıç deneyimini denetlemenin bir yöntemi olarak düşünülmelidir. Güvenlikle ilgili belirli ihtiyaçlar varsa bilgi noktası modu deneyimini aşağıda belirtilen seçeneklerle birleştirebilirsiniz:
 
-- Bir Ayarlar bilgi noktası modunda gösterilecek şekilde yapılandırıldığında ve uygulamanın hangi sayfaların Ayarlar kontrol etmek istediğiniz zaman Sayfa Ayarlar [Görünürlüğü'ne bakın](settings-uri-list.md)
-- Belirli uygulamalar için kamera, Bluetooth vb. gibi belirli donanım özelliklerine erişimi kontrol etmek istediğiniz durumlarda, HoloLens 2 - Windows İstemci Yönetimi tarafından desteklenen İlke [CSP'leri'ne bakın.](/windows/client-management/mdm/policies-in-policy-csp-supported-by-hololens2) Fikirler için Ortak [cihaz kısıtlamalarımızı](hololens-common-device-restrictions.md) gözden geçirebilirsiniz.
-- Bilgi noktası modu, bir uygulamanın (bilgi noktası deneyiminin bir parçası olarak yapılandırılan) diğer uygulamaların başlatılmasını engellemez. HoloLens'da belirli uygulamaların /işlemlerin başlatılmasını tamamen engellemek için bkz. Windows Defender - [Azure'da HoloLens 2](/mem/intune/configuration/custom-profile-hololens) cihaz üzerinde Microsoft Intune Uygulama Denetimi kullanma
+- Bir Ayarlar bilgi noktası modunda gösterilecek şekilde yapılandırıldığında ve Ayarlar uygulamasında hangi sayfaların gösterildiğini kontrol etmek için Bkz. Sayfa [Ayarlar Görünürlüğü](settings-uri-list.md)
+- Belirli uygulamalar için kamera, Bluetooth vb. gibi belirli donanım özelliklerine erişimi kontrol etmek istediğiniz durumlarda, HoloLens 2 - Windows İstemci Yönetimi tarafından desteklenen İlke [CSP'leri'ne bakın.](/windows/client-management/mdm/policies-in-policy-csp-supported-by-hololens2) Fikirler için Ortak [cihaz kısıtlamalarımızı gözden](hololens-common-device-restrictions.md) geçirebilirsiniz.
+- Bilgi noktası modu, bir uygulamanın (bilgi noktası deneyiminin bir parçası olarak yapılandırılan) diğer uygulamaların başlatılmasını engellemez. HoloLens'da belirli uygulamaların /işlemlerin başlatılmasını tamamen engellemek için bkz. HoloLens [2](/mem/intune/configuration/custom-profile-hololens) cihaz için Windows Defender Uygulama Denetimi'Microsoft Intune - Azure
 
 ## <a name="key-technical-considerations-for-kiosk-mode-for-hololens"></a>Bilgi Noktası modu için önemli teknik konular HoloLens
 
@@ -67,7 +67,7 @@ Yalnızca çalışma zamanı sağlama paketlerini kullanmayı veya bilgi noktas�
 
 - Atanan erişim profili, bilgi noktası modunda başlat menüsünde hangi uygulamaların görüntülenmiyor olduğunu tanımlar. Daha sonra başvurulabilecek aynı XML yapısında birden çok profil tanımlayabilirsiniz.
 - Atanan erişim yapılandırması, belirli bir kullanıcı veya AAD grubu ya da ziyaretçi gibi bir profilin profiline ve hedef kullanıcılarına başvurur. Kullanım senaryolarının karmaşıklığına bağlı olarak aynı XML yapısında birden çok yapılandırma tanımlayabilirsiniz (aşağıdaki desteklenen senaryolar bölümüne bakın).
-- Daha fazla bilgi edinmek için [bkz. AssignedAccess CSP.](/windows/client-management/mdm/assignedaccess-csp)
+- Daha fazla bilgi edinmek için bkz. [AssignedAccess CSP.](/windows/client-management/mdm/assignedaccess-csp)
 
 ## <a name="supported-scenarios-for-kiosk-mode-based-on-identity-type"></a>Kimlik türüne göre bilgi noktası modu için desteklenen senaryolar
 
@@ -78,16 +78,6 @@ Senaryoyu [temel alan](hololens-kiosk-reference.md#kiosk-xml-code-samples) örne
 
 ### <a name="for-users-who-sign-in-as-either-local-account-or-msa"></a>Yerel hesap veya MSA olarak oturum alan kullanıcılar için
 
-### <a name="prov-package-step-2-ndash-add-the-kiosk-configuration-xml-file-to-a-provisioning-package"></a><a id="ppconfigadd"></a>Prov. package, step 2 &ndash; Add the kiosk configuration XML file to a provisioning package
-
-1. Yapılandırma [Windows'i açın.](https://www.microsoft.com/store/apps/9nblggh4tx22)
-1. Gelişmiş **sağlama'yi** seçin, projeniz için bir ad girin ve İleri'yi **seçin.**
-1. Öğesini **Windows 10 Holographic** ve ardından Sonraki'yi **seçin.**
-1. **Son**'u seçin. Paketinizin çalışma alanı açılır.
-1. Çalışma **zamanı ayarları**  >  **AssignedAccess**  >  **MultiAppAssignedAccessSettings öğesini seçin.**
-1. Orta bölmede **Gözat'ı seçerek** oluşturduğunuz bilgi noktası yapılandırması XML dosyasını bulun ve seçin.
-
-   ![Yapılandırma Tasarımcısı'nda MultiAppAssignedAccessSettings Windows ekran görüntüsü.](./images/multiappassignedaccesssettings.png)
 | **İstenen bilgi noktası deneyimi** | **Önerilen bilgi noktası yapılandırması** | **Yapılandırma yolları**  | **Açıklamalar** |
 | --- | --- | --- | --- |
 | Oturum alan her kullanıcı bilgi noktası deneyimine sahip olur. | [Birden çok uygulamanın Genel Atanan Erişim profilini yapılandırma](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Genel atanan erişim için [20H2 ve daha yeni derlemeler gerekir](hololens-release-notes.md#windows-holographic-version-20h2) |
@@ -98,79 +88,79 @@ Senaryoyu [temel alan](hololens-kiosk-reference.md#kiosk-xml-code-samples) örne
 | **İstenen bilgi noktası deneyimi** | **Önerilen bilgi noktası yapılandırması** | **Yapılandırma yolları** | **Açıklamalar** |
 | --- | --- | --- | --- |
 | Oturum alan her kullanıcı bilgi noktası deneyimine sahip olur. | [Birden çok uygulamanın Genel Atanan Erişim profilini yapılandırma](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Genel atanan erişim için [20H2 ve daha yeni derlemeler gerekir](hololens-release-notes.md#windows-holographic-version-20h2) |
-| Oturum alan her kullanıcı, belirli kullanıcılar dışında bilgi noktası deneyimine sahip olur. | [Belirli kullanıcıları (cihaz sahibi olması gerekenler) dışlayarak birden çok uygulamanın Genel Atanan Erişim profilini yapılandırabilirsiniz.](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Genel atanan erişim için [20H2 ve daha yeni derlemeler gerekir](hololens-release-notes.md#windows-holographic-version-20h2) |
+| Oturum alan her kullanıcı belirli kullanıcılar dışında bilgi noktası deneyimine sahip olur. | [Belirli kullanıcıları (cihaz sahibi olması gerekenler) dışlayarak birden çok uygulamanın Genel Atanan Erişim profilini yapılandırabilirsiniz.](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Genel atanan erişim için [20H2 ve daha yeni derlemeler gerekir](hololens-release-notes.md#windows-holographic-version-20h2) |
 | Her AAD kullanıcısı, o kullanıcıya özgü ayrı bilgi noktası deneyimine sahip olur. | [AAD hesap adını belirten her kullanıcı için atanmış erişim yapılandırmasını yapılandırma.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
-| Farklı AAD gruplarında bulunan kullanıcılar yalnızca kendi gruplarına özel bilgi noktası moduyla deneyimler. | [İstenen her AAD grubu için atanan erişim yapılandırmasını yapılandırma.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • Bir kullanıcı oturum HoloLens İnternet'e bağlandığında, bu kullanıcının bilgi noktası yapılandırmasının mevcut olduğu AAD grubunun bir üyesi olduğu bulunursa, kullanıcı bu AAD grubu için bilgi noktası deneyimine sahip olur. <br> • Kullanıcı oturum aken İnternet yoksa, kullanıcı hata [modu davranışıyla HoloLens deneyimletir.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Kullanıcının oturum aça ve AAD grubu tabanlı bilgi noktası kullanması gerekirken İnternet kullanılabilirliği garanti [edilemezse, AADGroupMembershipCacheValidityInDayspolicy kullanmayı göz önünde bulundurabilirsiniz.](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk) |
-| Geçici amaçlar için HoloLens kullanıcılar bilgi noktası deneyimi elde edin. | [Ziyaretçiler için atanan erişim yapılandırmasını yapılandırma](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Tek uygulama](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • Geçici kullanıcı hesabı, oturum HoloLens tarafından otomatik olarak oluşturulur ve geçici kullanıcı oturumları kapanırsa kaldırılır. <br> • Ziyaretçi otomatik oturum [açma ilkesi etkinleştirmeyi düşünün.](#how-can-visitor-accounts-automatically-logon-to-kiosk-experience) |
+| Farklı AAD gruplarında bulunan kullanıcılar yalnızca kendi gruplarına özel bilgi noktası moduyla deneyimler. | [İstenen her AAD grubu için atanan erişim yapılandırmasını yapılandırma.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • Bir kullanıcı oturum HoloLens İnternet'e bağlandığında, bu kullanıcının bilgi noktası yapılandırmasının mevcut olduğu AAD grubunun bir üyesi olduğu bulunursa, kullanıcı bu AAD grubu için bilgi noktası deneyimine sahip olur. <br> • Kullanıcı oturum aken İnternet yoksa, kullanıcı hata [modu davranışıyla HoloLens deneyimletir.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Kullanıcı oturum açtığında ve AAD grubu tabanlı bilgi noktası kullanılması gerektiğinde internet kullanılabilirliği garanti edilmediği takdirde, [AADGroupMembershipCacheValidityInDayspolicy kullanmayı göz önünde bulundurun](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). <br> • Oturum açma sırasında AAD gruplarıyla ilgili en iyi deneyim için [AADGroupMembershipCacheValidityInDayspolicy](/hololens/hololens-release-notes#cache-azure-ad-group-membership-for-offline-kiosk) kullanma önerisi |
+| geçici amaçlar için HoloLens kullanması gereken kullanıcılar bilgi noktası deneyimi alın. | [Ziyaretçiler için atanan erişim yapılandırması yapılandırma](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-tek uygulama](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • geçici kullanıcı hesabı, oturum açma sırasında HoloLens tarafından otomatik olarak oluşturulur ve geçici kullanıcı oturumu kapattığında kaldırılır. <br> • [Ziyaretçi otomatik oturum açma ilkesini](#how-can-visitor-accounts-automatically-logon-to-kiosk-experience)etkinleştirmeyi düşünün. |
 
-## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>Bilgi noktası modunu yapılandırma adımları HoloLens
+## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>HoloLens için bilgi noktası modunu yapılandırma adımları
 
-Bilgi noktası yapılandırmaları aşağıdaki yollarla oluşturulabilir ve uygulanabilir:
+Bilgi noktası yapılandırması aşağıdaki yollarla oluşturulup uygulanabilir:
 
-1. MDM sunucusunun kullanıcı arabirimi ile, örneğin Intune'un bilgi noktası şablonları veya özel OMA-URI yapılandırmaları , daha sonra bu yapılandırmalara uzaktan HoloLens.
-2. Çalışma zamanı sağlama paketleriyle, bu paketler daha sonra doğrudan HoloLens.
+1. MDM sunucusunun kullanıcı arabirimi ile, örneğin, Intune 'un bilgi noktası şablonları veya bu, HoloLens için uzaktan uygulanan özel OMA-URI yapılandırması.
+2. Çalışma zamanı sağlama paketleri ile, daha sonra HoloLens doğrudan uygulanan.
 
-Yapılandırmak için aşağıdaki yöntemlerden birini kullanabilirsiniz. Kullanmak istediğiniz işlemle eşleşen sekmeyi seçin.
+Aşağıdaki şekilde yapılandırmak için, kullanmak istediğiniz işlemle eşleşen sekmeyi seçin.
 
-1. [Microsoft Intune uygulama bilgi noktası şablonu oluşturma](hololens-kiosk.md?tabs=uisak#steps-in-configuring-kiosk-mode-for-hololens)
-2. [Microsoft Intune uygulama bilgi noktası şablonu oluşturma](hololens-kiosk.md?tabs=uimak#steps-in-configuring-kiosk-mode-for-hololens)
-1. [Microsoft Intune şablon oluşturma](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens)
-1. [Çalışma zamanı sağlama - Çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)
-1. [Çalışma zamanı sağlama - Tek uygulama](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens)
+1. [tek uygulama bilgi noktası şablonu Microsoft Intune](hololens-kiosk.md?tabs=uisak#steps-in-configuring-kiosk-mode-for-hololens)
+2. [birden çok uygulama bilgi noktası şablonu Microsoft Intune](hololens-kiosk.md?tabs=uimak#steps-in-configuring-kiosk-mode-for-hololens)
+1. [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens)
+1. [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)
+1. [Çalışma zamanı sağlama-tek uygulama](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens)
 
 [!INCLUDE[](includes/kiosk-configure-steps.md)]
 
 ## <a name="frequently-asked-questions"></a>Sık Sorulan Sorular
 
-### <a name="how-can-visitor-accounts-automatically-logon-to-kiosk-experience"></a>Ziyaretçi hesapları bilgi noktası deneyimine otomatik olarak nasıl oturum açabilirsiniz?
+### <a name="how-can-visitor-accounts-automatically-logon-to-kiosk-experience"></a>Ziyaretçi hesapları bilgi noktası deneyimine otomatik olarak nasıl oturum açabilir?
 
-[Holographic Windows 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve daha sonra derlemelerde:
+derlemeler [Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1) ve sonraki sürümler:
 
-- Hem AAD hem de ADD olmayan yapılandırmalar, ziyaretçi hesaplarının Bilgi Noktası modları için otomatik olarak etkinleştirilmelerini destekler.
+- AAD ve ADD olmayan yapılandırmaların her ikisi de bilgi noktası modları için otomatik oturum açma özellikli ziyaretçi hesaplarını destekler.
 
 [!INCLUDE[](includes/kiosk-autologin.md)]
 
-### <a name="is-kiosk-experience-supported-on-hololens-1st-gen"></a>Bilgi noktası deneyimi HoloLens (1. nesil) desteklensin mi?
+### <a name="is-kiosk-experience-supported-on-hololens-1st-gen"></a>bilgi noktası deneyimi HoloLens (1. gen) destekleniyor mu?
 
-Bilgi noktası modu yalnızca cihazın cihaza bağlı Windows Holographic for Business. 2 HoloLens tüm cihazlar Windows Holographic for Business ile birlikte göndermektedir ve başka sürüm yoktur. Her HoloLens 2 cihaz, Bilgi Noktası modunu kutudan çıkararak çalıştırabilirsiniz.
+Bilgi noktası modu yalnızca cihazda Windows Holographic for Business varsa kullanılabilir. tüm HoloLens 2 cihazları Windows Holographic for Business ile birlikte dağıtılır ve başka bir sürüm yoktur. her HoloLens 2 cihaz, bilgi noktası modunu kutudan dışarı çalıştırabilir.
 
-HoloLens (1. nesil) cihazların hem işletim sistemi derlemesi hem de işletim sistemi sürümü açısından yükseltilleri gerekir. Aşağıda, bir HoloLens (1. nesil) sürümünü Windows Holographic for Business [edinebilirsiniz.](hololens1-upgrade-enterprise.md) Bir HoloLens (1. nesil) cihazı bilgi noktası modunu kullanmak üzere güncelleştirmek için öncelikle cihazın Windows 10, sürüm 1803 veya sonraki bir sürümde çalıştırıla olduğundan emin olun. Windows (1. nesil) cihazınızı varsayılan derlemeye kurtarmak için HoloLens Windows Cihaz Kurtarma Aracı'nı kullandıysanız veya en son güncelleştirmeleri yüklemişsanız, cihazınız yapılandırmaya hazırdır.
+HoloLens (1. gen) cihazların hem işletim sistemi derlemesi hem de işletim sistemi sürümü açısından yükseltilmesi gerekir. HoloLens (1. gen) [Windows Holographic for Business](hololens1-upgrade-enterprise.md) sürümüne güncelleştirme hakkında daha fazla bilgi bulabilirsiniz. HoloLens (1. gen) cihazı bilgi noktası modunu kullanacak şekilde güncelleştirmek için önce cihazın Windows 10, sürüm 1803 veya sonraki bir sürümü çalıştırmasını sağlamalısınız. HoloLens (1. gen) cihazınızı varsayılan yapıya kurtarmak için Windows cihaz kurtarma aracını kullandıysanız veya en son güncelleştirmeleri yüklediyseniz, cihazınız yapılandırmaya hazır olur.
 
 ### <a name="how-to-use-device-portal-to-configure-kiosk-in-non-production-environments"></a>Üretim dışı ortamlarda bilgi noktası yapılandırmak için cihaz portalını kullanma
 
-[HoloLens'i kullanmak için Windows Cihaz Portalı.](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) Bu Cihaz Portalı, bilgisayarınızdan bir web HoloLens bağlanabilirsiniz.
+[HoloLens cihazı Windows cihaz portalını kullanacak şekilde](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal)ayarlayın. cihaz portalı, HoloLens bilgisayarınızdaki bir web tarayıcısından bağlantı kurmak için kullanabileceğiniz bir web sunucusudur.
 
  > [!CAUTION]
- > Bu HoloLens için Cihaz Portalı cihazda Geliştirici Modu'Cihaz Portalı etkinleştirmeniz gerekir. Uygulama yüklemesi olan bir Windows Holographic for Business Geliştirici Modu, uygulamaları yan yüklemeye olanak sağlar. Ancak bu ayar, bir kullanıcının uygulama tarafından sertifikalandırılmış uygulamaları yükleme riski Microsoft Store. Yöneticiler, İlke CSP'sinde **ApplicationManagement/AllowDeveloper Kilit** Açma ayarını kullanarak Geliştirici Modunu [etkinleştirme olanağını engelleyebilir.](/windows/client-management/mdm/policy-configuration-service-provider) [Geliştirici Modu hakkında daha fazla bilgi edinebilirsiniz.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
+ > cihaz portalını kullanmak için HoloLens ayarlarken, cihazda geliştirici modunu etkinleştirmeniz gerekir. Windows Holographic for Business bir cihazda geliştirici modu, uygulamaları dışarıdan yükleyebilmenizi sağlar. Ancak, bu ayar, bir kullanıcının Microsoft Store tarafından sertifikasız uygulamaları yükleyebir risk oluşturur. Yöneticiler, [Ilke CSP](/windows/client-management/mdm/policy-configuration-service-provider)'Deki **ApplicationManagement/allowdeveloper unlock** ayarını kullanarak Geliştirici modunu etkinleştirebilme özelliğini engelleyebilir. [Geliştirici modu hakkında daha fazla bilgi edinin.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
 
-Bilgi Noktası Modu, tek bir gerekli sorgu dizesi parametresi ("kioskModeEnabled" ve "true" veya "false" değeriyle) ve isteğe bağlı bir parametre ("paket adı değerine sahip startupApp" ) ile /api/holographic/kioskmode/settings'a POST göndererek Cihaz Portalı'nin REST API'sı aracılığıyla ayarlanabilir. Uygulamanın yalnızca Cihaz Portalı amaçlı olduğunu ve geliştirici olmayan cihazlarda etkinleştirilmemiş olması gerektiğini unutmayın. Bu REST API gelecek güncelleştirmelerde/yayınlarda değişebilir.
+Bilgi noktası modu, bir gerekli sorgu dizesi parametresi ("true" veya "false" değeri olan "Kıoskmodeenabled") ve bir isteğe bağlı parametre ("startupApp" bir paket adı ile) ile/api/holographic/kioskmode/Settings ile bir POST işlemi yaparak Device Portal 'ın REST API aracılığıyla ayarlanabilir. Cihaz portalının yalnızca geliştiricilere yönelik olduğunu ve geliştirici olmayan cihazlarda etkinleştirilmeyeceğini aklınızda bulundurun. REST API gelecek güncelleştirmelerde/sürümlerde değişebilir.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-### <a name="issue---no-apps-are-shown-in-start-menu-in-kiosk-mode"></a>Sorun - Başlangıç menüsünde bilgi noktası modunda hiçbir uygulama gösterilmez
+### <a name="issue---no-apps-are-shown-in-start-menu-in-kiosk-mode"></a>Sorun-başlangıç menüsünde bilgi noktası modunda hiçbir uygulama gösterilmez
 
 **Belirtiler**
 
-Bilgi noktası modu uygulama sırasında hatalarla karşılaşıldıktan sonra aşağıdaki davranış görüntülenir:
+Bilgi noktası modu uygulanırken hatalardan karşılaşıldığında, aşağıdaki davranış görünür:
 
-- Holographic Windows den önce sürüm 20H2 - HoloLens, sanal Başlat menüsü.
-- Windows Holographic, sürüm 20H2 : Bir cihazda hem genel erişim hem de AAD grup üyesi tarafından atanan erişimin birleşimi olan bir bilgi noktası yapılandırması varsa, AAD grup üyeliği belirlenmezse kullanıcı "başlat menüsünde hiçbir şey gösterilmez" menüsünü görebilir.
+- Windows Holographic ' den önce, 20h2 sürümü HoloLens, Başlat menüsü tüm uygulamaları gösterir.
+- Windows Holographic, sürüm 20H2-bir cihazın bir bilgi noktası yapılandırması varsa ve bu, genel olarak atanmış erişime ve AAD grubu üyesine atanmış erişime sahip ise, AAD grup üyeliğini belirlemek başarısız olursa Kullanıcı "başlangıç bölümünde gösterilmez" menüsünü görür.
 
-    ![Bilgi noktası modu artık başarısız olduğunda hangi modun göründüğünün resmi.](images/hololens-kiosk-failure-behavior.png )
+    ![Ne zaman bilgi noktası modunun başarısız olduğunu anlamak için görüntü görüntülenir.](images/hololens-kiosk-failure-behavior.png )
 
-- [Holographic Windows sürüm 21H1'den](hololens-release-notes.md#windows-holographic-version-21h1)başlayarak Bilgi Noktası modu, boş bir başlangıç menüsü göstermeden önce Genel Atanan Erişim'i gösterir. Bilgi noktası deneyimi, AAD grup bilgi noktası modunda hatalar olması durumunda genel bilgi noktası yapılandırmasına (varsa) geri döner.
+- [Windows Holographic sürümünden itibaren, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1), bilgi noktası modu boş bir başlangıç menüsünü göstermeden önce genel atanan erişimi arar. AAD grubu bilgi noktası modu sırasında oluşan bilgi noktası deneyimi, genel bilgi noktası yapılandırmasına (varsa) geri dönecek.
 
 **Sorun giderme adımları**
 
-- Uygulamanın AUMID'lerinin doğru şekilde belirtilmiş olduğunu ve sürümler içere olmadığını doğrulayın. Örnekler HoloLens [gelen kutusu uygulamaları için AUMID'leri](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) görüntülemeye bakın.
+- Uygulamanın AUMıD 'nin doğru şekilde belirtildiğinden ve sürüm içermediğinden emin olun. örnekler için gelen kutusu uygulamalarına yönelik [HoloLens aumıds](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) bölümüne bakın.
 - Uygulamanın bu kullanıcı için cihazda yüklü olduğundan emin olun.
-- Bilgi noktası yapılandırması AAD gruplarını temel aldısa lütfen AAD kullanıcısı oturum aken İnternet bağlantısının mevcut olduğundan emin olun. İsterseniz, [MixedReality/AADGroupMembershipCacheValidityInDays](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-aadgroupmembershipcachevalidityindays) ilkesi yapılandırarak bu ilkenin internet olmadan da çalışmasına izin veresiniz.
+- Bilgi noktası yapılandırması AAD gruplarını temel alıyorsa, AAD kullanıcısı oturum açtığında internet bağlantısının mevcut olduğundan emin olun. İsterseniz [Mixedreality/AADGroupMembershipCacheValidityInDays](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-aadgroupmembershipcachevalidityindays) ilkesini yapılandırıp bu, internet olmadan da çalışabilir.
 
-### <a name="issue---building-a-package-with-kiosk-mode-failed"></a>Sorun - Bilgi noktası moduyla paket yapılamadı
+### <a name="issue---building-a-package-with-kiosk-mode-failed"></a>Sorun-bilgi noktası moduna sahip bir paket oluşturma başarısız oldu
 
 **Belirtiler**
 
-Aşağıdakine benzer bir iletişim kutusu gösterilir.
+Aşağıdaki gibi bir iletişim kutusu gösterilir.
 
 <kbd>
     <img alt="Kiosk failure to build" src="./images/kiosk-steps/kiosk-ppkg-failure.png"/>
@@ -178,30 +168,30 @@ Aşağıdakine benzer bir iletişim kutusu gösterilir.
 
 **Sorun giderme adımları**
 
-1. Yukarıdaki iletişim kutusunda gösterildiği gibi hiper bağlantıya tıklayın.
-1. ICD.log dosyasını bir metin düzenleyicisinde açın ve içeriğinin hatayı belirt olması gerekir.
+1. Yukarıdaki iletişim kutusunda gösterildiği gibi, hiper bağlantı ' ya tıklayın.
+1. ITıD. log ' i bir metin düzenleyicisinde açın ve içeriği hatayı göstermelidir.
 
 > [!NOTE]
-> Birkaç deneme yaptıysanız, günlükte zaman damgalarını kontrol edin. Bu, yalnızca geçerli sorunları denetlemeye yardımcı olur.
+> Birkaç deneme yaptıysanız, günlükteki zaman damgalarına bakın. Bu, yalnızca geçerli sorunları kontrol etmenize yardımcı olur.
 
-### <a name="issue--provisioning-package-built-successfully-but-failed-to-apply"></a>Sorun – Sağlama paketi başarıyla oluşturuldu ama uygulanamadı.
-
-**Belirtiler**
-
-Hololens'e sağlama paketi uygularken hata gösteriliyor
-
-**Sorun giderme adımları**
-
-1. Çalışma zamanı sağlama paketi için Windows Yapılandırma Tasarımcısı projesinin bulunduğu klasöre gidin.
-1. ICD.log dosyasını açın ve sağlama paketini hazırlarken günlükte hata olmadığını denetleyin. Derleme sırasında bazı hatalar gösternsin ama ICD.log dosyasına hala kaydedilir
-
-### <a name="issue--multiple-app-assigned-access-to-aad-group-does-not-work"></a>Sorun – AAD grubuna birden çok uygulama tarafından atanan erişim çalışmıyor
+### <a name="issue--provisioning-package-built-successfully-but-failed-to-apply"></a>Sorun – sağlama paketi başarıyla oluşturuldu ancak uygulanamadı.
 
 **Belirtiler**
 
-AAD kullanıcı oturum açmada cihaz bilgi noktası moduna giri
+HoloLens 'te sağlama paketi uygulanırken hata gösterilir
 
 **Sorun giderme adımları**
 
-- Atanan Erişim yapılandırma XML'inde, oturum açan kullanıcının üyesi olduğu AAD grubunun GUID'inin AAD kullanıcı guid'inin değil, üyesi olduğunu onaylayın.
-- Intune portalında AAD kullanıcılarının hedeflenen AAD grubunun üyesi olarak gösterildiğini onaylayın.
+1. çalışma zamanı sağlama paketinin mevcut olduğu Windows Configuration Designer projesinin bulunduğu klasöre gidin.
+1. ICD. log ' i açın ve sağlama paketini oluştururken günlükte hata olmadığından emin olun. Bazı hatalar derleme sırasında gösterilmiyor, ancak hala ICD. log dosyasında günlüğe kaydediliyor
+
+### <a name="issue--multiple-app-assigned-access-to-aad-group-does-not-work"></a>Sorun: AAD grubuna birden çok uygulama atanmış erişim çalışmıyor
+
+**Belirtiler**
+
+AAD Kullanıcı oturum açtığında, cihaz bilgi noktası moduna geçmiyor
+
+**Sorun giderme adımları**
+
+- Atanan erişim yapılandırması XML ' nda, oturum açan kullanıcının bir üyesi olduğu AAD grubunun GUID 'sinin, AAD kullanıcısının GUID 'SI değil, kullanıldığını ve kullanılacağını onaylayın.
+- Intune portalında AAD kullanıcısının hedeflenen AAD grubunun üyesi olarak gösterildiğini doğrulayın.
