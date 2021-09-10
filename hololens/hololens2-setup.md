@@ -13,11 +13,11 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 77c061c53806e7410d73ecf3aaa20d74c217ea33
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190421"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427813"
 ---
 # <a name="get-your-hololens-2-ready-to-use"></a>HoloLens 2 ' ye kullanıma hazırlanın
 
@@ -98,31 +98,31 @@ HoloLens gösterge ışıklarının ne anlama geldiğinden emin değil misiniz? 
 
 ### <a name="sleep-behavior"></a>Uyku davranışı
 
-| Cihazın Durumu | Eylem | HoloLens 2 bunu yapar |
+| Cihazın durumu | Eylem | HoloLens 2 bunu yapacaktır |
 | - | - | - |
-| AÇIK | Tek Güç düğmesine basın | Cihaz UYKU'ya geçişler ve tüm gösterge ışıklarını kapatma |
-| AÇIK | 3 dakika hareket yok | Cihaz UYKU'ya geçiş ve tüm gösterge ışıklarını kapatma |
-| UYKU | Tek Güç düğmesi Tuşuna basın | Cihaz AÇıK'a geçişler ve gösterge ışıklarını aç |
+| AÇIK | Tek güç düğmesine basma | Cihaza uyku moduna geçiş yapar ve tüm gösterge ışıklarını kapatır |
+| AÇIK | 3 dakika boyunca hareket yok | Cihaza uyku moduna geçiş ve tüm gösterge ışıklarını kapatma |
+| KULLANıLMADıĞıNDA | Tek güç düğmesine basma | Üzerinde cihaz geçişi açık ve açık gösterge ışıkları |
 
-### <a name="lights-to-indicate-problems"></a>Sorunları göstermek için lambalar
+### <a name="lights-to-indicate-problems"></a>Sorunları belirten ışıklar
 
-| Bunu yapmak için | Işıklar bunu yapar | Bunun anlamı |
+| Bunu yaptığınızda | Işıklar bunu yapın | Bunun anlamı |
 | - | - | - |
-| Güç düğmesine basabilirsiniz. | Bir ışık beş kez yanıp söner, sonra da kapalıdır. | Pilin HoloLens kritik bir şekilde düşüktür. Ücretlerinizi HoloLens. |
-| Güç düğmesine basabilirsiniz. | Beş ışığın hepsi beş kez yanıp söner, sonra da kapat. |  HoloLens doğru başlatamaz ve hata durumuna geldi. [Cihazınızı kurtarmak için işletim](hololens-recovery.md) sistemini yeniden yükleyin. |
-| Güç düğmesine basabilirsiniz. | 1., 3. ve 5. lambalar sürekli yanıp söner. |  HoloLens bir donanım hatası olabilir. De [destekle iletişime geçin.](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb) |
+| Güç düğmesine basın. | Bir açık beş kez yanıp sönmeye, sonra devre dışı bırakır. | HoloLens pili kritik düzeyde düşüktür. HoloLens ücretlendirme yapın. |
+| Güç düğmesine basın. | Beş kat tüm beş ışık yanıp sönsün sonra kapanır. |  HoloLens doğru bir şekilde başlayamaz ve bir hata durumunda. Cihazınızı kurtarmak için [işletim sistemini yeniden yükleyin](hololens-recovery.md) . |
+| Güç düğmesine basın. | 1., 3. ve 5. her sürekli birlikte Flash. |  HoloLens bir donanım hatası olabilir. [Desteğe](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb)başvurun. |
 
-## <a name="safety-and-comfort"></a>Güvenlik ve konfor
+## <a name="safety-and-comfort"></a>Güvenlik ve rahatlık
 
-### <a name="use-hololens-in-safe-surroundings"></a>Güvenli HoloLens güvenli bir yerde kullanma
+### <a name="use-hololens-in-safe-surroundings"></a>güvenli sursörde HoloLens kullanma
 
-Güvenlik HoloLens güvenli bir alanda, hiçbir engel ve tehlikeleri yok etmeden kullanın. Net bir görünüm alanına ihtiyacınız olduğunda veya tüm dikkatlerinizi çekerken (örneğin, bir araçla çalışırken veya diğer tehlikeli etkinlikler yaparken) bunu kullanmayın.
+HoloLens güvenli bir alanda, engellerin ve bağımsız tehlikeleri ücretsiz olarak kullanın. Açık bir görünüm alanına ihtiyacınız olduğunda veya bir araç çalıştırırken veya başka potansiyel olarak tehlikeli etkinlikler yaparken olduğu gibi, tam olarak ilgilenmeniz gerekmiyorsa kullanmayın.
 
 ### <a name="stay-comfortable"></a>Rahat kalın
 
-İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamadıysanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareketsizlik, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
+ilk birkaç oturumu HoloLens kısa tutun ve kesmelerden haberdar olun. Rahatımız yaşarsanız, daha iyi hissetene kadar durun ve geri kalanını yaşayın. Bu, nausea, hareket altına göre, fezlik, disyönlendirmenin, headache, fatıg, göz yorgunluğu veya kurutma gözlerinizin geçici bir bölümünü içerebilir.
 
-Ürün [güvenliği uyarıları ve yönergelerine bakın.](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions)
+Bkz. [ürün güvenliği uyarıları ve yönergeleri](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions).
 
 > [!div class="nextstepaction"]
-> [2. HoloLens ayarlama](hololens2-start.md)
+> [HoloLens 2 ' 'nizi ayarlama](hololens2-start.md)

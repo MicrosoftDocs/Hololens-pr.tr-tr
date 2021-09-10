@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 Geliştirme Sürümü
-description: 2 HoloLens sürümü hakkında bilgi alın ve kendi sürümlerden birini elde ettikten sonra ne yapacaklarını öğrenin.
-keywords: HoloLens 2 satın alma seçeneği, HoloLens seçenekleri, Developer Edition
+title: HoloLens 2 geliştirme sürümü
+description: HoloLens 2 geliştirme sürümü ve kendinizinkini aldıktan sonra ne yapmanız gerektiğini öğrenin.
+keywords: HoloLens 2 satın alma seçenekleri, HoloLens seçenekler, geliştirici sürümü
 author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -15,82 +15,82 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: ee2b87823324f3183d86763d47b38ca0503f0aeb
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190353"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428286"
 ---
-# <a name="hololens-2-development-edition"></a>HoloLens 2 Geliştirme Sürümü
+# <a name="hololens-2-development-edition"></a>HoloLens 2 geliştirme sürümü
 
-HoloLens 2'den ücretsiz Unity yazılımı denemeleri ile bulut hizmetleri için Azure kredilerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
+HoloLens 2 ' nin ücretsiz Unity yazılımının ücretsiz denemelerinden ve bulut hizmetleri için Azure kredileriyle birleştiren bu teklifle karma gerçeklik için oluşturmaya başlayın. Temel bilgilerin ötesine nasıl gidebileceğinizi ve karma gerçeklik için geliştirmeye nasıl başlayacağınızı öğrenin.
 
-## <a name="learn-about-the-development-edition"></a>Geliştirme Sürümü hakkında bilgi alın
+## <a name="learn-about-the-development-edition"></a>Geliştirme sürümü hakkında bilgi edinin
 
 > [!NOTE]
-> Geliştirme Sürümünün ticari olarak dağıtılmış bir çözümle dağıtılmasına izin verilmez. Geliştirme Sürümünün, ticari bir ortamda uygulama geliştirme ve/veya test etme amacıyla dağıtılmasına izin verilir.  
+> Geliştirme sürümü, ticari olarak dağıtılan bir çözümle birlikte dağıtılmasına izin verilmez. Geliştirme sürümü, ticari bir ayarda uygulamaların geliştirme ve/veya test etme sürecinde dağıtılmasına izin verilir.  
 
-HoloLens 2 Geliştirme Sürümü, HoloLens 2, 500 ABD doları Azure kredisi, 3 aylık Unity Pro Deneme Sürümü ve 3 aylık PiXYZ eklenti denemesi içerir:
+HoloLens 2 geliştirme sürümü bir HoloLens 2, $500 Azure kredisi, 3 aylık Unity Pro deneme sürümü ve 3 aylık pikseller eklenti denemesi içerir:
 
 | Paket özelliği | Description |
 |---|---|
-|  [Unity](https://unity.com/) | Gerçek zamanlı bir 3D geliştirme platformu.   |
-|  [Unity için Pixyz eklentisi](https://www.pixyz-software.com/plugin/) | Mühendislik CAD dünyalarını geliştirme &amp; dünyasına bağlamak için bir köprü.   |
-| [Azure hizmetleri için 500 ABD doları Azure kredisi](https://azure.microsoft.com/resources/) | HoloLens 2 Geliştirme Sürümü'ne dahil olan Azure kredileri, Azure'da karma gerçeklik uygulamaları geliştirmeye ve test etmeye hızlı bir şekilde başlamanızdır. |
+|  [Unity](https://unity.com/) | Gerçek zamanlı bir 3B geliştirme platformu.   |
+|  [Unity için pikselde eklenti eklentisi](https://www.pixyz-software.com/plugin/) | Mühendislik &amp; CAD dünyaları 'yi geliştirme dünyasına bağlamak için bir köprü.   |
+| [Azure hizmetleri için Azure kredilerine $500](https://azure.microsoft.com/resources/) | HoloLens 2 geliştirme sürümüne dahil edilen azure kredileri, azure 'da karışık gerçeklik uygulamaları oluşturmaya ve test etmeye başlamak için hızlı bir şekilde çalışmaya başlamalardır. |
 
-![HoloLens 2 Geliştirme Sürümü.](./images/hololens-2-dev-ed.png)
+![HoloLens 2 geliştirme sürümü.](./images/hololens-2-dev-ed.png)
 
-## <a name="redeem-your-credits"></a>Kredilerinizi kullanma
+## <a name="redeem-your-credits"></a>Kredilerinizi kullanın
 
 ### <a name="unity"></a>Unity
-Benzersiz bir kod almış oluruz. Unity'i deneme sürümü Pro yönergeleri:
-1. Id.unity.com [](http://id.unity.com/)
-1. Unity kimliğiniz ile oturum açma veya oluşturma
-1. Ürün **kodu kullan'a tıklayın**
-1. Ürün kodunu girin ve Ürün kodu **kullan'a tıklayın**
+Benzersiz bir kod aldınız. Unity Pro deneme sürümünü kullanmaya yönelik yönergeler:
+1. [İd.Unity.com](http://id.unity.com/) ziyaret edin
+1. Unity KIMLIĞINIZLE oturum açın veya bir tane oluşturun
+1. **Ürün kodu** kullan öğesine tıklayın
+1. Ürün kodunu girin ve **ürün kodunu** kullan ' a tıklayın.
 
-Unity lisansını [etkinleştirme hakkında daha fazla ayrıntı.](https://support.unity3d.com/hc/articles/211438683-How-do-I-activate-my-license-) Gerektiğinde [yardım için Unity](https://support.unity3d.com/hc) Desteği'ne başvurun.  
+[Unity lisansının nasıl etkinleştirileceği](https://support.unity3d.com/hc/articles/211438683-How-do-I-activate-my-license-)hakkında daha fazla bilgi. Gerektiğinde yardım için [Unity desteğiyle](https://support.unity3d.com/hc) iletişim kurun.  
 
-### <a name="pixyz"></a>Pixyz
-Benzersiz bir kod almış oluruz. Pixyz Eklenti denemesini kullanma yönergeleri:
-1. Id.unity.com [](http://id.unity.com/)
-1. Ürün **kodu kullan'a tıklayın**
-1. Pixyz Eklentisi ürün kodunuzu girin ve Ürün kodu **kullan'a tıklayın**
+### <a name="pixyz"></a>Pikselde
+Benzersiz bir kod aldınız. Piksellerine yönelik eklenti deneme sürümünü kullanma yönergeleri:
+1. [İd.Unity.com](http://id.unity.com/) ziyaret edin
+1. **Ürün kodu** kullan öğesine tıklayın
+1. Pikselde eklenti ürün kodunuzu girin ve **ürün kodu** kullan ' a tıklayın.
 
-[Pixyz lisansınızı kullanma hakkında daha fazla ayrıntı.](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) Gerektiğinde [yardım için Pixyz Desteği'ne](https://www.pixyz-software.com/support/) başvurun.
+[Pikselsiz lisansınızı kullanma](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) hakkında daha fazla bilgi. Gerektiğinde yardım için [pikselde desteğe](https://www.pixyz-software.com/support/) başvurun.
 
 ### <a name="azure"></a>Azure
-Karma Gerçeklik için [Azure kredinizi kullanmak](https://azure.microsoft.com/topic/mixed-reality/) istediğiniz bazı yaygın Azure ürünleri burada vemektedir.
-Azure kredilerini kullanma: 500 ABD doları Azure kredinizi kullanmak için, Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin.](hololens2-development-edition-faq.yml#how-can-i-redeem-my--500-azure-credit-)
+Azure kredinizi sizin için kullanmayı isteyebileceğiniz [karma gerçeklik için bazı genel Azure ürünleri](https://azure.microsoft.com/topic/mixed-reality/) aşağıda verilmiştir.
+Azure kredilerini kullanma: $500 Azure kredilerinizi kullanmak Için Azure Pass promosyon kodunuzu kullanın ve aboneliğinizi etkinleştirin. [Daha fazla bilgi edinin.](hololens2-development-edition-faq.yml#how-can-i-redeem-my--500-azure-credit-)
 
-- [Azure Spatial Anchors'nin 3D içeriği eşleen, paylaşan ve kalıcı olarak bulunduran uygulamalar oluşturmanıza nasıl yardımcı olduğunu öğrenin](https://azure.microsoft.com/services/spatial-anchors/)
-- [Bu Azure Remote Rendering kaliteli, etkileşimli 3D içeriği nasıl işleyebilirsiniz, bunu cihazlarınıza gerçek zamanlı olarak nasıl akışla sebilirsiniz?](https://azure.microsoft.com/services/remote-rendering/)
+- [Azure uzamsal bağlantıları 'nın 3B içeriğini eşleyen, paylaşan ve kalıcı hale getirebileceği uygulamalar oluşturmanıza nasıl yardımcı olabileceğini öğrenin](https://azure.microsoft.com/services/spatial-anchors/)
+- [Azure uzaktan Işlemenin nasıl yüksek kaliteli, Etkileşimli 3B içerik oluşturabileceği ve cihazlarınıza gerçek zamanlı olarak akışını nasıl sağlayabileceği hakkında bilgi edinin](https://azure.microsoft.com/services/remote-rendering/)
 
-## <a name="get-started-developing"></a>Kullanmaya başlayın geliştirme
+## <a name="get-started-developing"></a>Geliştirmeye başlayın
 
-Altyapınızı seçin, araçlarınızı indirin ve klavyenizi kapatın. Karma Gerçeklik ekosistemi'ne hoş geldiniz. Şimdi oluşturma zamanı.
+Motorunuz seçin, araçlarınızı indirin ve klavyenizden toz yapın. Karma Gerçeklik ekosistemine hoş geldiniz-oluşturma zamanı.
 
 |     Checkpoint                              |     Sonuç                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-|     [Tasarlamaya ve Prototyping'e Başlama](/windows/mixed-reality/design/design)         |     Temel kavramlar, etkileşim modelleri ve UX öğeleri genelinde Karma Gerçeklik uygulamaları tasarlamaya başlama.     |
-|     [Karma Gerçeklik için Geliştirmeye Başlama](/windows/mixed-reality/develop/development?tabs=unity)    |     Altyapınızı seçin, araçlarınızı indirin, temel yapı taşları ekleyin ve bugün binaya başlayabilirsiniz.                                  |
-|     [Explore Azure Cloud Services](/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Azure Remote Rendering ve Azure Spatial Anchors.                                 |
+|     [Tasarlamaya ve prototip oluşturmaya başlayın](/windows/mixed-reality/design/design)         |     Temel kavramlar, etkileşim modelleri ve UX öğeleri genelinde karışık gerçeklik uygulamaları tasarlamak için Adventure 'nizi başlatın.     |
+|     [Karma Gerçeklik için geliştirmeye başlayın](/windows/mixed-reality/develop/development?tabs=unity)    |     Altyapıyı seçin, araçlarınızı indirin, çekirdek yapı taşları ekleyin ve bugün oluşturmaya başlayın.                                  |
+|     [Azure Cloud Services 'yi keşfet](/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Azure uzaktan Işleme ve Azure uzamsal bağlayıcılarla etkileyici derinlikli deneyimler oluşturun.                                 |
 
-## <a name="developer-edition-additional-resources"></a>Developer Edition ek kaynakları
+## <a name="developer-edition-additional-resources"></a>Geliştirici sürümü ek kaynaklar
 
-- [HoloLens 2 Geliştirme Sürümü hakkında SSS](hololens2-development-edition-faq.yml)
-- [Geliştirme için gerekli araçları HoloLens olun.](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
-- [Unity ile HoloLens 2 için geliştirme hakkında bilgi öğrenin.](/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2)
-- [MRTK'ı Unity ile birleştirmeyi öğrenin.](/windows/mixed-reality/develop/unity/mrtk-getting-started)
-- [Yerleşik uygulamalarınızı dağıtmayı öğrenin.](app-deploy-overview.md)
-- [Karma Gerçeklik için tüm olanakları keşfedin.](/windows/mixed-reality/)
-- [Unreal ile HoloLens 2 için geliştirme hakkında bilgi öğrenin.](/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
-- [HoloDevelopers Slack Kanalımızda diğer geliştiricilerinize ulaşabilirsiniz.](https://holodevelopersslack.azurewebsites.net/)
+- [HoloLens 2 geliştirme sürümü sss](hololens2-development-edition-faq.yml)
+- [HoloLens geliştirme için araçları yüklediğinizden emin olun.](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+- [Unity ile HoloLens 2 için geliştirme hakkında bilgi edinin](/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2).
+- [MRTK 'Yi Unity ile birleştirme hakkında bilgi edinin](/windows/mixed-reality/develop/unity/mrtk-getting-started).
+- [Oluşturulan uygulamalarınızı dağıtmayı öğrenin](app-deploy-overview.md).
+- [Karma gerçeklik için tüm olanakları keşfedebilir](/windows/mixed-reality/).
+- [gerçek zamanlı olmayan HoloLens 2 için geliştirme hakkında bilgi edinin.](/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
+- [Hologeliştiriciler bolluk kanalımızda bulunan Geliştiricilerinize ulaşın](https://holodevelopersslack.azurewebsites.net/).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. Karma Gerçeklik ile hemen etkileşime Windows 10 HoloLens uygulamanıza giderek İpuçları uygulamalı  etkileşimler için uygulamalı öğreticilere göz atabilirsiniz. Başlat'a gitmek için başlangıç hareketi kullanın veya "Başla'ya Git" de İpuçları.
-1. 2.0'da çalışmaya devam etmek için HoloLens tıklayın.
+1. karma gerçeklik ile hemen etkileşim kurmaya başlayın ve HoloLens Windows 10 gezinerek, bt etkileşimlerine yönelik uygulamalı öğreticiler için **İpuçları** uygulamasına göz atın. başlamak için başlangıç hareketini kullanın veya "başlat 'a git" deyin ve İpuçları ' yi seçin.
+1. HoloLens 2 ' yi okumaya devam etmek için aşağıya tıklayın.
 
 > [!div class="nextstepaction"]
-> [Kullanmaya başlayın 2 ile HoloLens](hololens2-basic-usage.md)
+> [HoloLens 2 ile çalışmaya başlama](hololens2-basic-usage.md)

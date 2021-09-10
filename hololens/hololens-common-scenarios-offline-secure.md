@@ -1,6 +1,6 @@
 ---
-title: Yaygın Senaryolar – Çevrimdışı Güvenli HoloLens 2
-description: Mobil cihazlar için sağlama ile çevrimdışı güvenli dağıtım ve uygulama dağıtım senaryosu HoloLens öğrenin.
+title: 'ortak senaryolar: çevrimdışı güvenli HoloLens 2'
+description: HoloLens cihazları için sağlama ile çevrimdışı bir güvenli dağıtım ve uygulama dağıtım senaryosu ayarlamayı öğrenin.
 keywords: HoloLens, yönetim, çevrimdışı, çevrimdışı güvenli
 ms.date: 9/25/2020
 manager: yannisle
@@ -15,108 +15,108 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 10d1955249630202a05fbf2057e1d175855ce0b5
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189129"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428816"
 ---
-# <a name="common-scenarios--offline-secure-hololens-2"></a>Yaygın Senaryolar – Çevrimdışı Güvenli HoloLens 2
+# <a name="common-scenarios--offline-secure-hololens-2"></a>ortak senaryolar: çevrimdışı güvenli HoloLens 2
 
 ## <a name="overview"></a>Genel Bakış
 
-Bu kılavuz, aşağıdaki kısıtlamalarla güvenli ortamlarda kullanmak üzere bir HoloLens 2'nin kilitlenmesini sağlayan örnek Sağlama Paketi uygulama konusunda rehberlik sağlar:
+bu kılavuz, aşağıdaki kısıtlamalara sahip güvenli ortamlarda kullanılmak üzere HoloLens 2 ' ye kilitleyen örnek bir sağlama paketi uygulamaya yönelik rehberlik sağlar:
 
--   WiFi'yi devre dışı bırakma.
--   BlueTooth'ı devre dışı bırakma.
--   Mikrofonları devre dışı bırakma.
--   Sağlama paketleri eklemeyi veya kaldırmayı önler.
--   Hiçbir kullanıcı, yukarıdaki kısıtlı bileşenlerden herhangi birini etkinleştire değildir.
+-   WiFi 'yi devre dışı bırakın.
+-   BlueTooth 'U devre dışı bırakın.
+-   Mikrofonları devre dışı bırakın.
+-   Sağlama paketlerinin eklenmesini veya kaldırılmasını engeller.
+-   Herhangi bir Kullanıcı, yukarıdaki kısıtlı bileşenlerden hiçbirini etkinleştiremez.
 
-[![Çevrimdışı Güvenli senaryosu. ](./images/deployment-guides-revised-scenario-c-01.png)](./images/deployment-guides-revised-scenario-c-01.png#lightbox)
+[![Çevrimdışı güvenli senaryo. ](./images/deployment-guides-revised-scenario-c-01.png)](./images/deployment-guides-revised-scenario-c-01.png#lightbox)
 
 ## <a name="prepare"></a>Hazırlama
 
-Windows 10 BILGISAYAR Kurulumu
-1. [En son HoloLens 2 işletim sistemi dosyasını](https://aka.ms/hololens2download) doğrudan bir bilgisayara indirin. 
-   1. Bu yapılandırma için destek, Derleme 19041.1117 ve üzeri'ne dahildir.
-1. Gelişmiş Kurtarma Yardımcı Aracı'nı (ARC) [Microsoft Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8) bilgisayarınıza indirin/yükleyin
-1. En son Windows [Yapılandırma Tasarımcısı (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?activetab=pivot:overviewtab) aracını indirin/yükleyin Microsoft Store bilgisayarınıza yükleyin.
-1. PPKG [OfflineSecureHL2_Sample proje dosyalarıyla birlikte](https://aka.ms/HoloLensDocs-SecureOfflineSample) OfflineSecureHL2_Sample klasörünü indirin.
-1. Çevrimdışı İş [Hattı uygulamanızı PPKG dağıtımı için hazırlayın.](app-deploy-provisioning-package.md) 
+Windows 10 BILGISAYAR kurulumu
+1. [en son HoloLens 2 işletim sistemi dosyasını](https://aka.ms/hololens2download) doğrudan bir bilgisayara indirin. 
+   1. Bu yapılandırma için destek, derleme 19041,1117 ve üzeri sürümlerde bulunur.
+1. gelişmiş kurtarma yardımcısı (ARC) aracını [Microsoft Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8) bilgisayarınıza indirin/yükleyin
+1. en son [Windows yapılandırma tasarımcısı (wcd)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?activetab=pivot:overviewtab) aracını Microsoft Store bilgisayarınıza indirin/yükleyin.
+1. OfflineSecureHL2_Sample klasörünü, PPKG oluşturmak için [Proje dosyalarıyla indirin](https://aka.ms/HoloLensDocs-SecureOfflineSample) .
+1. Çevrimdışı [Iş kolu uygulamanızı PPKG dağıtımı için](app-deploy-provisioning-package.md)hazırlayın. 
 
 
 ## <a name="configure"></a>Yapılandırma
 
-Güvenli Yapılandırma Sağlama Paketi Oluşturma
+Güvenli yapılandırma sağlama paketi oluşturma
 
-1. Bilgisayarınızda WCD aracını başlatma.
-1. Dosya **-> Proje aç'ı seçin.**
-  1. Daha önce kaydedilen OfflineSecureHL2_Sample klasörüne gidin ve şu seçeneği seçin: OfflineSecureHL2_Sample.icdproj.xml
-1. Proje açılmalı ve artık Kullanılabilir Özelleştirmeler'in bir listesine sahipsiniz:
+1. Bilgisayarınızda WCD aracını başlatın.
+1. **Dosya-> aç proje**' yi seçin.
+  1. Daha önce kaydedilen OfflineSecureHL2_Sample klasörünün konumuna gidin ve şunları seçin: OfflineSecureHL2_Sample.icdproj.xml
+1. Projenin açık olması ve artık kullanılabilir özelleştirmeler listesine sahip olmanız gerekir:
 
    > [!div class="mx-imgBorder"]
-   > ![WCD'de açık yapılandırma paketinin ekran görüntüsü.](images/offline-secure-sample-wcd.png)
+   > ![WCD 'de açık olan yapılandırma paketinin ekran görüntüsü.](images/offline-secure-sample-wcd.png)
 
-   Bu sağlama paketinde ayarlanmış yapılandırmalar:
+   Bu sağlama paketinde ayarlanan yapılandırma:
    
    |     Öğe                                                |     Ayar                       |     Açıklama                                                                                                                    |
    |---------------------------------------------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-   |     Hesaplar / Kullanıcılar                                    |     Yerel Kullanıcı Adı & Parolası    |     Bu çevrimdışı cihazlar için tek bir kullanıcı adı ve parola ayar olmalı ve cihazın tüm kullanıcıları tarafından paylaşılır.          |
-   |     İlk Deneyim / HoloLens / SkipCalibration       |     Doğru                          |     Yalnızca ilk cihaz kurulumu sırasında ayarlamayı atlar                                                                             |
-   |     İlk Deneyim / HoloLens / SkipTraining          |     Doğru                          |     İlk cihaz kurulumu sırasında cihaz eğitimlerini atlar                                                                              |
-   |     İlk Deneyim / HoloLens / WiFi                  |     Doğru                          |     İlk Wi-Fi sırasında yapılandırmayı atlar                                                                                 |
-   |     İlkeler/Bağlantı/AllowBluetooth                |     No                            |     Devre dışı Bluetooth                                                                                                             |
-   |     İlkeler/Deneyim/AllowCortana                    |     No                            |     Devre Cortana devre dışı bırakılır (mikrofonlar devre dışı bırakılana kadar olası sorunları ortadan kaldırmak için)                                          |
-   |     İlkeler/MixedReality/MikrofonDizli            |     Yes                           |     Mikrofonu Devre Dışı Bırakıyor                                                                                                            |
-   |     İlkeler/Gizlilik/LetAppsAccessLocation              |     Reddetmeye zorlama                    |     Uygulamaların Konum verilerine erişmeye çalışmasını önler (Konum izleme devre dışı bırakılmıştır)    |
-   |     İlkeler/Gizlilik/LetAppsAccessMicrophone            |     Reddetmeye zorlama                    |     Uygulamaların Mikrofonlara erişmeye çalışmasını önler (Mikrofonlar devre dışı bırakılmıştır)           |
-   |     İlkeler/Güvenlik/AllowAddProvisioningPackage       |     No                            |     Kilitlenmiş ilkeleri geçersiz kılmaya çalışan sağlama paketleri eklemesini önler.                         |
-   |     İlkeler/Güvenlik/AllowRemoveProvisioningPackage    |     No                            |     Herkesin bu kilitli sağlama paketini kaldırmasını önler.                                                           |
-   |     İlkeler/Sistem/AllowLocation                       |     No                            |     Cihazın konum verilerini izlemesini önler.                                                                        |
-   |     İlkeler/WiFi/AllowWiFi                             |     No                            |     Devre dışı Wi-Fi                                                                                                                 |
+   |     Hesaplar/kullanıcılar                                    |     Yerel Kullanıcı adı & parolası    |     Bu çevrimdışı cihazlarda, tek bir Kullanıcı adı ve parolasının, cihazın tüm kullanıcıları tarafından ayarlanması ve paylaşılması gerekir.          |
+   |     ilk deneyim/HoloLens/skipayarlaması       |     Doğru                          |     Yalnızca ilk cihaz kurulumu sırasında ayarlamayı atlar                                                                             |
+   |     ilk deneyim/HoloLens/skipeğitim          |     Doğru                          |     İlk cihaz kurulumu sırasında cihaz eğitimini atlar                                                                              |
+   |     ilk deneyim/HoloLens/WiFi                  |     Doğru                          |     İlk cihaz kurulumu sırasında Wi-Fi config 'i atlar                                                                                 |
+   |     İlkeler/bağlantı/AllowBluetooth                |     No                            |     Bluetooth devre dışı bırakır                                                                                                             |
+   |     İlkeler/deneyim/AllowCortana                    |     No                            |     Cortana devre dışı bırakır (mikrofonlar devre dışı bırakıldıktan sonra olası sorunları ortadan kaldırmak için)                                          |
+   |     İlkeler/MixedReality/mikro Phonedisabled            |     Yes                           |     Mikrofonu devre dışı bırakır                                                                                                            |
+   |     İlkeler/gizlilik/Litappsaccesslocation              |     Reddetme zorla                    |     Uygulamaların konum verilerine erişmeye çalışmasını engeller (konum izleme devre dışı olduğundan olası sorunları ortadan kaldırmak için)    |
+   |     İlkeler/gizlilik/Litappsaccessmicrophone            |     Reddetme zorla                    |     Uygulamaların mikrofonlar 'e erişmesini engeller (mikrofonlar devre dışı bırakıldıklarından bu yana olası sorunları ortadan kaldırmak için)           |
+   |     İlkeler/güvenlik/AllowAddProvisioningPackage       |     No                            |     Kullanıcıların, kilitli ilkeleri geçersiz kılmaya çalıştabilecek sağlama paketleri eklemesini önler.                         |
+   |     İlkeler/güvenlik/AllowRemoveProvisioningPackage    |     No                            |     Başkalarının bu kilitli sağlama paketini kaldırmasını engeller.                                                           |
+   |     İlkeler/sistem/AllowLocation                       |     No                            |     Cihazın konum verilerini izlemeye çalışmasını önler.                                                                        |
+   |     İlkeler/WiFi/AllowWiFi                             |     No                            |     Wi-Fi devre dışı bırakır                                                                                                                 |
 
-1. Çalışma zamanı Ayarlar Hesaplar **/ Kullanıcılar / KullanıcıAdı: Holo / Password seçeneğini seçin.**
+1. çalışma zamanı Ayarlar altında **hesaplar/kullanıcılar/kullanıcı adı: holo/parola**' yı seçin.
 
-   İsterseniz parolayı not edin ve sıfırlayın.
+   Parolayı ve istenirse sıfırlamayı göz önünde edin.
 
-1. UniversalAppInstall / UserContextApp'e gidin ve bu cihazlara dağıtacakları [LOB](app-deploy-provisioning-package.md) uygulamasını yapılandırın.
-
-   > [!div class="mx-imgBorder"]
-   > ![WCD'de uygulamanın nereye ekli olduğunu ekran görüntüsü.](images/offline-secure-sample-wcd-usercontextapp2.png)
-
-1. Tamamlandıktan sonra "Dışarı Aktar" düğmesini seçin ve sağlama paketiniz oluşturulana kadar tüm istemleri izleyin.
+1. Üniversalappınstall/UserContextApp dizinine gidin ve bu cihazlara dağıtabileceğiniz [lob uygulamasını yapılandırın](app-deploy-provisioning-package.md) .
 
    > [!div class="mx-imgBorder"]
-   > ![WCD'de bu paket için Dışarı Aktar düğmesinin ekran görüntüsü.](images/offline-secure-sample-wcd-export.png)
+   > ![Uygulamanızın WCD 'ye nereye ekleneceğini ekran görüntüsü.](images/offline-secure-sample-wcd-usercontextapp2.png)
+
+1. Tamamlandıktan sonra, "dışarı aktar" düğmesini seçin ve sağlama paketiniz oluşturuluncaya kadar tüm istemleri izleyin.
+
+   > [!div class="mx-imgBorder"]
+   > ![WCD 'deki bu paketin dışa aktarma düğmesinin ekran görüntüsü.](images/offline-secure-sample-wcd-export.png)
 
 ## <a name="deploy"></a>Dağıtma
 
-1. Bağlan USB kablosu aracılığıyla HL2'Windows 10 bilgisayarınıza bağlayın.
-1. ARC aracını başlatma ve HoloLens **2'yi seçme**
+1. HL2 PC 'nizi USB kablosu aracılığıyla Windows 10 bilgisayarınıza Bağlan.
+1. yay aracını başlatın ve **HoloLens 2** ' yi seçin
 
-   ![HoloLens 2 temiz reflash başlangıç ekranı.](images/ARC2.png)
+   ![HoloLens 2 temiz flash başlangıç ekranı.](images/ARC2.png)
 
-1. Sonraki ekranda El ile paket **seçimi'ne tıklayın.**
+1. Sonraki ekranda **el ile paket seçimi**' ni seçin.
 
-   ![HoloLens 2 ARC bilgi ekranı.](images/arc_device_info.png)
+   ![HoloLens 2 yay bilgisi ekranı.](images/arc_device_info.png)
 
-1. Daha önce indirilen .ffu dosyasına gidin ve Aç'ı **seçin.**
-1. Uyarı sayfasında Devam'ı **seçin.**
+1. Daha önce indirilen. FFU dosyasına gidin ve **Aç**' ı seçin.
+1. Uyarı sayfasında **devam**' ı seçin.
 
-   ![HoloLens 2 ARC uyarı ekranı.](images/arc_warning.png)
+   ![HoloLens 2 yay uyarı ekranı.](images/arc_warning.png)
 
-1. ARC aracının 2 işletim sistemi yüklemesi HoloLens bekleyin.
-1. Cihaz yükleme ve yeniden yükleme işlemini tamamlandıktan sonra bilgisayarınızdan Dosya Gezgini'ye gidin ve daha önce kaydedilen PPKG dosyasını cihaz klasörüne kopyalayın.
+1. yay aracının HoloLens 2 işletim sistemi yüklemesini tamamlamasını bekleyin.
+1. Cihaz, yüklemeyi ve önyükleme işlemini tamamladıktan sonra, bilgisayarınızdan dosya Gezgini 'ne gidin ve daha önce kaydedilen PPKG dosyasını cihaz klasörüne kopyalayın.
 
    > [!div class="mx-imgBorder"]
-   > ![Dosya Gezgini penceresindeki PC'de PPKG dosyası.](images/offline-secure-file-explorer.png)
+   > ![Dosya Gezgini penceresinde BILGISAYARDAKI PPKG dosyası.](images/offline-secure-file-explorer.png)
 
-1. 2. HoloLens şu düğme birleşik tuşuna basarak Sağlama Paketini çalıştırın: Birim Kapalı ve Güç Düğmesi'ne **aynı** anda dokunun. 
-1. Sağlama Paketi'nin uygulanarak Onayla'nın seçili olması **istenir**
-1. Sağlama paketi tamamlandıktan sonra Tamam'ı **seçin.**
-1. Daha sonra paylaşılan yerel hesap ve parola ile cihazda oturum açmanız istendiğinde.
+1. HoloLens 2 ' de, sağlama paketini çalıştırmak için aşağıdaki düğmeye basın: **birim aşağı** ve **güç düğmesine** aynı anda dokunun.
+1. Sağlama paketini uygulamanız istenir, **Onayla** ' yı seçin.
+1. Sağlama paketi tamamlandıktan sonra Tamam ' **ı** seçin.
+1. Bundan sonra, paylaşılan yerel hesap ve parolayla cihazda oturum açmanız istenir.
 
 ## <a name="maintain"></a>Bakım
 
-Bu yapılandırmayla, yukarıdaki işlemi yeniden başlatmanız ve ARC aracıyla cihaza ters eğik çizgi uygulamanız ve işletim sistemi ve/veya uygulamalarda güncelleştirme yapmak için yeni bir PPKG uygulamanız önerilir.
+Bu yapılandırmayla, yukarıdaki işlemi yeniden başlatmanız ve cihazı yay aracıyla yeniden başlatmanız ve işletim sistemi ve/veya uygulamalar üzerinde herhangi bir güncelleştirme yapmak için yeni bir PPKG uygulamanız önerilir.

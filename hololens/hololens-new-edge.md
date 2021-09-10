@@ -10,11 +10,11 @@ ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
 ms.openlocfilehash: 8ef73733b9fa4f422335977be860371b9570d549
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189707"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427915"
 ---
 # <a name="introducing-the-new-microsoft-edge"></a>Yeni Microsoft Edge tanıtımı
 
@@ -137,35 +137,35 @@ yeni Microsoft Edge, derinlikli web deneyimleri (webvr 'yi değiştirme) oluştu
 ### <a name="how-to-use-webxr"></a>WebXR kullanma
 
 1. WebXR desteğiyle bir Web sitesine gidin.
-1. Web sitesindeki **VR girin** düğmesini seçin. Bu düğmenin konumu ve görsel temsili Web sitesi başına değişebilir, ancak şuna benzer olabilir:
+1. Web **sitesinde VR girin** düğmesini seçin. Bu düğmenin konumu ve görsel gösterimi web sitesi başına farklılık gösterebilir ancak aşağıdakine benzer olabilir:
 
-    ![VR düğmesi örneği girin.](images/75px-enter-vr.png)
+    ![VR düğmesi örneğini girin.](images/75px-enter-vr.png)
 
-1. Belirli bir etki alanında bir WebXR deneyimini ilk kez başlatmaya çalıştığınızda, tarayıcı bir derinlikli görünüm girip **Izin ver**' i seçeceğiz.
-1. deneyimi işlemek için [HoloLens 2 hareketlerini](hololens2-basic-usage.md#the-hand-tracking-frame) kullanın.
-1. Deneyimde **Çıkış** düğmesi yoksa, giriş geri döndürmek için [Başlangıç hareketini](hololens2-basic-usage.md#start-gesture) kullanın.
+1. Belirli bir etki alanında WebXR deneyimini ilk kez başlatmayı deneyci, çevreleyici bir görünüm girmek için onay sorar ve İzin Ver'i **seçer.**
+1. Deneyimi [HoloLens için 2 hareket](hololens2-basic-usage.md#the-hand-tracking-frame) kullanın.
+1. Deneyimin Çıkış düğmesi **yoksa, girişe** dönmek [için Başlat](hololens2-basic-usage.md#start-gesture) hareketini kullanın.
 
 **Önerilen WebXR örnekleri**
 - 360 Görüntüleyici (sonraki bölüme bakın)
-- [XR Dinoı](https://www.xrdinosaurs.com/)
+- [XR Yenileri](https://www.xrdinosaurs.com/)
 - [Barista Express](https://constructarca.de/game/barista-express/)
 - [WebXR Paint](https://threejs.org/examples/webxr_vr_paint.html)
 
-### <a name="how-to-use-360-viewer"></a>360 görüntüleyicisini kullanma
+### <a name="how-to-use-360-viewer"></a>360 Görüntüleyici kullanma
 
-1. YouTube 'da 360 derecelik bir videoya gidin.
-1. Video çerçevesinde, karma gerçeklik kulaklık düğmesini seçin:
+1. YouTube'da 360 derecelik bir videoya gidin.
+1. Video çerçevesinde karma gerçeklik başlığı düğmesini seçin:
 
-    ![360 görüntüleyicisini etkinleştirme düğmesi.](images/enter-360-viewer.jpg)
+    ![360 Görüntüleyiciyi etkinleştirme düğmesi.](images/enter-360-viewer.jpg)
 
-1. Belirli bir etki alanında 360 Görüntüleyici 'yi ilk kez başlattığınızda, tarayıcı bir tam ekran görünümü girmeye izin ister. **Izin ver**' i seçin.
-1. Kayıttan yürütme denetimlerini görüntülemek için [AIR 'e dokunun](hololens2-basic-usage.md#select-using-air-tap) . [El ışınları ve AIR ' i dokunarak](hololens2-basic-usage.md#select-using-air-tap) Oynat/Duraklat, ileri/geri atla, açıklamalı alt yazıları aç/kapat veya deneyimi Durdur (tam ekran görünümünden çıkar). Kayıttan yürütme denetimleri birkaç saniyelik işlem yapılmadan sonra kaybolacaktır.
+1. Belirli bir etki alanında 360 Görüntüleyiciyi ilk kez başlatmayı deneyebilirsiniz; tarayıcı çevreleyici bir görünüm girmek için onay sorar. İzin **Ver'i seçin.**
+1. [Kayıttan yürütme](hololens2-basic-usage.md#select-using-air-tap) denetimlerini açmak için havadan dokunma. El [işleyicileri](hololens2-basic-usage.md#select-using-air-tap) ve havadan dokunarak oynatma/duraklatma, ileri/geri atlama, açıklamalı alt yazıları açma/kapatma veya deneyimi durdurma (çevreleyici görünümden çıkar) için kullanın. Kayıttan yürütme denetimleri birkaç saniyelik bir süre sonra kaybolur.
 
-### <a name="top-webxr-and-360-viewer-known-issues"></a>Popüler WebXR ve 360 Görüntüleyicisi bilinen sorunları
-- WebXR deneyiminin karmaşıklığına bağlı olarak, kare hızı kesilebilir veya stutter.
-- WebXR 'deki ifade eden her bir el ile yönelik destek, varsayılan olarak etkin değildir. Geliştiriciler, "WebXR el girişi" ni etkinleştirerek edge://flags aracılığıyla desteği etkinleştirebilir.
-- YouTube dışındaki Web sitelerinden 360 video, beklendiği gibi çalışmayabilir.
+### <a name="top-webxr-and-360-viewer-known-issues"></a>En önemli WebXR ve 360 Görüntüleyici bilinen sorunları
+- WebXR deneyiminin karmaşıklığına bağlı olarak kare hızı düşerek veya düşerek düşebilirsiniz.
+- WebXR'de ifadeli el bağlantılarında destek varsayılan olarak etkin değildir. Geliştiriciler "WebXR El Edge://flags" ayarını etkinleştirerek destek hizmetleri aracılığıyla destek etkinleştirerek.
+- YouTube dışında web sitelerinden 360 video beklendiği gibi çalışmayabilir.
 
-### <a name="providing-feedback-on-webxr-and-360-viewer"></a>WebXR ve 360 Viewer hakkında geri bildirim sağlama
+### <a name="providing-feedback-on-webxr-and-360-viewer"></a>WebXR ve 360 Görüntüleyici hakkında geri bildirim sağlama
 
-Lütfen yeni Microsoft Edge **geri bildirim gönder** özelliği aracılığıyla ekibimize geri bildirim ve hata paylaşabilirsiniz.
+Lütfen yeni çalışmadaki Geri Bildirim Gönder özelliği **aracılığıyla geri bildirimi** ve hataları ekibimizle Microsoft Edge.

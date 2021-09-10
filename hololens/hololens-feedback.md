@@ -1,6 +1,6 @@
 ---
 title: Geri bildirimde bulunun
-description: HoloLens'ı Windows Mixed Reality geliştiriciler için eyleme değiştirilebilir geri Geri Bildirim Merkezi.
+description: HoloLens ve Windows Mixed Reality geliştiriciler için eyleme değiştirilebilir geri Geri Bildirim Merkezi.
 ms.assetid: b9b24c72-ff86-44a9-b30d-dd76c49479a9
 author: mattzmsft
 ms.author: mazeller
@@ -18,34 +18,34 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 214b2b9cda33eb074b06a9157429d1f52bfe0716
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189435"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428578"
 ---
 # <a name="feedback-for-hololens"></a>HoloLens için geri bildirim
 
-Bu Geri Bildirim Merkezi kullanarak hangi özellikleri çok seviyor, hangi özellikleri olmadan ve nasıl daha iyi bir şey yapa biliyor olabiliriz. Mühendislik ekibi, hataları izlemek ve düzeltmek için aynı mekanizmayı dahili olarak kullanır, bu nedenle Geri Bildirim Merkezi tüm hataları rapor etmek için lütfen bu özelliği kullanın. Dinliyoruz!
+Bu Geri Bildirim Merkezi kullanarak hangi özellikleri çok seviyor, hangi özellikler olmadan neler yapabiliriz ve bir şeyin nasıl daha iyi olacağını bize söyleyin. Mühendislik ekibi, hataları izlemek ve düzeltmek için dahili olarak aynı mekanizmayı kullanır, bu nedenle Geri Bildirim Merkezi tüm hataları rapor etmek için lütfen bu mekanizmayı kullanın. Dinliyoruz!
 
-Geri Bildirim Merkezi, mühendislik ekibini hatalara karşı uyarma ve gelecekteki güncelleştirmelerin daha sağlıklı ve tutarlı bir şekilde hatadan daha serbest olduğundan emin olmak için harika bir yol sağlar. Ancak Geri Bildirim Merkezi yanıt sağlamaz. Hemen yardıma ihtiyacınız varsa lütfen geri bildirim gönderin, geri bildiriminiz için sağladığınız özeti not edin ve  [HoloLens](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) desteğiyle devam edin. URL'nin doğrudan bağlantısını paylaşmak için Geri Bildirim Merkezi'daki Paylaş özelliğini kullanın. Geri Bildirim Merkezi çok fazla veri alır. URL, geri bildiriminizi hızla tanımlamamıza yardımcı olur.
+Geri Bildirim Merkezi, mühendislik ekibini hatalara karşı uyarma ve gelecekteki güncelleştirmelerin daha sağlıklı ve tutarlı bir şekilde hatadan daha serbest olduğundan emin olmak için harika bir yol sağlar. Ancak Geri Bildirim Merkezi yanıt sağlamaz. Hemen yardıma ihtiyacınız varsa lütfen geri bildirim gönderin, geri bildiriminiz için sağladığınız özeti not edin ve  [HoloLens](https://support.microsoft.com/supportforbusiness/productselection?sapid=e9391227-fa6d-927b-0fff-f96288631b8f) desteğiyle devam edin. URL'nin doğrudan bağlantısını paylaşmak için Geri Bildirim Merkezi'daki Paylaş özelliğini kullanın. Geri Bildirim Merkezi çok fazla veri alır. URL geri bildiriminizi hızla tanımlamamıza yardımcı olur.
 
 > [!NOTE]  
 >  
 > - Geçerli sürüme sahip olduğundan emin Geri Bildirim Merkezi. Bunu yapmak için Başlangıç **ve**  >  **Microsoft Store** ve ardından üç noktayı (**... ) seçin.** Ardından İndirmeler ve **güncelleştirmeler**  >  **Güncelleştirmeleri al'ı seçin.**  
 >  
-> - Sorunları düzeltmek için mümkün olan en iyi verileri sağlamak için, cihaz telemetrinizi İsteğe Bağlı olarak ayarlamanızı **kesinlikle öneririz.** Bu değeri İlk İlk Deneyim (OOBE) sırasında veya uygulamanın ilk Ayarlar ayarlayın. Bu seçeneği kullanarak bunu yapmak Ayarlar, Üzerinde **Ayarlar** Gizlilik  >  **Uygulaması**  >    >  **Tanılaması'Ayarlar'ı**  >  **seçin.**
+> - Sorunları düzeltmek için mümkün olan en iyi verileri sağlamak için, cihaz telemetrinizi İsteğe Bağlı olarak ayarlamanızı **kesinlikle öneririz.** Bu değeri İlk İlk Deneyim (OOBE) sırasında veya Ayarlar ayarlayabilirsiniz. Bu seçeneği kullanarak bunu yapmak Ayarlar, Üzerinde **Ayarlar** Gizlilik  >  **Uygulaması**  >    >  **Tanılaması'Ayarlar'ı**  >  **seçin.**
 
 ## <a name="use-the-feedback-hub"></a>Geri Bildirim Merkezi
 
-1. Başlat **hareketini** kullanarak Başlat menüsünü **açın** ve ardından Başlat'ı **Geri Bildirim Merkezi.** Uygulama ortamınız içinde açılır.
+1. Başlat **menüsünü açmak** için Başlat **hareketini kullanın** ve ardından Başlat'ı **Geri Bildirim Merkezi.** Uygulama ortamınız içinde açılır.
 
-   ![HoloLens Başlat menüsü.](./images/hololens2-feedbackhub-tile.png)
+   ![HoloLens Başlat menüsü ile ilgili geri HoloLens Başlat menüsü.](./images/hololens2-feedbackhub-tile.png)
    > [!NOTE]  
-   > **Geri Bildirim Merkezi'ı görmüyorsanız,** **cihaza** uygulama listesini görmek için Tüm Uygulamalar'ı seçin.
+   > **Geri Bildirim Merkezi'i görmüyorsanız,** **cihaza** uygulama listesini görmek için Tüm Uygulamalar'ı seçin.
 
 1. Başka birinin benzer geri bildirimlerde olup olmadığını görmek için Geri Bildirim arama kutusuna konu hakkında birkaç **anahtar sözcük** girin.
-1. Benzer bir geri bildirim bulursanız bunu seçin, Yorum yaz kutusuna sahip olduğunuz ek bilgileri **ekleyin** ve ardından **Upvote seçeneğini kullanın.**
+1. Benzer bir geri bildirim bulursanız bunu seçin, Yorum  yazın kutusuna sahip olduğunuz ek bilgileri ekleyin ve ardından **Upvote seçeneğini kullanın.**
 1. Benzer bir geri bildirim bulamazsanız Yeni geri bildirim **ekle'yi seçin.**
 
    ![Yeni geri bildirim ekleyin.](./images/hololens-feedback-1.png)
@@ -63,7 +63,7 @@ Geri Bildirim Merkezi, mühendislik ekibini hatalara karşı uyarma ve gelecekte
    |Hologram doğruluğu, kararlılığı ve güvenilirliği |Hologramların uzayda nasıl görünt olduğu hakkında geri bildirim. |
    |Uygulamaları başlatma, yerleştirme, ayarlama ve uygulamalardan çıkma |2D veya 3D uygulamaları başlatma veya durdurma hakkında geri bildirim. |
    |Miracast |Miracast. |
-   |Boşluklar ve kalıcılık |Uzayların alanları HoloLens hologramları nasıl koruyarak koruyarak alanla ilgili geri bildirim. |
+   |Boşluklar ve kalıcılık |Alan tanıma ve HoloLens hologramları tutma hakkında geri bildirim. |
    |Başlat menüsü ve tüm uygulamalar listesi |Başlat menüsü **ve tüm** uygulamalar listesi hakkında geri bildirim. |
    |Yüzey eşlemesi |Yüzey eşlemesi hakkında geri bildirim. |
    |Fotoğraf ve video çekmek |Karma gerçeklik yakalamaları hakkında geri bildirim. |

@@ -1,8 +1,8 @@
 ---
-title: Yeniden başlatma, sıfırlama veya kurtarma HoloLens 1
+title: HoloLens 1 ' i yeniden başlatın, sıfırlayın veya kurtarın
 ms.reviewer: Keep up to date on the basic and advanced instructions for rebooting or resetting your HoloLens mixed reality device.
-description: Windows 1. Nesil'e bir görüntü HoloLens Için Cihaz Kurtarma Aracı'nı kullanma.
-keywords: nasıl yapıldığı, yeniden başlatma, sıfırlama, kurtarma, sabit sıfırlama, yazılım sıfırlama, güç döngüsü, HoloLens, kapatma, wdrt, Windows cihaz kurtarma aracı
+description: Windows cihaz kurtarma aracı 'nı kullanarak 1. Gen HoloLens bir görüntüyü yakıp söndür.
+keywords: nasıl yapılır, yeniden başlatma, sıfırlama, kurtarma, sabit sıfırlama, geçici sıfırlama, güç çevrimi, HoloLens, kapatma, wdrt, windows cihaz kurtarma aracı
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -16,134 +16,134 @@ ms.localizationpriority: medium
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: d6eb706c50e97a81910180c70be1d9dbc52bc6603cbc77ad130c1dd3b6a9010e
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 4840535030cc81f222cb25357474f1c751426e91
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661814"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428643"
 ---
-# <a name="restart-reset-or-recover-hololens-1st-gen"></a>Yeniden başlatma, sıfırlama veya HoloLens (1. Nesil)
+# <a name="restart-reset-or-recover-hololens-1st-gen"></a>HoloLens yeniden başlatma, sıfırlama veya kurtarma (1. genel)
 
-Cihaz kurtarma işlemiyle ilgili sorunlar HoloLens, yeniden başlatmayı veya sıfırlamayı veya hatta cihaz kurtarmayı kullanarak cihazı yeniden başlatmayı sınabilirsiniz. Bu makale, önerilen kurtarma adımlarında sırayla size yol sağlar.
+HoloLens ile ilgili sorunlar yaşıyorsanız, bir yeniden başlatma veya sıfırlama ya da cihazı cihaz kurtarma kullanarak yeniden faturalandırmayı denemek isteyebilirsiniz. Bu makale, önerilen kurtarma adımlarında sırasıyla size rehberlik eder.
 
-2. bir HoloLens kurtarmak için bkz. Bu işlem [farklı HoloLens 2](hololens-recovery.md)kurtarma.
+HoloLens 2 ' yi kurtarmak istiyorsanız, bu işlem farklı olduğundan [HoloLens 2](hololens-recovery.md)' yi kurtarma bölümüne bakın.
 
 > [!NOTE]
-> Bu makale, cihaz ve HoloLens yazılıma odaklanır. Hologramlar doğru görünmüyorsa, hologram **[kalitesini HoloLens](hololens-environment-considerations.md)** faktörler hakkında bilgi için bkz. ortamla ilgili dikkat edilmesi gerekenler.
+> bu makale HoloLens cihaz ve yazılıma odaklanır. hologramlar doğru görünmüyorsa, hologram kalitesini artıran faktörler hakkında bilgi için bkz. **[HoloLens ortam konuları](hololens-environment-considerations.md)** .
 
 ## <a name="restart"></a>Yeniden başlat
 
-### <a name="do-a-safe-restart-by-using-cortana"></a>Cortana kullanarak güvenli bir yeniden başlatma Cortana
+### <a name="do-a-safe-restart-by-using-cortana"></a>Cortana kullanarak güvenli bir yeniden başlatma yapın
 
-HoloLens'ı yeniden başlatmanın en güvenli yolu, Cortana kullanarak yeniden başlatmanın en güvenli yoludur. Bu, genellikle HoloLens.
+HoloLens yeniden başlatmanın en güvenli yolu, genellikle HoloLens bir sorunla karşılaştığınızda deneyebileceğiniz ilk şey olan Cortana kullanmaktır.
 
 > [!NOTE] 
 > Cortana tüm cihazlarda kullanılamaz.
-> - Cortana tüm HoloLens (1. Nesil) cihazlarda kullanılabilir. 
-> - Cortana, HoloLens Holograpic Sürüm 2004 güncelleştirme Windows derlemelerde 2 cihaz üzerinde kullanılabilir.
+> - Cortana tüm HoloLens (1. Gen) cihazlarda kullanılabilir. 
+> - Cortana, Windows holograpıc, sürüm 2004 güncelleştirmesinden önceki yapılarda HoloLens 2 cihazda kullanılabilir.
 
-1. Kendi HoloLens.
-1. Kullanıcının oturum açtığından ve cihazın kilidini açmak için parola beklemey olduğundan emin olun.
-2. "Hey Cortana, yeniden başlat" veya "Hey Cortana, yeniden başlat" de.
-3. Cortana yanıt verir ve onaylamanızı istenir. Sorudan sonra bir ses çalması için bekleyin ve ardından "Evet" der. Cihaz yeniden başlatılır.
+1. HoloLens açın.
+1. Bir kullanıcının oturum açtığından ve cihazın kilidini açmak için bir parola beklemediğinden emin olun.
+2. "hey Cortana, reboot" veya "hey Cortana, yeniden başlatma" deyin.
+3. Cortana yanıt verir ve onaylamanız istenir. Sorudan sonra bir sesin çalmasını bekleyin ve sonra "Evet" deyin. Cihaz yeniden başlatılır.
 
-### <a name="use-the-power-button-to-do-a-safe-restart"></a>Güvenli yeniden başlatma yapmak için güç düğmesini kullanma
+### <a name="use-the-power-button-to-do-a-safe-restart"></a>Güvenli yeniden başlatma yapmak için güç düğmesini kullanın
 
-Cihazınızı yeniden başlatamaya devam ediyorsanız güç düğmesini kullanarak cihazı yeniden **başlatmayı** deneyin:
+Cihazınızı hala yeniden başlatmazsanız, **Güç** düğmesini kullanarak yeniden başlatmayı deneyin:
 
-1. Güç düğmesine 5 **saniye** basılı tutun. 1 saniye sonra, beş LED'in hepsi yanacak ve ardından sağdan sola doğru yavaş bir şekilde kapatacak. 5 saniye sonra tüm LED'ler kapalı olur ve kapatma başarılı olur.
+1. 5 saniye boyunca **Güç** düğmesine basın ve basılı tutun. 1 saniye sonra, beş LED 'in hepsi, bir tane, sağdan sola doğru bir şekilde çalışır. 5 saniye sonra, başarılı kapatmayı belirten tüm LED 'ler kapalı olur.
       
    > [!IMPORTANT]
-   > Tüm LED'ler kapatıldığında düğmeye basmayı hemen durdurun.
-1. Kapatma işleminin tamamlanması için 1 dakika bekleyin. Ekranlar kapatılana kadar kapatma işlemi devam ediyor olabilir.
-2. Güç düğmesine 1 saniye basılı tutarak **cihazı** yeniden açın.
+   > Tüm LED 'ler devre dışı bırakıldıktan hemen sonra düğmeye basmayı durdurun.
+1. Kapatılma işleminin tamamlanmasını 1 dakika bekleyin. Ekran kapatıldıktan sonra bile, kapatma devam ediyor olabilir.
+2. 1 saniye boyunca **Güç** düğmesine basarak ve basılı tutarak cihazı tekrar açın.
 
-### <a name="do-a-safe-restart-by-using-windows-device-portal"></a>Windows Cihaz Portalı kullanarak güvenli bir yeniden başlatma Windows Cihaz Portalı
+### <a name="do-a-safe-restart-by-using-windows-device-portal"></a>Windows cihaz portalını kullanarak güvenli bir yeniden başlatma yapın
 
 > [!NOTE]
-> Bu işlem için HoloLens bir geliştirici cihazı olarak yapılandırılması gerekir. daha fazla bilgi için [Windows Cihaz Portalı.](/windows/mixed-reality/using-the-windows-device-portal)
+> bu işlem için HoloLens bir geliştirici cihazı olarak yapılandırılmalıdır. [Windows cihaz portalından](/windows/mixed-reality/using-the-windows-device-portal)daha fazla bilgi edinin.
 
-Önceki yordam işe başlatılmazsa, Windows Cihaz Portalı kullanarak cihazı [yeniden başlatmayı deneyin.](/windows/mixed-reality/using-the-windows-device-portal) Sağ üst köşede cihazı yeniden başlatma veya kapatma seçeneğini bulun.
+önceki yordam işe yaramazsa, [Windows cihaz portalını](/windows/mixed-reality/using-the-windows-device-portal)kullanarak cihazı yeniden başlatmayı deneyin. Sağ üst köşede, cihazı yeniden başlatma veya kapatma seçeneğini bulun.
 
-### <a name="do-an-unsafe-forced-restart"></a>Güvenli olmayan bir zorlamalı yeniden başlatma yapma
+### <a name="do-an-unsafe-forced-restart"></a>Güvenli olmayan Zorlanmış yeniden başlatma
 
-Önceki yöntemler uygulamanızı yeniden başlatmadı HoloLens yeniden başlatmaya zorlar. Bu yöntem, pilin kaldırılmasına ve yeniden yüklenmesine eşdeğerdir. Cihazınızı bozuk durumda bırakarak tehlikeli olabilir. Böyle bir durumda, kendi HoloLens.  
+önceki yöntemler HoloLens yeniden başlatmadıysa, yeniden başlatmaya zorlayın. Bu yöntem, pili kaldırma ve yeniden yükleme ile eşdeğerdir. Cihazınızı bozulmuş bir durumda bırakabileceğinden tehlikeli olabilir. Bu durumda, HoloLens Flash uygulamanız gerekir.  
 
 > [!WARNING]
-> Bu zararlı olabilecek bir yöntemdir ve yalnızca daha önce adedi yapılan yöntemler işemasa kullanılmalıdır.
+> Bu, zararlı olabilecek bir yöntemdir ve yalnızca önceden alıntı yapılan Yöntemler çalışmazsa kullanılmalıdır.
 
-1. Güç düğmesine en **az** 10 saniye basılı tutun.
-   - Düğmeyi 10 saniyeden uzun süre tutabilir.
+1. En az 10 saniye için **Güç** düğmesine basın ve basılı tutun.
+   - Bu, düğmeyi 10 saniyeden uzun süre tutmak kadar sürer.
    - Herhangi bir LED etkinliğini yoksaymak güvenlidir.
 1. Düğmeyi bırakın ve 2-3 saniye bekleyin.
-1. Güç düğmesine 1 **saniye** basılı tutun.
-1. Sorun devam ediyorsanız,  tüm pil göstergeleri belirene ve ekran hologramları görüntülemeyi durdurana kadar güç düğmesine 4 saniye basın. 1 dakika bekleyin ve ardından cihazı **açmak** için güç düğmesine tekrar basın.
+1. 1 saniye için **Güç** düğmesine basın ve basılı tutun.
+1. Hala sorun yaşıyorsanız, tüm pil göstergeleri silinerek ve ekran hologramlar 'ı görüntülemeyi durdurana kadar, 4 saniye boyunca **Güç** düğmesine basın. 1 dakika bekleyin ve ardından cihazı açmak için **Güç** düğmesine yeniden basın.
 
-## <a name="go-back-to-a-previous-version---hololens-1st-gen"></a>Geri dön bir sürüme - HoloLens (1. Nesil)
+## <a name="go-back-to-a-previous-version---hololens-1st-gen"></a>önceki sürüme geri dön-HoloLens (1. genel)
 
-Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek HoloLens olabilir. Bunu yapmak için Windows Cihaz Kurtarma Aracı'nı kullanarak HoloLens önceki sürüme sıfırlayabilirsiniz.
-
-> [!NOTE]
-> Önceki bir sürüme geri dönmek kişisel dosyalarınızı ve ayarlarınızı siler.
-
-HoloLens 1'in önceki bir sürümüne dönmek için şu adımları izleyin:
-
-1. Bilgisayarınıza takılı telefon veya Windows emin olun.
-1. Bilgisayarınızda, Windows [Kurtarma Aracı'nı (WDRT) indirin.](https://support.microsoft.com/help/12379)
-1. Yıldönümü [HoloLens kurtarma paketini indirin.](https://aka.ms/hololensrecovery)
-1. İndirmeler tamam olduğunda Dosya Gezgini **İndirmeleri'ni**  >  **açın.** İndirdiğiniz sıkıştırılmış klasöre sağ tıklayın ve Sıkıştırmayı açmak için **Tüm**  >  **Ayıkla'yı** seçin.
-1. Bağlan, HoloLens mikro USB kablosunu kullanarak bilgisayarınıza bağlayın. (Bağlantınızı bağlamak için başka kablolar HoloLens bile bu en iyi şekilde çalışır.)
-1. WDRT, kullanıcılarınızı otomatik olarak HoloLens. Yeni **kutucuğu Microsoft HoloLens** seçin.
-1. Sonraki ekranda El ile paket **seçimi'ne tıklayın** ve 4. adımda sıkıştırması açmak istediğiniz klasörde yer alan yükleme dosyasını seçin. (.ffu uzantısına sahip bir dosya bulun.)
-1. Yazılım **yükle'yi** seçin ve yönergeleri izleyin.
+bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek isteyebilirsiniz. bunu, HoloLens daha önceki sürüme sıfırlamak için Windows cihaz kurtarma aracını kullanarak yapabilirsiniz.
 
 > [!NOTE]
-> WDRT, uygulamanızı algılaya HoloLens bilgisayarınızı yeniden başlatmayı deneyin. Bu işe uymazsa Cihazım algılanmadı'yi  **seçin,** Microsoft HoloLens'ı seçin ve yönergeleri izleyin.
+> Önceki bir sürüme geri dönmek kişisel dosyalarınızı ve ayarlarını siler.
 
-## <a name="reset-to-factory-settings"></a>Fabrika ayarlarına sıfırlama
+HoloLens 1 ' in önceki bir sürümüne geri dönmek için şu adımları izleyin:
+
+1. bilgisayarınıza takılı telefonlarınızın veya Windows cihazların olmadığından emin olun.
+1. bilgisayarınızda [Windows cihaz kurtarma aracı 'nı (wdrt)](https://support.microsoft.com/help/12379)indirin.
+1. [HoloLens yıldönümü güncelleştirme kurtarma paketini](https://aka.ms/hololensrecovery)indirin.
+1. İndirmeler tamamlandığında, **Dosya Gezgini**  >  **İndirmeleri**' ni açın. İndirdiğiniz zip klasörüne sağ tıklayın ve sıkıştırmayı açmak için **Tümünü** Ayıkla ' yı seçin  >   .
+1. HoloLens ile birlikte gelen mikro USB kablosunu kullanarak bilgisayarınızı bilgisayarınıza Bağlan. (HoloLens bağlamak için başka kablolar kullanıyor olsanız bile, bu en iyi şekilde geçerlidir.)
+1. WDRT HoloLens otomatik olarak algılar. **Microsoft HoloLens** kutucuğunu seçin.
+1. Sonraki ekranda, **el ile paket seçimi** ' ni seçin ve 4. adımda sıkıştırunın bulunduğu klasörde bulunan yükleme dosyasını seçin. (. FFU uzantılı bir dosyayı arayın.)
+1. **Yazılım yüklemesi**' ni seçin ve yönergeleri izleyin.
 
 > [!NOTE]
-> Pilin sıfırlanabilir olması için en az yüzde 40 ücrete ihtiyacı vardır.
+> wdrt HoloLens algılamazsa, bilgisayarınızı yeniden başlatmayı deneyin. bu işe yaramazsa **cihazımın algılanmadığını** seçin, **Microsoft HoloLens**' yi seçin ve ardından yönergeleri izleyin.
 
-Çalışma HoloLens sorun devam ediyorsa fabrika durumuna sıfırlamayı deneyin. Bu adım, Windows Holographic yazılımının yüklü olduğu sürümü tutar ve diğer her şeyi fabrika ayarlarına döndürür.
+## <a name="reset-to-factory-settings"></a>Fabrika ayarlarına sıfırla
+
+> [!NOTE]
+> Pilin sıfırlanması için en az %40 oranında bir ücret gereklidir.
+
+HoloLens hala bir sorun varsa, fabrika durumuna sıfırlamayı deneyin. bu adım, üzerine yüklenmiş Windows Holographic yazılımının sürümünü tutar ve diğer her şeyi fabrika ayarlarına döndürür.
 
 >[!WARNING]
-> Cihazınızı sıfırlarsanız TPM sıfırlama bilgileri de dahil olmak üzere tüm kişisel verileriniz, uygulamalarınız ve ayarlarınız silinir. Sıfırlama yalnızca Holographic'in en son yüklü Windows yüklenir. Tüm başlatma adımlarını (ayarlama, Wi-Fi'a bağlanma, bir kullanıcı hesabı oluşturma, uygulamaları indirme vb.) tekrarlamanız gerekir.
+> Cihazınızı sıfırlarsanız, TPM sıfırlama bilgileri de dahil olmak üzere tüm kişisel verileriniz, uygulamalarınız ve ayarlarınız silinir. sıfırlama yalnızca en son yüklenen Windows Holographic sürümünü yükler. Tüm başlatma adımlarını (ayarlamak, Wi-Fi ' y e bağlanmanız, bir kullanıcı hesabı oluşturmak, uygulamaları indirmek vb.) yeniden yapmanız gerekir.
 
-1. Uygulama uygulama Ayarlar ve ardından Kurtarmayı **Güncelleştir'i**  >  **seçin.**
-1. Cihazı **sıfırla seçeneğini** belirleyin ve onay iletiyi okuyun.
-1. Sıfırlamayı onaylayın. Cihaz yeniden başlatılır ve bir dizi dönen dişli ve ilerleme çubuğu görüntülenir.
-1. Bu sürecin tamamlanması için yaklaşık 30 dakika bekleyin. Bu bittiğinde, cihaz "ilk önce" deneyimine yeniden başlatılır.
+1. Ayarlar uygulamasını açın ve sonra kurtarmayı **güncelleştir**' i seçin  >  .
+1. **Cihazı Sıfırla** seçeneğini belirleyin ve onay iletisini okuyun.
+1. Sıfırlamayı onaylayın. Cihaz yeniden başlatılır ve bir dizi dönen Gears ve ilerleme çubuğu görüntülenir.
+1. Bu işlemin tamamlanabilmesi için yaklaşık 30 dakika bekleyin. İşlem tamamlandığında, cihaz "hazır olmayan" deneyimde yeniden başlatılır.
 
 ## <a name="reinstall-the-operating-system"></a>İşletim sistemini yeniden yükleme
 
-Yeniden başlatma ve sıfırlama sonrasında cihaz sorun devam ediyorsa, bilgisayarınızda bir kurtarma aracı kullanarak işletim sistemini ve üretici yazılımını HoloLens yükleyebilirsiniz.  
+yeniden başlatma ve sıfırlama sonrasında cihaz sorun yaşamaya devam ediyorsa, HoloLens işletim sistemini ve üretici yazılımını yeniden yüklemek için bilgisayarınızda bir kurtarma aracı kullanabilirsiniz.  
 
-Sıfırlama için HoloLens veriler bir .iso, .wim veya .vhd dosyasına benzer bir Tam Flash Güncelleştirme (FFU) içinde paketlenmiştir. [FFU görüntü dosyası biçimleri hakkında bilgi edinmek için.](/windows-hardware/manufacture/desktop/wim-vs-ffu-image-file-formats)
+sıfırlama için HoloLens gereken veriler, bir. iso,. wim veya. vhd dosyasına benzer bir tam Flash güncelleştirmesi (ffu) ile paketlenmiştir. [FFU görüntü dosyası biçimleri hakkında bilgi edinin.](/windows-hardware/manufacture/desktop/wim-vs-ffu-image-file-formats)
 
-Windows Cihaz Kurtarma Aracı'nı kullanarak HoloLens (1. nesil) bilgisayarınıza yeni bir işletim sistemi yükleyebilirsiniz. Bu aracı kullanmadan önce, yeniden başlatma veya sıfırlama HoloLens düzeltin.
+Windows cihaz kurtarma aracı 'nı kullanarak, HoloLens (1. gen) yeni bir işletim sistemi yükleyebilirsiniz. bu aracı kullanmadan önce, HoloLens yeniden başlatma veya sıfırlama sorununu düzeltir bölümüne bakın.
 
-Kurtarma işlemi biraz zaman alır. Bu bittiğinde, Windows Holographic yazılımının en son sürümü yüklenir.
+Kurtarma işlemi biraz zaman alabilir. işlem tamamlandığında, Windows Holographic yazılımının en son sürümü yüklenir.
 
-Aracı kullanmak için en az 4 GB boş Windows 10 veya sonraki bir bilgisayarda çalışmanız gerekir. Bu aracı bir sanal makinede çalıştıraabilirsiniz.
+aracı kullanmak için en az 4 GB boş depolama alanı ile Windows 10 veya sonraki bir sürümünü çalıştıran bir bilgisayara ihtiyacınız vardır. Bu aracı bir sanal makinede çalıştıramazsınız.
 
-### <a name="recover-your-hololens"></a>HoloLens
+### <a name="recover-your-hololens"></a>HoloLens kurtarın
 
-1. Windows Cihaz [Kurtarma Aracı'nı indirip](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) bilgisayarınıza yükleyin.
-1. Bağlan HoloLens mikro USB kablosunu kullanarak bilgisayarınıza (1. nesil) HoloLens.
-1. Windows Kurtarma Aracı'nı açın ve yönergeleri izleyin.
+1. [Windows cihaz kurtarma aracı](https://support.microsoft.com/help/12379/windows-10-mobile-device-recovery-tool-faq) 'nı indirip bilgisayarınıza yükleyin.
+1. HoloLens ile gelen mikro USB kablosunu kullanarak bilgisayarınıza HoloLens (1. gen) Bağlan.
+1. Windows cihaz kurtarma aracını açın ve yönergeleri izleyin.
 
-Cihaz HoloLens (1. nesil) otomatik olarak algılanmazsa Cihazım **algılanmadı seçeneğini seçin.** Ardından yönergeleri izleyerek cihazı kurtarma moduna alın.
+HoloLens (1. gen) otomatik olarak algılanmazsa **cihazımın algılanmadığını** seçin. Ardından, cihazı kurtarma moduna almak için yönergeleri izleyin.
 
-### <a name="manual-flashing-mode"></a>El ile yanıp sönme modu
+### <a name="manual-flashing-mode"></a>Manuel yanıp sönen mod
 
-Cihazınız algılanmazsa, cihazı yanıp sönen moda koymak için şu adımları izleyin:
+Cihazınız algılanmadıysa, bu adımları yanıp sönen moda koymak için aşağıdaki adımları izleyin:
 
 1. Cihazı herhangi bir güç kaynağından çıkarın.
-1. Cihaz açıksa, tamamen **kapatana** kadar güç düğmesini basılı tutun.
+1. Cihaz açık ise, tamamen kapanana kadar **Güç** düğmesini basılı tutun.
 2. Birimi **yukarı doğru** tutun ve güç düğmesine kısa bir **süre** dokunun. Cihazın başlaması ve yalnızca ortadaki LED'i görüntülemesi gerekir.
 3. Cihazı bilgisayarınıza takın.
 4. Windows Kurtarma Aracı'nı açın.
-5. Cihazım **algılanmadı'yi seçin ve** sonra **HoloLens.** 
+5. Cihazım **algılanmadı'yi seçin ve** **HoloLens.** 
 6. Cihazınızı kurtarmak için yönergeleri izleyin.

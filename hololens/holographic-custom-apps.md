@@ -1,10 +1,10 @@
 ---
-title: HoloLens için özel uygulamaları yönetme (1. genel)
-description: cihaz portalını ve Visual Studio kullanarak HoloLens cihazlarda özel holographic uygulamalarını yüklemeyi, kaldırmayı ve dışarıdan yüklemeyi öğrenin.
+title: HoloLens için özel uygulamaları yönetme (1. nesil)
+description: Sanal cihazları ve sanal cihazları kullanarak özel holografik uygulamaları HoloLens yüklemeyi, kaldırmayı ve Cihaz Portalı Visual Studio.
 ms.assetid: 6bd124c4-731c-4bcc-86c7-23f9b67ff616
 ms.date: 12/10/2020
 manager: v-miegge
-keywords: Hololens, dışarıdan yükleme, dışarıdan yükleme, dışarıdan yükleme, mağaza, UWP, uygulama, yükleme
+keywords: hololens, sideload, side-load, side-load, store, uwp, app, install
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
@@ -17,64 +17,64 @@ ms.custom:
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: b6769c36f821ee3619ac9b62efd637ac561192bb
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123188857"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428525"
 ---
-# <a name="manage-custom-apps-for-hololens-1st-gen"></a>HoloLens için özel uygulamaları yönetme (1. genel)
+# <a name="manage-custom-apps-for-hololens-1st-gen"></a>HoloLens için özel uygulamaları yönetme (1. nesil)
 
-HoloLens, Microsoft Store birçok mevcut uygulamayı ve özellikle HoloLens için oluşturulan yeni uygulamaları destekler. Bu makale özel holographic uygulamalarına odaklanır.  
+HoloLens, Microsoft Store'den birçok mevcut uygulamanın yanı sıra özel olarak yeni uygulamalar HoloLens. Bu makale özel holografik uygulamalara odaklanır.  
 
-Mağaza uygulamaları hakkında daha fazla bilgi için bkz. [Store ile uygulamaları yönetme](holographic-store-apps.md).
+Mağaza uygulamaları hakkında daha fazla bilgi için [bkz. Mağaza ile uygulamaları yönetme.](holographic-store-apps.md)
 
 > [!IMPORTANT]
-> HoloLens geliştirici sürümü olarak da adlandırılan HoloLens (1. gen) için aşağıdaki bilgiler oluşturulmuştur. bu tür dışarıdan yükleme uygulamaları cihaz portalı aracılığıyla ve uygulamaları Visual Studio aracılığıyla yüklerken daha fazla yer. Kurumsal dağıtımlar için, bu yöntemlerin her ikisinin de kullanıldığı geliştirici modunun etkinleştirilmesini önermeyiz. Güvenli bir uygulama dağıtım yöntemiyle ilgileniyorsanız lütfen [uygulama yönetimizi gözden geçirin: genel bakış](app-deploy-overview.md).
+> O sırada HoloLens Developer Edition olarak da adlandırılan HoloLens (1. nesil) için aşağıdaki bilgiler oluşturulmuştır. Bu nedenle, uygulamaları cihaz portalı üzerinden kenardan yüklemek ve uygulamaları Visual Studio sıradan bir yerdi. Kurumsal dağıtımlar için, bu yöntemlerin her ikisi de kullanan Geliştirici Modunu etkinleştirmenizi önerilmez. Güvenli bir uygulama dağıtım yöntemiyle ilgileniyorsanız Lütfen Uygulama Yönetimi: Genel [Bakış sayfamızı gözden geçirebilirsiniz.](app-deploy-overview.md)
 >
-> HoloLens 2 cihazları için uygulama yüklemesinin geliştirici yöntemini arıyorsanız lütfen şu adresine başvurun:
+> HoloLens 2 cihazları için uygulama yüklemenin herhangi bir geliştirici yöntemini arıyorsanız lütfen şu bağlantılara bakın:
 >
-> - [Cihaz Portalı: uygulama yükleme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
-> - [uygulamaları dağıtmak ve hata ayıklamak için Visual Studio kullanma](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
+> - [Cihaz Portalı: Uygulama Yükleme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
+> - [Uygulamaları Visual Studio ve hata ayıklamak için Visual Studio kullanma](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
 
 ## <a name="install-custom-apps"></a>Özel uygulamaları yükleme
 
-cihaz portalını kullanarak veya uygulamaları Visual Studio dağıtarak, kendi uygulamalarınızı HoloLens yükleyebilirsiniz.
+Cihaz Portalı kullanarak veya HoloLens'den dağıtarak kendi uygulamalarınızı Visual Studio.
 
-### <a name="installing-an-application-package-with-the-device-portal"></a>Cihaz portalı ile uygulama paketi yükleme
+### <a name="installing-an-application-package-with-the-device-portal"></a>Uygulama paketini uygulama paketiyle Cihaz Portalı
 
-1. [Cihaz portalından](/windows/mixed-reality/using-the-windows-device-portal) hedef HoloLens bir bağlantı kurun.
+1. Ağdan hedef [Cihaz Portalı](/windows/mixed-reality/using-the-windows-device-portal) bağlantı HoloLens.
 
-1. Sol gezinti bölmesinde **uygulamalar** sayfasına gidin.
+1. Sol gezinti bölmesinde Uygulamalar **sayfasına** gidin.
 
-1. Uygulama **paketi** altında, uygulamanızla ilişkili. appx dosyasına gidin.
+1. Uygulama **Paketi altında,** uygulamayla ilişkili .appx dosyasına göz atabilirsiniz.
 
    > [!IMPORTANT]
-   > İlişkili tüm bağımlılık ve sertifika dosyalarına başvurduğunuzdan emin olun.
+   > İlişkili tüm bağımlılıklara ve sertifika dosyalarına başvurarak emin olun.
 
-1. **Git**' i seçin.
+1. **Git'i seçin.**
 
    > [!div class="mx-imgBorder"]
-   > ![uygulama formunu Microsoft HoloLens Windows cihaz portalına yükler.](images/deviceportal-appmanager.jpg)
+   > ![Uygulama formunu Windows Cihaz Portalı'Microsoft HoloLens.](images/deviceportal-appmanager.jpg)
 
-### <a name="deploying-from-microsoft-visual-studio-2015"></a>Microsoft Visual Studio 2015 ' den dağıtma
+### <a name="deploying-from-microsoft-visual-studio-2015"></a>Microsoft Visual Studio 2015'te dağıtma
 
-1. uygulamanızın Visual Studio çözümünü (. sln dosyası) açın.
+1. Uygulamanın Visual Studio (.sln dosyası) açın.
 
-1. Projenin **özelliklerini** açın.
+1. Projenin Özellikler'ini **açın.**
 
-1. Aşağıdaki derleme yapılandırmasını seçin: **ana/x86/uzak makine**.
+1. Şu derleme yapılandırmasını seçin: **Ana/x86/Uzak Makine.**
 
-1. **Uzak makineyi** seçtiğinizde:
-   - Adresin, HoloLens Wi-Fi IP adresine işaret ettiğini doğrulayın.
-   - Kimlik doğrulamasını **Evrensel (şifrelenmemiş protokol)** olarak ayarlayın.
+1. Uzak **Makine'yi seçerek:**
+   - Adresin, kendi ip Wi-Fi ip adresine HoloLens.
+   - Kimlik doğrulamasını **Evrensel (Şifrelenmemiş Protokol) olarak ayarlayın.**
    
-1. Çözümünüzü oluşturun.
+1. Çözümlerinizi oluşturma.
 
-1. uygulamayı geliştirme bilgisayarınızdan HoloLens dağıtmak için **uzak makine**' yi seçin. HoloLens zaten var olan bir derlemeniz varsa, bu yeni sürümü yüklemek için **evet** ' i seçin.  
+1. Uygulamayı geliştirme bilgisayarınızdan uygulamanıza dağıtmak HoloLens **Makine'yi seçin.** Yeni sürümde zaten bir derlemeniz varsa **HoloLens'ı** seçerek bu yeni sürümü yükleyin.  
 
-   ![Visual Studio Microsoft HoloLens üzere uygulamalar için uzak makine dağıtımı.](images/vs2015-remotedeployment.jpg)  
+   ![Uygulamalar için uzak makine dağıtımı Microsoft HoloLens uzaktan Visual Studio.](images/vs2015-remotedeployment.jpg)  
    
-1. Uygulama, HoloLens yükleyip otomatik olarak başlatılacak.
+1. Uygulama, uygulama uygulamanıza yüklenir ve HoloLens.
 
-Bir uygulamayı yükledikten sonra, bu dosyayı **tüm uygulamalar** listesinde (  >  **tüm uygulamaları** Başlat) görürsünüz.
+Bir uygulamayı yükledikten sonra uygulamayı Tüm uygulamalar listesinde bulabilirsiniz  (**Başlangıç**  >  **Tüm uygulamalar).**

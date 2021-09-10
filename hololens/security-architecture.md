@@ -13,18 +13,18 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: fd6409f5087ef7d6e7ab90d6ef8dcb83e1c490746803ad869ef075dace24bae7
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: d8e68f73d05db397a7ee088382e82dfa762177b0
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665531"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428968"
 ---
 # <a name="security-overview-and-architecture"></a>Güvene genel bakış ve mimari
 
-En HoloLens 2 güvenlik mimarisi, en aza indirgenmiş bir saldırı yüzeyi oluştururken eski güvenlik sorunlarından uzak olacak şekilde en iyi şekilde tasarlanmış ve tasarlanmıştır. Bu yeni, yenilikçi mimari, işletim sistemlerini olası tehditlere ve güvenlik açıklarına karşı koruma özelliğine sahip mekanizmalarla güvenli depolama konumları ve gelişmiş güvenlik öğeleri sunar.
+En HoloLens 2 güvenlik mimarisi, en aza indirgenmiş bir saldırı yüzeyi oluştururken eski güvenlik sorunlarından uzak olacak şekilde tasarlanmış ve tasarlanmıştır. Bu yeni, yenilikçi mimari, işletim sistemlerini olası tehditlere ve güvenlik açıklarına karşı koruma özelliğine sahip mekanizmalarla güvenli depolama konumları ve gelişmiş güvenlik öğeleri sunar.
 
-HoloLens 2, donanım, yazılım, ağ ve hizmetleri birleştirarak 4.000'e kadar güvenlik sunar ve kullanıcıya en iyi deneyimi sunar. HoloLens 2 ile, güvenlik özelliklerinin büyük bir çoğunluğu artık otomatik olarak açılır ve işletim sistemini doğru ayarlamak ve yapılandırmak için gereken çaba en aza indirilir.
+HoloLens 2, donanım, yazılım, ağ ve hizmetleri bir araya kullanarak 2. 4.000 güvenlik sunar ve kullanıcıya en iyi deneyimi sunar. HoloLens 2 ile, güvenlik özelliklerinin büyük bir çoğunluğu artık otomatik olarak açılır ve işletim sistemini doğru ayarlamak ve yapılandırmak için gereken çaba en aza indirilir.
 
 Windows HoloLens 2 ve işletim sistemi mimarisi şu yenilikçi güvenlik özelliklerini sunar:
 
@@ -32,7 +32,7 @@ Windows HoloLens 2 ve işletim sistemi mimarisi şu yenilikçi güvenlik özelli
   
   * **Veri Koruma:** Kullanıcının cihazı kaybolur veya çalınırsa, HoloLens 2, verilerin BitLocker şifrelemesini kullanarak yetkisiz uygulamaların hassas bilgileri okumasını önler. 
   
-  * **Parolasız işletim sistemi:** Eski, parola tabanlı işletim sistemleri, kullanıcıların kimlik avı tehditlerine yanlışlıkla maruz kaldı ve genellikle güvenliği tehlikeye atılmış hesaplardan sorumludu. Windows Holographic for Business MSA ve Azure AD oturum açma için parola kullanımını ortadan kaldırmanın yanında kullanıcı kimliği korumasını Windows Hello™ ve FIDO2 oturum açma ile güçlendirir. 
+  * **Parolasız işletim sistemi:** Eski, parola tabanlı işletim sistemleri, kullanıcıların kimlik avı tehditlerine yanlışlıkla maruz kaldı ve genellikle güvenliği tehlikeye atılmış hesaplardan sorumludu. Windows Holographic for Business MSA ve Azure AD oturum açma için parola kullanımını ortadan kaldırmakta ve Windows Hello™ ve FIDO2 oturum açma ile kullanıcı kimliği korumasını güçlendirmektedir. 
   
     > [!NOTE]
     > FIDO2 desteğine sahip olmak için cihazın Derleme 19041 veya üzerinde olması gerekir. 

@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2b855f5891dfa4ca695e4ae3b2a2e82510c5b626f08b434643169be239b48291
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 9457acd2f53d0d3127d6c68d620b660f6e09866d
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660178"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428771"
 ---
 # <a name="configure---corporate-connected-guide"></a>Yapılandırma-kurumsal bağlantılı kılavuz
 
@@ -152,34 +152,34 @@ Bu kılavuzda, [bir Microsoft Dataverse ortamı oluşturmak](/dynamics365/mixed-
 3. **Bu ortam için veritabanı oluştur ' a** geçiş yapmanız önemlidir mi?  seçeneğini  **Evet** yapın.
 4. **Veritabanı Ekle** iletişim kutusunda, **Dynamics 365 uygulamalarını etkinleştir** seçeneğini Evet olarak ayarlayın **.**
 
-Veri deposundaki öğelerin en büyük dosya boyutunu arttırmak isteyeceksiniz. En büyük dosya boyutunu artırmak kılavuzlarınızın daha sonra kullanacağınız daha büyük 3B modellerini veya video dosyalarını karşıya yüklemenizi sağlar. [Karşıya yükleme dosya boyutu üst sınırını değiştirmek için](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)kısa bir kılavuz izleyin.
+Veri tersinizin en büyük dosya boyutunu artırmak istemeniz gerekir. Maksimum dosya boyutunu artırmak, kılavuzlarda daha sonra kullanmak üzere daha büyük 3 boyutlu modelleri veya video dosyalarını karşıya yüklemenizi sağlar. En büyük karşıya yükleme [dosyası boyutunu değiştirmek için kısa bir kılavuzu izleyin.](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)
 
-Son olarak, [çözümü yükleyip yapılandırmanız](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution)gerekir. [Power Platform Yönetim merkezinde](https://admin.powerplatform.microsoft.com/environments) **kaynaklar** \& gt; öğesini seçin.  **Dynamics 365 uygulamaları**, listeden **Dynamics 365 kılavuzlarını** seçin ve ardından **Install**' ı seçin.  
+Son olarak, çözümünü yüklemeniz [ve yapılandırmamız gerekir.](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution) [İlkeler Power Platform yönetim merkezi](https://admin.powerplatform.microsoft.com/environments)Kaynaklar  \& gt; öğesini seçin.  **Dynamics 365 uygulamaları,** listeden **Dynamics 365 Kılavuzları'ı** ve ardından Yükle'yi **seçin.**  
 
-Uygulamaları kullanabilmeniz için önce [Kılavuzlar güvenlik rolü eklemeniz](/dynamics365/mixed-reality/guides/assign-role) gerekir.
+Uygulamaları [kullanamadan önce bir](/dynamics365/mixed-reality/guides/assign-role) Kılavuz güvenlik rolü eklemeniz gerekir.
 
-### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Yazma yoluyla bilgisayarınızda bir test kılavuzu oluşturma
+### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Yazma aracılığıyla bilgisayarınızda test kılavuzu oluşturma
 
-Kılavuzlar oluştururken her zaman bilgisayarınızda her zaman başlamanız gerekir. Adımları oluşturma, modeller seçme ve kılavuzun bağlantısının nasıl yapılacağı. bu, daha sonra HoloLens cihazınızda yazma modunda kılavuzunuz için içerik yerleştirilerek izlenir. Bu kılavuzun amaçları doğrultusunda, en az adım ve modellerle kısa bir test Kılavuzu yapmayı öneririz.
+Kılavuzlar oluştururken her zaman bilgisayarınızda başlarsınız. Adımları oluşturma, modelleri seçme ve kılavuzun yer bağlantısı oluşturma. Bunu takip eden kılavuzun içeriğini daha sonra HoloLens cihazınıza yazma moduna yerleştireceğiz. Bu kılavuzun amaçları doğrultusunda, minimum adımlara ve modellere sahip kısa bir test kılavuzu yapmanızı öneririz.
 
-Kılavuzlar için yazma hakkında öğrenmeye başlamak isterseniz [yazma genel bakışı](/dynamics365/mixed-reality/guides/authoring-overview)ile buradan başlayın. Ya da hızlı bir izlemeye genel bakış almak için bu kısa videoyu izleyin.
+Kılavuzlar için yazma hakkında bilgi öğrenmeye başlamak için, yazmaya genel bakış ile [buradan başlayabilirsiniz.](/dynamics365/mixed-reality/guides/authoring-overview) Veya hızlı bir genel bakış elde etmek için bu kısa videoyu izleyin.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EC24dMlAy90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="optional-kiosk-mode"></a>İsteğe bağlı: bilgi noktası modu
+## <a name="optional-kiosk-mode"></a>İsteğe bağlı: Bilgi noktası modu
 
-Bilgi noktası modu, bir BT Yöneticisi tarafından yalnızca tek bir uygulamayı veya uygulama seçimini göstermek üzere başlangıç menüsünün Kullanıcı arabirimini yapılandırabilmesine olanak tanıyan bir moddur. Bir bilgi noktası belirli kullanıcılara, gruplara veya cihaz düzeyine de uygulanabilir; Bazı durumlarda, bazı kullanıcıların, düzenli Başlat menüsüne erişmesine izin verirken bazı kullanıcıları da bilgi noktasından hariç tutun.
+Bilgi noktası modu, BIR IT Yöneticisinin başlat menüsünün kullanıcı arabirimini yalnızca tek bir uygulamayı veya uygulama seçimini gösterecek şekilde yapılandırmasını sağlar. Bilgi noktası belirli kullanıcılara, gruplara veya cihaz düzeyinde de uygulanabilir; ve bazı durumlarda belirli kullanıcıları Bilgi Noktası'nın dışında bırakarak normal başlat menüsüne erişmelerini sekleyebilirsiniz.
 
-Bilgi noktası modu, hem kapsam hem de yapılandırmada ayarlanabilir birçok farklı değişkene ve ayrıca, bilgi noktası HoloLens dağıtım yöntemlerine sahiptir. Tüm bu değişkenler nedeniyle, bilgi noktası modu Bu kılavuz için _isteğe bağlı_ olarak kalmadı ve yeniden ziyaret edilmezler. kullanılabilir uygulamaları kullanıcılarla kısıtlamak ya da daha fazla bilgi edinmek ve daha fazla bilgi almak istiyorsanız, [HoloLens bir bilgi noktası olarak ayarlamayı](/hololens/hololens-kiosk)öğrenmekten çekinmeyin.
+Bilgi noktası modu hem kapsam hem de yapılandırmalar için ayarlanabiliyor ve Bilgi Noktası'nın bilgi noktası dağıtım yöntemleri gibi birçok farklı değişkene HoloLens. Tüm bu değişkenler nedeniyle Bilgi Noktası modu bu kılavuz için _isteğe_ bağlı olarak bırakılacaktır ve yeniden gözden geçirilmesi mümkün olmayacaktır. Kullanılabilir uygulamaları kullanıcılarla kısıtlamak veya daha fazla bilgi edinmek için bir işletmeye ihtiyacınız olduğuna inanıyorsanız, bilgi noktası olarak HoloLens bilgi noktası olarak [ayarlamayı öğrenmekten rahat olun.](/hololens/hololens-kiosk)
 
 ## <a name="optional-wdac"></a>İsteğe bağlı: WDAC
 
-WDAC, BT yöneticisinin cihazlarını cihazlarda uygulamaların başlatılmasını engelleyecek şekilde yapılandırmasına olanak sağlar. Bu, kullanıcının cihazdaki uygulamaları gizleyen bir kullanıcı arabirimi ile sunulduğu, ancak yine de başlatılabileceği, bilgi noktası modu gibi cihaz kısıtlama yöntemlerinden farklıdır. WDAC uygulandığında, uygulamalar tüm uygulamalar listesinde görünmeye devam eder, ancak bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılabilmesini engeller.
+WDAC, bir IT Yöneticisinin cihazlarda uygulama başlatmayı engellemek için cihazlarını yapılandırmasını sağlar. Bu, kullanıcıya cihaz uygulamalarını gizleten ancak hala başlatılana bir kullanıcı arabirimi sunulan Bilgi Noktası modu gibi cihaz kısıtlama yöntemlerden farklıdır. WDAC uygulanırken, uygulamalar Hala Tüm Uygulamalar listesinde görünür durumdadır, ancak WDAC bu uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılamalarını durdurur.
 
-daha fazla bilgi için başvuru ' yı [kullanın ve Microsoft Intune ile HoloLens 2 cihazlarda uygulamalara izin vermek veya bunları engellemek için Windows PowerShell](/mem/intune/configuration/custom-profile-hololens).
+Daha fazla bilgi için, [wdac ve Windows PowerShell 2](/mem/intune/configuration/custom-profile-hololens)cihaz üzerinde uygulamalara izin vermek veya HoloLens engellemek için WDAC ve Microsoft Intune.
 
-[Windows Defender Uygulama denetimi-WDAC](/hololens/windows-defender-application-control-wdac)
+[Windows Defender Uygulama Denetimi - WDAC](/hololens/windows-defender-application-control-wdac)
 
 ## <a name="next-step"></a>Sonraki adım 
 > [!div class="nextstepaction"]
-> [Kurumsal bağlı dağıtım-dağıtım](hololens2-corp-connected-deploy.md)
+> [Kurumsal bağlantılı dağıtım - Dağıtma](hololens2-corp-connected-deploy.md)

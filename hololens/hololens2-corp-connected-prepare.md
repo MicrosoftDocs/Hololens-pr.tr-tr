@@ -1,7 +1,7 @@
 ---
-title: dağıtım kılavuzu – Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-hazırlama
-description: Dynamics 365 kılavuzlarıyla kurumsal bağlantılı bir ağ üzerinden HoloLens 2 cihaz kaydetmeye hazırlanma hakkında bilgi edinin.
-keywords: HoloLens, yönetim, kurumsal bağlı, Dynamics 365 kılavuzlar, AAD, Azure AD, MDM, mobil cihaz yönetimi
+title: Dağıtım Kılavuzu – Dynamics 365 kılavuzları HoloLens 2 ile kurumsal bağlantılı HoloLens - Hazırlama
+description: Dynamics 365 Kılavuzları ile HoloLens bağlı bir ağ üzerinden 2 cihaz kaydetmeye hazırlanmayı öğrenin.
+keywords: HoloLens, yönetim, kurumsal bağlantılı, Dynamics 365 Kılavuzları, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -15,95 +15,95 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 5d8fc2eb0a8dafaae0e1b222b7451877975cf90b
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190217"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427082"
 ---
-# <a name="prepare---corporate-connected-guide"></a>Hazırlama-kurumsal bağlantılı kılavuz
-## <a name="infrastructure-essentials"></a>Altyapı temelleri
-hem kişisel hem de kurumsal dağıtım senaryolarında, bir mobil cihaz yönetimi (MDM) sistemi, Windows 10 cihazları dağıtmak ve yönetmek için gerekli olan, özellikle de HoloLens 2 ' dir. bir [Azure AD Premium abonelik](/azure/active-directory/fundamentals/active-directory-get-started-premium) , kimlik sağlayıcısı olarak önerilir ve belirli özellikleri desteklemek için **gereklidir** .
+# <a name="prepare---corporate-connected-guide"></a>Hazırlama - Kurumsal Bağlantılı Kılavuz
+## <a name="infrastructure-essentials"></a>Altyapı TemelLeri
+Hem kişisel hem de kurumsal dağıtım senaryolarında Mobil Cihaz Yönetimi (MDM) sistemi, özellikle de Windows 10 2'yi dağıtmak ve yönetmek için gereken temel HoloLens altyapıdır. Bir [Azure AD Premium bir](/azure/active-directory/fundamentals/active-directory-get-started-premium) kimlik sağlayıcısı olarak önerilir ve belirli **özellikleri** desteklemek için gereklidir.
 
 > [!NOTE]
-> HoloLens 2 bir mobil cihaz gibi dağıtılıp yönetilse de, genellikle birçok kullanıcı arasında paylaşılan bir cihaz olarak kullanılır.
+> 2 HoloLens mobil cihaz gibi dağıtılıyor ve yönetiliyor olsa da, genellikle birçok kullanıcı arasında paylaşılan cihaz olarak kullanılır.
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
-Azure AD, kimlik ve erişim yönetimi sağlayan bulut tabanlı bir dizin hizmetidir. Microsoft Office 365 veya ıntune kullanan kuruluşlar zaten üç sürümü olan Azure AD kullanıyor: ücretsiz, Premium P1 ve Premium P2 (bkz. [Azure Active Directory sürümleri](https://azure.microsoft.com/documentation/articles/active-directory-editions)). tüm sürümler Azure AD cihaz kaydını destekler, ancak bu kılavuzda daha sonra kullanabilmemiz için MDM otomatik kaydını etkinleştirmek üzere Premium P1 gerekir.
+Azure AD, kimlik ve erişim yönetimi sağlayan bulut tabanlı bir dizin hizmetidir. Microsoft Office 365 veya Intune kullanan kuruluşlar zaten üç sürümü olan Azure AD kullanıyor: Ücretsiz, Premium P1 ve Premium P2 (bkz. [Azure Active Directory sürümleri).](https://azure.microsoft.com/documentation/articles/active-directory-editions) Tüm sürümler Azure AD cihaz kaydını destekler, ancak Premium P1'in MDM otomatik kaydını etkinleştirmek için gerekli olduğu için bu kılavuzu daha sonra kullanacağız.
 > [!Important]
-> HoloLens cihazlar şirket içi AD birleştirmeyi desteklemediğinden Azure ad 'nin olması önemlidir. Henüz bir Azure AD kurulumu yoksa, kullanmaya başlamak ve [Azure Active Directory yeni bir kiracı oluşturmak](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)için yönergeleri izleyin.
+> Şirket içi AD'ye katılmayı destekleme HoloLens azure AD'ye sahip olmak önemlidir. Henüz bir Azure AD ayarlamadıysanız, çalışmaya başlama yönergelerini izleyin ve [azure'da yeni bir kiracı Azure Active Directory.](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)
 
 ## <a name="identity-management"></a>Kimlik Yönetimi
-Bu kılavuzda, kullanılan [kimlik](/hololens/hololens-identity) Azure AD hesapları olacaktır. Azure AD hesaplarının çeşitli avantajları vardır, örneğin:
+Bu kılavuzda kullanılan [kimlik](/hololens/hololens-identity) Azure AD hesaplarıdır. Azure AD hesaplarının çeşitli avantajları vardır, örneğin:
 
-- çalışanlar, cihazı azure ad 'ye kaydetmek için azure ad hesabını kullanır ve bunu kuruluşun MDM çözümüne otomatik olarak kaydedebilir (Azure AD + MDM – bir [Azure AD Premium aboneliği](/azure/active-directory/fundamentals/active-directory-get-started-premium)gerektirir).
-- Azure AD hesapları, [iş için Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification)ek [kimlik doğrulama seçeneklerine](/hololens/hololens-identity) sahiptir. Iris oturum açma 'ya ek olarak, kullanıcılar başka bir cihazdan oturum açabilir veya FIDO güvenlik anahtarlarını kullanabilir.
+- Çalışanlar, cihazı Azure AD'ye kaydetmek için Azure AD hesabını kullanır ve cihazı kuruluşun MDM çözümüne otomatik olarak kaydedebiliyor (Azure AD+MDM– Azure AD Premium [gerektirir).](/azure/active-directory/fundamentals/active-directory-get-started-premium)
+- Azure AD hesaplarının İş için [Windows Hello](/hololens/hololens-identity) [kimlik doğrulaması seçenekleri vardır.](/windows/security/identity-protection/hello-for-business/hello-identity-verification) Iris oturum açmanın yanı sıra, kullanıcılar başka bir cihazdan oturum açabilirsiniz veya FIDO güvenlik anahtarlarını kullanabilir.
 
 > [!WARNING] 
-> Çalışanlar, bir cihazı başlatmak için yalnızca bir hesap kullanabilir, böylece **Kuruluşunuz öncelikle hangi hesabın etkinleştirildiğini denetliyorsa zorunludur**. Seçilen hesap, cihazı kimin denetlediğini ve yönetim olanaklarınızı etkilediğini belirleyecek.
+> Çalışanlar bir cihazı başlatmak için yalnızca bir hesap kullanabilir. Bu nedenle, önce hangi hesabın **etkinleştirildiğinden kuruluşta denetime sahip olması gerekir.** Seçilen hesap, cihazı kimin kontrol altında olduğunu belirler ve yönetim özelliklerinizi etkiler.
 
 ## <a name="mobile-device-management"></a>Mobil Cihaz Yönetimi
-Microsoft Intune, Enterprise Mobility + Security bir parçası, kiracınıza bağlı cihazları yöneten bulut tabanlı bir MDM sistemidir. Office 365 gibi, ıntune kimlik yönetimi için Azure AD 'yi kullanır, bu nedenle çalışanlar, ıntune 'a Office 365 oturum açmak için kullandıkları cihazları kaydetmek için aynı kimlik bilgilerini kullanır. Intune Ayrıca, tüm MDM çözümünü sağlamak için iOS ve Android gibi diğer işletim sistemlerini çalıştıran cihazları destekler. bu kılavuzun amaçları doğrultusunda, HoloLens 2 ile iç ağınıza bir dağıtımı etkinleştirmek için ıntune 'u kullanmaya odaklanacağız.
+Microsoft Intune bir Enterprise Mobility + Security, kiracınıza bağlı cihazları yöneten bulut tabanlı bir MDM sistemidir. Intune Office 365 da olduğu gibi, kimlik yönetimi için Azure AD'den de kullanılır, bu nedenle çalışanlar, intune'da oturum a akentleri kaydetmek için aynı kimlik bilgilerini Office 365. Intune, eksiksiz bir MDM çözümü sağlamak için iOS ve Android gibi diğer işletim sistemlerini çalıştıran cihazları da destekler. Bu kılavuzun amaçları doğrultusunda, HoloLens 2 ile iç ağınıza dağıtımı etkinleştirmek için Intune'HoloLens odaklanıyor oluruz.
 > [!Important] 
-> Mobil cihaz yönetiminin olması önemlidir. Henüz ayarlanmamışsa, bu kılavuzu izleyin ve Intune ile çalışmaya başlayın.
+> Mobile Cihaz Yönetimi. Henüz ayarlamadısanız bu kılavuzu izleyin ve Intune ile Kullanmaya başlayın izleyin.
 
 > [!Important]
-> Kılavuzların kullanılabilmesi için bir Azure AD hesabı gereklidir.
+> Kılavuzları kullanmak için bir Azure AD hesabı gerekir.
 
 > [!Note] 
-> birden çok MDM sistemi Windows 10 destekler ve çoğu kişisel ve kurumsal cihaz dağıtım senaryolarını destekler. Windows 10 Holographic destekleyen MDM sağlayıcıları şunlardır: airwatch, mobileıron ve diğerleri. Sektörde önde gelen MDM satıcıları, Azure AD ile tümleştirmeyi zaten desteklemektedir. Azure [Market](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps)'TE Azure AD 'yi destekleyen en güncel MDM satıcıları listesini bulabilirsiniz.
+> Birden çok MDM sistemi, Windows 10 ve çoğu da kişisel ve kurumsal cihaz dağıtım senaryolarını destekler. Bu hizmetleri destekleyen MDM Windows 10 Holographic şunlardır: AirWatch, MobileIron ve diğerleri. Sektör lideri MDM satıcılarının çoğu Azure AD ile tümleştirmeyi zaten desteklemektedir. Azure AD'i destekleyen MDM satıcılarının en güncel listesini [Azure Market.](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps)
 
-## <a name="network-access"></a>Ağ erişimi 
-Dynamics 365 kılavuzlar, bulut tabanlı bir uygulamadır. Ağ yöneticinizin bir onay listesi varsa, Dynamics 365 sunucularına bağlanmak için gereken IP adreslerini ve/veya uç noktaları eklemesi gerekebilir. [IP adreslerinin ve URL 'lerin engellemesini kaldırma hakkında daha fazla bilgi edinin](/power-platform/admin/online-requirements#ip-addresses-and-urls).
+## <a name="network-access"></a>Ağ Erişimi 
+Dynamics 365 Kılavuzları, bulut tabanlı bir uygulamadır. Ağ yöneticinizin bir onaylama listesi varsa, Dynamics 365 sunucularına bağlanmak için gereken IP adreslerini ve/veya uç noktaları eklemesi gerekebilir. [IP adreslerinin ve URL'lerin engelini kaldırma hakkında daha fazla bilgi.](/power-platform/admin/online-requirements#ip-addresses-and-urls)
 
 ## <a name="certificates"></a>Sertifikalar
-Sertifikalar, Web içeriğinin hesap kimlik doğrulaması, Wi-Fi kimlik doğrulaması, VPN şifrelemesi ve SSL şifrelemesi sağlayarak güvenliği artırmaya yardımcı olur. Yöneticiler, cihazlarda cihazları sağlama paketleri aracılığıyla el ile yönetebilse de, bu sertifikaları tüm yaşam döngülerinde (yenileme ve iptal etme yoluyla) yönetmek için MDM sisteminizi kullanmak en iyi uygulamadır. 
+Sertifikalar hesap kimlik doğrulaması, kimlik doğrulaması, VPN Wi-Fi ve web içeriğinin SSL şifrelemesi sağlayarak güvenliğin iyileştirilmesine yardımcı olur. Yöneticiler, sağlama paketleri aracılığıyla cihazlardaki sertifikaları el ile yönetese de, kayıttan yenileme ve iptale kadar tüm yaşam döngüsü boyunca bu sertifikaları yönetmek için MDM sisteminizi kullanmak en iyi uygulamadır. 
 
-MDM sisteminiz, kaydolduktan sonra bu sertifikaları cihazların sertifika depolarına otomatik olarak dağıtabilir (MDM sisteminiz **basit sertifika kayıt Protokolü (SCEP)** veya **ortak anahtar şifreleme STANDARTLARıNı #12 (PKCS # 12)**) destekler. [Microsoft Intune ile kullandığınız sertifika türleri ve profiller hakkında bilgi edinin](/mem/intune/protect/certificates-configure). MDM, kayıtlı istemci sertifikalarını sorgulayabilir ve silebilir ya da geçerli sertifikanın süre dolmadan önce yeni bir kayıt isteği tetikleyebilirsiniz.
+MDM sisteminiz, bu sertifikaları kaydettikten sonra cihazların sertifika depolarına otomatik olarak dağıtabilirsiniz (MDM sisteminiz **Basit Sertifika Kayıt Protokolü (SCEP)** veya Ortak Anahtar Şifreleme Standartları #12 **(PKCS #12) desteklediği sürece).** [ile birlikte kullanabileceğiniz sertifika türleri ve profilleri hakkında bilgi Microsoft Intune.](/mem/intune/protect/certificates-configure) MDM ayrıca kayıtlı istemci sertifikalarını sorgular ve silebilir veya geçerli sertifikanın süresi dolmadan önce yeni bir kayıt isteği tetikler.
 
-MDM sistemleriniz zaten sertifikalar için yapılandırılmışsa, HoloLens 2 cihazlarınıza yönelik sertifikaları ve profilleri dağıtmaya başlamak için [HoloLens 2 için sertifika hazırlama ve ağ profilleri](/hololens/hololens-certificates-network) başvurusu yapın.
+MDM sistemleriniz sertifikalar için zaten yapılandırılmışsa, HoloLens 2 cihazlarınız için sertifikaları ve profilleri dağıtmaya başlamak üzere [HoloLens 2](/hololens/hololens-certificates-network) için sertifikaları ve ağ profillerini hazırlama'ya bakın.
 
 ## <a name="scep"></a>SCEP
 
-Web uygulaması ara sunucusu dışında, SCEP dağıtımı için aşağıdaki hizmetler gereklidir.
+Web Sunucusu dışında SCEP dağıtımı için aşağıdaki hizmetler Uygulama Ara Sunucusu.
 
 - [Sertifika Yetkilisi](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11))
-- [NDES sunucusu rolü](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))
-- [Microsoft Intune bağlayıcısı](/mem/intune/protect/certificates-scep-configure#install-the-microsoft-intune-connector)
+- [NDES Sunucusu rolü](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))
+- [Microsoft Intune Bağlayıcı](/mem/intune/protect/certificates-scep-configure#install-the-microsoft-intune-connector)
 
-Ayrıca, [Azure AD uygulama proxy 'sini veya Web erişimi proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)'yi kullanarak, şirket AĞıNıZA AIT NDES URL 'nizi de yayımlamanız gerekir. Seçtiğiniz başka bir ters proxy de kullanabilirsiniz.
+Ayrıca NDES URL'nizi Azure AD uygulama ara sunucusu veya sunucu ara sunucusu kullanarak [şirket Web Erişimi yayımlamanız gerekir.](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application) Ayrıca, tercihen başka bir ters ara sunucu da kullanabilirsiniz.
 
 ![SCEP veri akışı.](./images/hololens2-scep-info-flow.png)
 
-Ağınız zaten SCEP desteklemiyorsa veya ağınızın Intune ile SCEP için doğru şekilde ayarlandığından emin değilseniz, başvuru  [için altyapıyı Intune Ile SCEP destekleyecek şekilde yapılandırın](/mem/intune/protect/certificates-scep-configure).
+Ağınız zaten SCEP'yi desteklemezse veya ağın Intune ile SCEP için doğru ayar olup olmadığını emin değilseniz,  [Altyapıyı Intune ile SCEP'yi](/mem/intune/protect/certificates-scep-configure)destekleyecek şekilde yapılandırma'ya başvurun.
 
-altyapınız zaten SCEP destekliyorsa, HoloLens 2 ' nin kullanacağı her bir SCEP sertifikası için bir [profil](/mem/configmgr/protect/deploy-use/create-certificate-profiles) [oluşturmanız](/mem/intune/protect/certificates-profile-scep) gerekir. SCEP ile ilgili sorun yaşıyorsanız, [Microsoft Intune sertifikaları sağlamak IÇIN SCEP Sertifika profillerinin kullanımıyla Ilgili sorunları giderin](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)' i kullanın.
+Altyapınız zaten SCEP'yi destekliyorsa, [](/mem/configmgr/protect/deploy-use/create-certificate-profiles) HoloLens 2'nin kullanabileceği her SCEP sertifikası için bir profil oluşturmanız gerekir. [](/mem/intune/protect/certificates-profile-scep) SCEP ile ilgili sorunlarınız varsa, sertifikalar için [SCEP](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)sertifika profillerini kullanarak sertifika sağlama sorunlarını Microsoft Intune.
 
 ## <a name="pkcs"></a>PKCS
-Intune Ayrıca özel ve ortak anahtar çifti (PKCS) sertifikalarının kullanımını da destekler. başvuru daha fazla bilgi için [Microsoft Intune özel ve ortak anahtar sertifikaları kullanın](/mem/intune/protect/certificates-pfx-configure) .
+Intune, özel ve ortak anahtar çifti (PKCS) sertifikalarının kullanımını da destekler. Daha [fazla bilgi için özel ve ortak anahtar Microsoft Intune](/mem/intune/protect/certificates-pfx-configure) kullanın.
 
 ## <a name="proxy"></a>Ara sunucu
-Çoğu kurumsal intranet ağı dış trafiği yönetmek için bir proxy 'den yararlanır. HoloLens 2 ' de, ethernet, Wi-Fi ve VPN bağlantıları için bir proxy sunucu yapılandırabilirsiniz.
+Çoğu kurumsal intranet ağı dış trafiği yönetmek için bir ara sunucudan faydalanmaktadır. 2 HoloLens ethernet, ağ ve VPN bağlantıları için Wi-Fi sunucu yapılandırabilirsiniz.
 
-Birkaç farklı proxy türü ve proxy 'yi yapılandırmaya yönelik yollar vardır. Bu kılavuzun amaçları doğrultusunda, **Wi-Fi proxy 'si seçme, Pac URL 'si aracılığıyla ayarlama ve MDM aracılığıyla dağıtılan** bir işlem yaptık. Bu, MDM aracılığıyla dağıtılmasının avantajları ile birlikte sunucu: bağlantı noktası yapılandırması yerine PAC dosyasını güncelleştirebilmekte ve son olarak yalnızca tek bir Wi-Fi bağlantı için kullanılmak üzere proxy 'yi yapılandırmak için Wi-Fi proxy kullanarak, cihazların hala başka bir konuma bağlanması durumunda kullanılmasına izin verir.
+Birkaç farklı ara sunucu türü ve ara sunucu yapılandırmanın yolları vardır. Bu kılavuzun amaçları doğrultusunda Wi-Fi ara sunucusunu seçmeyi, PAC URL'si aracılığıyla ayarlamayı ve **MDM aracılığıyla dağıtılmasını tercih ediyoruz.** Bu, MDM aracılığıyla otomatik olarak dağıtılmasının, sunucu:bağlantı noktası yapılandırması yerine PAC dosyasını güncelleştirenin ve son olarak ara sunucuyu yalnızca tek bir Wi-Fi bağlantısına uygulanacak şekilde yapılandırmak için Wi-Fi proxy'sini kullanarak cihazların başka bir konumda bağlı olduğunda hala kullanılmaktadır.
 
-Windows 10 ara sunucu ayarları hakkında daha fazla bilgi için bkz. [Microsoft Intune-Azure 'da cihazlar için Wi-Fi profili oluşturma](/mem/intune/configuration/wi-fi-settings-configure).
+Windows 10 proxy ayarları hakkında daha fazla bilgi için bkz. [Wi-Fi - Azure'da cihazlar için Microsoft Intune profili oluşturma.](/mem/intune/configuration/wi-fi-settings-configure)
 
-## <a name="line-of-business-apps"></a>Iş kolu uygulamaları 
-Microsoft Store aracılığıyla birkaç uygulama yüklenebilmesine karşın, büyük olasılıkla karma gerçeklik 'te kullanmak için oluşturduğunuz özel uygulamanız olabilir. İşletmeniz için kuruluşunuz genelinde dağıtılan bu özel uygulamalar, Iş kolu (LOB) uygulamaları olarak adlandırılır.
+## <a name="line-of-business-apps"></a>İş Hattı Uygulamaları 
+Microsoft Store aracılığıyla birkaç uygulama yüklenene kadar, büyük olasılıkla karma gerçeklikte kullanmak için özel olarak oluşturduğunuz kendi özel uygulamanız vardır. İşletmeniz için kuruluş genelinde dağıtılan bu özel uygulamalara İş Hattı (LOB) uygulamaları denir.
   
-HoloLens 2 cihazlara uygulama dağıtmanın birden çok yolu vardır. uygulamalar doğrudan MDM, İş İçin Microsoft Store (msfb) veya bir sağlama paketi aracılığıyla yüklenen dışarıdan dağıtılabilir. Bu kılavuzun sau için, gerekli uygulama yüklemesi aracılığıyla uygulamaları MDM aracılığıyla dağıtacağız. bu, kayıt tamamlandıktan sonra LOB uygulamalarınızın HoloLens cihazlarınıza otomatik olarak yüklenmesine olanak sağlar.
+2 cihaza uygulama dağıtmanın birden HoloLens yolu vardır. Uygulamalar doğrudan MDM, İş İçin Microsoft Store (MSfB) aracılığıyla dağıtılabilir veya Sağlama Paketi aracılığıyla yan yüklenebilir. Bu kılavuz için, gerekli uygulama yüklemesini kullanarak uygulamaları MDM aracılığıyla dağıtacak. Bu, iş lob uygulamalarınızı kayıt tamamlarken iş HoloLens otomatik olarak indirilmelerini sağlar.
 
-Kendi LOB 'ınızla olmayan, bu dağıtım akışını test etmek için örnek bir uygulama sunuyoruz. Bu uygulama [mrtk örnekleri](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App) uygulaması olacak ve zaten önceden oluşturulmuş ve kavram kanıtı için test edecek şekilde paketlenmiş.
+Kendi LOB'niz yoksa, bu dağıtım akışını test etmek için bir örnek uygulama sağlariz. Bu uygulama [MRTK Örnekleri](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App) uygulaması olacak ve kavram kanıtı test etmek için önceden oluşturulmuş ve paketlenmiştir.
 
-Uygulama dağıtımı ile ilgili daha fazla ayrıntı için [uygulama yönetimi: genel bakış](/hololens/app-deploy-overview).
+Uygulama dağıtımıyla ilgili diğer ayrıntılar Uygulama [Yönetimi: Genel Bakış konusunda bulunabilir.](/hololens/app-deploy-overview)
 
 > [!NOTE]
-> HoloLens 2, yalnızca UWP ARM64 uygulamalarının çalıştırılmasını destekler.
+> HoloLens 2 yalnızca UWP ARM64 uygulamalarının çalıştırmayı destekler.
 
-## <a name="guides-playbook"></a>Kılavuzlar PlayBook
-Kılavuzlar, kılavuzlar uygulamalarınız için veri deposu olarak bir Microsoft veri deposu ortamı kullanır. Veri deposu ortamınızın kılavuzlarınız ve kiracınız ile nasıl etkileşime gireceğini daha büyük bir resmin anlaşılması önemlidir. Bu kılavuzda veri kapsayıtlarınızın nasıl yönetileceğini kapsamayacağız, ancak lütfen [dynamics 365 kılavuzlarını dağıtmaya yönelik temel kavramları gözden geçirin-dynamics 365 karma gerçeklik](/dynamics365/mixed-reality/guides/admin-deployment-playbook).
+## <a name="guides-playbook"></a>Kılavuzlar Playbook
+Kılavuzlar, Kılavuzlar uygulamalarınız için veri deposu olarak bir Microsoft Dataverse ortamı kullanır. Dataverse ortamının Kılavuzlar uygulamalarınız ve kiracınız ile nasıl etkileşim kurduğuyla ilgili daha büyük bir resmi anlamak önemlidir. Bu kılavuzda veri tersinizi nasıl yöneteceklerini açıklamıyoruz ama [lütfen Dynamics 365 Kılavuzları - Dynamics 365 Karma](/dynamics365/mixed-reality/guides/admin-deployment-playbook)Gerçeklik'i dağıtmak için temel kavramları gözden geçirin.
 
 ## <a name="next-step"></a>Sonraki adım 
 > [!div class="nextstepaction"]
-> [Kurumsal bağlantı dağıtımı-yapılandırma](hololens2-corp-connected-configure.md)
+> [Kurumsal bağlantılı dağıtım - Yapılandırma](hololens2-corp-connected-configure.md)

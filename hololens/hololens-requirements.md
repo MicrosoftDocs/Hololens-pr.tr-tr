@@ -1,6 +1,6 @@
 ---
-title: Ortak dağıtım senaryoları
-description: altyapı, Azure Active Directory ve mobil cihaz yönetimi dahil olmak üzere kurumsal ortamlarda HoloLens dağıtma ve yönetme hakkında daha fazla bilgi edinin.
+title: Yaygın Dağıtım Senaryoları
+description: Altyapı, Azure Active Directory ve HoloLens mobil cihaz yönetimi dahil olmak üzere kurumsal ortamlarda Azure Active Directory yönetme hakkında daha fazla bilgi edinebilirsiniz.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -13,67 +13,67 @@ ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189248"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428083"
 ---
-# <a name="common-deployment-scenarios"></a>Ortak dağıtım senaryoları
+# <a name="common-deployment-scenarios"></a>Yaygın Dağıtım Senaryoları
 
 ## <a name="overview"></a>Genel Bakış
 
-Yeni bir cihazın nasıl dağıtılacağını öğrenmek, ilk kez deneme sırasında bir kilitlenme olabilir. burada, kuruluş içinde Microsoft HoloLens 2 cihazlarını dağıtmak ve yönetmek için farklı yollar paylaşıyoruz.
+Yeni bir cihazı nasıl dağıtacaklarını anlamak, ilk kez deneyebilirsiniz. Burada, kuruluş içindeki 2 cihaza Microsoft HoloLens ve yönetmenin farklı yollarını paylaşıyoruz.
 
-Çözümlerin ölçekli olarak dağıtılmasını istiyorsunuz. Buradan yararlanmak istiyoruz. D365 uzaktan yardım, kılavuzlar veya oluşturduğunuz Azure Karma Gerçeklik hizmeti özellikli bir uygulama kullanıp kullanmayacağınızı, hedef karma gerçeklik senaryonuz için değer elde etmek üzere, bu nedenle, cihaz dağıtma adımları hakkında konuşalım.
+Çözümlerin büyük ölçekte dağıtılmasını istediğiniz. Sizi oraya almak istiyorum. İlk olarak, D365 Remote Assist, Kılavuzlar veya oluşturduğunuz Azure karma gerçeklik hizmeti etkinleştirilmiş bir uygulama kullanıyor olun, hedef karma gerçeklik senaryo için değer elde etmek için hologramlar gibi cihazları dağıtma adımlarını konuşacağız.
 
-kuruluşunuz dahilinde HoloLens benimsemek için bir iş kararı oluşturucu, bt uzmanı veya bir yenilik ekibi olabilirsiniz. kavram kanıtı olarak ölçeklenen bir dağıtıma oluştururken dağıtım kılavuzlarımız, büyük veya küçük bir fark olmadan bt altyapınızda HoloLens anlamlı hale getirir. Aşağıdaki dağıtım senaryoları en yaygın olarak verilmiştir:
+İşletme kararlarını veren, IT uzmanı veya kuruluş içinde çalışan bir HoloLens olabilirsiniz. Kavram kanıtından ölçeklendirilen dağıtıma kadar her şey için dağıtım kılavuzlarımız, ne kadar büyük veya küçük olursa olsun, HOLOLENS altyapınız içindeki temel kavramlar hakkında bilgi sağlar. En yaygın dağıtım senaryoları aşağıdakilerdir:
 
 | Senaryo |Kullanım | Önemli noktalar |
 |---------|---------|---------|
-| [Senaryo A: buluta bağlı cihazlar](hololens2-cloud-connected-overview.md) | Dağıtıma ilk kez başladığınızda, temel süreci görmek için küçük bir başlangıç yapın ve buluta bağlı tek bir cihazı dağıtabilirsiniz. | Cihazlar, bulut hizmetleri ve genel İnternet 'e bağlanır. Bu, müşteri kullanım örnekleri, alan Hizmetleri ve kavram kanıtı için en uygundur.|
-| [Senaryo B: kuruluşun ağı](hololens2-corp-connected-overview.md) | Ölçekli üretime dağıtırken kendi kuruluşunuzun ağıyla tümleştirmeniz gerekebilir. | Cihazlar, "Kurumsal" bir Wi-Fi ağına bağlanır. Bu, dahili kullanıcılar için en uygun veya şirket ortamında kullanım için uygundur.|
-| [Senaryo C: çevrimdışı güvenli ortam](hololens-common-scenarios-offline-secure.md) | Görev açısından kritik bazı süreçler veya bazı kurumsal ilkeler, çevrimdışı ortamların kullanımını talep edebilir. | Cihazlar, yüksek oranda kısıtlayıcı bir ağa bağlanacak veya yalnızca çevrimdışı cihazlar olacaktır. Bu, büyük ölçüde güvenli ortamlar veya uzak alanlardaki internet bağlantısı kısıtlamaları için en uygun seçenektir. |
+| [Senaryo A: Buluta bağlı cihazlar](hololens2-cloud-connected-overview.md) | Dağıtımınıza ilk kez baş olduğunuzda, yalnızca temel işlemi görmek için küçük bir başlangıç başlatabilirsiniz ve buluta bağlı tek bir cihaz dağıtabilirsiniz. | Cihazlar bulut hizmetleri ve genel İnternet'e bağlanır. Bu, müşteri kullanım örnekleri, alan hizmetleri ve kavram kanıtı için en uygundur.|
+| [Senaryo B: Kuruluşun ağı](hololens2-corp-connected-overview.md) | Büyük ölçekte üretime dağıtım yapmak için kendi kuruluş ağıyla tümleştirebilirsiniz. | Cihazlar bir "Kurumsal" wi-fi ağına bağlanır. Bu, iç kullanıcılar için veya şirket ortamında kullanım için en uygundur.|
+| [Senaryo C: Çevrimdışı güvenli ortam](hololens-common-scenarios-offline-secure.md) | Bazı görev açısından kritik süreçler veya bazı şirket ilkeleri çevrimdışı ortamların kullanımını talep ediyor olabilir. | Cihazlar yüksek oranda kısıtlayıcı bir ağa bağlanır veya tamamen çevrimdışı cihazlar olur. Bu, yüksek oranda güvenli ortamlar veya uzak alanlarda İnternet bağlantısı kısıtlamaları için uygundur. |
 
-## <a name="scenario-a-deploy-to-cloud-connected-devices"></a>Senaryo A: buluta bağlı cihazlara dağıtma
+## <a name="scenario-a-deploy-to-cloud-connected-devices"></a>Senaryo A: Buluta bağlı cihazlara dağıtma
 
-Bu senaryo, yönetilen mobil cihazların bir şirket içinde dağıtılmasıyla karşılaştırılabilir. HoloLens 2, öncelikli olarak kurumsal ağa harici ortamlarda kullanılmak üzere dağıtılır. Şirket kaynaklarına erişilmez veya VPN aracılığıyla sınırlı olabilir.
+Bu senaryo, yönetilen mobil cihazları bir şirket içinde dağıtmakla karşılaştırılabilir. HoloLens 2, birincil olarak şirket ağının dışında olan ortamlarda kullanım için dağıtılır. Şirket kaynaklarına erişilemiyor veya VPN üzerinden sınırlı olabilir.
 
-[![Senaryo bir diyagram.](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
+[![Senaryo: Diyagram.](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 
-Şu dağıtım modelini göz önünde bulundurun:
+Aşağıdakiler için bu dağıtım modelini düşünün:
 
-* Kavram kanıtı, pilotlar ve alan hizmetlerini dağıtma
-* [Uzaktan Yardım](hololens2-options-remote-assist.md) dağıtma
+* Kavram kanıtı, pilot ve saha hizmetlerini dağıtma
+* Remote [Assist'i dağıtma](hololens2-options-remote-assist.md)
 
-### <a name="basic-common-configurations"></a>Temel ortak yapılandırma
+### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi ağlar genellikle internet ve bulut hizmetlerine tamamen açıktır
-* Mobil cihaz yönetimi (MDM) otomatik kayıt--MDM (Intune) ile Azure AD 'ye ekleme
-* Kullanıcılar kendi şirket hesabıyla oturum açtığında (Azure AD)
-  * Cihaz başına desteklenen tek veya birden çok Kullanıcı
-* Cihaz kilitleme yapılandırmalarının farklı düzeyleri, tam açık olan tek uygulama bilgi noktası arasında belirli kullanım durumlarına göre uygulanır.
-* Bir veya daha fazla uygulama MDM aracılığıyla dağıtıldı
+* Wi-Fi ağlar genellikle İnternet'e ve bulut hizmetlerine tam olarak açıktır
+* Mobil Cihaz (MDM) Ile Azure AD'ye Katılma (MDM) Cihaz Yönetimi-MDM (Intune) Yönetilen
+* Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
+  * Desteklenen cihaz başına tek veya birden çok kullanıcı
+* Tamamen Açık'tan Tek Uygulama Bilgi Noktası'ya kadar belirli kullanım örneklerine göre farklı cihaz kilitleme yapılandırma düzeyleri uygulanır.
+* MDM aracılığıyla bir veya daha fazla uygulama dağıtılır
 
-### <a name="common-challenges"></a>Yaygın sorunlar
+### <a name="common-challenges"></a>Yaygın Zorluklar
 
-* senaryo gereksinimlerine bağlı olarak HoloLens 2 ' ye hangi MDM yapılandırmalarının uygulanacağını belirleme
+* Senaryo gereksinimlerine göre HoloLens 2'ye uygulanacak MDM yapılandırmalarını belirleme
 
-karşılık gelen bulut bağlantılı kılavuzu, cihaz yönetimine HoloLens 2 kaydetme, lisansları gerektiğinde uygulama ve son kullanıcılarınızın cihaz kurulumu sırasında uzaktan yardım 'ı hemen kullanabildiğini doğrulama konularını ele almaktadır.
-
-> [!div class="nextstepaction"]
-> [Buluta bağlı dağıtım kılavuzu](hololens2-cloud-connected-overview.md)
-
-Kısa vadeli veya uzun vadeli dış kullanım için uzak bir siteye cihaz dağıtmak üzere dış Istemciler kılavuzunu kullanın.
+İlgili Bulut Bağlantılı kılavuzunda, HoloLens 2'nin cihaz yönetiminize nasıl kaydedeceği, gerektiğinde lisansları nasıl uygulayacakları ve cihaz kurulumu sırasında son kullanıcılarının Remote Assist'i hemen kullanabileceğini doğrulama adımları açıklanır.
 
 > [!div class="nextstepaction"]
-> [Buluta bağlı (dış Istemciler) dağıtım kılavuzu](hololens2-deployment-guide.md)
+> [Bulut Bağlantılı dağıtım kılavuzu](hololens2-cloud-connected-overview.md)
 
-## <a name="scenario-b-deploy-inside-your-organizations-network"></a>Senaryo B: kuruluşunuzun ağı içinde dağıtma
+Kısa vadeli veya uzun vadeli dış kullanım için uzak bir siteye cihaz dağıtmak için Dış İstemciler kılavuzunu kullanın.
 
-bu senaryo, çoğu Windows 10 pc için klasik bir dağıtımla aynıdır. HoloLens 2, birincil kurumsal kaynaklara erişimi olan kurumsal ağda kullanılmak üzere dağıtılır. Internet ve bulut hizmetleri sınırlı olabilir. 
+> [!div class="nextstepaction"]
+> [Bulut Bağlantılı (Dış İstemciler) dağıtım kılavuzu](hololens2-deployment-guide.md)
+
+## <a name="scenario-b-deploy-inside-your-organizations-network"></a>Senaryo B: Kuruluş ağının içine dağıtma
+
+Bu senaryo, çoğu bilgisayar için klasik dağıtımla Windows 10 aynıdır. HoloLens 2, şirket içi kaynaklara erişimi olan birincil olarak şirket ağına kullanım için dağıtılır. İnternet ve bulut hizmetleri sınırlı olabilir. 
 
 [![Senaryo B1 diyagramı.](images/deployment-guides-revised-scenario-b-01-1.png)](images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
@@ -81,62 +81,62 @@ bu senaryo, çoğu Windows 10 pc için klasik bir dağıtımla aynıdır. HoloLe
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 
-Şu dağıtım modelini göz önünde bulundurun:
+Aşağıdakiler için bu dağıtım modelini düşünün:
 
 * İç kullanıcılar
-* Şirket ortamında ölçeğe (pilot ve üretim) dağıtım
+* Kurumsal ortamda büyük ölçekte dağıtma (Pilot ve Üretim)
 
-### <a name="basic-common-configurations"></a>Temel ortak yapılandırma
+### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi ağ, iç kaynaklara erişimi olan bir dahili kurumsal ağ ve internet veya bulut hizmetlerine sınırlı erişim sağlar.
-* MDM otomatik kayıt ile Azure AD 'ye ekleme
-* MDM (Intune) yönetiliyor
-* Kullanıcılar kendi şirket hesabıyla oturum açtığında (Azure AD)
-  * Cihaz başına desteklenen tek veya birden çok Kullanıcı
-* Cihaz kilitleme yapılandırmalarının farklı düzeyleri, tam açık olan tek uygulama bilgi noktası arasında belirli kullanım durumlarına göre uygulanır.
-* Bir veya daha fazla uygulama MDM aracılığıyla dağıtıldı
+* Wi-Fi, iç kaynaklara erişimi olan ve İnternet'e veya Bulut hizmetlerine sınırlı erişimi olan bir iç kurumsal ağdır.
+* MDM Otomatik Kaydı ile Azure AD'ye Katılma
+* MDM (Intune) Yönetilen
+* Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
+  * Desteklenen cihaz başına tek veya birden çok kullanıcı
+* Tamamen Açık'tan Tek Uygulama Bilgi Noktası'ya kadar belirli kullanım örneklerine göre farklı cihaz kilitleme yapılandırma düzeyleri uygulanır.
+* MDM aracılığıyla bir veya daha fazla uygulama dağıtılır
 
-### <a name="common-challenges"></a>Yaygın sorunlar
+### <a name="common-challenges"></a>Yaygın Zorluklar
 
-* HoloLens 2, şirket içi AD joın veya System Center Configuration Manager (SCCM) üzerinde desteklenmez. MDM ile yalnızca Azure AD katılımı. günümüzde pek çok şirket şirket içi AD 'ye katılmış cihazlarda Windows 10 bilgisayarları dağıtmakta, SCCM tarafından yönetilen ve bulut tabanlı MDM çözümleri aracılığıyla iç Windows 10 cihazlarını yönetmek için dağıtılan/yapılandırılmış altyapıyı içermeyebilir.
-* HoloLens 2 bir bulut ilk cihaz olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi vb. için internet ve bulut bağlantılı hizmetleri yoğun bir şekilde kullanır. bir kurumsal ağa bağlanırken, proxy/güvenlik duvarı kurallarının büyük olasılıkla HoloLens 2 ve üzerinde çalışan uygulamalar için erişimi etkinleştirmek üzere ayarlanması gerekir.
-* Şirket Wi-Fi bağlantısı, genellikle cihazın veya kullanıcının kimliğini doğrulamak için sertifika gerektirir. MDM aracılığıyla Windows 10 cihazlara sertifika dağıtmaya yönelik gerekli altyapı veya ayarların yapılandırılması zor olabilir.
+* HoloLens 2, şirket içi AD'ye katılmayı veya System Center Configuration Manager (SCCM) desteklemez. MDM ile yalnızca Azure AD'ye katılma. Günümüzde birçok şirket SCCM tarafından yönetilen şirket içi AD'ye katılmış cihazlar olarak bu senaryoda Windows 10 bilgisayarlarını dağıtmaya devam ediyor ve bulut tabanlı MDM çözümleri aracılığıyla iç Windows 10 cihazlarını yönetmek için dağıtılmış/yapılandırılmış altyapıya sahip olabilir.
+* 2 HoloLens ilk bulut cihazı olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi ve diğer hizmetler için yoğun olarak İnternet ve buluta bağlı hizmetler kullanır. Şirket ağına bağlanırken, HoloLens 2 ve üzerinde çalıştıran uygulamalara erişimi etkinleştirmek için büyük olasılıkla ara sunucu/güvenlik duvarı kurallarının ayarlanması gerekir.
+* Şirket Wi-Fi bağlantısı genellikle cihazın veya kullanıcının ağ kimlik doğrulaması için sertifikalar gerektirir. MDM aracılığıyla cihazlarına sertifika dağıtmak Windows 10 gerekli altyapıyı veya ayarları yapılandırmak zor olabilir.
 
-buna karşılık gelen kurumsal bağlantı kılavuzu, mevcut cihaz yönetimine HoloLens 2 kaydetme, lisansları gerektiği gibi uygulama ve son kullanıcılarınızın bir Dynamics 365 kılavuzu çalıştırabildiğini ve cihaz kurulduktan sonra özel iş kolu uygulamalarını kullanmasını söyler.
+İlgili Kurumsal Bağlı kılavuzu, HoloLens 2'nin mevcut cihaz yönetiminize nasıl kaydedilir, gerektiğinde lisanslar nasıl uygulanacak ve son kullanıcılarının bir Dynamics 365 Kılavuzu çalıştırabileceklerini ve cihaz ayarlandıktan sonra özel iş hattı uygulamalarını kullanabileceğini nasıl doğrulayabilecekleri hakkında bilgi verir.
 
 > [!div class="nextstepaction"]
-> [Kurumsal bağlı dağıtım kılavuzu](hololens2-corp-connected-overview.md)
+> [Kurumsal Bağlantılı dağıtım kılavuzu](hololens2-corp-connected-overview.md)
 
-## <a name="scenario-c-deploy-in-secure-offline-environment"></a>Senaryo C: güvenli çevrimdışı ortamda dağıtma
+## <a name="scenario-c-deploy-in-secure-offline-environment"></a>Senaryo C: Güvenli çevrimdışı ortamda dağıtma
 
-Bu, yüksek oranda güvenli veya gizli konumlar için tipik bir dağıtımdır. HoloLens 2, ağ veya internet erişimi olmadan birincil olarak çevrimdışı kullanım için dağıtılır.
+Bu, yüksek oranda güvenli veya gizli konumlar için tipik bir dağıtımdır. HoloLens 2, ağ veya İnternet erişimine sahip değilken öncelikli olarak çevrimdışı kullanım için dağıtılır.
 
-[![Çevrimdışı güvenli diyagram 1.](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
+[![Çevrimdışı Güvenli diyagram 1.](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
 
 ### <a name="when-to-use"></a>Kullanılması gereken durumlar
 
-Şu dağıtım modelini göz önünde bulundurun:
+Aşağıdakiler için bu dağıtım modelini düşünün:
 
-* Verilerin şirket içinde korunması gereken yüksek oranda güvenli ortamlar
-* Ortak cihazların kullanıldığı "deneyimler"
-* Uzak alanda Internet bağlantısı sorunu
+* Verilerin kendi içinde korunarak korunarak yüksek oranda güvenli olduğu ortamlar
+* Genel olarak cihazların kullanılamayacakları "Deneyimler"
+* Uzak alanda İnternet bağlantısı sorunu
 
-### <a name="basic-common-configurations"></a>Temel ortak yapılandırma
+### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi bağlantısı devre dışı bırakıldı. Gerekirse, USB üzerinden Ethernet LAN bağlantısı için etkinleştirilebilir
+* Wi-Fi devre dışı bırakıldı. Gerekirse LAN bağlantısı için USB üzerinden Ethernet etkinleştirilebilir
 * Yönetilmiyor
 * Cihaz oturum açma için yerel kullanıcı hesabı
   * HoloLens 2 yalnızca bir yerel hesabı destekler
-* Cihaz kilitleme yapılandırmalarının farklı düzeyleri, belirli kullanım örneklerine göre sağlama paketleri aracılığıyla uygulanır. Bu yapılandırma genellikle güvenli ortam gereksinimleri nedeniyle kısıtlanır
-* Bir veya daha fazla uygulama sağlama paketi aracılığıyla dağıtıldı
+* Cihaz kilitleme yapılandırmalarının farklı düzeyleri, belirli kullanım örneklerine göre Sağlama Paketleri aracılığıyla uygulanır. Bu yapılandırmalar genellikle güvenli ortam gereksinimleri nedeniyle kısıtlanır
+* Sağlama Paketi aracılığıyla bir veya daha fazla uygulama dağıtılır
 
-### <a name="common-challenges"></a>Yaygın sorunlar
+### <a name="common-challenges"></a>Yaygın Zorluklar
 
 * Sağlama paketleri aracılığıyla kullanılabilen sınırlı bir yapılandırma kümesi vardır
-* bulut hizmetleri kullanılamaz, bu nedenle HoloLens 2 yeteneklerini sınırlandırdık.
-* Bu cihazların el ile ayarlanması, yapılandırılması ve güncellenmesi gerektiğinden daha yüksek yönetim yükü.
+* Bulut hizmetleri kullanılamaz, bu nedenle 2. HoloLens sınırlayıcıdır.
+* Bu cihazların el ile yapılandırılması, yapılandırılması ve güncelleştirilmiş olması nedeniyle daha yüksek yönetim yükü.
 
-karşılık gelen çevrimdışı güvenli kılavuz, güvenli ortamlarda kullanılmak üzere HoloLens 2 ' ye kilitlenecek örnek bir sağlama paketi uygulamaya yönelik yönerge sağlar.
+İlgili Çevrimdışı güvenli kılavuz, güvenli ortamlarda kullanmak üzere bir HoloLens 2'nin kilitlenmesini sağlayan örnek Sağlama Paketi uygulama yönergesi sağlar.
 
 > [!div class="nextstepaction"]
 > [Çevrimdışı güvenli ortam dağıtım kılavuzu](hololens-common-scenarios-offline-secure.md)

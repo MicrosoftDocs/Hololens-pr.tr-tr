@@ -14,11 +14,11 @@ ms.custom:
 - CSSTroubleshooting
 keywords: sorunlar, hata, sorun giderme, çözüm, yardım, destek, HoloLens, öykünücü
 ms.openlocfilehash: 6ac86acf85e8e4fc1b97473732ea358d3d612d12
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190030"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427351"
 ---
 # <a name="device-troubleshooting"></a>Cihaz sorunlarını giderme
 
@@ -151,142 +151,142 @@ Bazı müşteriler, dosyaları karşıya yüklemeye veya indirmeye çalışırke
 
 Wi-Fi ve UsbNcm 'ye eşit olarak uygulanan bu geçici çözüm, "SSL bağlantısı" altında "gerekli" seçeneğinin devre dışı bırakılması. Bunu yapmak için cihaz portalı, **sistem**' e gidin ve **Tercihler** sayfasını seçin. **Cihaz güvenliği** bölümünde, **SSL bağlantısı**' nı bulun ve **gerekli**' ı devre dışı bırakmak için işaretini kaldırın.
 
-Daha sonra Kullanıcı, https://(IP adresi) değil http://, dosya yükleme ve indirme gibi özellikler için de çalışır.
+Kullanıcı daha sonra http:// (IP adresi) https:// dosya yükleme ve indirme gibi özellikler çalışmaya devam ediyor.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build"></a>Insider derlemesi ile bir cihaz için Insider Preview 'dan kaydolduktan sonra mavi ekran
+## <a name="blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build"></a>Insider derlemesi ile yanıp sönen bir cihazda Insider önizleme kaydından sonra mavi ekran
 
-bu, bir ınsider preview derlemesinde bulunan kullanıcıları etkiler, yeni bir ınsider preview derlemesi ile HoloLens 2 ' yi geri ve ardından ınsider programından kaydolduğunu etkileyen bir sorundur. Bu bilinen bir **sorundur**.
+Bu, Bir Insider önizleme derlemesi olan kullanıcıları etkileyen, yeni bir insider önizleme derlemesi ile HoloLens 2'lerini yeniden yazdıran ve insider programından kaydı s olan kullanıcıları etkileyen bir sorundur. Bu bilinen bir **sorundur.**
 
-Bu, şunları etkilemez:
-- Windows ınsider 'da kayıtlı olmayan kullanıcılar 
-- Insiders
-    - Insider derlemeleri sürüm 18362. x olduğundan bir cihaz kaydedildiyse
-    - Insider 'a imzalanmış bir 19041. x derlemesini düzder ve Insider programı 'nda kayıtlı kal
+Bu durum şunları etkilemez:
+- Windows Insider'a kayıtlı Windows kullanıcılar 
+- Içerdekiler:
+    - Insider derlemeleri 18362.x sürümünden beri bir cihaz kayıtlı ise
+    - Insider imzalı bir 19041.x derlemesi sönerse VE Insider programına kayıtlı kalır
 
-Geçici iş: 
-- Sorunu önleyin 
-    - Insider olmayan bir derlemeyi yakıp söndür. Normal aylık güncelleştirmelerden biri.
-    - Insider Preview 'da kalın
-- Cihazı kırın
+Üzerinde çalışma: 
+- Sorundan kaçının 
+    - İçinde olmayan bir derlemeyi flash iletir. Normal aylık güncelleştirmelerden biri.
+    - Insider Preview'da kalın
+- Cihaza ters eğik çizgi
 
-    1. [HoloLens 2 ' ye](hololens-recovery.md) , bağlantı kurulamadı, tamamen güçleyerek manuel moduna koyun. Ardından, hacmi tutarken, güç düğmesine dokunun.
+    1. Bağlantı [HoloLens kapatarak el ile 2'nin](hololens-recovery.md) yanıp sönme moduna alın. Ardından Birim'i basılı tutarken Güç düğmesine dokunun.
     
-    1. bilgisayara Bağlan ve gelişmiş kurtarma yardımcısı ' nı açın.
+    1. Bağlan ve Gelişmiş Kurtarma Yardımcı'sı'nu açın.
     
-    1. HoloLens 2 ' i varsayılan yapıya yakıp söndür.
+    1. 2. HoloLens varsayılan derlemeye yanıp söner.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive otomatik olarak resim karşıya yüklememez
+## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive resimleri otomatik olarak karşıya yüklemez
 
-HoloLens için OneDrive uygulaması, iş veya okul hesapları için otomatik kamera yüklemeyi desteklemez. Bu bilinen bir **sorundur**.
+OneDrive için HoloLens uygulaması, iş veya okul hesapları için otomatik kamera yüklemeyi desteklemez. Bu bilinen bir **sorundur.**
 
 Geçici çözümler:
 
-- İşletmeniz için uygun ise, tüketici Microsoft hesaplarında otomatik kamera yüklemesi desteklenir. iş veya okul hesabınıza ek olarak Microsoft hesabı oturum açabilirsiniz (OneDrive uygulama, çift oturum açma desteği sağlar). OneDrive içindeki Microsoft hesabı profilinizde otomatik, arka planda kamera alma 'yı yükleyebilirsiniz.
+- İşletmeniz için uygunsa tüketici Microsoft hesaplarından otomatik kamera yüklemesi de desteklenebilir. İş veya okul hesabınıza Microsoft hesabı oturum açabilirsiniz (OneDrive uygulama çift oturum açmayı destekler). Otomatik Microsoft hesabı profilinden OneDrive arka plan kameralı zar yükleme özelliğini etkinleştirebilirsiniz.
 
-- fotoğraflarınızı otomatik olarak yüklemek için bir tüketici Microsoft hesabı güvenli bir şekilde kullanmıyorsanız, OneDrive uygulamasından iş veya okul hesabınıza fotoğraf el ile yükleyebilirsiniz. bunu yapmak için OneDrive uygulamasında iş veya okul hesabınızda oturum açtığınızdan emin olun. Düğmesini seçin **+** ve **upload**' yi seçin. **Kamera rulosu > resimlere** giderek karşıya yüklemek istediğiniz fotoğrafları veya videoları bulun. Karşıya yüklemek istediğiniz fotoğrafları veya videoları seçin ve ardından **Aç** düğmesini seçin.
+- Fotoğraflarınızı otomatik olarak karşıya yüklemek Microsoft hesabı bir tüketici hesabını güvenli bir şekilde kullanasanız, OneDrive uygulamasından iş veya okul hesabınıza el ile OneDrive yükleyebilirsiniz. Bunu yapmak için, OneDrive uygulamasında iş veya okul hesabınızla oturum OneDrive olun. düğmesini seçin **+** ve seçeneğini Upload. Karşıya yüklemek istediğiniz fotoğrafları veya videoları, Kamera Rulosu'na giderek **> bulun.** Karşıya yüklemek istediğiniz fotoğrafları veya videoları seçin ve ardından Aç **düğmesini** seçin.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="hololens-is-unresponsive-or-wont-start"></a>HoloLens yanıt vermiyor veya başlamıyor
+## <a name="hololens-is-unresponsive-or-wont-start"></a>HoloLens yanıt vermiyor veya başlatılmayıyor
 
-HoloLens başlamazsa:
+HoloLens başlatılamaysa:
 
-- Güç düğmesinin yanındaki LED 'ler soluk veya yalnızca bir tane kısa süreliğine yanıp sönse, [HoloLens ücretlendirmeniz gerekebilir.](hololens2-charging.md#charging-the-device)
-- Güç düğmesine bastığınızda LED ışığı ışık, ancak ekranda hiçbir şey göremiyorsanız, [cihazın kalıcı olarak sıfırlanması](hololens-recovery.md#hard-reset-procedure)gerekir.
+- Güç düğmesinin yanındaki LED'ler yanmıyorsa veya yalnızca bir LED kısa süre yanıp sönüyorsa, güç kaynağınızı [HoloLens.](hololens2-charging.md#charging-the-device)
+- Güç düğmesine bastığınızda LED'ler yansa ama ekranlarda hiçbir şey görmüyorsanız, [cihazı sabit bir şekilde sıfırlayın.](hololens-recovery.md#hard-reset-procedure)
 
-HoloLens dondurulmuş hale gelirse veya yanıt vermiyorsa:
+Bu HoloLens donmuş veya yanıt vermiyorsa:
 
-- bir led 'in beş bir kısmını devre dışı bırakır veya led 'ler yanıt vermiyorsa 15 saniye boyunca güç düğmesine basarak HoloLens kapatın. HoloLens başlatmak için, güç düğmesine yeniden basın.
+- Led'HoloLens beşi de kapatana kadar güç düğmesine basarak veya LED'ler yanıt vermiyorsa 15 saniye boyunca kendi güç düğmenizi kapatın. Çalışmanızı başlatmak HoloLens tekrar güç düğmesine basın.
 
-bu adımlar işe yoksa, [HoloLens 2 cihazınızı](hololens-recovery.md) veya [HoloLens (1. gen) cihazınızı](hololens1-recovery.md) kurtarmayı deneyebilirsiniz.
+Bu adımlar işe yoksa, HoloLens [2](hololens-recovery.md) cihazınızı veya HoloLens [(1. nesil) cihazınızı kurtarmayı denemeniz gerekir.](hololens1-recovery.md)
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="low-disk-space-error"></a>"Yetersiz disk alanı" hatası
+## <a name="low-disk-space-error"></a>"Düşük Disk Alanı" hatası
 
-Aşağıdakilerden birini veya birkaçını yaparak depolama alanını boşaltmanız gerekir:
+Aşağıdakilerden birini veya daha fazlasını yaparak biraz depolama alanı serbest bırakabilirsiniz:
 
-- Kullanılmayan bazı boşlukları silin. **Ayarlar**  >  **sistem**  >  **alanları**' na gidin, artık ihtiyacınız olmayan bir alan seçin ve ardından **kaldır**' ı seçin.
-- Yerleştirdiğiniz hologramlar bölümünü kaldırın.
-- Fotoğraflar uygulamasındaki bazı resimleri ve videoları silin.
-- HoloLens bazı uygulamaları kaldırın. **Tüm uygulamalar** listesinde, kaldırmak istediğiniz uygulamayı ve ardından **Kaldır**' ı seçin.
+- Kullanılmayan bazı alanları silin. Sistem   >  **Ayarlar'a**  >  **gidin,** artık ihtiyacınız olmayacak bir alan seçin ve ardından Kaldır'ı **seçin.**
+- Yerleştiren hologramlardan bazılarını kaldırın.
+- Fotoğraflar uygulamasından bazı resimleri ve videoları silin.
+- Uygulamanıza bazı uygulamaları HoloLens. Uygulama **Tüm uygulamalar** kaldırmak istediğiniz uygulamaya dokunarak basılı tutun ve Kaldır'ı **seçin.**
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="calibration-fails"></a>Ayarlama başarısız
+## <a name="calibration-fails"></a>Hataya neden olan hata
 
-Ayarlama çoğu kişi için çalışmalıdır, ancak ayarlama işleminin başarısız olduğu durumlar vardır.
+Ayar çoğu kişi için çalışmalı, ancak ayarlamanın başarısız olduğu durumlar vardır.
   
-Ayarlama hatasının bazı olası nedenleri şunlardır:
+Hatanın olası nedenlerinden bazıları şunlardır:
 
-- Ayarlama hedeflerini takip etme
-- Kirli veya çizilmiş cihaz vizörü veya cihaz vizörü düzgün şekilde konumlandırılmadı
-- Kirli veya çizik gözlük
-- Belirli türlerde iletişim ve gözlük (renkli kişi mercekler, bazı haksız kişi mercekler, IR engelleme gözlüğü, yüksek kaliteli gözlük, güneş gözlüğü veya benzer)
-- Daha fazla bilgi ve bazı eyeflash uzantıları
-- Cihazın gözlerinizi görmesini engelliyorsa, saç veya kalın eyecam çerçeveler
-- Dar gözler, uzun Eyelashes, amblyopia, nystagmus, bazı LASIK veya diğer gözle bazı durumlar gibi belirli gözle, göz önünde ve göz yormalileri
+- Dikkati dağıldı ve dalıntı hedeflerini takip edede
+- Kirli veya karalamalı cihaz görünür ya da cihaz görünür düzgün bir şekilde konumlanmaz
+- Kirli veya karalamalı gözlükler
+- Bazı kişi lensleri ve gözlük türleri (renkli iletişim lensleri, bazı toric iletişim lensleri, IR engelleyici gözlükler, bazı yüksek gözlükler, güneş gözlüğü veya benzerleri)
+- Daha belirgin bir şekilde ifade edilir ve bazı kirpik uzantıları
+- Cihazın sizin gözlerinizi görmesini engelliyorsa kıllar veya kalın gözlük çerçeveleri
+- Dar göz, uzun kirpikler, amblyphya, nystagmus, LASIK veya diğer göz ameliyatları gibi belirli gözfiyatları, göz koşulları veya göz ameliyatı
 
-Ayarlama başarısız olursa, deneyin:
+Başarısız bir sonuç elde edilirse şunları deneyin:
 
-- Cihazınızı Temizleme vizörü
-- Gözlerinizi Temizleme
-- Cihazınızın vizörü ' i mümkün olduğunca yakın bir şekilde iletme
-- Nesneleri (örneğin, saç) vizörü içinde hareket ettirmenin
-- Odadaki bir ışığı açma veya doğrudan güneş dışına taşıma
+- Cihaz mengenenizi temizleme
+- Gözlüklerinizi temizleme
+- Cihazınızın gözlerinizi mümkün olduğunca yakınına itme
+- Nesnelerini mengenenizin dışında (örneğin, kıllar) taşıma
+- Odanıza bir ışığı açma veya doğrudan dışarı çıkma
 
-tüm yönergeleri izlediyseniz ve ayarlama hala başarısız olursa, Ayarlar ayarlama isteğini devre dışı bırakabilirsiniz. Ayrıca, [geri bildirim merkezinde](hololens-feedback.md)geri bildirimde bulunarak bize bilgi verin.
+Tüm yönergeleri izlediy ve ayarlama hala başarısız oluyorsa, komut istemini devre dışı Ayarlar. Ayrıca, Geri Bildirim Merkezi'da geri bildirim [göndererek bize Geri Bildirim Merkezi.](hololens-feedback.md)
 
-Ayrıca, [görüntü renk veya parlaklık sorun giderme](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right) için ilgili bilgiler bölümüne bakın.
+Ayrıca görüntü rengi veya parlaklığı [sorunlarını gidermek için ilgili bilgilere bakın.](hololens2-fit-comfort-faq.md#hologram-image-color-or-brightness-does-not-look-right)
 
-göz konumları sistem tarafından hesaplandığından ıpd 'nin ayarlanması HoloLens 2 için geçerli değildir. 
+Göz pozisyonları sistem tarafından hesap HoloLens 2 için IPD ayarı geçerli değildir. 
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else"></a>HoloLens daha önce başka bir kişi için ayarlandığından oturum açılamıyor
+## <a name="cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else"></a>Oturum aça bilmiyorum çünkü HoloLens başka biri için ayarlanmış
 
-Cihazı daha [ **yanıp sönen moda** yerleştirebilir ve Gelişmiş kurtarma Yardımcısı 'nı kullanarak](hololens-recovery.md#clean-reflash-the-device) cihazı kurtarabilirsiniz.
+Cihazı [FlashIng **Mode'a yer ve cihazı** kurtarmak için Gelişmiş Kurtarma Yardımcı'sı](hololens-recovery.md#clean-reflash-the-device) kullanabilirsiniz.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 
 ## <a name="unity-isnt-working"></a>Unity çalışmıyor
 
-- HoloLens geliştirme için önerilen en güncel Unity sürümü için [araçları yüklemeyi](/windows/mixed-reality/install-the-tools) inceleyin.
-- unity HoloLens Technical Preview ile ilgili bilinen sorunlar [HoloLens Unity forumlarında](https://forum.unity3d.com/threads/known-issues.394627/)belgelenmiştir.
+- Daha [fazla geliştirme](/windows/mixed-reality/install-the-tools) için önerilen Unity'nin en güncel sürümü için araçları HoloLens bakın.
+- Unity HoloLens Technical Preview ile ilgili bilinen sorunlar HoloLens [Unity forumlarında belgelenmiştir.](https://forum.unity3d.com/threads/known-issues.394627/)
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Cihaz portalı düzgün çalışmıyor
+## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Cihaz Portalı düzgün çalışmıyor
 
-- Karma Gerçeklik yakalamadaki canlı önizleme özelliği birkaç saniye gecikme gösterebilir.
+- Karma Gerçeklik yakalama özelliğinin Canlı Önizleme özelliği birkaç saniyelik gecikme süresine sahip olabilir.
 
-- Sanal giriş sayfasında, sanal hareketler bölümünün altındaki hareket ve kaydırma denetimleri işlevsel değildir. Bunların kullanılması hiçbir etkiye sahip olmayacaktır. Sanal giriş sayfasındaki sanal klavye düzgün şekilde çalışmaktadır.
+- Sanal Giriş sayfasında, Sanal Hareketlerin altındaki Hareket ve Kaydırma denetimleri işlevsel değildir. Bunları kullanmanın hiçbir etkisi olmaz. Sanal giriş sayfasındaki sanal klavye düzgün çalışıyor.
 
-- Ayarlar geliştirici modunu etkinleştirdikten sonra, cihaz portalını açmak için anahtarın etkinleştirilmesi birkaç saniye sürebilir.
+- Geliştirici Modu'Ayarlar etkinleştirildikten sonra, anahtarın etkinleştirilmesi birkaç saniye Cihaz Portalı sürebilir.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
 ## <a name="the-hololens-emulator-isnt-working"></a>HoloLens Emulator çalışmıyor
 
-HoloLens öykünücüsü hakkındaki bilgiler geliştirici belgelerimizde bulunur.  [HoloLens öykünücüsünün sorunlarını giderme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-hololens-emulator#troubleshooting)hakkında daha fazla bilgi edinin.
+HoloLens öykünücüsü hakkında bilgiler geliştirici belgelerimizde bulunur.  HoloLens [öykünücüsünün sorunlarını giderme hakkında daha fazla bilgi edinebilirsiniz.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-hololens-emulator#troubleshooting)
 
 
-- Microsoft Store tüm uygulamalar öykünücü ile uyumlu değildir. Örneğin, Genç ve parçaların öykünücü üzerinde oynatılamaz.
-- Emulator PC web kamerasını kullanamazsınız.
-- Windows cihaz portalının canlı önizleme özelliği öykünücü ile çalışmaz. Hala karma gerçeklik Videoları ve görüntülerini yakalayabilirsiniz.
+- Uygulamanın tüm uygulamaları Microsoft Store öykünücü ile uyumlu değildir. Örneğin, Young Conker ve Parçalar öykünücüde oynatılamaz.
+- Bilgisayar web kamerasını web kamerasını Emulator.
+- Canlı Önizleme özelliği Windows Cihaz Portalı öykünücü ile birlikte çalışmıyor. Karma Gerçeklik videolarını ve görüntülerini yine de yakalayabilirsiniz.
 
-[Listeye geri dön](#list)
+[Listeye dön](#list)
 
-## <a name="voice-commands-arent-working"></a>Sesli komutlar çalışmıyor
+## <a name="voice-commands-arent-working"></a>Ses komutları çalışmıyor
 
-Cortana sesli komutlarınıza yanıt vermiyorsa Cortana açık olduğundan emin olun. tüm uygulamalar listesinde,   >    >  değişiklikler yapmak için Cortana menü **not defteri**  >  **Ayarlar** ' ni seçin. Ne söyleyebilirim hakkında daha fazla bilgi edinmek için bkz. [HoloLens sesinizi kullanma](hololens-cortana.md).
+Cortana komutlarınıza yanıt vermiyorsa, komutlar Cortana emin olun. Değişiklik Tüm uygulamalar menü **not**  >    >  **Cortana'ı**  >  **Ayarlar** seçin. Neler söylemeniz hakkında daha fazla bilgi edinmek için [bkz.](hololens-cortana.md)HoloLens.
 
-Bu HoloLens (1. nesil) yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açık. 2 HoloLens de, cihaz kurulumu sırasında hem konuşma tanımayı hem de Cortana açıp açmayabilirsiniz.
+Bu HoloLens (1. nesil) yerleşik konuşma tanıma yapılandırılabilir değildir. Her zaman açık. 2 HoloLens de, cihaz kurulumu sırasında hem konuşma tanımanın hem de Cortana açmanın gerekip gerek olmadığını seçebilirsiniz.
 
 HoloLens 2'niz sesinize yanıt vermiyorsa Konuşma tanıma'nın açık olduğundan emin olun. Gizlilik **Konuşmasında**  >    >    >  **Ayarlar'a gidin** ve Konuşma **tanıma'ya gidin.**
 
@@ -296,30 +296,30 @@ HoloLens 2'niz sesinize yanıt vermiyorsa Konuşma tanıma'nın açık olduğund
 
 Bu HoloLens emin olmak için bunları hareket çerçevesinde tutmanız gerekir.  Karma Gerçeklik Giriş, ellerinizi takip etmek için size geri bildirim sağlar.  Geri bildirim, farklı sürümlerde farklı HoloLens:
 - Genel HoloLens (1. nesil) üzerinde bakış imleci bir noktadan halkaya değişir
-- 2. HoloLens imleç, elimle bir görüntüye yaklaşacaksa bir el imleç görünür ve kayıntılar daha uzak olduğunda bir el imleç görünür
+- Bu HoloLens 2'de, el iziniz bir görüntüye yaklaşacaksa parmak izi imleci görünür ve kayıntılar daha uzak olduğunda bir el imleç görünür
 
-Birçok çevreleyici uygulama, Karma Gerçeklik Giriş'e benzer giriş desenlerini takip eder.  HoloLens [(1. nesil) ve 2. nesil'de](hololens1-basic-usage.md#use-hololens-with-your-hands) el HoloLens [daha fazla bilgi.](hololens2-basic-usage.md#the-hand-tracking-frame)
+Birçok çevreleyici uygulama, Karma Gerçeklik Giriş'e benzer giriş desenlerini takip eder.  HoloLens [(1. nesil) ve](hololens1-basic-usage.md#use-hololens-with-your-hands) [2.](hololens2-basic-usage.md#the-hand-tracking-frame)nesil'de el HoloLens daha fazla bilgi.
 
 Maske takıyorsanız, bazı maske türlerinin el izleme ile çalışmay olduğunu unutmayın.  Yaygın olarak kullanılan bir örnek de, derin kamera tarafından alınmayacak olan siyah renkli silikonlardır.  Çalışmalarınız silikon silikon içeriyorsa mavi veya gri gibi daha açık bir renkle çalışmanızı öneririz.  Bir diğer örnek de, el şeklinizi karartma eğiliminde olan büyük baggy eldivenleridir. En iyi sonuçlar için mümkün olduğunca forma uygun olan eldivenler kullanılması önerilir.
 
-Mengenenizin parmak izi veya muzlaları varsa, havayla birlikte gelen mikrofiber temizleme HoloLens ile birlikte kullanın.
+Mengenenizin parmak izleri veya muzlaları varsa, mengenenizi hafifçe temizlemek için HoloLens ile birlikte gelen mikrofiber temizleme izini kullanın.
 
 [Listeye dön](#list)
 
 ## <a name="cant-connect-to-wi-fi"></a>Wi-Fi'a bağlanamıyor
 
-Aşağıdakiler, HoloLens ağınıza bağlanamıyorsanız denemeniz Wi-Fi:
+Ağ bağlantınıza bağlanamıyorsanız denemeniz gereken bazı HoloLens aşağıdakiler Wi-Fi:
 
-- Bu Wi-Fi emin olun. Kontrol etmek için Başlangıç hareketini kullanın ve ağ **Ayarlar**  >  **&amp; Wi-Fi'ı**  >  **seçin.** Bu Wi-Fi, kapatmayı ve sonra tekrar açmayı deneyin.
+- Yeni bir Wi-Fi emin olun. Kontrol etmek için Başlangıç hareketini kullanın ve ağ **Ayarlar**  >  **&amp; Wi-Fi'ı**  >  **seçin.** Bu Wi-Fi, kapatmayı ve sonra tekrar açmayı deneyin.
 - Yönlendiriciye veya erişim noktasına yaklaşın.
-- Wi-Fi yönlendiricinizi yeniden başlatın ve ardından [ile HoloLens.](hololens-recovery.md) Yeniden bağlanmayı deneyin.
+- Ağ yönlendiricinizi Wi-Fi ve ardından [ile HoloLens.](hololens-recovery.md) Yeniden bağlanmayı deneyin.
 - Bunlardan hiçbiri çalışmıyorsa, yönlendiricinizin en son üretici yazılımını kullanmaya devam edin. Bu bilgileri üretici web sitesinde bulabilirsiniz.
 
 [Listeye dön](#list)
 
-## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth cihazlar eşlenmli değil
+## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth cihazları eşleyemli değil
 
-Bir Bluetooth cihazı [eşleştirmeyle ilgili sorun](hololens-connect-devices.md)Bluetooth aşağıdakini deneyin:
+Bir Bluetooth cihazı [eşleştirmeyle ilgili Bluetooth,](hololens-connect-devices.md)şunları deneyin:
 
 - Cihazlar Ayarlar a   >  **gidin** ve Bluetooth emin olun. Varsa, tekrar kapatın ve tekrar açma.
 - Cihaz cihazınızın tamamen Bluetooth veya yeni pillere sahip olduğundan emin olun.
@@ -328,24 +328,24 @@ Bir Bluetooth cihazı [eşleştirmeyle ilgili sorun](hololens-connect-devices.md
 [Listeye dön](#list)
 
 ## <a name="usb-c-microphone-isnt-working"></a>USB-C Mikrofon çalışmıyor
-Bazı USB-C mikrofonlarının kendilerini hem mikrofon hem de konuşmacı olarak yanlış şekilde *raporlasalar.* Bu, mikrofonla ilgili değil mikrofonla ilgili HoloLens. Bu mikrofonlardan birini HoloLens ses kaybolabilir. Neyse ki basit bir düzeltme var.  
+Bazı USB-C mikrofonlarının kendilerini hem mikrofon hem de konuşmacı olarak yanlış şekilde *raporlasalar.* Bu, mikrofonla ilgili bir sorundur ve mikrofonla HoloLens. Bu mikrofonlardan birini HoloLens ses kaybolabilir. Neyse ki basit bir düzeltme var.  
 
-Sistem   ->  **Ayarlar'de** yerleşik konuşmacıları (Analog Özellik Ses  ->   **Sürücüsü)** Varsayılan cihaz olarak **açıkça ayarlayın.** HoloLens mikrofon daha sonra kaldırılarak yeniden bağlansa bile bu ayarı hatırlamanız gerekir.
+Sistem   ->  **Ayarlar'de,** yerleşik konuşmacıları (Analog Özellik Ses  ->   **Sürücüsü)** Varsayılan cihaz olarak **açıkça ayarlayın.** HoloLens mikrofon daha sonra kaldırılarak yeniden bağlansa bile bu ayarı hatırlamanız gerekir.
 
 ![USB-C mikrofon sorunlarını giderme.](images/usbc-mic-4.png)
 
 ## <a name="devices-listed-as-available-in-settings-dont-work"></a>Cihazlarda kullanılabilir Ayarlar cihazlar çalışmıyor
 
-HoloLens (1. nesil) ses profillerinin Bluetooth desteklemez. Bluetooth ve mikrofonlu HoloLens gibi görünebilir, ancak bunlar desteklenmiyor.
+HoloLens (1. nesil) ses profillerini Bluetooth desteklemez. Bluetooth ve mikrofonlu HoloLens kullanılabilir ancak bunlar desteklenmiyor.
 
-HoloLens 2, stereo Bluetooth için A2DP ses profilini destekler. 2 Bluetooth bir çevre biriminden mikrofon yakalamayı Bluetooth Ücretsiz HoloLens profili desteklenmiyor.
+HoloLens 2, stereo kayıttan Bluetooth A2DP ses profilini destekler. 2 Bluetooth bir çevre biriminden mikrofon yakalamayı Bluetooth Ücretsiz HoloLens profili desteklenmiyor.
 
 Bluetooth cihazı kullanırken sorun Bluetooth desteklenen bir cihaz olduğundan emin olun. Desteklenen cihazlar aşağıdakileri içerir:
 
-- İngilizce dilinde QWERTY Bluetooth klavyeleri kullanır (bunları holografik klavyeyi her yerde kullanabilirsiniz).
-- Bluetooth fareler.
+- İngilizce dilinde QWERTY Bluetooth klavyeler (holografik klavyeyi her yerde kullanabilirsiniz).
+- Bluetooth fare.
 - HoloLens [tıklayın.](hololens1-clicker.md)
 
-DIĞER cihazlarınızı BLUETOOTH GATT cihazlarıyla kendi cihazlarınızı HoloLens. Ancak, cihazları gerçekten kullanmak için ilgili yardımcı uygulamaları Microsoft Store uygulamaları yüklemeniz gerekir.
+DIĞER BLUETOOTH VE GATT cihazlarını kendi cihazlarınız ile HoloLens. Ancak, cihazları gerçekten kullanmak için ilgili yardımcı uygulamaları Microsoft Store uygulamaları yüklemeniz gerekir.
 
 [Listeye dön](#list)

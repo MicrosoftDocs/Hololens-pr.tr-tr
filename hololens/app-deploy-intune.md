@@ -1,7 +1,7 @@
 ---
-title: Intune ve Şirket Portalı
+title: ıntune ve Şirket Portalı
 description: Intune, mobil cihaz yönetimi ve şirket portalı ile rahat bir kullanıcı deneyimi ayarlamayı, atamayı ve oluşturmayı öğrenin.
-keywords: intune, uygulama yönetimi, uygulama, şirket portalı, portal, hololens
+keywords: Intune, uygulama yönetimi, uygulama, Şirket portalı, Portal, Hololens
 author: evmill
 ms.author: v-evmill
 ms.date: 6/22/2020
@@ -17,47 +17,47 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f1c178c940224ed3cd07c58b886b176108614caf7a8463af089e2f2357f45553
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b192732f5e7edffaa1d0ab081454e4034c416191
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665259"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427191"
 ---
-# <a name="intune--company-portal"></a>Intune & Şirket Portalı
+# <a name="intune--company-portal"></a>ıntune & Şirket Portalı
 
-Mobil Cihaz Yönetimi (MDM) ile, [Microsoft Endpoint Manager (Intune)](/intune/windows-holographic-for-business) aracılığıyla kendi özel uygulamalarınızı kullanarak doğrudan HoloLens dağıtabilirsiniz. Microsoft Intune, mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimine (MAM) odaklanan bulut tabanlı bir hizmettir. Intune, Microsoft'un Enterprise Mobility + Security [(EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)paketine dahildir ve kullanıcıların üretken bir şekilde çalışmalarına olanak sağlar ve kuruluş verilerinizin korunmasını sağlar. Intune hakkında daha fazla bilgi edinmek için [Intune nedir? makalelerini okuyun.](/mem/intune/fundamentals/what-is-intune)
+mobil cihaz yönetimi (MDM) ile, doğrudan HoloLens cihazlarınıza dağıtmak için [Microsoft Endpoint Manager (ıntune)](/intune/windows-holographic-for-business) aracılığıyla kendi özel uygulamalarınızı kullanabilirsiniz. Microsoft Intune, mobil cihaz yönetimine (MDM) ve mobil uygulama yönetimine (MAM) odaklanan bulut tabanlı bir hizmettir. ıntune, Microsoft 'un [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)'e dahil edilmiştir ve kuruluşunuzun verilerinin korunmasını sağlarken kullanıcıların üretken olmalarını sağlar. Intune hakkında daha fazla bilgi edinmek için [Intune](/mem/intune/fundamentals/what-is-intune)'u okuyun.
 
 ## <a name="setup"></a>Kurulum
 
-1. Upload bir İş Hattına yükleyin veya Intune kiracınıza özel bir uygulama yükleyin. Ayrıca bkz. [Enterprise yönetimi.](/windows/client-management/mdm/enterprise-app-management)
+1. bir iş kolu için uygulama Upload veya özel bir uygulamayı ıntune kiracınıza yükleyin. ayrıca bkz: [Enterprise app management](/windows/client-management/mdm/enterprise-app-management).
 
-2. [Uygulamalarınızı bir gruba attayabilirsiniz.](/mem/intune/apps/apps-deploy) Seçtiğiniz atama türüne bağlı olarak, uygulama otomatik olarak teslim veya bir uygulama seçiminiz varsa çekme için kullanılabilir.
+2. [Uygulamanızı bir gruba atayın](/mem/intune/apps/apps-deploy). Seçtiğiniz atama türüne göre uygulama otomatik olarak teslim edilebilir veya bir uygulama seçiminiz varsa, kolayca kullanıma sunulabilir.
 
 > [!NOTE]
-> Appx paketinizi hazırlarken, dağıtmakta olduğunuz cihaz mimarilerini dahil etmek için hesaba katyın. HoloLens 2 ARM64, HoloLens (1. Nesil) ise x86'dır. Karma cihaz ortamına sahip olmak planlıyorsanız her ikisini de tek bir appx paketine dahil edersiniz.
+> Appx paketlerinizi oluştururken, dağıttığınız cihazların mimarisini dahil etmek için hesap yaptığınızdan emin olun. HoloLens 2 ARM64, HoloLens (1. Gen) ise x86. Karma cihazlar ortamı bulundurmaktan karşılaşıyorsanız, her ikisini de tek bir appx paketine dahil edebilirsiniz.
 
 ## <a name="assignment-types"></a>Atama türleri
 
-Kayıt sonrasında uygulamanın cihaza otomatik olarak yüklenmiş olması  için, bu gruplarda Gerekli'yi seçmeniz gerekir.
-Uygulamanın şirket portalı üzerinden kayıtlı cihazlara indirilsin mi? için Kayıtlı cihazlar için **kullanılabilir'i seçin.**
+Uygulamanızın kayıt sonrasında cihaza otomatik olarak yüklenmesini sağlamak için, bu gruplar için **gerekli** ' ı seçmeniz gerekir.
+Uygulamanızı Şirket portalı üzerinden kaydedilmiş cihazlara indirilebilir hale getirmek için, **Kayıtlı cihazlar Için kullanılabilir**' ı seçin.
 
-## <a name="end-user-experience"></a>End-User Deneyimi
+## <a name="end-user-experience"></a>End-User deneyim
 
-Intune'da yapılandırmayı ayardikten sonra, son kullanıcıların seçili uygulamalarınızı almaya hazırsınız.
+Intune 'da yapılandırmayı ayarladıktan sonra, son kullanıcıların seçili uygulamalarınızı almasına hazırlanın.
 
-Uygulamalarınızı otomatik olarak almak için şu adımları izleyin:
+Uygulamanızı otomatik olarak almak için aşağıdaki adımları izleyin:
 
-1. Cihazınızı kiracınıza kaydetme.
-2. Cihazınız kaydı tamamlandıktan sonra uygulamayı cihazınıza alasınız.
-3. Uygulamayı hemen görmüyorsanız Hesaplarda İş veya Okul **Ayarlar** gidin ve yüklü uygulama durumuyla ilgili bilgileri görmek için  >    >    >   aşağı kaydırın.
+1. Cihazınızı kiracınızla kaydedin.
+2. Cihazınızın kaydı tamamladıktan sonra, uygulamayı cihazınızda almalısınız.
+3. uygulamanızı hemen görmüyorsanız, **Ayarlar**  >  **hesapları**  >  **çalışıyor**' a gidin veya  >  *hesap* bilgilerinizi okul yapın ve yüklü uygulama durumu hakkındaki bilgileri görmek için aşağı kaydırın.
 
-Aşağıdakiler aracılığıyla uygulamalara Şirket Portalı:
+Şirket Portalı aracılığıyla uygulamalara nasıl ulaşırsanız:
 
-1. Başlat **Menüsü'yü açın** **ve** Microsoft Store.
-2. Uygulamayı **Şirket Portalı** ve indirin.
-3. Hesabınızla oturum açın.
+1. **Başlat menüsünü** açın ve **Microsoft Store**' yi seçin.
+2. **Şirket Portalı** arayın ve uygulamayı indirin.
+3. Hesabınızda oturum açın.
 4. Almak istediğiniz uygulamayı seçin ve indirin.
 
 > [!Tip]
-> [Intune'da uygulamaları Şirket Portalı](/mem/intune/apps/company-portal-app) ve yönetme hakkında daha fazla bilgi [edinin.](/mem/intune/fundamentals/windows-holographic-for-business#deploy-and-manage-apps)
+> [Şirket Portalı otomatik olarak yükleme](/mem/intune/apps/company-portal-app) ve [ıntune 'da uygulamaları dağıtma ve yönetme](/mem/intune/fundamentals/windows-holographic-for-business#deploy-and-manage-apps)hakkında daha fazla bilgi edinin.

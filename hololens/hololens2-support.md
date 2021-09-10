@@ -8,11 +8,11 @@ ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
 ms.openlocfilehash: 17aaf8627384098de240d2c2e79c1ed9b0d39165
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190455"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427095"
 ---
 # <a name="what-are-the-mixed-reality-support-and-help-options"></a>Karışık gerçeklik desteği ve yardım seçenekleri nelerdir?
 
@@ -107,7 +107,7 @@ Stack Overflow için yeni bir soru gönderirseniz, soruyu oluştururken lütfen 
 | Portekiz |    + 351 800600087 |    Mon-Cum, 09:00:00 |
 | ABD |  866-425-4709 |  Mon-Cum, 00-6PM, PST |
 | Kanada |  877-345-2661 |  Mon to Cum, 06:00 -18:00, PST |
-| Çin |   400-805-6783 |  Mon to Cum, 09:00-18:00 |
+| Çin |   400-805-6783 |  Mon-Cum, 09:00-18:00 |
 | Japonya |   0120-03-5241 |  Mon to Cum, 09:00 ile 17:30 |
 | Avustralya |   1800-217-709 |  Mon to Cum, 08:00 -20:00 |
 | Singapur |   1800 622-1816 | Mon to Cum, 08:30 - 17:30 |
@@ -120,11 +120,11 @@ Stack Overflow için yeni bir soru gönderirseniz, soruyu oluştururken lütfen 
 
 ### <a name="open-an-azure-portal-technical-support-ticket"></a>Bir teknik Azure portal bileti açın
 
-Azure Spatial Anchors, Azure Object Anchors veya Azure portal için Azure portal teknik destek bileti Azure Remote Rendering:
+Azure Spatial Anchors, Azure Object Anchors veya Azure portal için Azure Remote Rendering:
 
 1. Düğme [Azure portal](https://azure.microsoft.com/account/) üst menü çubuğundan yardım simgesini ve ardından Yardım + destek **düğmesini** seçin.
 
-   ![Azure portal yardım ve destek.](../hololens/images/azure-help-support.png)
+   ![Azure portal ve destek.](../hololens/images/azure-help-support.png)
 
 2. Yardım + destek sayfası açıkken + Yeni destek **isteği'ne tıklayın.**
 
@@ -139,13 +139,13 @@ Azure Spatial Anchors, Azure Object Anchors veya Azure portal için Azure portal
 
     1. Sorun hakkında daha fazla bilgi için sayfanın altındaki **Sonraki:** Çözümler'e tıklayın.
 
-    2. Size ulaşmanın tercih ettiğiniz yolunun yanı sıra formu mümkün olduğunca kesin ve ayrıntılı bir şekilde doldurun.
+    2. Formu mümkün olduğunca hassas ve ayrıntılı bir şekilde doldurun ve size ulaşmak için tercih ettiğiniz yolu kullanın.
 
     3. Önceki bölümlerde dolduran tüm bilgileri gözden geçirin ve şimdi destek isteğini gönderin.
 
 ### <a name="provide-documentation-content-feedback"></a>Belge içeriği geri bildirimi sağlama
 
-Her içerik makalenin alt kısmında, herhangi bir karma gerçeklik belge deposundaki GitHub geri bildirim sağlamak için bir sorun açma ve geri bildirim sağlama fırsatı vardır. 
+Her içerik makalenin en altında, karma gerçeklik belge depolarında GitHub bir sorun açma ve içerik hakkında geri bildirim sağlama fırsatı vardır. 
 
 ### <a name="provide-product-feedback"></a>Ürün geri bildirimi sağlama
 
@@ -156,13 +156,13 @@ Geri bildirim sağlamak, Microsoft karma gerçeklik hizmetleriyle ilgili bir fik
 
 - [HoloLens 2 Ürün Geri Bildirimi](/hololens/hololens-feedback)
 - [Microsoft Mesh Uygulaması Ürün Geri Bildirimi](/hololens/hololens-feedback)
-- [Azure Remote Rendering Geri Bildirim](https://feedback.azure.com/forums/928696-azure-remote-rendering)
+- [Azure Remote Rendering Geri Bildirimi](https://feedback.azure.com/forums/928696-azure-remote-rendering)
 - [Azure Spatial Anchors Geri Bildirimi](https://feedback.azure.com/forums/919252-azure-spatial-anchors)
 
 ### <a name="faqs--troubleshooting"></a>SSS & Giderme
 
 - HoloLens 2 için sorun [HoloLens sayfasına](../hololens/hololens-troubleshooting.md) bakın
-- Windows Mixed Reality SSS [sayfasına](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) bakın
+- Windows Mixed Reality [SSS sayfasına](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) bakın
 - Azure Remote Rendering [SSS sayfasına](/azure/remote-rendering/resources/troubleshoot) bakın
 - Azure Spatial Anchors SSS [sayfasına](/azure/spatial-anchors/spatial-anchor-faq) bakın
 - Azure Object Anchors [SSS sayfasına](/azure/object-anchors/faq) bakın

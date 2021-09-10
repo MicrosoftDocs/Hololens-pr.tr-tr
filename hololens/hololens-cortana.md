@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 2fe7727fb05f983f56f329a6e7f7c25a627a914a1956fc65a9fc047653aae977
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: f6e3dd8f7dc90cea158d000251973ec75dc76a90
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661094"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427748"
 ---
 # <a name="use-your-voice-to-operate-hololens"></a>HoloLens çalıştırmak için sesinizi kullanın
 
@@ -109,14 +109,14 @@ Cortana, HoloLens her türlü şeyi yapmanıza yardımcı olabilir, ancak hangi 
 
 ![Hey Cortana!](images/cortana-on-hololens.png)
 
-Burada bazı şeyler söylemeyi denemelisiniz (önce "Hey Cortana" de).
+Burada bazı şeyler söylemeyi deneme (önce "Hey Cortana" de).
 
 **Merhaba, Cortana...**
 
 - What can I say? (Ne söyleyebilirim?)
 - Uygulama <*adını>.*
 - Saat kaç?
-- En son NBA puanlarını göster.
+- Bana en son NBA puanlarını göster.
 - Bana bir fıkra anlat.
 
 *18362.x* veya önceki bir sürümü kullanıyorsanız şu komutları da kullanabilirsiniz:
@@ -132,14 +132,14 @@ Burada bazı şeyler söylemeyi denemelisiniz (önce "Hey Cortana" de).
 - Uygulama <*adını* buraya> (uygulamanın taşınmak istediğiniz noktaya bakabilirsiniz).
 - Başlat'a gidin.
 - Bir resim çek.
-- Kaydı başlatma. (Video kaydetmeye başlar.)
+- Kaydı başlat. (Video kaydetmeye başlar.)
 - Kaydı durdurun. (Video kaydetmeyi durdurur.)
 - Ne kadar pil kaldı?
 
-Cortana bilgisayarınızdan veya telefondan Windows'den (anımsatıcılar ve bildirimler gibi) kullandığınız bazı Microsoft HoloLens özellikleri Microsoft HoloLens'da desteklenmiyor ve Cortana deneyimi bir bölgeden diğerine farklılık gösterebilir.
+bilgisayarınızda Cortana Windows'den (anımsatıcılar ve bildirimler gibi) kullandığınız bazı Microsoft HoloLens özellikleri Microsoft HoloLens'de desteklenmiyor ve Cortana deneyimi bir bölgeden diğerine farklılık gösterebilir.
 
 ### <a name="turn-cortana-off"></a>Cortana kapat
 
 Cortana, konuşmayı etkinleştiren HoloLens ilk kez kullanıyor olur. Bu ayarın ayarlarından Cortana onu kapatabilirsiniz. Yeni **Tüm uygulamalar'yi** seçin ve **Cortana**  >  **Ayarlar.** Daha sonra Cortana, fikir, anımsatıcılar, uyarılar ve daha fazlasını verebilirsiniz.
 
-Cortana "Hey Cortana" yanıt vermiyorsa Başlat'ta konuşmanın etkinleştirildiğinden emin olun ve Cortana ayarlarına gidin ve etkin olduğundan emin olun.
+Cortana "Hey Cortana" yanıt vermiyorsa Başlat'ta konuşmanın etkinleştirildiğinden emin olun ve Cortana'nin ayarlarına gidin ve etkin olduğundan emin olun.

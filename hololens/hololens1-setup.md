@@ -13,11 +13,11 @@ manager: jarrettr
 appliesto:
 - Hololens (1st gen)
 ms.openlocfilehash: 5918e3dcb7f2504ae6e85cb584aaf21bc87217bc
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189265"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427247"
 ---
 # <a name="get-your-hololens-1st-gen-ready-to-use"></a>Yeni HoloLens (1. nesil) kullanıma hazır hale
 
@@ -29,7 +29,7 @@ Cihazlarınızı ücretlendirmek HoloLens, dahil edilen Micro USB kablosunu kull
 
 ![Mikro USB kablosunun cihaza nasıl ek HoloLens.](./images/hololens-charging.png)
 
-Pil HoloLens, pil göstergesi pil düzeyini artımlarla gösterir. Beş ışığın yalnızca biri açık olduğunda pil düzeyi yüzde 20'nin altında olur. Pil düzeyi kritik düzeyde düşükse ve cihazı açmayı denersiniz, bir ışık kısa bir süre yanıp söner ve sonra gider.
+Pil HoloLens, pil göstergesi pil düzeyini artışlarla gösterir. Beş ışığın yalnızca biri açık olduğunda pil düzeyi yüzde 20'nin altında olur. Pil düzeyi kritik düzeyde düşükse ve cihazı açmayı denersiniz, bir ışık kısa bir süre yanıp söner ve sonra gider.
 
 > [!TIP]
 > Geçerli pil düzeyinizi tahmin etmek için "Hey Cortana, ne kadar pil kaldı?" gibi bir tahminde bulunuyoruz.
@@ -45,10 +45,10 @@ Cihazla birlikte gelen güç kaynağı ve USB kablosu, cihazınızı (1. nesil) 
 | &nbsp; | &nbsp; |
 |:--- |:--- |
 |1. Baş bandı yaklaşık 20-30 dereceye kadar döndürün.|![Birinci adım, baş bandı döndürün.](./images/FitGuideStep1.png)|
-|2. Baş bandı geri itin. Zaman içinde bant bozayana kadar bandı geri çekin veya arka grubun arkasındaki bandı yönlendirin.|![İkinci adım, baş bandı geri itin.](./images/FitGuideStep2.png)|
-|3. Baş bandın tüm genişletmelerini yapmak için ayarlama tekerleğini döndür. |![Üçüncü adım, baş bandı genişletmek için ayarlama tekerleğini kullanın.](./images/FitGuideStep3.png)|
+|2. Baş bandı geri itin. Zaman içinde bant bozayana kadar geri çekmeden ya da bandın arkasındaki bandı yönlendirin.|![İkinci adım, baş bandı geri itin.](./images/FitGuideStep2.png)|
+|3. Baş bandın tamamına kadar genişletmek için ayarlama tekerleğini döndür. |![Üçüncü adım, baş bandı genişletmek için ayarlama tekerleğini kullanın.](./images/FitGuideStep3.png)|
 |4. Cihazı cihaz koluyla tutun ve kafanıza yer açın. Baş bandın en üst kısmında olduğundan emin olun ve ardından ayarlama tekerleğini sıkılaştırin.|![Dördüncü adım, cihazı tak ve baş bandı ayarla.](./images/FitGuideStep4.png)|
-|5. Visor'ı geriye kaydırın ve cihazın uygun olup oalrakma durumunu kontrol edin. Baş bant, kuaförü en üstte, kıl çizginizin hemen altında, konuşmacılar size göre yukarıda yer alsa iyi olur. Lenslerin, gözlerinizi ortalamış olması gerekir.|![Beş. adım, mengeneyi geriye kaydırın ve uygun olup olamayını kontrol edin.](./images/FitGuideSetep5.png)|
+|5. Visor'ı geriye kaydırın ve cihazın uygun olup oalrakma durumunu kontrol edin. Baş bant, kuaförü en üstünde, kıl çizginizin hemen altında, konuşmacılar size göre yukarıda yer alsa iyi olur. Lenslerin, gözlerinizi ortalamış olması gerekir.|![Beş. adım, visor'ı geriye kaydırın ve uygun olup olamayışlarını kontrol edin.](./images/FitGuideSetep5.png)|
 
 ## <a name="turn-on-your-hololens"></a>HoloLens
 
@@ -71,7 +71,7 @@ HoloLens, 3 dakika beklemede kaldıktan sonra otomatik olarak bekleme moduna ge�
 
 ### <a name="shut-down-hololens"></a>HoloLens
 
-Bu düğmeyi kapatmak HoloLens için güç düğmesini dört saniye boyunca basılı tutun. Pil göstergeleri tek tek kapanıyor ve cihaz kapatıyor.
+Güç düğmesini kapatmak (kapatmak HoloLens için güç düğmesini dört saniye boyunca basılı tutun. Pil göstergeleri tek tek kapanıyor ve cihaz kapatıyor.
 
 HoloLens, pil düzeyi takılı olsa bile yüzde bir düzeyine düştüğünde otomatik olarak kapanır. Pili yüzde üçe geri verdikten sonra yeniden HoloLens açabileceksiniz.
 
@@ -87,7 +87,7 @@ Parlaklığı ve ses düğmeleri, cihazın sağ tarafta, parlaklığı ise &mdas
 
 Gösterge ışığının sizin için ne anlama HoloLens? İşte biraz yardım.
 
-|Işıklar bunu yapmak için |Başka bir anlama gelir |
+|Işıklar bunu ne zaman yapar? |Başka bir anlama gelir |
 |---|---|
 |Dışarı doğru ortayı kaydırın. |HoloLens başlıyor. |
 |Lit (hepsi veya bazıları) olarak kalır. |HoloLens hazır ve kullanıma hazırdır. Pil ömrü yüzde 20 artışlarla gösterilir. |
@@ -105,7 +105,7 @@ Güvenlik HoloLens ve tehlikeleri yok etme olan güvenli bir alanda kullanın. N
 
 ### <a name="stay-comfortable"></a>Rahat kalın
 
-İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamadıysanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareketsizlik, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
+İlk birkaç oturumlarınızı kısa HoloLens ve ara verdiklerinizi unutmayın. Sorun yaşamazsanız, daha iyi hissedene kadar durdurun ve istirahat edin. Buna geçici olarak sıkıntı, hareketsizlik, baş dönmesi, kafa karışıklığı, kasma, kasma, göz zorluğu veya kuru göz olabilir.
 
 > [!div class="nextstepaction"]
 > [Yapılandırmanızı başlatma ve HoloLens (1. nesil)](hololens1-start.md)

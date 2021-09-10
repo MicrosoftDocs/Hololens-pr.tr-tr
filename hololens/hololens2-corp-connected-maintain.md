@@ -1,7 +1,7 @@
 ---
-title: dağıtım kılavuzu – Dynamics 365 kılavuzlarıyla kurumsal bağlı HoloLens 2-koru
-description: Dynamics 365 kılavuzlarıyla kurumsal bağlantılı ağ üzerinden HoloLens 2 cihazı nasıl koruyacağınızı öğrenin.
-keywords: HoloLens, yönetim, kurumsal bağlı, Dynamics 365 kılavuzlar, AAD, Azure AD, MDM, mobil cihaz yönetimi
+title: Dağıtım Kılavuzu – Dynamics 365 HoloLens 2 ile kurumsal bağlantılı bağlantı - Bakım
+description: Dynamics 365 kılavuzları HoloLens bağlı bir ağ üzerinden 2 cihazı nasıl koruyabilirsiniz?
+keywords: HoloLens, yönetim, kurumsal bağlantılı, Dynamics 365 Kılavuzları, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -14,68 +14,68 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2649e370e98747562591c031b8ae262674c831e071f4ef228557dda66d2dc768
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 0176e816f167499574607bc16c8fbd6bde757daf
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660276"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428102"
 ---
-# <a name="maintain---corporate-connected-guide"></a>Bakım-kurumsal bağlantılı kılavuz
+# <a name="maintain---corporate-connected-guide"></a>Bakım - Kurumsal Bağlantılı Kılavuz
 
 ## <a name="update-hololens"></a>Güncelleştirme HoloLens
 
-Microsoft, bt yöneticilerine, cihaz gruplarına güncelleştirme dağıtma ve güncelleştirme yüklemeye yönelik bakım pencerelerini tanımlama gibi ek Windows Update merkezli yönetim özellikleri sağlamak için Windows Update tasarlamıştır.
+Microsoft, Windows güncelleştirmeleri cihaz gruplarına dağıtma ve güncelleştirmeleri yüklemek için bakım pencerelerini tanımlama gibi ek Windows Güncelleştirme odaklı yönetim özellikleri sağlamak için İş için Güncelleştirme'yi tasarladı.
 
-Güncelleştirmeleri yönetmenin popüler bir yöntemi, 30 günlük bir özellik ertelemeyi yapmak. Bu, yöneticilerin yeni özellikleri güncelleştirmesine ve önizlemesinin yanı sıra yeni değişiklikler hakkında bilgi edinme ve destek masanıza bilgi almasına olanak tanır.
+Güncelleştirmeleri yönetmenin popüler yöntemlerinden biri, 30 günlük bir özellik ertelemesi yapmaktır. Bu, Yöneticilerin yeni özellikleri güncelleştirmesine ve önizlemesine olanak sağlar, ilk el ile bilgi edinerek ve destek masanıza yeni değişiklikler hakkında bilgi verir.
 
-zamanlanan günler ve zamanlanan süre dahil [HoloLens güncelleştirmelerini yönetmeyi](/hololens/hololens-updates)ve cihazdaki etkin saatleri ayarlamayı öğrenin, bu nedenle çalışma saatlerinin dışında güncelleştirilir.
+Cihazda [zamanlanan HoloLens,](/hololens/hololens-updates)zamanlanmış saat ve etkin saatleri ayarlama dahil olmak üzere cihaz güncelleştirmelerini yönetmeyi öğrenin; böylece cihaz çalışma saatleri dışında güncelleştirmesi yapılacaktır.
 
-## <a name="how-to-update-dynamics-365-guides-and-other-store-apps"></a>Dynamics 365 kılavuzlarını (ve diğer mağaza uygulamalarını) güncelleştirme
+## <a name="how-to-update-dynamics-365-guides-and-other-store-apps"></a>Dynamics 365 Kılavuzlarını (ve diğer mağaza uygulamalarını) güncelleştirme
 
-Dynamics 365 kılavuzlar bir In-Box uygulamasıdır ve Microsoft Store uygulama aracılığıyla güncelleştirilemeyebilir. Microsoft Store aracılığıyla indirilen tüm uygulamalar için, Microsoft Store uygulamanın kendisi tarafından el ile [güncelleştirilebilecek](/hololens/holographic-store-apps#update-apps) .
+Dynamics 365 Kılavuzları, In-Box bir uygulamadır ve Microsoft Store güncelleştirilir. Uygulama aracılığıyla indirilen tüm uygulamalar Microsoft Store uygulamanın [kendisi aracılığıyla Microsoft Store](/hololens/holographic-store-apps#update-apps) güncelleştirilir.
 
 ## <a name="how-to-update-lob-apps"></a>LOB uygulamalarını güncelleştirme
 
-LOB uygulamaları, Intune 'a eklendikçe aynı şekilde güncelleştirilemeyebilir. Uygulamalar, daha yüksek bir sürüm numarasına sahip yeni uygulamayı var olan uygulama yapılandırmasına yükleyerek Intune 'da güncelleştirilebilen olabilir. Cihaz Intune 'a eşitlendikten sonra, daha yeni bir uygulama sürümü olduğu ve yeni uygulamanın indirileceği ve eski uygulamayı değiştirecek olduğunu gözlemleyeceksiniz.
+LOB uygulamaları, Intune'a eklendikleri şekilde güncelleştirilebilir. Yeni uygulama, mevcut Uygulama yapılandırmasına daha yüksek bir sürüm numarasıyla yükleniyor ve Intune'da güncelleştirilebilir. Cihaz Intune'a eşitlenirken, daha yeni bir uygulama sürümü olduğunu ve daha yeni bir uygulamanın indirilir ve eski uygulamanın yerini alır.
 
-1. Daha yeni uygulamayı karşıya yüklemek için, [mem portalı](https://endpoint.microsoft.com/#home)  ->  **uygulamalar** -uygulama özelliklerinden > tüm **uygulamalara** gidin  ->    ->  **.**
-2. Uygulama bilgileri ' nin yanındaki Düzenle ' yi seçin **.**
-3. &quot;Güncelleştirilecek Dosya Seç değeri için &quot; dosyanızı seçin.
-4. Buradan, dosya Gezgini 'ni açmak ve LOB uygulamasının yeni sürümünü yüklemek için bağlam menüsünü kullanın. Gerektiğinde bağımlılıkları dahil edin.
+1. Yeni uygulamayı karşıya yüklemek için [MEM portalı](https://endpoint.microsoft.com/#home)Uygulamalar -> Tüm uygulamalar  ->     ->  *TheNameOfApp Properties'e*  ->  **gidin.**
+2. Uygulama bilgileri'nin yanındaki Düzenle'yi **seçin.**
+3. Güncelleştirilen dosya &quot; seç değerinin &quot; değeri olarak dosyanızı seçin.
+4. Buradan bağlam menüsünü kullanarak dosya gezgininizi açın ve LOB uygulamasının yeni sürümünü karşıya yükleyin. Gerektiğinde bağımlılıkları dahil etmek için emin olmak.
 
-Daha fazla bilgi [için bkz. HoloLens Için Intune uygulama dağıtımı](/hololens/app-deploy-intune)
+Daha fazla bilgi: [HoloLens için Intune Uygulama Dağıtımı](/hololens/app-deploy-intune)
 
-## <a name="development-plan"></a>Geliştirme planı
+## <a name="development-plan"></a>Geliştirme Planı
 
-Cihazınız başarıyla kaydedildikten sonra cihazlarınıza daha fazla LOB uygulaması dağıtmaya hazırsınız demektir. Bu kılavuzun süresi boyunca örnek bir uygulama kullanıyoruz, ancak kuruluşunuzun ihtiyaçlarına göre derlenmiş özel uygulamalar kullanmak isteyeceksiniz.
+Cihazınız başarıyla kaydedildi. Artık cihazlarınıza daha fazla LOB uygulaması dağıtmaya hazır olursanız. Bu Kılavuz süresince bir örnek uygulama kullanıyoruz, ancak büyük olasılıkla, kuruluş ihtiyaçlarına göre özel uygulamalar kullanmak istemeniz daha olasıdır.
 
-Zaten bir LOB uygulamanız varsa, [UYGULAMANıZı MDM aracılığıyla dağıtmaya](/hololens/app-deploy-intune)hazırsınız demektir. farklı bir yöntemi tercih ediyorsanız, LOB uygulamanızı cihazlarınıza dağıtma hakkında daha fazla bilgi edinmek için [HoloLens 2 için uygulama dağıtımına genel bakış](/hololens/app-deploy-overview) konusunu gözden geçirin.
+Zaten bir LOB uygulamanız varsa, uygulamanızı [MDM aracılığıyla dağıtmaya hazır olursanız.](/hololens/app-deploy-intune) Farklı bir yöntem tercih ediyorsanız, LOB uygulamanızı cihazlarınıza dağıtmaya yönelik [daha fazla HoloLens için HoloLens 2'ye](/hololens/app-deploy-overview) yönelik uygulama dağıtımına genel bakış'ı gözden geçirebilirsiniz.
 
-Kendi LOB uygulamanızı oluşturmanız veya hala oluşturma süreciyle karşılaşırsanız, karma gerçeklik geliştirme belgelerimizi inceleyerek [karma gerçeklik geliştirmesini](/windows/mixed-reality/discover/get-started-with-mr) kullanmaya [başlamak için temel](/windows/mixed-reality/design/design) kavramları inceleyin.
+Henüz kendi LOB uygulamanızı oluşturmadıysanız veya hala oluşturma aşamasındaysanız karma gerçeklik geliştirme belgelerimizi gözden geçirerek karma gerçeklik geliştirmeyle çalışmaya başlamak için tasarım ve [protokasyon](/windows/mixed-reality/design/design) yapmaya veya temel kavramları öğrenmeye [başlayabilirsiniz.](/windows/mixed-reality/discover/get-started-with-mr)
 
 ## <a name="support-plan"></a>Destek Planı
 
-Bir destek planı, uygun olan harika bir şeydir. birisi veya bir grup olmak üzere HoloLens cihazlarda kayıt işleminin giderilmesi ve ayrıca kuruluşunuzda HoloLens cihazının genel kullanımı yararlı olur. Kullanıcılarınızın sorunlarından daha hızlı çözümlenmesine izin vermek için, yükseltme işleminizin bu sırayla benzer bir şekilde işlenmesini öneririz:
+Destek planı, hazır olmak için harika bir şeydir. Bir kişinin veya grubun, HoloLens cihazlarda kayıt işlemiyle ilgili sorun giderme konusunda eğitilmiş olması ve HoloLens cihazın da genel olarak kullanımı yararlı olur. Kullanıcılarının sorunlarının daha hızlı çözüme sahip olmasına olanak vermek için, yükseltme işleminizin bu sırayla benzer şekilde ele uygulanmasını öneririz:
 
-1. Destek masanıza başvurun.
-2. HoloLens uzman ekibiniz
-3. [HoloLens Docs](/hololens/)  /  [HoloLens sorunlarını giderme belgeleri](/hololens/hololens-troubleshooting)
-4. [Desteğe başvurun](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
+1. Destek masanız.
+2. HoloLens Uzman takımınız
+3. [HoloLens Docs](/hololens/)  /  [HoloLens Sorun Giderme Belgeleri](/hololens/hololens-troubleshooting)
+4. [De destekle iletişime geçin](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
 
 ## <a name="device-management"></a>Aygıt Yönetimi
 
-Bu kılavuz, mobil cihaz yönetimi (MDM) ayarlama ve bu uygulamayı, bazı cihaz yapılandırmasını ayarlamak ve Wi-Fi sertifikaları ve proxy 'nin koşullarına erişim sağlamak için ayarları uygulamak üzere kullanır. Ancak MDM, CSP ve Ilkeler aracılığıyla cihaz kısıtlamalarını uygulamak için de kullanılabilir.
+Bu kılavuzda Mobile Cihaz Yönetimi (MDM) ayarlama hakkında bilgi edinildi ve bu kılavuzda bazı cihaz yapılandırmaları ayarlamak ve sertifikalar ve ara sunucu açısından erişime izin vermek Wi-Fi ayarları uygulamak için kullanıldı. Ancak MDM, CSP'ler ve İlkeler aracılığıyla cihaz kısıtlamaları uygulamak için de kullanılabilir.
 
-birçok durumda, cihazların Bluetooth, VPN, USB gibi bağlantı kısıtlamalarına sahip olması ve hatta kameraya veya mikrofona erişimi kapatmaları olabilir. Bu ilgi alanlarından herhangi biri sizi ilgilendiren [ortak cihaz kısıtlamaları sayfasını](/hololens/hololens-common-device-restrictions)okumanızı öneririz.
+Çoğu durumda cihazların bağlantı kısıtlamaları olabilir; örneğin Bluetooth, VPN, USB, hatta kameraya veya mikrofona erişimi kapatma. Bu sorunlardan herhangi biri sizi ilgilendirmeye devam ediyorsa, yaygın cihaz kısıtlamaları [sayfamızı okumanız teşvik edilecektir.](/hololens/hololens-common-device-restrictions)
 
-Kullanabileceğiniz başka karmaşık cihaz kısıtlamaları vardır. Örneğin:
+Kullanabileceğiniz başka karmaşık cihaz kısıtlamaları da vardır. Örneğin:
 
-- [settingspagevisibility](/hololens/settings-uri-list)' ı kullanarak Ayarlar uygulamasında görüntülenebilen sayfaları sınırlandırma, kullanıcıların, Wi-Fi bağlantılarını değiştirme gibi yalnızca ayarlamalarına ihtiyacı olan ayarlara erişmesini sağlar.
-- Bir cihazdaki kullanıcılara sunulan kullanıcı arabirimini sınırlamak için [bilgi noktası modunu](/hololens/hololens-kiosk) kullanın. Kiosks 'i tek bir uygulama veya bir özel başlangıç sayfası ile birden çok uygulama gösterecek şekilde ayarlayabilirsiniz. Kiosks, farklı kullanıcılara farklı deneyimler de sunabilir.
-- belirli uygulamaların veya işlemlerin tamamen başlatılmasını sağlamak için [uygulama denetimi (WDAC) Windows](/hololens/windows-defender-application-control-wdac) .
+- Ayarlar uygulamasında görüntülenecek sayfaları, [AyarlarSayfaVisibility](/hololens/settings-uri-list)kullanarak sınırlandırarak, kullanıcıların yalnızca kendi bağlantılarını değiştirme gibi ayarlamaları gereken ayarlara erişmesine Wi-Fi sağlar.
+- Bir [cihazda kullanıcılara](/hololens/hololens-kiosk) sunulan kullanıcı arabirimini sınırlamak için Bilgi Noktası modunu kullanın. Bilgi Noktası'nın tek bir uygulamayı veya özel başlangıç sayfası olan birden çok uygulamayı gösterecek şekilde ayarlaması gerekir. Bilgi noktası, farklı kullanıcılara farklı deneyimler de sunabilirsiniz.
+- [Windows veya işlemlerin tamamen başlatılmasını](/hololens/windows-defender-application-control-wdac) tutmak için Uygulama Denetimi'ne (WDAC) tıklayın.
 
-Cihaz yönetimi veya cihaz kısıtlamalarının ek yöntemleri hakkında daha fazla bilgi edinmek istiyorsanız, sonraki adıma geçin ve [cihaz yönetimine genel bakış](/hololens/hololens-csp-policy-overview)konusunu okuyun.
+Ek cihaz yönetimi veya cihaz kısıtlama yöntemleri hakkında bilgi edinmek için bir sonraki adıma geçin ve Genel Bakış [makalemizi Cihaz Yönetimi okuyun.](/hololens/hololens-csp-policy-overview)
 
 
 

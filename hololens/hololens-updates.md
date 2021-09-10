@@ -20,11 +20,11 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 ms.openlocfilehash: 3afe3d2aecd64c2b4724f4805571cb3c46112875
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190047"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427072"
 ---
 # <a name="manage-hololens-updates"></a>HoloLens güncelleştirmelerini yönetme
 
@@ -137,7 +137,7 @@ Erteleme ilkesi, bir güncelleştirmenin kullanılabilir olduğu tarih ve günce
 
 #### <a name="pause-updates-via-device"></a>Cihaz Aracılığıyla Güncelleştirmeleri Duraklatma
 
-Bir kullanıcının MDM'ye erişimi yoksa, [Holographic, sürüm 2004](hololens-release-notes.md#windows-holographic-version-2004) veya sonraki bir sürümde bir HoloLens 2 cihazında güncelleştirmeleri Windows tek tek 35 gün boyunca el ile duraklatabilir. Kullanıcılar Bu ayara ulaşmak için **Ayarlar > Update & Security >** Gelişmiş seçenekler'e giderek  Güncelleştirmeleri duraklatma'ya inin ve güncelleştirmeleri duraklatacakları tarihi seçin. Bir kullanıcı duraklatma sınırına ulaştıktan sonra cihazın yeniden duraklatılamadan önce yeni güncelleştirmeler alsa gerekir. 
+Bir kullanıcının MDM'ye erişimi yoksa, [Holographic, sürüm 2004](hololens-release-notes.md#windows-holographic-version-2004) veya sonraki bir sürümde bir HoloLens 2 cihazında güncelleştirmeleri Windows tek tek 35 gün boyunca el ile duraklatabilir. Kullanıcılar Bu ayara ulaşmak için Ayarlar > Update **& Security >** Gelişmiş seçenekler'e giderek  Güncelleştirmeleri duraklatma'ya inin ve güncelleştirmeleri duraklatacakları tarihi seçin. Bir kullanıcı duraklatma sınırına ulaştıktan sonra cihazın yeniden duraklatılamadan önce yeni güncelleştirmeler ala ihtiyacı vardır. 
 
 [Holographic Windows sürüm 20H2'den](hololens-release-notes.md#windows-holographic-version-20h2)başlayarak, bu duraklatma güncelleştirmeleri işlevi HoloLens 2 cihaz için yönetilebilir. 
 - [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess).
@@ -150,7 +150,7 @@ Güncelleştirmeleri yönetmek için aşağıdaki Intune güncelleştirme yönet
 
 - **Oluşturma** ve **Atama:** Bu işlevler, Windows 10 halkaları listesine bir güncelleştirme halkası ekler. Daha fazla bilgi için [bkz. Güncelleştirme halkaları oluşturma ve atama.](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings)
 
-- **Duraklatma:** Bir özellik veya kalite güncelleştirmesi dağıtırken bir sorunla karşılaşırsanız güncelleştirmeyi 35 gün (belirtilen tarihten başlayarak) duraklatabilirsiniz. Bu duraklatma, siz sorunu çözene veya giderene kadar diğer cihazların güncelleştirmeyi yüklemesini önler. Bir özellik güncelleştirmesini duraklatmanız, cihazların güvenli kalmasını sağlamak için kalite güncelleştirmeleri yine de sunulur. Bir güncelleştirme türü duraklatılırsa, bu halkaya ilişkin Genel Bakış bölmesi, güncelleştirme türünün sürdürülmeden önce kaç gün kaldığı gösterir. Belirtilen süre bittikten sonra duraklatma otomatik olarak sona erer ve güncelleştirme işlemi devam eder.
+- **Duraklatma:** Bir özellik veya kalite güncelleştirmesi dağıtırken bir sorunla karşılaşırsanız güncelleştirmeyi 35 gün (belirtilen tarihten başlayarak) duraklatabilirsiniz. Bu duraklatma, siz sorunu çözene veya giderene kadar diğer cihazların güncelleştirmeyi yüklemesini önler. Bir özellik güncelleştirmesini duraklatmanız, cihazların güvenli kalmasını sağlamak için kalite güncelleştirmeleri yine de sunulur. Bir güncelleştirme türü duraklatılırsa, bu halkaya ilişkin Genel Bakış bölmesi, bu güncelleştirme türünün sürdürülmeden önce kaç gün kaldığı görüntüler. Belirtilen süre bittikten sonra duraklatma otomatik olarak sona erer ve güncelleştirme işlemi devam eder.
 
   Güncelleştirme halkası duraklatılmışken aşağıdaki seçeneklerden birini seçebilirsiniz:
 
@@ -181,9 +181,9 @@ Aşağıdaki ayarlar yönetim yüzeyinin bir parçası olarak etkinleştirilir [
 Bu önizleme teklifiyle ilgili birkaç uyarı:
 
 - HoloLens desteği bu önizlemede yalnızca işletim sistemi güncelleştirmeleri ile sınırlıdır.
-- Windows Holographic for Business yalnızca bir Microsoft Bağlı Önbellek uç noktasına http [indirme modlarını ve indirmelerini destekler;](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache) Eşler arası indirme modları ve grup atamaları şu anda HoloLens cihazlar için desteklenmiyor.
-- HoloLens Sunucu Güncelleştirme Hizmetleri uç noktaları için dağıtım veya Windows iyileştirmeyi desteklemez.
-- Sorun giderme işlemi için Bağlı Önbellek sunucusunda tanılama gerekir veya HoloLens'da HoloLens'de Ayarlar   >  **Update & Security**  >   **Troubleshooting** Windows Update aracılığıyla bir  >   **izleme toplanması gerekir.**
+- Windows Holographic for Business http indirme modlarını ve bir Microsoft Bağlı Önbellek [uç noktasını destekler;](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache) Eşler arası indirme modları ve grup atamaları şu anda HoloLens cihazlar için desteklenmiyor.
+- HoloLens, Sunucu Güncelleştirme Hizmetleri uç noktaları için Windows veya teslim iyileştirmesini desteklemez.
+- Sorun giderme işlemi, Bağlı Önbellek sunucusunda tanılama gerektirir veya HoloLens'de HoloLens'de Ayarlar   >  **Update & Security**  >   **Troubleshooting** Windows Update aracılığıyla  >   **bir izleme toplamayı gerektirir.**
 
 ## <a name="manually-check-for-updates"></a>Güncelleştirmeleri el ile denetleme
 
@@ -193,20 +193,20 @@ Güncelleştirmeleri el ile kontrol etmek için güncelleştirmeleri **Ayarlar**
 
 ## <a name="manually-roll-back-an-update"></a>Bir güncelleştirmeyi el ile geri alma
 
-Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne dönmek HoloLens. Bunu yapma işlemi, 2. nesil veya HoloLens (1. nesil) HoloLens bağlıdır.
+Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne dönmek HoloLens olabilir. Bunu yapma işlemi, 2. nesil veya HoloLens (1. nesil) HoloLens bağlıdır.
 
 ### <a name="revert-to-a-previous-version-hololens-2"></a>Önceki bir sürüme geri dönme (HoloLens 2)
 
-Güncelleştirmelerinizi önceki sürüme sıfırlamak için Gelişmiş Kurtarma Yardımcı'yı [](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) kullanarak HoloLens 2'nin önceki bir sürümüne geri HoloLens geri dönabilirsiniz.
+Güncelleştirmelerinizi önceki sürüme sıfırlamak için Gelişmiş Kurtarma Yardımcısı'HoloLens [](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) 2'nin önceki bir sürümüne geri HoloLens geri dönabilirsiniz.
 
 > [!NOTE]
 > Önceki bir sürüme geri dönmek kişisel dosyalarınızı ve ayarlarınızı siler.
 
 HoloLens 2'nin önceki bir sürümüne dönmek için şu adımları izleyin:
 
-1. Bilgisayarınıza takılı telefon veya Windows emin olun.
+1. Bilgisayarınıza takılı herhangi bir telefon veya Windows cihaza sahip olmadığınızdan emin olun.
 1. Bilgisayarınızda, Gelişmiş Kurtarma [Yardımcı'sı'Microsoft Store.](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab)
-1. 2 [sürümü için en HoloLens sürümü indirin.](https://aka.ms/hololens2download)
+1. [2 sürümüne HoloLens en son sürümü indirin.](https://aka.ms/hololens2download)
 1. Bu indirmeler tamam olduktan sonra Dosya Gezgini İndirmeleri'ni açın, az önce indirdiğiniz sıkıştırılmış (.zip) klasörüne sağ tıklayın ve ardından Tüm Ayıkla'yı seçerek  >     >   dosyayı genişletin.
 1. Bir USB-A-USB-C kablosu kullanarak HoloLens bilgisayarınıza bağlayın. Bağlantınızı bağlamak için başka kablolar HoloLens bile bu tür kablolar en iyi şekilde çalışır.
 1. Gelişmiş Kurtarma Yardımcı, cihazınızı otomatik olarak HoloLens algılar. Yeni **kutucuğu Microsoft HoloLens** seçin.
@@ -226,20 +226,20 @@ Güncelleştirmelerinizi önceki sürüme sıfırlamak için Windows Cihaz Kurta
 1. Bilgisayarınıza takılı telefon veya Windows emin olun.
 1. Bilgisayarınızda, Windows [Kurtarma Aracı'nı (WDRT) indirin.](https://support.microsoft.com/help/12379)
 1. Yıldönümü [HoloLens kurtarma paketini indirin.](https://aka.ms/hololensrecovery)
-1. İndirmeler tamam olduktan sonra Dosya Gezgini İndirmeler'i açın, az önce indirdiğiniz sıkıştırılmış (.zip) klasörüne sağ tıklayın ve ardından Tüm Ayıkla'yı seçerek   >     >   dosyayı genişletin.
+1. İndirmeler tamam olduktan sonra Dosya gezgini İndir'i açın, az önce indirdiğiniz sıkıştırılmış (.zip) klasörüne sağ tıklayın ve ardından Tüm Ayıkla'yı seçerek   >     >   dosyayı genişletin.
 1. HoloLens cihazınızla birlikte sağlanan mikro USB kablosunu kullanarak HoloLens bilgisayarınıza bağlayın. Cihazınızı bağlamak için başka kablolar kullanıyorsanız bile HoloLens bu en iyi şekilde çalışır.
-1. WDRT, cihazlarınızı otomatik HoloLens algılar. Yeni **kutucuğu Microsoft HoloLens** seçin.
+1. WDRT, cihazınızı otomatik olarak HoloLens algılar. Yeni **kutucuğu Microsoft HoloLens** seçin.
 1. Sonraki ekranda El ile paket **seçimi'ne tıklayın** ve ardından daha önce genişlettiniz klasörü açın.
 1. Yükleme (.ffu) dosyasını seçin.
 1. Yazılım **yükle'yi** seçin ve yönergeleri izleyin.
 
 **WDRT cihazınızı algılamazsa**
 
-WDRT, cihazınızı algılamazsa HoloLens yeniden başlatmayı deneyin. Bu işe uymazsa Cihazım algılanmadı'yi  **seçin,** Microsoft HoloLens'yi seçin ve yönergeleri izleyin.
+WDRT, cihazınızı algılamazsa HoloLens yeniden başlatmayı deneyin. Bu işe uymazsa Cihazım algılanmadı'yi  **seçin,** Microsoft HoloLens'ı seçin ve yönergeleri izleyin.
 
 ## <a name="related-articles"></a>İlgili makaleler:
 
-- [HoloLens 2 sürüm notu](hololens-release-notes.md)
+- [HoloLens 2 sürüm notları](hololens-release-notes.md)
 - [İş Windows Güncelleştirme nedir?](/windows/deployment/update/waas-manage-updates-wufb)
 - [Cihaz güncelleştirmeleri için hizmet kanallarına Windows 10 atama](/windows/deployment/update/waas-servicing-channels-windows-10-updates)
 - [Intune’da Windows 10 yazılım güncelleştirmelerini yönetme](/mem/intune/protect/windows-update-for-business-configure)

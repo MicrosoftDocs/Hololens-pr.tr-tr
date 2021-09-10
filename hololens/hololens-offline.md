@@ -18,12 +18,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 63c82e5b1a953ee2f69bf4c22a8442c7bca07f073cc13f1e5e573fde0ccc1976
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: f2d9faafac2f84b727b1e10be83d4d1b53a707b4
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662947"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427771"
 ---
 # <a name="manage-connection-endpoints-for-hololens"></a>HoloLens için bağlantı uç noktalarını yönetme
 
@@ -117,34 +117,34 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 |                                                     | outlook.office365.com                                               |
 |                                                     | client-office365-tas.msedge.net                                     |
 |                                                     | https://www.office.com                                                      |
-|                                                     | onecollector. cloudapp. Aria                                          |
+|                                                     | onecollector.cloudapp.tane                                          |
 |                                                     | v10.events.data.microsoft.com/onecollector/1.0/                     |
 |                                                     | self.events.data.microsoft.com                                      |
 |                                                     | to-do.microsoft.com                                                 |
 | OneDrive                                            | g.live.com/1rewlive5skydrive/*                                      |
 |                                                     | msagfx.live.com                                                     |
 |                                                     | oneclient.sfx.ms                                                    |
-| Fotoğraflar uygulaması                                          | evoke-windowsservices-tas.msedge.net                                |
+| Fotoğraflar Uygulaması                                          | evoke-windowsservices-tas.msedge.net                                |
 | Ayarlar                                            | cy2.settings.data.microsoft.com.akadns.net                          |
 |                                                     | settings.data.microsoft.com                                         |
 |                                                     | settings-win.data.microsoft.com                                     |
 | Windows Defender                                    | wdcp.microsoft.com                                                  |
 |                                                     | definitionupdates.microsoft.com                                     |
 |                                                     | go.microsoft.com                                                    |
-|                                                     | * smartscreen.microsoft.com                                          |
+|                                                     | *smartscreen.microsoft.com                                          |
 |                                                     | smartscreen-sn3p.smartscreen.microsoft.com                          |
 |                                                     | unitedstates.smartscreen-prod.microsoft.com                         |
-| Windows Spot                                   | *. search.msn.com                                                    |
+| Windows Spot                                   | *.search.msn.com                                                    |
 |                                                     | arc.msn.com                                                         |
-|                                                     | g.msn.com *                                                          |
+|                                                     | g.msn.com*                                                          |
 |                                                     | query.prod.cms.rt.microsoft.com                                     |
 |                                                     | ris.api.iris.microsoft.com                                          |
-| Windows Update                                      | *. prod.do.dsp.mp.microsoft.com                                      |
+| Windows Update                                      | *.prod.do.dsp.mp.microsoft.com                                      |
 |                                                     | cs9.wac.phicdn.net                                                  |
 |                                                     | emdl.ws.microsoft.com                                               |
-|                                                     | *. dl.delivery.mp.microsoft.com                                      |
+|                                                     | *.dl.delivery.mp.microsoft.com                                      |
 |                                                     | *.windowsupdate.com                                                 |
-|                                                     | *. delivery.mp.microsoft.com                                         |
+|                                                     | *.delivery.mp.microsoft.com                                         |
 |                                                     | *.update.microsoft.com                                              |
 
 
@@ -152,18 +152,18 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 ## <a name="references"></a>Başvurular
 
 > [!NOTE]
-> D365 uzaktan yardım dağıtıyorsanız, [Office 365 url 'lerinde ve ıp adresi aralıklarında](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)SharePoint çevrimiçi ve OneDrive İş için listelenen uç noktaları etkinleştirmeniz gerekir.
+> D365 Remote Assist dağıtıyorsanız, SharePoint Online için listelenen uç noktaları etkinleştirmeniz ve OneDrive İş URL'Office 365 IP adresi aralıklarında [etkinleştirmeniz gerekir.](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)
 
-- [kuruluşunuzda Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+- [Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - [Windows 10 Enterprise sürüm 1903 için bağlantı uç noktalarını yönetme](/windows/privacy/manage-windows-1903-endpoints)
-- [Windows 10 işletim sistemi bileşenlerinden bağlantıları Microsoft hizmetleri için yönetin](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
-- [Windows 10 işletim sistemi bileşenlerinden gelen bağlantıları Microsoft Intune MDM sunucusu kullanarak Microsoft hizmetleri yönetme](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services-using-mdm)
+- [İşletim sistemi bileşenlerinden Windows 10 bileşenlerine bağlantıları Microsoft hizmetleri](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
+- [MDM Sunucusu Windows 10 işletim sistemi bileşenlerinden Microsoft hizmetleri Microsoft Intune bağlantıları yönetme](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services-using-mdm)
 - [Intune ağ yapılandırması gereksinimleri ve bant genişliği](/intune/fundamentals/network-bandwidth-use#network-communication-requirements)
-- [Microsoft Intune için ağ uç noktaları](/intune/fundamentals/intune-endpoints)
+- [Ağ uç noktaları Microsoft Intune](/intune/fundamentals/intune-endpoints)
 - [Office 365 URL’leri ve IP adres aralıkları](/office365/enterprise/urls-and-ip-address-ranges)
 - [Azure AD Connect Önkoşulları](/azure/active-directory/hybrid/how-to-connect-install-prerequisites)
 
 
 ## <a name="hololens-limitations"></a>HoloLens sınırlamaları
 
-HoloLens kurulduktan sonra, bunu Wi-Fi bağlantı olmadan kullanabilirsiniz, ancak HoloLens çevrimdışı kullandığınızda Internet bağlantıları kullanan uygulamalar sınırlı yeteneklere sahip olur.
+Yapılandırmanız HoloLens sonra, bunu bir Wi-Fi bağlantısı olmadan kullanabilirsiniz, ancak çevrimdışı olarak HoloLens İnternet bağlantıları kullanan uygulamalar sınırlı özelliklere sahip olacaktır.

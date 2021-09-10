@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f038cbf58b6dfaef0395a1ea5b406cce23e4e3fe0464c6bfc1162518f9caf3ff
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 9f3950de51e4bfa2a76431a2a070d87aa81ed443
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659774"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428818"
 ---
 # <a name="troubleshooting-implementation-and-managed-devices"></a>Uygulama ve yönetilen cihazlar sorunlarını giderme 
 
@@ -138,7 +138,7 @@ Wireshark filtreleri, ilgi alanı paketlerini filtrelemeye yardımcı olabilir.
 
 ## <a name="cant-sign-in-to-a-previously-setup-hololens-device"></a>Daha önce bir cihaz kurulumunda oturum HoloLens yok
 
-Cihazınız daha önce bir istemci için veya eski bir çalışan için başka biri için ayarlanmışsa ve cihazın kilidini açmak için parolanız yoksa, cihazı uzaktan silmek için Intune kullanabilirsiniz. [](/intune/remote-actions/devices-wipe) Ardından cihaz kendisini yeniden yanıp söner.  
+Cihazınız daha önce bir istemci için veya eski bir çalışan için başka biri için ayarlanmışsa ve cihazın kilidini açmak için parolanız yoksa, cihazı uzaktan silmek için Intune'un [kullanabilirsiniz.](/intune/remote-actions/devices-wipe) Ardından cihaz kendisini yeniden yanıp söner.  
 > [!IMPORTANT]
 > Cihazı silerken Kayıt durumunu ve kullanıcı hesabını **koruma işaretsiz bırakın.**
 
@@ -149,15 +149,15 @@ Cihazınız daha önce bir istemci için veya eski bir çalışan için başka b
 ### <a name="symptoms"></a>Belirtiler
 - Doğru PIN girdikten sonra oturum açma için PIN kullanma başarısız olur.
 - Web sayfasında başarıyla oturum açma işlemi sonrasında web oturum açma yönteminin kullanımı başarısız olur.
-- Cihaz -> Azure Active Directory -> Devices Azure portal ["Azure](https://portal.azure.com/) AD'ye katılmış" > listelenmiyor.
+- Cihaz -> Azure Active Directory -> Devices Azure portal ["Azure](https://portal.azure.com/) AD'ye katılmış" olarak listelenmiyor.
 
 ### <a name="cause"></a>Nedeni
 Etkilene cihaz Azure AD kiracıdan silinmiş olabilir. Örneğin, bunun nedeni:
 
-- Yönetici veya kullanıcı, cihazı cihazdan Azure portal PowerShell kullanarak sildi.
+- Yönetici veya kullanıcı, cihazı cihazdan Azure portal PowerShell'i kullanarak sildi.
 - Cihaz, işlem dışı olduğu için Azure AD kiracıdan kaldırıldı. Verimli bir şekilde yönetilen bir ortam için, GENELLIKLE, IT yöneticilerinin eski, etkin olmayan cihazları [Azure AD kiracılarından kaldırmasını öneririz.](/azure/active-directory/devices/manage-stale-devices)
 
-Etkilene bir cihaz silindikten sonra Azure AD kiracısına yeniden iletişim kurma girişiminde bulunsa, Azure AD ile kimlik doğrulaması başarısız olur. PIN aracılığıyla önbelleğe alınmış oturum açma işlemi kullanıcının oturum açmasına izin vermeye devam ettiği için bu etki genellikle cihaz kullanıcısı tarafından görünmez.
+Etkilene bir cihaz silindikten sonra Azure AD kiracısına yeniden iletişim kurma girişiminde bulunsa, Azure AD ile kimlik doğrulaması başarısız olur. PIN aracılığıyla önbelleğe alınan oturum açma işlemi kullanıcının oturum açmasına izin vermeye devam ettiği için bu etki genellikle cihaz kullanıcısı tarafından görünmez.
 
 ### <a name="mitigation"></a>Risk azaltma
 Şu anda silinen bir cihazı Azure AD'HoloLens eklemenin hiçbir yolu yoktur. Etkilenen cihazların cihazına ters eğik çizgiyle başvurulma yönergelerini izleyerek [temiz bir şekilde yeniden bayrakları gerekir.](hololens-recovery.md#clean-reflash-the-device)
@@ -166,7 +166,7 @@ Etkilene bir cihaz silindikten sonra Azure AD kiracısına yeniden iletişim kur
 
 ## <a name="autopilot-troubleshooting"></a>Autopilot Sorunlarını Giderme
 
-Aşağıdaki makaleler daha fazla bilgi edinmek ve Autopilot Sorunlarını gidermek için yararlı bir kaynak olabilir, ancak bu makalelerin Windows 10 Desktop'a dayandırılana kadar tüm bilgilerin aşağıdakiler için geçerli HoloLens:
+Aşağıdaki makaleler daha fazla bilgi edinmek ve Autopilot Sorunlarını gidermek için kullanışlı bir kaynak olabilir, ancak bu makalelerin Windows 10 Desktop'a dayandırılana kadar tüm bilgilerin aşağıdakiler için geçerli HoloLens:
 
 - [Windows Autopilot - bilinen sorunlar](/mem/autopilot/known-issues)
 - [Windows cihaz kaydı sorunlarını Microsoft Intune](/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
@@ -178,17 +178,17 @@ Aşağıdaki makaleler daha fazla bilgi edinmek ve Autopilot Sorunlarını gider
 
 ### <a name="can-i-use-system-center-configuration-manager-sccm-to-manage-hololens-devices"></a>Cihazları yönetmek için System Center Configuration Manager (SCCM) HoloLens miyim?
 
-Hayır. Cihazları yönetmek için bir MDM sistemi HoloLens gerekir.
+Hayır. Cihazlarınızı yönetmek için bir MDM sistemi HoloLens gerekir.
 
-### <a name="can-i-use-active-directory-domain-services-ad-ds-to-manage-hololens-user-accounts"></a>Kullanıcı hesaplarını yönetmek Active Directory Domain Services (AD DS) HoloLens kullanabilir miyim?
+### <a name="can-i-use-active-directory-domain-services-ad-ds-to-manage-hololens-user-accounts"></a>Kullanıcı hesaplarını Active Directory Domain Services (AD DS) HoloLens kullanabilir miyim?
 
-Hayır. HoloLens cihazlarının kullanıcı hesaplarını yönetmek için Azure Active Directory (Azure AD) HoloLens gerekir.
+Hayır. Azure Active Directory cihazlarının kullanıcı hesaplarını yönetmek için Azure Active Directory (Azure AD) HoloLens gerekir.
 
 ### <a name="is-hololens-capable-of-automated-data-capture-systems-adcs-auto-enrollment"></a>Otomatik HoloLens Yakalama Sistemleri (ADCS) otomatik kayıt özelliğine sahip mi?
 
 Hayır.
 
-### <a name="can-hololens-participate-in-integrated-windows-authentication"></a>Tümleşik HoloLens Kimlik Doğrulaması'na Windows miyim?
+### <a name="can-hololens-participate-in-integrated-windows-authentication"></a>Tümleşik HoloLens Kimlik Doğrulaması'na Windows olabilir mi?
 
 Hayır.
 
@@ -201,9 +201,9 @@ Hayır. Ancak, aşağıdaki yaklaşımlardan birini kullanarak bu soruna yöneli
 
 ### <a name="what-logging-capabilities-does-hololens-2-offer"></a>2. HoloLens özellikleri nedir?
 
-Günlüğe kaydetme, geliştirme veya sorun giderme senaryolarında veya cihazların Microsoft sunucularına göndermekte olduğu telemetride yakalanacak izlemeler ile sınırlıdır.
+Günlüğe kaydetme, geliştirme veya sorun giderme senaryolarında yakalanacak izlemeler veya cihazların Microsoft sunucularına göndermekte olduğu telemetri verileriyle sınırlıdır.
 
-## <a name="questions-about-securing-hololens-devices"></a>Cihazların güvenliğini sağlama HoloLens soruları
+## <a name="questions-about-securing-hololens-devices"></a>Cihaz güvenliğini sağlama HoloLens soruları
 
 [2. HoloLens bilgilerimize bakın.](security-overview.md)
 1. HoloLens cihazları için lütfen bu SSS [bölümünü gözden geçirin.](hololens1-faq-security.yml)

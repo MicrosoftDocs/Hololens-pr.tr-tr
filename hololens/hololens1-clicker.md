@@ -1,10 +1,10 @@
 ---
-title: HoloLens kullanma
-description: Bu makalede, tıklama eşlemesi, ücretlendirme HoloLens kurtarma da dahil olmak üzere HoloLens nasıl kullanabileceğiniz açıklanmıştır.
+title: HoloLens click kullanın
+description: bu makalede, click, dolduruluyor ve kurtarma gibi HoloLens click 'in nasıl kullanılacağı özetlenmektedir.
 ms.assetid: 7d4a30fd-cf1d-4c9a-8eb1-1968ccecbe59
 ms.date: 09/16/2019
 manager: jarrettr
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: v-miegge
@@ -14,99 +14,99 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 98ec5795974fa242225bb1048ead41892d8296e4
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189962"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427180"
 ---
-# <a name="use-the-hololens-1st-gen-clicker"></a>HoloLens (1. nesil) tıklamayı kullanma
+# <a name="use-the-hololens-1st-gen-clicker"></a>HoloLens (1. gen) click kullanın
 
-Bu tıklar özellikle HoloLens (1. nesil) için tasarlanmıştır ve hologramlarla etkileşim kurmanın başka bir yolunu sağlar. Ayrı bir HoloLens (1. nesil) ile birlikte gelir.
+click, HoloLens (1. gen) için özel olarak tasarlanmıştır ve hologramlar ile etkileşime geçmek için size başka bir yol sağlar. HoloLens (1. gen), ayrı bir kutuya gelir.
 
-Uygulamaları seçmek, kaydırmak, taşımak ve yeniden boyutlandırmak için el hareketlerinin yerine bunu kullanın.
+Uygulamaları seçmek, kaydırmak, taşımak ve yeniden boyutlandırmak için el hareketleri yerine kullanın.
 
-## <a name="clicker-hardware-and-pairing"></a>Tıkırtıcı donanımı ve eşleştirme
+## <a name="clicker-hardware-and-pairing"></a>Donanımı ve eşlemeyi kapatıp
 
-Bu HoloLens (1. nesil) tıklar, tutmayı kolaylaştırmak için parmak döngüsüne ve gösterge ışığına sahip olur.
+HoloLens (1. gen) click, daha kolay tutmayı kolaylaştırmak için bir finger döngüsüne sahiptir ve bir gösterge ışığı içerir.
 
-![HoloLens Tıklar.](images/use-hololens-clicker-1.png)
+![HoloLens click.](images/use-hololens-clicker-1.png)
 
-### <a name="clicker-indicator-lights"></a>Tıkıcı gösterge ışığı
+### <a name="clicker-indicator-lights"></a>Çi gösterge ışıkları
 
-Tıkçının ışığının anlamı şu şekildedir.
+Bu, Click 'teki ışıkların anlamı aşağıda verilmiştir.
 
-- **Yanıp sönen beyaz**. Tıkıcı eşleştirme modundadır.
+- **Yanıp sönen beyaz**. Click, eşleştirme modundadır.
 - **Hızlı yanıp sönen beyaz**. Eşleştirme başarılı oldu.
-- **Düz beyaz**. Tıkıcı ücretlendirmeye devam etti.
-- **Yanıp sönen bir .** Pil düşüktür.
-- **Sağlam bir ifade.** Tıkıcı bir hatayla karşılaştı ve yeniden başlatmanız gerekir. Eşleştirme düğmesine basarken 15 saniye basılı tutun.
+- **Düz beyaz**. Bu işlemi doldurma.
+- **Yanıp sönen** bir bu. Pil düşüktür.
+- **Solid** bir. Click bir hatayla karşılaştı ve yeniden başlatmanız gerekir. Eşleştirme düğmesine basıldığında 15 saniye boyunca tıklayın ve basılı tutun.
 
-### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>Tıklamayı kendi HoloLens (1. nesil) ile eşleştirme
+### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>HoloLens (1. gen) ile click 'i eşleştirin
 
-1. Başlat'a gitmek için bloom **hareketini kullanın,** ardından **Cihazlar'Ayarlar** seçin ve Bluetooth  >   olduğunu doğrulayın.
-1. Durum ışığı beyazla yanıp sönene kadar tıklama düğmesine basın ve basılı tutun.
-1. Eşleştirme ekranında Tıklar **Eşleştir'i**  >  **seçin.**
+1. **başlat**' a gitmek için bloom hareketini kullanın, ardından **Ayarlar**  >  **cihazları** ' nı seçin ve Bluetooth açık olduğunu doğrulayın.
+1. Bu durumda, durum ışığı yanıp sönene kadar eşleştirme düğmesine basın ve basılı tutun.
+1. Eşleştirme ekranında, Click öğesini seçin   >  .
 
-### <a name="charge-the-clicker"></a>Tıkçının ücretlerini ödeme
+### <a name="charge-the-clicker"></a>Click 'i ücretlendirin
 
-Tıklama pili düşük olduğunda pil göstergesi yanıp söner. Mikro USB kablosunu bir USB güç kaynağına takarak cihazı ücret alın.
+Click pili azaldığında, pil göstergesi, bu işlem için, Cihazı ücretlendirmeden mikro USB kablosunu USB güç kaynağına takın.
 
-## <a name="use-the-clicker-with-hololens-1st-gen"></a>HoloLens (1. nesil) ile tık düğmesini kullanma
+## <a name="use-the-clicker-with-hololens-1st-gen"></a>HoloLens ile click kullanın (1. genel)
 
-### <a name="hold-the-clicker"></a>Tıkıcıyı tutma
+### <a name="hold-the-clicker"></a>Click 'i beklet
 
-Tıkıcıyı koymak için döngüyü halka veya orta parmak üzerinden kaydırarak Mikro USB bağlantı noktasının bileklerinizi doğru doğru kaydırın. Başparmaklarınızı girintiye ekleyin.
+Click 'e koymak için, mikro USB bağlantı noktasının bilek 'nize doğru olması için döngüyü halkaya da orta parmağınızla kaydırın. Parmak izi girintiye geri kalanını.
 
-![Clicker'ı tutma.](images/use-hololens-clicker-2.png)
+![Click 'i tutma.](images/use-hololens-clicker-2.png)
 
-### <a name="clicker-gestures"></a>Tıkıcı hareketleri
+### <a name="clicker-gestures"></a>Click hareketleri
 
-Tıkçı hareketleri küçük bilek döndürmeleridir, el hareketlerinde kullanılan daha büyük HoloLens değildir. Ayrıca HoloLens, tıkıcı hareket çerçevesinin dışında olsa bile hareketlerinizi tanır ve tıklar. Bu nedenle, tıklamayı sizin için en rahat konumda tutabilirsiniz. [](hololens1-basic-usage.md)
+HoloLens el hareketleri için kullanılan daha büyük hareketlerle değil, click hareketleri küçük bilek bir şekilde uygulanır. HoloLens, hareket [çerçevesinin](hololens1-basic-usage.md)dışında olsa bile hareketlerinizi ve tıklamalarını tanır. bu sayede, bu işlemi sizin için en rahat olan konumda tutabilmenizi sağlayabilirsiniz.
 
-- **öğesini seçin.** Bir hologram, düğme veya başka bir öğe seçmek için buna göz atarak tıklayın.
+- Öğesini **seçin**. Bir hologram, düğme ya da başka bir öğe seçmek için, bunu seçin ve ardından öğesine tıklayın.
 
-- **'a tıklayın ve basılı tutun.** Bir hologramı taşıma veya yeniden boyutlandırma gibi dokunarak ve basılı tutarken yapmak istediğiniz bazı şeyleri yapmak için düğmeye basılı tutun ve basılı tutun.
+- **Tıklayın ve basılı tutun**. Bir hologram taşıma veya yeniden boyutlandırma gibi, dokunmanıza ve tutmaya yönelik aynı şeylerden bazılarını yapmak için düğme üzerindeki parmak izi ' ne tıklayın ve basılı tutun.
 
-- **kaydırarak .** Uygulama çubuğunda Kaydırma **Aracı'nı seçin.** Tıklar ve basılı tutar, ardından tıklar yukarı, aşağı, sola veya sağa döner. Daha hızlı kaydırmak için, ellerinizi kaydırma aracının merkezinden daha uzak bir yere kaydırın.
+- **Kaydırın**. Uygulama çubuğunda, **kaydırma aracı**' nı seçin. Tıklayın ve basılı tutun, ardından solu aşağı, aşağı, sola veya sağa döndürün. Daha hızlı kaydırmak için, kaydırma aracının merkezinden uzaklaştırın.
 
-- **yakınlaştırma.** Uygulama çubuğunda Yakınlaştırma **Aracı'nı seçin.** Tıklar ve basılı tutar, sonra yakınlaştırıp yakınlaştıracak şekilde yukarı veya aşağı doğru döndürün.
+- **Yakınlaştırın**. Uygulama çubuğunda **Yakınlaştırma aracı**' nı seçin. Düğmesine tıklayın ve basılı tutun, ardından aşağı doğru yakınlaştırmak veya uzaklaştırmak için aşağı döndürün.
 
 > [!TIP]
-> Sayfayı kullanırken yakınlaştırmak veya Microsoft Edge bir sayfaya bakın ve çift tıklayın.
+> Microsoft Edge kullanırken yakınlaştırmak veya uzaklaştırmak için, sayfada bir sayfa ve çift tıklayın.
 
-## <a name="im-having-problems-using-the-hololens-clicker"></a>HoloLens clicker'ı kullanma sorunlarım var
+## <a name="im-having-problems-using-the-hololens-clicker"></a>HoloLens click kullanarak sorun yaşıyorum
 
-Hologramları [seçmek, kaydırmak,](hololens1-clicker.md) taşımak ve yeniden boyutlandırmak için tık düğmesini kullanın. Tek tek uygulamalar ek tıklar hareketlerini destekleyebilirsiniz.
+Hologragram seçme, kaydırma, taşıma ve yeniden boyutlandırma için [Click](hololens1-clicker.md) kullanın. Ayrı uygulamalar, ek Click hareketlerini destekleyebilir.
 
-Tıkıcıyı kullanırken sorun kullanıyorsanız, bunun ücrete tabi olduğundan ve bu verilerle eşleştirilmiş olduğundan emin HoloLens. Pil düşükse gösterge ışığı yanıp söner. Tık düğmesinin eşleştirilmiş olduğunu doğrulamak için Ayarlar  >  **Cihazlar'a gidin** ve orada gösterip gösterip görmey olduğunu kontrol edin. Daha fazla bilgi için [bkz. Tıkıcıyı eşleştirme.](hololens1-clicker.md)
+Click ile ilgili sorun yaşıyorsanız, ücretlendirildiği ve HoloLens eşleştirilmiş olduğundan emin olun. Pil düşükse, gösterge açık yanıp sönme. click 'in eşleştirildiğini doğrulamak için **Ayarlar**  >  **cihazlar** ' a gidin ve burada görünür olup olmadığını görün. Daha fazla bilgi için, bkz. [Click 'ı eşleştirme](hololens1-clicker.md).
 
-Tıklanabilir ve eşleştirilmişse ve sorun devam ediyorsanız, ana düğmeyi ve eşleştirme düğmesini 15 saniye basılı tutarak sıfırlayın. Ardından, tıkıcıyı yeniden HoloLens eşleştirin.
+Click 'e ücretlendirildikten ve eşlenmeye devam ediyorsanız ve sorun yaşıyorsanız, ana düğmeyi ve eşleştirme düğmesini 15 saniye basılı tutarak sıfırlayın. sonra HoloLens yeniden deneyin.
 
-Tıkıcıyı sıfırlamak yardımcı olmazsa, bkz. Yeniden [başlatma veya HoloLens kurtarma.](hololens1-clicker.md#restart-or-recover-the-clicker)
-## <a name="restart-or-recover-the-clicker"></a>Tıkıcıyı yeniden başlatın veya kurtar
+click 'in sıfırlanması yardım vermezse, bkz. [yeniden başlatma veya kurtarma HoloLens](hololens1-clicker.md#restart-or-recover-the-clicker).
+## <a name="restart-or-recover-the-clicker"></a>Click 'i yeniden başlatın veya kurtarın
 
-Aşağıdakiler, HoloLens yanıt vermiyorsa veya iyi çalışmıyorsa deneyen bazı şeyler vardır.
+HoloLens click yanıt vermemeye başlarsa veya düzgün çalışmıyorsa deneyebileceğiniz bazı şeyler aşağıda verilmiştir.
 
-### <a name="restart-the-clicker"></a>Tıkıcıyı yeniden başlatın
+### <a name="restart-the-clicker"></a>Click 'i yeniden başlatın
 
-Eşleştirme düğmesine basılı tutmak için kalemin ucunu kullanın. Aynı zamanda, tıklar ve basılı tutarken 15 saniye bekleyin. Tıkıcı, önceden HoloLens eşleştirilmişse, yeniden başlatıldıktan sonra eşleştirilmiş olarak kalır.
+Eşleştirme düğmesini basılı tutmak için bir kalemin ucunu kullanın. Aynı zamanda, 15 saniye boyunca Click düğmesine tıklayın ve basılı tutun. click, HoloLens ile zaten eşlendikten sonra yeniden başlatıldıktan sonra eşleştirilmiş olarak kalır.
 
-Tıkici açılacak veya yeniden başlatılacaksa, bunu ücretlendirmek için HoloLens deneyin. Pil çok düşükse, beyaz gösterge ışığının açması birkaç dakika sürebilir.
+click 'i açıp yeniden başlatmazsanız, HoloLens charger kullanarak ücretlendirme yapmayı deneyin. Pil çok düşükse, beyaz gösterge ışığının açık olması birkaç dakika sürebilir.
 
-### <a name="re-pair-the-clicker"></a>Tıkıcıyı yeniden eşleştirme
+### <a name="re-pair-the-clicker"></a>Click 'i yeniden eşleştirin
 
-  >  **Cihazlar Ayarlar'ı** ve ardından tık düğmesini seçin. **Kaldır'ı** seçin, birkaç saniye bekleyin ve ardından tıkıcıyı yeniden eşleştirin.
+**Ayarlar**  >  **cihazlar** ' ı seçin ve click ' i seçin. **Kaldır**' ı seçin, birkaç saniye bekleyin ve sonra yeniden deneyin.
 
-### <a name="recover-the-clicker"></a>Tıkıcıyı kurtarma
+### <a name="recover-the-clicker"></a>Click 'i kurtarma
 
-Tıkıcıyı yeniden başlatmak ve yeniden eşleştirmek sorunu çözemezse, Windows Cihaz Kurtarma Aracı bunu kurtarmanıza yardımcı olabilir. Kurtarma işlemi biraz zaman alır ve tıklar yazılımlarının en son sürümünü yüklenir. Aracı kullanmak için en az 4 GB boş Windows 10 veya sonraki bir bilgisayarda çalışmanız gerekir.
+yeniden başlatma ve yeniden eşleştirmeniz sorunu gidermezse, Windows cihaz kurtarma aracı bunu kurtarmanıza yardımcı olabilir. Kurtarma işlemi biraz zaman alabilir ve bu, Click yazılımının en son sürümünü yükler. aracı kullanmak için, en az 4 GB boş depolama alanı olan Windows 10 veya üzeri bir sürümü çalıştıran bir bilgisayara ihtiyacınız vardır.
 
-Tıkıcıyı kurtarmak için:
+Click 'i kurtarmak için:
 
-1. Windows Cihaz [Kurtarma Aracı'nı indirin](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/) ve yükleyin.
-1. Bağlan bilgisayarınızla birlikte gelen Micro USB kablosunu kullanarak bilgisayarınızda HoloLens.
-1. Windows Kurtarma Aracı'nı çalıştırın ve yönergeleri izleyin.
+1. [Windows cihaz kurtarma aracı](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/) 'nı indirip bilgisayarınıza yükleyin.
+1. HoloLens ile gelen mikro USB kablosunu kullanarak bilgisayarınızı bilgisayarınıza Bağlan.
+1. Windows cihaz kurtarma aracını çalıştırın ve yönergeleri izleyin.
 
-Tık kullanıcı otomatik olarak algılanmazsa  Cihazım algılanmadı'yı seçin ve yönergeleri izleyerek cihazınızı kurtarma moduna alın.
+Click otomatik olarak algılanmazsa **cihazımın algılanmadığını** seçin ve cihazınızı kurtarma moduna almak için yönergeleri izleyin.
 

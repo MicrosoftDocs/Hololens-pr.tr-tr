@@ -1,6 +1,6 @@
 ---
-title: Görsel kalite ve rahatlık geliştirme
-description: HoloLens cihazlarda görsellerinizin kalitesini artırmak için ınterg kızınızı (ıpd) ayarlamayı öğrenin.
+title: Görsel kalitesini ve rahatı geliştirme
+description: Farklı cihazlardaki görsellerin kalitesini artırmak için aralıklar arası mesafenizi (IPD) ayarlamayı HoloLens öğrenin.
 author: Teresa-Motiv
 ms.author: xerxesb
 ms.date: 9/13/2019
@@ -13,121 +13,121 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-keywords: ayarlama, rahatlık, görseller, kalite, ipd, HoloLens, Windows Mixed Reality, VR kulaklıklar
+keywords: ayarlama, konfor, görseller, kalite, ipd, HoloLens, Windows Mixed Reality, VR başlığı
 ms.openlocfilehash: b3d917c71ac7441aeaf8dcbc25748ee07b9fbfa3
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189214"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427313"
 ---
-# <a name="improve-visual-quality-and-comfort"></a>Görsel kalite ve rahatlık geliştirme
+# <a name="improve-visual-quality-and-comfort"></a>Görsel kalitesini ve rahatı geliştirme
 
-HoloLens 2 ve HoloLens (1. gen), her ikisi de benzersiz gözlerinize kalibre edildiğinde daha iyi çalışır.
+HoloLens 2 ve HoloLens (1. nesil) her ikisi de benzersiz gözlere göre ayarlandıklarına göre daha iyi çalışır.
 
-Her iki cihazın de en iyi hologram görüntüleme deneyimi için ayarlanması gerektiğinde, farklı ayarlama teknolojileri ve teknikleri kullanırlar.  [HoloLens 2 ayarlamaya](#calibrating-your-hololens-2) veya [HoloLens (1. gen) ayarlamaya](#calibrating-your-hololens-1st-gen)atlayın.
+Her iki cihaz da en iyi hologram görüntüleme deneyimi için ayarlamalar yapmak zorundayken farklı ayarlama teknolojileri ve teknikleri kullanır.  [2 HoloLens veya HoloLens](#calibrating-your-hololens-2) [(1. nesil) ayarına atlayın.](#calibrating-your-hololens-1st-gen)
 
-## <a name="calibrating-your-hololens-2"></a>HoloLens 2 ' 'nizi ayarlama
+## <a name="calibrating-your-hololens-2"></a>HoloLens 2'nizi ayarlama
 
-HoloLens 2, deneyiminizi geliştirmek ve sanal ortamla etkileşimde bulunmak için göz önünde bulunma teknolojisini kullanır. HoloLens 2 ' nin ayarlanması, gözlerinizin (ve cihazı kullanan başka birinin gözlerinizin) doğru bir şekilde izlenmesini sağlar. Ayrıca Kullanıcı rahatlığı, hologram hizalaması ve izleme konusunda da yardımcı olur. Ayarlandıktan sonra hologramlar, başlarınızın baş vardiyaları gibi doğru şekilde görünür.
+HoloLens 2, sanal ortamı görme ve etkileşim kurma deneyiminizi geliştirmek için göz izleme teknolojisini kullanır. 2 HoloLens 2'nin ayarlanmamış olması, cihazın sizin (ve cihazı kullanan herkesin) doğru şekilde izlemenizi sağlar. Ayrıca kullanıcı rahatı, hologram hizalaması ve el izleme ile de yardımcı olur. Ayarlamadan sonra hologramlar, kafanıza gelen güneşliği değiştirse bile doğru şekilde görünür.
 
-HoloLens 2 kullanıcıdan cihazı aşağıdaki koşullarda kalibre etmesini ister:
+HoloLens 2, bir kullanıcıdan cihazı aşağıdaki koşullarda ayarlaması istenir:
 
 - Kullanıcı cihazı ilk kez kullanıyor
-- Kullanıcı daha önce ayarlama sürecini kabul etmedi
-- Ayarlama işlemi, kullanıcının cihazı son kullandığı anda başarılı olmadı
-- Kullanıcı kendi ayarlama profillerini sildi
-- Cihaz kapalı duruma getirilir ve yukarıdaki durumlardan herhangi biri uygulanır 
+- Kullanıcı daha önce ayarlama işlemini iptal etti
+- Kullanıcı cihazı son kez kullandığında ayarlama işlemi başarılı olmadı
+- Kullanıcı, profillerini sildi
+- Cihaz çıkarılarak tekrar üzerine alınır ve yukarıdaki koşullardan herhangi biri geçerli olur 
 
 
-![Gözlerinizi ayarlamak için ayarlama istemi.](./images/07-et-adjust-for-your-eyes.png)
+![Gözlere ayarlama için ayarlama istemi.](./images/07-et-adjust-for-your-eyes.png)
 
-Bu işlem sırasında, bir dizi hedefe (Gems) bakacaksınız. Ayarlama sırasında yanıp söndürmenize rağmen, odanın diğer nesneleri yerine Gems 'ye odaklanmaya çalışın.  gems 'ye odaklanma, holographic dünyasını işlemek için göz konumuyla ilgili bilgi HoloLens sağlar.
+Bu işlem sırasında bir dizi hedefi (gem) göz atacağız. Ayarlama sırasında yanıp sönüyorsanız ama odadaki diğer nesneler yerine gem'lere odaklanmaya çalışıyorsanız sorun değil.  Gem'lere odaklanmak, HoloLens dünyanızı işlemek için göz konumunuz hakkında bilgi öğrenmenizi sağlar.
 
-![Kalibrasyon, kullanıcıya hala kafa tutmasını ve noktalara ilişkin noktaları takip etmesini söylesin.](./images/07-et-hold-head-still.png)
+![Kullanıcıya kafalarını takip etmelerini ve noktaları gözleriyle izlemelerini söyleyen ayar istemi.](./images/07-et-hold-head-still.png)
 
-![GED örneği ile ayarlama istemi.](./images/08-et-gems.png)
+![Gem örneğiyle birlikte ayar istemi.](./images/08-et-gems.png)
 
-![Ayarlama istemi ayarlama.](./images/09-et-adjusting.png)
+![Ayarlama istemi.](./images/09-et-adjusting.png)
 
-Ayarlama başarılı olduysa, başarılı bir ekran görürsünüz.  Aksi takdirde, [ayarlama başarısızlıklarını tanılama](hololens2-display.md#troubleshooting)hakkında daha fazla bilgi edinin.
+Ayarlama başarılı olursa bir başarı ekranı görürsünüz.  Aksi durumunda, hata tanılama [hakkında daha fazla bilgi okuyun.](hololens2-display.md#troubleshooting)
 
-![Ayarlama isteği başarılı.](./images/10-et-success.png)
+![Ayar istemi başarılı.](./images/10-et-success.png)
 
-### <a name="calibration-when-sharing-a-device-or-session"></a>Bir cihaz veya oturum paylaşılırken ayarlama
+### <a name="calibration-when-sharing-a-device-or-session"></a>Cihaz veya oturum paylaşımı sırasında ayar
 
-birden çok kullanıcı, her kişiye ait cihaz kurulumuna gerek duymadan HoloLens 2 cihazını paylaşabilir. yeni bir kullanıcı cihazı ilk kez baş üzerine yerleştiriyorsa, HoloLens 2 otomatik olarak kullanıcının görselleri kalibre etmesini ister. Daha önce kalibre edilmiş görselleri olan bir Kullanıcı cihazı baş üzerine yerleştiriyorsa, görüntü kalite ve rahat bir görüntüleme deneyimi için sorunsuz şekilde ayarlanır.  
+Birden çok kullanıcı, her HoloLens cihaz kurulumuna gerek kalmadan bir HoloLens 2 cihazı paylaşabilir. Yeni bir kullanıcı cihazı ilk kez başına koyarsa, HoloLens 2 otomatik olarak kullanıcıdan görselleri ayarlaması istenir. Daha önce ayarlanmış görselleri olan bir kullanıcı cihazı başına koyarsa, görüntü kaliteye ve rahat bir görüntüleme deneyimine sorunsuz bir şekilde ayarlanır.  
 
 ### <a name="manually-starting-the-calibration-process"></a>Ayarlama işlemini el ile başlatma
 
-1. [**Başlat menüsü**](hololens2-basic-usage.md#start-gesture)açmak için başlangıç hareketini kullanın.
-1. Ayarlar uygulama **başlamak** için sabitlenmemişse **tüm uygulamalar**' ı seçin.
-1. **Ayarlar**' yi seçin ve ardından **sistem**  >  **ayarlama**  >  **göz ayarlama**  >  **çalışma gözü ayarlaması**' nı seçin.
+1. başlangıç hareketini kullanarak [**Başlat menüsü.**](hololens2-basic-usage.md#start-gesture)
+1. Uygulama Ayarlar sabitlenmiş değilse Tüm Uygulamalar'ı **seçin.**
+1. Sistem **Ayarlar'yi** seçin ve ardından **Sistem**  >  **Ayarlama Göz Ayarlama** Çalıştırma  >  **göz**  >  **ayarı'ı seçin.**
 
-   ![göz önünde çalıştır ayarı seçeneğini gösteren Ayarlar uygulaması.](./images/C-Settings.Calibration.png)
+   ![Göz Ayarlar seçeneğini gösteren bir uygulamadır.](./images/C-Settings.Calibration.png)
 
-### <a name="auto-eye-position-support"></a>Otomatik göz konumu desteği
+### <a name="auto-eye-position-support"></a>Otomatik Göz Konumu Desteği
 
-HoloLens 2 ' de, göz pozisyonları doğru hologram konumlandırmayı, rahat görüntüleme deneyimini ve geliştirilmiş görüntü kalitesini sağlar. Göz konumları, göz izleme hesaplamasının bir parçası olarak dahili olarak hesaplanır. Bununla birlikte, bu durum, deneyim göz önünde olmayan giriş gerektirmese de, her bir kullanıcının göz önünde geçiş ayarlaması için geçmesi gerekir.
+2 HoloLens de göz pozisyonları doğru hologram konumlandırma, rahat görüntüleme deneyimi ve gelişmiş görüntü kalitesi sağlar. Göz pozisyonları, göz izleme hesaplaması kapsamında dahili olarak hesaplanır. Ancak bu, deneyim göz bakışı girişi gerekmese bile her kullanıcının göz izleme ayarlaması izlemesini gerektirir.
 
-**Otomatik göz konumu (AEP)** , bu senaryolara Kullanıcı için göz önünde bekleyen bir yol sağlar. Otomatik göz konumu, kullanıcının cihaza koyduğu andan itibaren otomatik olarak arka planda çalışmaya başlar. Kullanıcının önceki bir göz izleme ayarı yoksa, otomatik gözle, 20-30 saniyelik bir işlem zamanından sonra, ekran sistemine kullanıcının göz konumlarını sağlamaya başlayacaktır. Kullanıcı verileri cihazda kalıcı değildir ve Kullanıcı devre dışı bırakılırsa veya cihaz yeniden başlatıldığında veya uyku modundan çıktığında bu işlem yinelenir.
+**Otomatik Göz Konumu (AEP),** bu senaryoları kullanıcı için göz konumlarını hesaplamanın etkileşimsiz bir yolu ile sağlar. Otomatik Göz Konumu, kullanıcının cihaza koyan andan itibaren arka planda otomatik olarak çalışmaya başlar. Kullanıcının daha önce göz izleme ayarı yoksa Otomatik Göz Konumu, 20 -30 saniyelik bir işleme süresi sonra kullanıcının göz konumlarını görüntüleme sistemine sağlamaya başlar. Kullanıcı verileri cihazda kalıcı olmaz ve kullanıcı çıkar ve cihazı yeniden başlatırsa ya da cihaz yeniden başlatılırsa ya da uykudan çıkarsa bu işlem yinelenir.
 
-Kalibre edilmemiş bir Kullanıcı cihaza geçiş yaparken otomatik gözle konum özelliği olan birkaç sistem davranışı değişikliği vardır. Bu bağlamda, kalibre edilmemiş bir Kullanıcı, cihazda daha önce gelen göz izleme ayarlama işleminden geçmiş bir kişiye başvurur.
+Otomatik Göz Konumu özelliğinde, kullanıcı cihaza bağlıyken birkaç sistem davranışı değişikliği vardır. Bu bağlamda, bir kullanıcı, daha önce cihazda göz izleme ayarlama işleminin üzerinden geçilen bir kullanıcıya başvurur.
 
-| Etkin uygulama | Önceki davranış | Windows Holographic, sürüm 20h2 güncelleştirme davranışı |
+| Etkin Uygulama | Önceki Davranış | Windows Holographic sürüm 20H2 Güncelleştirmesi'nin davranışı |
 |:-------------------|:-----------------|:-----------------------------------|
-| Gaze etkin olmayan uygulama veya holographic kabuğu |Göz izleme ayarlama istemi iletişim kutusu görüntülenir. | Hiçbir istem gösterilmez. |
-| Etkin uygulama | Göz izleme ayarlama istemi iletişim kutusu görüntülenir. | Göz izleme ayarlama istemi yalnızca uygulama göz önünde akışa eriştiğinde görüntülenir. |
+| Bakışın etkin olmayan uygulaması veya Holographic Shell |Göz izleme düzeltme istemi iletişim kutusu görüntülenir. | İstem görüntülenmez. |
+| Bakış özellikli uygulama | Göz izleme düzeltme istemi iletişim kutusu görüntülenir. | Göz izleme ayarlama istemi yalnızca uygulama göz bakışı akışına erişdiğinde görüntülenir. |
 
-Kullanıcı, Gaze olmayan bir uygulamadan, Gaze verilerine erişen bir uygulamaya geçiş yaptığında ayarlama istemi görüntülenir. 
+Kullanıcı, bakış etkin olmayan bir uygulamadan bakış verilerine erişen uygulamaya geçiş olursa, ayarlama istemi görüntülenir. 
 
-Geçerli kullanıcının etkin bir göz izleme ayarlaması olmadığında, diğer tüm sistem davranışları ile benzerdir. Örneğin, tek elli başlangıç hareketi etkinleştirilmez. İlk kurulum için hazır olmayan deneyimle ilgili hiçbir değişiklik olmayacaktır.
+Diğer tüm sistem davranışları, geçerli kullanıcının etkin bir göz izleme cihazına sahip olmadığının benzeridir. Örneğin Tek Elle Başlatma hareketi etkinleştirilmez. İlk kurulumda İlk İlk Deneyimi'ne hiçbir değişiklik olmayacaktır.
 
-Verilerin veya kesin bir hologram konumlandırması gerektiren deneyimler için, kalibre izleme ayarlamayı çalıştırmak için kalibre edilmemiş kullanıcıları öneririz. göz izleme ayarlaması isteminden veya başlangıç menüsünden Ayarlar uygulamayı başlatarak ve ardından **sistem > ayarlama > göz ayarlama > çalıştır**' ı seçerek göz önünde erişilebilir.
+Göz bakışı verileri veya hassas hologram konumlandırması gerektiren deneyimler için kullanıcıların göz izleme cihazı çalıştırmalarını öneririz. Bu, göz izleme isteminden veya başlangıç menüsünden Ayarlar uygulamasını başlatarak ve ardından Sistem > > Göz Ayarlaması'> Göz numarası çalıştır'ı seçerek **erişilebilir.**
 
-#### <a name="deferred-calibration-prompt"></a>Ertelenmiş ayarlama Istemi
+#### <a name="deferred-calibration-prompt"></a>Ertelenmiş Düzeltme İstemi
 
-Otomatik gözle, göz Izleme ayarlaması istem iletişim kutusu, bir uygulama, verileri gözden kaçırana kadar ertelenir. Bu, etkin uygulama Gaze gerektirmiyorsa kullanıcıya istem olmamasını sağlar. Uygulama, verilerin Gaze olmasını gerektiriyorsa ve geçerli kullanıcı kalibre değilse, kullanıcıya bir ayarlama istemi sunulur. Bu davranış, deneyim için uygun bir zamanda göz izleme ayarlama isteğini göstermek üzere kullanılabilir. Bu yöntem aşağıdaki nedenlerle önerilir
+Otomatik Göz Konumu ile, Bir uygulama Göz Bakışı verileri isteğinde bulunana kadar Göz İzleme Ayarlama istemi iletişim kutusu ertelenebilir. Bu, etkin uygulamanın bakış gerektirmesi gerektirdiğinde kullanıcıya sorulmaymalarını sağlar. Uygulamanın verilere bakarak bakarak ayarlaması gerekli değilse kullanıcıya bir ayarlama istemiyle başvurur. Bu davranış, deneyim için uygun bir zamanda göz izleme istemini görüntülemek için kullanılabilir. Bu yöntem aşağıdaki nedenlerden dolayı önerilir
 
-1.  Göz Izleme ayarlaması Istem iletişim kutusu, kullanıcıya, göz izlemenin neden gerekli olduğuna ilişkin ayrıntıları sağlar.
-2.  Kullanıcıya, gözlerinizin ayarlanması için bir yol sunar.
+1.  Göz İzleme Ayarlama İstemi iletişim kutusu, kullanıcıya göz izlemenin neden gerekli olduğuyla ilgili ayrıntılar sağlar.
+2.  Kullanıcıya, gözü ayarlanmış şekilde reddetmek için bir yol sunar.
 
-Kullanıcı, göz Izleme ayarlamasını başlatmayı seçerse, odak ayarlama tamamlandıktan sonra orijinal uygulamaya geri dönmelidir. 
+Kullanıcı Göz İzleme Ayarlaması'nın başlatılmasını seçerse, ayarlama tamamlandıktan sonra odak özgün uygulamaya geri dönmeli. 
 
-### <a name="calibration-data-and-security"></a>Ayarlama verileri ve güvenliği
+### <a name="calibration-data-and-security"></a>Veri ve güvenliği ayarlama
 
-Ayarlama bilgileri cihazda yerel olarak depolanır ve herhangi bir hesap bilgileriyle ilişkili değildir. Cihazı ayarlama olmadan kimin kullanmışsa bir kayıt yoktur. Bu yeni kullanıcılardan, cihazı ilk kez kullandıklarında görselleri ayarlaması istenir ve daha önce ayarlamayı devre dışı bırakılmış olan kullanıcılar başarısız olur.
+Ayar bilgileri cihazda yerel olarak depolanır ve hiçbir hesap bilgisiyle ilişkili değildir. Cihazı kimin izinsiz kullandığına bir kayıt yoktur. Bu, yeni kullanıcılardan cihazı ilk kez kullanan görselleri ayarlamaları istenecek ve daha önce düzeltmeyi geri alan kullanıcılar veya ayarlama başarısız olmuşsa.
 
-Cihaz, 50 ayar profilini yerel olarak saklayabilir. Bu sayıya ulaşıldığında cihaz, kullanılmamış en eski profili otomatik olarak siler.
+Cihaz en fazla 50 ayar profilini yerel olarak depolar. Bu numaraya ulaşıldıktan sonra cihaz kullanılmayan en eski profili otomatik olarak siler.
 
-ayar bilgileri her zaman cihazdan **Ayarlar**  >  **gizlilik**  >  **göz izleyicide** silinebilir.  
+Ayar bilgileri, Gizlilik Göz izleyicisi'nin **Ayarlar**  >    >  **cihazdan silinebilir.**  
 
-### <a name="disable-calibration"></a>Ayarlamayı devre dışı bırak
+### <a name="disable-calibration"></a>Devre dışı bırakma
 
-Ayrıca, aşağıdaki adımları izleyerek ayarlama isteğini devre dışı bırakabilirsiniz:
+Ayrıca aşağıdaki adımları kullanarak da onay istemini devre dışı abilirsiniz:
 
-1. **Ayarlar**  >  **sistem**  >  **ayarlaması**' nı seçin.
-1. **yeni bir kişi bu HoloLens kullandığında, otomatik olarak göz ayarlama özelliğini çalıştırmayı ister**.
+1. Sistem   >  **Ayarlar'ı**  >  **seçin.**
+1. Bu ayarı **kullanan yeni bir kişi HoloLens, otomatik olarak göz ayarı çalıştırmayı sorun.**
 
    > [!IMPORTANT]
-   > Bu ayar, hologram oluşturma kalitesini ve rahatlığını olumsuz etkileyebilir.  Bu ayarı devre dışı bırakırsanız, göz izlemeye (metin kaydırma gibi) bağlı olan özellikler artık modern uygulamalarda çalışmaz.
+   > Bu ayar hologram işleme kalitesini ve rahatını olumsuz etkileyebilir.  Bu ayarı kapatarak göz izleme özelliğine (metin kaydırma gibi) bağlı olan özellikler artık çevreleyici uygulamalarda çalışmaz.
 
 > [!NOTE]
-> Ayarlar anahtarı, Windows Holographic, sürüm 20h2 itibarıyla [otomatik gözle, destek](hololens-release-notes.md#auto-eye-position-support)' i gözden geçirmek için kaldırılmıştır. Ayarlama istemi yalnızca kalibre edilmemiş bir Kullanıcı göz Izleme özellikli bir uygulama kullanıyorsa otomatik olarak görünür.
+> Ayarlar anahtarı, Otomatik Göz Konumu Desteği Windows Holographic sürüm 20H2'den [itibaren kaldırılmıştır.](hololens-release-notes.md#auto-eye-position-support) İstem otomatik olarak yalnızca bir kullanıcı Göz İzleme özellikli bir uygulama kullanıyorsa görünür.
 
-### <a name="hololens-2-eye-tracking-technology"></a>HoloLens 2 göz önünde izleme teknolojisi
+### <a name="hololens-2-eye-tracking-technology"></a>HoloLens 2 göz izleme teknolojisi
 
-Cihaz, görüntü kalitesini artırmak için göz izleme teknolojisini kullanır ve tüm hologramlar 'ın 3B 'de görüntülenmesini doğru ve rahat bir şekilde konumlandırıldığından emin olmak için. Gözleri bir parça olarak kullandığından, cihaz her kullanıcı için kendisini ayarlayabilir ve kulaklık biraz daha az kullanımda kaydığı için görsellerini ayarlayabilir.  Tüm ayarlamalar el ile ayarlama gerekmeden anında gerçekleşir.
+Cihaz, görüntüleme kalitesini artırmak ve tüm hologramların doğru ve 3D görüntüye uygun şekilde konumlarını sağlamak için göz izleme teknolojisini kullanır. Göz işaretleri yer işaretleri olarak kullandığı için cihaz, her kullanıcı için kendisini ayarlayabilir ve kullanım boyunca başlığın biraz kayması nedeniyle görsellerini ayarlayabilir.  Tüm ayarlamalar, el ile ayarlamaya gerek kalmadan hemen uzabilir.
 > [!NOTE]
-> Göz pozisyonları sistem tarafından hesaplandığından, IPD 'nin ayarlanması HoloLens 2 için geçerli değildir.
+> Göz pozisyonları sistem tarafından hesaplandıklarından, IPD ayarı Hololens 2 için geçerli değildir.
 
-HoloLens uygulamalar, gerçek zamanlı olarak aradığınızı izlemek için göz izlemeyi kullanır. Bu, geliştiricilerin tüm yeni bağlam, insan anlama ve holographic deneyimi kapsamındaki etkileşimleri sağlamak için kullanabileceği ana yetenektir. Geliştiricilerin bu özelliği kullanmak için herhangi bir şey yapması gerekmez.
+HoloLens uygulamalar, gerçek zamanlı olarak nerede arayabilirsiniz? için göz izleme kullanır. Bu, geliştiricilerin Holographic deneyiminde yepyeni bir bağlam düzeyi, insan anlayışı ve etkileşimler sağlamak için kullanabileceği ana özelliktir. Geliştiricilerin bu özelliği kullanmak için herhangi bir şey yapmaları gerek yok.
 
-## <a name="calibrating-your-hololens-1st-gen"></a>HoloLens ayarlama (1. genel)
+## <a name="calibrating-your-hololens-1st-gen"></a>HoloLens ayarlama (1. nesil)
 
-HoloLens (1. gen), hologram görüntüsünü kendi [takdirine](https://en.wikipedia.org/wiki/Interpupillary_distance) (ipd) göre ayarlar. IPD doğru değilse, hologramlar kararsız şekilde veya yanlış bir mesafede görünebilir. Cihazı kendi kenetme uzaklığına (IPD) ayarlayarak görsellerinizin kalitesini artırabilirsiniz.
+HoloLens (1. nesil) hologramı, etkileşim mesafenize (IPD) [göre](https://en.wikipedia.org/wiki/Interpupillary_distance) ayarlar. IPD doğru değilse hologramlar kararsız veya yanlış bir uzaklıkta görünebilir. Cihazı etkileşim mesafenize (IPD) ayarerek görsellerin kalitesini geliştirebilirsiniz.
 
-HoloLens (1. gen) cihazınızı ayarlarken, Cortana herkendisini tanıtdıktan sonra görsellerinizi ayarlamayı ister. Bu kurulum aşamasında ayarlama adımını doldurmanız önerilir. bununla birlikte, Cortana isteyip istemediğinizi bekleyip "atla" diyerek bunu atlayabilirsiniz.
+HoloLens (1. nesil) cihazınızı ayarlarken, yeni bir görüntü ortaya çıktıktan sonra Cortana ayarlamanızı istenir. Bu kurulum aşamasında ayarlama adımını tamamlamanız önerilir. bununla birlikte, Cortana isteyip istemediğinizi bekleyip "atla" diyerek bunu atlayabilirsiniz.
 
 ayarlama işlemi sırasında HoloLens, parmağınızı her göz için bir dizi altı hedefe hizalamanızı ister. HoloLens, bu işlemi, ipd 'yi gözleriniz için doğru şekilde ayarlamak üzere kullanır.
 

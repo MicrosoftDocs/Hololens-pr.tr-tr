@@ -1,6 +1,6 @@
 ---
-title: HoloLens 2 uyum ve rahatlık hakkında sss
-description: HoloLens 2 ' ye nasıl uyum ve karma gerçeklik deneyimlerinde rahat bilgi sahibi olmak hakkında sık sorulan soruların cevaplarından haberdar olun.
+title: HoloLens 2 fit ve konfor hakkında SSS
+description: HoloLens 2'ye nasıl uyum sunun hakkında sık sorulan soruların yanıtlarını takip edin ve karma gerçeklik deneyimlerinden rahat olun.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -13,57 +13,57 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9edcf4e49d92bbdcab523206e4685f2d7a8d8b0e2c2ccf8391ea2b32e304201f
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 158354c23e93abe770875491af1ab559e47557a7
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659802"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427064"
 ---
-# <a name="hololens-2-fit-and-comfort-frequently-asked-questions"></a>HoloLens 2 uyum ve rahatlık hakkında sık sorulan sorular
+# <a name="hololens-2-fit-and-comfort-frequently-asked-questions"></a>HoloLens 2 fit ve konfor için sık sorulan sorular
 
-İşte HoloLens kullanımı ve en iyi deneyimle ilgili ipuçları aşağıda verilmiştir.
+Burada, kullanıcılarınızı en iyi şekilde kullanmaya devam etmek ve en iyi deneyimi yaşamanıza yardımcı olmak için HoloLens.
 
-cihazınızı kullanmaya ve ayarlamaya ilişkin adım adım yönergeler ve bir video için, bkz. [HoloLens 2](hololens2-setup.md)' yi kullanıma hazırlayın.
+Adım adım yönergeler ve cihazınızı ayarlama hakkında bir video için bkz. [HoloLens 2'nizi kullanıma hazır hale get.](hololens2-setup.md)
 
 > [!NOTE]
-> Bu konudaki sığdırma ve rahatlık ipuçları yalnızca &mdash; yasalar veya yönetmelikleri değiştirmez veya HoloLens kullanırken iyi bir karardır. Güvende tutun ve eğlenceye sahip olun!
+> Bu konu başlığında yer alan uygun ve rahat ipuçları yalnızca herhangi bir yasa veya düzenlemenin yerini amayacak genel rehberlik veya bu konudaki kararlarınızı &mdash; HoloLens. Güvende kalın ve eğlenceli zamanlar!
 
-İşte HoloLens kullanımı ve en iyi deneyimle ilgili ipuçları aşağıda verilmiştir.
+Burada, kullanıcılarınızı en iyi şekilde kullanmaya devam etmek ve en iyi deneyimi yaşamanıza yardımcı olmak için HoloLens.
 
-## <a name="im-experiencing-discomfort-when-i-use-my-device-what-should-i-do"></a>Cihazımı kullandığım zaman rahatsızma ihtiyacım var. Ne yapmalıyım?
+## <a name="im-experiencing-discomfort-when-i-use-my-device-what-should-i-do"></a>Cihazımı kullanırken sorun yaşıyorum. Ne yapmalıyım?
 
-Bu deneyimle karşılaşırsanız, daha iyi hissetene kadar bir kesme yapın. İyi bir odada oturur ve bir bit için yeniden deneyin. HoloLens bir dahaki sefer kullandığınızda, ilk olarak daha kısa bir süre için kullanmayı deneyin.
+Sorun yaşamadıysanız, daha iyi hissedene kadar bir ara ver. İyi bir şekilde ışık alan bir odaya yer ve biraz gevşeterek deneyin. Uygulamanızı bir sonraki HoloLens, ilk başta daha kısa bir süre kullanmayı deneyin.
 
-Daha fazla bilgi için bkz. [HoloLens durum ve güvenlik](https://go.microsoft.com/fwlink/p/?LinkId=746661).
+Daha fazla bilgi için [bkz. HoloLens.](https://go.microsoft.com/fwlink/p/?LinkId=746661)
 
-## <a name="i-cant-see-the-whole-holographic-frame-or-my-holograms-are-cut-off"></a>Tüm holographic çerçevesini göremiyorum veya hologramlar kesiliyor
+## <a name="i-cant-see-the-whole-holographic-frame-or-my-holograms-are-cut-off"></a>Holografik çerçevenin tamamını göremiyorum veya hologramım kesildi
 
-Holographic çerçevesinin üst kenarını görmek için, cihazı başınıza daha yüksek olacak şekilde taşıyın ya da yayın bandının önüne biraz daha hafif bir açı yapın. Alt kenarı görmek için, cihazı başınıza daha alçak oturacak şekilde taşıyın veya yayın bandının önüne biraz aşağı doğru açısını yapın. görünüm çerçevesinin sol veya sağ kenarı görünür değilse, HoloLens vizörü 'ın forehead 'unuzda ortalanmasını sağlayın.
+Holografik çerçevenin üst kenarını görmek için cihazı, kafanıza daha yüksek bir yere ya da baş bandın biraz önünde açılı olacak şekilde hareket ettirin. Alt kenarı görmek için, cihazı kafanıza daha düşük bir yere hareket ettirin veya baş bandın biraz önünde aşağı doğru açıyla hareket ettirin. Görünüm çerçevesinin sol veya sağ kenarı görünmüyorsa, görünüm HoloLens mengenenizin orta olduğundan emin olun.
 
-## <a name="i-need-to-look-up-or-down-to-see-holograms"></a>Hologragram görmek için arama yapmam veya görünmem gerekiyor
+## <a name="i-need-to-look-up-or-down-to-see-holograms"></a>Hologramları görmek için yukarı veya aşağı bakmam gerekiyor
 
-Holographic çerçevesinin doğal Gaze ile eşleşmesi için cihaz vizörü ' nın konumunu ayarlamayı deneyin. Aşağıdaki adımları uygulayın:
+Holografik çerçevenin doğal bakışınıza uygun olması için cihazınızın görünür konumunu ayarlamayı deneyin. Aşağıdaki adımları uygulayın:
 
-- **Hologragram görmek için aramanız gerekirse**. İlk olarak, başlık bandınızı daha yüksek bir düzeye doğru kaydırın. Daha sonra, bir yandan da bir yandan da bir yandan da bir yandan da, Holographic çerçevesinin iyi bir görünümünü sağlamak için, bir yandan da bir baş bandı yerinde ve diğeri de
-- **Hologragram görmek için aramanız gerekiyorsa**. İlk olarak, baş bantın arkasına bir bit daha aşağı kaydırın. Ardından, parmak izini cihaz kolları ve Dizin parmaklarınızın altına, yayın bandına yerleştirin ve holographic çerçevesinin iyi bir görünümünü elde etmek için, en üst üste doğru bir görünüm elde edin.
+- **Hologramları görmek için göz atacaksanız.** İlk olarak, kafanıza biraz daha yüksek bant geri kaydırarak. Ardından, holografik çerçevenin iyi bir görünümüne sahip olmak için bir el ile baş bandı yerinde tutun ve diğer yandan da mengeneyi döndürün.
+- **Hologramları görmek için aşağıya bakmamız gerekirse.** İlk olarak, kafanıza biraz daha düşük bir bant geri kaydırarak. Ardından başparmaklarınızı cihaz koluna, dizin parmaklarınızı baş bandın üzerine, başparmaklarınızı da hafifçe sıkıştırarak yalıtarak güneşliği döndürün. Böylece holografik çerçevenin iyi bir görünümünüz olur.
 
-## <a name="hologram-image-color-or-brightness-does-not-look-right"></a>Hologram görüntü rengi veya parlaklığı doğru görünmüyor
+## <a name="hologram-image-color-or-brightness-does-not-look-right"></a>Hologram görüntüsü rengi veya parlaklığı doğru görünmüyor
 
-HoloLens 2 [ekran sorun giderme adımlarına](hololens2-display.md)bakın.
+2. HoloLens sorun [giderme adımlarına bakın.](hololens2-display.md)
 
-## <a name="the-device-slides-down-when-im-using-it-or-i-need-to-make-the-headband-too-tight-to-keep-it-secure"></a>Bu cihaz, kullandığım sırada kapanıyor veya bir yayın bandı güvenli tutmak için çok sıkı hale getirmeye ihtiyacım var
+## <a name="the-device-slides-down-when-im-using-it-or-i-need-to-make-the-headband-too-tight-to-keep-it-secure"></a>Cihazı kullanırken cihaz kayıyor veya bant güvenliğini sağlamak için çok sıkı hale geliyor
 
-ek yükü strap, özellikle de çok büyük bir hareket ediyorsanız, HoloLens kafanızı güvende tutmaya yardımcı olabilir. Ayrıca, strap, yayın bandına bir bit de gevşekilde olanak sağlayabilir. [Nasıl kullanacağınızı öğrenin](hololens2-setup.md#adjust-fit).
+Ek yük yükü, özellikle HoloLens fazla hareket ediyorsanız sorunlarınızı güvende tutmaya yardımcı olabilir. Bu da baş bantta biraz gevşeklik vermene de neden olabilir. [Kullanmayı öğrenin.](hololens2-setup.md#adjust-fit)
 
-Ayrıca &mdash; , baş boyutunuza ve şekle bağlı olarak, yayın bandı konumlandırmasını da deneyebilirsiniz. bu öğeyi, kendi ortamınızda yeniden konumlandırmak için yukarı veya aşağı doğru bir şekilde kaydırın.
+Ayrıca, baş boyutunuz ve şeklinize bağlı olarak baş bandın konumunu da sıntarak yukarı veya aşağı kaydırarak yeniden &mdash; konumlandırın.
 
-## <a name="how-can-i-adjust-hololens-to-fit-with-my-glasses"></a>HoloLens, gözlerimin sığacağı şekilde nasıl ayarlayabilirim?
+## <a name="how-can-i-adjust-hololens-to-fit-with-my-glasses"></a>Gözlüklerim ile HoloLens nasıl ayarlayabilirim?
 
-Eyema 'yı kapsayacak şekilde, vizörü ' ı eğgetirebilirsiniz.
+Göz koruyucuya uyum sağlayabileceği için, mengeneyi eğmek için.
 
-## <a name="my-arm-gets-tired-when-i-use-gestures-what-can-i-do"></a>Hareketleri kullanırken ARM, yordum. Ne yapabilirim?
+## <a name="my-arm-gets-tired-when-i-use-gestures-what-can-i-do"></a>Hareketleri kullanırken kolum sıyrıyor. Ne yapabilirim?
 
-Hareketleri kullanırken, kolunuzu sizin gövdeinizden uzak şekilde genişletmenize gerek yoktur. Daha rahat olduğu ve daha da yorgun bir yandan, sizin için daha yakından koruyun. Ayrıca, kollarınızı oluşturmadan hologramlar ile etkileşim kurmak için el ışınları kullanabilir [ve hareket ve taraftaki ışınlar hakkında daha fazla bilgi edinin](hololens2-basic-usage.md#the-hand-tracking-frame).
+Hareketleri kullanırken, kollarınızı gövdenize kadar genişletmenize gerek yoktur. Daha rahat ve daha az sıyrılamayacak şekilde kendi tarafınıza yakın bir yerde tut. Ayrıca el işlerinizi büyütmeden hologramlarla etkileşim kurmak için el raylarını da kullanabilirsiniz Hareket ve el rayları hakkında [daha fazla bilgi.](hololens2-basic-usage.md#the-hand-tracking-frame)
 
-Ve [sesli komutları](hololens-cortana.md)denediğinizden emin olun.
+Ayrıca ses komutlarını denemeyi [de deneyin.](hololens-cortana.md)

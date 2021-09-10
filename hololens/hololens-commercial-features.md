@@ -1,6 +1,6 @@
 ---
-title: HoloLens 2 özellikleri ve çözümleri
-description: işletmelerin HoloLens cihazlarını yönetmesi için Microsoft HoloLens ticari özellikleri hakkında bilgi edinin.
+title: HoloLens 2 özelliği ve çözümü
+description: İşletmelerin Microsoft HoloLens yönetecekleri ticari özellikler hakkında HoloLens öğrenin.
 author: qianw211
 ms.author: v-qianwen
 ms.date: 9/1/2021
@@ -16,56 +16,56 @@ ms.reviewer: ''
 manager: skerewa
 appliesto:
 - HoloLens 2
-keywords: HoloLens 2, ticari, özellikler, mdm, mobil cihaz yönetimi, bilgi noktası modu, uygulamalar, kimlik, Bitlocker, ıris, Windows Hello, Azure destekli, Autopilot, karma gerçeklik, WDAC
+keywords: HoloLens 2, ticari, özellikler, mdm, mobil cihaz yönetimi, bilgi noktası modu, uygulamalar, kimlik, Bitlocker, iris, Windows Hello, Azure destekli, Autopilot, karma gerçeklik, WDAC
 ms.openlocfilehash: 0c47eedad0d5a23249c48356765b74e4dbeac33e
-ms.sourcegitcommit: 58b124ba1722b2dff31d93723dd269df0f8319c4
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2021
-ms.locfileid: "123483245"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427659"
 ---
-# <a name="hololens-2-capabilities-and-solutions"></a>HoloLens 2 özellikleri ve çözümleri
+# <a name="hololens-2-capabilities-and-solutions"></a>HoloLens 2 özelliği ve çözümü
 
 ## <a name="why-hololens"></a>Neden HoloLens?
 
-2 ve karma gerçeklik uygulamalarına HoloLens, artık çalışanlar sınır olmadan işbirliği yapabilir, duyarlık ile hareket edebilir ve üretkenliği artırabilir.
+2 HoloLens Karma Gerçeklik uygulamaları sayesinde artık çalışanlar sınır olmadan işbirliği yapma, duyarlık ile hareket ediyor ve üretkenliği artırıyor.
 
-sınır olmadan işbirliği yapın ve HoloLens 2 üzerindeki karma gerçeklik uygulamalarıyla çalışan üretkenliğini artırmak için duyarlık ile hareket edin. Yerleşik sesli komutlar, göz izleme ve dünya çapındaki işleri hatasız bir şekilde tamamlamada sürekli odaklanmaya devam etmek için, sorunsuz bir şekilde çalışın. uzak iş arkadaşlarınızla gerçek zamanlı olarak Bağlan ve iş noktasındaki sorunları hızlı bir şekilde çözmek için fiziksel ortamınızda kapsamlı bir holographic tuval genelinde birlikte çalışır. Microsoft 'un güvenlik, güvenilirlik ve ölçeklenebilirlik ile desteklenen güçlü bir ekosistemle, yatırım getirisi (ROı) konusunda doğrudan bilgi edinin.  
+Sınır olmadan işbirliği yapın ve HoloLens 2'de karma gerçeklik uygulamalarıyla çalışanların üretkenliğini artırmak için duyarlık ile hareket edin. Görevleri hatasız olarak güvenli bir şekilde tamamlamaya sürekli odaklanmak için yerleşik sesli komutlar, göz izleme ve dünya yer bağlantısı ile sürekli olarak dikkat edin, daha uzun ve daha rahat bir şekilde hareket edin. Bağlan iş arkadaşlarınızla gerçek zamanlı olarak birlikte çalışır ve çalışma noktasındaki sorunları hızla çözmek için fiziksel ortamınıza yer paylaşımlı kapsamlı bir holografik tuvalde birlikte çalışır. Microsoft'un güvenliği, güvenilirliği ve ölçeklenebilirliğiyle desteklenen sağlam bir uygulama ekosistemi ile yatırım getirilerini (ROI) hemen hayata kaldırın.  
 
-Bu makalenin, karma gerçeklik 'in (MR) işletmenizin avantajlarından faydalanabileceği her türlü yolu düşündüğünü umuyoruz.
+Bu makalenin, karma gerçekliğin (MR) işletmenize nasıl faydalar kılmış olduğunu düşünmeniz için size ilham kaynağı olduğunu umuyoruz.
 
 ## <a name="hololens-2-capabilities"></a>HoloLens 2 özellikleri
 
-HoloLens 2 ' ye güçlü hale neden olur?
+2. HoloLens güçlü yapan nedir?
 
 | Özellik | Açıklama |
 |---------|-------------|
-| Dünya çapında sabitleme | Bağlantılı hologramlar tam olarak yerinde kalır. HoloLens 2 çalışma alanınızı anlamıştır. Bu nedenle, dijital içerik zaman içinde devam eder ve iş yaptığınız nesnelere veya yüzeylere bağlanır. |
-| El ile izleme | Dokunmatik, GRASP ve hologragram doğal olacak şekilde hareket ettirin. HoloLens 2 etkileşimlerinizde bir newfound memnuniyet için kendi ellerinize uyum sağlar. |
-| Göz izleme | Yeni bir bağlam düzeyi ve insan anlama avantajının keyfini çıkarın. HoloLens 2 ' yi tam olarak nerede arıyorsunuz, bu sayede amacınızı anlayabilmek ve hologramlar ile gerçek zamanlı olarak uyarlanmasını sağlayabilirsiniz. |
-| Ses etkin | yerleşik sesli komutlar, uygulamalı bir görevle birlikte yer alırken HoloLens 2 ' ye hızlı bir şekilde gezinmenize ve çalışmanıza olanak tanır. |
-| Ergonomik | HoloLens 2, genişletilmiş kullanımı desteklemek için bir içeri arama sistemi içeren hafif (3,28 kg). |
-| Büyük FoV | Yüksek çözünürlüklü holographic Tuvalinizi genişletin, büyük bir görünüm alanı görüntülenir. |
-| Untethered | İşle ilgili herhangi bir kablo veya harici paket olmadan ücretsiz olarak hareket edin. |
-| Azure destekli | Azure Karma Gerçeklik Hizmetleri ile kullanıcılar arasında devam eden bir konuma ve/veya nesneye tutturulmuş, yüksek kaliteli 3B içerik akışı yapın.
-| Karma gerçeklik yakalama | Gerçek zamanlı olarak başkalarıyla paylaşmak için bir fotoğraf veya video olarak bir deneyim belgeleyin. |
-| İş İçin Windows Hello | Iris tabanlı Biyometri kimlik doğrulaması, iş akışına hızlı ve güvenli bir şekilde sahip olur. |
-| Windows Autopilot | dağıtılmış iş siteleri genelinde kutudan ayrılmaya hazır olmaları için HoloLens 2 için hizmetleri ayarlayın ve önceden yapılandırın. |
-| İşletim sistemi güncelleştirmeleri | Aylık bakım güncelleştirmeleriyle güvende tutun ve bı yıllık sürümlerde yeni üretkenlik ve yönetilebilirlik özelliklerinin avantajlarından yararlanın. |
-| Cihazları kolayca yönetin | Microsoft Intune, VMware çalışma alanı bir, mobileıron ve çok daha fazlası gibi çözümleri kullanarak birden çok HoloLens 2 cihazı eşzamanlı olarak yönetin. |
-| Düzenlenen ortamlarda çalıştırma | HoloLens 2 ' nin ıso sınıfı 5,0 ve UL sınıfı ı, bölüm 2 ' yi belirtilen ortamlar dahil yüksek düzeyde düzenlenmiş ortamları destekleyen kapsamlı bir cihaz portföyü vardır. |
+| Dünya yer bağlantısı | Sabitli hologramlar tam olarak yerinde kalır. HoloLens 2, çalışma alanınızı anlar. Bu nedenle dijital içerik, zaman içinde çalışmaya devam eder ve bu da sizin üzerinde çalışma yapılan nesnelere veya yüzeylere sabitler. |
+| El izleme | Hologramları doğal bir şekilde dokunarak, kavrayarak ve hareket ettirin. HoloLens 2, etkileşimlerinize yeni bir memnuniyet sağlamak için size uyar. |
+| Göz izleme | Yeni bir bağlam ve insan anlayışı düzeyinin keyfini çıkarın. HoloLens 2, tam olarak nerede olduğunu anlayacaktır, bu nedenle amacınızı anlayacaktır ve hologramları gerçek zamanlı olarak gözlere uyarlar. |
+| Ses etkin | Yerleşik sesli komutlar, ellerinizi bir görevle meşgul HoloLens 2'de hızla gezinmenize ve çalışmanıza olanak sağlar. |
+| Ergonomik | HoloLens 2, genişletilmiş kullanımı desteklemek için bir çevirmeli sığdırma sistemi içeren hafiftir (3,28 kg). |
+| Büyük FoV | Holografik tuvali yüksek çözünürlüklü, büyük görünüm alanı ekranları ile genişletin. |
+| Untethered | İşlerinizi yapmak için kablo veya dış paketsiz serbestçe hareket etme. |
+| Azure destekli | Azure karma gerçeklik hizmetleriyle kullanıcılar arasında devam eden bir konuma ve/veya nesneye sabitlene yüksek uygunlukta 3D içerik akışı.
+| Karma gerçeklik yakalama | Bir deneyimi fotoğraf veya video olarak belgele, diğerleriyle gerçek zamanlı olarak paylaş. |
+| İş İçin Windows Hello | Iris tabanlı biyometrik kimlik doğrulaması, iş akışına hızlı ve güvenli bir şekilde erişim sağlar. |
+| Windows Autopilot | HoloLens 2 için hizmetleri ayarlayın ve önceden yapılandırarak dağıtılmış çalışma alanlarının tamamda kullanıma hazır hale geldi. |
+| Işletim Sistemi Güncelleştirmeleri | Aylık hizmet güncelleştirmeleri ile güvenliği sağlamanın ve iki yıllık sürümlerde yeni üretkenlik ve yönetilebilirlik olanaklarının avantajından yararlanma. |
+| Cihazları Kolayca Yönetme | Microsoft Intune, VMware Workspace One, MobileIron ve çok daha fazlasını kullanarak birden çok HoloLens 2 cihazı aynı anda yönetin. |
+| Düzenlenen ortamlarda çalışma | HoloLens 2, ISO Sınıfı 5.0 ve UL Sınıf I, Bölüm 2 olarak belirlenmiş ortamlar da dahil olmak üzere yüksek düzenlemeye tabi ortamları destekleyen kapsamlı bir cihaz portföyüne sahiptir. |
 
 [!INCLUDE [solutions](includes/hlsolutions.md)]
 
-## <a name="how-hololens-2-is-transforming-industries"></a>HoloLens 2 sektörlerin dönüştürülmesi
+## <a name="how-hololens-2-is-transforming-industries"></a>HoloLens 2'nin sektörleri dönüştürmesi
 
 :::row:::
     :::column:::
         [<img src="images/eaton.png" alt="Eaton Vehicle Group" width=350px>](https://customers.microsoft.com/en-us/story/1406696349549504197-eaton-vehicle-group-dynamics-365-mixed-reality)
     :::column-end:::
     :::column span="2":::
-        ### <a name="eatons-vehicle-group-uses-dynamics-365-mixed-reality-to-drive-savings-efficiencies"></a>[Eaton araç grubu, tasarruf ve verimlilik sağlamak için Dynamics 365 karma gerçeklik kullanır.](https://customers.microsoft.com/en-us/story/1406696349549504197-eaton-vehicle-group-dynamics-365-mixed-reality)
-        "Bir sorunu açıkdığınızda farklı diller konuşuyoruz. bunu açıkladığınızda, diğer taraftan biri ne olduğunu tam olarak anlayamayabilir, ancak HoloLens, insanların anladığından gerçek zamanlı olarak gösterebilirsiniz. " <br> -Alexandre. Moraes: Eaton 'de tesis yöneticisi.
+        ### <a name="eatons-vehicle-group-uses-dynamics-365-mixed-reality-to-drive-savings-efficiencies"></a>[Eaton'un Vehicle Group, tasarruf ve verimlilik elde etmek için Dynamics 365 karma gerçeklik kullanır.](https://customers.microsoft.com/en-us/story/1406696349549504197-eaton-vehicle-group-dynamics-365-mixed-reality)
+        "Bir sorunu açıklarken, farklı dillerden söz edebiliriz. Bunu açıklayacak olurken, diğer taraftan birisi neler olduğunu tam olarak anlamayabilirsiniz, ancak bunu gerçek zamanlı olarak HoloLens anlar." <br> - Dizi M. Tümes: Plant Manager at Eaton.
     :::column-end:::
 :::row-end:::
 
@@ -76,8 +76,8 @@ HoloLens 2 ' ye güçlü hale neden olur?
         [<img src="images/sheba.png" alt="Sheba Medical Center" width=350px>](https://customers.microsoft.com/en-us/story/1388628932382960935-sheba-health-provider-azure-en-israel)
     :::column-end:::
     :::column span="2":::
-        ### <a name="sheba-medical-center-uses-microsofts-hololens-for-ventilators-training"></a>[sheba tıbbi merkez, Microsoft 'un havalandırma eğitimi için HoloLens kullanır.](https://customers.microsoft.com/en-us/story/1388628932382960935-sheba-health-provider-azure-en-israel)
-        tıbbi eğitim hizmetinde, krın süreleriyle HoloLens.
+        ### <a name="sheba-medical-center-uses-microsofts-hololens-for-ventilators-training"></a>[Sheba Medical Center, microsoft'un HoloLens eğitim için kullandığı uygulamadır.](https://customers.microsoft.com/en-us/story/1388628932382960935-sheba-health-provider-azure-en-israel)
+        HoloLens zamanlarında tıbbi eğitim hizmetine devam ediyor.
     :::column-end:::
 :::row-end:::
 
@@ -88,8 +88,8 @@ HoloLens 2 ' ye güçlü hale neden olur?
         [<img src="images/zf-group.jpg" alt="ZF Group" width=350px>](https://customers.microsoft.com/en-us/story/1341470537472393895-zfgroup-gray-court-chapter-automotive-microsoft365)
     :::column-end:::
     :::column span="2":::
-        ### <a name="zf-builds-agile-facility-at-gray-court-with-microsoft-365-improves-operational-equipment-efficiency"></a>[ZF, Microsoft 365 ile gri mahkeme göre çevik tesis oluşturur, operasyonel ekipman verimliliğini geliştirir.](https://customers.microsoft.com/en-us/story/1341470537472393895-zfgroup-gray-court-chapter-automotive-microsoft365)
-        ZF grup için Microsoft 365, çalışanlarınızın gerçek zamanlı bilgi paylaşma, sorun giderme ve iletişim kurmasına yardımcı olur. 
+        ### <a name="zf-builds-agile-facility-at-gray-court-with-microsoft-365-improves-operational-equipment-efficiency"></a>[ZF, Gray Court'ta Microsoft 365 çevik tesisler geliştirmektedir ve operasyonel ekipman verimliliğini artırır.](https://customers.microsoft.com/en-us/story/1341470537472393895-zfgroup-gray-court-chapter-automotive-microsoft365)
+        ZF Group için Microsoft 365, çalışanlarının bilgileri paylaşmasına, sorunlarını gidermesine ve gerçek zamanlı olarak iletişim kurmasına yardımcı olur. 
     :::column-end:::
 :::row-end:::
 
@@ -100,8 +100,8 @@ HoloLens 2 ' ye güçlü hale neden olur?
         [<img src="images/tokyu.png" alt="Tokyu Construction" width=350px>](https://customers.microsoft.com/en-us/story/1333933369626897988-tokyu-construction-manufacturing-azure-holo-lens-2)
     :::column-end:::
     :::column span="2":::
-        ### <a name="tokyu-construction-improves-engineering-precision-and-increases-productivity-with-azure-remote-rendering-on-hololens-2"></a>[Tokyu yapımı, mühendislik hassasiyetini artırır ve HoloLens 2 üzerinde Azure uzaktan işleme ile üretkenliği artırır.](https://customers.microsoft.com/en-us/story/1333933369626897988-tokyu-construction-manufacturing-azure-holo-lens-2)
-        Eğitilen bir mimari mühendissiz değilseniz, bir 2B şema ile bakmak ve bir binasının 3D olarak nasıl göründüğünü görselleştirmek zor olabilir. 
+        ### <a name="tokyu-construction-improves-engineering-precision-and-increases-productivity-with-azure-remote-rendering-on-hololens-2"></a>[Tokyu Construction mühendislik duyarlığı artırır ve 2. Azure Remote Rendering ile HoloLens artırır.](https://customers.microsoft.com/en-us/story/1333933369626897988-tokyu-construction-manufacturing-azure-holo-lens-2)
+        Eğitilmiş bir mimari mühendisi değilken 2D şemaya bakmak ve bir binanın 3D'de nasıl bir şey olacağını görselleştirmek zor olabilir. 
     :::column-end:::
 :::row-end:::
 
@@ -112,37 +112,37 @@ HoloLens 2 ' ye güçlü hale neden olur?
         [<img src="images/mda-hl2.jpg" alt="MDA" width=350px>](https://customers.microsoft.com/en-us/story/1377057233739728271-mda-manufacturing-hololens-canada)
     :::column-end:::
     :::column span="2":::
-        ### <a name="mda-takes-mixed-reality-into-orbit-with-hololens-2"></a>[MDA, karma gerçekliği HoloLens 2 ile yörünge & lt sürer.](https://customers.microsoft.com/en-us/story/1377057233739728271-mda-manufacturing-hololens-canada)
-        MDA, mühendislerin tasarımları görselleştirmesine, tanılama sorunlarını hızlandırmasına ve astronotlar ve zemin denetçilerine eğilmesine yardımcı olmak için modern karma gerçeklik deneyimlerini kullanır.
+        ### <a name="mda-takes-mixed-reality-into-orbit-with-hololens-2"></a>[MDA, karma gerçekliği 2 ile birlikte HoloLens alır.](https://customers.microsoft.com/en-us/story/1377057233739728271-mda-manufacturing-hololens-canada)
+        MDA, mühendislerin tasarımları görselleştirmeye, tanılama sorunlarını hızlandırmaya ve astronotları ve yer denetleyicilerini eğitmaya yardımcı olmak için çevreleyici karma gerçeklik deneyimlerini kullanır.
     :::column-end:::
 :::row-end:::
 <br>
 
 ---
 
-## <a name="managing-hololens-2-in-your-organization"></a>kuruluşunuzda HoloLens 2 ' i yönetme
+## <a name="managing-hololens-2-in-your-organization"></a>HoloLens 2'nin kuruluşta yönetilmesi
 
-HoloLens 2, kuruluşların HoloLens cihazlarını yönetmesini ve kullanmasını kolaylaştıran özellikler içerir. bazıları [HoloLens için mobil cihaz yönetimi (MDM)](hololens-mdm-configure.md) ile veya [Windows yapılandırma tasarımcısı](app-deploy-provisioning-package.md#setup)kullanılarak [paketlerin sağlanması](hololens-provisioning.md) yoluyla, bazı özellikler cihaza dahildir.
+HoloLens 2, kuruluşların cihazları yönetmelerini ve kullanmalarını kolaylaştıran HoloLens içerir. Bazı özellikler cihaza dahil edilirken, diğerleri HoloLens için Mobil Cihaz Yönetimi [(MDM)](hololens-mdm-configure.md) [](hololens-provisioning.md) veya Windows Yapılandırma Tasarımcısı [kullanılarak Paket Sağlama aracılığıyla etkinleştirilebilir.](app-deploy-provisioning-package.md#setup)
 
 | Yapmak istiyorum... | Çözüm | Description |  
 |---------| ------------|------------|
-Son kullanıcılarım 'ın nasıl oturum açmasını yönetin | [**Kimlik**](hololens-identity.md) | HoloLens 2, birkaç tür kullanıcı kimliğini destekler-Azure Active Directory (AAD), Microsoft hesabı (MSA) ve yerel hesaplar.  |
-| Kullanıcı verilerini şifreleme | [**Veri güvenliği**](security-encryption-data-protection.md) | HoloLens 2 ' de BitLocker veri şifrelemesi, diğer Windows cihazlı aynı düzeyde güvenlik koruması sağlamak için etkinleştirilmiştir. | 
-kuruluşumdaki HoloLens cihazları yönetme | [**Mobil Cihaz Yönetimi**](hololens-mdm-configure.md) | ayarları yönetin, yüklemek için uygulamalar ' ı seçin ve kuruluşunuzun birden çok HoloLens 2 cihazda merkezi bir konumdan özel ihtiyacı olan güvenlik yapılandırmasını ayarlayın. | 
-|Yeni kullanıcılar ve cihazlar için kurulum süresini en aza indirme | [**Autopilot**](hololens2-autopilot.md) | Microsoft Endpoint Manager ' de kullanıma hazır deneyim (OOBE) yapılandırın ve son kullanıcıların cihazları iş için daha fazla etkileşim olmadan hazırlamasına olanak sağlayın. |  
-| Cihazlarım için işletim sistemi güncelleştirmelerini denetleme | [**İş İçin Windows Update**](hololens-updates.md#managing-updates-by-using-windows-update-for-business) | Windows Iş için güncelleştirme, uzun süreli bakım kanalı için cihazlara ve desteğe denetimli işletim sistemi güncelleştirmeleri sağlar. |  
-| Belirli ve LOB uygulamalarının indirilmesine izin ver |[**Uygulama yönetimi**](app-deploy-overview.md) | seçilen HoloLens 2 kullanıcı grupları için uygulamaları dağıtmayı ve denetlemeyi seçin. | 
-| Başlangıç menüsünde belirli uygulamaları gösterme veya gizleme |[**Bilgi noktası modu**](hololens-kiosk.md) | uygulama tanıtımları veya adanmış iş uygulamalarında kullanmak üzere HoloLens 2 ' i sabit amaçlı bir cihaz olarak çalışacak şekilde yapılandırın. 
-| Uygulamaları kilitleyerek ortamımı güvenli hale getirin | [**Ung**](windows-defender-application-control-wdac.md) | Windows Defender Uygulama denetimi (WDAC), uygulamaların ve işlemlerin cihaz kullanıcısı tarafından başlatılmasını engeller.
-| Uygulama ve işlemlere yönelik kurallarla cihaz güvenliğini yönetme | [**İlkeler (CSP)**](hololens-csp-policy-overview.md) | bt yöneticileri, HoloLens 2 üzerinde desteklenen ilke csp 'lerin mevcut bir listesini kullanarak ilke ayarlarını tanımlayabilir ve uygulayabilir. |  
-| Cihazın İnternet 'e nasıl bağlandığını yönetme | [**Ağ ve bağlantı**](hololens-certificates-network.md) | Wi-Fi, VPN 'Ler veya iç kaynaklara erişmek için sertifika tabanlı kimlik doğrulaması kullanın. | 
-| Cihazı birden çok kullanıcıyla paylaşma | [**Otomatik özelleştirilmiş görüntüleme**](hololens-calibration.md#auto-eye-position-support) | HoloLens 2 ekran otomatik olarak otomatik gözle ayarlanır (aep) ve cihaz [kullanıcılar arasında paylaşıldığında](hololens-multiple-users.md)el ile ayarlama işleminin çalıştırılması gereksinimini ortadan kaldırır. |
+Son kullanıcılarımı oturum açma adımlarını yönetme | [**Kimlik**](hololens-identity.md) | HoloLens 2 çeşitli kullanıcı kimliklerini destekler: Azure Active Directory (AAD), Microsoft Hesabı (MSA) ve yerel hesaplar.  |
+| Kullanıcı verilerini şifreleme | [**Veri güvenliği**](security-encryption-data-protection.md) | BitLocker veri şifrelemesi, diğer HoloLens cihazla aynı güvenlik koruması düzeyini sağlamak için Windows etkinleştirilir. | 
+Kuruluşumda HoloLens cihazları yönetme | [**Mobil Cihaz Yönetimi**](hololens-mdm-configure.md) | Ayarları yönetin, güvenlik yapılandırmalarını yüklemek ve merkezi bir konumdan birden fazla veya 2 cihaza HoloLens gereksinimlerine göre ayarlamak için uygulamaları seçin. | 
+|Yeni kullanıcılar ve cihazlar için kurulum süresini en aza indirme | [**Otopilot**](hololens2-autopilot.md) | Microsoft Endpoint Manager'da ilk kullanım deneyimini (OOBE) yapılandırma ve son kullanıcıların çok az etkileşimle veya hiç etkileşim olmadan cihazları iş kullanımına hazırlamalarına olanak tanır. |  
+| Cihazlarım için işletim sistemi güncelleştirmelerini denetleme | [**İş İçin Windows Update**](hololens-updates.md#managing-updates-by-using-windows-update-for-business) | Windows İş için Güncelleştirme cihazlara denetimli işletim sistemi güncelleştirmeleri ve uzun süreli bakım kanalı için destek sağlar. |  
+| Belirli ve LOB uygulamalarının indirilmelerine izin ver |[**Uygulama Yönetimi**](app-deploy-overview.md) | 2 kullanıcıdan daha fazla kullanıcıdan seçilen gruplarda uygulamaları HoloLens ve denetlemeyi seçin. | 
+| Başlat men menüsünde belirli uygulamaları gösterme veya gizleme |[**Bilgi noktası modu**](hololens-kiosk.md) | HoloLens 2'yi uygulama tanıtımlarında veya ayrılmış iş uygulamalarında kullanmak üzere sabit amaçlı bir cihaz olarak işleve sahip olacak şekilde yapılandırma. 
+| Uygulamaları kilitleyerek ortamımı güvenli hale sağlama | [**WDAC**](windows-defender-application-control-wdac.md) | Windows Defender Uygulama Denetimi (WDAC), uygulama ve işlemlerin cihaz kullanıcısı tarafından başlatılanlarını engeller.
+| Uygulamalar ve işlemler için kurallarla cihaz güvenliğini yönetme | [**İlkeler (CSP'ler)**](hololens-csp-policy-overview.md) | IT Yöneticileri, HoloLens 2'de desteklenen İlke CSP'lerinin mevcut listesini kullanarak ilke ayarlarını tanımlayabilir ve HoloLens olabilir. |  
+| Cihazın İnternet'e nasıl bağlanıyor olduğunu yönetme | [**Ağ ve Bağlantı**](hololens-certificates-network.md) | Wi-Fi, VPN'ler veya iç kaynaklara erişmek için sertifika tabanlı kimlik doğrulaması kullanın. | 
+| Cihazı birden çok kullanıcıyla paylaşma | [**Otomatik Özelleştirilmiş Görüntü**](hololens-calibration.md#auto-eye-position-support) | HoloLens 2 ekran Otomatik Göz Konumu (AEP) ile otomatik olarak ayarlanır ve cihaz kullanıcılar arasında paylaşılırken el ile ayarlama işlemi [çalıştırma ihtiyacı ortadan kaldırılır.](hololens-multiple-users.md) |
 
-Yukarıdaki çözümler için [Lisans gereksinimleri](hololens-licenses-requirements.md) hakkında bilgi edinin.
+Yukarıdaki çözümler [için Lisanslama Gereksinimleri](hololens-licenses-requirements.md) hakkında bilgi edinebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 > [!div class="nextstepaction"]
-> [2 HoloLens keşfetme](hololens2-options.md)
+> [HoloLens 2 seçeneklerini keşfet](hololens2-options.md)
 
 > [!div class="nextstepaction"]
->[Planlama HoloLens 2 dağıtımı](hololens-requirements.md) 
+>[HoloLens 2 dağıtımı planlama](hololens-requirements.md) 

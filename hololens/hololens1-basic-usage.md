@@ -15,11 +15,11 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 70ee881eb0c2ffaade173b31e5168371d042bbb2
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190081"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428516"
 ---
 # <a name="getting-around-hololens-1st-gen"></a>HoloLens (1. nesil)
 
@@ -31,13 +31,13 @@ Bu kılavuz karma gerçekliğe giriş, hologramlarla etkileşime geçme hareketl
 
 Bu HoloLens hologramlar, dünyanıza bir parçası gibi bakmak ve seslerini yapmak için fiziksel ortamınız ile bir karışımını sunar. Hologramlar etrafınız dolsa bile çevrenizi görmeye, serbestçe hareket etmeye ve diğer kişi ve nesnelerle etkileşime geçebilirsiniz. Bu deneyime "karma gerçeklik" çağrılır.
 
-Holografik çerçeve, hologramlarınızı en ayrıntılı görüntüye duyarlı olacak şekilde konumlar ve görme lensleri çevre birimi görüş açınızı kontrolsiz bırakır. Uzamsal ses ile, arkanızda olsa bile bir hologramı tespit etmek için kullanabilirsiniz. Ayrıca HoloLens öğrenen ve anlayana kadar gerçek nesnelere hologramlar yer ve dolayısıyla uygulamalarınız ve oyunlarınızı da ebilirsiniz. Bu nedenle, bir oyundeki bir karakter sizin yer yerize yer veya uzay robotları [duvarlarınızı yalayabilir.](https://www.microsoft.com/store/apps/9nblggh5fv3j)
+Holografik çerçeve, hologramlarınızı en ayrıntılı görüntüye duyarlı olacak şekilde konumlar ve görme lensleri çevre birimi görüş açınızı kontrolsiz bırakır. Uzamsal ses ile, arkanızda olsa bile bir hologramı tespit etmek için kullanabilirsiniz. Ayrıca HoloLens öğrenen ve anlıyoruz, hologramları gerçek nesnelere ve dolayısıyla uygulamalarınıza ve oyunlarınızı çevreye yer musunuz? Bu nedenle, bir oyundeki bir karakter sizin yer yerize yer veya uzay robotları [duvarlarınızı kapatabilir.](https://www.microsoft.com/store/apps/9nblggh5fv3j)
 
-## <a name="use-hololens-with-your-hands"></a>El HoloLens kullanarak
+## <a name="use-hololens-with-your-hands"></a>HoloLens el ile kullanma
 
-Bu HoloLens akıllı telefonunuzu kullanmaya çok benzer. Holografik pencereleri, menüleri ve düğmeleri işlemek için ellerinizi kullanabilirsiniz.  Uygulamaları ve hologramları işaret etmek, tıklamak veya dokunmak yerine bakışlarınızı, sesinizi [ve](hololens-cortana.md)hareketlerinizi kullanarak uygulamaları ve hologramları seçerek HoloLens.
+Bu HoloLens akıllı telefonunuzu kullanmaya çok benzer. Holografik pencereleri, menüleri ve düğmeleri işlemek için ellerinizi kullanabilirsiniz.  Uygulama ve hologramları işaret etmek, tıklamak veya dokunmak yerine bakışlarınızı, sesinizi [ve](hololens-cortana.md)hareketlerinizi kullanarak uygulamaları ve hologramları seçerek HoloLens.
 
-Bu temel etkileşimleri biliyor ve bu etkileşimleri HoloLens hızlı bir şekilde tamamlar.
+Bu temel etkileşimleri biliyor ve bu etkileşimleri HoloLens anlık bir şekilde tamamlar.
 
 İlk kez kendi kaynaklarınızı ilk kez kullanırken temel bilgileri HoloLens. Ayrıca Başlat men menüsünde bir hareket **öğreticisi bulacaksınız.** Learn Gestures uygulamasını bulun.
 
@@ -47,7 +47,7 @@ HoloLens iki tarafı da birkaç metre görene algılayıcılar vardır. Ellerini
 
 ![El izleme HoloLens gösteren resim.](./images/hololens-2-gesture-frame.png)
 
-### <a name="open-the-start-menu-with-bloom"></a>Bloom ile Başlat menüsü açın
+### <a name="open-the-start-menu-with-bloom"></a>Bloom ile Başlat menüsü açma
 
 Başlat menüsünü **açmak** için:
 
@@ -74,11 +74,11 @@ Bir uygulamayı veya başka bir hologramı seçmek için, doğrudan seçmekte ol
 
 Şimdi teste hareket koyabilirsiniz!
 
-Yüklü uygulamalarınızı Başlat menüsü'da [bulabilirsiniz ve](holographic-home.md) HoloLens (1. nesil) için daha fazla uygulama Microsoft Store.
+Yüklü uygulamalarınızı uygulamanın Başlat menüsü [](holographic-home.md) ve HoloLens (1. nesil) için daha fazla uygulama Microsoft Store.
 
 Başlat **menüsünü** açın ve bir uygulama seçin!
 
-Uygulamaları HoloLens bir pc'den biraz farklıdır: Bazı uygulamalar 2D görünüm kullanır ve diğer uygulamalar gibi Windows benzer. Diğer uygulamalar (çevreleyici uygulamalar) 3D görünümü kullanır ve bunları başlattıklarında gördüğünüz tek uygulama haline bunlar olur.
+Uygulamaları HoloLens bir pc'den biraz farklıdır: Bazı uygulamalar 2D görünüm kullanır ve diğer uygulamalar gibi Windows benzer. Diğer uygulamalar (çevreleyici uygulamalar) 3D görünümü kullanır ve bunları başlattıklarında, gördüğünüz tek uygulama haline bunlar olur.
 
 Bir uygulama penceresi veya uygulama başlatıcısı koysanız, siz kaldırana kadar bu pencere yerinde kalır. Bu hologramları karma gerçeklik giriş sayfanıza herhangi bir zamanda taşıma veya yeniden boyutlandırma.
 
@@ -87,7 +87,7 @@ Bir uygulama penceresi veya uygulama başlatıcısı koysanız, siz kaldırana k
 Uygulamaları bir HoloLens taşıma ve yeniden boyutlandırma, bir pc'den biraz farklı çalışır. Uygulamayı sürüklemek yerine, bakışınızı bir hareket veya [tıkçıyla](https://support.microsoft.com/help/12644/hololens-use-gestures) birlikte [kullanırız.](hololens1-clicker.md) Bir uygulama penceresini 3D alanda da döndürebilirsiniz.
 
 > [!TIP]
-> Sesinizi kullanarak uygulamaları yeniden düzenleme - uygulamaya bakarak "Yüz yüze", "Daha Büyük" veya "Daha Küçük" gibi bir ifade kullanın. Veya bir Cortana taşımayı diyoruz: "Hey Cortana, uygulama \* *adını \* buraya taşı."*
+> Sesinizi kullanarak uygulamaları yeniden düzenleme- bir uygulamaya bakarak "Benimle yüz yüze", "Daha büyük" veya "Daha Küçük" gibi bir ifade kullanın. Veya Cortana için "Hey Cortana, move \* *app name here" (Uygulama \** adını buraya taşı) de.
 
 ### <a name="move-an-app"></a>Uygulamayı taşıma
 
@@ -98,7 +98,7 @@ Uygulamaya (bir uygulama penceresinin başlık çubuğunda) bakar ve ardından a
 - **Ayarla'yı** seçin, tıklar ve basılı tutun ve uygulamayı konumlandırmak için ellerinizi hareket ettirin. Tıkıcıyı bırakın ve Bitti'yi **seçin.**
 
 > [!TIP]
-> Uygulamaları taşısanız bile hareket ettirerek hareket çerçevesinde tutmanız gerekir.
+> Uygulamaları taşısanız bile bıraksanız, bakışınız ile takip etmek için el hareket çerçevesinde tutmanız gerekir.
 
 ### <a name="resize-an-app"></a>Uygulamayı yeniden boyutlandırma
 
@@ -106,7 +106,7 @@ Uygulamaya göz at ve ardından aşağıdakilerden birini yapın.
 
 - Uygulama penceresinin bir köşesine veya kenarına bakarak basılı tutun. Uygulamanın boyutunu değiştirmek için ellerinizi hareket ettirin ve bitirin.
 - **Ayarla'ya seçin.** Uygulamanın köşelerinde mavi karelerden birini açın, basılı tutun ve ardından el ile hareket ettirerek uygulamayı yeniden boyutlandırabilirsiniz. Onu serbest bırakmak için parmaklarınızı kaldırın ve **Bitti'yi seçin.**
-- **Ayarla'ya seçin.** Uygulamanın köşelerinde mavi karelerden birini açın, tıklar ve basılı tutun, sonra da ellerinizi hareket ettirerek uygulamayı yeniden boyutlandırabilirsiniz. Tıkıcıyı bırakın ve Bitti'yi **seçin.**
+- **Ayarla'ya seçin.** Uygulamanın köşelerinde mavi karelerden birini göz at, tıklar ve basılı tutar, sonra da el ile hareket ettirerek uygulamayı yeniden boyutlandırabilirsiniz. Tıkıcıyı bırakın ve Bitti'yi **seçin.**
 
 > [!TIP]
 > Ayarlama modunda herhangi bir hologramı hareket ettirebilirsiniz veya yeniden boyutlandırabilirsiniz.
@@ -117,7 +117,7 @@ Uygulamaya göz at ve seçmek için iki el ile de basılı tutun. Bir el sabit t
 
 ### <a name="scroll-content-in-an-app-window"></a>Uygulama penceresinde içeriği kaydırma
 
-Uygulama penceresinin içeriğine göz atabilirsiniz. Dokunun ve basılı tutun ve ardından içeriği kaydırmak için ellerinizi biraz yukarı veya aşağı doğru hareket ettirin.
+Uygulama penceresinin içeriğine bakar. Dokunun ve basılı tutun ve ardından içeriği kaydırmak için ellerinizi biraz yukarı veya aşağı doğru hareket ettirin.
 
 ## <a name="meet-the-hololens-1st-gen-clicker"></a>HoloLens (1. Nesil) Clicker'ı karşılama
 
@@ -135,7 +135,7 @@ Artık kendi özel HoloLens (1. nesil) yapılandırmanızı sebilirsiniz.
 
 ### <a name="help-i-dont-see-my-holograms"></a>Yardım! Hologramlarımı göremiyorum
 
-Sanal cihazı kullanırken yerleştirilen hologramları görmüyorsanız HoloLens deneyen bazı şeyler vardır:
+Sanal cihazı kullanırken yerleştirilen hologramları görmüyorsanız HoloLens denememiz gereken bazı şeyler vardır:
 
 - Doğru alana bakarak hologramların bıraktığın &mdash; yerde kalmasını unutmayın!
 - Çok fazla doğrudan izin vermeden iyi bir şekilde ışık alan bir odada olduğundan emin olun.

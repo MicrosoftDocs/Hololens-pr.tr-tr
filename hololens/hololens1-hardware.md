@@ -14,17 +14,17 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 587253a7ec3d3959e7861fedc474d6a2e39dd369
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189911"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427182"
 ---
 # <a name="hololens-1st-gen-hardware"></a>HoloLens (1. nesil) donanım
 
 ![Microsoft HoloLens (1. nesil).](images/see-through-400px.jpg)
 
-Microsoft HoloLens (1. nesil), dünyanın ilk tam olarak yersiz holografik bilgisayarıdır. HoloLens, holografik deneyimler aracılığıyla kişisel bilgi işlemi yeni yöntemlerle yeniden tanımlar. HoloLens, çevrelenmiş gerçek dünyaya sabitlenmiş 3D hologramlar sunmak için son teknoloji optik ve algılayıcıları bir karışımını bir kez daha sağlar.
+Microsoft HoloLens (1. nesil), dünyanın ilk tam olarak bağlı olmayan holografik bilgisayarıdır. HoloLens yeni yöntemlerle sizi güçlendirmek için holografik deneyimler aracılığıyla kişisel bilgi işlemi yeniden tanımlar. HoloLens, çevrelenmiş gerçek dünyaya sabitlenmiş 3D hologramlar sunmak için son teknoloji optik ve algılayıcıları bir karışımını bir kez daha sağlar.
 
 ## <a name="hololens-components"></a>HoloLens bileşenleri
 
@@ -32,26 +32,26 @@ Microsoft HoloLens (1. nesil), dünyanın ilk tam olarak yersiz holografik bilgi
 
 HoloLens aşağıdaki özellikleri içerir:
 
-- **Visor**. Algılayıcıların HoloLens görüntüler içerir. Maskeyi takan bir yandan da HoloLens.
+- **Visor**. Algılayıcıları ve HoloLens görüntüler içerir. Maskeyi takan bir yandan da HoloLens.
 - **Baş bant**. Bağlantı HoloLens için ayarlama tekerleğini kullanarak baş bandı genişletin. Bağlantı HoloLens baş bant rahat olana kadar ayarlama tekerleğini sıkılaştır.
-- **Parlaklığı düğmeleri.** Cihazın sol tarafında HoloLens düğmelerini takabilirsiniz.
+- **Parlaklığı düğmeleri.** Cihazın sol HoloLens düğmelerini takabilirsiniz.
 - **Ses düğmeleri.** Düğmeyi tak HoloLens ses düğmeleri cihazın sağ tarafında bulunur.
-- **Cihaz kolu**. Cihazı alır, alır veya çıkarsanız HoloLens her zaman cihazın koluyla kavray veya tut.
+- **Cihaz kolu**. Cihazı alır, alır veya çıkarsanız HoloLens her zaman cihazın koluyla kavrayabilirsiniz veya tutar.
 
 ## <a name="in-the-box"></a>Kutuda
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/c7ceb904-9d5f-4194-9e10-e8a949dbad7d]  
 
-HoloLens kutusu aşağıdaki öğeleri içerir:
+Aşağıdaki HoloLens kutusu aşağıdaki öğeleri içerir:
 
 - **Burun yüzeyleri.** Burun şeklinize uyan ve göz derinize uyum sağlayan bir burun paneli seçin.
-- **Ek yük.** Hareket ederken cihazın HoloLens cihazın yerinde tutmaya yardımcı olmak için ek yük yükünü kullanın. Ayrıca, uzun süre HoloLens cihazın daha rahat yıpranması için ek yük yükünü kullanmak da kullanılabilir.
+- **Ek yük.** Hareket ederken cihazın HoloLens cihazın yerinde tutmaya yardımcı olmak için ek yük yükünü kullanın. Ayrıca, cihazı uzun süre HoloLens takıyorsanız, ek yük yükünü kullanmak cihazın daha rahat yıpranmalarını sağlar.
 - **Mikro USB kablosu.** Mikro USB kablosunu kullanarak cihazı HoloLens güç kaynağına bağlayın veya cihazı bilgisayarınıza bağlamak HoloLens kullanın.
 - **Güç kaynağı.** Bir güç çıkışına takın.
 - **Mikrofiber işlemcisi.** Mengenenizi temizlemek için HoloLens kullanın.
 
 >[!TIP]
->[Tıkıcı,](hololens1-clicker.md) HoloLens (1. Nesil) ile birlikte ayrı bir kutu içinde birlikte görüntülenir.
+>[Tıkıcı,](hololens1-clicker.md) ayrı HoloLens (1. Nesil) ile birlikte görüntülenir.
 
 ### <a name="power-supply-details"></a>Güç Kaynağı ayrıntıları
 
@@ -81,7 +81,7 @@ Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W 
 - 1 ilk ölçüm birimi (IMU)
 - 4 ortam anlama kameraları
 - 1 derinlik kamerası
-- 1 2MP fotoğraf / HD video kamerası
+- 1 2MP fotoğraf / HD video kamera
 - Karma gerçeklik yakalama
 - 4 mikrofon
 - 1 ortam ışığı algılayıcısı
@@ -108,7 +108,7 @@ Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W 
 
 ### <a name="processors"></a>İşlemciler
 
-![Microsoft HoloLens için ana Microsoft HoloLens.](images/motherboard-400px.jpg)
+![Microsoft HoloLens için anakart.](images/motherboard-400px.jpg)
 
 - TPM 2.0 desteğine sahip Intel 32 bit mimarisi
 - Özel olarak inşa edilen Microsoft Holographic Processing Unit (HPU 1.0)

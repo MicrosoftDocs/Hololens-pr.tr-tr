@@ -13,12 +13,12 @@ ms.reviewer: ''
 manager: bradke
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: aae4e1dbbf28906c1f93ac7f29620260023f596bb96fc23a3ee78442e70585fa
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 6224cd5e07794d9fca3c0a406e787d1a3fd88b43
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663300"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428725"
 ---
 # <a name="license-requirements"></a>Lisans gereksinimleri
 
@@ -42,8 +42,8 @@ Bu sayfa, hem yönetilen hem de yönetilemeyen cihazları HoloLens 2 cihazı da�
 | Azure AD Kullanıcı hesabı | ✔️ | |
 | [Microsoft Hesabı (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts)| | ✔️ |
 | [Yerel Hesap](/windows/security/identity-protection/access-control/local-accounts)<sup>3</sup> | | ✔️ |
-- <sup>1</sup> [İlk cihaz kurulumu](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) sırasında otomatik kayıt, cihaza kaydolarak Azure Active Directory ve cihazın Intune ile yönetiliyor olması için izin verir.
-- <sup></sup> [Windows 2 için Autopilot HoloLens 2,](hololens2-autopilot.md) hem IT yöneticileri hem de son kullanıcılar için sağlama deneyimini basitleştiriyor. IT yöneticileri 2 ilke HoloLens önceden yapılandırılabilir ve ilk önyüklemeden sonra cihazlar sıfır son kullanıcı etkileşimiyle iş için hazır durumda dağıtılır.
+- <sup>1</sup> [İlk cihaz kurulumu](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) sırasında otomatik kayıt, bu kayıt işlemi Azure Active Directory ve cihazın Intune ile yönetilmalarına olanak sağlar.
+- <sup></sup> [HoloLens 2 için Autopilot HoloLens,](hololens2-autopilot.md) hem IT yöneticileri hem de son kullanıcılar için sağlama deneyimini basitleştiriyor. Windows IT yöneticileri 2 ilke HoloLens önceden yapılandırılabilir ve ilk önyüklemeden sonra cihazlar sıfır son kullanıcı etkileşimiyle iş için hazır durumda dağıtılır.
 - <sup>3</sup> Bu hesabın, [Windows](hololens-provisioning.md#provisioning-package-hololens-wizard) Configuration Designer (WCD) ile sağlanması gerekir.
 
 > [!IMPORTANT]
@@ -102,6 +102,6 @@ Bu kiracılar arası [senaryoyu uygulamayı planlıyorsanız,](/dynamics365/mixe
 
 1. Azure AD hesabı
 1. [Dynamics 365 Kılavuzları lisansı](/dynamics365/mixed-reality/guides/requirements)
-1. Bir uygulamaya yüklenmiş Dynamics 365 Kılavuzları HoloLens
+1. Dynamics 365 Kılavuzları uygulaması bir HoloLens
 1. İşleç rolü (test veya kullanma kılavuzları için)
 1. Ağ Bağlantısı
