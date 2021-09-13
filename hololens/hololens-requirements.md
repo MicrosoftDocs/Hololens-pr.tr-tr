@@ -1,6 +1,6 @@
 ---
 title: Yaygın Dağıtım Senaryoları
-description: Altyapı, Azure Active Directory ve HoloLens mobil cihaz yönetimi dahil olmak üzere kurumsal ortamlarda Azure Active Directory yönetme hakkında daha fazla bilgi edinebilirsiniz.
+description: Altyapı, Azure Active Directory ve mobil cihaz yönetimi dahil olmak üzere kurumsal ortamlarda HoloLens ve yönetme hakkında daha fazla bilgi edinebilirsiniz.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -13,17 +13,17 @@ ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428083"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033823"
 ---
 # <a name="common-deployment-scenarios"></a>Yaygın Dağıtım Senaryoları
 
 ## <a name="overview"></a>Genel Bakış
 
-Yeni bir cihazı nasıl dağıtacaklarını anlamak, ilk kez deneyebilirsiniz. Burada, kuruluş içindeki 2 cihaza Microsoft HoloLens ve yönetmenin farklı yollarını paylaşıyoruz.
+Yeni bir cihazı nasıl dağıtacaklarını anlamak, ilk kez deneyebilirsiniz. Burada, kuruluş içinde 2 cihaza Microsoft HoloLens ve yönetmenin farklı yollarını paylaşıyoruz.
 
 Çözümlerin büyük ölçekte dağıtılmasını istediğiniz. Sizi oraya almak istiyorum. İlk olarak, D365 Remote Assist, Kılavuzlar veya oluşturduğunuz Azure karma gerçeklik hizmeti etkinleştirilmiş bir uygulama kullanıyor olun, hedef karma gerçeklik senaryo için değer elde etmek için hologramlar gibi cihazları dağıtma adımlarını konuşacağız.
 
@@ -50,8 +50,8 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 
 ### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi ağlar genellikle İnternet'e ve bulut hizmetlerine tam olarak açıktır
-* Mobil Cihaz (MDM) Ile Azure AD'ye Katılma (MDM) Cihaz Yönetimi-MDM (Intune) Yönetilen
+* Wi-Fi ağlar genellikle İnternet ve bulut hizmetleri için tamamen açıktır
+* Azure AD'ye Mobil Cihaz Yönetimi (MDM) Otomatik Kaydı--MDM (Intune) Tarafından Yönetilen
 * Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
   * Desteklenen cihaz başına tek veya birden çok kullanıcı
 * Tamamen Açık'tan Tek Uygulama Bilgi Noktası'ya kadar belirli kullanım örneklerine göre farklı cihaz kilitleme yapılandırma düzeyleri uygulanır.
@@ -88,7 +88,7 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 
 ### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi, iç kaynaklara erişimi olan ve İnternet'e veya Bulut hizmetlerine sınırlı erişimi olan bir iç kurumsal ağdır.
+* Wi-Fi iç kaynaklara erişimi olan ve İnternet'e veya Bulut hizmetlerine sınırlı erişimi olan bir iç kurumsal ağdır.
 * MDM Otomatik Kaydı ile Azure AD'ye Katılma
 * MDM (Intune) Yönetilen
 * Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
@@ -99,17 +99,17 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 ### <a name="common-challenges"></a>Yaygın Zorluklar
 
 * HoloLens 2, şirket içi AD'ye katılmayı veya System Center Configuration Manager (SCCM) desteklemez. MDM ile yalnızca Azure AD'ye katılma. Günümüzde birçok şirket SCCM tarafından yönetilen şirket içi AD'ye katılmış cihazlar olarak bu senaryoda Windows 10 bilgisayarlarını dağıtmaya devam ediyor ve bulut tabanlı MDM çözümleri aracılığıyla iç Windows 10 cihazlarını yönetmek için dağıtılmış/yapılandırılmış altyapıya sahip olabilir.
-* 2 HoloLens ilk bulut cihazı olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi ve diğer hizmetler için yoğun olarak İnternet ve buluta bağlı hizmetler kullanır. Şirket ağına bağlanırken, HoloLens 2 ve üzerinde çalıştıran uygulamalara erişimi etkinleştirmek için büyük olasılıkla ara sunucu/güvenlik duvarı kurallarının ayarlanması gerekir.
-* Şirket Wi-Fi bağlantısı genellikle cihazın veya kullanıcının ağ kimlik doğrulaması için sertifikalar gerektirir. MDM aracılığıyla cihazlarına sertifika dağıtmak Windows 10 gerekli altyapıyı veya ayarları yapılandırmak zor olabilir.
+* 2 HoloLens ilk bulut cihazı olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi ve diğer hizmetler için İnternet'e ve buluta bağlı hizmetlere yoğun şekilde güvenmektedir. Şirket ağına bağlanırken, HoloLens 2 ve üzerinde çalıştıran uygulamalara erişimi etkinleştirmek için büyük olasılıkla ara sunucu/güvenlik duvarı kurallarının ayarlanması gerekir.
+* Kurumsal Wi-Fi bağlantısı genellikle cihazın veya kullanıcının ağ kimlik doğrulaması için sertifikalar gerektirir. MDM aracılığıyla cihazlarına sertifika dağıtmak Windows 10 gerekli altyapıyı veya ayarları yapılandırmak zor olabilir.
 
-İlgili Kurumsal Bağlı kılavuzu, HoloLens 2'nin mevcut cihaz yönetiminize nasıl kaydedilir, gerektiğinde lisanslar nasıl uygulanacak ve son kullanıcılarının bir Dynamics 365 Kılavuzu çalıştırabileceklerini ve cihaz ayarlandıktan sonra özel iş hattı uygulamalarını kullanabileceğini nasıl doğrulayabilecekleri hakkında bilgi verir.
+İlgili Kurumsal Bağlantılı kılavuzu, HoloLens 2'nin mevcut cihaz yönetiminize nasıl kaydedilir, gerektiğinde lisanslar nasıl uygulanacak ve son kullanıcılarının bir Dynamics 365 Kılavuzu çalıştırabileceklerini ve cihaz ayarlandıktan sonra özel iş hattı uygulamalarını kullanabileceğini nasıl doğrulayabilecekleri hakkında bilgi verir.
 
 > [!div class="nextstepaction"]
 > [Kurumsal Bağlantılı dağıtım kılavuzu](hololens2-corp-connected-overview.md)
 
 ## <a name="scenario-c-deploy-in-secure-offline-environment"></a>Senaryo C: Güvenli çevrimdışı ortamda dağıtma
 
-Bu, yüksek oranda güvenli veya gizli konumlar için tipik bir dağıtımdır. HoloLens 2, ağ veya İnternet erişimine sahip değilken öncelikli olarak çevrimdışı kullanım için dağıtılır.
+Bu, yüksek oranda güvenli veya gizli konumlar için tipik bir dağıtımdır. HoloLens 2, ağ veya internet erişimine sahip değilken öncelikli olarak çevrimdışı kullanım için dağıtılır.
 
 [![Çevrimdışı Güvenli diyagram 1.](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
 

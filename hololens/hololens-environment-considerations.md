@@ -1,6 +1,6 @@
 ---
-title: HoloLens ortamı konuları
-description: cihazı gözler ve ortamınız için en iyi hale getirirken HoloLens kullanarak mümkün olan en iyi deneyimi elde edin.
+title: HoloLens hakkında dikkat edilmesi gerekenler
+description: Cihazı göz ve ortamınız HoloLens en iyi duruma getirmeniz için mümkün olan en iyi deneyimi elde edin.
 author: dorreneb
 ms.author: dobrown
 manager: jarrettr
@@ -9,134 +9,134 @@ ms.prod: hololens
 ms.topic: article
 audience: ITPro
 ms.localizationpriority: high
-keywords: holographic çerçevesi, görünüm alanı, fov, ayarlama, boşluklar, ortam, nasıl yapılır, HoloLens, karma gerçeklik, karma gerçeklik kulaklıklar
+keywords: holografik çerçeve, görünüm alanı, fov, ayarlama, boşluklar, ortam, nasıl HoloLens, karma gerçeklik, karma gerçeklik başlığı
 ms.openlocfilehash: 6976527d759e768fa5da72f96395a8b7b390cefd
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427304"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036340"
 ---
-# <a name="hololens-environment-considerations"></a>HoloLens ortamı konuları
+# <a name="hololens-environment-considerations"></a>HoloLens hakkında dikkat edilmesi gerekenler
 
-HoloLens, "gerçek" dünya ile holographic karıştırır ve bu da kisörlerinizi hologramlar olarak yerleştirir. Duvardaki bir holographic uygulama penceresi "askıda kalıyor", Tabletop üzerinde bir holographic Ballerina, tavşan arkadaşınızın baş başınızın en üstünde Oturar. Tam ekran bir oyun veya uygulama kullanırken, Holographic dünyası, ortaya çıkacak olan, ancak yine de alan etrafında görebilir ve taşıyabilirsiniz.
+HoloLens holografik dünyayı "gerçek" dünyayla karıştırarak çevrenize hologramlar yerleştirerek. Holografik bir uygulama penceresi duvarda "askıda" takılıyor, masanın üzerinde holografik bir balerinler takılıyor, atlı atlar, farkında olmayan arkadaşınızın kafasının üzerine takılıyor. Çevreleyici bir oyun veya uygulama kullanırken holografik dünya çevrenizi dolduracak şekilde yayılır ancak siz de alanı görebilir ve hareket ettirebilirsiniz.
 
-Yerleştirdiğiniz hologramlar, cihazınızı kapatsanız bile bunları yerleştirdiğiniz yere kalır.
+Cihazınızı kapatsanız bile, konan hologramlar bunları koyarak kalır.
 
 ## <a name="setting-up-an-environment"></a>Ortam ayarlama
 
-HoloLens cihazlar, bir alanda kullanıcıları *izleyerek* kararlı ve doğru hologramlar yerleştirmeyi bilir. Doğru izleme olmadan cihaz, ortamı veya içindeki kullanıcıyı anlamaz. Hologramlar yanlış yerlerde görünebilir, her seferinde aynı noktada görünmez veya hiç görünmez. Kullanıcıları izlemek için kullanılan veriler, *uzamsal haritada* temsil edilir.  
+HoloLens cihazları, kullanıcıları bir alana takip ettirerek kararlı ve doğru *hologramlar* nasıl yer ala bilmektedir. Cihaz düzgün izleme olmadan ortamı veya içindeki kullanıcıyı anlamaz. Hologramlar yerde görünebilir, her zaman aynı yerde görünmez veya hiç görünmez. Kullanıcıları izlemek için kullanılan veriler uzamsal haritada *gösterilir.*  
 
-İzleme performansı, kullanıcının içinde bulunduğu ortam tarafından büyük ölçüde etkilenir ve bir ortamın tutarlı ve tutarlı izlemeye göre ayarlanması, bir bilim yerine bir sanatdır. Birçok farklı ortam faktörü, izlemeyi etkinleştirmek için birlikte kullanılır, ancak karma gerçeklik geliştiricisi olarak, daha iyi izleme için bir alan ayarlamayı aklınızda bulundurmanız gereken birkaç etken vardır.
+İzleme performansı, kullanıcının içinde olduğu ortamdan büyük ölçüde etkilemektedir ve kararlı ve tutarlı bir izlemenin tetiklenmesini sağlamak için bir ortamı ayarlamak bir bilim değil bir sanattır. İzlemeyi etkinleştirmek için birçok farklı çevresel faktör bir araya getirilmiştir, ancak Karma Gerçeklik geliştiricisi olarak daha iyi izleme için bir alan ayarlamak için göz alıcı çeşitli faktörler vardır.
 
 ### <a name="lighting"></a>Işık
 
-Windows Mixed Reality, kullanıcının konumunu izlemek için görsel ışık kullanır. Bir ortam çok parlak olduğunda, kameralar doygun alabilir ve hiçbir şey görülmez. Ortam çok karanlık ise, kameralar yeterli bilgi çekemez ve hiçbir şey görülmez. Işıklandırma, sorunsuz bir şekilde ve yeterince parlak olmalıdır, ancak hafif bir şekilde göz atabilmelidir.  
+Windows Mixed Reality konumunu izlemek için görsel ışığı kullanır. Ortam çok parlak olduğunda kameralar doygunluğa sahip olabilir ve hiçbir şey görülmez. Ortam çok koyusa kameralar yeterli bilgiyi alamiyor ve hiçbir şey görülemiyor. Aydınlatma, insanların hiç çaba olmadan göreceği kadar parlak olmalı ve ışık o kadar da parlak olmayabilir.  
 
-Bir genel Dim alanında parlak ışık noktaları olan alanlar da sorunlu olduğundan, kameranın parlak boşlukların içine ve dışına geçerek ayarlanmasında de sorun vardır. Bu, cihazın "kayıp" olmasına neden olabilir ve açık olan değişikliğin konumdaki değişikliğe eşit olduğunu düşünün. Bir alandaki kararlı hafif düzeyler daha iyi izlemeye neden olur.  
+Genel bir dim alanında parlak ışık noktalarının bulunduğu alanlar da sorunludur çünkü kameranın parlak alanların içinde ve dışında hareket etmek için ayarlanması gerekmektedir. Bu, cihazın "kaybolarak" neden olabilir ve ışık değişikliğinin konum değişikliğine eşit olduğunu düşünebilirsiniz. Bir alanda kararlı ışık düzeyleri daha iyi izleme sağlar.  
 
-Güneş zaman içinde önemli ölçüde farklılık gösterebileceğinden, her türlü açık hava ışığı da izleyicide kararsızlığa neden olabilir. Örneğin, yaz ve kış içindeki aynı alanda izleme büyük ölçüde farklı sonuçlar oluşturabilir, bu da ikinci iki açık ışık yılın farklı saatlerinde daha yüksek olabilir.  
+Güneş zaman içinde önemli ölçüde değişiklik gösterene kadar tüm dış mekan aydınlatmaları izleyicide yer alan bir değişkenlik durumuna da neden olabilir. Örneğin yaz mevsiminde aynı alanda izlemek ile yaz ayları arasında izlemek önemli ölçüde farklı sonuçlar üretebilir. Bunun sonucunda dışında ikinci el ışığı yılın farklı zamanlarında daha yüksek olabilir.  
 
-Bir Luxmeter varsa, sürekli bir 500-1000 Lux, başlamak için iyi bir yerdir.  
+Birmeter'ın varsa 500-1000 saat başlangıç yapmak için iyi bir yerdir.  
 
 #### <a name="types-of-lighting"></a>Aydınlatma türleri
 
-Bir alanda farklı ışık türleri de izlemeyi etkileyebilir. It üzerinden çalışan AC elektrik ile hafif bulbs Pulse-AC sıklığı 50 Hz ise, hafif bir şekilde 50 Hz 'e sahiptir. İnsan için, bu pulun fark etmez. ancak, HoloLens ' 30 fps kare bu değişiklikleri görür. bazı kareler iyi aydınlatılır, bazıları kötü bir şekilde aydınlatılır ve kamera hafif bir şekilde telafi etmeye çalıştığında bazı çok açık olur.  
+Bir alanda farklı ışık türleri de izlemeyi etkileyene kadar devam ediyor olabilir. Ac elektriğinin üzerinden geçen ampullerin darbesi- AC sıklığı 50Yik ise ışık darbesi 50Yık'ta olur. Bir insan için bu titreşim fark değil. Ancak HoloLens 30 saniyelik kamera bu değişiklikleri görür. Bazı kareler iyi yanacaktır, bazıları kötü yanacaktır ve bazıları ışık darbelerini telafi etmeye çalıştığında aşırı açığa çıkar.  
 
-abd 'de, elektrik frekansı standart 60 hz 'dir. bu nedenle ampullü HoloLens ' kare hızı-60 hz, HoloLens ' 30 FPS kare hızına hizalanır. ancak, birçok ülkede 50 Hz 'in bir AC frekansı standardı vardır. bu, bazı HoloLens karelerin pulu sırasında alınması ve başkalarının bu şekilde yapılmadığı anlamına gelir. Özellikle, Avrupa 'daki akıcı oressan ışıklandırma, sorunlara yol açabilecek şekilde bilinmektedir.  
+ABD'de elektrik sıklığı standardı 60Yıl olduğu için ampul kalp atışları HoloLens'nin kare hızıyla uyumlu hale getirildi - 60 Pulse, HoloLens'nin 30 PULSE kare hızıyla hizalanır. Ancak, birçok ülkede AC frequency standardı 50Yiktir; bu da bazı HoloLens karelerin kalp atışları sırasında alınmayacak olduğu anlamına gelir. Özellikle Avrupa'daki dalgalı aydınlatmanın soruna neden olduğu biliniyordu.  
 
-Titreşme sorunlarını çözmeyi deneyebilmeniz gereken birkaç nokta vardır. Sıcaklık, ampul yaşı ve ısınma döngüleri, akıcı bir şekilde titreşme ve bulsan 'ları değiştirme konusunda yaygın nedenlerdir. Bulbs 'ları daha sıkı hale getirme ve geçerli çizlerin sabit olduğundan emin olma da yardımcı olabilir.  
+Titreşim sorunlarını çözmeye çalışabilirsiniz. Sıcaklık, ampul yaşı ve sıcaklama döngüleri, dalgalı titreşimin ve ampullerin değiştirilmesinin yaygın nedenleridir. Ampulleri sıkılaştırma ve geçerli çekimlerin sabit olduğundan emin olmak da yardımcı olabilir.  
 
-### <a name="items-in-a-space"></a>Bir alandaki öğeler
+### <a name="items-in-a-space"></a>Bir boşlukta öğeler
 
-HoloLens, kendisini bir boşluk içinde bulmak için *özellikler* olarak da bilinen benzersiz çevresel yer işaretlerini kullanır.  
+HoloLens, kendisini bir alanda bulmak için özellikler olarak da *bilinen* benzersiz ortam yer işaretleri kullanır.  
 
-Cihaz her yerde nerede olduğunu bilmenin bir yolu olmadığı için bir cihaz neredeyse hiçbir şekilde hiçbir şekilde hiçbir şekilde hiçbir şekilde hiçbir şekilde hiçbir şekilde izlenemez. Bir alanın duvarlara özellik eklemek, genellikle izlemeyi geliştirmenin iyi bir yoludur. Posterler, simgeler bir duvar, bitkiler, benzersiz nesneler veya diğer benzer öğelere tüm yardım. Karmaşık masası, iyi izlemeye yol gösteren bir ortama yönelik iyi bir örnektir. tek bir alanda birçok farklı özellik vardır.  
+Cihazın, uzayın hangi alanında olduğunu bilmeye hiçbir yolu yoktur ve kötü bir özellikten neredeyse hiçbir zaman iz bindiri. Bir boşluğun duvarlarına özellik eklemek genellikle izlemeyi geliştirmenin iyi bir yolu olur. Posterler, duvara dokunan semboller, bitkilerin, benzersiz nesnelerin veya diğer benzer öğelerin hepsi yardımcı olur. Dağınık masa, iyi izlemeye yol açan bir ortama iyi bir örnektir. Tek bir alanda birçok farklı özellik vardır.  
 
-Ayrıca, aynı alanda benzersiz özellikler kullanın. bir duvar üzerinde birden çok kez yinelenen poster, örneğin HoloLens, ne kadar yinelenen posteri olduğunu bilmez. Benzersiz özellikler eklemenin yaygın bir yolu, bir alanın duvarlar ve tabanı üzerinde benzersiz, yinelenmeyen desenler oluşturmak için, maske bantlarının çizgilerini kullanmaktır.  
+Ayrıca, aynı alanda benzersiz özellikler kullanın. Aynı poster bir duvar üzerinde birden çok kez tekrarlanır. Örneğin, HoloLens tekrarlayan posterlerden hangilerine baktığı hakkında bilgi alamayacak şekilde cihaz karışıklığına neden olur. Benzersiz özellikler eklemenin yaygın yollarından biri, bir boşluğun duvarları ve zemini üzerinde benzersiz ve tekrarsız desenler oluşturmak için maskeleme bandı çizgilerini kullanmaktır.  
 
-Kendinize sormanız gereken iyi bir soru: sahnenin yalnızca küçük bir miktarını görüyorsanız, kendinizi alana benzersiz bir şekilde buladınız mı? Aksi takdirde, cihazda sorun izleme de olur.
+Kendinize sormanız gereken iyi bir soru: Sahnenin yalnızca küçük bir miktarını görmüş olursanız, alanda kendinizi benzersiz bir şekilde bulamaz mısınız? Yoksa, cihazın izleme sorunları da olabilir.
 
-#### <a name="wormholes"></a>Solucan delikleri
+#### <a name="wormholes"></a>Wormholes
 
-Aynı olan iki alan veya bölgeseniz, izleyici aynı olduğunu düşünebilir. Bu, cihazın başka bir yerde düşünmeye karşı daha çarpıcı hale gelir. Bu tür yinelenen alan *solucan delikleri* çağrımız.  
+İki alanınız veya bölge aynı görünüyorsa izleyici bunların aynı olduğunu düşünmektedir. Bu, cihazın başka bir yerde olduğunu düşünmesi için kendini kandırarak sonuç verir. Bu tür yinelenen alanlar *wormholes olarak çağrılır.*  
 
-Solucan boşluklarını engellemek için aynı alandaki aynı alanları engellemeye çalışın. Aynı alanlara bazen fabrika istasyonları, bir bina, sunucu rafları veya iş istasyonlarıyla ilgili pencereler dahil olabilir. Her bir benzer alana yönelik alanların etiketlenmesi veya benzersiz özelliklerin eklenmesi, solucan delikleri azaltmaya yardımcı olabilir.
+Wormhole'ları önlemek için aynı alanda aynı alanları önlemeyi deneyin. Aynı alanlar bazen fabrika istasyonlarını, bir bina pencerelerini, sunucu raflarını veya iş istasyonlarını içerebilir. Alanları etiketlemek veya benzer bir alana benzersiz özellikler eklemek, wormhole'ları hafifleterek yardımcı olabilir.
 
-### <a name="movement-in-a-space"></a>Bir boşluk içine taşıma
+### <a name="movement-in-a-space"></a>Bir alanda hareket
 
-Ortamınız sürekli olarak kaydırılmışsa ve değişiyorsa, cihazın yerini almak için kararlı bir özelliği yoktur.  
+Ortamınız sürekli değişiyorsa, cihazın bulunacak kararlı bir özelliği yoktur.  
 
-Daha fazla hareketli nesneler, kişiler de dahil olmak üzere, izlemeyi kaybetmeniz daha kolay. Taşıyıcı köklerinin, farklı yapım durumlarında öğelerin ve bir alandaki çok sayıda kişinin, izleme sorunlarına neden olduğu bilinmektedir.
+İnsanlar da dahil olmak üzere bir alanda ne kadar çok hareketli nesne olursa izlemesi o kadar kolay olur. Taşıma bantlarının, farklı yapı durumlarında yer alan öğelerin ve bir alanda yer alan birçok kişinin takip sorunlarına neden olduğu biliniyordu.
 
-HoloLens, bu değişikliklere hızlı bir şekilde uyum sağlayabilir, ancak yalnızca bu alan cihaza açık bir şekilde görünür. Genellikle, uzamsal haritada hatalara neden olabilecek, gerçeğe göre görülmeyen bölgeler. Örneğin, bir Kullanıcı bir arkadaşınızı tarar ve arkadaşınız odadan çıktığında onu kapatır. Kullanıcı artık boş alanı yeniden taraana kadar arkadaşınızın ' hayalet ' temsili uzamsal eşleme verilerinde kalır.
+Bu HoloLens bu değişikliklere hızlı bir şekilde uyarlanabilir, ancak bu alan cihaza açıkça görünür olduğunda kullanılabilir. Sık sık görülen alanlar gerçekliğin gerisinde olabilir ve bu da uzamsal haritada hatalara neden olabilir. Örneğin, bir kullanıcı bir arkadaşı tarar ve sonra arkadaş odayı terk ederken geri döner. Kullanıcının 'hayalet' temsili, kullanıcı artık boş alanı yeniden tarayana kadar uzamsal eşleme verisinde kalıcı olur.
 
-### <a name="proximity-of-the-user-to-items-in-the-space"></a>Kullanıcının alanındaki öğelere yakınlığı
+### <a name="proximity-of-the-user-to-items-in-the-space"></a>Kullanıcının alanda öğelere yakınlığı
 
-benzer şekilde, insanlara yakın nesneler üzerinde daha iyi odaklanamadığı gibi, nesneler kameralarına yakın olduğunda HoloLens. Bir nesne her iki kamera ile de görülemeyecek kadar yakınsa veya bir nesne bir kamerayı engelliyorsa, cihaz, nesneyle ilgili izleme konusunda çok daha fazla soruna sahip olur.  
+İnsanların gözlere yakın nesnelere nasıl iyi odaklanamalarına benzer HoloLens nesneler kameralarına yakın olduğunda zorlar. Bir nesne iki kamerayla da görülemayacak kadar yakınsa veya bir nesne bir kamerayı engelliyorsa, cihazda nesneye karşı izlemeyle ilgili çok daha fazla sorun olur.  
 
-Kameralar bir nesneden 15 cm 'den daha yakın olmadığını görebilir.
+Kameralar bir nesneden 15 cm'den daha yakın bir şey görmemektedir.
 
-### <a name="surfaces-in-a-space"></a>Boşluk içindeki yüzeyler
+### <a name="surfaces-in-a-space"></a>Bir alanda yüzeyler
 
-Kesin yansıtıcı yüzeyler büyük olasılıkla izlemeyi etkileyen açısına göre farklılık gösterir. Yepyeni bir otomobil düşünün. Bu arada dolaşdığınızda açık bir şekilde yansıtır ve taşırken farklı nesne nesneleri görürsünüz. İzleyicide, yüzeyde yansıtılan farklı nesneler değişen bir ortamı temsil eder ve cihaz izlemeyi kaybeder.
+Güçlü yansıtıcı yüzeyler, izlemeyi etkileyen açıya bağlı olarak farklı görünüyor olabilir. Yepyeni bir araba düşünebilirsiniz. Etrafında hareket edersiniz, ışık yansır ve hareket ederken yüzeyde farklı nesneler görüyorsunuz. İzleyici için, yüzeye yansıyan farklı nesneler değişen bir ortamı temsil eder ve cihaz izlemeyi kaybeder.
 
-Daha az parçalı nesneler izlemek daha kolay.
+Daha az parlak nesnelere karşı izlemek daha kolaydır.
 
-### <a name="wi-fi-fingerprint-considerations"></a>Parmak izi Wi-Fi konuları
+### <a name="wi-fi-fingerprint-considerations"></a>Wi-Fi parmak izi ile ilgili dikkat edilmesi gerekenler
 
-Wi-Fi etkinleştirildiği sürece eşleme verileri, gerçek bir WiFi ağına/yönlendiriciye bağlanmasa bile, bir Wi-Fi parmak iziyle bağıntılı olur. Wi-Fi Info olmadan Space ve hologragram tanınması biraz daha yavaş olabilir. Wi-Fi sinyalleri önemli ölçüde değişseniz, cihaz tamamen farklı bir alanda olduğunu düşünebilir.
+Bu Wi-Fi, gerçek bir WiFi ağına/yönlendiriciye bağlı Wi-Fi bile harita verileri bir parmak iziyle ilişkilidir. Bu Wi-Fi olmadan, alan ve hologramlar biraz daha yavaş tanınıyor olabilir. Sinyaller Wi-Fi ölçüde değişirse, cihaz tamamen farklı bir alanda olduğunu düşünebilirsiniz.
 
-Ağ kimliği (SSID veya MAC adresi gibi) Microsoft 'a gönderilmez ve tüm Wi-Fi başvuruları HoloLens yerel olarak tutulur.
+Ağ tanımlama (SSID veya MAC adresi gibi) Microsoft'a gönderilmez ve tüm Wi-Fi yerel olarak HoloLens.
 
-## <a name="mapping-new-spaces"></a>Yeni boşlukları eşleme
+## <a name="mapping-new-spaces"></a>Yeni alanları eşleme
 
-Yeni bir boşluk girdiğinizde (veya var olan bir alanı yüklediğinizde), alanın üzerine yayan bir kafes grafik görürsünüz. Bu, cihazınızın sursörlerinizi eşlemediği anlamına gelir. HoloLens zaman içinde boşluk öğrenirken, boşluk eşlemek için ipuçları ve püf noktaları vardır.
+Yeni bir boşluk (veya var olan bir alanı yükle) girersiniz, alana yayılmış bir örgü grafiğiyle karşınız olur. Bu, cihazınızın çevrenizi eşleyeni anlamına gelir. Bir HoloLens zaman içinde bir alan öğrenirken, alanları eşlemeye yardımcı olacak ipuçları ve püf noktaları vardır.
 
 ## <a name="environment-management"></a>Ortam yönetimi
 
-kullanıcıların hologratları "temizleyebileceği" HoloLens ve bir alanı "unutmasına" izin veren iki ayar vardır. ayarlar uygulamasındaki **Hologramlar ve ortamlarda** , ikinci ayar de ayarlar uygulamasında **gizlilik** altında görünür.  
+Kullanıcıların hologramları "temizlemelerini" ve bir alanı "unutmalarını" HoloLens iki ayar vardır. Ayarlar uygulamasında **Hologramlar ortamlarda,** ikinci ayar da ayarlar uygulamasında Gizlilik **altında** görünür.  
 
-1. **Yakın hologragram silin**. bu ayarı seçtiğinizde, HoloLens tüm bağlantılı hologramlar ve cihazın bulunduğu "geçerli alan" için tüm depolanan harita verilerini siler. Aynı alana hologram yeniden yerleştirildiğinde, bu konum için veritabanında yeni bir harita bölümü oluşturulup depolanacak.
+1. **Yakındaki hologramları silin.** Bu ayarı seçerek HoloLens tüm sabitli hologramları ve cihazın bulunduğu "geçerli alan" için depolanan tüm harita verilerini siler. Hologramlar aynı alana yeniden yerleştirilsin diye yeni bir harita bölümü oluşturulur ve bu konum için veritabanında depolanır.
 
-1. **Tüm hologramlar silin**. bu ayar seçildiğinde HoloLens tüm veri veritabanlarının tüm harita verilerini ve bağlantılı hologramlar silecektir. Herhangi bir hologragram yeniden keşfedilecek ve tüm hologram, veritabanında depolama Haritası bölümlerine yeni yerleştirilmesi gerekir.
+1. **Tüm hologramları silin.** Bu ayarı seçerek HoloLens tüm boşluk veritabanlarında TÜM harita verilerini ve sabitli hologramları silersiniz. Hiçbir hologram yeniden keşfedilmayacak ve tüm hologramların veritabanında harita bölümlerini yeniden depolamak için yeni yerleştirilleri gerekir.
 
 ## <a name="hologram-quality"></a>Hologram kalitesi
 
-Hologramlar, ortamınız genelinde yüksek, düşük ve tüm çevresinde yerleştirilebilecek, ancak bunları gözlerinizin önünde bulunan bir [holographic çerçevesi](/windows/mixed-reality/holographic-frame) aracılığıyla görebileceksiniz. En iyi görünümü elde etmek için, tüm çerçeveyi görebilmeniz için cihazınızı ayarladığınızdan emin olun. Ve ortamınıza göz atın ve bunu inceleyin!
+Hologramlar ortamınız genelinde (yüksek, düşük ve her yerde) yer açabilirsiniz ancak [](/windows/mixed-reality/holographic-frame) bunları göz önünde bulunan holografik bir çerçeve aracılığıyla da bulabilirsiniz. En iyi görünümü elde etmek için cihazınızı çerçevenin tamamını görmek için ayardan emin olun. Ayrıca ortamınızı keşfetmekten çekinmeyin!
 
-[hologramlar](/windows/mixed-reality/hologram) için net, net ve kararlı bir şekilde görünebilmeniz için HoloLens yalnızca sizin için ayarlanması gerekir. HoloLens ilk kez ayarladığınızda, bu işlem size kılavuzluk eden bir işlemdir. Daha sonra, hologram doğru görünmüyorsa veya çok sayıda hata görüyorsanız, ayarlamalar yapabilirsiniz.
+Hologramların [güzel,](/windows/mixed-reality/hologram) net ve kararlı bir şekilde HoloLens tam olarak sizin için ayarlanmış olması gerekir. Kullanıcılarınızı ilk kez HoloLens, bu süreçte size yol açık olur. Daha sonra hologramlar doğru görünmüyorsa veya çok sayıda hata görüyorsanız ayarlamalar da yapacaktır.
 
-Boşluk eşleştirmede boşluklar varsa, yakın hologramlar silmeyi ve boşluğu yeniden eşlemeyi deneyin.
+Eşleme alanlarıyla ilgili sorun varsa yakındaki hologramları silerek alanı yeniden eşlemeyi deneyin.
 
-### <a name="calibration"></a>Ayarları
+### <a name="calibration"></a>Kalibrasyon
 
-Hologramlar, jaray veya titremesi ise veya hologramlar yerleştirilirken sorun yaşıyorsanız, denenecek ilk şey [ayar uygulamasıdır](hololens-calibration.md). Bu uygulama, HoloLens kullanırken herhangi bir rahatımız yaşsanız da yardımcı olabilir.
+Hologramların titreşimli veya shaky gibi görünüyorsa ya da hologram yerleştirme konusunda sorun varsa, denemeniz gereken ilk şey [Ayar uygulamasıdır.](hololens-calibration.md) Bu uygulama, uygulamanın kullanımı sırasında herhangi bir sorun yaşıyorsanız HoloLens.
 
-ayarlama uygulamasına ulaşmak için **Ayarlar**  >  **sistem**  >  **yardımcı programları**' na gidin. **Ayarlamayı aç** ' ı seçin ve yönergeleri izleyin.
+Ayarlama uygulamasına gitmek için Sistem Yardımcı **Programları'Ayarlar**  >    >  **gidin.** Ayarlamayı **Aç'ı** seçin ve yönergeleri izleyin.
 
-başka birisi HoloLens kullanacaksa, cihaz kendileri için düzgün şekilde ayarlanabilmesi için önce ayarlama uygulamasını çalıştırmaları gerekir.
+Cihazınızı başka biri HoloLens cihaz için düzgün şekilde ayarlansın diye önce Ayar uygulamasını çalıştırması gerekir.
 
 ## <a name="temperature-and-regulatory-information"></a>Sıcaklık ve mevzuat bilgileri
 
-[mevzuat bilgilerini HoloLens](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): sıcaklık aralığı, elden çıkarma, radyo ve TV girişimi hakkında bilgiler içerir.
+[HoloLens:](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information)Sıcaklık aralığı, atma, radyo ve TV girişimi ve daha fazlası hakkında bilgi içerir.
 
-[malzemelerde](https://www.microsoft.com/legal/compliance/materials-substances) "HoloLens" ayrıntılarına bakın ve > çevresel uyumluluk (PDF) konusunda 33 makalesine ulaşın.
+REACH Makalesi 33 HoloLens (PDF) [makale](https://www.microsoft.com/legal/compliance/materials-substances) > sinde "HoloLens" ile ilgili ayrıntılara bakın.
 
-Cihazınızı kullanırken izlenecek bazı yönergeler aşağıda verilmiştir:
+Cihazınızı kullanırken aşağıdaki yönergeleri izleyin:
 
-1. Cihazı kullanmadan önce bir saat boyunca, cihazı sıcaklık aralığı içinde (bekleme veya kapalı) bir ortamda depolayın.
-1. Cihaz, sıcaklık aralığı içindeki bir ortamda kullanın.
-1. Cihaz iç kapatuşlarını kullanın.
-1. Cihazı gölgede kullan; Hatta kapıları, Windows ya da ufuk ışıkları de doğrudan sunmaktan kaçının.
-1. Yukarıdaki yönergeleri izlerseniz ancak beklenmeyen fazla Isıtma sorunlarıyla karşılaşırsanız, [geri bildirim](hololens-feedback.md)göndermek için aşağıdaki adımları izleyin. 
-    1. Cihazınızda **tam** veya **isteğe bağlı** telemetrinin etkinleştirildiğinden emin olun. Etkin değilse etkinleştirin. 
+1. Cihazı kullanmadan önce bir saat boyunca sıcaklık aralığı içinde (Beklemede veya Kapalı) bir ortamda depolar.
+1. Cihazı sıcaklık aralığı içindeki bir ortamda kullanın.
+1. Cihazı iç mekanda kullanma.
+1. Cihazı gölgede kullanma; hatta iç mekanda pencereler veya skylight'lar olsa da doğrudan güneş ışığından kaçının.
+1. Yukarıdaki yönergeleri takip ediyorsanız ancak beklenmeyen aşırı atlama sorunlarıyla karşılaşıyorsanız, Geri Bildirim'i gönderme için aşağıdaki adımları [izleyin.](hololens-feedback.md) 
+    1. Cihazda **Tam veya** **İsteğe** Bağlı telemetri'nin etkinleştirildiğinden emin olun. Doğru değilse etkinleştirin. 
     >[!CAUTION]
-    > Telemetri, ısı olayları için geriye dönük olarak etkin değildir. aşırı Isıtma sırasında etkinleştirilmelidir veya gerekli veriler yakalanmaz.
+    > Telemetri, termik olaylar için geçmişe dönük değildir. Aşırıya atılama sırasında etkinleştirilmesi gerekir, yoksa gerekli veriler yakalanmaz.
     
-    2. Isıtma sorununu yeniden oluşturun.
-    3. Fazla Isıtma gerçekleştiği tarih ve saati dahil edin.
-    4. [Geri bildirim](hololens-feedback.md)gönderin.
+    2. ısıtma sorunu yeniden üretin.
+    3. Aşırı atlamanın meydana geldiği tarihi ve saati içerir.
+    4. Geri [Bildirim gönderin.](hololens-feedback.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

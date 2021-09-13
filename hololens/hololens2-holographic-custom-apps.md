@@ -1,10 +1,10 @@
 ---
 title: HoloLens 2 için özel uygulamaları yönetme
-description: HoloLens 2 cihaza özel holografik uygulamaları yükleme, kaldırma ve yan yükleme hakkında Cihaz Portalı ve Visual Studio.
+description: cihaz portalı ve Visual Studio kullanarak özel holographic uygulamalarını HoloLens 2 cihazlara yüklemeyi, kaldırmayı ve dışarıdan yüklemeyi öğrenin.
 ms.assetid: 6bd124c4-731c-4bcc-86c7-23f9b67ff616
 ms.date: 9/3/2021
 manager: sekerawa
-keywords: hololens, hololens 2, sideload, side load, side-load, store, uwp, app, install
+keywords: Hololens, Hololens 2, dışarıdan yükleme, dışarıdan yükleme, dışarıdan yükleme, mağaza, UWP, uygulama, yükleme
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
@@ -17,26 +17,26 @@ ms.custom:
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 057d70c221bbecd060fd5650874ee6a6940ffd18
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428358"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033390"
 ---
 # <a name="manage-custom-apps-for-hololens-2"></a>HoloLens 2 için özel uygulamaları yönetme
 
-HoloLens, Microsoft Store'dan birçok mevcut uygulamanın ve özel olarak özel olarak HoloLens. 
+HoloLens, Microsoft Store birçok mevcut uygulamayı ve özellikle HoloLens için oluşturulan yeni uygulamaları destekler. 
 
-Mağaza uygulamaları hakkında daha fazla bilgi için [bkz. Mağaza ile uygulamaları yönetme.](holographic-store-apps.md)
+Mağaza uygulamaları hakkında daha fazla bilgi için bkz. [Store ile uygulamaları yönetme](holographic-store-apps.md).
 
 > [!IMPORTANT]
-> Kurumsal dağıtımlar için, bu yöntemlerin her ikisi de kullanan Geliştirici Modunu etkinleştirmenizi önerilmez. Güvenli bir uygulama dağıtım yöntemiyle ilgileniyorsanız Lütfen Uygulama Yönetimi: Genel Bakış [sayfamızı gözden geçirebilirsiniz.](app-deploy-overview.md)
+> Kurumsal dağıtımlar için, bu yöntemlerin her ikisinin de kullanacağı geliştirici modunun etkinleştirilmesini önermeyiz. Güvenli bir uygulama dağıtım yöntemiyle ilgileniyorsanız lütfen [uygulama yönetimizi gözden geçirin: genel bakış](app-deploy-overview.md).
 
-2 cihaz için herhangi bir geliştirici uygulama yükleme yöntemi HoloLens, bkz:
+HoloLens 2 cihazları için uygulama yüklemesinin geliştirici yöntemlerinden birini arıyorsanız, bkz:
 
-- [Cihaz Portalı: Uygulama Yükleme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
-- [Uygulamaları Visual Studio ve hata ayıklamak için Visual Studio kullanma](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
+- [Cihaz Portalı: uygulama yükleme](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
+- [uygulamaları dağıtmak ve hata ayıklamak için Visual Studio kullanma](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
 
-HoloLens [](holographic-custom-apps.md) (1. nesil) üzerinde özel uygulamalar dağıtmak HoloLens kılavuzumuza bakın.
+HoloLens (1. gen) üzerinde özel uygulamalar dağıtmak istiyorsanız [kılavuzumuza](holographic-custom-apps.md) bakın.
 
 

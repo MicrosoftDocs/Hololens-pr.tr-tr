@@ -7,11 +7,11 @@ ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
 ms.openlocfilehash: d511156d6940574deda7448a6f634c0004b8f053
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428953"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032971"
 ---
 # <a name="contributing-to-the-hololens-documentation"></a>HoloLens belgelerine katkıda bulunma
 
@@ -81,9 +81,9 @@ bir web tarayıcısında GitHub aracılığıyla *mevcut bir makaleye* güncelle
 
 ## <a name="renaming-or-deleting-an-existing-article"></a>Mevcut bir makaleyi yeniden adlandırma veya silme
 
-Değişiklik, var olan bir makaleyi yeniden adlandırabilir veya silecektir, yeniden yönlendirme eklediğinizden emin olun. Bu şekilde, mevcut makaleye bağlantısı olan herkes doğru yerde sona kalır. Yeniden yönlendirmeler, deponun kökündeki .openpublishing.redirection.jsdosya tarafından yönetilir.
+Değişiklik, var olan bir makaleyi yeniden adlandırabilir veya silecektir, yeniden yönlendirme eklediğinizden emin olun. Bu şekilde, mevcut makaleye bağlantısı olan herkes doğru yerde sona kalır. Yeniden yönlendirmeler, deponun kökündeki. openpublishing. Redirection. JSON dosyası tarafından yönetilir.
 
-.openpublishing.redirection.jsbir yeniden yönlendirme eklemek için diziye bir giriş ekleyin `redirections` :
+. Openpublishing. Redirection. JSON öğesine yeniden yönlendirme eklemek için diziye bir giriş ekleyin `redirections` :
 
 ```json
 {
@@ -164,101 +164,101 @@ Docs.microsoft.com stilleri tablolarında, satır içi CSS ' yi deneseniz bile k
 
 ### <a name="adding-images"></a>Görüntü ekleme
 
-Görüntülerinizi, depodaki "Mixed-Reality-docs/Images" klasörüne yüklemeniz ve sonra makaleye uygun şekilde başvurmanız gerekir. Görüntüler otomatik olarak tam boyutta görünür, bu da büyük görüntülerin makalenin tüm genişliğini doldurmasıdır. Karşıya yüklemeden önce görüntülerinizi önceden boyutlandırmasını öneririz. Önerilen genişlik 600 ile 700 piksel arasındadır; Ancak, yoğun bir ekran görüntüsü veya ekran görüntüsünün bir kesri ise, bu boyut yukarı veya aşağı doğru olmalıdır.
+Görüntülerinizi,po içinde "mixed-reality-docs/images" klasörüne yüklemeli ve ardından makalede uygun şekilde başvurabilirsiniz. Görüntüler otomatik olarak tam boyutlu olarak görüntülenir ve bu da büyük görüntülerin makalenin tüm genişliğini dolduracak olduğu anlamına gelir. Karşıya yüklemeden önce görüntülerinizi önceden boyutlandırmanızı öneririz. Önerilen genişlik 600 ile 700 piksel arasında olsa da, sırasıyla yoğun bir ekran görüntüsü veya ekran görüntüsü kesri ise boyutu yukarı veya aşağı doğru boyutunuz olmalıdır.
 
 >[!IMPORTANT]
->Birleştirmeden önce yalnızca çatallanmış depoya resim yükleyebilirsiniz. bu nedenle, bir makaleye görüntü eklemeyi planlıyorsanız, resimleri çatalınızın "resimler" klasörüne eklemek için [Visual Studio Code kullanmanız](#using-visual-studio-code) gerekir veya aşağıdakileri bir web tarayıcısında gerçekleştirdiğinizden emin olun:
+>Birleştirmeden önce görüntüleri yalnızca bir mürekkepli repoya yükleyebilirsiniz. Bu nedenle, bir makaleye görüntü eklemeyi planlıyorsanız, önce [Visual Studio Code](#using-visual-studio-code) kullanarak görüntüleri bir web tarayıcısında kendi fork 'nizin "images" klasörüne eklemeniz veya aşağıdaki adımları gerçekleştirin:
 >
->1. MicrosoftDocs/Mixed-Reality deposu ele geçirildi.
->2. Çatalınızdaki makale düzenlendi.
->3. Makalenize başvurduğunuz görüntüler çatalınızdaki "Karma Gerçeklik-docs/resimler" klasörüne yüklendi.
->4. Çatalınızı MicrosoftDocs/Mixed-Reality _ana_ dalında birleştirmek için bir **çekme isteği** oluşturuldu.
+>1. MicrosoftDocs/mixed-reality repo'su için bir mürekkep.
+>2. Makaleyi, mürekkeple birlikte düzenledik.
+>3. Makalenize başvurmakta olduğunuz görüntüleri, mürekkepte "mixed-reality-docs/images" klasörüne yükleyin.
+>4. MicrosoftDocs/mixed-reality ana dalı ile mürekkeplerinizi birleştirmek için bir _çekme isteği_ oluşturuldu. 
 >
->Kendi kendine oluşturulan deponuzu ayarlamayı öğrenmek için [Yeni bir makale oluşturma](#creating-a-new-article)yönergelerini izleyin.
+>Kendi forked repo'larınızı ayarlamayı öğrenmek için, yeni bir makale [oluşturmaya ilişkin yönergeleri izleyin.](#creating-a-new-article)
 
-## <a name="previewing-your-work"></a>Çalışmanızı Önizleme
+## <a name="previewing-your-work"></a>Çalışmanızı önizleme
 
-bir web tarayıcısı aracılığıyla GitHub düzenlenirken, çalıştırmadan önce işinizi önizlemek için sayfanın üst kısmındaki **önizleme** sekmesini seçebilirsiniz. 
+Web tarayıcısı GitHub web tarayıcısında düzenlerken, işlemeden önce çalışmanızı önizlemek için sayfanın üst kısmından Önizleme sekmesini seçin.  
 
 >[!NOTE]
->review.docs.microsoft.com üzerinde yaptığınız değişikliklerin önizlemesi yalnızca Microsoft çalışanları tarafından kullanılabilir
+>Değişikliklerinizin önizlemesini review.docs.microsoft.com yalnızca Microsoft çalışanları tarafından kullanılabilir
 
-Microsoft çalışanları: Katkılarınız varsayılan dal olan _ana öğe_ ile birleştirildiğinde, </HoloLens? Branch = Master> adresinden genel kullanıma geçmeden önce içeriği inceleyebilirsiniz. Sol sütundaki İçindekiler tablosunu kullanarak makalenizi bulun.
+Microsoft çalışanları: Katkılarınız varsayılan dal olan ana dala birleştirilmiştir ve içeriği /hololens?branch=master <'de genele>. Sol sütundaki içindekiler tablosundan makalenizi bulun.
 
-## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Tarayıcıda düzenleme ile masaüstü istemcisiyle düzenleme
+## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Tarayıcıda düzenleme ve masaüstü istemcisiyle düzenleme karşılaştırması
 
-Tarayıcıda düzenlemenin hızlı değişiklikler yapmanın en kolay yolu, ancak birkaç dezavantajın olması gerekir:
+Tarayıcıda düzenleme, hızlı değişiklikler yapmanın en kolay yolu olabilir ancak bazı dezavantajlar vardır:
 
-- Yazım denetimi yapmayın.
-- Diğer makalelere akıllı bağlantı kurma (makalenin dosya adını el ile yazmanız gerekir).
-- Görüntüleri karşıya yükleme ve başvuruları bir sorun olabilir.
+- Yazım denetimine gerek yok.
+- Diğer makalelere herhangi bir akıllı bağlantı elde etmeyebilirsiniz (makalenin dosya adını el ile yazmanız gerekir).
+- Görüntüleri karşıya yüklemek ve başvuru yapmak zor olabilir.
 
-bu sorunlarla ilgilenmezseniz, katkıda bulunmak için [Visual Studio Code](https://code.visualstudio.com/) gibi bir masaüstü istemcisi kullanın. [](#useful-extensions)
+Bu sorunları ele alamamayı tercih ediyorsanız, katkıda bulunan birkaç [Visual Studio Code](https://code.visualstudio.com/) gibi [bir masaüstü](#useful-extensions) istemcisi kullanın.
 
 ## <a name="using-visual-studio-code"></a>Visual Studio Code’u kullanma
 
-[Yukarıda](#editing-in-the-browser-vs-editing-with-a-desktop-client)listelenen nedenlerle, bir Web tarayıcısı yerine belgeleri düzenlemek için bir masaüstü istemcisi kullanmayı tercih edebilirsiniz. [Visual Studio Code](https://code.visualstudio.com/)kullanmanızı öneririz.
+Yukarıda listelenen [nedenlerle,](#editing-in-the-browser-vs-editing-with-a-desktop-client)belgeleri düzenlemek için web tarayıcısı yerine masaüstü istemcisi kullanmayı tercih edersiniz. Visual Studio Code. [](https://code.visualstudio.com/)
 
 ### <a name="setup"></a>Kurulum
 
-Visual Studio Code bu depoyla çalışacak şekilde yapılandırmak için aşağıdaki adımları izleyin:
+Bu repo ile çalışacak Visual Studio Code yapılandırmak için şu adımları izleyin:
 
-1. Bir Web tarayıcısında:
-    1. [Bilgisayarınız Için git](https://git-scm.com/downloads)'i yükler.
-    2. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
-    3. Henüz yapmadıysanız, [MicrosoftDocs/Mixed-Reality çatalını](#creating-a-new-article) yapın.
-    4. Çatalınızda **kopyalama veya indirme** ve URL 'yi kopyalama ' yı seçin.
-2. Visual Studio Code ' de çatalınızın yerel bir kopyasını oluşturun:
-    1. **Görünüm** menüsünden **komut paleti**' ni seçin.
+1. Web tarayıcısında:
+    1. Bilgisayarınız [için Git'i yükleyin.](https://git-scm.com/downloads)
+    2. yükleme [Visual Studio Code.](https://code.visualstudio.com/)
+    3. [Henüz bir sorun yoksa MicrosoftDocs/mixed-reality'den](#creating-a-new-article) bir fork edin.
+    4. Mürekkepte Kopyala'ya tıklayın **veya url'yi** indirip kopyalayın.
+2. Visual Studio Code'de, mürekkeple ilgili yerel bir Visual Studio Code:
+    1. Görünüm menüsünde **Komut** **Paleti'ne tıklayın.**
     2. "Git: Clone" yazın.
-    3. Kopyaladığınız URL 'YI yapıştırın.
-    4. Kopyanın bilgisayarınızda nereye kaydedileceğini seçin.
-    5. Açılan pencerede **depoyu aç** ' ı seçin.
+    3. Kopyalanan URL'yi yapıştırın.
+    4. Kopyanın bilgisayarınıza kaydedile yerini seçin.
+    5. Açılan **pencerede Open repo** (Repo aç) öğesini seçin.
 
-### <a name="editing-documentation"></a>Belge düzenleniyor
+### <a name="editing-documentation"></a>Belgeleri düzenleme
 
-Visual Studio Code ile belgelerde değişiklik yapmak için aşağıdaki iş akışını kullanın:
+Aşağıdaki iş akışını kullanarak belgelerde değişiklik Visual Studio Code:
 
 >[!NOTE]
->makaleleri [düzenlemeyle](#editing-an-existing-article) ve [oluşturmaya](#creating-a-new-article) yönelik tüm yönergelerin yanı sıra [marku 'nin düzenlenmesine ilişkin temel bilgiler](#markdown-basics), Visual Studio Code de kullanılırken geçerlidir.
+>Yukarıdan itibaren [makale düzenleme](#editing-an-existing-article) ve oluşturma ile ilgili tüm kılavuzlar ve [](#creating-a-new-article) [Markdown'ı](#markdown-basics)düzenlemenin temelleri, Visual Studio Code de geçerlidir.
 
-1. Kopyalanmış çatalınızın resmi depoından güncel olduğundan emin olun.
+1. Kopyalanan mürekkep resmi bir resm ile güncel olduğundan emin olun.
 
-   1. Bir Web tarayıcısında, en son değişiklikleri MicrosoftDocs/Mixed-Reality, _Master_' ın varsayılan dalında Çatalınıza eşitlemek için bir çekme isteği oluşturun (okun doğru hedefe işaret ettiğinden emin olun).
+   1. Bir web tarayıcısında, MicrosoftDocs/mixed-reality'nin varsayılan dalı olan _ana_ dalda bulunan diğer katkıda bulunanlardan gelen son değişiklikleri, sizin fork'la eşitlemek için bir çekme isteği oluşturun (okun doğru hedefe işaret ediyor olduğundan emin olun).
       
-      ![MicrosoftDocs/Mixed-Reality içindeki değişiklikleri Çatalınızla eşitleyin.](images/sync-repos.png)
+      ![MicrosoftDocs/mixed-reality değişikliklerini kendi fork'la eşitler.](images/sync-repos.png)
       
-   2. Visual Studio Code ' de, tekrar güncel çatalınızı yerel kopyaya eşitlemek için eşitle düğmesini seçin.
+   2. Yeni Visual Studio Code yeni güncelleştirilmiş mürekkeplerinizi yerel kopyayla eşitlemek için eşitle düğmesini seçin.
       
-      ![Eşitle düğmesine tıklayın.](images/sync-clone.png)
+      ![Eşitle düğmesinin resmine tıklayın.](images/sync-clone.png)
       
-2. Visual Studio Code kullanarak Klonladığınız depolarınızın makalelerini oluşturun veya düzenleyin.
+2. Kopyalanan bir hesabı kullanarak kopyalanmış bir repoda makale Visual Studio Code.
 
-   1. Bir veya daha fazla makaleyi düzenleyin (gerekiyorsa "görüntüler" klasörüne görüntü ekleyin).
+   1. Bir veya daha fazla makaleyi düzenleyin (gerekirse "images" klasörüne görüntü ekleyin).
    
-   2. Değişiklikleri **Gezgin**'de **kaydedin** .
+   2. **Explorer'da** değişiklikleri **kaydedin.**
       
-      ![Gezgin 'de "Tümünü Kaydet" i seçin](images/explorer-save.png)
+      ![Gezgin'de "Hepsini kaydet"i seçin](images/explorer-save.png)
       
-   3. **Kaynak denetimindeki** **tüm değişiklikleri Yürüt** (sorulduğunda kayıt iletisi yaz).
+   3. **Kaynak Denetiminde** tüm **değişiklikleri işle** (istendiğinde işleme iletisi yazın).
    
-      ![Kaynak denetimindeki "Tümünü Kaydet" i seçin](images/source-control-commit.png)
+      ![Kaynak Denetiminde "Hepsini işle"yi seçin](images/source-control-commit.png)
       
-   4. Değişikliklerinizi yeniden kaynağa (GitHub çatalınız) eşitlemek için **Eşitle** düğmesini seçin.
+   4. Değişikliklerinizi **çıkış** noktasıyla eşitlemek için eşitle düğmesini seçin (GitHub).
       
       ![Eşitle düğmesine tıklayın.](images/sync-back.png)
       
-3. Bir Web tarayıcısında, çatalınızdaki yeni değişiklikleri MicrosoftDocs/Mixed-Reality _ana_ öğesine geri eşitlemek için bir çekme isteği oluşturun (okun doğru hedefe işaret ettiğinden emin olun).
+3. Bir web tarayıcısında, yeni değişiklikleri microsoftdocs/mixed-reality _master_ ile eşitlemek için bir çekme isteği oluşturun (okun doğru hedefe işaret ediyor olduğundan emin olun).
 
-   ![Çatalınızdan, MicrosoftDocs/Mixed-Reality olarak çekme isteği oluşturun.](images/pr-to-master.png)
+   ![Mürekkepten MicrosoftDocs/mixed-reality'ye çekme isteği oluşturun.](images/pr-to-master.png)
 
-### <a name="useful-extensions"></a>Kullanışlı uzantılar
+### <a name="useful-extensions"></a>Yararlı uzantılar
 
-belge düzenlenirken aşağıdaki Visual Studio Code uzantıları yararlı olur:
+Aşağıdaki Visual Studio Code, belgeleri düzenlerken yararlıdır:
 
-- [Visual Studio Code için docs markup uzantısı](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) -şu şekilde bir belge yazma seçenekleri menüsünü açmak için **Alt + M** kullanın:
-   - Karşıya yüklediğiniz görüntüleri arayın ve referans yapın.
-   - Gibi listeler, tablolar ve docs 'a özgü çağrı aşımları gibi biçimlendirmeler ekleyin `>[!NOTE]` .
-   - İç bağlantılara ve yer işaretlerine yönelik arama yapın ve başvuruları yapın (sayfa içindeki belirli bölümlerin bağlantıları).
-   - Biçimlendirme hataları vurgulanır (daha fazla bilgi için farenizi hatanın üzerine getirin).
-- [Kod yazım denetleyicisi](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) -yanlış yazılan sözcüklerin altı çizili olacaktır; yanlış yazılmış bir sözcüğe sağ tıklayarak bunu değiştirin veya sözlüğe kaydedin.
+- [Visual Studio Code için Docs Markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) Uzantısı - **Alt+M** kullanarak aşağıdakiler gibi bir belge yazma seçenekleri menüsü açın:
+   - Karşıya yüklediğiniz görüntüleri arama ve referans olarak gönderme.
+   - Listeler, tablolar ve gibi belgelere özgü çağrılar gibi biçimlendirmeler `>[!NOTE]` ekleyin.
+   - İç bağlantılar ve yer işaretleri (bir sayfanın içindeki belirli bölümlere bağlantılar) arama ve başvuru.
+   - Biçimlendirme hataları vurgulanmış (daha fazla bilgi edinmek için farenizi hatanın üzerine gelin).
+- [Kod Yazım Denetleyicisi](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) - yanlış yazılmış sözcüklerin altı çizili olur; yanlış yazılmış bir sözlüğe sağ tıklar ve sözlüğünü değiştirir veya sözlüğe kaydedebilirsiniz.

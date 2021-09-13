@@ -19,19 +19,19 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: ae44ae1d9a2e088a1ef746f4e929e8fae73880bf
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428965"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033099"
 ---
-# <a name="holograms-and-interactions-troubleshooting"></a>Hologramlar ve etkileşim sorunlarını giderme
+# <a name="holograms-and-interactions-troubleshooting"></a>Hologramlar etkileşim sorunlarını giderme
 
 Bu makalede hologram yerleştirme, boşluklarla çalışma ve hologramlarla ilgili sorunları bildirme ile ilgili sorunlar giderilir.
 
 Her soruna sahip olduğunuz her zaman şu sorunlardan emin olun:
 - Bunun [bir şeyi düzeltip](hololens-restart-recover.md) düzeltmey olmadığını görmek için yeniden başlatmayı deneyin.
-- Sorun gidermeden önce, HoloLens [(en az bir](hololens2-charging.md) saat ücrete tabidir) kadar ücrete tabidir. 
+- Sorun gidermeden önce, HoloLens [(en az bir](hololens2-charging.md) saat ücrete tabidir) olduğundan emin olur. 
 
 
 Sorun hakkında bize bilgi göndermek için Lütfen Geri Bildirim uygulamasını kullanın. Geri Bildirim uygulamasını Başlat menüsünde [  bulabilirsiniz.](holographic-home.md) 
@@ -62,11 +62,11 @@ En olası sorun, depolama alanı az olmasıdır. [Biraz disk alanı boşaltın](
 
 Çalışma HoloLens otomatik olarak içinde yer alan alanı belirleye ve yükleyenene kadar aşağıdaki faktörleri kontrol edin:
 
-- Wi-Fi'a bağlı olduğunuzdan emin Wi-Fi
+- Wi-Fi'a bağlı olduğunuzdan emin olun
 - Odada bol miktarda ışık olduğundan emin olun
 - Çevresinde önemli bir değişiklik olmadığını emin olun.
 
-Bir alanı el ile de yükleyebilirsiniz veya Sistem Alanları'nın Ayarlar  >    >  **yönetebilirsiniz.**
+Ayrıca bir alanı el ile yükleyebilirsiniz veya Sistem Alanları'nın Ayarlar  >    >  **yönetebilirsiniz.**
 
 [Listeye dön](#list)
 
@@ -85,13 +85,13 @@ Hologramlar doğru görünmüyorsa (örneğin, bu hologramlar hareket ediyor vey
 - Çevrenizi dolaşarak ve çevrenize bakarak daha HoloLens taramayı deneyin.
 - Çok sayıda hologram yerleştirilse, bazı hologramları kaldırmayı deneyin.
 
-Sorun devam ediyorsanız, Ayarlama uygulamasını çalıştırmayı deniyorum. Bu uygulama, yalnızca HoloLens hologramlarınızı en iyi şekilde tutmaya yardımcı olmak için uygulamanızı ayarlar. Bunu yapmak için Sistem Yardımcı **Programları'Ayarlar**  >  **gidin.**  >   **Ayarlama'nın** altında Açık **Ayar'ı seçin.**
+Sorun devam ediyorsanız, Ayarlama uygulamasını çalıştırmayı deniyorum. Bu uygulama, yalnızca HoloLens hologramlarınızı en iyi şekilde tutmaya yardımcı olmak için uygulamanızı ayarlar. Bunu yapmak için Sistem Yardımcı **Programları'Ayarlar**  >    >  **gidin.** **Ayarlama'nın** altında Açık **Ayar'ı seçin.**
 
 [Listeye dön](#list)
 
 ## <a name="finding-your-space-message"></a>"Yer bulma" iletisi
 
-Bu HoloLens öğrenme veya yükleme sırasında "Yerlerinizi bulma" iletisiyle kısa bir ileti alabilirsiniz. Bu ileti birkaç saniyeden uzun süre görüntülenirse, altta "Hala alanınızı Başlat menüsü" ifadesinin yer alan başka bir iletiyle de karşınıza var.
+Bu HoloLens öğrenme veya yükleme sırasında "Yerlerinizi bulma" iletisiyle kısa bir ileti alabilirsiniz. Bu ileti birkaç saniyeden uzun bir süre görüntülenirse, altta "Hala alanınızı Başlat menüsü" ifadesinin yer alan başka bir iletiyle daha görüntülenir.
 
 Bu iletiler, HoloLens eşleme konusunda sorun olduğu anlamına geliyor. Bu durumda uygulamaları açabilirsiniz ancak ortamınıza hologramlar yer açabilirsiniz.
 
@@ -99,7 +99,7 @@ Bu iletileri sık görüyorsanız aşağıdaki düzeltmelerden birini veya daha 
 
 - Çok fazla doğrudan erişime sahip olmayan, iyi bir şekilde ışık alan bir odaya sahip olduğundan emin olun.
 - Cihaz mengenenizin temiz olduğundan emin olun. [Mengenenizi temizlemeyi öğrenin.](hololens1-hardware.md#care-and-cleaning)
-- Güçlü bir sinyale sahip Wi-Fi olun. Herhangi bir sinyalle veya Wi-Fi zayıf Wi-Fi yeni bir ortama girer HoloLens alanınızı bulamazsınız. Ağ Wi-Fi   >  Wi-Fi'Ayarlar **&amp; bağlantısına gidip bağlantınızı**  >  **kontrol edin.**
+- Güçlü bir sinyale sahip Wi-Fi olun. Hiç sinyal veya zayıf sinyal Wi-Fi yeni bir Wi-Fi girer HoloLens alanınızı bulamazsınız. Ağ Wi-Fi Wi-Fi bağlantısına **Ayarlar**  >  **&amp;**  >  **bağlantınızı kontrol edin.**
 - Daha yavaş ilerlemeyi deneyin.
 
 [Listeye dön](#list)
@@ -109,7 +109,7 @@ Bu iletileri sık görüyorsanız aşağıdaki düzeltmelerden birini veya daha 
 Yerleştir beklediğiniz hologramları görmüyorsanız veya beklediğiniz hologramları görüyorsanız aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
 
 - Bazı lambalar açın. HoloLens iyi bir alanda en iyi şekilde çalışır.
-- System Hologramlar'ye (System   >  **Ayarlar)** gidip  >  **ihtiyacınız Hologramlar**  >  **hologramları kaldırın.** Veya gerekirse Tüm **hologramları kaldır'ı seçin.**
+- System Hologramlar Yakın hologramları kaldırma'ya **Ayarlar**  >  **gerek**  >  **Hologramlar**  >  **hologramları kaldırın.** Veya gerekirse Tüm **hologramları kaldır'ı seçin.**
 
   > [!NOTE]
   > Alanınızdaki düzen veya aydınlatma önemli ölçüde değişiyorsa, cihazınız alanınızı tanımlama ve hologramlarınızı gösterme konusunda sorun olabilir.
@@ -120,14 +120,14 @@ Yerleştir beklediğiniz hologramları görmüyorsanız veya beklediğiniz holog
 
 HoloLens alanınız eşleyene veya yükleyenene kadar sınırlı moda girer ve hologram yerleştiresiniz veya yerleştirilen hologramları göresiniz. İşte deneyebileceğiniz bazı çözümler:
 
-- Ortamınız için yeterli ışığın olduğundan emin olun. Bu HoloLens alanı görebilir ve eşlersiniz.
+- Ortamınız için yeterli ışık olduğundan emin olun, böylece HoloLens ve eşleyene kadar.
 - Hologramı yapmaya çalıştığın yerden bir ile üç metre arasında dur.
 - Hologramları siyah veya yansıtıcı yüzeylere yerleştirin.
-- Bir ağ bağlantısına bağlı olduğunuzdan emin Wi-Fi olun. Wi-Fi'a bağlı değil HoloLens bilinen bir alanı belirleyeme ve yükleyemediysiniz.
+- Bir ağ bağlantısına bağlı olduğunuzdan emin Wi-Fi olun. Wi-Fi'a bağlı değil HoloLens bilinen bir alanı belirleyeme ve yükleyemeysiniz.
 - Etrafınızı yeniden HoloLens için odaları dolaşabilirsiniz. Nelerin taranmış olduğunu görmek için havadan dokunarak eşleme ağı grafiğini ortaya çıkarabilirsiniz.
 - Yeni bir alan oluşturmanız gerekirse, Wi-Fi'a bağlanın ve ardından ağ HoloLens.
-- Doğru alan etkin olup olmadığını görmek veya el ile bir alan yüklemek için Sistem **Alanları'Ayarlar**  >    >  **gidin.**
-- Doğru alan yüklü ise ve sorun devam ediyorsanız, alan bozuk olabilir. Bu sorunu çözmek için alanı seçin ve **kaldır'ı seçin.** Alanı kaldırdikten sonra HoloLens alanı eşlemeye ve yeni bir alan oluşturmaya başlar.
+- Doğru boşluğun etkin olup olmadığını görmek veya el ile bir alan yüklemek için Sistem **Alanları'Ayarlar**  >    >  **gidin.**
+- Doğru alan yüklü ise ve sorun devam ediyorsanız, alan bozuk olabilir. Bu sorunu çözmek için alanı seçin ve **kaldır'ı seçin.** Alanı kaldırdikten sonra HoloLens eşlemeye ve yeni bir alan oluşturmaya başlar.
 
 [Listeye dön](#list)
 
@@ -135,47 +135,47 @@ HoloLens alanınız eşleyene veya yükleyenene kadar sınırlı moda girer ve h
 
 Bir holograma çok yaklaşmanız, hologramı geri yüklemek için geçici olarak &mdash; kaybolur, yalnızca bundan uzaklaşabilirsiniz. Ayrıca, birkaç hologramı birbirine yakın yerleştirilse de bazıları kaybolabilir. Birkaç tane kaldırmayı deneyin.
 
-Hologramlar, diğer hologramlar veya duvar gibi nesneler tarafından da engellenmiş veya kapatılmalıdır. Bu durumda aşağıdaki düzeltmelerden birini deneyin:
+Hologramlar, diğer hologramlar veya duvar gibi nesneler tarafından engellenmiş veya kapatılmalıdır. Bu durumda aşağıdaki düzeltmelerden birini deneyin:
 
 - Hologram başka bir hologramda yer alan bir hologram ise, büyük harfli hologramı başka bir konuma taşıma. Bunu yapmak için **Ayarla'ya ve** ardından dokunarak basılı tutun ve konuma getirin.
 - Hologram bir duvara monte edilirse Ayarla'ya tıklayın **ve** ardından hologram görünene kadar duvara doğru inin. Dokunun ve basılı tutun, sonra hologramı duvardan ileri ve dışarı çekin.
 - Hareketleri kullanarak hologramı hareket ettire biliyorsanız sesinizi kullanarak kaldırın. Holograma bakarak "Kaldır" diyelim. Ardından hologramı yeniden açın ve yeni bir konuma yer açın.
 
-[Listeye dön](#list)
+[Listeye geri dön](#list)
 
-## <a name="holograms-are-appearing-on-the-other-side-of-a-wall"></a>Hologramlar duvarın diğer tarafında görünür
+## <a name="holograms-are-appearing-on-the-other-side-of-a-wall"></a>Hologramlar, bir duvar 'nin diğer tarafında görünür
 
-Duvara çok yakınsanız veya duvarda henüz HoloLens taramadıysanız bir sonraki odada yer alan hologramları görüntüln. Duvarı taramak için duvardan bir ile üç metre arasında durur ve duvara bakar.
+bir duvara çok yakınsanız veya HoloLens henüz duvarı taramamışsa, sonraki odada bulunan hologragram ' u görebilirsiniz. Duvar taramak için, duvardan bir ve üç ölçüm arasında tek tek ve BT 'nin aralarındaki
 
-Duvarın yakınındaki siyah veya yansıtıcı bir nesne (örneğin, siyah bir HoloLens buzdolabı) duvarı taramaya çalıştığında sorunlara neden olabilir. Böyle bir nesne varsa duvarın diğer tarafını tarayın.
+bir siyah veya yansıtıcı nesne (örneğin, bir siyah küçük ya da bir veya daha az çelik soğutma), HoloLens duvar taramasını denediğinde soruna neden olabilir. Böyle bir nesne varsa, duvarın diğer tarafını tarayın.
 
-[Listeye dön](#list)
+[Listeye geri dön](#list)
 
-## <a name="after-placing-a-hologram-on-a-wall-it-seems-to-float"></a>Bir duvara hologram yerleştirdikten sonra kayan bir hologram gibi görünüyor
+## <a name="after-placing-a-hologram-on-a-wall-it-seems-to-float"></a>Bir duvarda bir hologram yerleştirdikten sonra float görünüyor
 
-Duvara yer alan hologram genellikle duvardan bir inç uzakta gibi görünür. Daha uzakta görünüyorsa aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
+Bir duvara yerleştirdiğiniz bir hologram, genellikle duvardan bir inç veya daha fazla şekilde görünür. Daha fazla görünüyorsa, aşağıdaki düzeltmelerden birini veya daha fazlasını deneyin:
 
-- Bir duvara hologramı yerken duvardan bir ile üç metre arasında durur ve duvarın doğrudan üzerinde durur.
-- Eşleme ağı grafiğini ortaya çıkarmak için duvara havadan dokunun. Örgün duvarla hizalı olduğundan emin olun. Yoksa hologramı kaldırın, duvarı yeniden deneyin ve yeniden deneyin.
-- Sorun devam ederse Ayarlama uygulamasını çalıştırın. Bunu Sistem Yardımcı Programları **Ayarlar**  >    >  **bulabilirsiniz.**
+- Bir duvardaki bir hologram yerleştirirken, duvardan bir ve üç ölçüm arasında tek tek ve duvardan doğrudan açık olarak yer alır.
+- Harita kafes grafiğini göstermek için duvara dokunun. Kafesin duvarda hizalandığından emin olun. Aksi takdirde, hologram 'yi kaldırın, duvarı yeniden tarayın ve tekrar deneyin.
+- Sorun devam ederse, ayarlama uygulamasını çalıştırın. **Ayarlar**  >  **sistem**  >  **yardımcı programlarında** bulacaksınız.
 
-[Listeye dön](#list)
+[Listeye geri dön](#list)
 
-## <a name="apps-appear-too-close-after-moving-them"></a>Uygulamalar, taşımadan sonra çok yakın görünüyor
+## <a name="apps-appear-too-close-after-moving-them"></a>Uygulamalar, taşıdıktan sonra çok yakın görünüyor
 
-Uygulamayı yerleştirerek farklı açılardan taramak için HoloLens deneyin. [Cihaz mengenenizin temizlenmesi](hololens1-hardware.md#care-and-cleaning) de yardımcı olabilir.
+HoloLens, uygulamayı farklı açılardan tarayabilmesi için uygulamayı yerleştirmekte olduğunuz alana bakmaya çalışın. [Cihazınızı Temizleme](hololens1-hardware.md#care-and-cleaning) işlemi de yardımcı olabilir.
 
-[Listeye dön](#list)
+[Listeye geri dön](#list)
 
-## <a name="reporting-issues-with-unstable-or-inexact-holograms"></a>Kararsız veya değişken olmayan hologramlarla ilgili sorunları bildirme
+## <a name="reporting-issues-with-unstable-or-inexact-holograms"></a>Kararsız veya kesin hologramlar ile ilgili sorunları bildirme
  
-1. Lütfen sorunun Karma Gerçeklik Yakalama [videosunu](holographic-photos-and-videos.md#capture-a-mixed-reality-video) ve bir videosunu izleyin. Bu video daha sonra dosya Geri Bildirim Merkezi dosya olarak karşıya yükleyebilirsiniz.  
-1. **Ayarlar** -> Gizlilik Tanılaması geri bildirimi & ve İsteğe bağlı tanılama verileri altında iki durumlu düğmenin Açık olarak ayarlanmış olduğundan emin olmak için tam telemetriyi  ->   **etkinleştirin** 
-1. En son [Holographic OS (20H2](hololens-release-notes.md#windows-holographic-version-20h2)veya daha yüksek) sürümüne güncelleştirerek en son hologram ölçek ve kararlılık düzeltmelerini elde Windows. Güncelleştirdikten sonra aşağıdaki işlemleri gerçekleştirin:
-    1. -> Hologramlar **System** **Ayarlar ->** app -> tüm hologramları kaldır'ı seçerek tüm hologramları kaldırın ve yeni bir  ->  haritayla başlamayı seçin.**Hologramlar** 
-    1. Yeni bir alan haritası oluşturmak için HoloLens odanızı dolaşın ve alanda yer alan tüm alanlara ve yüzeylere bakabilirsiniz. Bunu 2-3 dakika için yap.
-    1. IPD ayarlaması gerçekleştirin. Sistem Yardımcı  >    >  **Ayarlar'ye gidin.** **Ayarlama'nın** altında Açık **Ayar'ı seçin.**
-    1. Senaryoyu yeniden test eder ve hala devam eder mi diye bakın.
-1. Güncelleştirme sorunu çözene kadar sorunu [Geri Bildirim Merkezi.](hololens-feedback.md) Geri bildirimi doldurduktan sonra, destek **ekibiyle** iletişime geçerek gönderebilirsiniz. Paylaş düğmesini kullanarak kolayca paylaşabilirsiniz.
+1. Lütfen bu sorunun bir [karma gerçeklik yakalama videosunu](holographic-photos-and-videos.md#capture-a-mixed-reality-video) kaydedin. Bu video daha sonra ekli bir dosya olarak geri bildirim hub 'ı aracılığıyla karşıya yüklenebilir.  
+1. **Ayarlar** app-> **gizlilik**  ->  **tanılama & geri bildirimi** aracılığıyla tam telemetriyi etkinleştirin ve **isteğe bağlı tanılama verileri** altında, geçiş seçeneğinin **açık** olarak ayarlandığından emin olun
+1. en son [Windows Holographic işletim sistemine (20h2 veya üzeri)](hololens-release-notes.md#windows-holographic-version-20h2)güncelleştirerek en son hologram ölçeğini ve kararlılık düzeltmelerini alın. Güncelleştirme sonrasında şunları yapın:
+    1. tüm Hologramlar **Ayarlar** app-> **sistemi** aracılığıyla kaldırın  ->  **Hologramlar** ->, **tüm hologragram kaldır** ' ı seçin ve yeni bir eşleme ile başlayın.
+    1. HoloLens oluşturup odaızın etrafında gezinerek ve alandaki tüm alanları ve yüzeyleri arayarak yeriniz için yeni bir harita oluşturun. Bunu 2-3 dakika boyunca yapın.
+    1. IPD ayarlaması gerçekleştirin. **Ayarlar**  >  **sistem**  >  **yardımcı programlarına** gidin. **Ayar**' ın altında, **ayarlamayı aç**' ı seçin.
+    1. Senaryoyu yeniden test edin ve hala devam edip etmediğini görüntüleyin.
+1. Güncelleştirme sorunu gidermezse, lütfen bir [geri bildirim merkezi sorunu](hololens-feedback.md)bildirin. Geri bildirimi doldurduktan sonra, destek ile iletişim kurulurken gönderilebilecek kolay bir bağlantı oluşturmak için **Share (paylaşma** ) düğmesini kullanabilirsiniz.
 
-[Listeye dön](#list)
+[Listeye geri dön](#list)

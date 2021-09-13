@@ -12,15 +12,15 @@ ms.localizationpriority: medium
 audience: HoloLens
 manager: yannisle
 ms.openlocfilehash: d7d5ad05dc675cf07afd075f4fb52d24cd4d3e15
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427054"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033051"
 ---
 # <a name="microsoft-store-for-business"></a>İş İçin Microsoft Store
 
-Bu İş İçin Microsoft Store öncelikli olarak işletmeler veya kuruluşlarda belirli pazarlarda ücretsiz ve ücretli uygulamaları bulma, edinme, yönetme ve dağıtmanın esnek bir yolu olan ve belirli pazarlarda cihazları toplu olarak kullanmak üzere Windows 10 yöneticiler için tasarlanmıştır. 
+Bu İş İçin Microsoft Store, belirli pazarlarda ücretsiz ve ücretli uygulamaları toplu olarak kullanmak üzere bulma, edinme, yönetme ve dağıtmanın esnek bir yolu olan işletmelerde veya kuruluşlarda öncelikli olarak IT karar verenler ve Windows 10 yöneticiler için tasarlanmıştır. 
 
 Tek bir envanterde Microsoft Store uygulamaları ve özel iş hattı uygulamalarını yönetebilir ve gerektiğinde lisansları atayabilirsiniz ve yeniden kullanabilirsiniz. Ayrıca, kuruluş için en iyi dağıtım yöntemini de seçebilirsiniz: uygulamaları doğrudan kişilere ve ekiplere atama, uygulamaları Microsoft Store sayfalarına yayımlama veya daha fazla seçenek için yönetim çözümleriyle bağlanma.
 
@@ -35,7 +35,7 @@ Aşağıdaki sayfaları ziyaret edin ve bu sayfayı nasıl kullanabileceğiniz h
 * [İş Için Mağazanıza uygulama ekleme](/mem/intune/apps/store-apps-windows)
 * [Uygulamalarınızı çalışan gruplarına atama](/mem/intune/apps/windows-store-for-business)
 
-Kendi dosyanızı ilişkilendirmek İş İçin Microsoft Store, [Intune ile İş İçin Microsoft Store'ı ziyaret edin.](/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune)
+İş ortağınızı ilişkilendirmek İş İçin Microsoft Store [Intune ile İş İçin Microsoft Store'ı ziyaret edin.](/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune)
 
 > [!Tip]
 > Gelişmiş Kurtarma Yardımcı [(ARC) ve](/microsoft-store/distribute-offline-apps) Windows Configuration Designer (WCD) gibi uygulamaları kullanırken çevrimdışı uygulamaları dağıtma hakkında daha fazla bilgi edinin.

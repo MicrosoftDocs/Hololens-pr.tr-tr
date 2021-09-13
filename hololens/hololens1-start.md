@@ -1,6 +1,6 @@
 ---
-title: Kümeyi HoloLens (1. nesil)
-description: Microsoft (MSA) veya HoloLens (AAD) hesabıyla Wi-Fi ağ üzerinden ilk kez Azure Active Directory (1. nesil) ayarlamayı öğrenin.
+title: HoloLens ayarlama (1. genel)
+description: bir Microsoft (MSA) veya Azure Active Directory (AAD) hesabıyla Wi-Fi ağ üzerinden ilk kez HoloLens (1. genel) ayarlamayı öğrenin.
 ms.assetid: 0136188e-1305-43be-906e-151d70292e87
 ms.prod: hololens
 author: Teresa-Motiv
@@ -12,68 +12,68 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 06b7142be471d0db3f45812654288a33425abd60
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427762"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033625"
 ---
-# <a name="set-up-your-hololens-1st-gen"></a>Kümenizi ayarlama HoloLens (1. nesil)
+# <a name="set-up-your-hololens-1st-gen"></a>HoloLens ayarlama (1. genel)
 
-Cihazlarınızı ilk kez HoloLens cihazınızı ayarlama, cihazınızı ayarlama ve oturum açma adımlarında size yol gösterir.  Bu makalede, HoloLens (1. nesil) ilk başlatma ve kurulum deneyimi adım adım açıklanmıştır.
+HoloLens ilk kez açtığınızda cihazınızı ayarlama, cihazınızı ayarlama ve oturum açma adımları gösterilecektir.  bu makalede, HoloLens (1. gen) ilk başlatma ve kurulum deneyiminde adım adım gösterilmektedir.
 
-Sonraki bölümde, çalışma ve hologramlarla etkileşim HoloLens etmeyi öğrenirsiniz. Bu makaleye atlamak için [bkz. Kullanmaya başlayın (1. nesil) ile HoloLens.](hololens1-basic-usage.md)
+sonraki bölümde, HoloLens nasıl çalışacağınızı ve hologramlar ile nasıl etkileşime gireceğini öğreneceksiniz. bu makaleye ulaşmak için bkz. [HoloLens kullanmaya başlama (1. genel)](hololens1-basic-usage.md).
 
 ## <a name="before-you-start"></a>Başlamadan önce
 
-Başlamadan önce aşağıdakilerin kullanılabilir olduğundan emin olun:
+Başlamadan önce, aşağıdakilerin kullanılabilir olduğundan emin olun:
 
-**Bir Wi-Fi bağlantısı.** Bunu ayarlamak için HoloLens bir Wi-Fi ağına bağlamanız gerekir. İlk kez bağlanacaksanız, bir web sitesine bağlanmayı veya bağlanmak için sertifikaları kullanmayı gerektirmeyen açık veya parola korumalı bir ağa ihtiyacınız olur. [tarafından kullanan web siteleri hakkında daha HoloLens.](hololens-offline.md)
+**Bir Wi-Fi bağlantısı**. HoloLens ayarlamak için Wi-Fi bir ağa bağlamanız gerekir. İlk kez bağlandığınızda, bir Web sitesine gidilmesini veya bağlanmak için sertifikaları kullanmayı gerektirmeyen açık veya parola korumalı bir ağa ihtiyacınız vardır. [HoloLens tarafından kullanılan web siteleri hakkında daha fazla bilgi edinin](hololens-offline.md).
 
-**Bir Microsoft hesabı veya iş hesabı.** Ayrıca, Microsoft hesabı'de oturum Microsoft hesabı için bir iş hesabı (veya cihazınıza sahipse bir iş hesabı) HoloLens. Henüz bir Microsoft hesabı account.microsoft.com ücretsiz olarak ayarlayın. [](https://account.microsoft.com)
+**Microsoft hesabı veya iş hesabı**. Ayrıca, HoloLens oturum açmak için bir Microsoft hesabı (veya kuruluşunuzun cihazın sahibi olması halinde bir iş hesabı) kullanmanız gerekir. Bir Microsoft hesabı yoksa, [account.Microsoft.com](https://account.microsoft.com) adresine gidin ve birini ücretsiz olarak ayarlayın.
 
-**Tarak tehlikeleri olmayan güvenli, iyi bir şekilde ışık alan.** [Sağlık ve güvenlik bilgileri.](https://go.microsoft.com/fwlink/p/?LinkId=746661)
+**Güvenilir ve Iyi bir şekilde bir arada olan tehlikeli bir alan**. [Sistem durumu ve güvenlik bilgileri](https://go.microsoft.com/fwlink/p/?LinkId=746661).
 
-**En rahat uyuma** sahip olmak için HoloLens isteğe bağlı konfor donatıları. [Fit ve konfor hakkında daha fazla bilgi.](https://support.microsoft.com/help/12632/hololens-fit-your-hololens)
+en rahat hale getirmenize yardımcı olmak için HoloLens ile birlikte gelen **isteğe bağlı rahatlar** . [Daha fazla uyum ve rahatlık](https://support.microsoft.com/help/12632/hololens-fit-your-hololens).
 
 > [!NOTE]
 >  
-> - HoloLens Cortana'nizi ilk kez [](hololens-cortana.md) kullanıyorsanız, Cortana zaten açık ve size yol göstermeye hazırdır (ancak siz cihazınızı ayarlayana kadar sorularınıza yanıt vere bile olmayacaktır). Bu ayarları Cortana istediğiniz zaman Cortana kapatabilirsiniz.
-> - HoloLens'nin Çince veya Japonca sürümüne geçmek için, dil için derlemeyi bir bilgisayara indirmeniz ve bilgisayarınıza yüklemeniz HoloLens. Daha fazla bilgi için [bkz. Yerelleştirilmiş HoloLens yükleme (1. nesil).](hololens1-install-localized.md)
+> - HoloLens ilk kez kullandığınızda, [Cortana](hololens-cortana.md) zaten açık ve size rehberlik etmeye hazırlanıyor (cihazınızı ayarlamadan sonra sorularınıza yanıt veremeyeceksiniz). Cortana ayarlarından dilediğiniz zaman Cortana kapatabilirsiniz.
+> - HoloLens çince veya japonca sürümüne geçiş yapmak için, dil için derlemeyi bir bilgisayara indirmeniz ve sonra HoloLens yüklemeniz gerekir. daha fazla bilgi için bkz. [HoloLens yerelleştirilmiş sürümlerini (1. gen) yükler](hololens1-install-localized.md).
 
-## <a name="start-your-hololens-and-set-up-windows"></a>Hololens'inizi başlatma ve Windows
+## <a name="start-your-hololens-and-set-up-windows"></a>HoloLens 'nizi başlatın ve Windows ayarlayın
 
-Hizmetinizi ilk kez HoloLens, ilk göreviniz cihazınıza Holographic'Windows ayarlamaktır.
+HoloLens ilk kez başlattığınızda, ilk göreviniz cihazınızda Windows Holographic ayarlaması olur.
 
-1. Bağlan bağlantısı (ağ HoloLens seçmeniz için size Wi-Fi sağlar).
+1. internet 'e Bağlan (HoloLens Wi-Fi ağ seçeneğini seçmenizi sağlar).
 
-1. Kullanıcı hesabınızla oturum açın. İş veya **okulum buna sahip ve sahibim** **arasında seçim.**
-    - İş veya **okul sahibim'i seçtiğiniz zaman,** bir Azure AD hesabı kullanarak oturum açın. Kuruluş otomatik MDM Azure AD Premium yapılandırmışsa, MDM'HoloLens otomatik olarak kaydedilir. Otomatik MDM kaydı Azure AD Premium, bu nedenle cihaz yönetimine el ile HoloLens [gerekir.](hololens-enroll-mdm.md#different-ways-to-enroll) Bir iş veya okul hesabı kullanarak cihazda ilk kez oturum açma için şu adımları izleyin:
-        1. Kuruluş hesabı bilgilerini girin.
+1. Kullanıcı hesabınızda oturum açın. **Çalışmalarım veya okulum** arasında seçim yapın ve **bunu sahipim**.
+    - **Çalışmam veya okulumu** seçtiğinizde, BIR Azure AD hesabı kullanarak oturum açın. kuruluşunuz Azure AD Premium kullanıyorsa ve otomatik mdm kaydı yapılandırmışsa, HoloLens mdm 'ye otomatik olarak kaydeder. kuruluşunuz Azure AD Premium kullanmıyorsa otomatik MDM kaydı kullanılamaz, bu yüzden [HoloLens cihaz yönetimine el ile kaydetmeniz](hololens-enroll-mdm.md#different-ways-to-enroll)gerekir. Bir iş veya okul hesabı kullanarak cihazınızda oturum açmak için şu adımları izleyin:
+        1. Kurumsal hesap bilgilerinizi girin.
         1. Gizlilik bildirimini kabul edin.
-        1. Azure AD kimlik bilgilerinizi kullanarak oturum açma. Bu, kuruluş oturum açma sayfasına yeniden yönlendirebilirsiniz.
+        1. Azure AD kimlik bilgilerinizi kullanarak oturum açın. Bu, kuruluşunuzun oturum açma sayfasına yönlendirebilir.
         1. Cihazı ayarlamaya devam edin.
-    - **Sahibim'i seçerek** oturum a Microsoft hesabı. Kurulum tamamlandıktan sonra, cihaz [yönetimine HoloLens el ile kaydedebilirsiniz.](hololens-enroll-mdm.md#different-ways-to-enroll)
-        1. Aşağıdaki Microsoft hesabı girin.
-        1. Parolanızı girin. İki adımlı Microsoft hesabı [(2FA) gerektiriyorsa](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)doğrulama işlemini tamamlar.
+    - **Sahip olduğumu** seçtiğinizde, Microsoft hesabı kullanarak oturum açabilirsiniz. kurulum tamamlandıktan sonra, [cihaz yönetimi 'ne HoloLens el ile](hololens-enroll-mdm.md#different-ways-to-enroll)kaydedebilirsiniz.
+        1. Microsoft hesabı bilgilerinizi girin.
+        1. Parolanızı girin. Microsoft hesabı [iki adımlı doğrulama (2FA)](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)gerektiriyorsa, doğrulama işlemini doldurun.
 
-1. Cihaz, ağdan edinilen bilgilere göre saat diliminizi Wi-Fi ayarlar.
+1. Cihaz, zaman diliminizi Wi-Fi ağından aldığı bilgilere göre ayarlar.
 
-## <a name="calibration"></a>Kalibrasyon
+## <a name="calibration"></a>Ayarları
 
-Bu Cortana kendini tanıttıktan sonra, sonraki kurulum adımı ayardır. En iyi HoloLens için kurulum sırasında ayarlama işlemini tamamlamanız gerekir.
+Cortana, herkendi kendisini tanıtdıktan sonra, sonraki kurulum adımı ayarlanır. en iyi HoloLens deneyim için kurulum sırasında ayarlama işlemini tamamlamalısınız.
 
-HoloLens (1. nesil), hologramların net ve etkileşim kurması kolay hale etmek için göz bebekleri arasındaki mesafeyi (IPD veya aralık [uzaklığı)](https://en.wikipedia.org/wiki/Interpupillary_distance)kullanır. IPD doğruysa hologramlar kararsız veya yanlış bir uzaklıkta görünebilir.
+HoloLens (1. gen), holograclarınızın temiz ve etkileşimli bir şekilde etkileşimde bulunmak için, pupıls (ipd veya [ınterpupilılmi](https://en.wikipedia.org/wiki/Interpupillary_distance)) arasındaki mesafeyi kullanır. IPD doğru değilse, hologramlar kararsız veya hatalı bir mesafede görünebilir.
 
-Ayarlama sırasında HoloLens her göz için altı hedef dizisiyle hizalamanızı isteyen bir kullanıcı vardır. HoloLens için doğru IPD'yi ayarlamak için bu işlemi kullanır. Yeni bir kullanıcı için düzeltmenin güncelleştirilmiş veya ayarlanması gerekirse, yeni kullanıcı Ayarlama uygulamasını kurulumun dışında çalıştırabilirsiniz.
+ayarlama sırasında, HoloLens parmağınızı, her göz için bir dizi altı hedefe hizalamanızı ister. HoloLens, gözleriniz için doğru ipd 'yi ayarlamak üzere bu işlemi kullanır. Yeni Kullanıcı için ayarlama işleminin güncelleştirilmesi veya ayarlanması gerekiyorsa, Yeni Kullanıcı ayar uygulamasını kurulum dışında çalıştırabilir.
 
-![İkinci adımda IPD parmak hizalama ekranı.](./images/ipd-finger-alignment-300px.jpg)
+![İkinci adımda ıPD Finger hizalama ekranı.](./images/ipd-finger-alignment-300px.jpg)
 
-*İkinci adımda IPD parmak hizalama ekranı*
+*İkinci adımda ıPD Finger hizalama ekranı*
 
-Tebrikler! Kurulum tamamlanmıştır ve HoloLens.
+Tebrikler! Kurulum tamamlanmıştır ve HoloLens kullanmaya başlayabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Kullanmaya başlayın ile HoloLens (1. nesil)](hololens1-basic-usage.md)
+> [HoloLens kullanmaya başlayın (1. genel)](hololens1-basic-usage.md)

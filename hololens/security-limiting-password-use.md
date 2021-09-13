@@ -1,12 +1,12 @@
 ---
-title: Parola kullanımını sınırlama
-description: parola kullanımını HoloLens
+title: Parola kullanımını sınırlandırma
+description: HoloLens için parola kullanımını sınırlandırma
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: güvenlik, hololens, parola kullanımını sınırlama, parola, hololens parolası, oturum açma, oturum açma, windows hello, hello, Windows hesap yöneticisi, FIDO2 oturum açma, FIDO 2, WEBAUTHN, yerel hesap, hololens güvenliği
+keywords: Güvenlik, Hololens, parola kullanımını sınırlandırma, parola, Hololens parola, oturum açma, oturum açma, Windows Hello, Merhaba, Windows hesap yöneticisi, FIDO2 oturum açma, FIDO 2, WEBAUTHN, yerel hesap, Hololens güvenliği
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -15,104 +15,104 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 24cd9b81d0d99afaa0479787b846b423310c6739
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124429020"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036597"
 ---
-# <a name="limiting-password-use"></a>Parola kullanımını sınırlama
+# <a name="limiting-password-use"></a>Parola kullanımını sınırlandırma
 
-Günümüzde çoğu bilgisayar sistemi, güvenliğin temeli olarak kullanıcı kimlik bilgilerini kullanır ve bunları yeniden kullanılabilir, kullanıcı tarafından oluşturulan parolalara bağımlı hale gelir. Bu durum, parolaların hesap güvenliğinin ihlal ve veri ihlallerinin en yaygın nedeni haline de neden oldu. Buna örnek olarak, parolalar iletimde kesilebilir veya bir sunucudan çalınarak (kimlik avı veya parola spreyi saldırıları tarafından) ve bir kullanıcı hesabına erişim elde etmek için ele geçirilebilir.
+Günümüzde çoğu bilgisayar sistemi, Kullanıcı tarafından oluşturulan ve Kullanıcı tarafından oluşturulan parolalara bağımlı hale getirme güvenliği için temel olarak Kullanıcı kimlik bilgilerini kullanır. Bu, parolaların hesap güvenliğinin aşılmasına ve veri ihlallerinin en yaygın nedenlerine neden oldu. Buna örnek olarak, parolalar bir sunucudan iletilmek veya çalınarak (sızdırma veya parola püskürtme saldırılarına karşı) ve bir kullanıcı hesabına erişim sağlamak için güvenliği tehlikeye girebilir.
 
-Güvenlik ve hesap korumasını geliştirmek için HoloLens 2, cihaz oturum açma için güçlü, donanım tarafından desteklene "parolasız" kimlik bilgilerini (Windows Hello dahil) etkinleştirme özelliğine sahiptir ve Microsoft bulutuna sorunsuz erişim sunar.
+güvenlik ve hesap korumasını artırmak için, HoloLens 2 cihaz oturum açma için güçlü, donanım tarafından desteklenen "parola-daha az" kimlik bilgilerini (Windows Hello dahil) etkinleştirme yeteneğine sahiptir ve Microsoft bulutuna sorunsuz erişim sunar.
 
 ## <a name="signing-in-from-another-device"></a>Başka bir cihazdan oturum açma
 
-HoloLens 2, karmaşık parolalar yazma ve kimlik bilgileri olarak parola ihtiyacının en aza indirilmesi için ilk cihaz kurulumu sırasında Azure Active Directory iş hesapları ve kullanıcı oturum açma bilgileri için uzak cihaz oturum açma seçenekleri sunar. Kimlik doğrulaması için akıllı kart kullanan kullanıcılar ve kuruluşlar, HoloLens 2 gibi cihazlarda bu kimlik bilgilerini kullanmada zorlukla karşılar ve kuruluşlar genellikle soruna çözüm bulmak için karmaşık sistemler ve maliyetli süreçler geliştirir. Bu sorunu çözmek için Azure AD, 2. veya 2. oturum açmada parolasız oturum HoloLens sunar.
+HoloLens 2, ilk cihaz kurulumu sırasında Azure Active Directory iş hesapları için uzak cihaz oturum açma seçenekleri sunar ve kullanıcı oturum açarak karmaşık parola yazma ihtiyacını azaltır ve kimlik bilgileri olarak parola ihtiyacını en aza indirir. kimlik doğrulaması için akıllı kartlar kullanan kullanıcılar ve kuruluşlar, HoloLens 2 gibi cihazlarda bu kimlik bilgilerini kullanmada zorluk göstermektedir ve genellikle kuruluşlar, sorunu geçici olarak çözmek için karmaşık sistemler ve maliyetli süreçler geliştirir. bu sorunu çözmek için, Azure AD HoloLens 2 ' de parola-daha az oturum açma için iki seçenek sunar.
 
-İlk kimlik doğrulama yöntemi, cihaza bağlı bir kullanıcı Microsoft Authenticator kimlik bilgilerini sağlayan anahtar tabanlı kimlik doğrulaması sağlamak için Microsoft Authenticator uygulamasındaki yeni özellikleri kullanır. Yönetici tarafından bir kiracıda etkinleştirildikten sonra, kullanıcılara cihaz kurulumu sırasında HoloLens uygulamalarında bir sayıya dokunmalarını söyleyen bir ileti gösterilir. Ardından kimlik doğrulayıcı uygulamasındaki sayıyla eşleşmesi, Onayla'nın seçilmesi, pin'ini sağlamaları veya kimlik doğrulamasının devam etmek için biyometrik HoloLens kimlik doğrulamasını sağlamaları gerekir. Bu, parolasız oturum açma [konusunda daha ayrıntılı olarak açıklanmıştır.](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
+ilk kimlik doğrulama yöntemi, bir cihaza bağlı kullanıcı kimlik bilgilerini sağlayan anahtar tabanlı kimlik doğrulaması sağlamak için Microsoft Authenticator uygulamasındaki yeni özellikleri kullanır. yönetici tarafından kiracı üzerinde etkinleştirildikten sonra kullanıcılara, HoloLens cihaz kurulumu sırasında bir ileti gösterilir. daha sonra kimlik doğrulayıcı uygulamasındaki numarayla eşleşmesi gerekir, onayla ' yı seçin, pın 'ini veya bir biyometri ve HoloLens kurulum işleminin devam edebilmesi için bir biyometrik ve kimlik doğrulamasını sağlayın. Bu, [parolasız oturum açma](/azure/active-directory/authentication/howto-authentication-passwordless-phone)bölümünde daha ayrıntılı olarak açıklanmıştır.
 
-İkincisi, kullanıcılar için sezgisel olan ve ek altyapı gerektirmeyen bir cihaz kodu akışıdır.  Bu uzaktan oturum açma davranışı, kuruluşun tercih edilen kimlik doğrulama mekanizmasını destekleyen başka bir güvenilir cihaza bağlı olur ve tamamlandığında, oturum açma veya cihaz kurulumunu tamamlamak için belirteçler HoloLens cihaza geri verir. Bu akışta yer alan adımlar:
+İkincisi, kullanıcılara sezgisel olan ve ek bir altyapı gerektirmeyen bir cihaz kod akışdır.  bu uzaktan oturum açma davranışı, kuruluşun tercih ettiği kimlik doğrulama mekanizmasını destekleyen başka bir güvenilen cihaza dayanır ve tamamlandığında, oturum açma veya cihaz kurulumunu tamamlayacak belirteçleri HoloLens geri gönderilir. Bu akıştaki adımlar şunlardır:
 
-  1. OOBE'de ilk cihaz kurulumu veya oturum açma akışlarını geçen bir kullanıcıya "Başka bir cihazdan oturum açma" bağlantısı ve bu bağlantıya dokunması gerekir. Bu, bir uzaktan oturum açma oturumu başlatıyor.
-  1. Ardından kullanıcıya, Azure AD Güvenli Belirteç [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) Hizmeti'nin (STS) cihaz kimlik doğrulama uç noktasını belirten kısa bir URI ( ) içeren bir yoklama sayfası gösterilir. Kullanıcıya bulutta güvenli bir şekilde oluşturulan ve en fazla 15 dakika ömrü olan tek kullanımlık bir kod da sunulmaktadır. Azure AD, kod oluşturmanın yanı sıra önceki adımda uzaktan oturum açma isteğinin başlatalımı ile birlikte şifrelenmiş bir oturum oluşturur ve uzaktan oturum açma isteğini onaylamak için URI ve kod kullanılır.
-  1. Kullanıcı daha sonra başka bir cihazdan URI'ye gidin ve 2 cihazında görüntülenen kodu HoloLens istenir.
-  1. Kullanıcı kodu girdiktan sonra Azure AD STS, kullanıcının uzaktan oturum açma isteğini tetikleyen ve kodun HoloLens 2 cihazına sahip olduğunu belirten bir sayfa görüntüler. Ardından kullanıcıdan kimlik avı saldırılarını önlemek için onay istenir.
-  1. Kullanıcı görüntülenen 'uygulamada' oturum açmaya devam etmek seçerse, Azure AD STS kullanıcıdan kimlik bilgilerini istenir. Başarılı bir kimlik doğrulamasında Azure AD STS, önbelleğe alınan uzak oturumu yetkilendirme koduyla birlikte 'onaylı' olarak günceller.
-  1. Son olarak, kullanıcının HoloLens 2 cihazındaki yoklama sayfası Azure AD'den bir 'Yetkili' yanıtı alır ve kullanıcı kodunu, ilişkili saklı yetkilendirme kodunu doğrulamaya devam eder ve cihaz kurulumunu tamamlamak için istenen OAuth belirteçlerini üretir. Oluşturulan kimlik doğrulama belirteci 1 saat boyunca geçerlidir ve yenileme belirtecin ömrü 90 gündür.
+  1. OOBE 'deki ilk cihaz kurulumu veya oturum açma akışlarından geçen bir Kullanıcı, "başka bir cihazdan oturum açma" bağlantısı ve bunun üzerine dokunmasıyla sunulur. Bu, uzaktan oturum açma oturumu başlatır.
+  1. Daha sonra Kullanıcı, [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) Azure AD güvenli belirteç hizmeti 'nin (STS) cihaz kimlik doğrulama uç noktasını işaret eden kısa bır URI () içeren bir yoklama sayfası gösterilir. Kullanıcı aynı zamanda bulutta güvenli bir şekilde oluşturulan ve 15 dakikalık en yüksek yaşam süresine sahip bir kerelik kod ile sunulur. Azure AD, kod oluşturma ile birlikte, önceki adımda uzaktan oturum açma isteği başlatma sonrasında şifrelenmiş bir oturum oluşturur ve birlikte, uzaktan oturum açma isteğini onaylamak için URI ve kod kullanılır.
+  1. daha sonra kullanıcı başka bir cihazdan urı 'ye gider ve HoloLens 2 cihazında görüntülenecek kodu girmesi istenir.
+  1. kullanıcı koda girdiğinde Azure AD STS, kullanıcının uzaktan oturum açma isteğini tetiklediği ve kodun oluşturulmasını isteyen HoloLens 2 cihazını gösteren bir sayfa görüntüler. Daha sonra kullanıcının kimlik avı saldırılarını önlemeyi onaylaması istenir.
+  1. Kullanıcı, görüntülenmiş ' uygulama ' üzerinde oturum açmaya devam etmeyi seçerse, Azure AD STS kullanıcıdan kimlik bilgilerini ister. Başarılı kimlik doğrulaması sırasında Azure AD STS, önbelleğe alınmış uzak oturumu bir yetkilendirme koduyla birlikte ' onaylandı ' olarak güncelleştirir.
+  1. son olarak, kullanıcının HoloLens 2 cihazındaki yoklama sayfası, Azure AD 'den ' yetkilendirilmiş ' bir yanıt alır ve kullanıcı kodunu, ilişkili depolanan yetkilendirme kodunu doğrulamaya devam eder ve cihaz kurulumunu tamamlamanın istendiği şekilde OAuth belirteçleri oluşturur. Oluşturulan kimlik doğrulama belirteci 1 saat için geçerlidir ve yenileme belirtecinin ömrü 90 gün olur.
 
-Bu akışta kullanılan kod oluşturma ve şifreleme algoritmalarının her ikisi de FIPS uyumludur. HoloLens 2 cihaz, cihaz anahtarlarının güvenliğini sağlamak ve donanım korumalı anahtarlar kullanarak kullanıcı kimlik doğrulaması sonrasında oluşturulan belirteçleri şifrelemek için TPM kullanır. HoloLens 2'de belirteç güvenliği hakkında daha fazla bilgi, Birincil Yenileme [Belirteci (PRT) nedir? içinde paylaşılır.](/azure/active-directory/devices/concept-primary-refresh-token)
+Bu akışta kullanılan kod oluşturma ve şifreleme algoritmalarının her ikisi de FIPS uyumludur. HoloLens 2 cihaz, cihaz anahtarlarının güvenliğini sağlamak ve donanım korumalı anahtarlar kullanılarak kullanıcı kimlik doğrulamasından sonra oluşturulan belirteçleri şifrelemek için TPM 'yi kullanır. HoloLens 2 ' deki belirteç güvenliği hakkında daha fazla bilgi [, birincil yenileme belirteci (prt)](/azure/active-directory/devices/concept-primary-refresh-token)ile paylaşılır.
 
 ## <a name="device-sign-in-with-windows-hello"></a>Windows Hello ile cihaz oturum açma
 
-[Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification) doğrudan işletim sisteminde yerleşik olarak bulunan ve kullanıcıların Iris veya PIN kullanarak cihazda oturum açmalarına izin verilen parolasız seçenekler sunar. PIN her zaman kimlik bilgisi olarak kullanılabilir ve cihaz kurulumu için gereklidir, Iris ise isteğe bağlıdır ve atlanabilir. Kullanıcılar, kişisel hesaplarını veya HoloLens Microsoft hesabı hesaplarını kullanarak HoloLens veya [Azure Active Directory *hesabıyla* oturum açmalarını sağlar.](/azure/active-directory/authentication/concept-authentication-passwordless) Bu tür seçenekler kullanıcılara tam güvenlik deneyimi, uygulamalar, veriler, web siteleri ve Windows hızlı ve güvenli erişim sunar. Microsoft'un parolasız deneyimlere yönelik stratejisi burada ayrıntılı olarak açık bir şekilde vemektedir.
+[Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification) , doğrudan işletim sisteminde yerleşik olarak bulunan ve kullanıcılara ıris veya pın kullanarak cihazda oturum açmalarına izin veren parola içermeyen seçenekler sunar. PIN, her zaman bir kimlik bilgisi olarak kullanılabilir ve cihaz kurulumu için gereklidir, Iris isteğe bağlıdır ve atlanabilir. kullanıcılar, [bir parola girmeden kişisel Microsoft hesabı veya Azure Active Directory iş hesabını  ](/azure/active-directory/authentication/concept-authentication-passwordless)kullanarak cihaz HoloLens oturum açabilirler. bu teklif kullanıcıları gibi seçenekler, tam Windows deneyimine, uygulamalarına, verilerine, web sitelerine ve hizmetlerine güvenli bir şekilde erişebilir. Microsoft 'un parolasız deneyimlere yönelik stratejisi burada ayrıntılı olarak verilmiştir.
 
-Bir Windows Hello kimlik bilgisi oluşturulduğunda, kimlik sağlayıcısıyla güvenilir bir ilişki oluşturur ve kimlik doğrulaması için asimetrik bir anahtar çifti oluşturur. Bir Windows Hello hareketi (iris veya PIN gibi), cihazın Güvenilir Platform Modülü (TPM) yongası tarafından desteklenen bir özel anahtarın şifresini çözmek için entropi sağlar. Bu özel anahtar daha sonra kimlik doğrulama sunucusuna gönderilen istekleri imzalamak ve başarılı bir kimlik doğrulaması sonrasında kullanıcıya posta, resimler ve diğer hesap ayarlarına erişim izni vermek için kullanılır.
+Windows Hello kimlik bilgileri oluşturulduğunda, kimlik sağlayıcısıyla güvenilir bir ilişki kurar ve kimlik doğrulaması için asimetrik bir anahtar çifti oluşturur. Windows Hello hareketi (ıris veya PIN gibi), cihazın Güvenilir Platform Modülü (TPM) yongası tarafından desteklenen özel bir anahtarın şifresini çözmek için entropi sağlar. Bu özel anahtar daha sonra kimlik doğrulama sunucusuna gönderilen isteklerin imzalanmasından ve başarıyla kimlik doğrulamasından sonra, kullanıcıya posta, resim ve diğer hesap ayarlarına erişim izni verildiği için kullanılır.
 
 Daha fazla bilgi için aşağıdaki bilgi grafiğine bakın:
 
-  ![Windows Hello Oturum açma.](images/security-hello-sign-in.png)
+  ![Windows Hello Oturum açın.](images/security-hello-sign-in.png)
   
-Yukarıda sunulan grafikte, nonce ifadesinin "bir kez sayı" ve rastgele veya yarı rastgele oluşturulmuş bir sayı olduğunu unutmayın. Biyometrik Windows Hello PIN kimlik bilgileri ayarlandıktan sonra, sağlandıktan sonra cihazdan asla ayrılmayacak. Kullanıcının kimlik avı Windows Hello gibi bir PIN'i çalınsa bile, kullanıcının fiziksel cihazı olmadan [kullanılamaz.](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)
+Yukarıda sunulan grafikte, nonce 'in "bir kez sayı" olduğunu ve rastgele veya yarı rastgele oluşturulmuş bir sayı olduğunu unutmayın. Windows Hello biyometri veya pın kimlik bilgileri kurulduktan sonra, üzerinde sağlanmakta olan cihazdan ayrılmayın. kullanıcının Windows Hello pın 'i çalınsa bile, bir kimlik avı saldırısında olduğu gibi, [kullanıcının fiziksel cihazı olmadan](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)bu kullanılamaz.
 
-Daha fazla güvenlik için, Windows Hello kimlik bilgileri Güvenilir Platform Modülü (TPM) tarafından korunarak kimlik bilgilerinin kurcalanmaya karşı dayanıklı ve birden çok yanlış girişe karşı koruma koruması ve kötü amaçlı yazılım koruması ile eklenmiştir. TekLi Kimlik Sign-On Doğrulama (SSO) hakkında daha fazla bilgi için [SSO yöntemlerine genel bakış makalelerini okuyun.](/azure/active-directory/manage-apps/what-is-single-sign-on)
+ek güvenlik için Windows Hello kimlik bilgileri Güvenilir Platform Modülü (TPM) tarafından korunmaktadır. bu kimlik bilgileri, birden fazla hatalı girişe karşı korumalı koruma korumalarının yanı sıra kötü amaçlı yazılım koruması ve pozlamayı engellemek için kötü amaçlı yazılımdan koruma sağlar. Tek Sign-On (SSO) hakkında daha fazla bilgi için, [SSO yöntemlerine genel bakış](/azure/active-directory/manage-apps/what-is-single-sign-on)konusunu okuyun.
 
-Iris kimlik doğrulaması PIN'e geri döner. Cihazda yeni bir PIN (güçlü bir kimlik doğrulayıcı) ayarlamak için, kullanıcının işlemi tamamlamak için kısa süre önce Çok Faktörlü Kimlik [Doğrulaması(MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) üzerindenmış olması gerekir.
+Iris kimlik doğrulaması, PIN 'e geri döner. Cihazda yeni bir PIN (güçlü bir kimlik doğrulayıcı) ayarlamak için, kullanıcının işlemi tamamlaması için yakın zamanda [çok faktörlü Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) üzerinden geçmiş olması gerekir.
 
-## <a name="single-sign-on-with-web-account-manager"></a>Web Hesabı Yöneticisi ile çoklu oturum açma
+## <a name="single-sign-on-with-web-account-manager"></a>Web hesabı Yöneticisi ile çoklu oturum açma
 
-Çoklu oturum açma (SSO), parolasız kullanıcıların cihazda kullanıcının kişisel hesabını veya iş ya da okul hesabını kullanarak oturum açmasını sağlar. Kullanıcı, tüm tümleşik uygulama ve hizmetlerde SSO ile otomatik olarak [Web Hesabı Yöneticisi.](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)
+Çoklu oturum açma (SSO), kullanıcıların kişisel hesabını veya iş veya okul hesabını kullanarak cihazda oturum açmasına olanak tanır. Kullanıcı, [Web hesabı Yöneticisi API 'leri](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)aracılığıyla tüm tümleşik uygulamalarda ve hizmetlerde SSO ile otomatik olarak yetkilendirilir.
 
-Bir uygulama aracılığıyla bir kimlik eklendiktan sonra, kullanıcı onayıyla sistem düzeyinde tümleştirme kullanılarak tüm uygulama ve hizmetler için kullanılabilir hale olabilir. Bu, uygulama oturum açma yükünü önemli ölçüde azaltır ve kullanıcılara sorunsuz bir kimlik deneyimi sağlar.
+Bir uygulama aracılığıyla bir kimlik eklendikten sonra, kullanıcı onayı ile sistem düzeyi tümleştirme kullanılarak tüm uygulamalar ve hizmetler için kullanılabilir hale gelir. Bu, uygulama oturum açma yükünü önemli ölçüde azaltır ve kullanıcılara sorunsuz bir kimlik deneyimi sağlar.
 
-Web Hesabı Yöneticisi API'lerini uygulama hakkında daha fazla bilgi için Web Hesabı Yöneticisi [api'lerini uygulama'ya gidin.](/windows/uwp/security/web-account-manager)
+Web hesabı Yöneticisi API 'Leri uygulama hakkında daha fazla bilgi için, [Web hesabı Yöneticisi API 'Leri uygulama](/windows/uwp/security/web-account-manager)' ya gidin.
 
-  ![Güvenlik API'si.](images/security-api-img.png)
+  ![Güvenlik API 'SI.](images/security-api-img.png)
   
-Özel kimlik doğrulaması gereksinimleri olan uygulama paketleri için Web Hesabı Yöneticisi (WAM) çerçevesi özel kimlik sağlayıcıları tarafından genişletilebilir. Kullanıcılar, bu kimlik sağlayıcısıyla tümleştirilmiş diğer uygulamalarda SSO'Windows etkinleştirmek için Microsoft Store'dan Evrensel Windows Platformu (UWP) uygulaması olarak paketlenmiş özel kimlik sağlayıcısını indirebilir.
+Özelleştirilmiş kimlik doğrulama gereksinimlerine sahip uygulama paketleri için, web hesabı Yöneticisi (WAM) çerçevesi özel kimlik sağlayıcılarına göre genişletilebilir. kullanıcılar, bu kimlik sağlayıcısıyla tümleştirilmiş diğer uygulamalarda SSO 'yu etkinleştirmek için, Microsoft Store Evrensel Windows Platformu (UWP) uygulaması olarak paketlenmiş özel kimlik sağlayıcısını indirebilir.
 
-Özel WAM Kimlik sağlayıcıları uygulama hakkında daha fazla bilgi için [bkz. Özel WAM Kimlik Sağlayıcısı API başvurusu.](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)
+Özel WAM kimlik sağlayıcıları uygulama hakkında daha fazla bilgi için bkz. [özel WAM kimlik sağlayıcısı API başvurusu](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true).
 
-## <a name="windows-hello-and-fido2-sign-in-with-webauthn"></a>Windows Hello Ve FIDO2 ile WebAuthn ile oturum açma
+## <a name="windows-hello-and-fido2-sign-in-with-webauthn"></a>Windows Hello ve FIDO2 ile oturum açma
 
-HoloLens 2, parolasız kullanıcı kimlik bilgilerini (Windows Hello veya FIDO2 güvenlik anahtarları gibi) kullanarak Microsoft Edge ve WebAuthn'ı destekleyen web sitelerine güvenli bir şekilde oturum açma. FIDO2, kullanıcı kimlik bilgilerinin standartlara dayalı cihazlardan faydalanarak kimlik doğrulaması çevrimiçi hizmetler.
+HoloLens 2, web 'de Microsoft Edge ve WebAuthn 'yi destekleyen web siteleri aracılığıyla güvenli bir şekilde oturum açmak için parola-daha az kullanıcı kimlik bilgilerini (Windows Hello veya FIDO2 güvenlik anahtarları gibi) kullanabilir. FIDO2, Kullanıcı kimlik bilgilerinin çevrimiçi hizmetler kimlik doğrulaması için standartlara dayalı cihazlardan yararlanmasını sağlar.
 
 > [!Note]
-> [WebAuthn](https://www.w3.org/TR/webauthn/) ve FIDO2 [CTAP2](https://fidoalliance.org/specs/fido-v2.0-ps-20190130/fido-client-to-authenticator-protocol-v2.0-ps-20190130.html) belirtimleri hizmetlere uygulanır. WebAuthn ve FIDO2 tarafından belirtilen imzalı meta veriler, kullanıcının mevcut olup olmadığı gibi bilgiler sağlar ve yerel hareketle kimlik doğrulamasını doğrular.
+> [WebAuthn](https://www.w3.org/TR/webauthn/) ve FIDO2 [CTAP2](https://fidoalliance.org/specs/fido-v2.0-ps-20190130/fido-client-to-authenticator-protocol-v2.0-ps-20190130.html) özellikleri, hizmetler 'e uygulanır. WebAuthn ve FIDO2 tarafından belirtilen imzalı meta veriler, kullanıcının mevcut olup olmadığı gibi bilgileri sağlar ve yerel hareket aracılığıyla kimlik doğrulamasını doğrular.
 
-Windows Hello'de olduğu gibi, kullanıcı bir FIDO2 kimlik bilgisi oluşturduğunda ve kaydettirişte cihaz (HoloLens 2 veya FIDO2 güvenlik anahtarı), cihazda özel ve ortak bir anahtar oluşturur. Özel anahtar cihazda güvenli bir şekilde depolanır ve yalnızca biyometrik veya PIN gibi yerel bir hareket kullanılarak kilidi açtırıldıktan sonra kullanılabilir. Özel anahtar depolandığı zaman, ortak anahtar buluttaki Microsoft hesabı sisteme gönderilir ve ilişkili kullanıcı hesabıyla kaydedilir.
+Windows Hello olduğu gibi, kullanıcı bir FIDO2 kimlik bilgisi oluşturup kaydettiğinde cihaz (HoloLens 2 veya FIDO2 güvenlik anahtarı), cihazda özel ve ortak bir anahtar oluşturur. Özel anahtar cihazda güvenli bir şekilde depolanır ve yalnızca bir biyometri veya PIN gibi yerel bir hareket kullanılarak kilidi açıldıktan sonra kullanılabilir. Özel anahtar depolandığında, ortak anahtar buluttaki Microsoft hesabı sistemine gönderilir ve ilişkili kullanıcı hesabına kaydedilir.
 
-MSA ve Azure AD hesabıyla oturum açmanın ardından sistem oluşturulan bir sayı veya veri değişkenlerini HoloLens 2 veya FIDO2 cihazına gönderir. Kimlik HoloLens 2 veya cihaz, kimliği imzalamak için özel anahtarı kullanır. İmzalı kimlik ve meta veriler, Microsoft hesabı ortak anahtar kullanılarak doğrulanır.
+bir MSA ve Azure AD hesabıyla oturum açtıktan sonra, sistem HoloLens 2 veya FIDO2 cihazına bir üretilen sayı veya veri değişkeni gönderir. HoloLens 2 veya cihaz, tanımlamayı imzalamak için özel anahtarı kullanır. İmzalı tanımlama ve meta veriler Microsoft hesabı sistemine geri gönderilir ve ortak anahtar kullanılarak doğrulanır.
 
-Windows Hello ve FIDO2 cihazları, özellikle HoloLens yerleşik ve güvenli Güvenilir Platform Modülü cihaza göre kimlik bilgilerini uygulama. TPM enclave özel anahtarı depolar ve kilidini açmak için biyometrik veya PIN gerektirir. Benzer şekilde FIDO2 güvenlik anahtarı, özel anahtarı depolar ve kilidini açmak için biyometrik veya PIN gerektiren yerleşik güvenli bir yerleşime sahip küçük bir dış cihazdır.
+Windows Hello ve FIDO2 cihazları, özel olarak yerleşik Güvenilir Platform Modülü güvenli şifreleme gibi HoloLens cihaza göre kimlik bilgilerini uygular. TPM şifrelemesi özel anahtarı depolar ve kilidini açmak için bir biyometri ya da PIN gerektirir. Benzer şekilde, FIDO2 güvenlik anahtarı, özel anahtarı depolayan ve bir biyometri veya PIN 'in kilidini açmak için bir yerleşik güvenli kuşatma içeren küçük bir dış aygıttır.
 
-Her iki seçenek de bir adımda iki faktörlü kimlik doğrulaması sunar ve başarıyla oturum açması için hem kayıtlı bir cihaz hem de biyometrik veya PIN gerektirir. Daha fazla bilgi için fiDO2 güvenlik anahtarı ile güçlü kimlik doğrulaması grafiğine ve işlemine bakın.
+Her iki seçenek de iki öğeli kimlik doğrulamayı tek bir adımda sunar, hem kayıtlı bir cihazın hem de bir biyometri veya PIN 'in başarıyla oturum açmasını gerektirir. Daha fazla bilgi için, aşağıdaki FIDO2 güvenlik anahtarı grafiği ve işlemiyle güçlü kimlik doğrulaması konusuna bakın.
 
-### <a name="strong-authentication-with-fido2-security-key"></a>FIDO2 güvenlik anahtarı ile Güçlü Kimlik Doğrulaması
+### <a name="strong-authentication-with-fido2-security-key"></a>FIDO2 güvenlik anahtarıyla güçlü kimlik doğrulaması
 
   ![FIDO img.](images/security-fido2-whfb-smaller.png)
 
-1. Kullanıcı FIDO2 güvenlik anahtarını HoloLens 2'ye takıyor
+1. kullanıcı FIDO2 güvenlik anahtarını HoloLens 2 ' ye takar
 1. Windows FIDO2 güvenlik anahtarını algılar
-1. HoloLens isteği gönderir
-1. Azure AD geri nonce gönderir
-1. Kullanıcı, güvenlik anahtarının güvenli yerleşimi içinde özel anahtar depolarının kilidini açmak için hareketi tamamlar
-1. FIDO2 güvenlik anahtarı özel anahtarla nonce imzalar
-1. İmzalı nonce ile PRT belirteci isteği Azure AD'ye gönderilir
-1. Azure AD FIDO anahtarını doğrular
-1. Azure AD, kaynaklara erişimi etkinleştirmek için PRT ve TGT döndürür
+1. HoloLens auth isteği gönderir
+1. Azure AD, geri nonce gönderir
+1. Kullanıcı güvenlik anahtarının güvenli şifreliğine özel anahtar depolarının kilidini açma hareketini tamamlar
+1. FIDO2 güvenlik anahtarı, anahtar nonce 'yi özel anahtarla imzalar
+1. İmzalı nonce ile PRT belirteci isteği Azure AD 'ye gönderiliyor
+1. Azure AD, FIDO anahtarını doğrular
+1. Azure AD, kaynaklara erişimi etkinleştirmek için PRT ve TGT 'yi döndürür
 
-MSA ve Azure AD, WebAuthn kullanarak parolasız kimlik doğrulamasını destekleyen ilk bağlı olan taraflardır.
+MSA ve Azure AD, WebAuthn 'yi uygulayarak parola daha az kimlik doğrulamasını destekleyen ilk bağlı olan taraflardır.
 
-WebAuthn'ı uygulamalar ve/veya SDK'lar ile kullanma hakkında daha fazla bilgi için, web üzerinde parolasız kimlik doğrulaması için [WebAuthn API'leri Windows 10.](/windows/security/identity-protection/hello-for-business/webauthnapis)
+Uygulama ve/veya SDK 'Lar ile WebAuthn kullanma hakkında daha fazla bilgi için, [Windows 10 üzerinde parola açısından daha az kimlik doğrulama Için WebAuthn API 'lerine](/windows/security/identity-protection/hello-for-business/webauthnapis)gidin.
 
-HoloLens 2, parolasız oturum açma - FIDO2 güvenlik anahtarları için belirtilen özellikleri ve Azure Active Directory gereksinimleri karşılamak için uygulanan [FIDO2 güvenlik](/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys) cihazlarını destekler.
+HoloLens 2, FIDO2 Azure Active Directory ' ye uygulanan ve [passwordless oturum açma-FIDO2 güvenlik anahtarlarının](/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys) desteklenmesinin gerekli olduğu gereksinimleri karşılayan güvenlik cihazlarını destekler.
 
 ## <a name="local-accounts"></a>Yerel hesaplar
 
-Çevrimdışı mod dağıtımları için tek bir yerel hesap yalıtabilirsiniz. Yerel hesaplar varsayılan olarak etkin değildir ve cihaz sağlama sırasında yapılandırılması gerekir. Bir parola kullanarak oturum açmaları gerekir ve alternatif kimlik doğrulama [](/windows/security/identity-protection/hello-for-business/hello-overview) yöntemlerini desteklemezler (İş için Windows Hello veya [Windows Hello).](/windows-hardware/design/device-experiences/windows-hello)
+Tek bir yerel hesap, çevrimdışı mod dağıtımları için yapılandırılabilir. Yerel hesaplar varsayılan olarak etkin değildir ve cihaz sağlama sırasında yapılandırılması gerekir. parola kullanarak oturum açması gerekir ve alternatif kimlik doğrulama yöntemlerini ( [örneğin Windows Hello iş](/windows/security/identity-protection/hello-for-business/hello-overview) veya [Windows Hello](/windows-hardware/design/device-experiences/windows-hello)) desteklemezler.
 
-Kullanıcı hesaplarının HoloLens daha fazla bilgi için kimlik [HoloLens bulunabilir.](hololens-identity.md)
+HoloLens kullanıcı hesapları hakkında daha fazla ayrıntı [HoloLens kimlik](hololens-identity.md)üzerinde bulunabilir.
 
-IT yöneticileri, [AllowMicrosoftAccountConnection](/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)aracılığıyla kullanıcının e-postayla ilgili olmayan bağlantı kimlik doğrulaması ve hizmetleri için bir MSA hesabı kullanmasına izin verilip kullanmasına izin verilemeyeceklerini ayarlar. Parola yapılandırma ilkeleri, kimlik değiştirme ilkeleri ve kilit ekranı ilkeleri için bkz. [Cihaz Kilidi.](/windows/client-management/mdm/policy-csp-devicelock)
+BT yöneticileri, kullanıcının e-posta ile ilgili olmayan bağlantı kimlik doğrulaması ve hizmetleri için [Allowmicrosoftaccountconnection](/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)aracılığıyla bir MSA hesabı kullanmasına izin verilip verilmeyeceğini ayarlar. Parola yapılandırma ilkeleri, sayaç oluşturma ilkeleri ve kilit ekranı ilkeleri için bkz. [cihaz kilitleme](/windows/client-management/mdm/policy-csp-devicelock).

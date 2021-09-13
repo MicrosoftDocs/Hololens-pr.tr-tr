@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 endüstriyel sürümü
-description: HoloLens 2 endüstriyel sürümü ve kendinizinkini aldıktan sonra ne yapmanız gerektiğini öğrenin.
-keywords: HoloLens 2 satın alma seçenekleri, HoloLens seçenekler, endüstriyel sürüm
+title: HoloLens 2 Industrial Edition
+description: 2 HoloLens sürümü hakkında bilgi alın ve kendi sürümlerden birini elde ettikten sonra ne yapacaklarını öğrenin.
+keywords: HoloLens 2 satın alma seçeneği, HoloLens seçenekleri, Industrial Edition
 author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -15,37 +15,37 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 51306755da5500d22829f359d2bf1467980892ea
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428294"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036381"
 ---
-# <a name="hololens-2-industrial-edition"></a>HoloLens 2 endüstriyel sürümü
+# <a name="hololens-2-industrial-edition"></a>HoloLens 2 Industrial Edition
 
-ıso class 6 ile ıso sınıfı 8 aracılığıyla, HoloLens 2 endüstriyel sürümü, 2 yıllık garanti ve hızlı bir değiştirme programı ile desteklenir ve bu arada, 1. düzey, 2. bölüm,
+ISO Sınıf 6 ile ISO Sınıf 8 arasında değişen standartlarla temiz oda ortamlarını destekleyecek şekilde tasarlanmış, tasarlanmış ve test edilmiş, HoloLens 2 Industrial Edition UL Sınıf I, Bölüm 2 sertifikalıdır ve 2 yıllık garanti ve hızlı bir değişim programıyla desteklenir.
 
-## <a name="learn-about-hololens-2-industrial-edition"></a>HoloLens 2 endüstriyel sürümü hakkında bilgi edinin
+## <a name="learn-about-hololens-2-industrial-edition"></a>HoloLens 2 Industrial Edition hakkında bilgi alın
 
-HoloLens 2 endüstriyel sürümü geliştirilmiştir ve yeni malzemeler ve sertifikalar sayesinde aşağıdakiler de dahil olmak üzere daha geniş endüstriyel ortamlar kümesini destekler:
+HoloLens 2 Industrial Edition, aşağıdakiler dahil olmak üzere daha geniş bir endüstriyel ortamları desteklemek için yeni malzemeler ve sertifikalarla geliştirilmiş ve yeniden tasarlanmıştır:
 
-- **Oda ortamlarını temizle:** HoloLens 2 endüstriyel sürümü, ıso 14644-1 sınıfı 5 ' ten itibaren, yabancı parçacık miktarının sınırlı ve kısıtlandığı ve bu boşlukların içindeki nesnelerin, parçalama, aykırı kullanım ve kirminant saklama alanlarında sınırlara sahip olduğu bir standart ile destekler.
-- **Tehlikeli konumlar:** HoloLens 2 endüstriyel sürüm, flap, vapors veya litids 'nin bulunduğu, ancak normal işlemler sırasında yalnızca ıgnitable dalgalanmaları içinde olmayan ortamları destekler ve bir UL sınıfı i, bölüm 2-gruplar a, B, C ve D tehlikeli loc sertifikası içerir.
+- **Temiz oda ortamları:** HoloLens 2 Industrial Edition, ISO 14644-1 Sınıf 5 temiz oda sayısına kadar değişen standartlarla desteklemektedir. Burada yabancı parçacık miktarı sınırlı ve kısıtlıdır ve bu alanlardaki nesnelerin doldurma, outgassing ve kalıcı saklama sınırları vardır.
+- **Tehlikeli Konumlar:** HoloLens 2 Industrial Edition; yanıcı gazların, buharların veya sıvıların mevcut olduğu ancak normal işlemler sırasında genellikle görülemeyen yoğunluklarda mevcut olduğu ortamları destekler ve UL Sınıf I, 2. Bölüm A, B, C ve D PULOC sertifikalarını içerir.
 
-yükseltilen cihaza ek olarak, HoloLens 2 endüstriyel sürüm, & hızlı bir şekilde değiştirme programı olan 2 yıllık garanti sunar.
+HoloLens 2 Industrial Edition, yükseltilen cihaza ek olarak hızlı değiştirme programı için 2 & garanti sunar.
 
-![Endüstriyel sürüm, temiz bir odada kullanılır.](./images/ie-small-pic.png)
+![Industrial Edition temiz bir odaya kullanılmıştır.](./images/ie-small-pic.png)
 
-[HoloLens 2 endüstriyel sürümü sss](hololens2-industrial-edition-faq.md)makalesini inceleyin.
+HoloLens [2 Industrial Edition SSS bölümünü gözden geçirin.](hololens2-industrial-edition-faq.md)
 
-## <a name="cleaning-and-handling-hololens-2"></a>HoloLens temizleme ve işleme 2
+## <a name="cleaning-and-handling-hololens-2"></a>Temizleme ve İşleme HoloLens 2
 
-HoloLens 2 endüstriyel sürümü, "%70" ısopropyl alkol ve su çözümü tarafından temizlenebilir ve bu da vizörü, brow ve baş strap dahil olmak üzere cihazın sabit yüzeylerini temizler. daha fazla bilgi için [HoloLens 2 temizleme hakkında sss](/hololens/hololens2-maintenance)bölümüne bakın.
+HoloLens 2 Industrial Edition; "%70" isopropyl ve su çözümüyle temizlenerek cihazın visor, brow pad ve head head gibi sabit yüzeyleri temizlenebilir. Daha fazla bilgi için bkz. [HoloLens 2 temizleme hakkında SSS.](/hololens/hololens2-maintenance)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-1. karma gerçeklik ile hemen etkileşim kurmaya başlayın ve HoloLens Windows 10 gezinerek, bt etkileşimlerine yönelik uygulamalı öğreticiler için **İpuçları** uygulamasına göz atın. başlamak için başlangıç hareketini kullanın veya "başlat 'a git" deyin ve İpuçları ' yi seçin.
-1. HoloLens 2 ' yi okumaya devam etmek için aşağıya tıklayın.
+1. Karma Gerçeklik ile hemen etkileşime Windows 10 HoloLens uygulamanıza giderek İpuçları etkileşimler için  uygulamalı öğreticiler için İpuçları uygulamasına göz atabilirsiniz. Başlat'a gitmek veya "Başla"ya gidip "Başla"ya gitmek için başlangıç hareketini İpuçları.
+1. 2.0'da çalışmaya devam etmek için HoloLens tıklayın.
 
 > [!div class="nextstepaction"]
-> [HoloLens 2 ile çalışmaya başlama](hololens2-basic-usage.md)
+> [Kullanmaya başlayın 2 ile HoloLens](hololens2-basic-usage.md)

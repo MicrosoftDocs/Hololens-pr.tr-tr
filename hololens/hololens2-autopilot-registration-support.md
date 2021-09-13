@@ -1,6 +1,6 @@
 ---
 title: Windows HoloLens 2 için Autopilot Kayıt Desteği
-description: HoloLens 2 cihazlarda Autopilot için kayıt desteği alın.
+description: HoloLens 2 cihazlarda Autopilot için kayıt desteği nasıl alın hakkında bilgi alın.
 author: joyjaz
 ms.author: v-jjaswinski
 ms.date: 5/20/2021
@@ -14,18 +14,18 @@ ms.localizationpriority: high
 keywords: Otopilot
 manager: ylempidakis
 ms.openlocfilehash: cdd2ab68905d5cc82b1c5ccc50640112e857f2f4
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427377"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036492"
 ---
 # <a name="hololens-2-registration-support-for-autopilot"></a>HoloLens 2 Autopilot için Kayıt Desteği
 
 Müşteriler ve Microsoft Bulut Çözümü Sağlayıcıları (CSP'ler) artık HoloLens 2 cihaza doğrudan istek göndererek Microsoft Desteği. Bu sayfada, aşağıdaki desteklenen Autopilot kayıt senaryoları için gereksinimler özetlemektedir:
 
 - **HoloLens 2 Cihaz Autopilot Kaydı**. 2 cihaz için HoloLens Autopilot'a Windows isteği gönderme.
-- **HoloLens 2 Cihaz Donanım Karması İsteği.** Müşterilerin veya CSP'Microsoft Desteği cihazları Microsoft Intune veya Microsoft İş Ortağı Merkezi aracılığıyla kendi kendine kaydetmek için kullanabileceği donanım karmalarını sağlamak için Microsoft Intune hizmetine istek İş Ortağı Merkezi.
+- **HoloLens 2 Cihaz Donanım Karması İsteği.** Müşterilerin veya CSP'Microsoft Desteği cihazları Microsoft Intune veya Microsoft İş Ortağı Merkezi aracılığıyla kendi kendine kaydetmek için kullanabileceği donanım karmalarını sağlamak için Microsoft Intune'a istek İş Ortağı Merkezi.
 - **HoloLens 2 Device Autopilot Deregistration**. Normalde cihaz sonu senaryolarında kullanılan Windows Autopilot'tan cihaz silme isteği göndermektedir.
 
 Aşağıdaki tabloda, kayıt isteklerini Microsoft Desteği'a göndermeden önce toplamanız gereken bilgiler ve Microsoft Desteği. 

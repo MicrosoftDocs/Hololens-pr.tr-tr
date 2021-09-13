@@ -1,6 +1,6 @@
 ---
-title: HoloLens cihazlarından tanılama bilgilerini toplayın ve kullanın
-description: HoloLens cihazlarından tanılama bilgilerini nasıl toplayacağınızı, kullanacağınızı ve koruyacağınızı öğrenin.
+title: Cihazlardan tanılama bilgilerini toplama HoloLens kullanma
+description: Cihazlardan tanılama bilgilerini toplamayı, kullanmayı ve HoloLens öğrenin.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 10/15/2020
@@ -19,94 +19,94 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 082a263bdd7eba694c13124abf40763644c83dfa
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427364"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032955"
 ---
-# <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>HoloLens cihazlarından tanılama bilgilerini toplayın ve kullanın
+# <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>Cihazlardan tanılama bilgilerini toplama HoloLens kullanma
 
-HoloLens kullanıcılar ve yöneticiler HoloLens tanılama bilgilerini toplamak için dört farklı yöntem arasından seçim yapabilir:
+HoloLens kullanıcılar ve yöneticiler aşağıdaki yöntemlerden tanılama bilgilerini toplamak için dört farklı yöntem arasından HoloLens:
 
-- Geri Bildirim Hub 'ı uygulaması
+- Geri Bildirim Merkezi uygulama
 - DiagnosticLog CSP
-- Ayarlar uygulaması
-- Çevrimdışı tanılama
+- Ayarlar uygulama
+- Çevrimdışı Tanılama
 
 > [!IMPORTANT]  
-> Cihaz tanılama günlükleri, tipik işlemler sırasında kullanıcının hangi işlemler veya uygulamalar tarafından başlatıldığı hakkında bilgi gibi kişisel olarak tanımlanabilen bilgileri (PII) içerir. birden çok kullanıcı bir HoloLens cihazını paylaşıyorsa (örneğin, kullanıcılar farklı Microsoft Azure Active Directory (Azure AD) hesapları kullanarak aynı cihazda oturum açtığında) tanılama günlükleri, birden fazla kullanıcı için geçerli olan pıı bilgilerini içerebilir. Daha fazla bilgi için bkz. [Microsoft gizlilik bildirimi](https://privacy.microsoft.com/privacystatement).
+> Cihaz tanılama günlükleri, kullanıcının tipik işlemler sırasında başladığı işlemler veya uygulamalar gibi kişisel bilgileri (PII) içerir. Birden çok kullanıcı bir HoloLens cihazı paylaştığında (örneğin, kullanıcılar farklı Microsoft Azure Active Directory (Azure AD) hesapları kullanarak aynı cihazda oturum açtığında), tanılama günlükleri birden çok kullanıcı için geçerli piI bilgilerini içerebilir. Daha fazla bilgi için [bkz. Microsoft Gizlilik bildirimi.](https://privacy.microsoft.com/privacystatement)
 
-Aşağıdaki tabloda farklı koleksiyon yöntemleri karşılaştırılmaktadır. Yöntem adları, tabloyu izleyen bölümlerde daha ayrıntılı bilgilere bağlantı sağlar.
+Aşağıdaki tabloda farklı koleksiyon yöntemleri karşılaştırıldı. Yöntem adları, tabloyu takip alan bölümlerde daha ayrıntılı bilgilere bağlantı sağlar.
 
 |Yöntem |Önkoşullar |Veri konumları |Veri erişimi ve kullanımı |Veri saklama |
 | --- | --- | --- | --- | --- |
-|[Geribildirim Merkezi](#feedback-hub) |Ağ ve internet bağlantısı<br /><br />Geri Bildirim Hub 'ı uygulaması<br /><br />Microsoft bulutuna dosya yükleme izni |Microsoft bulut<br /><br />HoloLens cihaz (isteğe bağlı) |Kullanıcı Yardım ister, kullanım koşullarını kabul eder ve verileri karşıya yükler<br /><br />Microsoft çalışanları, verileri kullanım koşulları ile tutarlı olarak görüntüler |Buluttaki veriler, bir sonraki nesil Gizlilik (NGP) tarafından tanımlanan süre için tutulur. Ardından veriler otomatik olarak silinir.<br /><br />Cihazdaki veriler, **cihaz sahibi** veya **yönetici** izinlerine sahip olan bir kullanıcı tarafından dilediğiniz zaman silinebilir. |
-|[Ayarlar İdir](#settings-troubleshooter) |Ayarlar uygulaması |HoloLens cihaz<br /><br />Bağlı bilgisayar (isteğe bağlı) |Kullanıcı verileri depolar ve yalnızca Kullanıcı verilere erişir (Kullanıcı, verileri başka bir kullanıcıyla paylaştığı takdirde). |Veriler, Kullanıcı tarafından silinene kadar cihazda tutulur. * |
-|[DiagnosticLog CSP](#diagnosticlog-csp) |Ağ bağlantısı<br /><br />DiagnosticLog CSP 'yi destekleyen MDM ortamı |Yönetici, depolama konumlarını yapılandırır |Yönetilen ortamda, Kullanıcı verilere yönetici erişimini örtülü olarak onaylar.<br /><br />Yönetici, erişim rollerini ve izinleri yapılandırır. | Veriler Bulut depolamada tutulur ve yöneticiler bekletme ilkesini yapılandırır. |
-|[Çevrimdışı tanılama](#offline-diagnostics) |Cihaz yapılandırması:<ul><li>Açık ve bilgisayara bağlı</li><li>Güç ve ses düğmeleri çalışıyor</li></ul> |HoloLens cihaz<br /><br />Bağlı bilgisayar |Kullanıcı verileri depolar ve yalnızca Kullanıcı verilere erişir (Kullanıcı, verileri başka bir kullanıcıyla paylaştığı takdirde). |Veriler, Kullanıcı tarafından silinene kadar cihazda tutulur. |
+|[Geri Bildirim Merkezi](#feedback-hub) |Ağ ve İnternet bağlantısı<br /><br />Geri Bildirim Merkezi uygulama<br /><br />Microsoft bulutuna dosya yükleme izni |Microsoft bulutu<br /><br />HoloLens cihazı (isteğe bağlı) |Kullanıcı yardım talep eder, kullanım koşullarını kabul eder ve verileri karşıya yükler<br /><br />Microsoft çalışanları, verileri kullanım koşullarıyla tutarlı olarak görünümündedir |Buluttaki veriler, Yeni Nesil Gizlilik (NGP) tarafından tanımlanan süre boyunca korunur. Ardından veriler otomatik olarak silinir.<br /><br />Cihaz verileri, Cihaz sahibi veya Yönetici izinleri olan bir kullanıcı **tarafından herhangi bir zamanda** **silinebilir.** |
+|[Ayarlar Sorun giderici](#settings-troubleshooter) |Ayarlar uygulama |HoloLens cihazı<br /><br />Bağlı bilgisayar (isteğe bağlı) |Kullanıcı verileri depolar ve yalnızca kullanıcı verilere erişer (kullanıcı verileri özellikle başka bir kullanıcıyla paylaştığı sürece). |Veriler kullanıcı silene kadar cihazda korunur.* |
+|[DiagnosticLog CSP](#diagnosticlog-csp) |Ağ bağlantısı<br /><br />DiagnosticLog CSP'yi destekleyen MDM ortamı |Yönetici depolama konumlarını yapılandırıyor |Yönetilen ortamda, kullanıcı verilere yönetici erişimini örtülü olarak onaylar.<br /><br />Yönetici, erişim rollerini ve izinlerini yapılandırıyor. | Veriler bulut depolamada korunur ve Yönetici saklama ilkesi yapılandırıyor. |
+|[Çevrimdışı tanılama](#offline-diagnostics) |Cihaz yapılandırması:<ul><li>Açık ve bilgisayara bağlı</li><li>Güç ve Ses düğmeleri çalışıyor</li></ul> |HoloLens cihazı<br /><br />Bağlı bilgisayar |Kullanıcı verileri depolar ve yalnızca kullanıcı verilere erişer (kullanıcı verileri özellikle başka bir kullanıcıyla paylaştığı sürece). |Veriler kullanıcı silene kadar cihazda korunur. |
 
-* Son Kullanıcı, başka biriyle sorumlu olan günlüklerin paylaşılmasından sorumludur. Bu dosyalar, birincil olarak müşteri hizmetleri ve destek ile iletişim kurulurken yararlı olur.  
+* Son kullanıcı, günlükleri başka biriyle sorumlu bir şekilde paylaşmakla sorumludur. Bu dosyalar öncelikle müşteri hizmetleri ve destek ile iletişim kurmada yararlıdır.  
 
-## <a name="feedback-hub"></a>Geribildirim Merkezi
+## <a name="feedback-hub"></a>Geri Bildirim Merkezi
 
-HoloLens kullanıcı, Microsoft Desteği tanılama bilgilerini göndermek için Microsoft geri bildirim merkezi masaüstü uygulamasını kullanabilir. Ayrıntılar ve tüm yönergeler için bkz. [bize geri bildirim verme](hololens-feedback.md).  
+Bir HoloLens kullanıcı Microsoft Geri Bildirim Merkezi masaüstü uygulamasını kullanarak Microsoft Desteği. Ayrıntılar ve tam yönergeler için bkz. [Bize geri bildirim gönderin.](hololens-feedback.md)  
 
 > [!NOTE]  
-> **Ticari veya kurumsal kullanıcılar:** MDM, sağlama veya diğer cihaz yönetimi ile ilgili bir sorunu raporlamak için geri bildirim merkezi uygulamasını kullanıyorsanız, uygulama kategorisini **Enterprise yönetim**  >  **cihazı kategorisi** olarak değiştirin.
+> **Ticari veya kurumsal kullanıcılar:** Geri Bildirim Merkezi uygulamasını MDM, sağlama veya diğer cihaz yönetimi yönleriyle ilgili bir sorunu rapor etmek için kullanırsanız, uygulama kategorisini Yönetim **Cihazı Enterprise**  >  **olarak değiştirebilirsiniz.**
 
 >[!IMPORTANT]
-> Sorunları çözmek için mümkün olan en iyi verileri sağlamak üzere cihaz telemetrinizi **Isteğe bağlı** olarak ayarlamanızı kesinlikle öneririz. bu değeri, hazır olmayan deneyim (OOBE) sırasında veya **Ayarlar** uygulamasını kullanarak ayarlayabilirsiniz. bunu Ayarlar kullanarak yapmak için, > başlat ' ı seçin **Ayarlar > gizlilik > uygulama tanılama >**.
+> Sorunları düzeltmek için mümkün olan en iyi verileri sağlamak için, cihaz telemetrinizi İsteğe Bağlı olarak ayarlamanızı **kesinlikle öneririz.** Bu değeri İlk İlk Deneyim (OOBE) sırasında veya uygulamanın  ilk Ayarlar ayarlayabilirsiniz. Uygulama Tanılama'yı kullanarak bunu Ayarlar için, > Ayarlar > Gizlilik > Uygulama Tanılama **>'> seçin.**
 ### <a name="prerequisites"></a>Önkoşullar
 
 - Cihaz bir ağa bağlı.
-- Geri Bildirim Hub 'ı uygulaması kullanıcının masaüstü bilgisayarında kullanılabilir ve Kullanıcı Microsoft bulutuna dosya yükleyebilir.
+- Geri Bildirim Merkezi uygulaması kullanıcının masaüstü bilgisayarda kullanılabilir ve kullanıcı microsoft bulutuna dosya yükleyebilir.
 
-### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve bekletme
+### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve saklama
 
-Kabul etmiş, geri bildirim hub 'ının kullanım koşullarına göre, Kullanıcı (Bu anlaşma tarafından tanımlanan) verilerin depolanmasını ve kullanımını açıkça kabul eder.
+Kullanıcı, Geri Bildirim Merkezi kullanım koşullarını kabul eder ve verilerin depolanmasına ve kullanımına (bu sözleşme tarafından tanımlandığı şekilde) açıkça onaylar.
 
-Geri Bildirim Hub 'ı, kullanıcının tanılama bilgilerini depolaması için iki konum sağlar:
+Bu Geri Bildirim Merkezi, kullanıcının tanılama bilgilerini depolaması için iki yer sağlar:
 
-- **Microsoft bulutu**. Geri Bildirim Merkezi uygulaması kullanılarak Kullanıcı tarafından karşıya yüklenen veriler, yeni nesil Gizlilik (NGP) gereksinimleriyle tutarlı olan gün sayısı için depolanır. Microsoft çalışanları, bu süre boyunca bilgilere erişmek için NGP uyumlu bir Görüntüleyici kullanabilir.
+- **Microsoft bulutu.** Geri Bildirim Merkezi uygulaması kullanılarak kullanıcının karşıya yükleylandığı veriler, Yeni Nesil Gizlilik (NGP) gereksinimleriyle tutarlı olan gün sayısı için depolanır. Microsoft çalışanları bu süre boyunca bilgilere erişmek için NGP uyumlu bir görüntüleyici kullanabilir.
 
    > [!NOTE]  
-   > Bu gereksinimler tüm geri bildirim hub kategorilerindeki veriler için geçerlidir.
+   > Bu gereksinimler tüm veri kategorilerine Geri Bildirim Merkezi geçerlidir.
 
-- **HoloLens cihaz**. Geri Bildirim Hub 'ına bir rapor dosyalarken Kullanıcı, **geri bildirim verirken oluşturulan bir tanılama ve eklerin yerel kopyasını kaydet** seçeneğini belirleyebilir. kullanıcı bu seçeneği seçerse, geri bildirim merkezi HoloLens cihazında tanılama bilgilerinin bir kopyasını depolar. Bu bilgiler Kullanıcı (veya HoloLens oturum açmak için bu hesabı kullanan herkes) tarafından erişilebilir durumda kalır. Bu bilgileri silmek için bir kullanıcının cihazda **cihaz sahibi** veya **yönetici** izinleri olması gerekir. uygun izinlere sahip bir kullanıcı geri bildirim Hub 'ında oturum açabilir, **Ayarlar**  >  **tanılama günlüklerini görüntüle**' yi seçip bilgileri silebilir.
+- **HoloLens cihazı.** Kullanıcı, bir raporu Geri Bildirim Merkezi geri bildirim sağlarken oluşturulan tanılama ve eklerin yerel kopyasını **kaydet'i seçin.** Kullanıcı bu seçeneği seçerse, Geri Bildirim Merkezi cihazında tanılama bilgilerini HoloLens depolar. Bu bilgiler, kullanıcı (veya bu hesabı kullanan herkes) tarafından erişilebilen bir HoloLens. Bu bilgileri silmek için kullanıcının cihazda Cihaz sahibi **veya** **Yönetici izinleri** olması gerekir. Uygun izinlere sahip bir kullanıcı, oturum Geri Bildirim Merkezi, Tanılama **günlüklerini**  >  **Ayarlar'ı** seçin ve bilgileri silebilir.
 
-## <a name="settings-troubleshooter"></a>Ayarlar İdir
+## <a name="settings-troubleshooter"></a>Ayarlar Sorun giderici
 
-HoloLens kullanıcı, sorunları gidermek ve tanılama bilgilerini toplamak için cihazdaki **Ayarlar** uygulamayı kullanabilir. Bunu yapmak için şu adımları uygulayın:
+Bir HoloLens kullanıcı, sorunları **gidermek Ayarlar** tanılama bilgilerini toplamak için cihazda Ayarlar uygulamasını kullanabilir. Bunu yapmak için şu adımları uygulayın:
 
-1. Ayarlar uygulamasını açın ve **& güvenlik**  >  **sorunlarını gider** sayfasında güncelleştir ' i seçin.
-1. Uygun alanı seçin ve **Başlat**' ı seçin.
+1. Ayarlar'ı açın ve Güncelleştirme ve **& Sorun Giderme**  >  **sayfasını** seçin.
+1. Uygun alanı seçin ve Başlat'ı **seçin.**
 1. Sorunu yeniden üretin.
-1. sorunu yeniden oluşturduktan sonra Ayarlar ' a dönüp **durdur**' u seçin.
+1. Sorunu yeniden üretdikten sonra yeniden Ayarlar durdur'a **seçin.**
 
-ayrıca, bir kullanıcı **Ayarlar** uygulamasından geri dönüş tanılamaları davranışını yapılandırabilir. Bu ayarı yapılandırmak için **Gizlilik-> sorun giderme** sayfasına gidin.
+Bir kullanıcı, geri dönüş tanılama davranışını uygulamanın Ayarlar **yapılandırabilirsiniz.** Bu ayarı **yapılandırmak > Gizlilik** -> Sorun Giderme sayfasına gidin.
 > [!NOTE]
-> Cihaz için yapılandırılmış MDM ilkesi varsa, Kullanıcı bu davranışı geçersiz kılayamaz.
+> Cihaz için yapılandırılmış MDM ilkesi varsa, kullanıcı bu davranışı geçersiz k aşağıdaki gibi davranamayacaktır.
 
-### <a name="os-update-troubleshooter"></a>İşletim sistemi güncelleştirmesi sorun giderici
-derlemeler [Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1) ve sonraki sürümler:
-- Ayarlar uygulamasındaki önceki sorun gidericilere ek olarak, işletim sistemi güncelleştirmelerine yönelik yeni Ayarlar uygulamasının eklenmesiyle birlikte yeni bir sorun giderici eklenmiştir. **Ayarlar-> güncelleştirme & güvenlik > sorun giderme-> Windows Update** ' a gidin ve **başlat**' ı seçin. Bu, BT veya destek ile ilgili sorun giderme konusunda daha iyi yardımcı olması için işletim sistemi güncelleştirmeleriyle ilgili sorunları yeniden oluştururken izlemeleri toplamanıza olanak tanır.
+### <a name="os-update-troubleshooter"></a>Işletim Sistemi Güncelleştirme Sorun Gidericisi
+[Holographic Windows sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve daha sonra yapılan derlemelerde:
+- Ayarlar uygulamasındaki önceki sorun gidericilere ek olarak, işletim sistemi güncelleştirmeleri için yeni Ayarlar eklenmiştir. **-Ayarlar -> Update & Security -> -> Windows Update'e gidin** ve Başlat'ı **seçin.** Bu sayede, IŞLETIM sistemi güncelleştirmeleriyle sorunlarınızı yeniden üretirken, IT veya destekle ilgili sorun giderme konusunda daha iyi yardımcı olmak için izlemeleri toplamanıza olanak sağlar.
 ### <a name="prerequisites"></a>Önkoşullar
 
-- **Ayarlar** uygulama cihaza yüklenir ve kullanıcı tarafından kullanılabilir.
+- Ayarlar  uygulaması cihaza yüklenir ve kullanıcı tarafından kullanılabilir.
 
-### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve bekletme
+### <a name="data-locations-access-and-retention"></a>Veri konumları, erişim ve saklama
 
-Kullanıcı veri toplamayı başlattığı için Kullanıcı, tanılama bilgilerinin depolamasına örtük olarak izin verir. Yalnızca Kullanıcı veya kullanıcının verileri paylaştığı kişi veriye erişebilir.
+Kullanıcı veri toplamayı başladığından, kullanıcı tanılama bilgilerini depolamaya örtülü olarak onaylar. Verilere yalnızca kullanıcı veya kullanıcının verileri paylaştığı herkes erişebilirsiniz.
 
-Tanılama bilgileri cihazda depolanır. Cihaz kullanıcının bilgisayarına bağlıysa, bilgiler aşağıdaki dosyadaki bilgisayarda da bulunur:
+Tanılama bilgileri cihazda depolanır. Cihaz kullanıcının bilgisayarına bağlı ise, bilgiler aşağıdaki dosyada da bilgisayarda yer almaktadır:
 
-> bu PC \\ \<*HoloLens device name*> \\ iç Depolama \\ belgeler \\ Trace \<*ddmmyyhhmmss*> . etl
+> Bu PC \\ \<*HoloLens device name*> \\ İç Depolama Belgeleri \\ İzleme \\ \<*ddmmyyhhmmss*> .etl
 
 > [!NOTE]  
-> bu dosya yolu ve adı ' nda, \<*HoloLens device name*> HoloLens cihazının adını temsil eder ve \<*ddmmyyhhmmss*> dosyanın oluşturulduğu tarih ve saati temsil eder.
+> Bu dosya yolunda ve adda, HoloLens cihazın adını ve \<*HoloLens device name*> \<*ddmmyyhhmmss*> dosyanın oluşturulma tarihini ve saati temsil eder.
 
-Tanılama bilgileri, Kullanıcı tarafından silinene kadar bu konumlarda kalır.
+Tanılama bilgileri, kullanıcı silene kadar bu konumlarda kalır.
 
 ## <a name="diagnosticlog-csp"></a>DiagnosticLog CSP
 

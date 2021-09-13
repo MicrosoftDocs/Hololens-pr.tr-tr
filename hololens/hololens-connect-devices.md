@@ -1,5 +1,5 @@
 ---
-title: Bağlan ve USB-C Bluetooth cihazlara
+title: Bağlan VE USB-C Bluetooth'ye ve
 description: Kullanmaya başlayın gerçeklik cihazlarından Bluetooth USB-C cihazlarına ve donatılarına HoloLens bağlanmanızı sağlar.
 ms.assetid: 01af0848-3b36-4c13-b797-f38ad3977e30
 ms.prod: hololens
@@ -14,17 +14,17 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: d9c8b813ba54edbcfef8d1a32e641dad39a7f193
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428538"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036280"
 ---
-# <a name="connect-to-bluetooth-and-usb-c-devices"></a>Bağlan ve USB-C Bluetooth cihazlara
+# <a name="connect-to-bluetooth-and-usb-c-devices"></a>Bağlan VE USB-C Bluetooth'ye ve
 
 ## <a name="pair-bluetooth-devices"></a>Cihaz Bluetooth eşleştirme
 
-HoloLens 2, aşağıdaki Bluetooth destekler:
+HoloLens 2, aşağıdaki Bluetooth sınıflarını destekler:
 
 - [SİYAD:](/windows-hardware/drivers/hid/)
     - Fare
@@ -44,13 +44,13 @@ HoloLens (1. nesil) aşağıdaki Bluetooth destekler:
 - [HoloLens (1. nesil) tıklama](hololens1-clicker.md)
 
 > [!NOTE]
-> Konuşmacılar, Bluetooth, akıllı telefonlar ve oyun pad'leri gibi diğer cihaz türleri, HoloLens kullanılabilir. Ancak, bu cihazlar HoloLens (1. nesil) için destek değildir. Daha fazla bilgi HoloLens Ayarlar için bkz. cihazları [kullanılabilir olarak listeler, ancak cihazlar çalışmıyor.](hololens-troubleshooting.md#devices-listed-as-available-in-settings-dont-work)
+> Konuşmacılar, Bluetooth, akıllı telefonlar ve oyun pad'leri gibi diğer cihaz türleri, HoloLens kullanılabilir olarak listelenmiş olabilir. Ancak, bu cihazlar HoloLens (1. nesil) için destek değildir. Daha fazla bilgi HoloLens Ayarlar için bkz. cihazları kullanılabilir olarak [listeler, ancak cihazlar çalışmıyor.](hololens-troubleshooting.md#devices-listed-as-available-in-settings-dont-work)
 
 ### <a name="pair-a-bluetooth-keyboard-or-mouse"></a>Klavye veya Bluetooth eşleştirme
 
 1. Klavyenizi veya farenizi açarak keşfedilebilir hale sürükleyin. Cihazın bulunabilir hale nasıl geleceklerini öğrenmek için cihazla ilgili bilgileri (veya belgelerini) inceleyin veya üreticinin web sitesini ziyaret edin.
 
-1. Başlat 'a gitmek için bloom HoloLens (1. nesil)) veya başlangıç hareketini (HoloLens 2) kullanın ve ardından seçeneğini **Ayarlar.**
+1. Başlat 'a gitmek için bloom hareketini (HoloLens (1. nesil)) veya başlangıç hareketini (HoloLens 2) kullanın ve ardından **Ayarlar.** 
 
 1. **Cihazlar'ı** seçin ve Bluetooth emin olun.  
 
@@ -62,7 +62,7 @@ Bu yordam, Bluetooth radyonun RF bileşenlerini devre dışı Bluetooth tüm Mic
 
 1. Başlat 'a gitmek için bloom HoloLens (1. nesil)) veya başlangıç hareketini (HoloLens 2) kullanın ve ardından **Cihazlar'ı Ayarlar**  >  **seçin.**
 
-1. Kaydırıcı anahtarını Bluetooth **konuma** **getirin.**
+1. Geçiş için kaydırıcı anahtarını **Bluetooth** **konuma** getirin.
 
 ## <a name="hololens-2-connect-usb-c-devices"></a>HoloLens 2: Bağlan USB-C cihazları
 
@@ -79,7 +79,7 @@ HoloLens 2, aşağıdaki USB-C cihaz sınıflarını destekler:
 
 
 > [!NOTE]
-> Müşteri geri bildirimlerine yanıt olarak, USB-C aracılığıyla doğrudan cihaza bağlı hücresel bağlantı için HoloLens desteği etkinleştirildi. Daha [Bağlan için bkz. Hücresel ve 5G'ye](hololens-cellular.md) bağlantı.
+> Müşteri geri bildirimlerine yanıt olarak, USB-C aracılığıyla doğrudan mobil cihaza bağlı hücresel bağlantı için HoloLens desteği etkinleştirildi. Daha [Bağlan için bkz. Hücresel ve 5G'ye](hololens-cellular.md) bağlantı.
 
 ### <a name="usb-c-external-microphone-support"></a>USB-C Dış Mikrofon Desteği
 
@@ -87,11 +87,11 @@ HoloLens 2, aşağıdaki USB-C cihaz sınıflarını destekler:
 > BIR **USB mikrofona takan, bunu giriş cihazı olarak otomatik olarak ayarlamaz.** Kullanıcılar bir USB-C kulaklık kümesine takılıyken, mikrofonlu cihazın sesinin otomatik olarak mikrofonlara yeniden yönlendirilmesine neden olduğunu gözlemler ancak HoloLens işletim sistemi, iç mikrofon dizisini diğer giriş cihazlarından yüksek önceliklendirmektedir. **USB-C mikrofonunu kullanmak için aşağıdaki adımları izleyin.**
 
 > [!NOTE]
-> [Holographic, sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve Windows öncesi derlemelerde dış mikrofonlar kullanılamaz. 
+> [Holographic, sürüm 21H1](hololens-release-notes.md#windows-holographic-version-21h1) ve Windows önce derlemelerde dış mikrofonlar kullanılamaz. 
 
 Kullanıcılar Ses ayarları panelini kullanarak USB-C bağlantılı dış **mikrofonları** seçebilirsiniz. USB-C mikrofonları arama, kayıt vb. için kullanılabilir.
 
-Ayarlar **uygulamasını** açın ve Sistem **Sesi'ne**  >  **seçin.**
+Uygulama uygulamasını **Ayarlar** Sistem **Sesi'ne**  >  **seçin.**
 
 ![Ses Ayarlar.](images/usbc-mic-1.jpg)
 
@@ -100,7 +100,7 @@ Ayarlar **uygulamasını** açın ve Sistem **Sesi'ne**  >  **seçin.**
 >
 > Ardından, dış mikrofonu Varsayılan veya İletişim Varsayılanı olarak ayarlamak **için açılır** **liste kullanın.** **Varsayılan'ın** seçerek dış mikrofon her yerde kullanılacaktır.
 >
-> İletişim **Varsayılanı'nın** seçerek dış mikrofonun Remote Assist ve diğer iletişim uygulamaları için kullanılası ancak HoloLens mikrofon dizisi diğer görevler için de kullanılabilir.
+> İletişim **Varsayılanı'nın** seçimi, dış mikrofonun Remote Assist ve diğer iletişim HoloLens kullanılamayacak, ancak bu mikrofon dizisi diğer görevler için hala kullanılabilir.
 
 ![Ses cihazlarını yönetme.](images/usbc-mic-2.png)
 
@@ -110,7 +110,7 @@ Ayarlar **uygulamasını** açın ve Sistem **Sesi'ne**  >  **seçin.**
 
 #### <a name="what-about-bluetooth-microphone-support"></a>Mikrofon desteği Bluetooth ne olacak?
 
-Ne yazık Bluetooth mikrofonlar henüz 2. HoloLens desteklenmiyor.
+Ne yazık Bluetooth mikrofonlar 2.0'da hala HoloLens değildir.
 
 ### <a name="usb-c-hubs"></a>USB-C Hub'ları
 

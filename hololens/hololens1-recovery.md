@@ -17,11 +17,11 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 4840535030cc81f222cb25357474f1c751426e91
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428643"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033660"
 ---
 # <a name="restart-reset-or-recover-hololens-1st-gen"></a>HoloLens yeniden başlatma, sıfırlama veya kurtarma (1. genel)
 
@@ -142,8 +142,8 @@ Cihazınız algılanmadıysa, bu adımları yanıp sönen moda koymak için aşa
 
 1. Cihazı herhangi bir güç kaynağından çıkarın.
 1. Cihaz açık ise, tamamen kapanana kadar **Güç** düğmesini basılı tutun.
-2. Birimi **yukarı doğru** tutun ve güç düğmesine kısa bir **süre** dokunun. Cihazın başlaması ve yalnızca ortadaki LED'i görüntülemesi gerekir.
+2. **Ses** düğmesini basılı tutun ve **Power** düğmesine kısaca dokunun. Cihazın başlaması ve yalnızca ortadaki ışığı görüntülemesi gerekir.
 3. Cihazı bilgisayarınıza takın.
-4. Windows Kurtarma Aracı'nı açın.
-5. Cihazım **algılanmadı'yi seçin ve** **HoloLens.** 
+4. Windows cihaz kurtarma aracını açın.
+5. **Cihazımı** seçin ve **HoloLens**. 
 6. Cihazınızı kurtarmak için yönergeleri izleyin.

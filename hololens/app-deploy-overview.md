@@ -1,6 +1,6 @@
 ---
-title: Genel Bakış-uygulama yönetimi
-description: Mobil cihaz yönetimi, iş için Microsoft Mağazası ve sağlama paketleri ile karma gerçeklik uygulama yönetimine genel bir bakış ile çalışmaya başlayın.
+title: Genel Bakış - Uygulama Yönetimi
+description: Kullanmaya başlayın cihaz yönetimi, iş için Microsoft Mağazası ve paket sağlama ile karma gerçeklik uygulama yönetimine genel bir bakış sunar.
 keywords: HoloLens, kullanıcı, hesap, uygulama, uygulama yönetimi,
 author: evmill
 ms.author: v-evmill
@@ -15,72 +15,72 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: ca87f34718319d489b69ba33ad24731628d87fac
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427631"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033067"
 ---
-# <a name="app-management-overview"></a>Uygulama Yönetimi: genel bakış
+# <a name="app-management-overview"></a>Uygulama Yönetimi: Genel Bakış
 
-farklı yollarla uygulama dağıtabilirsiniz: **mobil cihaz yönetimi (MDM)**, **İş İçin Microsoft Store**, **Microsoft Store** veya **sağlama** aracılığıyla yükleyebilirsiniz.
+Uygulamaları dört farklı yola dağıtabilirsiniz: **Mobil Cihaz Yönetimi (MDM)**, **İş İçin Microsoft Store**, **Microsoft Store** veya Sağlama aracılığıyla **yükleyerek.**
 
-## <a name="mobile-device-management-mdm"></a>Mobil cihaz yönetimi (MDM)
+## <a name="mobile-device-management-mdm"></a>Mobil Cihaz Yönetimi (MDM)
 
-Bir MDM çözümü, BT karar mekanizmalarının ve yöneticilerin şirket içi, iş kolu uygulamalarını veya mağaza aracılığıyla uygulama satın almasını (bir Kullanıcı grubu için) sağlar. HoloLens cihazlar [uygulama yönetimi](app-deploy-intune.md)için en iyi Microsoft Endpoint Manager (ıntune) ile çalışır. ıntune ayrıca, Şirket Portalı indirilebilir deneyim aracılığıyla kullanıcılara, bt tarafından yönetilen uygulamalar üzerinde daha ayrıntılı denetim sağlar.
+MDM çözümü, IT kararlarını verenlerin ve yöneticilerin bir grup kullanıcı için mağaza üzerinden kendi kendi iş hattı uygulamalarını özel olarak otomatik olarak yüklemesini (yüklemesini) veya uygulama satın almalarını sağlar. HoloLens cihazlar uygulama yönetimi için Microsoft Endpoint Manager (Intune) ile [en iyi şekilde çalışır.](app-deploy-intune.md) Intune ayrıca kullanıcılara indirilebilir deneyim aracılığıyla IT tarafından yönetilen uygulamalar üzerinde daha Şirket Portalı denetim sunar.
 
 > [!NOTE]
-> Aşağıdaki yönergeler, uygulamalarını Intune ile yönetmek isteyen kullanıcılar içindir. Microsoft, uygulama ve cihaz yönetimi için Intune kullanmayı önerir.
+> Aşağıdaki yönergeler, uygulamalarını Intune ile yönetmek isteyen kullanıcılara ilişkindir. Microsoft, uygulama ve cihaz yönetimi için Intune'un kullanılması önerilir.
 
-Mobil cihaz yönetimi (MDM) şunları için geçerlidir:
+Mobil Cihaz Yönetimi (MDM) şu uygulamalar için geçerlidir:
 
-* MDM dağıtılan + Şirket Portalı
-* Iş kolu (genel olmayan) uygulamalar
+* Dağıtılan MDM + Şirket Portalı
+* İş Hattı (genel olmayan) uygulamalar
 * Şirket Portalı aracılığıyla kullanılabilir uygulamaların el ile yüklenmesi
-* MDM ilkesi aracılığıyla yönetici gönderimi
-* MDM üzerinden otomatik güncelleştirme
+* MDM ilkesi aracılığıyla yönetici anında iletme
+* MDM aracılığıyla otomatik güncelleştirme
 
 ## <a name="microsoft-store-for-business"></a>İş İçin Microsoft Store
 
-[İş İçin Microsoft Store](app-deploy-store-business.md) , bt karar mekanizmalarının ve işletmelerin ücretsiz ve ücretli uygulamaları bulmasını, almalarını, yönetmesi ve dağıtmalarını sağlar. bt yöneticileri, Microsoft Store uygulamalarını ve özel iş kolu uygulamalarını tek bir envanterde yönetebilir, ayrıca gerektiğinde lisansları atayabilir ve yeniden kullanabilirsiniz. daha fazla bilgi için [İş İçin Microsoft Store kullanmaya yönelik önkoşulları](/microsoft-store/prerequisites-microsoft-store-for-business)ziyaret edin.
+Bu [İş İçin Microsoft Store,](app-deploy-store-business.md) işletmelerde ücretsiz ve ücretli uygulamaları bulmaları, edinmeleri, yönetmeleri ve dağıtmaları için IŞLETMELERDE KARAR VERENLER ve yöneticiler sağlar. IT yöneticileri, Microsoft Store uygulamaları ve özel iş hattı uygulamalarını tek bir envanterde yönetebilir ve gerektiğinde lisansları atap yeniden kullanabilir. Daha fazla bilgi için [önkoşullar'ı ziyaret edin ve İş İçin Microsoft Store.](/microsoft-store/prerequisites-microsoft-store-for-business)
 
-İş İçin Microsoft Store için geçerlidir:
+Aşağıdaki İş İçin Microsoft Store için geçerlidir:
 
-* Kamu veya Iş kolu uygulamaları
-* MDM ilişkilendirmesi aracılığıyla gerekli uygulamaların otomatik yüklemesi
+* Genel veya İş Hattı uygulamaları
+* MDM ilişkilendirmesi aracılığıyla gerekli uygulamaların otomatik olarak yüklenmesi
 * Kullanıcı uygulamaları el ile indirir
-* Otomatik güncelleştirme
+* Otomatik Güncelleştirme
 
 ## <a name="microsoft-store-apps"></a>Microsoft Mağazası uygulamaları
 
-Microsoft Store, bt karar mekanizmalarının ve işletmelerin ortak uygulamaları bulmasını, almalarını, yönetmesini ve dağıtmasını sağlar.
+Bu Microsoft Store, genel uygulamaları bulmaları, edinmeleri, yönetmeleri ve dağıtmaları için işletmelerde IŞ kararlarını veren kullanıcılara ve yöneticilere sağlar.
 
-bu Microsoft Store için geçerlidir:
+Bu Microsoft Store şu için geçerlidir:
 
-* Yalnızca ortak uygulamalar
+* Yalnızca genel uygulamalar
 * Kullanıcı uygulamaları el ile indirir
-* Internet 'e bağlıysa otomatik güncelleştirme
+* İnternet'e bağlı ise otomatik güncelleştirme
 
-Daha fazla bilgi için [holographic Store Apps](/hololens/holographic-store-apps)sayfasını ziyaret edin.
+Daha fazla bilgi için [Holographic Store Apps'i ziyaret edin.](/hololens/holographic-store-apps)
 
-## <a name="install-via-provisioning-packages"></a>Sağlama paketleri aracılığıyla yüklemesi
+## <a name="install-via-provisioning-packages"></a>Paketleri Sağlama yoluyla yükleme
 
-[Sağlama paketleri](app-deploy-provisioning-package.md) , BT uzmanlarının ve YÖNETICILERIN uygulamaları USB üzerinden yerel cihazlara hızlıca yüklemesini sağlayan özel veya iş kolu uygulamaları yüklemenize imkan tanır. Bu yükleme, bir internet bağlantısı ve herhangi bir kimlik türü olmadan yapılabilir.
+[Paketleri Sağlama,](app-deploy-provisioning-package.md) özel veya İş Hattı uygulamalarını yüklemenize olanak sağlayarak, IT profesyonellerinin ve yöneticilerin USB aracılığıyla uygulamaları yerel bir cihaza hızla yüklemesine olanak sağlar. Bu yükleme bir İnternet bağlantısı olmadan ve herhangi bir kimlik türü için yapılabilir.
 
-Sağlama paketleri aracılığıyla yükleme şunları için geçerlidir:
+Sağlama Paketleri aracılığıyla yükleme şu için geçerlidir:
 
-* Iş kolu/kendi kendine geliştirilmiş (ortak olmayan) uygulamalar
-* Ortak uygulamalar (çevrimdışı yükleyici varsa)
-* Yalnızca USB dışarıdan yükleme
-* Otomatik güncelleştirme yok (sağlama paketi aracılığıyla el ile güncelleştirmeler gerektirir)
+* İş Hattı / Kendi kendine geliştirilen (genel olmayan) uygulamalar
+* Genel uygulamalar (çevrimdışı yükleyici varsa)
+* Yalnızca USB tarafı yükleme
+* Otomatik güncelleştirme yok (Sağlama Paketi aracılığıyla el ile güncelleştirme gerektirir)
 
-## <a name="install-apps-on-hololens-2-via-app-installer"></a>uygulama yükleyicisi aracılığıyla HoloLens 2 ' ye uygulama yükleme
+## <a name="install-apps-on-hololens-2-via-app-installer"></a>Uygulama Yükleyicisi aracılığıyla HoloLens 2.Uygulama Yükleyicisi
 
-[Uygulama yükleyicisi](app-deploy-app-installer.md) kullanıcılarının kullanılması, yerel cihazlara uygulama yüklemek veya bir uygulamayı, Hololens diğer uygulama yükleme yöntemlerini bilmediğiniz başka biriyle paylaşmak için basit bir deneyimle sahip olabilir. Bu işlem, geliştirici modunun etkinleştirilmesi veya cihaz portalı kullanılması gerekmeden yapılabilir. Bu, tamamen oluşturulmuş bir uygulamayı dağıtmanın basit bir yöntemidir. uygulamanızı yalnızca bir HoloLens başka bir kullanıcıya tanıtıyor veya uygulamanızı dağıtmak istediğinizde, bu yöntem kolayca işe yarar.
+Bu [Uygulama Yükleyicisi](app-deploy-app-installer.md) kullanıcılar, uygulamaları yerel cihazlara yüklemek veya uygulama üzerinde diğer uygulama yükleme yöntemlerine yabancı olan başka bir kullanıcıyla paylaşmak için basit bir deneyim HoloLens. Bu, Geliştirici Modunu etkinleştirmeye veya bu modu kullanmaya gerek kalmadan Cihaz Portalı. Bu, tamamen yerleşik bir uygulamayı dağıtmanın basit bir yöntemidir. Uygulamanızı yalnızca bir kullanıcıya bir HoloLens veya uygulamanızı dağıtmak istediğinizden bağımsız olarak bu yöntem kolayca çalışır.
 
-Uygulama yükleyicisi aracılığıyla yükleme şunları için geçerlidir:
+Uygulama Yükleyicisi yüklemesi şu için geçerlidir:
 
-* Iş kolu/kendi kendine geliştirilmiş (ortak olmayan) uygulamalar
-* Yalnızca dışarıdan yükleme
-* Geliştirici modu veya cihaz portalı gerektirmez
+* İş Hattı / Kendi geliştirdiği (genel olmayan) uygulamalar
+* Yalnızca yan yükleme
+* Geliştirici modu veya Cihaz portalı gerektirmez
 * Son kullanıcının yüklemesi kolay

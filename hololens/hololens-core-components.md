@@ -1,6 +1,6 @@
 ---
-title: Ticari HoloLens 2 dağıtımı planlama
-description: Altyapı, Azure Active Directory ve mobil cihaz yönetimi gibi kurumsal HoloLens dağıtım ve yönetim için temel ihtiyaçlar hakkında bilgi edinin.
+title: ticari bir ortamda HoloLens 2 dağıtımı planlama
+description: altyapı, azure active directory ve mobil cihaz yönetimi dahil olmak üzere kurumsal ortamlarda HoloLens dağıtmak ve yönetmek için temel gereksinimler hakkında bilgi edinin.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -13,30 +13,30 @@ ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 8605d1a889fb9facdab0e9585a43a61880155952
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428417"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032972"
 ---
-# <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>Ticari HoloLens 2 dağıtımı planlama
+# <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>ticari bir ortamda HoloLens 2 dağıtımı planlama
 
 ## <a name="overview"></a>Genel Bakış
 
 > [!NOTE]
-> Bu genel bakış, BT uzmanlarının kuruluş içindeki 2 cihazı dağıtmaya ve yönetmeye Microsoft HoloLens dikkat edilmesi gerekenleri anlamalarında yardımcı olmak için tasarlanmıştır. Cihaz son kullanıcıları için [bkz. HoloLens 2'nizi kullanmaya](hololens2-setup.md) başlamaya hazır hale get your.
+> bu genel bakış, bt uzmanlarının bir kuruluşta Microsoft HoloLens 2 cihaz dağıtma ve yönetme ile ilgili hususları anlamalarına yardımcı olmaya yöneliktir. cihaz son kullanıcıları için bkz. [HoloLens 2](hololens2-setup.md) ' yi kullanmaya başlamak için kullanıma hazırlanıyor.
 
-HoloLens 2, Windows 10 Holographic güçlü, esnek, yerleşik mobil cihaz ve uygulama yönetimi teknolojileri sağlayan bir uygulama üzerinde çalışır. Windows 10 Holographic, şirketlere cihazları, verileri ve uygulamaları üzerinde denetim vermek için 4-4 cihaz yaşam döngüsü yönetimini destekler. Cihaz HoloLens 2, kapsamlı bir mobil cihaz yönetimi çözümü kullanılarak cihaz kaydı, yapılandırma ve uygulama yönetiminden bakım ve kullanımdan sonra standart yaşam döngüsü uygulamalarına kolayca dahil edilebilir.
+HoloLens 2, kuruluşlar için güçlü, esnek, yerleşik mobil cihaz ve uygulama yönetimi teknolojileri sağlayan Windows 10 Holographic çalışır. Windows 10 Holographic, şirketlerinin cihazları, verileri ve uygulamaları üzerinde denetim sağlamak için uçtan uca cihaz yaşam döngüsü yönetimini destekler. HoloLens 2, standart yaşam döngüsü uygulamalarına, cihaz kaydı, yapılandırma ve uygulama yönetiminden kapsamlı bir mobil cihaz yönetimi çözümü kullanılarak bakım ve kullanımdan kaldırma için kolayca eklenebilir.
 
-Aşağıdaki adımlar ve video, 2. kuruluş benimseme sürecinde HoloLens yardımcı olabilir.
+aşağıdaki adımlar ve video, kuruluşunuzda HoloLens 2 benimseme sürecinde size rehberlik etmenize yardımcı olabilir.
 
 | &nbsp; | &nbsp; |
 |--|--|
-| ![Adım 1.](images/1green.png)| <br/> **[Yaygın Dağıtım Senaryoları:](hololens-requirements.md)** Dağıtım senaryolarını anlama ve 2 cihaza dağıtım için gereken HoloLens bileşenleri keşfedin. |
-| ![Adım 2.](images/2green.png)| <br/> **[Hazırlama:](#prepare)** HoloLens 2 için gereken altyapı temelleri hakkında bilgi sahibi olma. |
-| ![3. Adım](images/3green.png) | <br/> **[Yapılandırma:](#configure)** Bulut tabanlı dağıtım için temel bileşenlerinizi yapılandırmayı öğrenin. |
-| ![4. Adım:](images/4green.png) | <br/> **[Dağıtma:](#deploy)** Cihazlarınızı dağıtmayı ve uygulamalarınızı güvenli ve verimli bir şekilde dağıtmayı keşfedin. |
-| ![5. Adım.](images/5green.png) | <br/> **[Bakım:](#maintain)** HoloLens 2 cihazlarınızı düzgün bir şekilde korumak ve şirket ilkesiyle uyumluluğu sağlamak için gerekenleri bulun. |
+| ![Adım 1.](images/1green.png)| <br/> **[ortak dağıtım senaryoları](hololens-requirements.md)**: dağıtım senaryolarını anlayın ve HoloLens 2 cihaz dağıtmak için gereken çekirdek bileşenleri keşfedebilirsiniz. |
+| ![Adım 2.](images/2green.png)| <br/> **[hazırlama](#prepare)**: HoloLens 2 için gereken altyapı temelleri hakkında bilgi sahibi olun. |
+| ![3. Adım](images/3green.png) | <br/> **[Yapılandırma](#configure)**: bulut tabanlı bir dağıtım için gerekli bileşenlerinizi nasıl yapılandıracağınızı öğrenin. |
+| ![4. Adım:](images/4green.png) | <br/> **[Dağıtım](#deploy)**: cihazlarınızı dağıtmayı ve uygulamalarınızı güvenli ve etkili bir şekilde dağıtmayı öğrenin. |
+| ![5. Adım.](images/5green.png) | <br/> **[bakım](#maintain)**: HoloLens 2 cihazlarınızın durumunu doğru bir şekilde korumak ve kurumsal ilkeyle uyumluluğu sağlamak için gerekenleri öğrenin. |
 
 <br/>
 
@@ -44,39 +44,39 @@ Aşağıdaki adımlar ve video, 2. kuruluş benimseme sürecinde HoloLens yardı
 
 ## <a name="prepare"></a>Hazırlama
 
-2. ve 2. özelliklere sahip tüm altyapı HoloLens hakkında bilgi öğrenin.
+HoloLens 2 özelliklerini tam olarak desteklemek için gereken temel altyapı hizmetleri hakkında bilgi edinin.
 
 | Bileşen | Açıklama |
 |-----------|------------|
 | [Azure AD](hololens-identity.md) | HoloLens 2 için kimlik ve erişim yönetimi sağlar  |
-| [Mobil Cihaz Yönetimi](hololens-mdm-configure.md)| Kiracınıza HoloLens 2 cihazı yönetir  |
-| [Wi-Fi Ağı](hololens-commercial-infrastructure.md)| Wi-Fi kullanılabilir ve cihazlar İnternet'e bağlanabilir  |
+| [Mobil Cihaz Yönetimi](hololens-mdm-configure.md)| kiracınıza bağlı HoloLens 2 cihazı yönetir  |
+| [Wi-Fi ağı](hololens-commercial-infrastructure.md)| Wi-Fi kullanılabilir ve cihazlar Internet 'e bağlanabilir  |
 
 ## <a name="configure"></a>Yapılandırma
 
-Intune ve Autopilot'u, 2. azure kiracısına ve MDM'nize kaydetmek ve yapılandırmak HoloLens çözümler olarak kullanın.
+kuruluşunuzun Azure AD kiracısına ve MDM 'ye HoloLens 2 ' ye kaydolma ve yapılandırma için düşük dokunma çözümleri olarak ıntune ve Autopilot kullanın.
 
 | Bileşen | Açıklama |
 |-----------|------------|
-| [Otomatik Kayıt](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | İlk oturum açma sonrasında cihazlar otomatik olarak Azure AD'ye kaydedilir ve MDM'ye kaydedilir  |
-| [Uygulama Lisansları](hololens2-cloud-connected-configure.md#application-licenses)| Kullanıcılara, kullanıcı gruplarına veya cihaz gruplarına uygulanabilir  |
-| [Azure Kullanıcıları ve Grupları](hololens2-cloud-connected-configure.md#azure-users-and-groups) | HoloLens 2 için yapılandırmaları ve lisansları atamaya yardımcı olur  |
+| [Otomatik kayıt](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | İlk oturum açma işleminden sonra cihazlar Azure AD 'ye otomatik olarak kaydolduktan sonra MDM 'ye kaydolur  |
+| [Uygulama lisansları](hololens2-cloud-connected-configure.md#application-licenses)| Kullanıcılara, Kullanıcı gruplarına veya cihaz gruplarına uygulanabilir  |
+| [Azure kullanıcıları ve grupları](hololens2-cloud-connected-configure.md#azure-users-and-groups) | HoloLens 2 için yapılandırmaların ve lisansların atanmasını sağlar  |
 
 ## <a name="deploy"></a>Dağıtma
 
-2 HoloLens cihazlarınızı dağıtarak yapılandırmalarını doğrular. 
+HoloLens 2 cihazlarınızı dağıtın ve yapılandırmalarını doğrulayın. 
 
 | Bileşen | Açıklama |
 |-----------|------------|
-| [Kayıt Doğrulama](hololens2-corp-connected-deploy.md#enrollment-validation) | Cihazda Azure AD'ye katılmış olduğunu Ayarlar Veya Azure Portal'dan doğrulama |
-| [Sertifika Doğrulama](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Ayarları denetleyin ve doğru dağıtıldıklarını doğrulayın |
-| [Uygulama yüklemelerini doğrulama](hololens2-corp-connected-deploy.md#validate-lob-app-install) | Uygulamanın mevcut olduğunu ve HoloLens 2'de çalıştığını onaylayın |
+| [Kayıt doğrulama](hololens2-corp-connected-deploy.md#enrollment-validation) | cihazın azure AD 'ye Ayarlar veya azure portalından katıldığını doğrulama |
+| [Sertifika doğrulama](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Ayarları denetleyin ve doğru şekilde dağıtıldığını doğrulayın |
+| [Uygulama yüklemelerini doğrula](hololens2-corp-connected-deploy.md#validate-lob-app-install) | uygulamanın mevcut olduğunu ve HoloLens 2 ' de çalıştığını doğrulayın |
 
 ## <a name="maintain"></a>Bakım
 
-Windows 2 ve uygulama filosunu güncel tutmak için MDM sisteminiz veya Microsoft Store İş için Güncelleştirme HoloLens kullanın.
+HoloLens 2 ve uygulamalarının güncel kalmasını sağlamak için MDM sisteminizle birlikte iş için Windows Update veya Microsoft Store kullanın.
 
 | Bileşen | Açıklama |
 |-----------|------------|
-| [Güncelleştirme HoloLens 2](hololens-updates.md) | İş Için Güncelleştirmeler'i Windows güncelleştirmeleri yapılandırma |
-| [Uygulamaları güncelleştirme](app-deploy-overview.md) | MDM sisteminiz veya Microsoft Store
+| [güncelleştirme HoloLens 2](hololens-updates.md) | iş için Windows güncelleştirmeleri sayesinde güncelleştirmeleri gerektiği şekilde yapılandırın |
+| [Uygulamaları güncelleştirme](app-deploy-overview.md) | MDM sisteminiz veya Microsoft Store ile yapılandırma

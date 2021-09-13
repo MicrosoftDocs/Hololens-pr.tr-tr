@@ -1,6 +1,6 @@
 ---
-title: Fiziksel alanları HoloLens eşleme
-description: HoloLens, bir alanın zaman içinde nasıl göründüğünü öğrenir. kullanıcılar, HoloLens alana belirli yollarla taşıyarak bu süreci kolaylaştırabilir.
+title: Fiziksel alanları HoloLens
+description: HoloLens zaman içinde bir boşluğun nasıl göründüğünü öğrenir. Kullanıcılar, alanı belirli yollarla HoloLens bu süreci kolaylaştırabilirsiniz.
 ms.assetid: bd55ecd1-697a-4b09-8274-48d1499fcb0b
 author: dorreneb
 ms.author: dobrown
@@ -8,7 +8,7 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 ms.date: 09/16/2019
-keywords: hololens, Windows Mixed Reality, tasarım, uzamsal eşleme, HoloLens, yüzey yeniden oluşturma, kafes, baş izleme, eşleme
+keywords: hololens, Windows Mixed Reality, tasarım, uzamsal eşleme, HoloLens, yüzey yeniden yapılandırma, örgü, baş izleme, eşleme
 ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
@@ -17,105 +17,105 @@ appliesto:
 - HoloLens 1 (1st gen)
 - HoloLens 2
 ms.openlocfilehash: b8bda049f0ef4610dcf0ca6fe81d89dd5a316e3e
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428828"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036501"
 ---
-# <a name="map-physical-spaces-with-hololens"></a>Fiziksel alanları HoloLens eşleme
+# <a name="map-physical-spaces-with-hololens"></a>Fiziksel alanları HoloLens
 
-fiziksel dünyala HoloLens karışımlar hologramlar. bunu yapmak için HoloLens, dünyanın dört bir yanındaki fiziksel dünya hakkında bilgi edinmek ve bu alana hologragram yerleştirdiğinizden emin olmanız gerekir.
+HoloLens hologramları fiziksel dünyanız ile karıştırıyor. Bunu yapmak için HoloLens fiziksel dünya hakkında bilgi edinmek ve hologramları bu uzaya nereye yer ayazmanız gerekir.
 
-zaman içinde HoloLens, göründüğü ortamın *uzamsal haritasını* oluşturur.  HoloLens, ortam değiştikçe haritayı güncelleştirir. oturum açtığınız ve cihaz açık olduğu sürece, HoloLens uzamsal haritalarınızı oluşturup günceller. cihaza bir boşluk işaret eden kameraları varsa veya bu cihazı aşdıysanız, HoloLens alanı eşlemeye çalışır. HoloLens zaman içinde bir alanı öğrenirken, alanınızı daha hızlı ve verimli bir şekilde eşlemeye HoloLens yardımcı olmak için kullanabileceğiniz yollar vardır.  
+Zaman içinde HoloLens, gördüklerini *ortamın* uzamsal haritasını oluşturmasını sağlar.  HoloLens ortam değiştikça haritayı da günceller. Oturum açtığınız ve cihaz açık olduğu sürece, uzamsal HoloLens oluşturur ve günceller. Cihazı bir alana işaret eden kameralarla tutarsanız veya takıyorsanız, HoloLens alanı eşlemeye çalışır. Bu HoloLens bir alanı zaman içinde doğal olarak öğrenirken, alanlarınızı daha hızlı ve verimli bir şekilde eşlemenize HoloLens yardımcı olabilir.  
 
 > [!NOTE]
-> HoloLens alanınızı eşleyemezsiniz veya ayarlama işlemi yapıyorsanız HoloLens sınırlı mod girebilir. Sınırlı modda, hologramlar elde edemeyeceksiniz.
+> Çalışma HoloLens alanınız eşleyenene kadar eşleyene HoloLens sınırlı moda girebilirsiniz. Sınırlı modda, çevrenize hologramlar yer alasınız.
 
-bu makalede, HoloLens alanları nasıl eşlediğini, uzamsal eşlemenin nasıl iyileştireceğinizi ve HoloLens tarafından toplanan uzamsal verilerin nasıl yönetileceği açıklanmaktadır.
+Bu makalede alanları HoloLens eşleme, uzamsal eşlemeyi geliştirme ve bu alanlardan toplayan uzamsal HoloLens açıklanmıştır.
 
-## <a name="choosing-and-setting-up-and-your-space"></a>Alanı seçme ve ayarlama
+## <a name="choosing-and-setting-up-and-your-space"></a>Alanınızı seçme ve ayarlama
 
-ortamınızdaki özellikler, HoloLens bir alanı yorumlamasını zorlaştırır. hafif düzeyler, alandaki malzemeler, nesnelerin düzeni ve daha fazlası, HoloLens bir alanı nasıl eşlediğini etkiler.
+Ortamınız içinde yer alan özellikler, ortamın HoloLens yorumlamayı zorlaştırabilirsiniz. Açık düzeyler, boşlukta malzemeler, nesnelerin düzeni ve daha fazlası bir alanı eşleme HoloLens etkileyebilir.
 
-HoloLens, belirli türde ortamlarda en iyi şekilde işe yarar. En iyi uzamsal Haritayı oluşturmak için, yeterli ışığı ve çok fazla alanı olan bir oda seçin. Büyük ve yarı saydam yüzeylere (örneğin, yansıtmalar veya gauzy CURTAINS) sahip olan karanlık boşluklar ve odalar kullanmaktan kaçının.
+HoloLens, belirli türlerde en iyi şekilde çalışır. En iyi uzamsal haritayı üretmek için yeterli ışık ve yeterli alana sahip bir oda seçin. Koyu alanlardan ve çok koyu, parlak veya saydam yüzeylere (örneğin, yansıtmalar veya gauzy perdeleri) sahip olan odaları kaçının.
 
-HoloLens, ınkapılı kullanım için iyileştirilmiştir. Uzamsal eşleme Ayrıca Wi-Fi açıldığında en iyi şekilde çalışıyor, ancak bir ağa bağlı olması gerekmez. HoloLens, bağlı veya kimliği doğrulanmamış olsa da Wi-Fi erişim noktalarını alabilir. HoloLens işlevselliği, erişim noktalarının internet 'e bağlı mi yoksa yalnızca intranet/yerel mi olduğunu değiştirmez.
+HoloLens iç mekan kullanımı için en iyi duruma getirilmiş. Uzamsal eşleme, Wi-Fi bir ağa bağlı olması gerekse de en iyi şekilde çalışır. HoloLens, Wi-Fi veya kimliği doğrulanmamış olsa bile erişim noktaları elde eder. HoloLens, erişim noktalarının internete bağlı mı yoksa yalnızca intranet/yerel mi olduğunu değiştirmez.
 
-yalnızca güvenilir yerlerde HoloLens, riskleri olmadan kullanın. [Daha fazla güvenlik](https://support.microsoft.com/help/4023454/safety-information).
+Yalnızca HoloLens tehlikeleri olan güvenli yerlerde kullanın. [Güvenlik hakkında daha fazla bilgi.](https://support.microsoft.com/help/4023454/safety-information)
 
 ## <a name="mapping-your-space"></a>Alanınızı eşleme
 
-Şimdi yedek dosyanızı eşleştirmeye başlamaya hazırsınız.  HoloLens, kisörlerinizi eşleştirmeye başladığında, alanın üzerine yayıldığı bir kafes grafik görürsünüz.  Karma Gerçeklik ana sayfasında, eşlenmiş bir yüzey üzerinde seçim yaparak Haritayı gösterecek şekilde tetikleyebilirsiniz.
+Artık yedeklerinizi eşlemeye başlayabilirsiniz.  HoloLens eşlemeye başladığında, alana yayılmış bir örgü grafiğiyle karşınıza çıkar.  Karma gerçeklik giriş'te eşlenmiş bir yüzeyde öğesini seçerek haritayı gösterecek şekilde tetiklersiniz.
 
-Harika bir uzamsal harita oluşturmaya yönelik yönergeler aşağıda verilmiştir.
+İşte harika bir uzamsal haritayı inşa etmek için yönergeler.
 
-### <a name="understand-the-scenarios-for-the-area"></a>Alanla ilgili senaryoları anlayın
+### <a name="understand-the-scenarios-for-the-area"></a>Alan için senaryoları anlama
 
-haritanın ilgili ve tamamlanmış olması için HoloLens kullandığınız en çok zaman harcamanız önemlidir. örneğin, HoloLens bir kullanıcı senaryosu a noktasından B noktasına geçmeyi içeriyorsa, hareket ettirirken tüm yönlere bakarak bu yolu üç kez iki kez gözden getirin.  
+Haritanın uygun ve eksiksiz olması için en fazla HoloLens zaman harcamanız önemlidir. Örneğin, A noktasından B noktasına HoloLens bir kullanıcı senaryosu varsa, siz hareket ettiyken her yönde bakarak bu yolu iki veya üç kez izleyin.  
 
-### <a name="walk-slowly-around-the-space"></a>Alanı etrafında yavaşça ilerleme
+### <a name="walk-slowly-around-the-space"></a>Alanda yavaş bir şekilde dolaşın
 
-alan etrafında çok hızlı bir şekilde gezinmenize yol, HoloLens eşleme alanlarının kaçırmasına yol gösterecektir. Her 5-8 metrede elde edeceğiniz şekilde, her yerden daha fazla hareket edin.  
+Alanda çok hızlı bir şekilde ilerlersanız, harita alanlarının HoloLens olabilir. Uzayda yavaş bir şekilde dolaşın ve etrafınıza bakmak için her 5-8 fit'te bir durduruluyor.  
 
-kesintisiz hareketler HoloLens eşlemenin daha verimli bir şekilde sağlanmasına da yardımcı olur.
+Düzgün hareket, haritanın daha HoloLens yardımcı olur.
 
-### <a name="look-in-all-directions"></a>Tüm yönergelere bakın
+### <a name="look-in-all-directions"></a>Her yönde bakın
 
-bu alanı eşleştirdiğinizde, noktaların birbirlerine göreli olduğu durumlarda HoloLens daha fazla veri verilir.  
+Siz alanı eşlerken bu alanı HoloLens noktaların birbirine göreli olduğu daha fazla veri verir.  
 
-örneğin, HoloLens bir odadaki tavan nerede olduğunu bilmiyor olabilir.  
+Örneğin, yukarı bakamıyorsanız, HoloLens tavanın nerede olduğunu bilmiyor olabilir.  
 
-Alanı eşleştirdiğinizde zemin üzerinde görünmemenizi unutmayın.
+Alanı eşlerken zemine bakmayı unutmayın.
 
-### <a name="cover-key-areas-multiple-times"></a>Anahtar bölgelerini birden çok kez Kapla
+### <a name="cover-key-areas-multiple-times"></a>Önemli alanları birden çok kez kapsıyor
 
-Bir alandan çok kez geçiş yapmak, ilk yönergede kaçırmış olabilecek özellikleri çekmeye yardımcı olur. İdeal bir harita oluşturmak için bir alandan üç kez geçiş yapmayı deneyin.
+Bir alanda birden çok kez ilerlemek, ilk kılavuzda gözden kaçırabilirsiniz özellikleri almaya yardımcı olur. İdeal bir harita oluşturmak için bir alanı iki veya üç kez çapraz geçişe deneyin.
 
-Mümkünse, bu taşımaları tekrarlarken, bir yönde bir alandan yürüyerek harcama süresini geri çevirip, daha sonra da bulunduğunuz şekilde geri dönün.
+Mümkünse, bu hareketleri tekrarlarken bir alanda tek yönde dolaşarak zaman harcayarak geri dönüp geri dönerek geri dönersiniz.
 
-### <a name="take-your-time-mapping-the-area"></a>Alanı eşleştirmeye göre zamandan yararlanın
+### <a name="take-your-time-mapping-the-area"></a>Alanı eşlemeye zaman at
 
-HoloLens tamamen eşlenme ve kendini kendi ilerleyebilir olarak ayarlaması için 15 ila 20 dakika sürebilir. en sık bir HoloLens kullanmayı planladığınız bir alanınız varsa, bu zaman, alanı eşlemek için en öne çıkan sorunları daha sonra engelleyebilir.  
+Tam olarak haritanın ve çevrenin kendisini ayarlaması HoloLens 15 ile 20 dakika arasında sürebilir. Sık sık bir depolama alanı kullanmayı planlayabilirsiniz HoloLens, alanı eşlemek için bu kadar zaman almak daha sonra sorunları önlenebilir.  
 
 ## <a name="possible-errors-in-the-spatial-map"></a>Uzamsal haritada olası hatalar
 
-Uzamsal eşleme verilerinde hatalar birkaç kategoride yer almalıdır:
+Uzamsal eşleme verilerinde hatalar birkaç kategoriye ayrılır:
 
-- *Delik*: uzamsal eşleme verilerinde gerçek dünyada yüzeyler yok.
-- *Hallucinations*: gerçek dünyada mevcut olmayan uzamsal eşleme verilerinde yüzeyler var.
-- *solucan delikleri*: HoloLens ', uzamsal haritanın bir parçasını, gerçekten de haritanın farklı bir bölümünde olduğunu düşünerek, ' kaybeder '.
-- *Sapma*: uzamsal eşleme verilerinde yüzeyler, gerçek dünya yüzeyleriyle birlikte gönderilir ya da kullanıma alınır.
+- *Delikler:* Gerçek dünya yüzeyleri uzamsal eşleme verilerinden eksiktir.
+- Uzamsallıklar: Yüzeyler, gerçek dünyada mevcut olmayan uzamsal eşleme verilerde yer alır.
+- *Wormholes:* HoloLens farklı bir parçası olduğunu düşünerek uzamsal haritanın bir bölümünü 'kaybeder'.
+- *Yanlılık:* Uzamsal eşleme verisi yüzeyleri, gerçek dünya yüzeyleriyle kusursuz bir şekilde hizalanır.
 
-Bu hatalardan herhangi birini görürseniz lütfen geri bildirim göndermek için [Feedbackhub ' ı](hololens-feedback.md) kullanın.
+Bu hatalardan herhangi birini görüyorsanız geri bildirim göndermek için [FeedbackHub'ı](hololens-feedback.md) kullanın.
 
 ## <a name="security-and-storage-for-spatial-data"></a>Uzamsal veriler için güvenlik ve depolama
 
-Microsoft HoloLens ve sonraki sürümleri için Windows 10 sürüm 1803 güncelleştirmesi, yerel (cihazdaki) bir veritabanında eşleme verilerini depolar.
+Windows 10 için sürüm 1803 Microsoft HoloLens, eşleme verilerini yerel (cihaz üzerinde) veritabanında depolar.
 
-HoloLens kullanıcılar, cihaz bir bilgisayara takılıyken veya dosya gezgini uygulaması kullanılırken bile harita veritabanına doğrudan erişemez. BitLocker HoloLens etkinleştirildiğinde, depolanan harita verileri de tüm birimle birlikte şifrelenir.
+HoloLens, cihaz bir bilgisayara takılı olsa bile veya bir bilgisayar uygulaması kullanırken bile harita veritabanına Dosya Gezgini erişemektedir. Veri kaynağında BitLocker HoloLens, depolanan eşleme verileri de birimin tamamı ile birlikte şifrelenir.
 
-### <a name="remove-map-data-and-known-spaces-from-hololens"></a>Harita verilerini ve bilinen boşlukları HoloLens kaldır
+### <a name="remove-map-data-and-known-spaces-from-hololens"></a>Harita verilerini ve bilinen alanları HoloLens
 
-**Ayarlar > sistemi > Hologramlar** eşleme verilerini silmeye yönelik iki seçenek vardır:
+Ayarlar > **System > Hologramlar'da harita verilerini silmek için iki seçenek vardır:**
 
-- Yakın hologramlar silmek için **yakın Hologragram kaldır**' ı seçin. Bu komut, harita verilerini ve geçerli alana ait bağlantılı hologramlar temizler. Aynı alanda cihazı kullanmaya devam ederseniz, silinen bilgileri değiştirmek için yepyeni bir harita oluşturur ve depolar.
+- Yakındaki hologramları silmek için Yakındaki **hologramları kaldır'ı seçin.** Bu komut, geçerli alan için harita verilerini ve sabitli hologramları temizler. Cihazı aynı alanda kullanmaya devam edersanız silinen bilgilerin yerini alacak yepyeni bir harita bölümü oluşturur ve depolar.
 
    > [!NOTE]
-   > "Yakındaki" hologramlar, geçerli alanın aynı eşleme bölümünde sabitlenmiş hologramlar.
+   > "Yakındaki" hologramlar, geçerli alanda aynı harita bölümüne sabitli hologramlardır.
 
-   Örneğin, bu seçeneği, ana ilgili harita verilerini etkilemeden iş ile ilgili harita verilerini temizlemek için kullanabilirsiniz.
+   Örneğin, evle ilgili harita verilerini etkilemeden işle ilgili harita verilerini temizlemek için bu seçeneği kullanabilirsiniz.
 
-- Tüm hologramlar silmek için **Tüm hologramlar 'ı kaldır**' ı seçin. Bu komut, cihazda depolanan tüm harita verilerini ve tüm bağlantılı hologramlar temizler. Herhangi bir hologragram açıkça yerleştirmeniz gerekir. Daha önce yerleştirdiğiniz hologramlar yeniden keşfedemeyeceksiniz.
+- Tüm hologramları silmek için Tüm **hologramları kaldır'ı seçin.** Bu komut, hem cihazda depolanan tüm harita verilerini hem de sabitli hologramları temizler. Tüm hologramları açıkça yere ayazmanız gerekir. Önceden yerleştirilmiş hologramları yeniden keşfedesiniz.
 
 > [!NOTE]
-> yakın veya tüm hologramlar kaldırıldıktan sonra, HoloLens hemen taramaya ve geçerli alanı eşleştirmeye başlar.
+> Yakındaki veya tüm hologramları kaldırdikten sonra, HoloLens hemen taramaya ve geçerli alanı eşlemeye başlar.
 
-### <a name="wi-fi-data-in-spatial-maps"></a>Uzamsal eşlemlerdeki verileri Wi-Fi
+### <a name="wi-fi-data-in-spatial-maps"></a>Wi-Fi haritalarda verileri toplama
 
-HoloLens, hologram konumlarını ve bilinen boşlukların HoloLens veritabanı içinde depolanan eşleme bölümlerini ilişkilendirmenize yardımcı olmak için Wi-Fi özelliklerini depolar. Wi-Fi özellikleriyle ilgili bilgiler, kullanıcılar tarafından erişilemez ve bulut kullanılarak veya telemetri kullanılarak Microsoft 'a gönderilmez.
+HoloLens, Wi-Fi alan veritabanında depolanan hologram konumlarını ve harita bölümlerinin arasında HoloLens özellikleri depolar. Bu Wi-Fi özellikleri hakkında bilgiler kullanıcılar tarafından erişilemez ve bulut kullanılarak veya telemetri kullanılarak Microsoft'a gönderilmez.
 
-Wi-Fi etkinleştirildiği sürece HoloLens harita verilerini yakın Wi-Fi erişim noktalarıyla ilişkilendirir. Bir ağın bağlı olup olmadığı veya yakın bir şekilde algılanıp algılanmadığı davranıştaki bir farklılık yoktur. Wi-Fi devre dışıysa, HoloLens hala alanı arar. ancak, HoloLens alanlar veritabanında daha fazla harita verisi aramak ve hologramlar bulmak için daha fazla zaman gerekebilir. Wi-Fi bilgisi olmadan, HoloLens, haritanın doğru kısmını bulmak için etkin taramaları tüm hologram tutturucularını ve cihazda depolanan bölümleri eşlemek için gerekir.
+Bu bağlantı Wi-Fi sürece, HoloLens yakınlardaki erişim noktalarıyla Wi-Fi arasında ilişki vardır. Bir ağın bağlı olması veya yakın bir yerde algılandığından davranışta bir fark yoktur. Bu Wi-Fi devre dışı bırakılırsa HoloLens yine de alanı arar. Ancak HoloLens verilerde daha fazla arama yapmak gerekir ve hologramları bulmak için daha fazla zaman gerekir. Veri Wi-Fi olmadan, HoloLens haritanın doğru kısmını bulmak için etkin taramaları cihazda depolanan tüm hologram sabit noktaları ve harita bölümleriyle karşılaştırması gerekir.
 
 ## <a name="related-topics"></a>İlgili konular
 

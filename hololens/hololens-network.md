@@ -1,64 +1,64 @@
 ---
-title: bir ağa HoloLens Bağlan
-description: HoloLens ile internet 'i ayarlamayı ve bağlamayı öğrenin ve cihaz ıp adresini nasıl tanımlayacağınızı öğrenin.
+title: Bağlan HoloLens ağa bağlantı
+description: HoloLens ile İnternet'i ayarlamayı ve İnternet'e bağlamayı ve cihaz IP adresini tanımlamayı öğrenin.
 ms.assetid: 0895606e-96c0-491e-8b1c-52e56b00365d
 author: mattzmsft
 ms.author: mazeller
-keywords: HoloLens, wifi, kablosuz, internet, ıp, ıp adresi
+keywords: HoloLens, wifi, kablosuz, internet, ip, ip adresi
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: jarrettr
 ms.openlocfilehash: fe1c47de48e413a6f45921ba1e247016873ca996
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428182"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036533"
 ---
-# <a name="connect-hololens-to-a-network"></a>bir ağa HoloLens Bağlan
+# <a name="connect-hololens-to-a-network"></a>Bağlan HoloLens ağa bağlantı
 
-HoloLens birçok şeyi yapmak için bir ağa bağlı olmanız gerekir. HoloLens bir 802.11 ac özellikli, 2x2 Wi-Fi radyo ve ağa bağlama bir Windows 10 masaüstü veya mobil cihazı bir Wi-Fi ağına bağlamaya benzer. Bu kılavuz şunları yapmanıza yardımcı olur:
+Ağ üzerinde çoğu HoloLens yapmak için bir ağa bağlı olmak gerekir. HoloLens 802.11ac özellikli, 2x2 Wi-Fi radyo içerir ve bir ağa bağlamak, Windows 10 Desktop veya Mobil cihazı bir Wi-Fi ağına bağlamaya benzer. Bu kılavuz size yardımcı olacaktır:
 
-- Wi-Fi kullanarak bir ağa Bağlan veya yalnızca HoloLens 2 için USB-C üzerinden doğrudan veya Ethernet Wi-Fi
-- Wi-Fi devre dışı bırakıp yeniden etkinleştirin
+- Bağlan Wi-Fi kullanarak ağa veya yalnızca HoloLens 2 için, USB-C üzerinden Wi-Fi Veya Ethernet'e bağlanın
+- Devre dışı bırakma ve yeniden etkinleştirme Wi-Fi
 
-[HoloLens çevrimdışı kullanma](hololens-offline.md)hakkında daha fazla bilgi edinin.
+Çevrimdışı uygulama kullanma [hakkında daha HoloLens okuyun.](hololens-offline.md)
 
-## <a name="connecting-for-the-first-time"></a>İlk kez bağlanıyor
+## <a name="connecting-for-the-first-time"></a>İlk kez bağlanma
 
-HoloLens ilk kez kullandığınızda, bir Wi-Fi ağa bağlanarak gezinirsiniz. Kurulum sırasında Wi-Fi bağlanmada sorun yaşıyorsanız, ağınızın açık, parola korumalı bir ağ ya da bir açıklamalı Portal ağı olduğundan emin olun. Ayrıca, ağın bağlanmak için bir sertifika kullanmanızı gerektirmediğini doğrulayın. Kurulumdan sonra, diğer Wi-Fi ağları türlerine bağlanabilirsiniz.
+Ağ bağlantınızı ilk kez HoloLens, bir ağ ile bağlantı Wi-Fi yönlendirebilirsiniz. Kurulum sırasında ağ Wi-Fi sorunlarınız varsa, ağın açık, parola korumalı bir ağ veya bir portal ağı olduğundan emin olun. Ayrıca, ağın bağlanmak için bir sertifika kullanmanızı gerektirmeyen bir sertifika olduğunu onaylayın. Kurulumdan sonra, diğer ağ türlerine Wi-Fi bağlanabilirsiniz.
 
-HoloLens 2 cihazda, bir kullanıcı, cihazı ayarlarken yardım 'a doğrudan Wi-Fi bağlanmak için [bir USB-C-Ethernet bağdaştırıcısı da kullanabilir](hololens-connect-devices.md#hololens-2-connect-usb-c-devices) . Cihaz ayarlandıktan sonra, bir Kullanıcı bağdaştırıcıyı kullanmaya devam edebilir ya da cihazın bağdaştırıcı bağlantısını kesebilir ve ayarladıktan [sonra Wi-Fi 'a bağlanabilir](hololens-network.md#connecting-to-wi-fi-after-setup). 
+Bir HoloLens 2 cihazda bir kullanıcı, cihazı ayarlamaya yardımcı olmak üzere doğrudan Wi-Fi [usb-C'den Ethernet'e](hololens-connect-devices.md#hololens-2-connect-usb-c-devices) bağdaştırıcısı da kullanabilir. Cihaz ayar verdikten sonra bir kullanıcı bağdaştırıcıyı kullanmaya devam eder veya cihazı bağdaştırıcıdan kesdikten sonra [wi-fi bağlantısı kurarak bağlantısı kesebilirsiniz.](hololens-network.md#connecting-to-wi-fi-after-setup) 
 
-## <a name="connecting-to-wi-fi-after-setup"></a>Kurulumdan sonra Wi-Fi bağlanma
+## <a name="connecting-to-wi-fi-after-setup"></a>Kurulumdan sonra Wi-Fi bağlantı kurma
 
-1. **başlangıç hareketini** önceden oluşturup **Ayarlar** seçin. Ayarlar uygulama, sizin için otomatik olarak eklenir.
-1. **Internet**  >  **Wi-Fi**& ağ ' ı seçin. Wi-Fi’ın açık olduğundan emin olun. Ağınızı görmüyorsanız listede aşağı kaydırın.
-1. bir ağ seçin, sonra **Bağlan**' yi seçin.
-1. Bir ağ parolası istenirse bu dosyayı yazın ve ardından **İleri**' yi seçin.
+1. Başlangıç hareketini **önceden biçimlendirilmiş** olarak seçin ve **Ayarlar.** Ayarlar otomatik olarak önüne yerleştirilir.
+1. Ağ **bağlantısı & İnternet**  >  **Wi-Fi'ı seçin.** Wi-Fi’ın açık olduğundan emin olun. Anızı görmüyorsanız listeyi aşağı kaydırın.
+1. Bir ağ seçin, sonra da ağ **Bağlan.**
+1. Bir ağ parolası girmeniz istenirse parolayı yazın ve ardından Sonraki'yi **seçin.**
 
 ![HoloLens Wi-Fi ayarları.](./images/hololens-2-wifi-settings.jpg)
 
-Wi-Fi ağa bağlı olduğunu doğrulamak için, **Başlangıç** menüsündeki Wi-Fi durumunu kontrol edin:
+Wi-Fi ağına bağlı olduğunuzdan emin olmak Wi-Fi menüsünden **durumu** kontrol edin:
 
-1. **Başlat** menüsünü açın.
-1. Wi-Fi durum için **Başlangıç** menüsünün sol üst kısmına bakın. Wi-Fi durumu ve bağlı ağın SSID 'SI gösterilir.
+1. Başlat **menüsünü** açın.
+1. Durum bilgi için Başlat **menüsünün** sol üst Wi-Fi bakın. Bağlı ağın Wi-Fi ve SSID'nin durumu gösterilir.
 
 > [!TIP]
-> Wi-Fi yoksa [hücresel ve 5 g ağlarına da bağlanabilirsiniz](hololens-cellular.md).
+> Bu Wi-Fi yoksa Hücresel ve [5G ağlarına da bağlanabilirsiniz.](hololens-cellular.md)
 
 > [!IMPORTANT]
-> tasarıma göre, kullanıcılar HoloLens 2 ' nin Wi-Fi dolaşım davranışını ince ayarlayamez. **Wi-Fi listesini yenilemenin tek yolu Wi-Fi kapalı ve açık olarak geçiş yapmaz**. Bu, bir cihazın Aralık dışına çıkdıktan sonra bir AP 'ye "takılı" kalabileceği gibi birçok sorunu önler.
+> Tasarıma göre kullanıcılar HoloLens 2'nin Wi-Fi dolaşım davranışında ince ayarlamalar Wi-Fi, Wi-Fi Kapalı ve Açık **olarak ayarlamaktır.** Bu, bir cihazın aralık dışından bir AP'ye "takılı kalarak" kalamaması gibi birçok sorunu önler.
 
-## <a name="connect-hololens-to-enterprise-wi-fi-network"></a>Wi-Fi ağ Enterprise HoloLens Bağlan
+## <a name="connect-hololens-to-enterprise-wi-fi-network"></a>Bağlan HoloLens Network Enterprise Wi-Fi ye
 
-Enterprise Wi-Fi profiller Wi-Fi bağlantılarının kimliğini doğrulamak için genişletilebilir kimlik doğrulama protokolü (EAP) kullanır. HoloLens Enterprise Wi-Fi profili, [Windows yapılandırma tasarımcısı](/windows/configuration/provisioning-packages/provisioning-packages)tarafından oluşturulan MDM veya sağlama paketi aracılığıyla yapılandırılabilir.
+Enterprise Wi-Fi profiller, bağlantılarda kimlik doğrulaması yapmak için Genişletilebilir Kimlik Doğrulama Protokolü'Wi-Fi kullanır. HoloLens Enterprise Wi-Fi profili, MDM aracılığıyla ya da Windows Yapılandırma Tasarımcısı [tarafından oluşturulan sağlama paketi aracılığıyla yalıtabilirsiniz.](/windows/configuration/provisioning-packages/provisioning-packages)
 
-Microsoft Intune yönetilen cihaz için yapılandırma yönergeleri için [ıntune](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) 'a bakın.
+Yönetilen Microsoft Intune için yapılandırma yönergeleri [için Intune'a](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) bakın.
 
-WCD 'de Wi-Fi sağlama paketi oluşturmak için, önceden yapılandırılmış bir Wi-Fi profili .xml dosyası gereklidir. EAP-TLS kimlik doğrulaması ile WPA2-Enterprise için örnek bir Wi-Fi profili aşağıda verilmiştir:
+WCD'de Wi-Fi paketi oluşturmak için önceden yapılandırılmış bir Wi-Fi profili .xml dosyası gerekir. EAP-TLS kimlik Wi-Fi için WPA2-Enterprise profili örneği:
 
 ``` xml
 <?xml version="1.0"?> 
@@ -120,85 +120,85 @@ WCD 'de Wi-Fi sağlama paketi oluşturmak için, önceden yapılandırılmış b
 ```
 
 
-Sunucu kök CA sertifikası ve istemci sertifikasının, EAP türüne bağlı olarak cihazda sağlanması gerekebilir.
+EAP türüne bağlı olarak cihazda sunucu kök CA sertifikasının ve istemci sertifikasının sağlanması gerekir.
 
 Ek kaynaklar:
 
-- WLANv1Profile şeması: [[MS-GPWL]: Kablosuz LAN profili v1 şeması | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/34054c93-cfcd-44df-89d8-5f2ba7532b67)
-- EAP-TLS şeması: [[MS-GPWL]: MICROSOFT EAP TLS şeması | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/9590925c-cba2-4ac5-b9a1-1e5292bb72cb)
+- WLANv1Profile Şeması: [[MS-GPWL]: Kablosuz LAN Profili v1 Şema | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/34054c93-cfcd-44df-89d8-5f2ba7532b67)
+- EAP-TLS Şeması: [[MS-GPWL]: Microsoft EAP TLS Şeması | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/9590925c-cba2-4ac5-b9a1-1e5292bb72cb)
 
-Wi-Fi 'nize bağlanmakta sorun yaşıyorsanız [sorun giderme](hololens2-enterprise-troubleshooting.md#) sayfamızı denetleyin.
+[Wi-Fi'ınıza](hololens2-enterprise-troubleshooting.md#) bağlanırken sorun giderme sayfamızı kontrol edin.
 
-## <a name="configure-network-proxy"></a>Ağ ara sunucusunu yapılandırma
+## <a name="configure-network-proxy"></a>Ağ Ara Sunucusunu Yapılandırma
 
-bu bölümde, Windows HTTP yığını kullanan HoloLens OS ve Evrensel Windows Platformu (UWP) uygulamaları için ağ proxy 'si ele alınmaktadır. Windows olmayan HTTP yığınının kullanıldığı uygulamalar kendi ara sunucu yapılandırmasına ve işlemeye sahip olabilir. 
+Bu bölüm, http yığını kullanan HoloLens işletim sistemi ve Evrensel Windows Platformu (UWP) uygulamaları için Windows ara sunucusunu kapsar. HTTP yığınında Windows uygulamalar kendi ara sunucu yapılandırmasına ve işlemeye sahip olabilir. 
 
-### <a name="proxy-configurations"></a>Proxy yapılandırması 
+### <a name="proxy-configurations"></a>Proxy Yapılandırmaları 
 
-- Proxy otomatik yapılandırma (PAC) betiği: bir [pac dosyası](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) (Microsoft dışı bir site açar), FindProxyForURL (URL, ana bilgisayar) JavaScript işlevini içerir. 
-- Statik proxy: sunucu: bağlantı noktası biçiminde.  
-- Web proxy otomatik bulma Protokolü (WPAD): DHCP veya DNS aracılığıyla proxy yapılandırma dosyasının URL 'sini sağlayın. 
+- Proxy Otomatik Yapılandırma (PAC) betiği: [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) dosyası (Microsoft olmayan bir site açar) FindProxyForURL(url, host) JavaScript işlevi içerir. 
+- Statik Ara Sunucu: Sunucu:Bağlantı Noktası şeklinde.  
+- Web Proxy Otomatik Bulma Protokolü (WPAD): DHCP veya DNS aracılığıyla ara sunucu yapılandırma dosyasının URL'sini belirtin. 
 
-### <a name="proxy-provisioning-methods"></a>Proxy sağlama yöntemleri 
-Proxy 'lerin sağlanması için üç yol vardır:
+### <a name="proxy-provisioning-methods"></a>Ara Sunucu Sağlama Yöntemleri 
+İki tane sağlamanın üç yolu vardır:
 
  
 
-1.  **Ayarlar 'SıNı** 
-    1. Kullanıcı başına proxy (20H2 veya önceki sürümler):
-        1. Başlat menüsü açın ve Ayarlar ' i seçin.
-        2. Internet & Ağı ' nı ve ardından sol taraftaki menüden ara ' yı seçin.
-        3. , El Ile ara sunucu kurulumuna gidin ve açık bir proxy sunucu kullan ' a geçiş yapın.
+1.  **Ayarlar UI:** 
+    1. Kullanıcı başına ara sunucu (20H2 veya önceki):
+        1. Sayfayı açın Başlat menüsü'ı Ayarlar.
+        2. İnternet'& ağ ve ardından sol menüde Ara Sunucu'ya tıklayın.
+        3. Ekranı aşağı kaydırarak El ile ara sunucu kurulumu'nı seçin ve Ara sunucu kullan'ı Açık olarak kaydırın.
         4. Proxy sunucusunun IP adresini girin.
         5. Bağlantı noktası numarasını girin.
         6. Kaydet’e tıklayın.
-      1. WiFi proxy (21H1 veya üzeri):
-          1. Başlat menüsü açın ve Wi-Fi ağınızın özellikler sayfasına gidin.
-          1. Aşağı kaydırarak ara sunucu
-          1. El Ile kuruluma geçiş yapın
+      1. WiFi ara sunucusu (21H1 veya daha yüksek):
+          1. Başlat menüsü'i açın ve Wi-Fi Ağının Özellikler sayfasına gidin.
+          1. Ekranı aşağı kaydırarak Ara Sunucu'ya kaydırın
+          1. El ile Kurulum olarak değiştirme
           1. Proxy sunucusunun IP adresini girin.
           1. Bağlantı noktası numarasını girin.
-          1. Uygula ' ya tıklayın.
+          1. Uygula'ya tıklayın.
         
  2. **MDM** 
-     1. Intune-Intune 'da proxy yapılandırmak için bu [adımları](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) kullanın. Bölümün altına kaydırmanız gerekecektir.
-     1. Diğer üçüncü taraf MDM çözümleri- [WIFI CSP](/windows/client-management/mdm/wifi-csp)kullanın.
+     1. Intune - [Intune'da](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) ara sunucu yapılandırmak için bu adımları kullanın. Bölümün en altına kaydırmalısiniz.
+     1. Diğer 3. taraf MDM çözümleri - [WiFi CSP kullanın.](/windows/client-management/mdm/wifi-csp)
 
 3. **PPKG** 
-    1. Windows yapılandırma tasarımcısını aç
-    1. gelişmiş sağlama ' ya tıklayın, yeni Project adını girin ve ileri ' ye tıklayın.
-    1. Windows Holographic (HoloLens 2) öğesini seçin ve ileri ' ye tıklayın.
-    1. PPKG 'nizi (isteğe bağlı) içeri aktarın ve son ' a tıklayın.
-    1. çalışma zamanı Ayarlar-> bağlantı profilleri-> wlan-> wlan Proxy 'yi genişletin.
-    1. Wi-Fi ağınızın SSID 'sini girin ve Ekle ' ye tıklayın.
-    1. Sol penceredeki Wi-Fi ağınızı seçin ve istediğiniz özelleştirmeleri girin. Etkin özelleştirmeler sol menüde kalın olarak görünür.
-    1. Kaydet ve çıkış ' a tıklayın.
-    1. Sağlama paketini HoloLens [uygulayın](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup) .
+    1. Yapılandırma Windows'i açın
+    1. Gelişmiş Sağlama'ya tıklayın, yeni kullanıcı adınız için adı girin ve Project'a tıklayın.
+    1. Holographic Windows (HoloLens 2) öğesini seçin ve Ardından'ya tıklayın.
+    1. PPKG'nizi içeri aktarın (isteğe bağlı) ve Son'a tıklayın.
+    1. Çalışma Zamanı Ayarlar -> Bağlantı Profilleri -> WLAN -> WLAN Ara Sunucusu'> genişletin.
+    1. Wi-Fi ağ için SSID girin ve Ekle'ye tıklayın.
+    1. Sol Wi-Fi ağ seçin ve istediğiniz özelleştirmeleri girin. Etkinleştirildiğinde özelleştirmeler sol menüde kalın olarak gösterilir.
+    1. Kaydet ve Çık'a tıklayın.
+    1. [Sağlama](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup) paketini HoloLens.
 
-[csp 'ler](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) , hem Microsoft Intune hem de Microsoft dışı MDM hizmet sağlayıcılarının Windows 10 için yönetim görevlerinin ve ilkelerinin çoğundan daha gerisinde bulunur. ayrıca, bir [sağlama paketi](/windows/configuration/provisioning-packages/provisioning-packages) oluşturmak ve bunu HoloLens 2 ' ye uygulamak için [Windows yapılandırma tasarımcısı](/windows/configuration/provisioning-packages/provisioning-install-icd) ' nı kullanabilirsiniz.
-HoloLens 2 ' ye uygulanacak en olası csp 'ler şunlardır:
+[CSP'ler,](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) hem Microsoft Intune hem de Microsoft olmayan MDM hizmet sağlayıcılarında Windows 10 için yönetim görevlerinin ve ilkelerinin birçoğundadır. Ayrıca, Windows [Configuration Designer'dan](/windows/configuration/provisioning-packages/provisioning-install-icd) bir [sağlama paketi](/windows/configuration/provisioning-packages/provisioning-packages) oluşturabilir ve bu paketi HoloLens 2.
+En olası CSP'ler, 2. HoloLens uygulanır:
 
-- [WIFI CSP](/windows/client-management/mdm/wifi-csp): profil başına Wi-Fi proxy 
+- [WiFi CSP:](/windows/client-management/mdm/wifi-csp)profil başına Wi-Fi ara sunucusu 
 
-[HoloLens cihazlarda desteklenen diğer csp 'ler](/windows/client-management/mdm/configuration-service-provider-reference#hololens)
+[HoloLens cihazlarda desteklenen diğer CSP'ler](/windows/client-management/mdm/configuration-service-provider-reference#hololens)
 
 
 
 
 
 ## <a name="vpn"></a>VPN
-VPN bağlantısı, şirketinizin ağına ve Internet 'e daha güvenli bir bağlantı ve erişim sağlamaya yardımcı olabilir. HoloLens 2, yerleşik vpn istemcisi ve Evrensel Windows Platformu (UWP) vpn eklentisini destekler. 
+VPN bağlantısı, daha güvenli bir bağlantı ve şirket ağı ile İnternet erişimi sağlamanıza yardımcı olabilir. HoloLens 2, yerleşik VPN istemcisini ve Evrensel Windows Platformu (UWP) VPN eklentisini destekler. 
 
-Desteklenen yerleşik VPN protokolleri:
+Desteklenen Yerleşik VPN protokolleri:
 - IKEv2
 - L2TP
 - PPTP
 
-Sertifika, yerleşik VPN istemcisi için kimlik doğrulaması için kullanılıyorsa, gerekli istemci sertifikasının Kullanıcı sertifika deposuna eklenmesi gerekir. 3. taraf vpn eklentisinin HoloLens 2 ' yi destekleyip desteklemediğini bulmak için, mağaza ' ya giderek vpn uygulamasını bulun ve HoloLens desteklenen bir cihaz olarak listelenip listelenmediğini ve sistem gereksinimi sayfasında, uygulamanın ARM veya ARM64 mimarisini destekleyip desteklemediğini denetleyin. HoloLens, 3. taraf VPN için yalnızca Evrensel Windows Platformu uygulamalarını destekler.
+Yerleşik VPN istemcisi için kimlik doğrulaması için sertifika kullanılıyorsa, gerekli istemci sertifikasının kullanıcı sertifika deposuna eklenmiş olması gerekir. 3. taraf VPN eklentisinin HoloLens 2'nin destekleyip destekleme aykırılıklarını bulmak için Mağaza'ya gidin, VPN uygulamasını bulun ve HoloLens'nin desteklenen bir cihaz olarak listelenmiş olup olduğunu ve Uygulamanın ARM veya ARM64 mimarisini desteklediği Sistem Gereksinimi sayfasından kontrol edin. HoloLens, yalnızca 3. Windows VPN için Universal Windows Platform uygulamalarını destekler.
 
- VPN, MDM tarafından [Ayarlar/allowvpn](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)aracılığıyla yönetilebilir ve [Vpnv2-csp ilkesi](/windows/client-management/mdm/vpnv2-csp)aracılığıyla ayarlanabilir.
+ VPN, MDM tarafından [Ayarlar/AllowVPN](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)aracılığıyla yönetilebilir ve [Vpnv2-csp ilkesi aracılığıyla ayarlanır.](/windows/client-management/mdm/vpnv2-csp)
 
-[Bu KıLAVUZLARLA](/windows/security/identity-protection/vpn/vpn-guide) [VPN yapılandırma](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) hakkında daha fazla bilgi edinin.  
+Vpn'i [yapılandırma hakkında daha fazla bilgi için](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) bu kılavuzları [kullanın.](/windows/security/identity-protection/vpn/vpn-guide)  
 
 ### <a name="vpn-via-ui"></a>Kullanıcı arabirimi aracılığıyla VPN
 

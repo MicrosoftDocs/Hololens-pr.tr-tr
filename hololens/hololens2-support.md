@@ -8,11 +8,11 @@ ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
 ms.openlocfilehash: 17aaf8627384098de240d2c2e79c1ed9b0d39165
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427095"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033291"
 ---
 # <a name="what-are-the-mixed-reality-support-and-help-options"></a>Karışık gerçeklik desteği ve yardım seçenekleri nelerdir?
 
@@ -145,7 +145,7 @@ Azure Spatial Anchors, Azure Object Anchors veya Azure portal için Azure Remote
 
 ### <a name="provide-documentation-content-feedback"></a>Belge içeriği geri bildirimi sağlama
 
-Her içerik makalenin en altında, karma gerçeklik belge depolarında GitHub bir sorun açma ve içerik hakkında geri bildirim sağlama fırsatı vardır. 
+Her içerik makalenin alt kısmında, herhangi bir karma gerçeklik belge deposunda GitHub geri bildirim sağlamak için bir sorun açma ve geri bildirim sağlama fırsatı vardır. 
 
 ### <a name="provide-product-feedback"></a>Ürün geri bildirimi sağlama
 
@@ -156,13 +156,13 @@ Geri bildirim sağlamak, Microsoft karma gerçeklik hizmetleriyle ilgili bir fik
 
 - [HoloLens 2 Ürün Geri Bildirimi](/hololens/hololens-feedback)
 - [Microsoft Mesh Uygulaması Ürün Geri Bildirimi](/hololens/hololens-feedback)
-- [Azure Remote Rendering Geri Bildirimi](https://feedback.azure.com/forums/928696-azure-remote-rendering)
+- [Azure Remote Rendering Geri Bildirim](https://feedback.azure.com/forums/928696-azure-remote-rendering)
 - [Azure Spatial Anchors Geri Bildirimi](https://feedback.azure.com/forums/919252-azure-spatial-anchors)
 
 ### <a name="faqs--troubleshooting"></a>SSS & Giderme
 
 - HoloLens 2 için sorun [HoloLens sayfasına](../hololens/hololens-troubleshooting.md) bakın
 - Windows Mixed Reality [SSS sayfasına](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) bakın
-- Azure Remote Rendering [SSS sayfasına](/azure/remote-rendering/resources/troubleshoot) bakın
+- Azure Remote Rendering SSS [sayfasına](/azure/remote-rendering/resources/troubleshoot) bakın
 - Azure Spatial Anchors SSS [sayfasına](/azure/spatial-anchors/spatial-anchor-faq) bakın
 - Azure Object Anchors [SSS sayfasına](/azure/object-anchors/faq) bakın

@@ -17,11 +17,11 @@ manager: jarrettr
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: e9aad32891bb093cbce18671b76549788b19afcb
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427832"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036508"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>HoloLens 2 ' yi yeniden başlatın, sıfırlayın veya kurtarın
 
@@ -149,45 +149,45 @@ refflash yordamını çalıştırmadan önce, uygulamanın Windows 10 bilgisayar
     1. Cihazınızın bu bağlantıyı devre dışı bırakan USB ilkeleri olabilir. Öyleyse, [El Ile yanıp sönen modu](hololens-recovery.md#manual-procedure)deneyin.
     2. İlke yoksa, farklı bir USB kablosu deneyin.
 
-1. Cihazınızın [1-3-5 yönlü bir model GÖRÜNTÜLEMEMIŞ](hololens2-setup.md#lights-to-indicate-problems)olduğunu denetleyin.
+1. Cihazınızın [1-3-5-LED deseni görüntülemez.](hololens2-setup.md#lights-to-indicate-problems)
 
-## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazasını kullanmadan YAYı indirin
+## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazalarını kullanmadan ARC'ı indirme
 
-bt ortamı Windows mağaza uygulamasının kullanımını engelliyorsa veya perakende mağazası 'na erişimi sınırlayıp, bt yöneticisi bu uygulamayı "çevrimdışı" bir dağıtım yolu aracılığıyla kullanılabilir hale getirir.
+IT ortamı, Windows Store uygulamasının kullanımını önlese veya perakende mağazasına erişimi sınırlarsa, IT yöneticisi bu uygulamayı bir "çevrimdışı" dağıtım yolu aracılığıyla kullanılabilir hale getirmesini sağlar.
 
  >[!NOTE]
- > - bt yöneticileri ayrıca bu uygulamayı System Center Configuration Manager (SCCM) veya ıntune aracılığıyla dağıtabilir.
- > - Bu kılavuz, Gelişmiş kurtarma Yardımcısı 'na odaklanmaktadır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
+ > - IT yöneticileri bu uygulamayı System Center Configuration Manager (SCCM) veya Intune aracılığıyla da dağıtabilirsiniz.
+ > - Bu kılavuz Gelişmiş Kurtarma Yardımcı'ya odaklanır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
 
 Dağıtım yolunu etkinleştirmek için şu adımları izleyin:
 
-1. [İş İçin Microsoft Store](https://businessstore.microsoft.com) gidin ve bir Azure Active Directory kimliği kullanarak oturum açın.
+1. [İş İçin Microsoft Store'a](https://businessstore.microsoft.com) gidin ve Azure Active Directory oturum açma.
 
-1. **yönet – Ayarlar** sayfasına gidin. **Alışveriş deneyimi** altında **çevrimdışı uygulamaları göster** ' i açın.
+1. Yönet **– Ayarlar.** Alışveriş deneyimi altında Çevrimdışı uygulamaları **göster'i açma.** 
 
-1. **Grubum için mağaza**' a gidin ve [**_Gelişmiş kurtarma Yardımcısı_**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)' nı arayın.
+1. Grubum **için alışverişe gidin ve** Advanced Recovery Companion araması yapmak için [**_._**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)
 
-1. **Lisans türünü** **_çevrimdışı_*_ olarak değiştirin ve _ Yönet ' i seçin***.
+1. Lisans **Türü'sini** **_çevrimdışı _ olarak_*değiştirerek _ Yönet'i* seçin.**
 
-1. **Çevrimdışı kullanım için paketi indirin** altında Ikinci mavi **İndir** düğmesini seçin. Dosya uzantısının *. appxdemeti* olduğundan emin olun.
+1. Paketi **çevrimdışı kullanım için indir'in altında** ikinci mavi İndir **düğmesini** seçin. Dosya uzantısının *.appxbundle olduğundan emin olun.*
 
-    - Bu aşamada, masaüstü BILGISAYARıN internet erişimi varsa, uygulamayı yüklemek için pakete çift tıklayın.
+    - Bu aşamada, Masaüstü bilgisayar internet erişimine sahipse, uygulamayı yüklemek için pakete çift tıklayın.
 
-    - Hedef bılgısayarda internet bağlantısı yoksa, şu adımları izleyin:
-       1. Kodlanamayan lisansı seçin ve ardından **Lisans oluştur**' u seçin.
-       2. **Gerekli çerçeveler** altında **İndir**' i seçin.
-       3. Paketi bağımlılık ve lisansa uygulamak için DıSM 'yi kullanın. Yönetici komut isteminden aşağıdaki komutu çalıştırın:
+    - Hedef bilgisayar İnternet bağlantısına sahip değilse şu adımları izleyin:
+       1. Kodlanmamış lisansı seçin ve ardından Lisans **oluştur'a tıklayın.**
+       2. Gerekli **Çerçeveler altında** İndir'i **seçin.**
+       3. Paketi bağımlılık ve lisansla uygulamak için DISM kullanın. Yönetici komut isteminde aşağıdaki komutu çalıştırın:
 
           ```console
           C:\WINDOWS\system32>dism /online /Add-ProvisionedAppxPackage /PackagePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_1.19050.1301.0_neutral_~_8wekyb3d8bbwe.appxbundle" /DependencyPackagePath:"C:\ARCoffline\Microsoft.VCLibs.140.00.UWPDesktop_14.0.27629.0_x86__8wekyb3d8bbwe.appx" /LicensePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_8wekyb3d8bbwe_f72ce112-dd2e-d771-8827-9cbcbf89f8b5.xml" /Region:all
           ```
           > [!NOTE]
-          > Bu kod örnekteki sürüm numarası, mevcut olan sürümle eşleşmeyebilir. Ayrıca, örnekteki farklı bir indirme konumu seçmiş olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
+          > Bu kod örneğinde yer alan sürüm numarası şu anda kullanılabilir olan sürümle eşleşmez. Ayrıca örnekten farklı bir indirme konumu seçmiş de olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
 
 > [!TIP]
-> Çevrimdışı bir FFU yüklemek için Gelişmiş kurtarma Yardımcısı kullanmayı planlarken, Flash görüntünüzü indirmek faydalı olabilir. [**HoloLens 2 için geçerli görüntüyü indirin**](https://aka.ms/hololens2download).
+> Çevrimdışı FFU yüklemek için Gelişmiş Kurtarma Yardımcı'sı kullanmayı planlasanız, flash görüntü indirebilirsiniz. [**HoloLens 2 için geçerli görüntüyü indirin.**](https://aka.ms/hololens2download)
 
 Diğer kaynaklar:
 
 - [Çevrimdışı uygulamaları dağıtma](/microsoft-store/distribute-offline-apps) 
-- [DıSM uygulama paketi (. appx veya. appxdemeti) komut satırı seçeneklerini sunma](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)
+- [DISM uygulama paketi (.appx veya .appxbundle) hizmet komut satırı seçenekleri](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)

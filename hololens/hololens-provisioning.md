@@ -1,6 +1,6 @@
 ---
-title: Sağlama HoloLens kullanarak yapılandırma (HoloLens)
-description: Windows sağlama, IT yöneticilerinin görüntüleme olmadan son kullanıcı cihazlarını yapılandırmalarını kolaylaştırır.
+title: sağlama paketi kullanarak HoloLens yapılandırma (HoloLens)
+description: Windows sağlama, bt yöneticilerinin son kullanıcı cihazlarını ımaging olmadan yapılandırmasını kolaylaştırır.
 ms.prod: hololens
 ms.sitesec: library
 author: dansimp
@@ -17,128 +17,128 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 9474774b47858003cc11363a5f325f589b0732ab
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427381"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033960"
 ---
-# <a name="configure-hololens-by-using-a-provisioning-package"></a>Sağlama HoloLens kullanarak yapılandırma
+# <a name="configure-hololens-by-using-a-provisioning-package"></a>sağlama paketi kullanarak HoloLens yapılandırma
 
-[Windows sağlama,](/windows/configuration/provisioning-packages/provisioning-packages) IT yöneticilerinin görüntüleme olmadan son kullanıcı cihazlarını yapılandırmalarını kolaylaştırır. Windows Yapılandırma Tasarımcısı, daha sonra sağlama paketlerinde yerleşik olarak bulunan görüntüleri ve çalışma zamanı ayarlarını yapılandırmak için kullanılan bir araçtır.
+[Windows sağlama](/windows/configuration/provisioning-packages/provisioning-packages) , bt yöneticilerinin son kullanıcı cihazlarını ımaging olmadan yapılandırmasını kolaylaştırır. Windows Yapılandırma Tasarımcısı, daha sonra sağlama paketlerine yerleşik olarak bulunan resimleri ve çalışma zamanı ayarlarını yapılandırmaya yönelik bir araçtır.
 
-Sağlama paketinde HoloLens yapılandırmalardan bazıları şunlardır:
+bir sağlama paketinde uygulayabileceğiniz HoloLens yapılandırmalarından bazıları şunlardır:
 
-- [Windows Holographic for Business'a yükseltme](hololens1-upgrade-enterprise.md)
+- [Windows Holographic for Business](hololens1-upgrade-enterprise.md) yükseltin
 - Yerel hesap ayarlama
-- Ağ bağlantısı Wi-Fi ayarlama
+- Wi-Fi bağlantısını ayarlama
 - Cihaza sertifika uygulama
-- Geliştirici Modunu Etkinleştirme
-- Ayrıntılı yönergelerimizi izleyerek Bilgi Noktası [modunu yapılandırma.](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)
+- Geliştirici modunu etkinleştir
+- [Ayrıntılı yönergelerinizi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)Izleyerek bilgi noktası modunu yapılandırın.
 
-## <a name="provisioning-package-hololens-wizard"></a>Paket sağlama HoloLens sihirbazı
+## <a name="provisioning-package-hololens-wizard"></a>paketi HoloLens sağlama sihirbazı
 
 HoloLens sihirbazı, bir sağlama paketinde aşağıdaki ayarları yapılandırmanıza yardımcı olur:
 
 - Enterprise sürümüne yükseltme
 
     > [!NOTE]
-    > Bu yalnızca 1. nesil HoloLens için kullanılmalıdır. Ayarlar paketinde yer alan tüm sürümler, yalnızca sağlama paketinin Windows Holographic for Business'ye sürüm yükseltme lisansına sahip olması veya cihazın [Windows Holographic for Business.](hololens1-upgrade-enterprise.md)
+    > bu yalnızca HoloLens 1. gen cihazları için kullanılmalıdır. bir sağlama paketindeki Ayarlar yalnızca, sağlama paketi Windows Holographic for Business sürümüne bir sürüm yükseltme lisansı içeriyorsa veya [cihaz zaten Windows Holographic for Business sürümüne yükseltildiyse](hololens1-upgrade-enterprise.md)uygulanır.
 
-- İlk deneyimi HoloLens (OOBE) yapılandırma
-- Ağ Wi-Fi yapılandırma
-- Cihazı Azure Active Directory veya yerel bir hesap oluşturun
-- Sertifika ekleme
-- Geliştirici Modunu Etkinleştirme
-- Ayrıntılı yönergeleri izleyerek bilgi noktası [modunu yapılandırma.](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)
+- HoloLens ilk deneyimi yapılandırın (OOBE)
+- Wi-Fi ağını yapılandırma
+- cihazı Azure Active Directory kaydetme veya yerel hesap oluşturma
+- Sertifika ekle
+- Geliştirici modunu etkinleştir
+- [Ayrıntılı yönergeleri](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)izleyerek bilgi noktası modunu yapılandırın.
 
 > [!WARNING]
-> Sihirbazlardan herhangi birini Windows kayıt Windows 10 yapılandırmak için Azure Active Directory Yapılandırma Tasarımcısı'nı çalıştırmanız gerekir.
+> sihirbazları kullanarak Azure Active Directory kaydını yapılandırmak için Windows 10 üzerinde Windows Configuration Designer ' i çalıştırmanız gerekir.
 
-Sağlama paketleri yönetim yönergelerini ve ilkelerini, özel ağ bağlantılarını ve ilkelerini ve daha fazlasını içerebilir.
+Sağlama paketleri yönetim yönergelerini ve ilkelerini, özel ağ bağlantılarını ve ilkeleri ve daha fazlasını içerebilir.
 
 > [!TIP]
-> Masaüstü sihirbazını kullanarak ortak ayarlarla bir paket oluşturun ve ardından diğer ayarları, uygulamaları, ilkeleri vb. eklemek için gelişmiş düzenleyiciye geçiş yapın.
+> Ortak ayarlarla bir paket oluşturmak için masaüstü Sihirbazı 'nı kullanın, ardından diğer ayarları, uygulamaları, ilkeleri vb. eklemek için gelişmiş düzenleyiciye geçiş yapın.
 
 ## <a name="steps-for-creating-provisioning-packages"></a>Sağlama paketleri oluşturma adımları
 
-1. **1. Seçenek:** [Microsoft Store.](https://www.microsoft.com/store/apps/9nblggh4tx22) Bu, HoloLens 2 özelliklerini içerir.
-2. **2. Seçenek:** Windows için Windows [Değerlendirme ve Dağıtım Seti'Windows 10.](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit) Windows ADK'den Windows Yapılandırma Tasarımcısı'Windows, Yüklemek  istediğiniz özellikleri seçin **iletişim kutusundan Yapılandırma Tasarımcısı'ı** seçin. Bu seçenek 2 HoloLens dahil değildir.
+1. **Seçenek 1:** [Microsoft Store 'den](https://www.microsoft.com/store/apps/9nblggh4tx22). bu, HoloLens 2 özelliklerini içerir.
+2. **seçenek 2:** [Windows 10 için Windows değerlendirme ve dağıtım seti 'nden (ADK)](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit). Windows yapılandırma tasarımcısını Windows ADK 'den yüklerseniz, **yüklemek istediğiniz özellikleri seçin** iletişim kutusunda **yapılandırma tasarımcısı** ' nı seçin. bu seçenek, HoloLens 2 özelliklerini içermez.
 
 > [!NOTE]
-> Windows Yapılandırma Tasarımcısı'nda erişmesi gereken çevrimdışı bir bilgisayar kullanmak istiyorsanız Gelişmiş Kurtarma Yardımcısı için [çevrimdışı uygulama yükleme(hololens-recovery.md#downloading-arc-without-using-the-app-store) yönergelerini izleyin. Yapılandırma Windows seçiminizi yapın. 
+> Windows yapılandırma tasarımcısına erişmesi gereken bir çevrimdışı bilgisayar kullanacağınızı biliyorsanız, gelişmiş kurtarma yardımcısı için [offline app ınstall (hololens-recovery. md # indiriyor--app-store) yönergelerini izleyin. Windows yapılandırma tasarımcısı seçiminizi yapın. 
 
-### <a name="2-create-the-provisioning-package"></a>2. Sağlama paketini oluşturma
+### <a name="2-create-the-provisioning-package"></a>2. sağlama paketini oluşturma
 
-Windows Configuration Designer aracını kullanarak bir sağlama paketi oluşturun.
+bir sağlama paketi oluşturmak için Windows Configuration Designer aracını kullanın.
 
-1. Windows Yapılandırma Tasarımcısı'Windows açın (varsayılan olarak, %windir%\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Imaging and Configuration Designer\x86\ICD.exe).
+1. Windows yapılandırma tasarımcısını açın (varsayılan olarak,%windir%\program Files (x86) \ Windows kits\10\assessment ve Deployment kit\ımaging ve Configuration Designer\x86\ICD.exe).
 
-2. Cihaz **sağlama'HoloLens seçin.**
+2. **HoloLens cihazları sağla**' yı seçin.
 
-   ![ICD başlatma seçenekleri.](images/icd-create-options-1703.png)
+   ![ICD başlangıç seçenekleri.](images/icd-create-options-1703.png)
 
-3. Projenize bir ad girin ve Son'a **seçin.**
+3. Projenizi adlandırın ve **son**' u seçin.
 
-4. Başlarken sayfasındaki **yönergeleri okuyun ve** Sonraki'yi **seçin.** Masaüstü sağlama sayfaları aşağıdaki adımlarda size yol sağlar.
+4. **Başlarken** sayfasındaki yönergeleri okuyun ve **İleri ' yi** seçin. Masaüstü sağlama sayfaları aşağıdaki adımlarda size yol gösterir.
   
 > [!IMPORTANT]
-> Bir sağlama paketi derlemek için proje dosyalarına ve sağlama paketi (.ppkg) dosyasına hassas bilgiler dahildir. .ppkg dosyasını şifreleme seçeneğiniz olsa da proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamalı ve artık gerekli olmadığı zaman proje dosyalarını silebilirsiniz.
+> Bir sağlama paketi oluşturduğunuzda, proje dosyalarına ve sağlama paketi (. ppkg) dosyasına hassas bilgileri dahil edebilirsiniz. . Ppkg dosyasını şifreleme seçeneğiniz olsa da, proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamanız ve artık gerekli olmadığında proje dosyalarını silmeniz gerekir.
 
 ### <a name="configure-settings"></a>Ayarları yapılandırma
 
 <table>
-<tr><td style="width:45%" valign="top"><a id="one"></a><img src="images/one.png" alt="step one"/><img src="images/set-up-device.png" alt="set up device"/></br></br>HoloLens sürümünü yükseltmek için kurumsal lisans dosyasına göz HoloLens seçin.</br></br>İlk deneyimin bölümlerini gizlemek <strong>için Evet</strong> <strong>veya</strong> Hayır'a da geçiş sabilirsiniz.</br></br>Cihazı bir ağ bağlantısına gerek kalmadan ayarlamak için Wi-Fi atla'ya Wi-Fi <strong>açık olarak</strong> <strong>ayarlayın.</strong></br></br>Cihazın kullanılacak olduğu bölgeyi ve saat dilimini seçin. </td><td><img src="images/set-up-device-details.png" alt="Select enterprise licence file and configure OOBE"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="two"></a><img src="images/two.png" alt="step two"/>  <img src="images/set-up-network.png" alt="set up network"/></br></br>Bu bölümde, cihazın otomatik olarak bağlanması Wi-Fi kablosuz ağın ayrıntılarını girebilirsiniz. Bunu yapmak için <strong>Açık'ı</strong>seçin, SSID'yi, ağ türünü<strong>(</strong> Açık veya <strong>WPA2-Kişisel</strong>) ve kablosuz ağın parolasını girin <strong>(WPA2-Kişisel</strong>ise).</td><td><img src="images/set-up-network-details-desktop.png" alt="Enter network SSID and type"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="three"></a><img src="images/three.png" alt="step three"/>  <img src="images/account-management.png" alt="account management"/></br></br>Cihazı cihaza Azure Active Directory veya cihazda yerel bir hesap oluşturabilirsiniz</br></br>Toplu Azure AD Windows yapılandırmak için bir Yapılandırma Tasarımcısı sihirbazını kullanmadan önce, <a href="/azure/active-directory/active-directory-azureadjoin-setup" data-raw-source="[set up Azure AD join in your organization](/azure/active-directory/active-directory-azureadjoin-setup)">azure AD'ye katılmayı kurumda ayarlayın.</a> Azure AD <strong>kiracınız için kullanıcı</strong> başına en fazla cihaz sayısı ayarı, sihirbazda kaç kez toplu belirteci kullanılacazını belirler. Cihazı Azure AD'ye kaydetmek için bu seçeneği belirleyin ve sihirbazı kullanarak elde edersiniz toplu belirteç için kolay bir ad girin. Belirteç için bir sona erme tarihi ayarlayın (belirteci almak için en fazla 30 gündür). Toplu <strong>belirteci al'ı seçin.</strong> Oturum <strong>&#39;al</strong> penceresinde, bir cihazı Azure AD'ye katma izinlerine sahip bir hesap girin ve ardından parolayı girin. Yapılandırma <strong>Tasarımcısı'nda</strong> gerekli Windows vermek için Kabul Et'i seçin. </br></br>Yerel hesap oluşturmak için bu seçeneği belirleyin ve bir kullanıcı adı ve parola girin. </br></br><strong>Önemli:</strong> <br />(Windows 10 sürüm 1607) Sağlama paketinde yerel bir hesap seniz, 42 günde bir <strong>Ayarlar</strong> uygulamayı kullanarak parolayı değiştirebilirsiniz. Parola bu süre boyunca değişmemişse hesap kilitlenmiş ve oturum açamıyor olabilir.  </td><td><img src="images/account-management-details.png" alt="join  Azure AD or create a local  account"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="four"></a><img src="images/four.png" alt="step four"/> <img src="images/add-certificates.png" alt="add certificates"/></br></br>Cihazı bir sertifika ile sağlama için Sertifika <strong>ekle'ye tıklayın.</strong> Sertifika için bir ad girin ve ardından kullanılacak sertifikaya gidin ve sertifikayı seçin.</td><td><img src="images/add-certificates-details.png" alt="add a certificate"/></td></tr> 
-<tr><td style="width:45%" valign="top"><a id="five"></a><img src="images/five.png" alt="step five"/> <img src="images/developer-setup.png" alt="Developer Setup"/></br></br>Uygulama üzerinde <strong>Geliştirici</strong> Modunu <strong>etkinleştirmek</strong> için Evet veya Hayır HoloLens. <a href="/windows/uwp/get-started/enable-your-device-for-development#developer-mode" data-raw-source="[Learn more about Developer Mode.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)">Geliştirici Modu hakkında daha fazla bilgi edinebilirsiniz.</a></td><td><img src="images/developer-setup-details.png" alt="Enable Developer Mode"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="six"></a><img src="images/six.png" alt="step six"/> <img src="images/finish.png" alt="finished"/></br></br>Sağlama paketinizi korumak için parola ayarlamayın. Sağlama paketi bir parolayla korunuyorsa, HoloLens sağlama başarısız olur.</td><td><img src="images/finish-details.png" alt="Protect your package"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="one"></a><img src="images/one.png" alt="step one"/><img src="images/set-up-device.png" alt="set up device"/></br></br>HoloLens sürümünü yükseltmek için kurumsal lisans dosyasına gidin ve seçin.</br></br>Ayrıca, ilk deneyimin parçalarını gizlemek için <strong>Evet</strong> veya <strong>Hayır</strong> ' a geçiş yapabilirsiniz.</br></br>Cihazı bir Wi-Fi ağa bağlanmaya gerek olmadan ayarlamak için, <strong>Wi-Fi kurulumunu atla</strong> ' yı <strong>Açık</strong>olarak değiştirin.</br></br>Cihazın kullanılacağı bölge ve saat dilimini seçin. </td><td><img src="images/set-up-device-details.png" alt="Select enterprise licence file and configure OOBE"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="two"></a><img src="images/two.png" alt="step two"/>  <img src="images/set-up-network.png" alt="set up network"/></br></br>Bu bölümde, cihazın otomatik olarak bağlanması gereken Wi-Fi kablosuz ağın ayrıntılarını girebilirsiniz. Bunu yapmak için <strong>Açık</strong>' ı SEÇIN, SSID 'yi, ağ türünü (<strong>Açık</strong> veya <strong>WPA2-Kişisel</strong>) ve ( <strong>WPA2-Kişisel</strong>) kablosuz ağın parolasını girin.</td><td><img src="images/set-up-network-details-desktop.png" alt="Enter network SSID and type"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="three"></a><img src="images/three.png" alt="step three"/>  <img src="images/account-management.png" alt="account management"/></br></br>cihazı Azure Active Directory kaydedebilir veya cihazda yerel bir hesap oluşturabilirsiniz</br></br>toplu Azure ad kaydını yapılandırmak için bir Windows Configuration Designer sihirbazı kullanmadan önce, <a href="/azure/active-directory/active-directory-azureadjoin-setup" data-raw-source="[set up Azure AD join in your organization](/azure/active-directory/active-directory-azureadjoin-setup)">kuruluşunuzda Azure ad joın 'i ayarlayın</a>. Azure AD kiracınızdaki <strong>Kullanıcı ayarı başına en fazla cihaz sayısı</strong> , sihirbazda alacağınız toplu belirtecin kaç kez kullanılabileceğini belirler. Cihazı Azure AD 'ye kaydetmek için, bu seçeneği belirleyin ve Sihirbazı kullanarak alacağınız toplu belirteç için kolay bir ad girin. Belirteç için bir sona erme tarihi ayarlayın (en fazla, belirteci aldığınız tarihten itibaren 30 gündür). <strong>Toplu belirteç al</strong>' ı seçin. <strong>&#39;s oturum açmış olursunuz</strong> penceresinde, bir CIHAZıN Azure AD 'ye katılması ve ardından parolanın olması için izinlere sahip olan bir hesap girin. Windows yapılandırma tasarımcısına gerekli izinleri vermek için <strong>kabul et</strong> ' i seçin. </br></br>Yerel bir hesap oluşturmak için bu seçeneği belirleyin ve bir Kullanıcı adı ve parola girin. </br></br><strong>Önemli</strong> <br />(Windows 10 için yalnızca sürüm 1607) sağlama paketinde yerel bir hesap oluşturursanız, her 42 günde bir <strong>Ayarlar</strong> uygulamasını kullanarak parolayı değiştirmeniz gerekir. Bu süre içinde parola değiştirilmediyse, hesap kilitli olabilir ve oturum açılamıyor.  </td><td><img src="images/account-management-details.png" alt="join  Azure AD or create a local  account"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="four"></a><img src="images/four.png" alt="step four"/> <img src="images/add-certificates.png" alt="add certificates"/></br></br>Cihaza bir sertifika sağlamak için <strong>sertifika ekle</strong>' ye tıklayın. Sertifika için bir ad girin ve ardından kullanılacak sertifikaya gidip seçin.</td><td><img src="images/add-certificates-details.png" alt="add a certificate"/></td></tr> 
+<tr><td style="width:45%" valign="top"><a id="five"></a><img src="images/five.png" alt="step five"/> <img src="images/developer-setup.png" alt="Developer Setup"/></br></br>HoloLens Geliştirici modunu etkinleştirmek için <strong>Evet</strong> veya <strong>Hayır</strong> ' a geçiş yapın. <a href="/windows/uwp/get-started/enable-your-device-for-development#developer-mode" data-raw-source="[Learn more about Developer Mode.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)">Geliştirici modu hakkında daha fazla bilgi edinin.</a></td><td><img src="images/developer-setup-details.png" alt="Enable Developer Mode"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="six"></a><img src="images/six.png" alt="step six"/> <img src="images/finish.png" alt="finished"/></br></br>Sağlama paketinizi korumak için bir parola ayarlamayın. sağlama paketi bir parolayla korunuyorsa, HoloLens cihazının sağlanması başarısız olur.</td><td><img src="images/finish-details.png" alt="Protect your package"/></td></tr>
 </table>
 
-Bitirdikten sonra Oluştur'a **seçin.** Yalnızca birkaç saniye sürer. Paket lendiğinde, paketin depolandığı konum sayfanın alt kısmında köprü olarak görüntülenir.
+İşiniz bittiğinde **Oluştur**' u seçin. Yalnızca birkaç saniye sürer. Paket yapılandırıldığında, paketin depolandığı konum sayfanın alt kısmında bir köprü olarak görüntülenir.
 
-### <a name="3-create-a-provisioning-package-for-hololens-by-using-advanced-provisioning"></a>3. Gelişmiş sağlamayı kullanarak HoloLens için sağlama paketi oluşturma
+### <a name="3-create-a-provisioning-package-for-hololens-by-using-advanced-provisioning"></a>3. gelişmiş sağlama kullanarak HoloLens için bir sağlama paketi oluşturma
 
 > [!NOTE]
-> Gelişmiş sağlama'da oluşturmakta  olduğunu bir sağlama paketinin bir Windows Holographic for Business (1. nesil) için başarılı bir şekilde geçerli olmak için HoloLens yükseltme lisansı içermesi gerekli değildir. [daha fazla bilgi Windows Holographic for Business için HoloLens (1. nesil)](hololens1-upgrade-enterprise.md).
+> **gelişmiş sağlama** bölümünde oluşturduğunuz bir sağlama paketinin, bir HoloLens (1. gen) başarıyla uygulanması için Windows Holographic for Business sürüme yükseltme lisansı eklemesi gerekmez. [HoloLens için Windows Holographic for Business daha fazla bilgi (1. genel)](hololens1-upgrade-enterprise.md).
 
-1. Yapılandırma Tasarımcısı Windows sayfasında Gelişmiş **sağlama'ya tıklayın.**
-2. Proje **ayrıntılarını girin penceresinde** projeniz için bir ad ve projenizin konumunu belirtin. İsteğe bağlı olarak, projenizi açıklamak için kısa bir açıklama girin.
+1. Windows yapılandırma tasarımcısı başlangıç sayfasında, **gelişmiş sağlama**' yı seçin.
+2. **Proje ayrıntılarını girin** penceresinde, projeniz için bir ad ve projenizin konumu belirtin. İsteğe bağlı olarak, projenizi açıklayan kısa bir açıklama girin.
 
 3. **İleri**’yi seçin.
 
-4. Görüntülemek ve **yapılandırmak için hangi ayarların seç penceresinde,** **Windows 10 Holographic'ı** ve ardından Sonraki'yi **seçin.**
+4. görüntülenecek **ve yapılandırılacak ayarları seçin** penceresinde **Windows 10 Holographic**' yi seçin ve ardından **ileri**' yi seçin.
 
 5. **Son**'u seçin.
 
-6. Çalışma **zamanı ayarlarını** genişletin ve bu makalenin devamlarında açıklanan [ayarlardan herhangi birini kullanarak paketi özelleştirin.](#what-you-can-configure)
+6. **Çalışma zamanı ayarları** ' nı genişletin ve [Bu makalenin ilerleyen kısımlarında açıklanan](#what-you-can-configure)ayarlardan birini kullanarak paketi özelleştirin.
 
     > [!IMPORTANT]
-    > (Windows 10 sürüm 1607) Sağlama paketinde yerel bir hesap seniz, 42 günde bir **Ayarlar** uygulamayı kullanarak parolayı değiştirebilirsiniz. Parola bu süre boyunca değişmemişse hesap kilitlenmiş ve oturum açamıyor olabilir. Kullanıcı hesabı kilitliyse, tam bir cihaz [kurtarması gerçekleştirmeniz gerekir.](https://developer.microsoft.com/windows/mixed-reality/reset_or_recover_your_hololens#perform_a_full_device_recovery)
+    > (Windows 10 için yalnızca sürüm 1607) sağlama paketinde yerel bir hesap oluşturursanız, her 42 günde bir **Ayarlar** uygulamasını kullanarak parolayı değiştirmeniz gerekir. Bu süre içinde parola değiştirilmediyse, hesap kilitli olabilir ve oturum açılamıyor. Kullanıcı hesabı kilitliyse, [tam bir cihaz kurtarması gerçekleştirmeniz](https://developer.microsoft.com/windows/mixed-reality/reset_or_recover_your_hololens#perform_a_full_device_recovery)gerekir.
 
-7. Dosya **Kaydet'i**  >  **seçin.**
+7. **Dosya**  >  **Kaydet**' i seçin.
 
-8. Proje dosyalarının hassas bilgiler içere uyarısına bakın ve Tamam'ı **seçin.**
+8. Proje dosyalarının hassas bilgileri içerebileceğini belirten uyarıyı okuyun ve **Tamam**' ı seçin.
 
     > [!IMPORTANT]
-    > Bir sağlama paketi derlemek için proje dosyalarına ve sağlama paketi (.ppkg) dosyasına hassas bilgiler dahildir. .ppkg dosyasını şifreleme seçeneğiniz olsa da proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamalı ve artık gerekli olmadığı zaman proje dosyalarını silebilirsiniz.
+    > Bir sağlama paketi oluşturduğunuzda, proje dosyalarına ve sağlama paketi (. ppkg) dosyasına hassas bilgileri dahil edebilirsiniz. . Ppkg dosyasını şifreleme seçeneğiniz olsa da, proje dosyaları şifrelenmez. Proje dosyalarını güvenli bir konumda depolamanız ve artık gerekli olmadığında proje dosyalarını silmeniz gerekir.
 
-9. Sağlama **paketini dışarı**  >  **aktar'ı seçin.**
+9. Sağlama **paketini dışarı aktar**' ı seçin  >  .
 
-10. **Sahip'i** **IT Yöneticisi olarak değiştirme.** Bu, bu sağlama paketinin öncelini, diğer kaynaklardan bu cihaza uygulanan sağlama paketlerinden daha yüksek ayarlar. **İleri**’yi seçin.
+10. **Sahibi** **BT Yöneticisi** olarak değiştirin. Bu, sağlama paketinin bu cihaza uygulanan sağlama paketlerinden daha yüksek önceliğini diğer kaynaklardan belirler. **İleri**’yi seçin.
 
-11. Paket Sürümü için **bir değer ayarlayın.**
+11. **Paket sürümü** için bir değer ayarlayın.
 
     > [!TIP]
-    > Mevcut paketlerde değişiklik yapabilirsiniz ve sürüm numarasını, daha önce uygulanan paketleri güncelleştirmek için değiştirebilirsiniz.
+    > Mevcut paketlerde değişiklik yapabilir ve sürüm numarasını daha önce uygulanan paketleri güncelleştirecek şekilde değiştirebilirsiniz.
 
-12. Sağlama **paketi için güvenlik ayrıntılarını seçin'de, Sonraki'yi** **seçin.**
+12. **Sağlama paketinin güvenlik ayrıntılarını seçin** sayfasında **İleri**' yi seçin.
 
     > [!WARNING]
-    > Sağlama paketini şifrelersanız, HoloLens sağlama başarısız olur.  
+    > sağlama paketini şifrelerseniz HoloLens cihazının sağlanması başarısız olur.  
 
-13. Hazır **olduktan** sonra sağlama paketinin gitmelerini istediğiniz çıkış konumunu belirtmek için Sonraki'yi seçin. Varsayılan olarak, Windows Tasarımcısı proje klasörünü çıkış konumu olarak kullanır.
+13. Oluşturulduktan sonra sağlama paketinin gitmesini istediğiniz çıkış konumunu belirtmek için **İleri ' yi** seçin. varsayılan olarak, Windows Configuration Designer, proje klasörünü çıkış konumu olarak kullanır.
 
     İsteğe bağlı olarak, varsayılan çıkış konumunu değiştirmek için **Araştır** ' ı seçebilirsiniz.
 

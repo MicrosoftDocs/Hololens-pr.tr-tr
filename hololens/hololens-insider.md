@@ -1,91 +1,91 @@
 ---
 title: Microsoft HoloLens için Insider önizlemesi
-description: Insider derlemeleriyle çalışmaya başlamayı öğrenin ve yeni işletim sistemi güncelleştirmemiz için değerli geri HoloLens.
+description: Insider Derlemeleriyle çalışmaya başlama ve HoloLens için bir sonraki ana işletim sistemi güncelleştirmesine yönelik değerli geri bildirimler sağlama hakkında bilgi edinin.
 ms.prod: hololens
 ms.sitesec: library
-author: scooley
-ms.author: scooley
+author: evmill
+ms.author: v-evmill
 ms.topic: article
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 08/16/2021
+ms.date: 09/10/2021
 ms.reviewer: ''
-manager: laurawi
+manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: cabf35d44cdd144151e048d7a6e14e391629d00a
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.openlocfilehash: 84ec45a4bb05eb28106e4bfdc915a18ae6330767
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427080"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033275"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Microsoft HoloLens için Insider önizlemesi
 
-HoloLens için en son Insider Preview derlemeleri için hoş geldiniz! Hızlı bir şekilde çalışmaya [başlamanız ve bir](hololens-insider.md#start-receiving-insider-builds) sonraki büyük işletim sistemi güncelleştirmemiz için değerli geri bildirimler HoloLens.
+HoloLens için en son Insider Preview yapılarına hoş geldiniz! [Başlamak ve HoloLens](hololens-insider.md#start-receiving-insider-builds) için bir sonraki ana işletim sistemi güncelleştirmesine yönelik değerli geri bildirimler sağlamak kolaydır.
 
-## <a name="windows-insider-release-notes"></a>Windows Insider Sürüm Notları
+## <a name="windows-insider-release-notes"></a>Windows Insider sürüm notları
 
-Windows Insiders'a yeni özellikler Windows heyecanlanıyoruz. En son güncelleştirmeler için yeni derlemeler Geliştirme ve Beta Kanallarına sunulacaktır. Windows Insider derlemelerimize daha fazla özellik ve güncelleştirme ekley Windows devam edeceğiz. Bu güncelleştirmeleri gerçekliğinize karıştırmak için heyecan ve hazır olun.
+ınsiders Windows yeni özellikleri yeniden başlatmak için heyecanlıyız. Yeni derlemeler, en son güncelleştirmeler için geliştirme ve Beta kanallarına uçucaktır. Windows ınsider derlemelerimize daha fazla özellik ve güncelleştirme eklediğimiz için bu sayfayı güncelleştirmeye devam edeceğiz. Heyecanlanmanıza ve bu güncelleştirmeleri gerçeğe sunmaya hazırlanın.
 
-Bu, geliştirilmiş sorun giderme ve cihaz raporları, bilgi noktası modundaki bazı düzeltilen hatalar ve sertifika görüntüleyici, genişletilmiş yönetilebilirlik yüzeyi ve artan güncelleştirme güvenilirliğiyle ilgili. Bu özellik güncelleştirmenin yeni bir önemli özelliği, HoloLens Platform Modumuzdur. HoloLens 2 için tüm yeni harika özelliklere göz at!
+Bu, geliştirilmiş sorun giderme ve cihaz raporları, bilgi noktası modundaki bazı sabit hatalar ve sertifika Görüntüleyicisi, genişletilmiş yönetilebilirlik yüzeyi ve artırılmış güncelleştirme güvenilirliği hakkında bilgi sunar. bu özellik güncelleştirmesinin yeni bir flaggeme özelliği, hareketli Platform modumuza HoloLens geliyor. HoloLens 2 ' nin tüm yeni harika özelliklerine göz atın!
 
-| Özellik                 | Açıklama                | Kullanıcı veya Senaryo | Derleme tanıtıldı |
+| Özellik                 | Açıklama                | Kullanıcı veya senaryo | Tanıtılan derleme |
 |-------------------------|----------------------------|--------------|------------------|
-| [Platform Modunu Taşıma](#moving-platform-mode) | Yapılandırıldığında, düşük dinamik hareketle karşılaşan büyük deniz HoloLens 2'nin kullanımını sağlayan Hareketli Platform Modu beta sürümü tanıtıldı. | Tümü | 20348.1411 |
-| [Sertifika Yöneticisi için PFX dosyası desteği](#pfx-file-support-for-certificate-manager) | Ayarlar kullanıcı arabirimi aracılığıyla PFX sertifikaları ekleme | Son Kullanıcı | 20348.1405 |
-| [Gelişmiş tanılama raporunu Ayarlar'de HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Cihazda MDM tanılama günlüklerini görüntüleme | Sorun giderme | 20348.1405 |
-| [Çevrimdışı Tanılama bildirimleri](#offline-diagnostics-notifications) | Günlük toplama için görsel geri bildirim | Sorun giderme | 20348.1405 |
-| [Düşük depolama günlüğü toplama geliştirmeleri](#low-storage-log-collection-improvements) | Düşük depolama durumlarında günlük toplama senaryolarında iyileştirmeler. | Sorun giderme | 20348.1412 |
-| [Rapor ayrıntıları için CSP HoloLens değişiklikleri](#csp-changes-for-reporting-hololens-details) | Veri sorgulamak için için yeni CSP'ler | IT Yöneticileri    | 20348.1403                 |
-| [CSP tarafından denetlenen otomatik oturum açma ilkesi](#auto-login-policy-controlled-by-csp) | Bir hesapta otomatik olarak oturum açmak için kullanılır | IT Yöneticileri | 20348.1405 |
-| [Geliştirilmiş güncelleştirme yeniden başlatma algılaması ve bildirimleri](#improved-update-restart-detection-and-notifications) | Güncelleştirmeler için yeni etkin ilkeler ve UX. | IT Yöneticileri | 20348.1405 |
-| [Uygulama güncelleştirmeleri için Akıllı Yeniden Deneme](#smart-retry-for-app-updates) | IT Yöneticilerinin uygulamaları güncelleştirmek için zamanlanmış yeniden denemeler denemelerini sağlar. | IT Yöneticileri | 20348.1405 |
-| [Yalnızca özel mağaza uygulamalarını yalnızca özel mağaza Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Mağaza uygulamasını yalnızca kuruluş uygulamalarını gösterecek şekilde yapılandırma | BT Yöneticisi | 20348.1408 |
-| [WDAC ve LOB uygulamalarını kullanma](#use-wdac-and-lob-apps) | IT Yöneticilerinin kendi uygulamalarını kullanmalarına ve diğer uygulamaları engellemek için WDAC kullanmalarına izin verir. | IT Yöneticileri | 20348.1405 |
-| [Düzeltmeler ve geliştirmeler](#fixes-and-improvements) | Düzeltmeler ve geliştirmeler HoloLens. | Tümü | 20348.1411 |
+| [Platform modu taşınıyor](#moving-platform-mode) | yapılandırıldığında, büyük deniz mavisi ' de düşük dinamik hareket yaşayan HoloLens 2 ' nin kullanımını sağlayan Platform modu beta 'yı tanıtır. | Tümü | 20348,1411 |
+| [Sertifika Yöneticisi için PFX dosya desteği](#pfx-file-support-for-certificate-manager) | Ayarlar kullanıcı arabirimi aracılığıyla PFX sertifikaları ekleyin | Son Kullanıcı | 20348,1405 |
+| [HoloLens üzerinde Ayarlar gelişmiş tanılama raporunu görüntüle](#view-advanced-diagnostic-report-in-settings-on-hololens) | Cihazdaki MDM tanılama günlüklerini görüntüle | Sorun giderme | 20348,1405 |
+| [Çevrimdışı tanılama bildirimleri](#offline-diagnostics-notifications) | Günlük toplama için audiogörsel geri bildirimi | Sorun giderme | 20348,1405 |
+| [Düşük depolama günlüğü koleksiyonu geliştirmeleri](#low-storage-log-collection-improvements) | Düşük depolama durumları sırasında günlük toplama senaryolarında iyileştirmeler. | Sorun giderme | 20348,1412 |
+| [raporlama HoloLens ayrıntıları için CSP değişiklikleri](#csp-changes-for-reporting-hololens-details) | Verileri sorgulamak için yeni CSP 'Ler | BT yöneticileri    | 20348,1403                 |
+| [CSP tarafından denetlenen otomatik oturum açma ilkesi](#auto-login-policy-controlled-by-csp) | Hesapta otomatik olarak oturum açmak için kullanılır | BT yöneticileri | 20348,1405 |
+| [Geliştirilmiş güncelleştirme yeniden başlatma algılaması ve bildirimleri](#improved-update-restart-detection-and-notifications) | Güncelleştirmeler için yeni etkinleştirilen ilkeler ve UX. | BT yöneticileri | 20348,1405 |
+| [Uygulama güncelleştirmeleri için akıllı yeniden deneme](#smart-retry-for-app-updates) | BT yöneticilerinin uygulamaları güncelleştirmek için yeniden denemelere izin verir. | BT yöneticileri | 20348,1405 |
+| [Yalnızca Microsoft Store için yalnızca özel Mağaza uygulamaları kullanın](#use-only-private-store-apps-for-microsoft-store) | Mağaza uygulamasını yalnızca kuruluştan gelen uygulamaları gösterecek şekilde yapılandırma | BT Yöneticisi | 20348,1408 |
+| [WDAC ve LOB uygulamalarını kullanma](#use-wdac-and-lob-apps) | BT yöneticilerinin kendi uygulamalarını kullanmasına izin verir ve diğer uygulamaları engellemek için yine de WDAC kullanır. | BT yöneticileri | 20348,1405 |
+| [Düzeltmeler ve geliştirmeler](#fixes-and-improvements) | HoloLens düzeltmeler ve geliştirmeler. | Tümü | 20348,1411 |
 
-### <a name="it-admin-insider-feature-checklist"></a>IT Yöneticisi Insider Özellik Denetim Listesi
+### <a name="it-admin-insider-feature-checklist"></a>BT Yöneticisi Insider özelliği denetim listesi
 
-✔️ Otomatik olarak oturum açmak için tek bir Azure AD hesabı ayarlamak için bu yeni [CSP'yi yapılandırabilirsiniz.](#auto-login-policy-controlled-by-csp) <br>
-✔️ güncelleştirme başarısız olduktan sonra uygulamalarınızı otomatik olarak güncelleştirmeyi denemek üzere yapılandırmak için akıllı yeniden deneme için bu [yeni CSP'yi ayarlayın.](#smart-retry-for-app-updates) <br>
-✔️ işletim sistemi güncelleştirmeleri üzerinde daha fazla denetime sahip olmak için bu yeni etkinleştirilen [Güncelleştirme ilkelerine göz atabilirsiniz.](#improved-update-restart-detection-and-notifications) <br>
-✔️ Kuruluş uygulamalarını Microsoft Store aracılığıyla şirket mağazasında kullanılabilir hale Microsoft Store ancak tam mağazaya değil yalnızca kuruluş uygulamalarına erişim izni vermek istemeniz gerekirse bu [ilkeyi ayarlayın.](#use-only-private-store-apps-for-microsoft-store) <br>
-✔️ Depolama alanı, SSID veya BSSID cihazlarınızı bilmek HoloLens bu raporlama [CSP'lerini kontrol edin.](#csp-changes-for-reporting-hololens-details) <br>
-✔️ uygulamaların veya işlemlerin başlatılmasını engellemek için WDAC kullanmak, ancak aynı zamanda kendi iş dalı uygulamalarınızı kullanmak zorundasanız, artık WDAC ilkenize LOB'a izin [veabilirsiniz.](#use-wdac-and-lob-apps)
+✔️ otomatik olarak oturum açmak için tek bir Azure AD hesabı ayarlamak isterseniz, [Bu yenı CSP 'yi yapılandırın.](#auto-login-policy-controlled-by-csp) <br>
+✔️ güncelleştirme başarısız olduktan sonra uygulamalarınızı otomatik olarak güncelleştirmeye çalışacak şekilde yapılandırmak istiyorsanız, [Bu yenı CSP 'yi akıllı yeniden deneme için ayarlayın.](#smart-retry-for-app-updates) <br>
+✔️ işletim sistemi güncelleştirmeleri üzerinde daha fazla denetime sahip olmak istiyorsanız, bu [Yeni etkinleştirilmiş güncelleştirme ilkelerine](#improved-update-restart-detection-and-notifications) göz atın. <br>
+✔️ kuruluşunuzun uygulamalarını, Microsoft Store aracılığıyla şirket mağazasının kullanımına sunmak, ancak yalnızca kuruluşunuzun uygulamalarına erişime izin vermek ve tam mağaza değil olmak istiyorsanız, [bu ilkeyi ayarlayın.](#use-only-private-store-apps-for-microsoft-store) <br>
+✔️ boş depolama alanını, HoloLens cihazlarınızın ssıd veya bssıd 'sini öğrenmek isterseniz, bu [raporlama csp 'lerine](#csp-changes-for-reporting-hololens-details) göz atın. <br>
+✔️ uygulamaların veya işlemlerin başlatılmasını engellemek için WDAC kullanmak istiyorsanız, ancak aynı zamanda kendi iş kolu uygulamalarınızı kullanmanız gerekiyorsa, artık [WDAC ILKENIZDE lob 'a izin](#use-wdac-and-lob-apps)verebilirsiniz.
 
-### <a name="moving-platform-mode"></a>Platform Modunu Taşıma
+### <a name="moving-platform-mode"></a>Platform modu taşınıyor
 
-**Insider derlemesi 20348.1411'den** sonra, HoloLens 2'de düşük dinamik hareket hareketli platformlarında izlemeye yönelik beta desteği ekledik. Derlemeyi yükleyerek Ve Taşıma Platformu Modu'na etkinleştirdikten sonra, HoloLens 2'nizi büyük gemiler ve büyük deniz gemileri gibi daha önce erişilemeyen ortamlarda kullanabilirsiniz. Şu anda bu özellik yalnızca bu hareketli platformların etkinleştirilmesini hedeflemektedir. Özelliği başka ortamlarda kullanmaya çalışmanıza engel olan bir şey yoktur ancak özellik önce bu ortamlar için destek eklemeye odaklanmaktadır.
+**ınsider build 20348,1411** itibariyle, HoloLens 2 ' de düşük dinamik hareket taşınan platformları izlemek için beta desteği ekledik. derlemeyi yükledikten ve platformu taşıma modunu etkinleştirdikten sonra, büyük ve büyük deniz mavisi gibi daha önce erişilemeyen ortamlarda HoloLens 2 ' yi kullanabilirsiniz. Şu anda özelliği, yalnızca bu taşıma platformlarının etkinleştirilmesini hedeflenmiştir. Başka ortamlarda özelliği kullanmayı denediğinize hiçbir şey engel olmadıysa, bu özellik önce bu ortamlar için destek eklemeye odaklanılmıştır.
 
-Desteklenenler ve bu yeni özelliği etkinleştirme hakkında daha fazla bilgi edinmek [için, hareketli platform sayfasını ziyaret edin.](hololens2-moving-platform.md)
+Nelerin desteklendiği ve bu yeni özelliğin nasıl etkinleştirileceği hakkında daha fazla bilgi edinmek için, [hareketli platform sayfasını ziyaret edin.](hololens2-moving-platform.md)
 
-### <a name="pfx-file-support-for-certificate-manager"></a>Sertifika Yöneticisi için PFX dosyası desteği
+### <a name="pfx-file-support-for-certificate-manager"></a>Sertifika Yöneticisi için PFX dosya desteği
 
-Windows Insider derlemesi 20348.1405'te tanıtıldı. Artık .pfx sertifikalarını [kullanmak için](certificate-manager.md) Sertifika Yöneticisi'ne destek ekledik. Kullanıcılar Güvenlik Sertifikalarını Ayarlar'&'a gidin ve Sertifika yükle'yi seçerek kullanıcı arabirimi  >    >  artık .pfx sertifika dosyasını destekliyor. 
-Kullanıcılar özel anahtarla .pfx sertifikasını kullanıcı deposuna veya makine deposuna aktarabilirsiniz.
+Windows ınsider build 20348,1405 ' de kullanıma sunulmuştur. Artık. pfx sertifikalarını kullanacak şekilde [sertifika yöneticisine](certificate-manager.md) destek ekledik. kullanıcılar **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **sertifikalarına** gezindiğinde ve **sertifikayı yükler** ' i seçtiğinizde, kullanıcı arabirimi artık. pfx sertifika dosyasını destekliyor.
+Kullanıcılar, özel anahtarla, Kullanıcı deposuna veya makine deposuna. pfx sertifikasını içeri aktarabilir.
 
-### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Gelişmiş tanılama raporunu Ayarlar'de HoloLens
+### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>HoloLens üzerinde Ayarlar gelişmiş tanılama raporunu görüntüle
 
-Davranış sorunlarını giderirken yönetilen cihazlar için, beklenen bir ilke yapılandırmasının uygulandığını onaylamak önemli bir adımdır. Bu yeni özellikle daha önce, Ayarlar Hesapları Erişim iş veya okul üzerinden toplanan MDM tanılama günlükleri dışarı aktarıldıktan sonra bu bilgilerin **cihazdan** MDM aracılığıyla veya cihazın yakınından görüntülenmeleri gerekirdi ve Yönetim günlüklerinizi dışarı aktar'ı seçin ve yakındaki bir  ->    >  pc'de görüntüleyebilirsiniz. 
+Yönetilen cihazlar için sorun giderme sırasında, beklenen bir ilke yapılandırmasının uygulandığını onaylayan önemli bir adımdır. daha önce bu yeni özellik için, bu bilgilerin görüntülenmesi, **Ayarlar** hesapları aracılığıyla toplanan mdm tanılama günlüklerini dışarı aktardıktan sonra iş veya okul aracılığıyla cihazın yakınında veya cihazın yakınında yapılması gerekiyordu  ->    >  ve **yönetim günlüklerinizi dışa aktarıp** yakındaki bir bilgisayarda görüntülenmiş olarak.
 
-Artık MDM Tanılamaları, Edge tarayıcısı kullanılarak cihazda görüntüleyebilirsiniz. MDM Tanılama raporunu daha kolay görüntülemek için İş veya okula erişim sayfasına gidin ve Gelişmiş tanılama raporunu **görüntüle'yi seçin.** Bu, raporu yeni bir Edge penceresinde oluşturulur ve açar.
+Artık MDM Tanılaması, Edge tarayıcısı kullanılarak cihazda görüntülenebilir. MDM Tanılama raporunu daha kolay bir şekilde görüntülemek için iş veya okul sayfasına gidin ve **Gelişmiş tanılama raporunu görüntüle**' yi seçin. Bu, raporu yeni bir kenar penceresinde oluşturur ve açar.
 
-![Gelişmiş tanılama raporunu uygulamanın Ayarlar görüntüleme.](./images/view-advanced-diagnostic-report.jpg)
+![Ayarlar uygulamasında gelişmiş tanılama raporunu görüntüleyin.](./images/view-advanced-diagnostic-report.jpg)
 
-### <a name="offline-diagnostics-notifications"></a>Çevrimdışı Tanılama bildirimleri
+### <a name="offline-diagnostics-notifications"></a>Çevrimdışı tanılama bildirimleri
 
-Bu, Çevrimdışı Tanılama adlı mevcut bir [özelliğin güncelleştirmesidir.](hololens-diagnostic-logs.md#offline-diagnostics) Daha önce, kullanıcılara tanılama toplamayı tetikle olduklarının veya tamamlandıktan sonra net bir gösterge yoktu.
-Artık Insider Windows eklenmiştir, Çevrimdışı Tanılama için iki sesli ve görsel geri bildirim formu vardır. Birincisi, koleksiyon başlatıldığında ve tamamlandığında her ikisi için de görüntülenen bildirimleri belirtir. Bunlar, kullanıcı oturum açtığında ve görselleri olduğunda görüntülenir.
+Bu, [çevrimdışı tanılama](hololens-diagnostic-logs.md#offline-diagnostics)adlı mevcut bir özelliğe yönelik bir güncelleştirmedir. Daha önce, kullanıcıların tanılama toplamayı tetiklediği veya tamamladığı üzerinde hiçbir açık gösterge yoktu.
+artık Windows ınsider derlemeleriyle birlikte çevrimdışı tanılama için iki tür audiogörsel geri bildirimi vardır. Koleksiyon başladığında ve tamamlandığında, her ikisi için de her ikisi için bir bildirim görüntülendi. Bunlar Kullanıcı oturum açtığında görüntülenir ve görseller vardır.
 
-![Günlükleri toplamak için yapılan konuşma.](./images/logcollection1.jpg)
+![Günlüklerin toplanması için bildirim.](./images/logcollection1.jpg)
 
-![Günlük toplama işlemi tamamlandığında yapılan konuşma.](./images/logcollection2.jpg)
+![Günlük toplama tamamlandığında bildirim.](./images/logcollection2.jpg)
 
-Kullanıcılar genellikle bir görüntüye erişimi olmayan, oturum açamaz veya hala OOBE'de olan bir geri dönüş günlüğü toplama mekanizması olarak Çevrimdışı Tanılamayı kullanır. Günlükler toplanarak sesli bir ipucu da gösterilir. Bu ses, bildirime ek olarak çalınacak.
+Kullanıcılar, bir görüntüleme erişimi olmayan için bir geri dönüş günlüğü toplama mekanizması olarak çevrimdışı tanılama kullandığından, oturum açma veya hala OOBE 'de yer alma, Günlükler toplandığında yürütülen bir ses destesi de olacaktır. Bu ses, bildirim bildirimine ek olarak çalınacaktır.
 
 Bu yeni özellik, cihazınız etkinleştirilmişse ve etkinleştirilmesi veya yönetilma ihtiyacı yoksa etkinleştirilir. Bu yeni geri bildirimin görüntülenemiyor veya duyulamaz olması durumunda Çevrimdışı Tanılama yine de oluşturulur.
 
@@ -189,6 +189,8 @@ Artık WDAC'i kullanarak uygulamaların veya işlemlerin başlatılmasını enge
 - Atanmış Erişim [API'sini](/uwp/api/windows.system.userprofile.assignedaccesssettings?view=winrt-20348&preserve-view=true) etkinleştirdikten sonra uygulamalar artık HoloLens oturum açmış olan kullanıcı için bilgi noktası modunda bir uygulamanın HoloLens.
 - Remote Assist'in yeni flash görüntülere yüklenmiş olan in-box sürümü güncelleştirildi.
 - 2D uygulamalar için gamepad işleme, Insider derlemelerde devre dışı bırakıldı. Uygulamalar artık bu api'leri kaldırarak doğrudan Gamepad API'lerini kullanabilir, tüm denetim kümesine erişime sahip olur ve ne yapmak isterse onu yapar. Geliştiricilerin Gamepad girişini kullanmak için Gamepad API'lerini kullanmaları gerekir. Gamepad Sınıfı [(Windows. Gaming.Input) - Windows UWP uygulamaları](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true)
+- İlk kullanıcı oturum açma işlemi sonrasında AAD grup tabanlı bilgi noktası yapılandırmalarının kullanılıyor olduğu senaryolarda OOBE'nin sonlandırılma sorunu düzeltildi.
+- Cihaz yeniden başlatma için güncelleştirme bildirimlerini ve iletişim kutusu istemlerini görüntülemeyle ilgili bir sorun düzeltildi.
 
 ## <a name="start-receiving-insider-builds"></a>Insider derlemelerini almaya başlama
 
@@ -216,7 +218,7 @@ Geliştirme veya Beta kanalında 0x80070490 bir güncelleştirme hatasıyla kar�
 
 #### <a name="stage-one---release-preview"></a>1. aşama - Yayın Önizlemesi
 
-1. Ayarlar Update & Security Windows Insider Programı **Release Preview Channel (Yayın Önizleme Kanalı) öğesini seçin.**
+1. Ayarlar, Güncelleştirme &' Windows Insider Programı Yayın Önizleme **Kanalı'Windows Insider Programı seçin.**
 
 2. Ayarlar, Update & Security, Windows Update, **Check for updates**. Güncelleştirmeden sonra ikinci aşamaya devam et.
 
@@ -226,45 +228,45 @@ Geliştirme veya Beta kanalında 0x80070490 bir güncelleştirme hatasıyla kar�
 
 2. Ayarlar, Update & Security, Windows Update, **Check for updates**.
 
-## <a name="ffu-download-and-flash-directions"></a>FFU indirme ve Flash yönleri
+## <a name="ffu-download-and-flash-directions"></a>FFU indirme ve flash yönler
 
-Bir uçuş imzalı FFU ile test etmek için önce, uçuşdan ayrılmadan önce cihazınızın kilidini açmanız gerekir.
+Uçuş imzalı ffu ile test etmek için, uçuş imzalı ffu'nun yanıp sönmeden önce cihazınızın kilidinin açılması gerekir.
 
-1. BILGISAYAR üzerinde:
-    1. Hesabınızı ' den bilgisayarınıza indirin [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
+1. Pc'de:
+    1. ffu'dan bilgisayarınıza [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) indirin.
 
-    1. Microsoft Store: ile yay (Gelişmiş kurtarma Yardımcısı) yüklemesini yapın [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
+    1. Arc'ın (Gelişmiş Kurtarma Yardımcı) yüklemesi Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
 
-1. HoloLens uçuşlamada kilit açma: **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **Windows ınsider programı** ' nı açın ve cihazı yeniden başlatın.
+1. HoloLens - Flight Unlock: **Ayarlar**  >  **Update &**  >  **Security'Windows Insider Programı** açın ve cihazı yeniden başlatın.
 
-1. Flash FFU-şimdi yay kullanarak uçuştan imzalanmış FFU 'yi yakıp sönebilir.
+1. Flash FFU - Artık ARC kullanarak uçuş imzalı FFU'nun flash'unu sönersiniz.
 
-### <a name="provide-feedback-and-report-issues"></a>Geri bildirim ve rapor sorunları sağlama
+### <a name="provide-feedback-and-report-issues"></a>Geri bildirim sağlama ve sorunları bildirme
 
-geri bildirim ve rapor sorunları sağlamak için lütfen HoloLens [geri bildirim merkezi uygulamasını](hololens-feedback.md) kullanın. Geri Bildirim Hub 'ı kullanmak, mühendislerimizin hata ayıklamasına ve sorunu çözmeye yardımcı olmak için gerekli tüm tanılama bilgilerinin eklenmesini sağlar.  HoloLens çince ve japonca sürümü ile ilgili sorunlar aynı şekilde bildirilmelidir.
+Geri bildirim [ve Geri Bildirim Merkezi sağlamak](hololens-feedback.md) için HoloLens uygulama uygulamanızı kullanın. Bu Geri Bildirim Merkezi, mühendislerimizin hızla hata ayıklaması ve sorunu çözmesine yardımcı olmak için tüm gerekli tanılama bilgileri dahil edilir.  Bu sürümün Çince ve Japonca HoloLens aynı şekilde bildiriliyor olması gerekir.
 
 > [!NOTE]
-> Belge klasörünüze geri bildirim hub 'ı (sorulduğunda **Evet** ' i seçin) isteyip istemediğinizi soran istemi kabul ettiğinizden emin olun.
+> Belgeler klasörünüze erişmek isteyip Geri Bildirim Merkezi istemini kabul edin (istendiğinde **Evet'i** seçin).
 
-## <a name="note-for-developers"></a>Geliştiriciler için göz önünde
+## <a name="note-for-developers"></a>Geliştiriciler için not
 
-HoloLens Insider derlemelerini kullanarak uygulamalarınızı geliştirmeyi denemeye hoş geldiniz ve önerilir.  başlamak için [HoloLens geliştirici belgelerine](https://developer.microsoft.com/windows/mixed-reality/development) göz atın. Aynı yönergeler HoloLens Insider Derlemeleriyle birlikte çalışır.  HoloLens geliştirme için kullanmakta olduğunuz Unity ve Visual Studio derlemelerin aynısını kullanabilirsiniz.
+Uygulamalarınızı derlemenin Insider derlemelerini kullanarak geliştirmeyi denemeniz HoloLens.  Çalışmaya başlamaya [HoloLens Geliştirici Belgeleri'ne](https://developer.microsoft.com/windows/mixed-reality/development) göz atabilirsiniz. Bu yönergeler, bir derlemenin Insider derlemeleriyle HoloLens.  Unity ve Visual Studio derlemelerini kullanarak HoloLens kullanabilirsiniz.
 
-## <a name="stop-receiving-insider-builds"></a>Insider derlemelerini almayı durdur
+## <a name="stop-receiving-insider-builds"></a>Insider derlemelerini almayı durdurma
 
-artık Windows Holographic ınsider derlemelerini almak istemiyorsanız, HoloLens bir üretim derlemesi çalıştırırken devre dışı bırakabilirsiniz veya cihazınızı Windows Holographic 'ın ınsider sürümüne kurtarmak için gelişmiş kurtarma yardımcısı 'nı kullanarak [cihazınızı kurtarabilirsiniz](hololens-recovery.md) .
+Windows Holographic'in Insider derlemelerini artık almak istemiyorsanız, HoloLens'niz bir üretim derlemesi çalıştırıyorsa iptal [](hololens-recovery.md) edebilirsiniz veya Cihazınızı Gelişmiş Kurtarma Yardımcı'sı kullanarak kurtararak cihazınızı Windows Holographic'in Insider olmayan bir sürümüne kurtarabilirsiniz.
 
 > [!CAUTION]
-> Yeni bir önizleme derlemesini el ile yeniden yükledikten sonra Insider Preview derlemelerinden kaydolmamış kullanıcıların mavi bir ekran deneymesinin bilinen bir sorunu vardır. Daha sonra cihazlarını el ile kurtarmanız gerekir. Etkilenmiş olmanız veya olmadıysanız ilgili tüm ayrıntılar için lütfen bu [bilinen sorunu](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)izleyin.
+> Yeni bir önizleme derlemesini el ile yeniden yükledikten sonra Insider Preview derlemelerinden kaydını kaldıran kullanıcıların mavi ekranla karşına çıkar olduğu bilinen bir sorun vardır. Daha sonra, cihazlarını el ile kurtarmaları gerekir. Etkide olup olmadığınız hakkında tüm ayrıntılar için bu Bilinen Sorun hakkında daha fazla [bilgi edinebilirsiniz.](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
 
-HoloLens bir üretim derlemesi çalıştırdığından emin olmak için:
+Bir üretim HoloLens çalıştığını doğrulamak için:
 
-1. **Ayarlar > sistem >**' e gidin ve derleme numarasını bulun.
+1. Ayarlar > **System > About 'a gidin** ve derleme numarasını bulun.
 
-1. [Üretim derleme numaraları için sürüm notlarına bakın](hololens-release-notes.md).
+1. [Üretim derleme numaraları için sürüm notlarına bakın.](hololens-release-notes.md)
 
-Insider derlemelerini devre dışı bırakmak için:
+Insider derlemelerini geri almak için:
 
-1. üretim yapısını çalıştıran bir HoloLens, **Ayarlar > & güvenlik > Windows ınsider programı**' na gidin ve **ınsider derlemelerini durdur**' u seçin.
+1. Üretim HoloLens çalıştıran bir Ayarlar > Update **& Security > Windows Insider Programı**'a gidin ve Insider derlemelerini **durdur'ı seçin.**
 
-1. Cihazınızı devre dışı bırakmak için yönergeleri izleyin.
+1. Cihazınızı geri almak için yönergeleri izleyin.

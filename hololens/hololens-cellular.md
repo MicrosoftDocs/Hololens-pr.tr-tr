@@ -1,6 +1,6 @@
 ---
-title: Bağlan hücresel ve 5G'ye
-description: Farklı karma gerçeklik cihazlarından hücresel HoloLens bağlanma.
+title: hücresel ve 5 g 'ye Bağlan
+description: HoloLens karma gerçeklik cihazlarınızdan hücresel ağlara bağlanma.
 ms.assetid: f1aaadce-8762-41f8-bfeb-3b6067a2ec78
 ms.prod: hololens
 ms.sitesec: library
@@ -13,46 +13,46 @@ manager: evmill
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 6f7da0263e8637486f0151fd2b9da55da8feccc1
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428527"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036316"
 ---
-# <a name="connect-to-cellular-and-5g"></a>Bağlan hücresel ve 5G'ye
+# <a name="connect-to-cellular-and-5g"></a>hücresel ve 5 g 'ye Bağlan
 
-HoloLens 2, hücresel ve 5G ağlarına bağlanmak için iki yöntemi destekler:
+HoloLens 2, hücresel ve 5 g ağlarına bağlanmak için iki yöntemi destekler:
 
-- Hücresel cihaz tarafından sağlanan ve genellikle "Etkin Nokta" olarak adlandırılan geçici bir WiFi ağı
-- USB-C bağlantısı olan cihazlar için sınırlı destek
+- Hücresel cihaz tarafından sunulan, yaygın olarak "etkin nokta" olarak adlandırılan bir geçici WiFi ağı
+- USB-C tethered cihazları için sınırlı destek
 
-## <a name="hotspot-wifi"></a>Etkin Nokta (WiFi)
+## <a name="hotspot-wifi"></a>Etkin nokta (WiFi)
 
-Hücresel bağlantı ihtiyaçlarının çoğu etkin noktayla karşı kullanılabilir. HoloLens 2 WiFi 802.11ac'ı destekler ve bu da en yaygın kullanım örnekleri için gereken bant genişliği ve gecikme süresi gereksinimlerini sağlar. WiFi ayrıca kablo bağlantısızdır ve en fazla hücresel cihazla uyumluluk sunar.
+En fazla hücresel bağlantı ihtiyaçları bir etkin nokta ile karşılanabileceği. HoloLens 2 WiFi, en yaygın kullanım durumları için gereken bant genişliği ve gecikme süresi gereksinimlerini sağlayabilen 802.11 ac 'yi destekler. WiFi ayrıca kablo ücretsizdir ve en fazla hücresel cihaz sayısıyla uyumluluk sağlar.
 
-### <a name="connecting-to-a-hotspot"></a>Etkin Nokta'ya bağlanma
+### <a name="connecting-to-a-hotspot"></a>Bir sıcak noktaya bağlanma
 
-1. Etkin nokta modunu etkinleştirme hakkında cihazınızın el kitabına başvurun.
-1. Etkin nokta modunu etkinleştirerek ağ için bir ad ve bilinen bir parola girin.
-1. 2 HoloLens ayarlar sayfasında, 2. adımda oluşturulan WiFi ağına gidin ve buna katılın.
+1. Etkin nokta modunu nasıl etkinleştireceğinizi öğrenmek için cihazınızın kılavuzuna bakın.
+1. Bilinen bir parolanın yanı sıra ağ için bir ad sağlayarak etkin nokta modunu etkinleştirin.
+1. HoloLens 2 ağ ayarları ' nda 2. adımda oluşturulan WiFi ağını bulun ve bu gruba katın.
 
-## <a name="usb-c-tethering"></a>USB-C Tethering
+## <a name="usb-c-tethering"></a>USB-C Internet paylaşımı
 
-USB-C bağlantısı, ihtiyacı olan gelişmiş iş yükleri için daha düşük gecikme süresi sağlar. [Azure Remote Rendering](https://azure.microsoft.com/services/remote-rendering), örneğin, tethering'den yararlanabilir. Kablo bağlantısı için hücresel cihazla cihaz arasında bir kablo HoloLens ve sınırlı sayıda cihaz tarafından tethering desteğine sahip olduğunu unutmayın.
+USB-C internet paylaşımı, gerekli olan gelişmiş iş yükleri için daha düşük gecikme süresi sağlayabilir. Örneğin, [Azure uzaktan işleme](https://azure.microsoft.com/services/remote-rendering), internet paylaşımı 'ten faydalanabilir. internet paylaşımı, hücresel cihaz ile HoloLens arasında bir kablo gerektirdiğini ve internet paylaşımı sınırlı sayıda cihaz tarafından desteklendiğini unutmayın.
 
 ### <a name="usb-c-compatibility"></a>USB-C uyumluluğu
 
-Kendilerini Ethernet uyarıcı olarak sunan sınırlı sayıda cihaz, Windows Holographic sürüm 2004 ve sonraki sürümlerle kullanılabilir.
+kendisini ethernet bağdaştırıcısı olarak sunan sınırlı sayıda cihaz, Windows Holographic sürüm 2004 ve üzeri sürümlerle kullanılabilir.
 
-Kendilerini bir Ethernet bağdaştırıcısı olarak sun olmayan cihazların genel Microsoft [RNDIS sürücüsünü desteklemesi](/windows-hardware/drivers/network/overview-of-remote-ndis--rndis-) gerekir. Ancak, bu cihazların yalnızca sınırlı bir sayısı HoloLens 2 ile uyumludur. Genel Microsoft RNDIS sürücüsünü destekleyip destekleme konusunda ayrıntılı bilgi için lütfen cihazınızın üreticisine başvurun.
+Kendisini bir Ethernet bağdaştırıcısı olarak sunan cihazların genel Microsoft [rndis](/windows-hardware/drivers/network/overview-of-remote-ndis--rndis-) sürücüsünü desteklemesi gerekir. ancak, bu cihazların yalnızca sınırlı sayıda HoloLens 2 ile uyumlu olması gerekir. Genel Microsoft RNDIS sürücüsünü destekleyip desteklemediğini öğrenmek için lütfen cihazınızın üreticisine başvurun.
 
-RNDIS uyumlu olmayan veya bir sürücü ya da uygulamanın yüklü olması gereken cihazlar desteklanmaz.
+RNDIS uyumlu olmayan veya bir sürücü ya da uygulamanın yüklenmesini gerektiren cihazlar desteklenmez.
 
-Microsoft uyumlu cihazların listesini korumasa da, burada konuyla ilgili bir topluluk tartışması [vardır.](https://aka.ms/HLCommunityCell)
+Microsoft, uyumlu cihazların bir listesini koruurken [, konu başlığı](https://aka.ms/HLCommunityCell)altında bir topluluk tartışması vardır.
 
-### <a name="connecting-to-a-tethered-device"></a>Bağlı bir cihaza bağlanma
+### <a name="connecting-to-a-tethered-device"></a>Bir tethered cihazına bağlanma
 
-1. USB üzerinden veri paylaşımını etkinleştirme hakkında cihazınızın kılavuzuna başvurun. Bu ayar genellikle "USB Paylaşımı", "Veri Paylaşımı" veya "USB Modem" olarak adlandırılır.
+1. USB üzerinden veri paylaşımını etkinleştirme konusunda cihazınızın kılavuzuna bakın. Bu ayar genellikle "USB Internet paylaşımı", "veri paylaşımı" veya "USB Modem" olarak adlandırılır.
 1. USB üzerinden veri paylaşımını etkinleştirin.
-1. Bağlan USB-C HoloLens cihazına bağlayın.
-1. 2 HoloLens ayarında cihaz otomatik olarak Ethernet bağlantısı olarak görünür.
+1. cihazınızı HoloLens USB-C bağlantı noktasına Bağlan.
+1. HoloLens 2 ağ ayarlarında, cihaz otomatik olarak Ethernet bağlantısı olarak görünür.

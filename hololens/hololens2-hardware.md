@@ -1,9 +1,9 @@
 ---
 title: HoloLens 2 donanım
-description: Microsoft HoloLens 2'de çalışan, bir holografik Microsoft bilgisayarının en son evrimi olan Windows 10.
+description: Windows 10 çalıştıran bir untethered holographic Microsoft bilgisayarının en son gelişini Microsoft HoloLens 2 ' yi oluşturan bileşenler hakkında bilgi edinin.
 ms.assetid: 651d0430-bfbc-4685-a4fd-db7c33ce9325
 ms.date: 10/20/2020
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -13,46 +13,46 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: c1d83577400126903a80999c46ddaeabddaba029
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428273"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036436"
 ---
-# <a name="about-hololens-2"></a>Yaklaşık HoloLens 2
+# <a name="about-hololens-2"></a>HoloLens 2 hakkında
 
 ![HoloLens 2 tarafı görünümü.](images/hololens2-breakdown.png)
 
-Microsoft HoloLens 2, bağlı olmayan bir holografik bilgisayardır.  Karma gerçeklikte işbirliği yapmak için daha fazla seçenekle eşleştirilmiş daha rahat ve çevreleyici bir deneyim sağlamak için HoloLens (1. nesil) tarafından başlayan holografik bilgi işlem yolculuğunu iyi hale getiriyor. HoloLens 2, kullanıcılara, yöneticilere ve geliştiricilere sağlam, yüksek performansa sahip ve güvenli bir platform sağlayan Windows 10'nin "aromasını" temel alan Windows [Holographic OS](hololens-release-notes.md)üzerinde çalışır. 
+Microsoft HoloLens 2 bir untethered holographic bilgisayardır.  karma gerçeklik 'te işbirliği için daha rahat ve modern bir deneyim sunmak üzere HoloLens (1. gen) tarafından başlatılan holographic bilgi işlem yolculuğunu iyileştirir. HoloLens 2, kullanıcılara, yöneticilere ve geliştiricilere güçlü, performanslı ve güvenli bir platform sağlayan bir Windows 10 "flavor" temel alan [Windows Holographic OS](hololens-release-notes.md)üzerinde çalışır. 
 
 > [!NOTE]
-> Son 11 Windows duyurusu, 11'in pc sürümüne Windows. Kısa süre [](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) önce Mayıs 2021'de HoloLens 2'ye yönelik büyük bir işletim sistemi güncelleştirmesi başlattık ve bu düşüş için müşteri geri bildirimlerine dayanarak gelecek bir sürüm üzerinde çalışıyoruz.
+> son Windows 11 duyurusu, Windows bilgisayar sürümüne odaklanmıştı. kısa süre önce 2021 mayıs ' de HoloLens 2 ' ye [büyük bir işletim sistemi güncelleştirmesi](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) başlattık ve bu fall için müşteri geri bildirimlerine bağlı olarak yaklaşan bir sürüm üzerinde çalışıyoruz.
 
-2. kullanıcı hesabını kullanmak için HoloLens gerekir.
+HoloLens 2 kullanmak için bir kullanıcı hesabı gerekir.
 
 ## <a name="hololens-components"></a>HoloLens bileşenleri
 
-- **Visor**. Algılayıcıların HoloLens görüntüler içerir. Mengeneyi takarak yalıtarak HoloLens.
-- **Baş bant**. Bağlantı HoloLens için ayarlama tekerleğini kullanarak baş bandı genişletin. Bağlantı HoloLens baş bant rahat olana kadar sağa dönerek ayarlama tekerleğini sıkılaştırarak.
-- **Parlaklığı düğmeleri.** Düğmeyi HoloLens, parlaklığı düğmeleri, mabedin yakınındaki mengenin sol tarafında bulunur.
-- **Ses düğmeleri.** Düğmeyi HoloLens ses düğmeleri, mabedin yakınındaki mengenin sağ tarafında bulunur.
-- **Güç düğmesi.** Güç düğmesi HoloLens, arka dış örtün sağ tarafında bulunur.
-- **USB-C bağlantı noktası.** Usb-HoloLens bağlantı noktası, Güç düğmesinin altındaki arka dış kabuğun sağ tarafında bulunur.
+- **Vizörü**. HoloLens sensörleri ve ekranlar içerir. HoloLens takırken, vizörü 'yi döndürebilirsiniz.
+- **Yayın bandı**. HoloLens koymak için, bir ayarlama tekerleği ' nı kullanarak, yayın bandı ' ni genişletin. HoloLens yerinde olduğunda, yayın bandı rahat olana kadar, ayarlamayı doğru bırakarak ayarlama tekerleğini güçlendir.
+- **Parlaklık düğmeleri**. HoloLens takdığınızda parlaklık düğmeleri, tüm vizörü 'ın temple yakın tarafında bulunur.
+- **Ses düğmeleri**. HoloLens takdığınızda, ses düğmeleri, tüm vizörü 'ın temple yakınınızda sağ tarafında bulunur.
+- **Güç düğmesi**. HoloLens eklendiğinde, güç düğmesi arka dıştaki kapağının sağ tarafında bulunur.
+- **USB-C bağlantı noktası**. HoloLens eklendiğinde, USB-C bağlantı noktası güç düğmesinin altındaki arka dıştaki kapağının sağ tarafında bulunur.
 
-## <a name="in-the-box"></a>Kutuda
+## <a name="in-the-box"></a>Kutusunda
 
-- **[Brow pad](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Gerektiğinde,row pad'i kaldırabilir ve değiştirebilirsiniz.
-- **[Ek yük.](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)** Hareket ederken cihazın HoloLens cihazın yerinde tutmaya yardımcı olmak için ek yük yükünü kullanın. Uzun süre HoloLens cihazın takması, cihazın daha rahat yıpranmalarını sağlar.
-- **[USB-C kablo ve kablo.](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)** Güç kaynağı, güç çıkışına taktır. Usb-C kablosunu kullanarak HoloLens güç kaynağına veya cihazı bilgisayarınıza HoloLens bağlayın.
-- **Mikrofiber işlemcisi.** Bu şekilde kullanarak HoloLens temizlenir.
+- **[Brow paneli](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Gerektiğinde Brow panelini kaldırabilir ve değiştirebilirsiniz.
+- **[Ek gider strap](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)**. taşıma sırasında HoloLens çalışırken, cihazı yerinde tutmaya yardımcı olmak için ek yük oluşturma strap 'yi kullanın. genişletilmiş dönemler için HoloLens takdığınızda, ek yük, cihazı aşmadan daha rahat hale gelebilir.
+- **[USB-C cihazınızın şarj cihazına ve kablo](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)**. Güç kaynağı, güç prizine takılır. HoloLens, ücretlendirmeye yönelik güç kaynağına bağlamak veya HoloLens bilgisayarınıza bağlamak için USB-C kablosunu kullanın.
+- **Mikro fiber bezi**. HoloLens vizörü ' nı temizlemek için kullanın.
 
-### <a name="power-supply-details"></a>Güç Kaynağı ayrıntıları
+### <a name="power-supply-details"></a>Güç kaynağı ayrıntıları
 
-Cihazla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı 18W'lara sahip bir güç kaynağıdır.  2A'da 9V sağlar.
+Aygıtla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı bir 18W şarj aygıtı.  Bu, 2A 'daki 9V sağlar.
 
-Ücretlendirme hızı ve hızı, cihazın çalıştır olduğu ortama bağlı olarak değişebilir.
+Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
 
-Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W pille bağlı olması gerekir.
+Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 15W Charger 'a bağlanmalıdır.
 
 ## <a name="device-specifications"></a>Cihaz belirtimleri
 
@@ -60,60 +60,60 @@ Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W 
 
 |   | &nbsp; |
 |---|---|
-| **Optik** | Holografik lensleri görme (waveguides) |
-| **Holografik çözümleme** | 2k 3:2 hafif altyapılar |
-| **Holografik yoğunluk** | >2,5k radyan (radyan başına ışık noktaları) |
-| **Göz tabanlı işleme** | 3D göz konumu için görüntüleme iyileştirmesi |
+| **Optik** | Bkz. holographic merceklerden (waveguides) |
+| **Holographic çözümü** | 2k 3:2 hafif motorları |
+| **Holographic yoğunluğu** | >2,5 k yarıçapına (açık bir sayı başına hafif punto) |
+| **Göz tabanlı işleme** | 3B göz konumu için iyileştirmeyi görüntüleme |
 
-### <a name="sensors"></a>Sensör
+### <a name="sensors"></a>Sensörlerden
 
 |   | &nbsp; |
 |---|---|
-| **Baş izleme** | 4 görünür ışık kamerası |
-| **Göz izleme** | 2 Kameralı (IR) kameralar |
-| **Derinlik** | 1 MP Uçuş Süresi derinlik algılayıcısı |
-| **Inertial ölçüm birimi (IMU)** | İvme ölçer, jiroscope, ölçer |
-| **Kamera** | 8 MP hala, 1080p30 video |
+| **Baş izleme** | 4 görünür açık kameralar |
+| **Göz izleme** | 2 kızılötesi (IR) kameralar |
+| **Derinliğini** | 1-MP uçuş zamanı derinliği algılayıcısı |
+| **Inertial ölçü birimi (ıMU)** | İvme ölçer, cayroscope, manyetik tometer |
+| **Kamera** | 8-MP Stills, 1080p30 video |
 
-![HoloLens 2 Algılayıcı.](images/hololens2-front-view.png)
+![2 algılayıcı HoloLens.](images/hololens2-front-view.png)
 
 > [!NOTE]
-> Resimde çağrılan algılayıcılardan herhangi birini kaplayın. Baş izleme kameraları çok geniş bir FOV'ye sahip, arkalarında hiçbir şey olmalı ve bunları kapatamaz.
+> Resimde çağrılan sensörlerden hiçbirini kapsamayın. Baş izleme kameralarının çok geniş bir FOV olması, bunları kapsamayan ek olarak hiçbir şeyin etrafında olmaması gerekir.
 
 ### <a name="audio-and-speech"></a>Ses ve konuşma
 
 |   | &nbsp; |
 |---|---|
-| **Mikrofon dizisi** | 5 kanal |
+| **Mikrofon dizisi** | 5 Kanal |
 | **Hoparlörler** | Yerleşik uzamsal ses |
 
 ### <a name="compute-and-connectivity"></a>İşlem ve bağlantı
 
 |   | &nbsp; |
 |---|---|
-| **Yonga üzerinde sistem** | Qualcomm Snapdrag 850 İşlem Platformu [ayrıntıları](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) |
-| **Holografik işleme birimi** | İkinci nesil özel olarak yapılmış holografik işleme birimi |
+| **Yongadaki sistem** | Qualcomm Snapej850 Işlem platformu [ayrıntıları](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) |
+| **Holographic işleme birimi** | İkinci nesil özel oluşturulmuş holographic işleme birimi |
 | **Bellek** | 4 GB LPDDR4x sistem DRAM |
-| **Depolama** | 64 GB UFS 2.1 |
-| **Wi-Fi** | 802.11ac 2x2 |
+| **Depolama** | 64-GB UFS 2,1 |
+| **Wi-Fi** | 802.11 AC 2x2 |
 | **Bluetooth** | 5.0 |
-| **USB** | USB Type-C DRP |
+| **USB** | USB türü-C DRP |
 
 ### <a name="power"></a>Güç
 
 |   | &nbsp; |
 |---|---|
-| **Pil Ömrü** | 2-3 saat etkin kullanım. İki haftaya kadar bekleme süresi. |
-| **Pil teknolojisi** | [Lithium piller](https://www.microsoft.com/download/details.aspx?id=43388) |
-| **Ücretlendirme davranışı** | Ücretlendirme işlemi tamamıyla işlevseldir |
-| **Soğutma türü** | Pasif soğutmalı (fan yok) |
-| **Güç çekme** | Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W pille bağlı olması gerekir. |
+| **Pil ömrü** | etkin kullanım 2-3 saat. En fazla iki haftalık bekleme süresi. |
+| **Pil teknolojisi** | [Lityum piller](https://www.microsoft.com/download/details.aspx?id=43388) |
+| **Ücretlendirme davranışı** | Şarj edildiğinde tamamen işlevsel |
+| **Soğutma türü** | Yoğun şekilde soğutulan (fansız) |
+| **Power Draw** | Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 15W Charger 'a bağlanmalıdır. |
 
 ### <a name="fit"></a>Sığdırma
 
 |   | &nbsp; |
 |---|---|
-| **Boyutlandırma** | Ayarlanabilir bant ile tek boyut.  Göz gözlüğü üzerine uyar |
+| **Boyutlandırma** | Ayarlanabilir bant ile tek boyut.  Gözlüklerin üzerine sığar |
 | **Ağırlık** | 566 gram |
 
 ## <a name="device-capabilities"></a>Cihaz özellikleri
@@ -122,101 +122,101 @@ Cihaz açıkken Dahili Pil Ücreti Yüzdesini korumak/ilerlemek için en az 15W 
 
 |   | &nbsp; |
 |---|---|
-| **El ile izleme** | İki elini tamamen ifade eden model, doğrudan düzenleme |
+| **El izleme** | İki el ile tam ifadeli model, doğrudan işleme |
 | **Göz izleme** | Gerçek zamanlı izleme |
-| **Ses** | Cihazdaki komut ve denetim; internet bağlantısı ile doğal dil Cortana |
+| **Ses** | Cihazda komut ve denetim; Cortana bağlantısı olan doğal dil |
 
 ### <a name="environment-understanding"></a>Ortam anlama
 
 |   | &nbsp; |
 |---|---|
-| **Altı serbestlik (6DoF) izleme** | Dünya ölçeğinde konum izleme |
+| **Altı Derece Serbestlik (6DoF) izleme** | Dünya ölçeğinde konumsal izleme |
 | **Uzamsal eşleme** | Gerçek zamanlı ortam ağı |
-| **Karma gerçeklik yakalama** | Karışık hologram ve fiziksel ortam fotoğrafları ve videoları |
+| **Karma gerçeklik yakalama** | Karma hologram ve fiziksel ortam fotoğrafları ve videoları |
 
-## <a name="pre-installed-software"></a>Önceden yüklenmiş yazılım
+## <a name="pre-installed-software"></a>Önceden yüklenmiş yazılımlar
 
 | &nbsp; | &nbsp; |
 |---|---|
-| **Windows Holographic Işletim sistemi** | [Windows Holographic OS](hololens-release-notes.md)ile Windows 10 kullanıcılar, HoloLens 2 aracılığıyla karma gerçeklik ortamında bazı uygulama ve oyunlarından bazılarını kullanabiliyor.
-| **3B görüntüleyici** | [3B görüntüleyici](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) , 3B modellerini ve animasyonlarını gerçek zamanlı olarak kolayca görüntülemenizi sağlar.|
-| **Cortana** | kişisel üretkenlik yardımcınız [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab), önemli olan şeyleri en üstünde tutmanıza yardımcı olur ve ihtiyacınız olanları bulmak için zaman kazanın.  |
-| **Dynamics 365 kılavuzlar** |  [Dynamics 365 kılavuzlar](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) , çalışanların HoloLens cihazlarda daha hızlı yeni beceriler öğrenmesine yardımcı olur. |
-| **Dynamics 365 uzaktan yardım** | [Microsoft Dynamics 365 uzak yardım](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) , teknisyenlerin Microsoft Teams veya Dynamics 365 uzaktan yardım kullanarak uzak ortak çalışanlarla sorunları işbirliği ve çözmesine olanak sağlar.  |
-| **Geribildirim Merkezi** | [geri bildirim Hub 'ı](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) , önerilerinizi veya sorunlarınızı paylaşarak Windows ve uygulamalar hakkında geri bildirim sağlamanıza olanak tanır.  |
-| **Dosya Gezgini** | Dosya Gezgini, dosya sistemlerine erişmek için grafik kullanıcı arabirimi sağlar. |
-| **Posta ve takvim** | [Posta ve takvim](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) uygulamaları, e-postanız üzerinde güncel kalamanıza yardımcı olur, zamanlamanızı yönetebilir ve kişilerinizle iletişim kurun. |
-| **Microsoft Edge** | Microsoft Edge, siz gözatarken daha fazla gizlilik, daha fazla üretkenlik ve daha fazla değer sayesinde dünyanın her yerindeki bir performans sağlar. |
-| **Microsoft Store** | [Microsoft Store](https://www.microsoft.com) , HoloLens birlikte çalışan uygulamalar ve oyunlar için go kaynağıdır.|
-| **TV & Filmler** | [TV & filmler](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) en son eğlenceye basit, hızlı ve zarif bir uygulamada getirir. |
-| **OneDrive** | [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) , tüm cihazlarınızdan dilediğiniz yerden dosyalarınıza erişmenizi ve bunları düzenlemenizi sağlar.  |
-| **Fotoğraflar** | [Fotoğraflar](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) , fotoğraflarınızı ve videolarınızı görüntülemenizi ve düzenlemenizi, film yapmanızı ve albümler oluşturmanızı sağlar.  |
-| **Ayarlar** | Ayarlar uygulaması, Windows Holographic nasıl çalıştığını özelleştirdiğiniz yerdir.  |
-| **İpuçları** | [İpuçları](https://www.microsoft.com/p/microsoft-tips/9wzdncrdtbjj?activetab=pivot:overviewtab) , Windows Holographic ' de yapabileceğiniz ve daha az bilinen şeyleri ana şekilde barındırmanıza olanak tanır. |
+| **Windows Holografik İşletim Sistemi** | Windows [Holographic OS](hololens-release-notes.md)ile Windows 10 kullanıcılar, HoloLens 2 aracılığıyla karma gerçeklik ortamında uygulamalarının ve oyunlarının bir HoloLens.
+| **3B Görüntüleyici** | [3B Görüntüleyici,](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) 3 boyutlu modelleri ve animasyonları gerçek zamanlı olarak kolayca görüntülemenizi sağlar.|
+| **Cortana** | [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab)üretkenlik yardımcınız olan bu özellik, önemli konulardan en iyi şekilde size yardımcı olur ve ihtiyacınız olan şeyi bulmak için zaman tasarrufu sağlar.  |
+| **Dynamics 365 Kılavuzları** |  [Dynamics 365 Kılavuzları,](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) çalışanların yeni becerileri cihazlarda daha hızlı öğrenmelerine HoloLens yardımcı olur. |
+| **Dynamics 365 Remote Assist** | [Microsoft Dynamics 365 Remote Assist,](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) teknisyenlere Microsoft Teams veya Dynamics 365 Remote Assist kullanarak uzaktan işbirliği yapma ve sorunları çözme yetkisi sağlar.  |
+| **Geri Bildirim Merkezi** | [Geri Bildirim Merkezi](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) önerilerinizi veya sorunlarınızı paylaşarak Windows ve uygulamalar hakkında geri bildirim sağlamanızı sağlar.  |
+| **Dosya Gezgini** | Dosya Gezgini, dosya sistemlerine erişmek için bir grafik kullanıcı arabirimi sağlar. |
+| **Posta ve Takvim** | Posta [ve Takvim uygulamaları](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) e-postanızı güncel kalmanıza, zamanlamanızı yönetmenize ve kişilerinizi iletişimde kalmanıza yardımcı olur. |
+| **Microsoft Edge** | Microsoft Edge, göz atma sırasında daha fazla gizlilik, daha fazla üretkenlik ve daha fazla değerle birinci sınıf performans sunar. |
+| **Microsoft Store** | Bu [Microsoft Store,](https://www.microsoft.com) uygulama ve oyunlarla birlikte çalışmak için git kaynağınız HoloLens.|
+| **Filmler & TV** | [Movies & TV,](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) size basit, hızlı ve zarif bir uygulamada en son eğlenceyi getirir. |
+| **OneDrive** | [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) her yerden tüm cihazlarınıza erişmenizi ve dosyaları düzenlemenizi sağlar.  |
+| **Fotoğraflar** | [Fotoğraflar,](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) fotoğraf ve videolarınızı görüntülemenize, düzenlemenize, film oluşturmanıza ve müzik oluşturmanıza olanak sağlar.  |
+| **Ayarlar** | Ayarlar uygulaması, Holographic'in nasıl Windows özelleştirebileceğiniz yerdir.  |
+| **İpuçları** | [İpuçları](https://www.microsoft.com/p/microsoft-tips/9wzdncrdtbjj?activetab=pivot:overviewtab) Holographic'te şaşırtıcı ve daha az bilinen şeyler Windows sağlar. |
 
 ## <a name="device-certifications"></a>Cihaz sertifikaları
 
 ### <a name="safety"></a>Güvenlik
 
-* [Ürün güvenliği](https://support.microsoft.com/en-us/help/4023454/safety-information)
-* [Ürün güvenliği uyarıları ve yönergeleri](https://support.microsoft.com/en-us/help/4558037/product-safety-warnings-and-instructions)
-* göz güvenliği: HoloLens 2 test edilmiştir ve ansı z 87.1, CSA z 94.3 ve EN 166 'nin temel etki koruması gereksinimlerine uygun.
-* [SAR bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+* [Ürün Güvenliği](https://support.microsoft.com/en-us/help/4023454/safety-information)
+* [Ürün Güvenliği Uyarıları ve Yönergeleri](https://support.microsoft.com/en-us/help/4558037/product-safety-warnings-and-instructions)
+* Göz güvenliği: HoloLens 2 test edilmiştir ve ANSI Z87.1, CSA Z94.3 ve EN 166'nın temel etki koruma gereksinimlerine uyar.
+* [SAR Bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ### <a name="regulatory-information"></a>Mevzuat bilgileri
-[HoloLens mevzuata](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): sıcaklık, elden çıkarma, radyo ve TV girişimi ve daha fazlası hakkında bilgiler içerir.
+[HoloLens:](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information)Sıcaklık, atma, radyo ve TV girişimi ve daha fazlası hakkında bilgi içerir.
 
-## <a name="warranty-information"></a>Garanti bilgileri
+## <a name="warranty-information"></a>Garanti Bilgileri
 
-Microsoft HoloLens 2 standart sınırlı bir [garanti](https://support.microsoft.com/topic/warranties-extended-service-plans-and-terms-conditions-for-your-device-eedf7a23-84a7-1a47-480b-0e10503eedf5)ile birlikte gelir. 
+Microsoft HoloLens 2, standart sınırlı garanti ile [birlikte gelir.](https://support.microsoft.com/topic/warranties-extended-service-plans-and-terms-conditions-for-your-device-eedf7a23-84a7-1a47-480b-0e10503eedf5) 
 
 
-satın alma, [kullanım koşulları ve satış Microsoft Store](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1)tabidir. Tüm satışlar son halini almış. Para iadesi yok.
+Satın alma, Microsoft Store [Kullanım koşullarına ve satış koşullarına tabidir.](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1) Tüm satışlar nihaidir. Para iadesi yoktur.
 
-HoloLens 2 satın alarak, [yazılım lisans sözleşmesini](https://www.microsoft.com/Useterms/)kabul etmiş olursunuz.
+2 HoloLens satın alarak yazılım lisans sözleşmelerini [kabul etmiş oluruz.](https://www.microsoft.com/Useterms/)
 
-13 ' ten küçük çocuklar tarafından kullanılmaya yönelik değildir.
+13'den küçük çocukların kullanımına yönelik değildir.
 
-## <a name="package-dimensions"></a>Paket boyutları
+## <a name="package-dimensions"></a>Paket Boyutları
 
-|      Ölçüm               |      Birim ölçümü     |      Birim kusurlarını     |
+|      Ölçüm               |      Birim ölçümü     |      Birim sayısı     |
 |--------------------------------|-----------------------|-------------------------|
-|     Birim uzunluğu                |     378,97 mm          |     14,920 inç       |
-|     Birim genişliği                 |     247,90 mm          |     9,760 inç        |
-|     Birim derinliği                 |     163,07 mm          |     6,420 inç        |
-|     Birim ağırlığı                |     2,878 kg           |     6,344 lbs           |
-|     Dış nakliyeci uzunluğu    |     446,00 mm          |     17,559 inç       |
-|     Dış nakliyeci genişliği     |     257,99 mm          |     10,157 inç       |
-|     Dış nakliyeci derinliği     |     172,01 mm          |     6,772 inç        |
-|     Dış nakliyeci ağırlığı    |     3,284 kg           |     7,240 lbs           |
+|     Birim Uzunluğu                |     378,97 mm          |     14,920 inç       |
+|     Birim Genişliği                 |     247,90 mm          |     9,760 inç        |
+|     Birim Derinliği                 |     163,07 mm          |     6,420 inç        |
+|     Birim Ağırlığı                |     2,878 kg           |     6,344 lb           |
+|     Shipper Uzunluğu    |     446,00 mm          |     17,559 inç       |
+|     Shipper Width (Shipper Genişliği)     |     257,99 mm          |     10,157 inç       |
+|     Shipper Derinliği     |     172,01 mm          |     6,772 inç        |
+|     Exterior Shipper Weight    |     3,284 kg           |     7,240 lb           |
 
 > [!NOTE]
-> - birim: siyah, perakende stili kutu HoloLens 2 ' de satılır.
-> - Dış nakliyeci: birim etrafında koruyucu sevkiyat paketleniyor.
+> - Birim: Siyah, perakende stili kutu HoloLens 2 satılır.
+> - Shipper:Unit çevresindeki koruyucu sevkiyat paketlemesi.
 
 ## <a name="finding-the-serial-number"></a>Seri numarasını bulma
 
-HoloLens 2 cihazların seri numarası, vizörü altında yazdırılmıştır.
+2 cihazın HoloLens numarası, mengenenin altına yazdırılır.
 
-1. Cihazın vizörü ' ni kaldırın.
-1. Broç paneline yakın bir bakış.
-1. Seri numarasını, cihazın yakınında bulabilirsiniz.
+1. Cihazın çıtayı kaldırın.
+1. Göz atma panelinin yakınına bakın.
+1. Menteşde yakın olan seri numarasını bulabilirsiniz.
 
    <img src="images/serial-number-diagram-hl2.png" alt=Null width="625" height="903" />
 
-Seri numarası bağlı bir bilgisayar üzerinden de bulunabilir:
+Seri numarası, bağlı bir BILGISAYAR aracılığıyla da bulunabilir:
 
 1. Cihazı takın
-1. Dosya **gezgininde Bu bilgisayara** gidin
-1. Cihazın Özellikler'e **sağ** tıklayın HoloLens seçin
-1. Bu, aşağıdaki ekran görüntüsünde gösterildiği gibi cihazın seri numarasını görüntüler.
+1. Dosya Gezgini 'nde **Bu bilgisayara** gidin
+1. HoloLens cihazının **özellikler** ' i sağ tıklayıp seçin
+1. Bu işlem, aşağıdaki ekran görüntüsünde gösterildiği gibi cihazın seri numarasını görüntüler.
 
    <br/><img src="images/ResetRecovery2.png" alt=null line width="400" height="600" />
 
-## <a name="next-steps"></a>Sonraki adımlarda
+## <a name="next-steps"></a>Sonraki adım (ler)
 
 > [!div class="nextstepaction"]
-> [2 HoloLens Karşılaştırma](hololens2-options.md)
+> [HoloLens 2 sürümlerini karşılaştırın](hololens2-options.md)
 
 > [!div class="nextstepaction"]
-> [2. kümenizi ayarlama ve HoloLens başlatma](hololens2-setup.md)
+> [HoloLens 2 ' 'nizi ayarlayın ve başlatın](hololens2-setup.md)

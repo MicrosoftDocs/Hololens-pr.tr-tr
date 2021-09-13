@@ -10,11 +10,11 @@ ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
 ms.openlocfilehash: 8ef73733b9fa4f422335977be860371b9570d549
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427915"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036532"
 ---
 # <a name="introducing-the-new-microsoft-edge"></a>Yeni Microsoft Edge tanıtımı
 
@@ -163,9 +163,9 @@ yeni Microsoft Edge, derinlikli web deneyimleri (webvr 'yi değiştirme) oluştu
 
 ### <a name="top-webxr-and-360-viewer-known-issues"></a>En önemli WebXR ve 360 Görüntüleyici bilinen sorunları
 - WebXR deneyiminin karmaşıklığına bağlı olarak kare hızı düşerek veya düşerek düşebilirsiniz.
-- WebXR'de ifadeli el bağlantılarında destek varsayılan olarak etkin değildir. Geliştiriciler "WebXR El Edge://flags" ayarını etkinleştirerek destek hizmetleri aracılığıyla destek etkinleştirerek.
+- WebXR'de ifadeli el bağlantılarında destek varsayılan olarak etkin değildir. Geliştiriciler "WebXR El Edge://flags" ayarını etkinleştirerek destek hizmetleri aracılığıyla destek etkinleştirerek destek sağ kullanabilir.
 - YouTube dışında web sitelerinden 360 video beklendiği gibi çalışmayabilir.
 
 ### <a name="providing-feedback-on-webxr-and-360-viewer"></a>WebXR ve 360 Görüntüleyici hakkında geri bildirim sağlama
 
-Lütfen yeni çalışmadaki Geri Bildirim Gönder özelliği **aracılığıyla geri bildirimi** ve hataları ekibimizle Microsoft Edge.
+Lütfen yeni çalışmadaki Geri Bildirim Gönder özelliği **aracılığıyla geri bildirimi ve** hataları ekibimizle Microsoft Edge.

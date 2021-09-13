@@ -1,6 +1,6 @@
 ---
 title: Sayfa Ayarlar Görünürlüğü
-description: PageVisibilityList için desteklenen URL'ler listemizi ve karma gerçeklik cihazlarının nasıl HoloLens takip edin.
+description: PageVisibilityList için desteklenen URL'ler listemizi ve karma gerçeklik cihazlarıyla ilgili kılavuz HoloLens takip edin.
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2020
@@ -14,15 +14,15 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 92040019b093c5ef63d74f095dcb3809112ae7a0
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428714"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036580"
 ---
 # <a name="page-settings-visibility"></a>Sayfa Ayarlar Görünürlüğü
 
-HoloLens cihazları için yönetilebilir özelliklerden biri, [Ayarlar/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) ilkesi kullanarak Ayarlar uygulamasında görülen sayfaları kısıtlamaktır. PageVisibilityList, IT Yöneticilerinin System Ayarlar uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesini veya belirtilenler dışında tüm sayfalar için bunu yapmalarını sağlayan bir ilkedir.
+HoloLens cihazlar için yönetilebilir özelliklerden biri, [Ayarlar/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) ilkesi kullanarak Ayarlar uygulaması içinde görülen sayfaları kısıtlamaktır. PageVisibilityList, IT Yöneticilerinin System Ayarlar uygulamasındaki belirli sayfaların görünür veya erişilebilir olmasını engellemesini veya belirtilenler dışında tüm sayfalar için bunu yapmalarını sağlayan bir ilkedir.
 
 > [!NOTE]
 > Bu özellik yalnızca [Holographic 20H2 veya Windows 20H2](hololens-release-notes.md#windows-holographic-version-20h2) veya daha yeni bir sürümde kullanılabilir HoloLens 2 cihazlar için kullanılabilir. Bunu kullanmayı niyetli cihazların güncelleştirilmiş olduğundan emin olun.
@@ -55,12 +55,12 @@ Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfalar
 > [!IMPORTANT]
 > Özel cihaz yapılandırmasını cihazın içinde olması amaçlanan bir gruba atadığınızdan emin olun. Bu adım gerçekleştirilene kadar ilke uygulanır ancak uygulanmaz.
 
-Intune HoloLens cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [MDM](hololens-mdm-configure.md) yapılandırmasını yapılandırma.
+Intune HoloLens ve cihaz yapılandırmaları hakkında daha fazla bilgi için bkz. [MDM](hololens-mdm-configure.md) yapılandırmasını yapılandırma.
 
 
 ## <a name="deploying-this-policy-via-a-provisioning-package"></a>Bu ilkeyi Sağlama Paketi aracılığıyla dağıtma
 
-Bunlar, Yapılandırma Tasarımcısı'nda Windows değerleridir:
+Bunlar, Yapılandırma Tasarımcısı'nda Windows değerlerdir:
 
 **Değer:** Yalnızca belirtilen sayfaları gizlemeyi veya göstermeyi *belirten* bir dize değeri. Olası değerler ve `hide:<pagename>` `showonly:<pagename>` değerleridir. Birden çok sayfa noktalı virgülle ayrılarak belirtilebilir ve ortak sayfaların listesi aşağıda bulunabilir.
 
@@ -69,14 +69,14 @@ Bunlar, Yapılandırma Tasarımcısı'nda Windows değerleridir:
 1. Dizeyi girin: **`showonly:network-wifi;network-proxy;bluetooth`**
 1. Sağlama Paketinizi dışarı aktarın.
 1. Paketi cihazınıza uygulama.
-Sağlama paketi oluşturma ve uygulama hakkında ayrıntılı bilgi için HoloLens [sayfasını ziyaret edin.](hololens-provisioning.md)
+Sağlama paketi oluşturma ve uygulamayla ilgili tüm ayrıntılar için HoloLens [sayfasını ziyaret edin.](hololens-provisioning.md)
 
 
 Seçilen yöntemden bağımsız olarak cihazınızın artık değişiklikleri alması gerekir ve kullanıcılara aşağıdaki Ayarlar sunulacaktır.
 
 ![Ayarlar uygulamasında değiştirilen etkin saatlerin ekran görüntüsü.](images/hololens-page-visibility-list.jpg)
 
-Uygulama Ayarlar kendi sayfa seçiminizi gösterecek veya gizleyişini yapılandıracak şekilde yapılandırmak için, Ayarlar URL'leri HoloLens.
+Uygulama sayfalarını Ayarlar kendi sayfa seçiminizi gösterecek veya gizleyişini yapılandıracak şekilde yapılandırmak için, Ayarlar'de bulunan HoloLens.
 
 ## <a name="settings-uris"></a>Ayarlar Urı
 
@@ -95,7 +95,7 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 | Uygulamalar & özellikleri <sup>2</sup>     | `appsfeatures` <br> |
 | Gelişmiş & <sup>2</sup> > uygulamalar ve özellikler     | `appsfeatures-app` <br> |
 | Çevrimdışı & <sup>2</sup> > uygulamalar Haritalar özellikleri     | `maps-maps` <br> |
-| Uygulamalar & özellikleri > Çevrimdışı Haritalar > İndirme <sup>haritaları 2</sup>     | `maps-downloadmaps` <br> |
+| Uygulamalar & özellikleri > Çevrimdışı Haritalar > Haritalar <sup>2'Haritalar > indirme</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Cihazlar
 | Ayarlar sayfası | URI                          |
@@ -160,9 +160,9 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 | Ses > Uygulama hacmi ve cihaz <sup>tercihi 2</sup>           | `apps-volume`<br>|
 | Ses > Ses cihazlarını yönetme <sup>2</sup>           | `sound-devices`<br>|
 | Depolama            | `storagesense`           |
-| Depolama > Sense <sup>2</sup> Depolama Yapılandırma           | `storagepolicies`<br>|
+| Depolama > Sense <sup>2 Depolama yapılandırma</sup>           | `storagepolicies`<br>|
 
-### <a name="time--language"></a>Saat & Dili
+### <a name="time--language"></a>Time & Language
 | Ayarlar sayfası | URI                                           |
 |---------------|-----------------------------------------------|
 | Tarih & saat <sup>2</sup> | `dateandtime`                  |
@@ -176,17 +176,17 @@ HoloLens ve Windows 10 cihazlarda, uygulamanın içinde farklı sayfa Ayarlar va
 | Ayarlar sayfası                         | URI                                       |
 |---------------------------------------|-------------------------------------------|
 | Gelişmiş Seçenekler                    | `windowsupdate-options`         |
-| Kurtarma & <sup>2'& sıfırlama</sup>      | `reset`         |
+| Kurtarma & <sup>2'ye sıfırlama</sup>      | `reset`         |
 | Windows Insider Programı               | `windowsinsider` <br>`windowsinsider-optin`          |
 | Windows Update                        | `windowsupdate`<br> `windowsupdate-activehours`  <br> `windowsupdate-history` <br> `windowsupdate-optionalupdates` <br><sup>1</sup>`windowsupdate-options`<br><sup>1</sup>`windowsupdate-restartoptions` |
 | Windows Güncelleştirme - Güncelleştirmeleri denetler | `windowsupdate-action`          |
 
 
-- <sup>1</sup> - Holographic Windows sürüm 21H1'den önceki sürümler için, aşağıdaki iki URL sizi Gelişmiş seçenekler veya Seçenekler **sayfalarına** **gerçekten** götürmektedir; Yalnızca Güncelleştirme sayfasındaki ana Windows gösterir.
+- <sup>1</sup> - Holographic'Windows sürüm 21H1'den önceki sürümler için aşağıdaki iki URL sizi Gelişmiş seçenekler veya Seçenekler **sayfalarına** **götürmektedir;** Yalnızca Güncelleştirme sayfasındaki ana Windows gösterir.
   -  windowsupdate-options
   -  windowsupdate-restartoptions
 
-- <sup>2</sup> - Windows Holographic 21H1 veya daha üst bir üzerinde kullanılabilir.
+- <sup>2</sup> - Holographic 21H1 veya Windows'da kullanılabilir.
 
 
 URL'lerin Windows 10 Ayarlar için lütfen başlatma ayarları [belgelerini ziyaret](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) edin.

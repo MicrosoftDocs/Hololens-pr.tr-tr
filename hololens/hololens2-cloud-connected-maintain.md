@@ -1,7 +1,7 @@
 ---
-title: Dağıtım Kılavuzu – Remote Assist ile buluta HoloLens 2 dağıtım - Bakım
-description: Buluta Bağlı ağ üzerinden cihazların bakımını ve destekle HoloLens ipuçlarımızı takip edin.
-keywords: HoloLens, yönetim, buluta bağlı, Remote Assist, AAD, Azure AD, MDM, Mobil Cihaz Yönetimi
+title: dağıtım kılavuzu – buluta bağlı HoloLens 2 dağıtım, uzaktan yardım ile devam eden bir ölçekte.
+description: bulut bağlantılı ağ üzerinden HoloLens cihazları sürdürmek ve desteklemek için ipuçlarımızla güncel kalın.
+keywords: HoloLens, yönetim, buluta bağlı, uzaktan yardım, AAD, Azure AD, MDM, mobil cihaz yönetimi
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -15,54 +15,54 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 941de296d59713c098718b16431fa793bd1b60e6
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428036"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033534"
 ---
-# <a name="maintain---cloud-connected-guide"></a>Bakım - Buluta bağlı Kılavuz
+# <a name="maintain---cloud-connected-guide"></a>Bakım-bulut bağlantılı Kılavuzu
 
 ## <a name="updates"></a>Güncelleştirmeler
 
-Microsoft, Windows güncelleştirmeleri cihaz gruplarına dağıtma ve güncelleştirmeleri yüklemek için bakım pencerelerini tanımlama gibi ek Windows Güncelleştirme odaklı yönetim özellikleri sağlamak için İş için Güncelleştirme'yi tasarladı.
+Microsoft, bt yöneticilerine, cihaz gruplarına güncelleştirme dağıtma ve güncelleştirme yüklemeye yönelik bakım pencerelerini tanımlama gibi ek Windows Update merkezli yönetim özellikleri sağlamak için Windows Update tasarlamıştır.
 
-Zamanlanan [gün, HoloLens dahil olmak](/hololens/hololens-updates) üzere cihaz güncelleştirmelerini yönetmeyi ve cihazda etkin saatleri çalışma saatleri dışında güncelleştirilecek şekilde ayarlamayı öğrenin.
+zamanlanan günler ve zamanlanan süre dahil [HoloLens güncelleştirmelerinin nasıl yönetileceğini](/hololens/hololens-updates) ve çalışma saatleri dışında güncelleştirilecek şekilde cihazdaki etkin saatleri ayarlamayı öğrenin.
 
-Remote Assist, In-Box bir uygulamadır ve bu uygulama aracılığıyla Microsoft Store olabilir. Uygulama aracılığıyla indirilen tüm uygulamalar Microsoft Store uygulamanın [kendisi aracılığıyla Microsoft Store](/hololens/holographic-store-apps#update-apps) güncelleştirilir.
+uzaktan yardım, bir In-Box uygulamasıdır ve Microsoft Store uygulama aracılığıyla güncelleştirebilir. Microsoft Store aracılığıyla indirilen tüm uygulamalar için Microsoft Store uygulamasının kendisiyle el ile [güncelleştirilebilirler](/hololens/holographic-store-apps#update-apps) .
 
 ## <a name="support-plan"></a>Destek Planı
 
-Destek planı, hazır olmak için harika bir şeydir. Bir kişinin veya grubun, HoloLens cihazlarda kayıt işlemiyle ilgili sorun giderme konusunda eğitilmiş olması ve HoloLens cihazın genel olarak kullanımı yararlı olur. Kullanıcılarının sorunlarının daha hızlı çözüme sahip olmasına olanak vermek için, yükseltme işleminizin bu sırayla benzer şekilde ele uygulanmasını öneririz:
+Bir destek planı, uygun olan harika bir şeydir. HoloLens cihazlarda kayıt işlemini sorun gidermeye ve ayrıca kuruluşunuzda HoloLens cihazının genel kullanımına yönelik bir kullanıcı veya bir grup olma. Kullanıcılarınızın sorunlarından daha hızlı çözümlenmesine izin vermek için, yükseltme işleminizin bu sırayla benzer bir şekilde işlenmesini öneririz:
 
-1. Destek masanız.
-2. HoloLens Uzman takımınız
-3. [HoloLens Docs](/hololens/)  /  [HoloLens Sorun Giderme Belgeleri](/hololens/hololens-troubleshooting)
-4. [De destekle iletişime geçin](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
+1. Destek masanıza başvurun.
+2. HoloLens uzman ekibiniz
+3. [HoloLens Docs](/hololens/)  /  [HoloLens sorunlarını giderme belgeleri](/hololens/hololens-troubleshooting)
+4. [Desteğe başvurun](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=e9391227-fa6d-927b-0fff-f96288631b8f)
 
-## <a name="development-plan"></a>Geliştirme Planı
+## <a name="development-plan"></a>Geliştirme planı
 
-Cihazınız başarıyla kaydedildi. Artık cihazlarınıza İş Hattı uygulamalarını (LOB uygulamaları) dağıtmaya hazır olursanız. Bunlar, kendi ihtiyaçlarına uygun olarak,&#39;uygulamalardır.
+Cihazınız başarıyla kaydedildikten sonra, cihazlarınıza Iş kolu uygulamaları (LOB uygulamaları) dağıtmaya hazırsınız demektir. Bunlar, kuruluşunuz&#39;ihtiyaçları için oluşturulmuş özel uygulamalardır.
 
-Zaten bir iş hattı uygulamanız varsa,&#39;MDM aracılığıyla dağıtmaya [hazır olursanız.](/hololens/app-deploy-intune) Farklı&#39;tercih ediyorsanız, LOB uygulamanızı cihazlarınıza dağıtmaya yönelik daha fazla yöntem hakkında daha fazla bilgi edinmek [için HoloLens 2](/hololens/app-deploy-overview) için uygulama dağıtımına genel bakış'ı gözden geçirebilirsiniz.
+Zaten bir iş kolu uygulamanız varsa, [UYGULAMANıZı MDM aracılığıyla dağıtmaya](/hololens/app-deploy-intune)başlamaya&#39;. farklı bir yöntemi tercih&#39;, daha sonra LOB uygulamanızı cihazlarınıza dağıtma hakkında daha fazla bilgi edinmek için [HoloLens 2 için uygulama dağıtımına genel bakış](/hololens/app-deploy-overview) konusunu gözden geçirin.
 
-Henüz&#39;lob uygulamanızı oluşturmadıysanız veya hala oluşturma aşamasındaysanız karma gerçeklik geliştirme belgelerimizi gözden geçirerek karma gerçeklik geliştirmeyle çalışmaya başlamak için tasarım ve [protokasyon](/windows/mixed-reality/design/design) yapmaya veya temel kavramları öğrenmeye [başlayabilirsiniz.](/windows/mixed-reality/discover/get-started-with-mr)
+Kendi LOB uygulamanızı oluşturmanız veya hala oluşturma süreciyle karşılaşırsanız, karma gerçeklik geliştirme belgelerimizi inceleyerek [karma gerçeklik geliştirmesini](/windows/mixed-reality/discover/get-started-with-mr) kullanmaya başlamak için temel kavramları gözden geçirin [veya öğrenin](/windows/mixed-reality/design/design) .&#39;
 
 ## <a name="device-management"></a>Aygıt Yönetimi 
 
-Bu kılavuzda Mobile Cihaz Yönetimi (MDM) ayarlamadan söz ediliyordu ancak cihazlara cihaz kısıtlamalarını veya ilkelerini uygulamak için uygulanmadı. Cihaz yönetimi, sertifikalar ile erişime izin vermek veya çeşitli cihaz kısıtlamalarıyla erişimi kısıtlamak için kullanılabilir. 
+Bu kılavuz, mobil cihaz yönetimi (MDM) ayarlama hakkında konuşurken cihaz kısıtlamalarını uygulamak için işe yaramadı veya cihazlara uygulandı. Cihaz yönetimi, sertifikaları ileterek erişime izin vermek veya çeşitli cihaz kısıtlamalarıyla erişimi kısıtlamak için kullanılabilir. 
 
-Çoğu durumda cihazlarda Bluetooth, VPN, USB, hatta kameraya veya mikrofona erişimi kapatma gibi bağlantı kısıtlamaları olabilir. Bu ilgi alanlarına sahip olursanız, yaygın cihaz kısıtlamaları [sayfamızı okumanız teşvik edilecektir.](hololens-common-device-restrictions.md)
+çoğu durumda, cihazlar Bluetooth, VPN, USB gibi bağlantı kısıtlamalarına sahip olabilir ve hatta kameraya veya mikrofona erişimi devre dışı bırakır. Bu ilgi alanlarından herhangi biri bundan sonra [ortak cihaz kısıtlamaları sayfasını](hololens-common-device-restrictions.md)okumanızı öneririz.
 
-Kullanabileceğiniz başka karmaşık cihaz kısıtlamaları da vardır. Örneğin:
+Kullanabileceğiniz başka karmaşık cihaz kısıtlamaları vardır. Örneğin:
 
-- Ayarlar uygulamasında görüntülenecek sayfaları, [AyarlarSayfaVisibility](settings-uri-list.md)kullanarak sınırlandırarak, kullanıcıların yalnızca kendi bağlantılarını değiştirme gibi ayarlamaları gereken ayarlara erişmesine Wi-Fi sağlar.
-- Bir [cihazda kullanıcılara](hololens-kiosk.md) sunulan kullanıcı arabirimini sınırlamak için Bilgi Noktası modunu kullanın. Bilgi Noktası'nın tek bir uygulamayı veya özel başlangıç sayfası olan birden çok uygulamayı gösterecek şekilde ayarlaması gerekir. Bilgi noktası, farklı kullanıcılara farklı deneyimler de sunabilirsiniz.  
-- Windows uygulama veya işlemlerin tamamen başlatılmasını tutmak için Uygulama Denetimi'ne [(WDAC)](windows-defender-application-control-wdac.md) tıklayın.
+- [settingspagevisibility](settings-uri-list.md)' ı kullanarak Ayarlar uygulamasında görüntülenebilen sayfaları sınırlandırma, kullanıcıların yalnızca Wi-Fi bağlantılarını değiştirme gibi ayarlanması için ihtiyaç duydukları ayarlara erişmesine izin verir.
+- Bir cihazdaki kullanıcılara sunulan kullanıcı arabirimini sınırlamak için [bilgi noktası modunu](hololens-kiosk.md) kullanın. Kiosks 'i tek bir uygulama veya bir özel başlangıç sayfası ile birden çok uygulama gösterecek şekilde ayarlayabilirsiniz. Kiosks, farklı kullanıcılara farklı deneyimler de sunabilir.  
+- belirli uygulamaların veya işlemlerin tamamen başlatılmasını sağlamak için [uygulama denetimi (WDAC) Windows](windows-defender-application-control-wdac.md) .
 
-Farklı cihaz yönetimi veya cihaz kısıtlama yöntemleri hakkında daha fazla bilgi edinmek için bir sonraki adıma geçin ve Genel Bakış makalemizi Cihaz Yönetimi okuyun.
+Cihaz yönetimi veya cihaz kısıtlamalarının daha farklı yöntemleri hakkında daha fazla bilgi edinmek istiyorsanız, sonraki adıma geçin ve cihaz yönetimine genel bakış konusunu okuyun.
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [CSP'leri ve Cihaz Yönetimi Genel Bakış'Cihaz Yönetimi okuyun](hololens-csp-policy-overview.md)
+> [CSP 'Leri ve cihaz yönetimine genel bakış](hololens-csp-policy-overview.md)

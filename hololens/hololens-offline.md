@@ -1,7 +1,7 @@
 ---
 title: HoloLens için bağlantı uç noktalarını yönetme
-description: bağlantı uç noktalarını yönetirken ve yapılandırırken bir Wi-Fi ağ üzerinden HoloLens ayarlamayı öğrenin.
-keywords: Hololens, çevrimdışı, OOBE
+description: Bağlantı uç noktalarını yönetme ve yapılandırma HoloLens bir Wi-Fi ağ üzerinden ağ bağlantısı ayarlamayı öğrenin.
+keywords: hololens, çevrimdışı, OOBE
 audience: ITPro
 ms.date: 07/01/2019
 ms.assetid: b86f603c-d25f-409b-b055-4bbc6edcd301
@@ -19,33 +19,33 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: f2d9faafac2f84b727b1e10be83d4d1b53a707b4
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427771"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036524"
 ---
 # <a name="manage-connection-endpoints-for-hololens"></a>HoloLens için bağlantı uç noktalarını yönetme
 
-bazı HoloLens bileşenleri, uygulamalar ve ilgili hizmetler verileri Microsoft ağ uç noktalarına aktarır. Bu makalede, bu bileşenlerin işlevsel olması için ağ yapılandırmanızda (örn. ara sunucu veya güvenlik duvarı) izin verilmesi gereken farklı uç noktalar ve URL 'Ler listelenir.    
+Bazı HoloLens bileşenleri, uygulamaları ve ilgili hizmetleri Microsoft ağ uç noktalarına veri aktarıyor. Bu makalede, bu bileşenlerin işlevsel olması için ağ yapılandırmanıza (ara sunucu veya güvenlik duvarı gibi) izin verilen farklı uç noktalar ve URL'ler listelemektedir.    
 
-## <a name="near-offline-setup"></a>Neredeyse çevrimdışı kurulum
+## <a name="near-offline-setup"></a>Çevrimdışına yakın kurulum
 
-HoloLens, ağ ortamı kısıtlamalarına sahip müşteriler için sınırlı bir çevrimdışı deneyim kümesini destekler. ancak, HoloLens ilk cihaz kurulumunu yapmak için ağ bağlantısı gerekir ve aşağıdaki url 'lerin etkinleştirilmesi gerekir:
+HoloLens, ağ ortamı kısıtlamaları olan müşteriler için sınırlı bir çevrimdışı deneyimler kümesi destekler. Ancak HoloLens cihaz ayarlaması için ağ bağlantısına ihtiyaç vardır ve aşağıdaki URL'lerin etkinleştirilmesi gerekir:
 
 | Amaç | URL |
 |------|------|
-| IDP 'YI DESTEKLEMESI | https://sdx.microsoft.com/frx/idps |
-| [NCSı](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#bkmk-ncsi) |  http://www.msftconnecttest.com/connecttest.txt  |
+| IDPS | https://sdx.microsoft.com/frx/idps |
+| [NCSI](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#bkmk-ncsi) |  http://www.msftconnecttest.com/connecttest.txt  |
 | AADv9 | https://login.microsoftonline.com/WebApp/CloudDomainJoin/9 |
 | AADv10 | https://login.microsoftonline.com/WebApp/CloudDomainJoin/10 |
-| AAD PIN 'ı | https://account.live.com/aadngc?uiflavor=win10&showSuccess=1 |
+| AAD Pini | https://account.live.com/aadngc?uiflavor=win10&showSuccess=1 |
 | MSA | https://login.live.com/ppsecure/inlineconnect.srf?id=80600 |
-| MSA PIN 'ı | https://account.live.com/msangc?fl=enroll |
+| MSA Pini | https://account.live.com/msangc?fl=enroll |
 
 ## <a name="endpoint-configuration"></a>Uç nokta yapılandırması
 
-yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak için, ağ yapılandırmanızda aşağıdaki uç noktaların etkinleştirilmesi gerekir.
+Yukarıdaki listeye ek olarak, HoloLens tam olarak yararlanmak için ağ yapılandırmanıza aşağıdaki uç noktaların etkinleştirilmesi gerekir.
 
 
 | Amaç | URL |
@@ -54,12 +54,12 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 |                                                     | ris-prod-atm.trafficmanager.net                                     |
 |                                                     | validation-v2.sls.trafficmanager.net                                |
 | Azure AD Multi-Factor Authentication                | https://secure.aadcdn.microsoftonline-p.com                         |
-| Intune ve MDM yapılandırması                       | activation-v2.sls.microsoft.com/*                                   |
+| Intune ve MDM Yapılandırmaları                       | activation-v2.sls.microsoft.com/*                                   |
 |                                                     | cdn.onenote.net                                                     |
 |                                                     | client.wns.windows.com                                              |
 |                                                     | crl.microsoft.com/pki/crl/*                                         |
 |                                                     | ctldl.windowsupdate.com                                             |
-|                                                     | * displaycatalog.mp.microsoft.com                                    |
+|                                                     | *displaycatalog.mp.microsoft.com                                    |
 |                                                     | dm3p.wns.windows.com                                                |
 |                                                     | *microsoft.com/pkiops/*                                             |
 |                                                     | ocsp.digicert.com/*                                                 |
@@ -70,7 +70,7 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 |                                                     | crl.microsoft.com/pki/crl/*                                         |
 |                                                     | ocsp.digicert.com/*                                                 |
 |                                                     | https://www.microsoft.com/pkiops/*                                          |
-| Cortana ve arama                                  | Mağaza görüntüleri. * Microsoft. com                                         |
+| Cortana ve Ara                                  | store-images.*microsoft.com                                         |
 |                                                     | www.bing.com/client                                                 |
 |                                                     | www.bing.com                                                        |
 |                                                     | www.bing.com/proactive                                              |
@@ -80,7 +80,7 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 |                                                     | fp-vp.azureedge.net                                                 |
 |                                                     | odinvzc.azureedge.net                                               |
 |                                                     | spo-ring.msedge.net                                                 |
-| Cihaz kimlik doğrulaması                               | login.live.com *                                                     |
+| Cihaz Kimlik Doğrulaması                               | login.live.com*                                                     |
 | Cihaz meta verileri                                     | dmd.metaservices.microsoft.com                                      |
 | Konum                                            | inference.location.live.net                                         |
 |                                                     | location-inference-westus.cloudapp.net                              |
@@ -90,27 +90,27 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 |                                                     | co4.telecommand.telemetry.microsoft.com                             |
 |                                                     | cs11.wpc.v0cdn.net                                                  |
 |                                                     | cs1137.wpc.gammacdn.net                                             |
-|                                                     | modern.watson.data.microsoft.com *                                   |
+|                                                     | modern.watson.data.microsoft.com*                                   |
 |                                                     | watson.telemetry.microsoft.com                                      |
 | Lisanslama                                           | licensing.mp.microsoft.com                                          |
 | Microsoft Hesabı                                   | login.msa.akadns6.net                                               |
 |                                                     | us.configsvc1.live.com.akadns.net                                   |
 | Microsoft Edge                                      | iecvlist.microsoft.com                                              |
-| Microsoft ileri bağlantı yönlendirme hizmeti (FWLink) | go.microsoft.com                                                    |
-| Microsoft Store                                     | *. wns.windows.com                                                   |
+| Microsoft forward link redirection service (FWLink) | go.microsoft.com                                                    |
+| Microsoft Store                                     | *.wns.windows.com                                                   |
 |                                                     | storecatalogrevocation.storequality.microsoft.com                   |
-|                                                     | img-prod-CMS-RT-Microsoft-com *                                      |
+|                                                     | img-prod-cms-rt-microsoft-com*                                      |
 |                                                     | store-images.microsoft.com                                          |
-|                                                     | . md.mp.microsoft.com                                                |
-|                                                     | * displaycatalog.mp.microsoft.com                                    |
+|                                                     | .md.mp.microsoft.com                                                |
+|                                                     | *displaycatalog.mp.microsoft.com                                    |
 |                                                     | pti.store.microsoft.com                                             |
 |                                                     | storeedgefd.dsx.mp.microsoft.com                                    |
 |                                                     | markets.books.microsoft.com                                         |
 |                                                     | share.microsoft.com                                                 |
-| Ağ bağlantısı durum göstergesi (NCSı)          | www.msftconnecttest.com *                                            |
-| Office                                              | *. c-msedge.net                                                      |
-|                                                     | *. e-msedge.net                                                      |
-|                                                     | *. s-msedge.net                                                      |
+| Ağ Bağlantı Durumu Göstergesi (NCSI)          | www.msftconnecttest.com*                                            |
+| Office                                              | *.c-msedge.net                                                      |
+|                                                     | *.e-msedge.net                                                      |
+|                                                     | *.s-msedge.net                                                      |
 |                                                     | nexusrules.officeapps.live.com                                      |
 |                                                     | ocos-office365-s2s.msedge.net                                       |
 |                                                     | officeclient.microsoft.com                                          |
@@ -157,7 +157,7 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 - [Windows tanılama verilerini yapılandırma](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - [Windows 10 Enterprise sürüm 1903 için bağlantı uç noktalarını yönetme](/windows/privacy/manage-windows-1903-endpoints)
 - [İşletim sistemi bileşenlerinden Windows 10 bileşenlerine bağlantıları Microsoft hizmetleri](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
-- [MDM Sunucusu Windows 10 işletim sistemi bileşenlerinden Microsoft hizmetleri Microsoft Intune bağlantıları yönetme](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services-using-mdm)
+- [MDM Sunucusu Windows 10 işletim sistemi bileşenlerinden Microsoft hizmetleri Microsoft Intune yönetme](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services-using-mdm)
 - [Intune ağ yapılandırması gereksinimleri ve bant genişliği](/intune/fundamentals/network-bandwidth-use#network-communication-requirements)
 - [Ağ uç noktaları Microsoft Intune](/intune/fundamentals/intune-endpoints)
 - [Office 365 URL’leri ve IP adres aralıkları](/office365/enterprise/urls-and-ip-address-ranges)
@@ -166,4 +166,4 @@ yukarıdaki listeye ek olarak, HoloLens işlevlerinden tam olarak yararlanmak i�
 
 ## <a name="hololens-limitations"></a>HoloLens sınırlamaları
 
-Yapılandırmanız HoloLens sonra, bunu bir Wi-Fi bağlantısı olmadan kullanabilirsiniz, ancak çevrimdışı olarak HoloLens İnternet bağlantıları kullanan uygulamalar sınırlı özelliklere sahip olacaktır.
+Yapılandırmanız HoloLens sonra, bunu bir Wi-Fi bağlantısı olmadan kullanabilirsiniz, ancak çevrimdışı olarak HoloLens İnternet bağlantıları kullanan uygulamalara sahip olur.

@@ -1,5 +1,5 @@
 ---
-title: HoloLens 'de 3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
+title: 3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
 description: HoloLens (1. Nesil) üzerinde Beta 3B Görüntüleyici tarafından desteklene dosya ve özellik türlerini ve uygulamanın nasıl kullan ve sorun giderilenlerini açıklar.
 ms.prod: hololens
 ms.sitesec: library
@@ -14,27 +14,27 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 00e99d3f67e9e4371da12612b9b01c3ce58e71bd
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428334"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036285"
 ---
-# <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>HoloLens 'de 3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
+# <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>3B Görüntüleyici Beta'HoloLens kullanma (1. nesil)
 
 3B Görüntüleyici Beta, 3D modelleri HoloLens (1. nesil) görüntülemenizi sağlar. Desteklenen .fbx *dosyalarını Microsoft Edge,* OneDrive ve diğer uygulamalardan açabilir ve görüntüebilirsiniz.
 
 >[!NOTE]
->Bu makale, .fbx **dosyalarını destekleyen** ve yalnızca HoloLens (1. nesil) olan tam kapsamlı Unity 3B Görüntüleyici Beta uygulaması için geçerlidir. HoloLens [](/windows/mixed-reality/creating-3d-models-for-use-in-the-windows-mixed-reality-home#asset-requirements-overview) **2'de önceden** yüklenmiş 3B Görüntüleyici uygulaması, karma gerçeklik ana bölmesinde özel .glb 3B modellerin açılmasını destekler (diğer ayrıntılar için bkz. Varlık gereksinimlerine genel bakış.
+>Bu makale, .fbx **dosyalarını destekleyen** ve yalnızca HoloLens 'de (1. nesil) kullanılabilen tam kapsamlı Unity 3B Görüntüleyici Beta uygulaması için geçerlidir. HoloLens [](/windows/mixed-reality/creating-3d-models-for-use-in-the-windows-mixed-reality-home#asset-requirements-overview) **2'de önceden** yüklenmiş 3B Görüntüleyici uygulaması, karma gerçeklik giriş bölmesinde özel .glb 3B modellerin açılmasını destekler (diğer ayrıntılar için bkz. Varlık gereksinimlerine genel bakış.
 
 >[!IMPORTANT]
->3B Görüntüleyici Beta, HoloLens (1. nesil) için Microsoft Store sürümünde kullanılabilir durumda kalsa da, artık etkin geliştirme aşamasında değildir ve artık desteklemektedir.
+>3B Görüntüleyici Beta, Microsoft Store için HoloLens (1. nesil) sürümünde kullanılabilir durumda kalsa da, artık etkin geliştirme aşamasında değildir ve artık desteklemektedir.
 
 3B Görüntüleyici Beta'da 3D modeli açma konusunda sorun varsa veya 3D modelinizin bazı özellikleri desteklenmiyorsa aşağıdaki Desteklenen içerik [belirtimleri'ne](#supported-content-specifications) bakın.
 
 3D modelleri 3B Görüntüleyici Beta ile kullanmak üzere derlemek veya iyileştirmek için aşağıdaki [3D](#optimizing-3d-models-for-3d-viewer-beta) modelleri 3B Görüntüleyici Beta için iyileştirme.
 
-İki farklı modelde 3D modeli açmanın iki HoloLens. Daha [fazla bilgi edinmek için aşağıdaki FBX HoloLens FBX](#viewing-fbx-files-on-hololens) dosyalarını görüntülemeye bakın.
+İki farklı modelde 3D modeli açmanın iki HoloLens. Daha [fazla bilgi için aşağıdaki FBX HoloLens FBX](#viewing-fbx-files-on-hololens) dosyalarını görüntüleme.
 
 Bu konuları okuduktan sonra sorun ediyorsanız aşağıdaki Sorun [giderme'ye](#troubleshooting) bakın.
 
@@ -94,14 +94,14 @@ Bu konuları okuduktan sonra sorun ediyorsanız aşağıdaki Sorun [giderme'ye](
 
 ### <a name="file-and-model-limitations"></a>Dosya ve model sınırlamaları
 
-Dosya boyutunun yanı sıra beta sürümünde aynı anda açabilirsiniz model, köşe ve tire sayısı için sabit 3B Görüntüleyici:
+Dosya boyutunun yanı sıra beta sürümünde aynı anda açabilirsiniz modellerin, köşelerin ve meshes sayısının sabit 3B Görüntüleyici vardır:
 
 - Model başına en fazla 500 MB dosya boyutu
 - Köşeler: Tüm açık modellerde 600.000 birleşik
 - Tireler: Tüm açık modellerde 1.600 birleşik
 - Aynı anda en fazla 40 model açılır
 
-## <a name="optimizing-3d-models-for-3d-viewer-beta"></a>3B Görüntüleyici Beta için 3D 3B Görüntüleyici iyileştirme
+## <a name="optimizing-3d-models-for-3d-viewer-beta"></a>3B Görüntüleyici Beta için 3D modelleri iyileştirme
 
 ### <a name="special-considerations"></a>Dikkat edilmesi gereken özel noktalar
 
@@ -111,9 +111,9 @@ Dosya boyutunun yanı sıra beta sürümünde aynı anda açabilirsiniz model, k
 
 ### <a name="performance-optimization"></a>Performansı en iyi duruma getirme
 
-İçerik yazma ve en iyi sonuçları elde etmek için 3B Görüntüleyici beta HoloLens doğrulama sırasında performansı göz unutmayın. 3B Görüntüleyici Beta içeriği gerçek zamanlı olarak işler ve performans, HoloLens özelliklerine tabi olur.  
+en iyi sonuçları elde etmek için içerik yazma ve 3B Görüntüleyici beta HoloLens doğrulama sırasında performansı unutmayın. 3B Görüntüleyici Beta, içeriği gerçek zamanlı olarak işler ve performans, HoloLens özelliklerine tabi olur.  
 
-3D modelde performansı etkileyen birçok değişken vardır. 3B Görüntüleyici 150.000'den fazla köşe veya 400'den fazla meshes varsa Beta yükte bir uyarı gösterir. Animasyonların diğer açık modellerin performansı üzerinde etkisi olabilir. Ayrıca, Beta sürümünde aynı anda açabilirsiniz toplam sayı modelleri, köşeleri ve meshes için de sabit sınırlar 3B Görüntüleyici (bkz. [Dosya ve model sınırlamaları).](#file-and-model-limitations)  
+3D modelde performansı etkileyen birçok değişken vardır. 3B Görüntüleyici 150.000'den fazla köşe veya 400'den fazla meshes varsa Beta yükte bir uyarı gösterir. Animasyonların diğer açık modellerin performansı üzerinde etkisi olabilir. Ayrıca, beta sürümünde aynı anda açabilirsiniz toplam sayı modelleri, köşeleri ve meshes için de sabit sınırlar 3B Görüntüleyici (bkz. [Dosya ve model sınırlamaları).](#file-and-model-limitations)  
 
 Model karmaşıklığı nedeniyle 3D modeli iyi çalışmıyorsa şunları göz önünde bulundurarak:
 
@@ -121,7 +121,7 @@ Model karmaşıklığı nedeniyle 3D modeli iyi çalışmıyorsa şunları göz 
 - Zorlu animasyonda yer alan yerlerin sayısını azaltma
 - Kendi kendine kapanmayı önleme
 
-Beta sürümünde çift taraflı işleme 3B Görüntüleyici, ancak performans nedeniyle varsayılan olarak kapalıdır. Bu, Ayrıntılar sayfasındaki **Çift Taraflı** düğme aracılığıyla **açık** olabilir. En iyi performans için içeriğinize çift taraflı işlemeye gerek yok.
+Çift taraflı işleme, performans 3B Görüntüleyici varsayılan olarak kapalı olmasına rağmen Beta sürümünde de desteklenebildi. Bu, Ayrıntılar sayfasındaki **Çift Taraflı** düğme aracılığıyla **açık** olabilir. En iyi performans için içeriğinize çift taraflı işlemeye gerek yok.
 
 ### <a name="validating-your-3d-model"></a>3D modelinizi doğrulama
 
@@ -131,11 +131,11 @@ HoloLens'da Beta'3B Görüntüleyici açarak modelinizi HoloLens. Modelinizin  d
 
 Varsayılan olarak, 3B Görüntüleyici Beta 3D modelleri kullanıcıya göre uygun boyutta ve konumda görüntüler. Ancak gerçek hayattan yaşam ölçümleriyle 3B modelin işlemesi önemli ise (örneğin, bir oda içindeki evlerin modellerini değerlendirirken), içerik oluşturucu dosyanın meta verilerinde bu modelin hem uygulama hem de kullanıcı tarafından yeniden boyutlandırmasını önlemek için bir bayrak ayarlamasını sağlar.
 
-Modelin ölçeklendirmesini önlemek için sahnenin Microsoft_DisableScale adlı herhangi bir nesnesine boole özel özniteliği ekleyin ve true olarak ayarlayın. 3B Görüntüleyici Beta, FBX dosyasına ek olarak FbxSystemUnit bilgilerini dikkate alar. Beta'3B Görüntüleyici ölçeği FBX birimi başına 1 ölçüm olarak ölçeklendirin.
+Modelin ölçeklendirimsini önlemek için sahnenin Microsoft_DisableScale adlı herhangi bir nesnesine boole özel özniteliği ekleyin ve true olarak ayarlayın. 3B Görüntüleyici Beta, FBX dosyasındaki FbxSystemUnit bilgilerini dikkate alar. Beta'3B Görüntüleyici ölçeği FBX birimi başına 1 ölçüm olarak ölçeklendirin.
 
 ## <a name="viewing-fbx-files-on-hololens"></a>FBX dosyalarını HoloLens
 
-### <a name="open-an-fbx-file-from-microsoft-edge"></a>Dosyadan FBX dosyası Microsoft Edge
+### <a name="open-an-fbx-file-from-microsoft-edge"></a>Dosyadan FBX Microsoft Edge
 
 FBX dosyaları doğrudan bir web sitesinden, Microsoft Edge üzerinden HoloLens.
 
@@ -143,69 +143,69 @@ FBX dosyaları doğrudan bir web sitesinden, Microsoft Edge üzerinden HoloLens.
 1. İndirilen dosyayı seçin.
 1. İndirme işlemi tamamlandığında, dosyayı **Beta'da** açmak Microsoft Edge aç düğmesini 3B Görüntüleyici.
 
-İndirilen dosyaya daha sonra dosyada İndirilenler kullanılarak erişilebilir ve Microsoft Edge. 3D modeli kaydetmek ve sürekli erişim sağlamak için dosyayı bilgisayarınıza indirin ve OneDrive kaydedin. dosya daha sonra HoloLens OneDrive uygulamasından açılabilir.
+İndirilen dosyaya daha sonra dosyada İndirilenler kullanılarak erişilebilir ve Microsoft Edge. 3D modeli kaydetmek ve sürekli erişim sağlamak için dosyayı bilgisayarınıza indirin ve OneDrive kaydedin. Dosya daha sonra OneDrive uygulamasından HoloLens.
 
 > [!NOTE]
-> İndirilebilir FBX modelleriyle bazı Web siteleri bunları sıkıştırılmış ZIP biçiminde sağlar. 3B görüntüleyici Beta, ZIP dosyalarını doğrudan açamaz. bunun yerine, PC 'nizi kullanarak fbx dosyasını ayıklayın ve OneDrive hesabınıza kaydedin. dosya daha sonra HoloLens OneDrive uygulamasından açılabilir.
+> İndirilebilir FBX modellerine sahip bazı web siteleri bunları sıkıştırılmış ZIP biçiminde sağlar. 3B Görüntüleyici Beta, ZIP dosyalarını doğrudan açamaz. Bunun yerine, FBX dosyasını ayıklamak için bilgisayarınızı kullanın ve dosyayı OneDrive kaydedin. Dosya daha sonra OneDrive uygulamasından HoloLens.
 
-### <a name="open-an-fbx-file-from-onedrive"></a>OneDrive bir FBX dosyası açın
+### <a name="open-an-fbx-file-from-onedrive"></a>Dosyadan FBX OneDrive
 
-fbx dosyaları, HoloLens OneDrive uygulaması kullanılarak OneDrive açılabilir. HoloLens Microsoft Store uygulamasını kullanarak OneDrive yüklediğinizden ve fbx dosyasını bilgisayarınızda OneDrive için zaten karşıya yüklediğinizden emin olun.
+FBX dosyaları, OneDrive üzerinde OneDrive kullanılarak HoloLens. HoloLens'de OneDrive Microsoft Store uygulamasını kullanarak FBX dosyasını bilgisayarınıza yüklemiş OneDrive emin olun.
 
-OneDrive bir kez, fbx dosyaları 3b görüntüleyici Beta kullanılarak HoloLens iki şekilde açılabilir:
+FBX OneDrive iki farklı şekilde HoloLens beta 3B Görüntüleyici FBX dosyaları açılabilir:
 
-- HoloLens üzerinde OneDrive başlatın ve bunu 3b görüntüleyici Beta sürümünde açmak için fbx dosyasını seçin.
-- 3B görüntüleyici Beta 'yı başlatın, AIR ' e dokunarak araç çubuğunu görüntüleyin ve **Dosya Aç**' ı seçin. OneDrive başlatılacak ve bir fbx dosyası seçmenize olanak sağlar.
+- OneDrive'HoloLens FBX dosyasını seçerek Beta'da 3B Görüntüleyici açın.
+- Beta 3B Görüntüleyici'ı açın, araç çubuğunu göstermek için havadan dokunun ve Dosya **Aç'ı seçin.** OneDrive, bir FBX dosyası seçmenize olanak sağlar.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-### <a name="i-see-a-warning-when-i-open-a-3d-model"></a>3B model açtığımda bir uyarı görüyorum
+### <a name="i-see-a-warning-when-i-open-a-3d-model"></a>3D modeli açtım bir uyarı görüyorum
 
-3B görüntüleyici Beta tarafından desteklenmeyen özellikler içeren bir 3B modeli açmaya çalışırsanız veya model çok karmaşıksa ve performans etkileniyorsa bir uyarı görürsünüz. 3B görüntüleyici Beta, 3B modeli yüklemeye devam eder, ancak performans veya görsel uygunluk tehlikeye girebilir.
+3B Görüntüleyici Beta tarafından desteklenen özellikler içeren bir 3D modeli açmaya çalışırken veya model çok karmaşıksa ve performans etkilenebilirse bir uyarıyla karşınız olur. 3B Görüntüleyici Beta 3D modeli yüklemeye devam eder, ancak performans veya görsel uygunluk tehlikeye girebilir.
 
-Daha fazla bilgi için bkz. [desteklenen içerik belirtimleri](#supported-content-specifications) ve 3B [Görüntüleyici Beta Için 3B modellerini iyileştirme](#optimizing-3d-models-for-3d-viewer-beta).
+Daha fazla bilgi için [bkz. Desteklenen içerik belirtimleri](#supported-content-specifications) ve Beta için [3D 3B Görüntüleyici iyileştirme.](#optimizing-3d-models-for-3d-viewer-beta)
 
-### <a name="i-see-a-warning-and-the-3d-model-doesnt-load"></a>Bir uyarı görüyorum ve 3B model yüklenmiyor
+### <a name="i-see-a-warning-and-the-3d-model-doesnt-load"></a>Bir uyarı görüyorum ve 3D modeli yüklenemedi
 
-3B görüntüleyici Beta, karmaşıklık veya dosya boyutu nedeniyle veya FBX dosyası bozuksa veya geçersiz olduğunda bir 3B modeli Yükleyememesinin ardından bir hata mesajı görürsünüz. Ayrıca, aynı anda açabilme toplam model, köşe veya kafes sayısı sınırına ulaştıysanız bir hata iletisi görürsünüz.  
+3B Görüntüleyici Beta, karmaşıklık veya dosya boyutu nedeniyle bir 3B modeli yükleyenene veya FBX dosyası bozuk ya da geçersiz olduğunda bir hata iletisi alırsınız. Toplam model sayısı, köşe veya tire sayısı sınırına ulaştınız ve aynı anda açabilirsiniz.  
 
-Daha fazla bilgi için bkz. [desteklenen içerik belirtimleri](#supported-content-specifications) ve [dosya ve model sınırlamaları](#file-and-model-limitations).
+Daha fazla bilgi için [bkz. Desteklenen içerik belirtimleri](#supported-content-specifications) ve [Dosya ve model sınırlamaları.](#file-and-model-limitations)
 
-### <a name="my-3d-model-loads-but-does-not-appear-as-expected"></a>3B modelim yükleniyor, ancak beklendiği gibi görünmüyor
+### <a name="my-3d-model-loads-but-does-not-appear-as-expected"></a>3D modelim yüklenmiyor ama beklendiği gibi görünmüyor
 
-3B modeliniz, 3B görüntüleyici Beta 'da beklenildiği gibi görünmüyorsa, AIR ' e dokunarak araç çubuğunu görüntüleyin ve **Ayrıntılar**' ı seçin. Dosyanın 3B görüntüleyici Beta tarafından desteklenmeyen yönleri, uyarı olarak vurgulanır.
+Beta sürümünde 3D modeliniz beklendiği gibi 3B Görüntüleyici görünmüyorsa, araç çubuğunu göstermek için havadan dokunun ve Ayrıntılar'ı **seçin.** 3B Görüntüleyici Beta tarafından 3B Görüntüleyici dosyanın yönleri uyarı olarak vurgulanır.
 
-Büyük olasılıkla FBX dosyasına gömülü olmadıklarından, görebileceğiniz en yaygın sorunun dokuları eksik. Bu durumda, model beyaz görünür. Bu sorun, oluşturma aracınızdan, dokuları Ekle seçeneği belirlenmiş olarak FBX 'e dışarı aktararak oluşturma sürecinde çözülebilir.
+Gördüğünüz en yaygın sorun, eksik dokular olabilir çünkü bunlar FBX dosyasına ekli değildir. Bu durumda model beyaz görünür. Oluşturma aracınızı doku ekleme seçeneği seçiliyken FBX'e aktararak bu sorun oluşturma işlemiyle çözülebilirsiniz.
 
-Daha fazla bilgi için bkz. [desteklenen içerik belirtimleri](#supported-content-specifications) ve 3B [Görüntüleyici Beta Için 3B modellerini iyileştirme](#optimizing-3d-models-for-3d-viewer-beta).
+Daha fazla bilgi için [bkz. Desteklenen içerik belirtimleri](#supported-content-specifications) ve Beta için [3D 3B Görüntüleyici iyileştirme.](#optimizing-3d-models-for-3d-viewer-beta)
 
-### <a name="i-experience-performance-drops-while-viewing-my-3d-model"></a>3B modelmi görüntülerken Performans düşmem deneyimim
+### <a name="i-experience-performance-drops-while-viewing-my-3d-model"></a>3D modelimi görüntülerken performans düşüşleri yaşanıyor
 
-Bir 3B modeli yükleme ve görüntüleme performansı, modelin karmaşıklığına, eşzamanlı olarak açık olan model sayısına veya etkin animasyonlarla model sayısına göre etkilenebilir.
+3D modeli yüklerken ve görüntülerken performans modelin karmaşıklığından, aynı anda açık olan model sayısından veya etkin animasyonlarla model sayısından etkilenebilir.
 
-Daha fazla bilgi için bkz. 3B görüntüleyici Beta ve [dosya ve model sınırlamaları](#file-and-model-limitations) [Için 3B modellerini iyileştirme](#optimizing-3d-models-for-3d-viewer-beta) .
+Daha fazla bilgi için bkz. Beta ve Dosya ve model [3B Görüntüleyici için 3D](#optimizing-3d-models-for-3d-viewer-beta) [modelleri iyileştirme.](#file-and-model-limitations)
 
-### <a name="when-i-open-an-fbx-file-on-hololens-it-doesnt-open-in-3d-viewer-beta"></a>HoloLens üzerinde bir fbx dosyası açtığımda, bu dosya 3b görüntüleyici Beta sürümünde açılmaz
+### <a name="when-i-open-an-fbx-file-on-hololens-it-doesnt-open-in-3d-viewer-beta"></a>Bir FBX dosyasını HoloLens beta sürümünde 3B Görüntüleyici
 
-3B görüntüleyici Beta, yüklendiğinde. FBX dosya uzantısıyla otomatik olarak ilişkilendirilir.
+3B Görüntüleyici Beta, yüklenirken .fbx dosya uzantısıyla otomatik olarak ilişkilendirilır.
 
-bir fbx dosyası açmaya çalışırsanız ve Microsoft Store yönlendiren bir iletişim kutusu görürseniz, şu anda HoloLens. fbx dosya uzantısıyla ilişkili bir uygulamanız yok.
+Bir FBX dosyası açmaya ve sizi Microsoft Store'a yönlendiren bir iletişim kutusu görmeye devam ediyorsanız, şu anda HoloLens'da .fbx dosya uzantısıyla ilişkilendirilmiş bir uygulamanız HoloLens.
 
-3B görüntüleyici Beta 'nın yüklü olduğunu doğrulayın. yüklü değilse, HoloLens Microsoft Store adresinden indirin.
+3B Görüntüleyici Beta'nın yüklü olduğunu doğrulayın. Yüklü değilse, Microsoft Store'den HoloLens.
 
-3B görüntüleyici beta sürümü zaten yüklüyse, 3B Görüntüleyicisi Beta 'yı başlatın ve sonra dosyayı açmayı yeniden deneyin. Sorun devam ederse, 3B Görüntüleyicisi Beta 'yı kaldırın ve yeniden yükleyin. Bu işlem,. FBX dosya uzantısını 3B görüntüleyici Beta ile yeniden ilişkilendirir.
+Beta 3B Görüntüleyici yüklüyse Beta'3B Görüntüleyici açın ve dosyayı yeniden açmayı deneyin. Sorun devam ederse Beta sürümünü kaldırıp 3B Görüntüleyici yükleyin. Bu, .fbx dosya uzantısını beta sürümüyle 3B Görüntüleyici eder.
 
-Bir FBX dosyasını açmaya çalışmak, 3B görüntüleyici beta dışında bir uygulama açarsa, bu uygulama büyük olasılıkla 3B görüntüleyici beta sürümünden sonra yüklenmiş ve. FBX dosya uzantısıyla ilişkilendirmeyi gerçekleştirmiştir. 3B görüntüleyici Beta 'nın. FBX dosya uzantısıyla ilişkilendirilmesini tercih ediyorsanız, 3B Görüntüleyicisi Beta 'yı kaldırın ve yeniden yükleyin.
+FBX dosyası açılmaya çalışıldıktan sonra 3B Görüntüleyici Beta dışında bir uygulama açılırsa, bu uygulama büyük olasılıkla 3B Görüntüleyici Beta'dan sonra yüklenmiştir ve .fbx dosya uzantısıyla ilişkilendirmeyi ele almış olur. Beta'3B Görüntüleyici .fbx dosya uzantısıyla ilişkilendirilmeyi tercih ediyorsanız, Beta'3B Görüntüleyici yükleyin.
 
-### <a name="the-open-file-button-in-3d-viewer-beta-doesnt-launch-an-app"></a>3B görüntüleyici Beta 'daki Dosya Aç düğmesi bir uygulama başlatamaz
+### <a name="the-open-file-button-in-3d-viewer-beta-doesnt-launch-an-app"></a>3B Görüntüleyici Beta'da Dosya Aç düğmesi uygulama başlatamıyor
 
-**Dosya Aç** düğmesi, Hololens dosya seçici işleviyle ilişkili uygulamayı açar. OneDrive yüklüyse, **dosya aç** düğmesi OneDrive başlatmalı. ancak, şu anda HoloLens dosya seçici işleviyle ilişkili bir uygulama yoksa, Microsoft Store yönlendirilirsiniz.
+Dosya **Aç düğmesi,** dosya seçici işleviyle ilişkili uygulamayı HoloLens. Yüklü OneDrive, Dosya **Aç düğmesinin** dosya açma OneDrive. Ancak, şu anda dosya seçici işleviyle ilişkilendirilmiş bir uygulama HoloLens, dosya seçici işlevine Microsoft Store.
 
-**dosya aç** düğmesi OneDrive dışında bir uygulama başlatırsa, bu uygulama büyük olasılıkla OneDrive sonra yüklenmiş ve dosya seçici işleviyle ilişkilendirmeyi gerçekleştirmiştir. 3b görüntüleyici Beta 'da **dosya aç** düğmesini seçerken OneDrive başlatmak isterseniz, OneDrive kaldırın ve yeniden yükleyin.
+Dosya **Aç düğmesi** OneDrive dışında bir uygulama başlatıyorsa, bu uygulama OneDrive yüklendikten ve dosya seçici işleviyle ilişkilendirmeyi ele aldı. Beta'OneDrive Dosya Aç düğmesini seçerek  başlatmayı tercih ediyorsanız, 3B Görüntüleyici'yi kaldırın ve OneDrive.
 
-**Dosya Aç** düğmesi etkin değilse, 3B görüntüleyici Beta 'da tek seferde açık olabilecek modellerin sınırına ulaşmış olabilirsiniz. 3B görüntüleyici Beta 'da 40 modelleriniz varsa, ek modeller açabilmek için önce bazılarını kapatmanız gerekir.
+Dosya **Aç düğmesi** etkin durumda değilse, tek bir anda Beta sürümünde açabilirsiniz 3B Görüntüleyici sınırına ulaştınız. Beta'da 40 model 3B Görüntüleyici, ek modeller açabileceksiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [Destek forumları](http://forums.hololens.com/categories/3d-viewer-beta) -yalnızca arşivleme amaçlıdır. Bu forum artık etkin değil.
-- [Üçüncü taraf bildirimleri](https://www.microsoft.com/{lang-locale}/legal/products)
+- [Destek forumları](http://forums.hololens.com/categories/3d-viewer-beta) - Yalnızca arşivleme amacıyla. Bu forum artık etkin değil.
+- [Üçüncü taraf bildirimler](https://www.microsoft.com/{lang-locale}/legal/products)

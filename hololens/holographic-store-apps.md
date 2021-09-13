@@ -16,11 +16,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 3442da500e7554d7f97db2178cbaceeecad143ac
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428468"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036321"
 ---
 # <a name="find-install-and-uninstall-applications-from-the-microsoft-store"></a>Uygulamaları bulma, yükleme ve kaldırma Microsoft Store
 
@@ -28,7 +28,7 @@ Bu Microsoft Store, uygulama ve oyunlarla birlikte çalışmak için git kaynağ
 
 Sanal HoloLens 2D görünümü veya holografik görünüm kullanır. 2D görünüm kullanan uygulamalar pencerelere benzer ve etrafınız için konumlara yer ve olabilir. Holografik görünüm kullanan uygulamalar sizi çevreler ve gördüğünüz tek uygulama olur.
 
-HoloLens, Microsoft Store'den birçok mevcut uygulamanın ve özel olarak özel olarak HoloLens.  Bu makale, çalışma sayfalarından holografik uygulamalara Microsoft Store.
+HoloLens, Microsoft Store'den birçok mevcut uygulamanın ve özel olarak HoloLens.  Bu makale, çalışma sayfalarından holografik uygulamalara Microsoft Store.
 
 Özel uygulamaları yükleme ve çalıştırma hakkında daha fazla bilgi edinmek için Özel [holografik uygulamalar makalesini okuyun.](holographic-custom-apps.md)
 
@@ -37,13 +37,13 @@ HoloLens, Microsoft Store'den birçok mevcut uygulamanın ve özel olarak özel 
 Başlat Microsoft Store **menüyü** açın. Ardından uygulamalara ve oyunlara göz atabilirsiniz. Sesli komutları [kullanarak](hololens-cortana.md) arama yapmak için "Ara" ifadesini kullanabilirsiniz. Arama penceresi açıldığında "Dikteye başla" yazın ve istendiğinde arama terimlerinizi aramaya başlayabilirsiniz.
 
 > [!NOTE]
-> HoloLens için Sistem Gereksinimleri, uygulama derlemenin mimarisini temel almaktadır. HoloLens (1. nesil) için bir uygulama derlemesi ARM mimari paketini içerecek şekilde mağazada daha yeni bir UWP'ye güncelleştirilmişse, HoloLens 2 cihaz için kullanılamaz. Benzer şekilde, HoloLens 2 uygulaması x86 mimari paketini içermezse, HoloLens (1. nesil) cihazlarda kullanılamaz. HoloLens cihaz mimarileri:
+> HoloLens cihazlar için Sistem Gereksinimleri, uygulama derlemenin mimarisini temel almaktadır. HoloLens (1. nesil) için uygulama derlemesi ARM mimari paketini içerecek şekilde mağazada daha yeni bir UWP'ye güncelleştirilmişse, HoloLens 2 cihaz için kullanılamaz. Benzer şekilde, HoloLens 2 uygulaması x86 mimari paketini içermezse, HoloLens (1. nesil) cihazlarda kullanılamaz. HoloLens cihaz mimarileri:
 >
 > - x86 = HoloLens (1. nesil)
 > - ARM = HoloLens 2
 
 > [!NOTE]
-> 12 Ocak 2021'de aşağıdaki uygulamalar, HoloLens cihazlarda Destek Sonu'HoloLens ulaşacak. Uygulamanın web sürümünü kullanmak için cihazınızın aşağıdaki bağlantısını kullanmanızı teşvik etmek için.
+> 12 Ocak 2021'de aşağıdaki uygulamalar, HoloLens erişecek. Uygulamanın web sürümünü kullanmak için cihazınızın aşağıdaki bağlantısını kullanmanızı teşvik etmek için.
 
 | Uygulama        | Bağlantı                                          |
 |------------|-----------------------------------------------|
@@ -52,19 +52,19 @@ Başlat Microsoft Store **menüyü** açın. Ardından uygulamalara ve oyunlara 
 | PowerPoint mobil | [https://office.live.com/start/PowerPoint.aspx](https://office.live.com/start/PowerPoint.aspx) |
 
 > [!NOTE]
-> OneDrive uygulaması şu anda azure üzerinde Azure AD hesapları için HoloLens. Microsoft OneDrive PWA indirmenizi öneririz. [Uygulamayı indirmek için bu adımları izleyin.]
+> OneDrive uygulama şu anda azure ad hesapları için destek HoloLens. Microsoft OneDrive PWA indirmenizi öneririz. [Uygulamayı indirmek için bu adımları izleyin.]
 
 ## <a name="install-apps"></a>Uygulama yükleme
 
-Uygulamaları indirmek için bir uygulamayla oturum Microsoft hesabı. Bazı uygulamalar ücretsizdir ve hemen indirilebilir. Satın alma gerektiren uygulamalar için Mağaza'da oturum a Microsoft hesabı ve geçerli bir ödeme yöntemine sahipsiniz.
+Uygulamaları indirmek için bir Microsoft hesabı. Bazı uygulamalar ücretsizdir ve hemen indirilebilir. Satın alma gerektiren uygulamalar için Mağaza'da oturum a Microsoft hesabı geçerli bir ödeme yöntemine sahipsiniz.
 
 > [!NOTE]
-> Bu hesapta Microsoft Store hesabın, oturum asanızla aynı olması gerek değildir. Uygulamanıza bir İş veya Okul hesabı HoloLens satın almak için Mağaza Uygulamasında kişisel hesabınızla oturum açmanız gerekir.
+> Bu hesapta Microsoft Store hesabın, oturum asanızla aynı olması gerek değildir. Uygulamanıza bir İş veya Okul hesabı HoloLens satın alma yapmak için Mağaza Uygulamasında kişisel hesabınızla oturum açmanız gerekir.
 
 > [!TIP]
-> Ödeme yöntemi ayarlamak için Ödeme'ye [account.microsoft.com](https://account.microsoft.com/) ödeme seçenekleri Ödeme &   >  **Ödeme seçeneği**  >  **ekle'yi seçin.**
+> Bir ödeme yöntemi ayarlamak için Ödeme'ye [account.microsoft.com](https://account.microsoft.com/) ödeme seçenekleri Ödeme **seçenekleri'&**  >  **Ödeme seçeneği**  >  **ekle'yi seçin.**
 
-1. Başlat menüsünü [ **açmak için** bir](holographic-home.md)Başlangıç hareketi [veya](/hololens/hololens2-basic-usage#start-gesture) çiçek [açma](hololens1-basic-usage.md) hareketi HoloLens (1. nesil) gerçekleştirin.
+1. Başlat menüsünü [ **açmak için**](holographic-home.md)bir Başlangıç hareketi [veya](/hololens/hololens2-basic-usage#start-gesture) [çiçek](hololens1-basic-usage.md) açma hareketi HoloLens (1. nesil) gerçekleştirin.
 
 1. Microsoft Store seçin. Mağaza uygulaması açıldıktan sonra:
    1. Uygulamaları aramak için arama çubuğunu kullanın.
@@ -110,7 +110,7 @@ Ayrıca bkz. [İş için OneDrive karşıya yüklemeleri etkinleştirme](hololen
 
 Microsoft Store'den yüklemiş olduğu bir uygulamayı güncelleştirmek için Microsoft Store güncelleştirebilirsiniz. İş İçin Microsoft Store için İş İçin Microsoft Store uygulamalar için, bu uygulamaları İş İçin Microsoft Store.
 
-1. Başlat menüsünü [ **açmak için** bir](holographic-home.md)Başlangıç hareketi [veya](/hololens/hololens2-basic-usage#start-gesture) çiçek [açma](hololens1-basic-usage.md) hareketi HoloLens (1. nesil) gerçekleştirin.
+1. Başlat menüsünü [ **açmak için**](holographic-home.md)bir Başlangıç hareketi [veya](/hololens/hololens2-basic-usage#start-gesture) [çiçek](hololens1-basic-usage.md) açma hareketi HoloLens (1. nesil) gerçekleştirin.
 
 1. Mağaza uygulamasını seçin.
 

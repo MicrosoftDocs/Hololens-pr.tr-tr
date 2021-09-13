@@ -1,6 +1,6 @@
 ---
 title: HoloLens 2 sürüm
-description: Her bir HoloLens 2 cihaz sürümünün aynı veya farklı olduğunu ve kendi sürümlerden birini edindikten sonra ne yapacaklarını öğrenin.
+description: Her bir HoloLens 2 cihaz sürümünün aynı veya farklı olduğunu ve kendi cihazlarınızı edindikten sonra ne yapacaklarını öğrenin.
 keywords: HoloLens 2 satın alma seçeneği, HoloLens seçenekleri, Developer Edition
 author: evmill
 ms.author: v-evmill
@@ -15,15 +15,15 @@ manager: sekerawa
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428281"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036372"
 ---
-# <a name="compare-hololens-2-options"></a>2 HoloLens Karşılaştırma
+# <a name="compare-hololens-2-options"></a>2 HoloLens karşılaştırma
 
-HoloLens hologramlarla desteklenen ve *işbirliğini geliştiren* uygulamalar ve çözümler sağlayan karma gerçeklik cihazıdır. 2 HoloLens ile daha akıllı çalışmak için yeni üretkenlik ve yenilik yüksekliklerini (amaca uygun şekilde) deneyimlersiniz.
+HoloLens, hologramlar tarafından desteklenen ve *işbirliğini geliştiren* uygulamalar ve çözümler sağlayan bir karma gerçeklik cihazıdır. 2 HoloLens ile daha akıllı çalışmak için yeni üretkenlik ve yenilik yüksekliklerini (amaca uygun şekilde) deneyimlersiniz.
 
 Bir sonraki sektör çözümlerinizi arayan bir [BILIŞIM](https://www.microsoft.com/hololens/apps) uzmanı, yeni bir gerçeklik için deneyimler oluşturmak isteyen bir geliştirici veya bir sonraki yeniliğiniz hakkında düşünme konusunda iş kararı veren bir geliştirici olun ( HoloLens 2, bilgi işlem için yeni gerçekliğinizdir). [](https://www.microsoft.com/hololens/developers) [](https://www.microsoft.com/hololens/apps)
 
@@ -54,11 +54,11 @@ Bir sonraki sektör çözümlerinizi arayan bir [BILIŞIM](https://www.microsoft
 
 **[HoloLens 2 ile Dynamics 365 Remote Assist:](hololens2-options-remote-assist.md)** Kullanmaya başlayın HoloLens 2 ve Microsoft'un karma gerçeklik iletişim uygulaması ile ilk günden itibaren birlikte kullanılabilir. Tüm şirketinizin daha üretken ve daha fazla amaca sahip yeniliklere sahip olması için yardımcı olun. Şimdi Dynamics 365 ve sektör iş ortaklarının çözümleriyle karma gerçeklikten deneyim edin.
 
-**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** ISO Sınıfı 6 ile ISO Sınıfı 8 arasında değişen standartlara sahip temiz oda ortamlarını desteklemek için tasarlanmış, tasarlanmış ve test edilmiş olan HoloLens 2 Industrial Edition, UL Sınıf I, Bölüm 2 sertifikalıdır ve 2 yıllık garanti ve hızlı bir değişim programıyla desteklenir.
+**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** ISO Sınıfı 6'dan ISO Sınıfı 8'e kadar değişen standartlarla temiz oda ortamlarını destekleyecek şekilde tasarlanmış, tasarlanmış ve test edilmiş olan HoloLens 2 Industrial Edition, UL Sınıf I, Bölüm 2 sertifikalıdır ve 2 yıllık garanti ve hızlı bir değişim programıyla desteklenir.
 
-**[HoloLens 2 ile kırpabilir XR10:](hololens2-options-trimble-xr10-edition.md)** Kirli, yüksek sesle ve güvenlik denetimli ortamlarda çalışanlar için özel olarak inşa edilen trimble XR10, HoloLens 2 ile karma gerçekliği iş sitenize getirir.
+**[HoloLens 2 ile kırpabilir XR10:](hololens2-options-trimble-xr10-edition.md)** Kirli, yüksek sesle ve güvenlik denetimli ortamlarda çalışanlar için özel olarak inşa edilen HoloLens 2 ile Trimble XR10, karma gerçekliği iş sitenize getirir.
 
-**[HoloLens 2 Geliştirme](hololens2-options-dev-edition.md)** Sürümü: HoloLens 2'den bulut hizmetleri için Unity yazılımı ve Azure kredilerinin ücretsiz denemelerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
+**[HoloLens 2 Geliştirme](hololens2-options-dev-edition.md)** Sürümü: HoloLens 2'den bulut hizmetleri için Ücretsiz Unity yazılımı ve Azure kredileri denemelerini birleştiren bu teklifle karma gerçeklik için çalışmaya başlama. Temellerin ötesine geçerek karma gerçeklik için geliştirmeye başlamayı öğrenin.
 
 2 portföyümüz hakkında [HoloLens öğrenin.](https://www.microsoft.com/hololens/buy)
 

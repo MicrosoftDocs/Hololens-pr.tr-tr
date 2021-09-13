@@ -14,11 +14,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 5485a4b2558a11a6c0545ec8b3405c120cff287c
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427976"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126033195"
 ---
 # <a name="using-microsofts-endpoint-manager-intune-to-manage-hololens-devices"></a>Microsoft'un Endpoint Manager Intune'u kullanarak HoloLens yönetme
 
@@ -31,7 +31,7 @@ Intune'ı kullanarak cihaz kategorilerini oluşturabilir ve cihazları, Mühendi
 Daha fazla bilgi: [Cihazları gruplara ayırma](/mem/intune/enrollment/device-group-mapping)
 
 ### <a name="device-configuration-profiles"></a>Cihaz yapılandırma profilleri
-Intune, kuruluşunuzdaki farklı cihazlarda etkinleştirebileceğiniz veya devre dışı bırakabileceğiniz ayarları ve özellikleri içerir. Bu ayarlar ve özellikler, profiller kullanılarak yönetilir. Örneğin, Cortana çalıştıran cihazlarınız üzerinde Microsoft Defender Akıllı Ekran'ı kullanan bir profil Windows Holographic for Business.
+Intune, kuruluşunuzdaki farklı cihazlarda etkinleştirebileceğiniz veya devre dışı bırakabileceğiniz ayarları ve özellikleri içerir. Bu ayarlar ve özellikler, profiller kullanılarak yönetilir. Örneğin, bir profil oluşturmak için Cortana çalıştıran cihazlarınız üzerinde Microsoft Defender Akıllı Ekran'ı Windows Holographic for Business.
 Profillerinizde bazı ayarları özelleştirmek, cihaz kısıtlamaları oluşturmak ve sanal özel ağ (VPN) ve Wi-Fi yapılandırmak için OMA-URI kullanabilirsiniz.
 [Kullanmaya başlayın profilleri ve profiline](/mem/intune/configuration/device-profiles)genel [bakış ile ilgili bilgiler.](/mem/intune/configuration/device-profile-create)
 
@@ -40,14 +40,14 @@ Profillerinizde bazı ayarları özelleştirmek, cihaz kısıtlamaları oluştur
 Cihazları yönetmek için MDM kullanmak, seçilecek çok çeşitli öğeler sağlar. 
 
 ### <a name="wi-fi"></a>Wi-Fi
-[Wi-Fi ayarları](/mem/intune/configuration/wi-fi-settings-configure), kullanıcılar ve cihazlar için kablosuz ağ ayarları atar. Bir Wi-Fi profili atadığınız zaman, kullanıcılar şirket Wi-Fi kendileri yapılandırmak zorunda kalmadan erişim elde ediyor.
+[Wi-Fi ayarları](/mem/intune/configuration/wi-fi-settings-configure), kullanıcılar ve cihazlar için kablosuz ağ ayarları atar. Bir profil Wi-Fi atadığınız zaman, kullanıcılar şirket Wi-Fi kendileri yapılandırmak zorunda kalmadan erişim elde ediyor.
 Ağlarınızı ağ [için yapılandırma hakkında daha fazla bilgi HoloLens](hololens-commercial-infrastructure.md)
 
 ### <a name="certificates"></a>Sertifikalar
-Sertifikalar hesap kimlik doğrulaması, kimlik doğrulaması, VPN Wi-Fi ve web içeriğinin SSL şifrelemesi sağlayarak güvenliğin iyileştirilmesine yardımcı olur. Yöneticiler, sağlama paketleri aracılığıyla cihazlardaki sertifikaları el ile yönetese de, kayıttan yenileme ve iptale kadar tüm yaşam döngüsü boyunca bu sertifikaları yönetmek için MDM sisteminizi kullanmak en iyi uygulamadır. MDM sisteminiz, siz cihazı kaydettikten sonra bu sertifikaları cihazların sertifika depolarına otomatik olarak dağıtabilirsiniz (MDM sistemi Basit Sertifika Kayıt Protokolü (SCEP) veya Ortak Anahtar Şifreleme Standartları'#12 (PKCS #12)) desteklediği sürece). MDM ayrıca kayıtlı istemci sertifikalarını sorgular ve silebilir veya geçerli sertifikanın süresi dolmadan önce yeni bir kayıt isteği tetikler. 
+Sertifikalar hesap kimlik doğrulaması, kimlik doğrulaması Wi-Fi, VPN şifrelemesi ve web içeriğinin SSL şifrelemesi sağlayarak güvenliğin iyileştirilmesine yardımcı olur. Yöneticiler, sağlama paketleri aracılığıyla cihazlardaki sertifikaları el ile yönetese de, kayıttan yenileme ve iptale kadar tüm yaşam döngüsü boyunca bu sertifikaları yönetmek için MDM sisteminizi kullanmak en iyi uygulamadır. MDM sisteminiz, siz cihazı kaydettikten sonra bu sertifikaları cihazların sertifika depolarına otomatik olarak dağıtabilirsiniz (MDM sistemi Basit Sertifika Kayıt Protokolü (SCEP) veya Ortak Anahtar Şifreleme Standartları #12 (PKCS #12)) destekliyorsa). MDM ayrıca kayıtlı istemci sertifikalarını sorgular ve silebilir veya geçerli sertifikanın süresi dolmadan önce yeni bir kayıt isteği tetikler. 
 
 ### <a name="proxy"></a>Ara sunucu
-Çoğu kurumsal intranet ağı, iç trafiği yönetmek için bir ara sunucudan faydalanmaktadır. 2 HoloLens ethernet ve ağ bağlantıları için bir ara sunucu Wi-Fi yapılandırabilirsiniz. Bu ayarlar VPN bağlantıları için geçerli değildir. Ağ yapılandırmaları için ara sunucu ayarları hakkında daha Windows 10 bkz. [NetworkProxy CSP](/windows/client-management/mdm/networkproxy-csp).
+Çoğu kurumsal intranet ağı, iç trafiği yönetmek için bir ara sunucudan faydalanmaktadır. 2 HoloLens ethernet ve ağ bağlantıları için bir ara sunucu Wi-Fi yapılandırabilirsiniz. Bu ayarlar VPN bağlantıları için geçerli değildir. Yapılandırmaya ilişkin ara sunucu ayarları hakkında daha Windows 10 bkz. [NetworkProxy CSP](/windows/client-management/mdm/networkproxy-csp).
 
 ### <a name="vpn"></a>VPN
 Kuruluşlar genellikle şirket intraneti üzerinde uygulamalara ve kaynaklara erişimi kontrol etmek için VPN kullanır. HoloLens 2, istemciden indirilebilir bir eklenti gerektiren ve tercih Microsoft Store VPN satıcısına özgü SSL VPN bağlantılarını destekler. 
@@ -67,7 +67,7 @@ Intune aracılığıyla uygulama yönetimi hakkında daha fazla bilgi edinebilir
 
 ### <a name="software-updates"></a>Yazılım güncelleştirmeleri
 Intune’da Windows 10 cihazlar için güncelleştirme halkaları adı verilen bir özellik vardır. Bu güncelleştirme halkaları, güncelleştirmelerin nasıl yüklendiğini belirleyen bir grup ayar barındırır. Örneğin güncelleştirmeleri yüklemek için bir bakım penceresi oluşturabilir veya güncelleştirmeler yüklendikten sonra yeniden başlatmayı seçebilirsiniz. Güncelleştirme halkası, Windows Holographic for Business çalıştıran birden fazla cihaza uygulanabilir.
-Intune aracılığıyla yazılım [güncelleştirmelerini HoloLens](hololens-updates.md) [ve Yazılım güncelleştirmelerini yönetme hakkında daha fazla bilgi edinin.](/mem/intune/protect/windows-update-for-business-configure)
+Yazılım güncelleştirmelerini yönetme ve Intune [HoloLens](hololens-updates.md) [güncelleştirmelerini yönetme hakkında daha fazla bilgi edinin.](/mem/intune/protect/windows-update-for-business-configure)
 
 ### <a name="configure-kiosk-mode"></a>Bilgi noktası modunu yapılandırma
 Intune’un paylaşılan veya misafir bilgisayar özelliklerini kullanarak Windows Holographic for Business cihazları bilgi noktası olarak çalışacak şekilde yapılandırabilirsiniz. Bu cihazlar, tek uygulama (tekli uygulama bilgi noktası modu) veya birden fazla uygulama (çoklu uygulama bilgi noktası modu) çalıştırabilir. Bilgi noktası modu, hangi kimliklerin varsayılan olarak hangi uygulamalara erişimi olduğunu denetlemeye bir kullanıcı arabirimidir.
