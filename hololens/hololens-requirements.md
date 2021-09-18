@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 4b8975d8eb362212eaf91966f4efa0bc22236327
+ms.sourcegitcommit: 3f21b692be2f1b7f9c382f2b735b4c10339d4a78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033823"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127934077"
 ---
 # <a name="common-deployment-scenarios"></a>Yaygın Dağıtım Senaryoları
 
@@ -25,9 +25,9 @@ ms.locfileid: "126033823"
 
 Yeni bir cihazı nasıl dağıtacaklarını anlamak, ilk kez deneyebilirsiniz. Burada, kuruluş içinde 2 cihaza Microsoft HoloLens ve yönetmenin farklı yollarını paylaşıyoruz.
 
-Çözümlerin büyük ölçekte dağıtılmasını istediğiniz. Sizi oraya almak istiyorum. İlk olarak, D365 Remote Assist, Kılavuzlar veya oluşturduğunuz Azure karma gerçeklik hizmeti etkinleştirilmiş bir uygulama kullanıyor olun, hedef karma gerçeklik senaryo için değer elde etmek için hologramlar gibi cihazları dağıtma adımlarını konuşacağız.
+Çözümlerin büyük ölçekte dağıtılmasını istediğiniz. Sizi oraya almak istiyorum. Öncelikle hedef karma gerçeklik senaryona değer elde etmek için cihazları ve dolayısıyla hologramları dağıtma adımlarını konuşacağız. D365 Uzaktan Yardım, Kılavuzlar veya oluşturduğunuz Azure karma gerçeklik hizmeti etkinleştirilmiş bir uygulamayı kullanıyor olun, Ortak Dağıtım Senaryolarımız yolculuğunuza yol gösterir.
 
-İşletme kararlarını veren, IT uzmanı veya kuruluş içinde çalışan bir HoloLens olabilirsiniz. Kavram kanıtından ölçeklendirilen dağıtıma kadar her şey için dağıtım kılavuzlarımız, ne kadar büyük veya küçük olursa olsun, HOLOLENS altyapınız içindeki temel kavramlar hakkında bilgi sağlar. En yaygın dağıtım senaryoları aşağıdakilerdir:
+İşletme kararlarını veren, IT uzmanı veya kuruluş içinde çalışan ve benimsemeyi HoloLens bir yenilik ekibiysiniz. Kavram kanıtından ölçeklendirilen dağıtıma kadar her şey için dağıtım kılavuzlarımız, ne kadar büyük veya HoloLens fark etmez, IT altyapınız içindeki temel bilgileri anlar. En yaygın dağıtım senaryoları aşağıdakilerdir:
 
 | Senaryo |Kullanım | Önemli noktalar |
 |---------|---------|---------|
@@ -51,7 +51,7 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 ### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
 * Wi-Fi ağlar genellikle İnternet ve bulut hizmetleri için tamamen açıktır
-* Azure AD'ye Mobil Cihaz Yönetimi (MDM) Otomatik Kaydı--MDM (Intune) Tarafından Yönetilen
+* Mobil Cihaz (MDM) Cihaz Yönetimi (MDM) ile Azure AD'ye Katılma --MDM (Intune) Yönetilen
 * Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
   * Desteklenen cihaz başına tek veya birden çok kullanıcı
 * Tamamen Açık'tan Tek Uygulama Bilgi Noktası'ya kadar belirli kullanım örneklerine göre farklı cihaz kilitleme yapılandırma düzeyleri uygulanır.
@@ -88,7 +88,7 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 
 ### <a name="basic-common-configurations"></a>Temel Ortak Yapılandırmalar
 
-* Wi-Fi iç kaynaklara erişimi olan ve İnternet'e veya Bulut hizmetlerine sınırlı erişimi olan bir iç kurumsal ağdır.
+* Wi-Fi, iç kaynaklara erişimi olan ve İnternet'e veya Bulut hizmetlerine sınırlı erişimi olan bir iç kurumsal ağdır.
 * MDM Otomatik Kaydı ile Azure AD'ye Katılma
 * MDM (Intune) Yönetilen
 * Kullanıcılar kendi kurumsal hesaplarıyla (Azure AD) oturum açma
@@ -98,11 +98,11 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 
 ### <a name="common-challenges"></a>Yaygın Zorluklar
 
-* HoloLens 2, şirket içi AD'ye katılmayı veya System Center Configuration Manager (SCCM) desteklemez. MDM ile yalnızca Azure AD'ye katılma. Günümüzde birçok şirket SCCM tarafından yönetilen şirket içi AD'ye katılmış cihazlar olarak bu senaryoda Windows 10 bilgisayarlarını dağıtmaya devam ediyor ve bulut tabanlı MDM çözümleri aracılığıyla iç Windows 10 cihazlarını yönetmek için dağıtılmış/yapılandırılmış altyapıya sahip olabilir.
-* 2 HoloLens ilk bulut cihazı olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi ve diğer hizmetler için İnternet'e ve buluta bağlı hizmetlere yoğun şekilde güvenmektedir. Şirket ağına bağlanırken, HoloLens 2 ve üzerinde çalıştıran uygulamalara erişimi etkinleştirmek için büyük olasılıkla ara sunucu/güvenlik duvarı kurallarının ayarlanması gerekir.
-* Kurumsal Wi-Fi bağlantısı genellikle cihazın veya kullanıcının ağ kimlik doğrulaması için sertifikalar gerektirir. MDM aracılığıyla cihazlarına sertifika dağıtmak Windows 10 gerekli altyapıyı veya ayarları yapılandırmak zor olabilir.
+* HoloLens 2, şirket içi AD'ye katılmayı veya System Center Configuration Manager (SCCM) desteklemez. MDM ile yalnızca Azure AD'ye katılma. Günümüzde birçok şirket, şirket içi AD'ye katılmış cihazlar olarak bu senaryoda Windows 10 bilgisayarlarını dağıtmaya devam ediyor ve SCCM tarafından yönetilen ve bulut tabanlı MDM çözümleri aracılığıyla iç Windows 10 cihazlarını yönetmek için dağıtılmış/yapılandırılmış altyapıya sahip olamayabilirsiniz.
+* 2 HoloLens bir bulut ilk cihazı olduğundan, kullanıcı kimlik doğrulaması, işletim sistemi güncelleştirmeleri, MDM yönetimi ve diğer hizmetler için yoğun olarak İnternet'e ve buluta bağlı hizmetlere bağlıdır. Şirket ağına bağlanırken, büyük olasılıkla HoloLens 2 ve üzerinde çalıştıran uygulamalar için erişimi etkinleştirmek için ara sunucu/güvenlik duvarı kurallarının ayarlanması gerekir.
+* Kurumsal Wi-Fi bağlantısı genellikle cihazın veya kullanıcının ağ kimlik doğrulaması için sertifikalar gerektirir. MDM aracılığıyla cihazlarına sertifika dağıtmak Windows 10 gerekli altyapının veya ayarların yapılandırılması zor olabilir.
 
-İlgili Kurumsal Bağlantılı kılavuzu, HoloLens 2'nin mevcut cihaz yönetiminize nasıl kaydedilir, gerektiğinde lisanslar nasıl uygulanacak ve son kullanıcılarının bir Dynamics 365 Kılavuzu çalıştırabileceklerini ve cihaz ayarlandıktan sonra özel iş hattı uygulamalarını kullanabileceğini nasıl doğrulayabilecekleri hakkında bilgi verir.
+İlgili Kurumsal Bağlı kılavuzu, HoloLens 2'nin mevcut cihaz yönetiminize nasıl kaydedilir, gerektiğinde lisanslar nasıl uygulanacak ve son kullanıcılarının bir Dynamics 365 Kılavuzu çalıştırabileceklerini ve cihaz ayarlandıktan sonra özel iş hattı uygulamalarını kullanabileceğini nasıl doğrulayabilecekleri hakkında bilgi verir.
 
 > [!div class="nextstepaction"]
 > [Kurumsal Bağlantılı dağıtım kılavuzu](hololens2-corp-connected-overview.md)
@@ -136,7 +136,7 @@ Aşağıdakiler için bu dağıtım modelini düşünün:
 * Bulut hizmetleri kullanılamaz, bu nedenle 2. HoloLens sınırlayıcıdır.
 * Bu cihazların el ile yapılandırılması, yapılandırılması ve güncelleştirilmiş olması nedeniyle daha yüksek yönetim yükü.
 
-İlgili Çevrimdışı güvenli kılavuz, güvenli ortamlarda kullanmak üzere bir HoloLens 2'nin kilitlenmesini sağlayan örnek Sağlama Paketi uygulama yönergesi sağlar.
+karşılık gelen çevrimdışı güvenli kılavuz, güvenli ortamlarda kullanılmak üzere HoloLens 2 ' ye kilitlenecek örnek bir sağlama paketi uygulamaya yönelik yönerge sağlar.
 
 > [!div class="nextstepaction"]
 > [Çevrimdışı güvenli ortam dağıtım kılavuzu](hololens-common-scenarios-offline-secure.md)
