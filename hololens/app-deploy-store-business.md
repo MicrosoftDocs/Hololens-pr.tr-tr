@@ -1,41 +1,41 @@
 ---
 title: İş İçin Microsoft Store
-description: Karma gerçeklik uygulamalarınızı işletmenize İş İçin Microsoft Store uygulamalarla nasıl çalışılır?
+description: karma gerçeklik uygulamalarınızı işletmenize yayımlamak için İş İçin Microsoft Store ile nasıl çalışacağınızı öğrenin.
 keywords: İş İçin Microsoft Store, msfb, uygulama dağıtımı, mağaza
 author: evmill
 ms.author: v-evmill
-ms.date: 6/22/2020
+ms.date: 9/22/2021
 ms.prod: hololens
 ms.topic: article
 ms.sitesec: library
 ms.localizationpriority: medium
 audience: HoloLens
 manager: yannisle
-ms.openlocfilehash: d7d5ad05dc675cf07afd075f4fb52d24cd4d3e15
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: b60795d7a5a4f9fab980ee16a23250faa6025bb5
+ms.sourcegitcommit: ab86b31357004726d8a28ebae76123728adc8e59
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033051"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "128306157"
 ---
 # <a name="microsoft-store-for-business"></a>İş İçin Microsoft Store
 
-Bu İş İçin Microsoft Store, belirli pazarlarda ücretsiz ve ücretli uygulamaları toplu olarak kullanmak üzere bulma, edinme, yönetme ve dağıtmanın esnek bir yolu olan işletmelerde veya kuruluşlarda öncelikli olarak IT karar verenler ve Windows 10 yöneticiler için tasarlanmıştır. 
+[İş İçin Microsoft Store](/microsoft-store/microsoft-store-for-business-overview) , birincil olarak iş veya kuruluşların bt karar mekanizmalarına ve yöneticilerine, toplu ve ücretli uygulamaları, birim içindeki cihazlara Windows 10 için seçin. 
 
-Tek bir envanterde Microsoft Store uygulamaları ve özel iş hattı uygulamalarını yönetebilir ve gerektiğinde lisansları atayabilirsiniz ve yeniden kullanabilirsiniz. Ayrıca, kuruluş için en iyi dağıtım yöntemini de seçebilirsiniz: uygulamaları doğrudan kişilere ve ekiplere atama, uygulamaları Microsoft Store sayfalarına yayımlama veya daha fazla seçenek için yönetim çözümleriyle bağlanma.
+Microsoft Store uygulamalarını ve özel iş kolu uygulamalarını tek bir envanterde yönetebilir ve gerektiğinde lisansları atayabilir ve yeniden kullanabilirsiniz. kuruluşunuz için en iyi dağıtım yöntemini de seçebilirsiniz: doğrudan kişilere ve takımlara uygulama atama, Microsoft Store ' deki özel sayfalara uygulama yayımlama veya daha fazla seçenek için yönetim çözümlerine bağlanma.
 
-Bir İş İçin Microsoft Store son kullanıcı tarafından kullanılırken, Microsoft Store başlatacak. Kullanıcı başlatıldıktan sonra kuruluş adı ile sekmeyi seçerek kullanıcılara veya cihaza sunulan uygulamalar sunulacaktır.
+İş İçin Microsoft Store son kullanıcı tarafından kullanıldığında Microsoft Store uygulamasını başlatacaktır. Kullanıcı başlatıldıktan sonra, kuruluş adlarıyla ilgili sekmeyi seçebilecektir, daha sonra kendilerine veya bu cihaz için kullanılabilir uygulamalar sunulur.
 
 > [!Note] 
-> İş İçin Microsoft Store cihazlara uygulamaları otomatik olarak indirmez (anında yükleme). Ancak, uygulamaları İş İçin Microsoft Store hedeflemek ve cihazlarla eşitlemek için cihaz yönetimi (MDM) sunucunuzla ilişkilendirilebilirsiniz.
+> İş İçin Microsoft Store uygulamaları cihazlara otomatik olarak indirmez (gönderim). ancak, İş İçin Microsoft Store uygulamalar, uygulamaları hedeflemek ve cihazlara eşitlemek için cihaz yönetimi (MDM) sunucusuyla ilişkilendirilebilir.
 
-Aşağıdaki sayfaları ziyaret edin ve bu sayfayı nasıl kullanabileceğiniz hakkında daha fazla bilgi İş İçin Microsoft Store:
+İş İçin Microsoft Store kullanma hakkında daha fazla bilgi edinmek için aşağıdaki sayfaları ziyaret edin:
 
-* [Uygulama yüklemek için kullanılan izin düzeyleri](/mem/intune/configuration/device-restrictions-windows-holographic#app-store)
-* [İş Için Mağazanıza uygulama ekleme](/mem/intune/apps/store-apps-windows)
-* [Uygulamalarınızı çalışan gruplarına atama](/mem/intune/apps/windows-store-for-business)
+* [Uygulamaları yüklemek için kullanılan izin düzeyleri](/mem/intune/configuration/device-restrictions-windows-holographic#app-store)
+* [Iş için deponuza uygulama ekleme](/mem/intune/apps/store-apps-windows)
+* [Çalışan gruplarına uygulama atama](/mem/intune/apps/windows-store-for-business)
 
-İş ortağınızı ilişkilendirmek İş İçin Microsoft Store [Intune ile İş İçin Microsoft Store'ı ziyaret edin.](/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune)
+İş İçin Microsoft Store ilişkilendirmek için [İş İçin Microsoft Store ıntune ile ilişkilendirme](/mem/intune/apps/windows-store-for-business#associate-your-microsoft-store-for-business-account-with-intune)makalesini ziyaret edin.
 
 > [!Tip]
-> Gelişmiş Kurtarma Yardımcı [(ARC) ve](/microsoft-store/distribute-offline-apps) Windows Configuration Designer (WCD) gibi uygulamaları kullanırken çevrimdışı uygulamaları dağıtma hakkında daha fazla bilgi edinin.
+> gelişmiş kurtarma yardımcısı (ARC) ve Windows yapılandırma tasarımcısı (wcd) gibi uygulamalar kullanırken [çevrimdışı uygulamalar dağıtma](/microsoft-store/distribute-offline-apps) hakkında daha fazla bilgi edinin.
