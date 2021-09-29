@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: c1d83577400126903a80999c46ddaeabddaba029
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: f646e70c61bda17fb315670e94a6fbada010e1d5
+ms.sourcegitcommit: c73cdefbdb4411f6a187cc38bb2570dadeb156bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126036436"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129164007"
 ---
 # <a name="about-hololens-2"></a>HoloLens 2 hakkında
 
@@ -48,7 +48,7 @@ HoloLens 2 kullanmak için bir kullanıcı hesabı gerekir.
 
 ### <a name="power-supply-details"></a>Güç kaynağı ayrıntıları
 
-Aygıtla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı bir 18W şarj aygıtı.  Bu, 2A 'daki 9V sağlar.
+Aygıtla birlikte gelen güç kaynağı ve USB kablosu, ücretlendirme için desteklenen en iyi mekanizmadır. Güç kaynağı bir 18W şarj aygıtı.  2A 'da 9V sağlar.
 
 Doldurma oranı ve hız, cihazın çalıştığı ortama göre farklılık gösterebilir.
 
@@ -124,7 +124,7 @@ Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 
 |---|---|
 | **El izleme** | İki el ile tam ifadeli model, doğrudan işleme |
 | **Göz izleme** | Gerçek zamanlı izleme |
-| **Ses** | Cihazda komut ve denetim; Cortana bağlantısı olan doğal dil |
+| **Ses** | Cihaz üzerinde komut ve denetim; Cortana bağlantısı olan doğal dil |
 
 ### <a name="environment-understanding"></a>Ortam anlama
 
@@ -140,14 +140,14 @@ Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 
 |---|---|
 | **Windows Holografik İşletim Sistemi** | Windows [Holographic OS](hololens-release-notes.md)ile Windows 10 kullanıcılar, HoloLens 2 aracılığıyla karma gerçeklik ortamında uygulamalarının ve oyunlarının bir HoloLens.
 | **3B Görüntüleyici** | [3B Görüntüleyici,](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) 3 boyutlu modelleri ve animasyonları gerçek zamanlı olarak kolayca görüntülemenizi sağlar.|
-| **Cortana** | [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab)üretkenlik yardımcınız olan bu özellik, önemli konulardan en iyi şekilde size yardımcı olur ve ihtiyacınız olan şeyi bulmak için zaman tasarrufu sağlar.  |
+| **Cortana** | [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab)üretkenlik yardımcınız olan Cortana, önemli konulara en iyi şekilde devam ediyor ve ihtiyacınız olan şeyi bulmak için zaman tasarrufu sağlar.  |
 | **Dynamics 365 Kılavuzları** |  [Dynamics 365 Kılavuzları,](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) çalışanların yeni becerileri cihazlarda daha hızlı öğrenmelerine HoloLens yardımcı olur. |
 | **Dynamics 365 Remote Assist** | [Microsoft Dynamics 365 Remote Assist,](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) teknisyenlere Microsoft Teams veya Dynamics 365 Remote Assist kullanarak uzaktan işbirliği yapma ve sorunları çözme yetkisi sağlar.  |
 | **Geri Bildirim Merkezi** | [Geri Bildirim Merkezi](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) önerilerinizi veya sorunlarınızı paylaşarak Windows ve uygulamalar hakkında geri bildirim sağlamanızı sağlar.  |
-| **Dosya Gezgini** | Dosya Gezgini, dosya sistemlerine erişmek için bir grafik kullanıcı arabirimi sağlar. |
+| **Dosya Gezgini** | Dosya Gezgini sistemlerine erişmek için grafik kullanıcı arabirimi sağlar. |
 | **Posta ve Takvim** | Posta [ve Takvim uygulamaları](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) e-postanızı güncel kalmanıza, zamanlamanızı yönetmenize ve kişilerinizi iletişimde kalmanıza yardımcı olur. |
 | **Microsoft Edge** | Microsoft Edge, göz atma sırasında daha fazla gizlilik, daha fazla üretkenlik ve daha fazla değerle birinci sınıf performans sunar. |
-| **Microsoft Store** | Bu [Microsoft Store,](https://www.microsoft.com) uygulama ve oyunlarla birlikte çalışmak için git kaynağınız HoloLens.|
+| **Microsoft Store** | Bu [Microsoft Store,](https://www.microsoft.com) uygulama ve oyunlarla birlikte çalışan uygulamalar ve oyunlar için git kaynağınız HoloLens.|
 | **Filmler & TV** | [Movies & TV,](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) size basit, hızlı ve zarif bir uygulamada en son eğlenceyi getirir. |
 | **OneDrive** | [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) her yerden tüm cihazlarınıza erişmenizi ve dosyaları düzenlemenizi sağlar.  |
 | **Fotoğraflar** | [Fotoğraflar,](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) fotoğraf ve videolarınızı görüntülemenize, düzenlemenize, film oluşturmanıza ve müzik oluşturmanıza olanak sağlar.  |
@@ -164,7 +164,7 @@ Cihaz açıkken, Iç pil ücreti yüzdesini korumak/ilerletmek için, en az bir 
 * [SAR Bilgileri](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ### <a name="regulatory-information"></a>Mevzuat bilgileri
-[HoloLens:](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information)Sıcaklık, atma, radyo ve TV girişimi ve daha fazlası hakkında bilgi içerir.
+[HoloLens Düzenleme:](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information)Sıcaklık, atma, radyo ve TV girişimi ve daha fazlası hakkında bilgi içerir.
 
 ## <a name="warranty-information"></a>Garanti Bilgileri
 
@@ -173,7 +173,7 @@ Microsoft HoloLens 2, standart sınırlı garanti ile [birlikte gelir.](https://
 
 Satın alma, Microsoft Store [Kullanım koşullarına ve satış koşullarına tabidir.](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1) Tüm satışlar nihaidir. Para iadesi yoktur.
 
-2 HoloLens satın alarak yazılım lisans sözleşmelerini [kabul etmiş oluruz.](https://www.microsoft.com/Useterms/)
+2 HoloLens satın alarak yazılım lisans [sözleşmelerini kabul etmiş oluruz.](https://www.microsoft.com/Useterms/)
 
 13'den küçük çocukların kullanımına yönelik değildir.
 
@@ -191,12 +191,12 @@ Satın alma, Microsoft Store [Kullanım koşullarına ve satış koşullarına t
 |     Exterior Shipper Weight    |     3,284 kg           |     7,240 lb           |
 
 > [!NOTE]
-> - Birim: Siyah, perakende stili kutu HoloLens 2 satılır.
+> - Birim: Siyah, perakende stili kutu HoloLens 2'ye satılır.
 > - Shipper:Unit çevresindeki koruyucu sevkiyat paketlemesi.
 
 ## <a name="finding-the-serial-number"></a>Seri numarasını bulma
 
-2 cihazın HoloLens numarası, mengenenin altına yazdırılır.
+HoloLens 2 cihazlarının seri numarası, mengenenin altına yazdırılır.
 
 1. Cihazın çıtayı kaldırın.
 1. Göz atma panelinin yakınına bakın.
