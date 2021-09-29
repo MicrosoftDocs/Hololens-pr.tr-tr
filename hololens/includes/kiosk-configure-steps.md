@@ -1,44 +1,44 @@
 ---
-ms.openlocfilehash: 7a7122790d3e0257c07cdd8bc8c7f658b3a0e279
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: 3d6b36124cd50dcc9f420227cb7787f0d787c013
+ms.sourcegitcommit: c73cdefbdb4411f6a187cc38bb2570dadeb156bf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122859433"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129220834"
 ---
 # <a name="microsoft-intune-single-app-kiosk-template"></a>[tek uygulama bilgi noktası şablonu Microsoft Intune](#tab/uisak)
 
-## <a name="microsoft-intune-single-app-kiosk-template"></a>tek uygulama bilgi noktası şablonu Microsoft Intune
+### <a name="microsoft-intune-single-app-kiosk-template"></a>tek uygulama bilgi noktası şablonu Microsoft Intune
 
-1. Yapılandırma profili oluşturma <br> 
+1. Yapılandırma profili oluşturma <br>
 <kbd>
     <img alt="Create a configuration profile" src="../images/kiosk-steps/kiosk-template-sa-1.png"/>
 </kbd>
 
 <br>
 
-2. Bilgi noktası şablonu seçin <br> 
+2. Bilgi noktası şablonu seçin <br>
 <kbd>
     <img alt="Create a kiosk profile" src="../images/kiosk-steps/kiosk-template-sa-2.png" width="415" height="530" />
 </kbd>
 
 <br>
 
-3. Tek bir uygulama veya birden çok uygulama bilgi noktası olup olmadığını ve ayrıca bilgi noktası modu için kullanıcı hedefleme türünü seçin <br> 
+3. Tek bir uygulama veya birden çok uygulama bilgi noktası olup olmadığını ve ayrıca bilgi noktası modu için kullanıcı hedefleme türünü seçin <br>
 <kbd>
     <img alt="Select single app kiosk mode" src="../images/kiosk-steps/kiosk-template-sa-3.png"/>
 </kbd>
 
 <br>
 
-4. Bilgi noktası modunda çalıştırılacak uygulamayı seçin <br> 
+4. Bilgi noktası modunda çalıştırılacak uygulamayı seçin <br>
 <kbd>
     <img alt="Choose the app" src="../images/kiosk-steps/kiosk-template-sa-4.png"/>
 </kbd>
 
 <br>
 
-5. Diğer seçenekleri olduğu gibi bırakın <br> 
+5. Diğer seçenekleri olduğu gibi bırakın <br>
 <kbd>
     <img alt="Leave options" src="../images/kiosk-steps/kiosk-template-sa-5.png"/>
 </kbd>
@@ -56,37 +56,37 @@ ms.locfileid: "122859433"
 
 # <a name="microsoft-intune-multi-app-kiosk-template"></a>[birden çok uygulama bilgi noktası şablonu Microsoft Intune](#tab/uimak)
 
-## <a name="microsoft-intune-multi-app-kiosk-template"></a>birden çok uygulama bilgi noktası şablonu Microsoft Intune
+### <a name="microsoft-intune-multi-app-kiosk-template"></a>birden çok uygulama bilgi noktası şablonu Microsoft Intune
 
-1. Yapılandırma profili oluşturma <br> 
+1. Yapılandırma profili oluşturma <br>
 <kbd>
     <img alt="Create a configuration profile" src="../images/kiosk-steps/kiosk-template-sa-1.png"/>
 </kbd>
 
 <br>
 
-2. Bilgi noktası şablonu seçin <br> 
+2. Bilgi noktası şablonu seçin <br>
 <kbd>
     <img alt="Create a kiosk profile" src="../images/kiosk-steps/kiosk-template-sa-2.png" width="415" height="530" />
 </kbd>
 
 <br>
 
-3. Tek bir uygulama veya birden çok uygulama bilgi noktası olup olmadığını ve ayrıca bilgi noktası modu için kullanıcı hedefleme türünü seçin <br> 
+3. Tek bir uygulama veya birden çok uygulama bilgi noktası olup olmadığını ve ayrıca bilgi noktası modu için kullanıcı hedefleme türünü seçin <br>
 <kbd>
     <img alt="Select single app kiosk mode" src="../images/kiosk-steps/kiosk-template-mak-3.png"/>
 </kbd>
 
 <br>
 
-4. Bilgi noktası modunda çalıştırılacak uygulamaları seçin <br> 
+4. Bilgi noktası modunda çalıştırılacak uygulamaları seçin <br>
 <kbd>
     <img alt="Choose the app(s)" src="../images/kiosk-steps/kiosk-template-mak-4.png"/>
 </kbd>
 
 <br>
 
-5. Diğer seçenekleri olduğu gibi bırakın <br> 
+5. Diğer seçenekleri olduğu gibi bırakın <br>
 <kbd>
     <img alt="Leave options" src="../images/kiosk-steps/kiosk-template-sa-5.png"/>
 </kbd>
@@ -106,7 +106,7 @@ ms.locfileid: "122859433"
 
 # <a name="microsoft-intune-custom-template"></a>[özel şablon Microsoft Intune](#tab/intunecustom)
 
-## <a name="microsoft-intune-custom-template"></a>özel şablon Microsoft Intune
+### <a name="microsoft-intune-custom-template"></a>özel şablon Microsoft Intune
 
 1. İstediğiniz bilgi noktası deneyiminiz için XML yapılandırması oluşturun. Başlamak için buradaki [örneklere](../hololens-kiosk-reference.md#kiosk-xml-code-samples) bakın.
 
@@ -150,7 +150,7 @@ ms.locfileid: "122859433"
 
 # <a name="runtime-provisioning---multi-app"></a>[Çalışma zamanı sağlama-çoklu uygulama](#tab/ppkgmak)
 
-## <a name="runtime-provisioning---multi-app"></a>Çalışma zamanı sağlama-çoklu uygulama
+### <a name="runtime-provisioning---multi-app"></a>Çalışma zamanı sağlama-çoklu uygulama
 
 1. İstediğiniz bilgi noktası deneyiminiz için XML yapılandırması oluşturun. Başlamak için buradaki [örneklere](../hololens-kiosk-reference.md#kiosk-xml-code-samples) bakın.
 
@@ -216,7 +216,7 @@ ms.locfileid: "122859433"
 
 # <a name="runtime-provisioning---single-app"></a>[Çalışma zamanı sağlama-tek uygulama](#tab/ppkgsak)
 
-## <a name="runtime-provisioning---single-app"></a>Çalışma zamanı sağlama-tek uygulama
+### <a name="runtime-provisioning---single-app"></a>Çalışma zamanı sağlama-tek uygulama
 
 1. [Windows yapılandırma tasarımcısını](https://www.microsoft.com/store/apps/9nblggh4tx22)açın.
 
