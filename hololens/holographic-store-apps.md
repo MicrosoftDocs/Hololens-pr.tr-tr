@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f7d4ddf41f02b083000c1e57f5140c38527826d7
-ms.sourcegitcommit: b9cd7ed5edb98249c609b547b90587863ea1cb9e
+ms.openlocfilehash: 4705112ee41ce6de0598358b9c81775f261bb2fa
+ms.sourcegitcommit: 8a3f925d2bda13c095b35f14d80afdd876aa859c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/01/2021
-ms.locfileid: "129364406"
+ms.lasthandoff: 10/12/2021
+ms.locfileid: "129800564"
 ---
 # <a name="find-install-and-uninstall-applications-from-the-microsoft-store"></a>Microsoft Store uygulamaları bulun, yükleme ve kaldırma
 
@@ -74,6 +74,9 @@ Uygulamaları indirmek için bir Microsoft hesabı oturum açmanız gerekir. Baz
 1. Uygulamanın sayfasında Al **veya** **Al** ' ı seçin (satın alma gerekebilir).
 
 ### <a name="install-microsoft-onedrive-pwa-app"></a>Microsoft OneDrive PWA uygulamasını yükler
+
+> [!NOTE]
+> PWA Microsoft Intune/MDM aracılığıyla yönetilemez veya dağıtılamıyor.
 
 ön koşullar: kullanıcı HoloLens 2 cihazını iş kiracılarına zaten katılmış.
 
