@@ -8,26 +8,283 @@ ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 9/16/2021
+ms.date: 10/12/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8ad76f1c0cc16101b10fb0576c1b3763caac450d
-ms.sourcegitcommit: db573910a0c81fdf6edaca8cb8ef3d0be5e25603
+ms.openlocfilehash: c45a9a05cc7911bc9866df5e4313bc27a205d333
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "129432037"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924485"
 ---
 # <a name="hololens-2-release-notes"></a>HoloLens 2 sürüm notları
 
 HoloLens cihazlarınızla üretken bir deneyiminizin olduğundan emin olmak için özellik, hata ve güvenlik güncelleştirmelerini serbest bırakmaya devam ediyoruz. bu sayfada, her ay HoloLens yenilikleri görebilirsiniz. en son HoloLens 2 güncelleştirmesini almak için güncelleştirmeleri denetleyebilir ve [gelişmiş kurtarma yardımcısı aracılığıyla cihazınızı flash](hololens-recovery.md#clean-reflash-the-device) [ile el ile güncelleştirebilir](hololens-update-hololens.md#check-for-updates-and-manually-update) veya tam flash güncelleştirmesi (ffu) alabilirsiniz. [İndirme](https://aka.ms/hololens2download) güncel tutulur ve en son genel kullanıma sunulan derlemeyi sağlar.
 
 > [!NOTE]
-> son Windows 11 duyurusu, Windows bilgisayar sürümüne odaklanmıştı. kısa süre önce 2021 mayıs ' de HoloLens 2 ' ye [büyük bir işletim sistemi güncelleştirmesi](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) başlattık ve bu fall için müşteri geri bildirimlerine bağlı olarak yaklaşan bir sürüm üzerinde çalışıyoruz.
+> son Windows 11 duyurusu, Windows bilgisayar sürümüne odaklanmıştı. son zamanlarda [2021 ekim ' de 2 ' ye HoloLens 2 ' ye büyük bir işletim sistemi güncelleştirmesi](#windows-holographic-version-21h2)başladık ve müşteri geri bildirimlerine göre daha yaklaşan yayınlar üzerinde çalışıyoruz.
+
+## <a name="windows-holographic-version-21h2"></a>Windows Holographic, sürüm 21H2
+
+- Derleme 20348,1432
+
+Windows Holographic sürüm 21h2 artık kullanılabilir ve 2 kullanıcı ve bt uzmanlarına HoloLens harika yeni özellikler sunuyor. Bu, geliştirilmiş sorun giderme ve cihaz raporları, bilgi noktası modundaki bazı sabit hatalar ve sertifika Görüntüleyicisi, genişletilmiş yönetilebilirlik yüzeyi ve artırılmış güncelleştirme güvenilirliği hakkında bilgi sunar. bu özellik güncelleştirmesinin yeni bir flaggeme özelliği, hareketli Platform modumuza HoloLens geliyor. HoloLens 2 ' nin tüm yeni harika özelliklerine göz atın!
+
+Bu en son sürüm 21H1 sürümüne yönelik aylık bir güncelleştirmedir, ancak bu kez yeni özellikler de ekledik. ana yapı numarası aynı kalacaktır ve Windows Update sürüm 21h1 (derleme 20348) için aylık bir yayın olduğunu belirtecektir. en son kullanılabilir derleme 20348.1432 + ' de olduğunu onaylamak için Ayarlar > ekranında yapı numaranızı görebilirsiniz. en son sürüme güncelleştirmek için Ayarlar uygulamasını açın, güncelleştirme & güvenlik ' e gidin ve güncelleştirmeler için denetle ' ye dokunun. HoloLens güncelleştirmelerinin nasıl yönetileceği hakkında daha fazla bilgi için, [HoloLens güncelleştirmelerini yönet](hololens-updates.md) ' e gidin.
+
+| Özellik                 | Açıklama                | Kullanıcı veya senaryo |
+|-------------------------|----------------------------|--------------|
+| [Platform modu taşınıyor](#moving-platform-mode) | yapılandırıldığında, büyük deniz mavisi ' de düşük dinamik hareket yaşayan HoloLens 2 ' nin kullanımını sağlayan Platform modu beta 'yı tanıtır. | Tümü |
+| [Sertifika Yöneticisi için PFX dosya desteği](#pfx-file-support-for-certificate-manager) | Ayarlar kullanıcı arabirimi aracılığıyla PFX sertifikaları ekleyin | Son Kullanıcı |
+| [HoloLens üzerinde Ayarlar gelişmiş tanılama raporunu görüntüle](#view-advanced-diagnostic-report-in-settings-on-hololens) | Cihazdaki MDM tanılama günlüklerini görüntüle | Sorun giderme |
+| [Çevrimdışı tanılama bildirimleri](#offline-diagnostics-notifications) | Günlük toplama için audiogörsel geri bildirimi | Sorun giderme |
+| [Düşük depolama günlüğü koleksiyonu geliştirmeleri](#low-storage-log-collection-improvements) | Düşük depolama durumları sırasında günlük toplama senaryolarında iyileştirmeler. | Sorun giderme |
+| [raporlama HoloLens ayrıntıları için CSP değişiklikleri](#csp-changes-for-reporting-hololens-details) | Verileri sorgulamak için yeni CSP 'Ler | BT yöneticileri    |
+| [CSP tarafından denetlenen otomatik oturum açma ilkesi](#auto-login-policy-controlled-by-csp) | Hesapta otomatik olarak oturum açmak için kullanılır | BT yöneticileri |
+| [Geliştirilmiş güncelleştirme yeniden başlatma algılaması ve bildirimleri](#improved-update-restart-detection-and-notifications) | Güncelleştirmeler için yeni etkinleştirilen ilkeler ve UX. | BT yöneticileri |
+| [Uygulama güncelleştirmeleri için akıllı yeniden deneme](#smart-retry-for-app-updates) | BT yöneticilerinin uygulamaları güncelleştirmek için yeniden denemelere izin verir. | BT yöneticileri |
+| [Yalnızca Microsoft Store için yalnızca özel Mağaza uygulamaları kullanın](#use-only-private-store-apps-for-microsoft-store) | Mağaza uygulamasını yalnızca kuruluştan gelen uygulamaları gösterecek şekilde yapılandırma | BT Yöneticisi |
+| [WDAC ve LOB uygulamalarını kullanma](#use-wdac-and-lob-apps) | BT yöneticilerinin kendi uygulamalarını kullanmasına izin verir ve diğer uygulamaları engellemek için yine de WDAC kullanır. | BT yöneticileri |
+| [Düzeltmeler ve geliştirmeler](#fixes-and-improvements) | HoloLens düzeltmeler ve geliştirmeler. | Tümü |
+
+### <a name="it-admin-feature-checklist"></a>BT Yöneticisi özellik denetim listesi
+
+✔️ otomatik olarak oturum açmak için tek bir Azure AD hesabı ayarlamak isterseniz, [Bu yenı CSP 'yi yapılandırın.](#auto-login-policy-controlled-by-csp) <br>
+✔️ güncelleştirme başarısız olduktan sonra uygulamalarınızı otomatik olarak güncelleştirmeye çalışacak şekilde yapılandırmak istiyorsanız, [Bu yenı CSP 'yi akıllı yeniden deneme için ayarlayın.](#smart-retry-for-app-updates) <br>
+✔️ işletim sistemi güncelleştirmeleri üzerinde daha fazla denetime sahip olmak istiyorsanız, bu [Yeni etkinleştirilmiş güncelleştirme ilkelerine](#improved-update-restart-detection-and-notifications) göz atın. <br>
+✔️ kuruluşunuzun uygulamalarını Microsoft Store aracılığıyla şirket mağazasındaki kullanılabilir duruma getirmeniz gerekiyorsa, ancak yalnızca kuruluşunuzun uygulamalarına erişime izin vermek ve tam mağaza değil olmak istiyorsanız, [bu ilkeyi ayarlayın.](#use-only-private-store-apps-for-microsoft-store) <br>
+✔️ boş depolama alanını, HoloLens cihazlarınızın ssıd veya bssıd 'sini öğrenmek isterseniz, bu [raporlama csp 'lerine](#csp-changes-for-reporting-hololens-details) göz atın. <br>
+✔️ uygulamaların veya işlemlerin başlatılmasını engellemek için WDAC kullanmak istiyorsanız, ancak aynı zamanda kendi iş kolu uygulamalarınızı kullanmanız gerekiyorsa, artık [WDAC ILKENIZDE lob 'a izin](#use-wdac-and-lob-apps)verebilirsiniz.
+
+### <a name="moving-platform-mode"></a>Platform modu taşınıyor
+
+[Windows Holographic, sürüm 21h2 '](hololens-release-notes.md#windows-holographic-version-21h2) den başlayarak, HoloLens 2 ' de düşük dinamik hareket taşıma platformlarındaki izleme için beta desteği ekledik. derlemeyi yükledikten ve platformu taşıma modunu etkinleştirdikten sonra, büyük ve büyük deniz mavisi gibi daha önce erişilemeyen ortamlarda HoloLens 2 ' yi kullanabilirsiniz. Şu anda özelliği, yalnızca bu taşıma platformlarının etkinleştirilmesini hedeflenmiştir. Başka ortamlarda özelliği kullanmayı denediğinize hiçbir şey engel olmadıysa, bu özellik önce bu ortamlar için destek eklemeye odaklanılmıştır.
+
+Nelerin desteklendiği ve bu yeni özelliğin nasıl etkinleştirileceği hakkında daha fazla bilgi edinmek için, [hareketli platform sayfasını ziyaret edin](hololens2-moving-platform.md).
+
+#### <a name="overview-to-try-out-moving-platform-mode"></a>Taşıma platformu modunu denemeye genel bakış
+
+1. [Geliştirici modunu ve cihaz portalını etkinleştirin](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+1. [Platform modunun cihaz portalı aracılığıyla taşınmasını etkinleştirin](hololens2-moving-platform.md#enabling-moving-platform-mode).
+1. Cihazınızı büyük taşıma platformunuza götürün ve kararlı hologramlar olduğunu gözlemleyin.
+
+### <a name="pfx-file-support-for-certificate-manager"></a>Sertifika Yöneticisi için PFX dosya desteği
+
+Windows ınsider build 20348,1405 ' de kullanıma sunulmuştur. Artık. pfx sertifikalarını kullanacak şekilde [sertifika yöneticisine](certificate-manager.md) destek ekledik. kullanıcılar **Ayarlar**  >  **güncelleştirme & güvenlik**  >  **sertifikalarına** gezindiğinde ve **sertifikayı yükler** ' i seçtiğinizde, kullanıcı arabirimi artık. pfx sertifika dosyasını destekliyor.
+Kullanıcılar, özel anahtarla, Kullanıcı deposuna veya makine deposuna. pfx sertifikasını içeri aktarabilir.
+
+#### <a name="overview-to-try-out-pfx-files-in-certificate-manager"></a>Sertifika Yöneticisi 'nde PFX dosyalarını denemeye genel bakış
+
+1. PFX dosyanızı hazırlayın.
+1. Bir USB-C kablosu aracılığıyla dosyayı cihazınıza kopyalayın.
+1. Ayarlar uygulamasını açın ve [sertifika yöneticisi](certificate-manager.md) ' ne gidin ve sertifikayı uygulayın.
+
+### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>HoloLens üzerinde Ayarlar gelişmiş tanılama raporunu görüntüle
+
+Yönetilen cihazlar için sorun giderme sırasında, beklenen bir ilke yapılandırmasının uygulandığını onaylayan önemli bir adımdır. daha önce bu yeni özellik için, bu yeni özelliğe, **Ayarlar** hesapları aracılığıyla toplanan mdm tanılama günlüklerini dışarı aktardıktan sonra, bu yeni özelliğe cihaz yakınından veya cihazın yakınında yapılması gerekiyordu  ->    >  . 
+
+Artık MDM Tanılaması, Edge tarayıcısı kullanılarak cihazda görüntülenebilir. MDM Tanılama raporunu daha kolay bir şekilde görüntülemek için iş veya okul sayfasına gidin ve **Gelişmiş tanılama raporunu görüntüle**' yi seçin. Bu, raporu yeni bir kenar penceresinde oluşturur ve açar.
+
+![Ayarlar uygulamasında gelişmiş tanılama raporunu görüntüleyin.](./images/view-advanced-diagnostic-report.jpg)
+
+#### <a name="overview-to-try-out-the-advanced-diagnostic-report"></a>Gelişmiş tanılama raporunu denemek için genel bakış
+
+1. Ayarlar uygulamasını açın.
+1. Hesaplar sayfasına gidin ve yeni bağlantıya tıklayarak **Yönetim günlüklerinizi dışarı aktarın**.
+1. Cihazınızın yapılandırmalarında Gelişmiş bilgileri görüntüleyin.
+
+### <a name="offline-diagnostics-notifications"></a>Çevrimdışı tanılama bildirimleri
+
+Bu, [çevrimdışı tanılama](hololens-diagnostic-logs.md#offline-diagnostics)adlı mevcut bir özelliğe yönelik bir güncelleştirmedir. Daha önce, kullanıcıların tanılama toplamayı tetiklediği veya tamamladığı üzerinde hiçbir açık gösterge yoktu.
+artık [Windows Holographic, sürüm 21h2](hololens-release-notes.md#windows-holographic-version-21h2)' ye eklenmiştir, çevrimdışı tanılamalar için iki tür audiogörsel geri bildirimi vardır. Koleksiyon başladığında ve tamamlandığında, her ikisi için de her ikisi için bir bildirim görüntülendi. Bunlar Kullanıcı oturum açtığında görüntülenir ve görseller vardır.
+
+![Günlüklerin toplanması için bildirim.](./images/logcollection1.jpg)
+
+![Günlük toplama tamamlandığında bildirim.](./images/logcollection2.jpg)
+
+Kullanıcılar, bir görüntüleme erişimi olmayan için bir geri dönüş günlüğü toplama mekanizması olarak çevrimdışı tanılama kullandığından, oturum açma veya hala OOBE 'de yer alma, Günlükler toplandığında yürütülen bir ses destesi de olacaktır. Bu ses, bildirim bildirimine ek olarak çalınacaktır.
+
+Bu yeni özellik, cihazınız güncelleştirildiğinde etkinleştirilecek ve etkinleştirilmesi veya yönetilmesi gerekmez. Bu yeni geri bildirimin görüntülenemediğini veya duyulmayacak herhangi bir olayda, çevrimdışı tanılama yine de oluşturulacaktır.
+
+Daha yeni bir audiogörsel geri bildirimi eklenmesini umuyoruz ve daha hızlı bir şekilde Tanılama verileri toplanmanız ve sorunlarınızı giderebilmek daha kolay olacaktır.
+
+Bu bilgiler daha sonra [tanılama günlükleri sayfasında](hololens-diagnostic-logs.md#offline-diagnostics)görüntülenebilir.
+
+#### <a name="overview-to-try-out-the-diagnostics-notifications"></a>Tanılama bildirimlerini denemek için genel bakış
+
+1. Cihazınızın kilidini açın ve bunu aşın.
+1. [Çevrimdışı tanılama](hololens-diagnostic-logs.md#offline-diagnostics)toplamak için **Güç** ve **ses aşağı** düğmesi birleşimine basın.
+1. Cihazınızın başlatıldığı ve günlüklerin toplanması tamamlandığında bildirim bildirimlerini görüntüleyin ve ses ipuçlarını dinleyin.
+
+### <a name="low-storage-log-collection-improvements"></a>Düşük depolama günlüğü koleksiyonu geliştirmeleri
+
+Tanılama günlükleri toplandığında bir cihazın disk alanında yetersiz olduğu durumlarda, **StorageDiagnostics.zip** adlı ek bir rapor oluşturulur. düşük depolama eşiği Windows [depolama alanı algılaması](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)tarafından otomatik olarak belirlenir.
+
+Bu bilgiler daha sonra [tanılama günlükleri sayfasında](hololens-diagnostic-logs.md#offline-diagnostics)görüntülenebilir.
+
+#### <a name="overview-to-try-out-the-low-storage-improvements"></a>Düşük depolama geliştirmelerini denemek için genel bakış
+
+1. Cihazınızın depolama alanını doldurup dolduralım.
+1. [Çevrimdışı tanılama](hololens-diagnostic-logs.md#offline-diagnostics)toplamak için **Güç** ve **ses aşağı** düğmesi birleşimine basın.
+1. HoloLens belgeler klasöründe depolanan Günlükler koleksiyonunda yeni bir dosya olduğunu gözlemleyin.
+
+### <a name="csp-changes-for-reporting-hololens-details"></a>raporlama HoloLens ayrıntıları için CSP değişiklikleri
+
+aşağıdaki csp 'ler HoloLens cihazlarınızdan bilgi bildirmenin yeni yollarla güncelleştirilmiştir.
+
+#### <a name="devdetail-csp---free-storage"></a>devdetail CSP-ücretsiz Depolama
+
+devdetail CSP artık HoloLens cihazda boş depolama alanı da bildiriyor. bu, Ayarlar uygulamanın Depolama sayfasında gösterilen değerle yaklaşık olarak eşleşmelidir. Bu bilgileri içeren belirli düğüm aşağıda verilmiştir.
+
+- ./DevDetail/Ext/Microsoft/FreeStorage (yalnızca GET işlemi)
+
+#### <a name="devicestatus-csp---ssid-and-bssid"></a>DeviceStatus CSP-SSID ve BSSıD
+
+devicestatus CSP artık, HoloLens etkin bir şekilde bağlandığı Wi-Fi ağının ssıd ve bssıd 'sini de raporluyor. Bu bilgileri içeren belirli düğümler aşağıda verilmiştir.
+
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*Wi-Fi bağdaştırıcısının MAC adresi*/SSID
+- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*Wi-Fi bağdaştırıcısının MAC adresi*/b SSID 'si
+
+Networktanımlayıcılarına yönelik sorgu için örnek SyncML Blobu (MDM satıcıları için)
+
+```xml
+<SyncML>
+<SyncBody>
+    <Get>
+        <CmdID>$CmdID$</CmdID>
+        <Item>
+            <Target>
+            <LocURI>
+                ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers?list=StructData
+            </LocURI>
+            </Target>
+        </Item>
+    </Get>
+    <Final/>
+</SyncBody>
+</SyncML>
+```
+
+### <a name="auto-login-policy-controlled-by-csp"></a>CSP tarafından denetlenen otomatik oturum açma ilkesi
+
+Bu yeni otomatik LogonUser ilkesi, bir kullanıcının otomatik olarak oturum açıp açmamayacağını denetler. Bazı müşteriler bir kimliğe bağlı olan ancak herhangi bir oturum açma deneyimini istemediğiniz cihazları ayarlamak ister. bir cihaz Imagine ve hemen uzaktan yardım 'ı kullanarak. ya da HoloLens cihazları hızla dağıtabilecek ve son kullanıcılarının oturum açma sürecini hızlandırmalarına olanak tanıtabilen bir avantajınız vardır.
+
+İlke boş olmayan bir değere ayarlandığında, otomatik oturum açan kullanıcının e-posta adresini belirtir. Otomatik oturum açmayı etkinleştirmek için belirtilen kullanıcının cihazda en az bir kez oturum açması gerekir.
+
+Yeni ilke dizesi değerinin OMA-URI 'SI `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
+
+- Aynı e-posta adresine sahip kullanıcı otomatik oturum açma özelliği etkin olacaktır.
+
+Bu ilkenin yapılandırıldığı bir cihazda, ilkede belirtilen kullanıcının en az bir kez oturum açması gerekir. İlk oturum açma işleminden sonra cihazın sonraki yeniden başlatmaları belirtilen kullanıcı tarafından otomatik olarak oturum açar. Yalnızca tek bir otomatik oturum açma Kullanıcı desteklenir. Etkinleştirildikten sonra otomatik olarak oturum açan kullanıcı el ile oturum açamaz. Farklı bir kullanıcı olarak oturum açmak için, önce ilkenin devre dışı bırakılması gerekir.
+
+> [!NOTE]
+>
+> - Ana işletim sistemi güncelleştirmeleri gibi bazı olaylar, otomatik oturum açma davranışını yeniden başlatmak için belirtilen kullanıcının cihazda yeniden oturum açmasını gerektirebilir.
+> - otomatik oturum açma yalnızca MSA ve AAD kullanıcıları için desteklenir.
+
+#### <a name="overview-to-try-auto-logon-csp"></a>Otomatik oturum açma CSP 'sini denemeye genel bakış
+
+1. Yeni CSP 'yi [özel bir ilke kullanarak](/mem/intune/configuration/custom-settings-windows-10) istenen bir kullanıcıya yapılandırın: `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
+1. CSP 'yi [sağlama paketi](hololens-provisioning.md) veya [MDM](hololens-mdm-configure.md)aracılığıyla cihaza uygulayın.
+1. Belirtilen hesapta oturum açın.
+1. Cihazı yeniden başlatın ve kullanıcının otomatik olarak oturum açtığını gözlemleyin.
+
+### <a name="improved-update-restart-detection-and-notifications"></a>Geliştirilmiş güncelleştirme yeniden başlatma algılaması ve bildirimleri
+
+etkin saatler ve yüklemesi zaman ilkeleri arasında, kullanımda olduklarında HoloLens cihazların yeniden başlatılmasını önlemek mümkündür. Ancak, gerekli bir güncelleştirmenin yüklenmesini tamamlaması durumunda yeniden başlatmalar gerçekleşmezseniz güncelleştirmelerin benimsenmesini de erteler. Artık, son tarihleri ve gerekli YENIDEN başlatmalar zorlayabilmesini ve bir güncelleştirme yüklemesinin zamanında tamamlandığından emin olmak için ilkeler ekledik. Kullanıcılardan önyükleme başlatılmadan önce bildirim alabilir ve BT ilkesine uygun olarak yeniden başlatma işleminin geciktirebilirler.
+
+Aşağıdaki güncelleştirme ilkeleri eklendi:
+
+- [Güncelleştirme/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+- [Güncelleştirme/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- [Güncelleştirme/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
+- [Güncelleştirme/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+- [Güncelleştirme/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+- [Güncelleştirme/Configuredeadlinenooto reboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+- [Güncelleştirme/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
+- [Güncelleştirme/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
+- [Güncelleştirme/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+
+#### <a name="overview-to-try-new-update-notifications"></a>Yeni güncelleştirme bildirimlerini denemek için genel bakış
+
+1. Yeni güncelleştirme CSP 'Lerden birini [sağlama paketi](hololens-provisioning.md) veya [MDM](hololens-mdm-configure.md) aracılığıyla yapılandırın (yukarıdaki bağlantı listesine bakın ve bir tane seçin).
+1. Zamanlanan sürede cihazı kullanın.
+1. Kullanıcıya güncelleştirme hakkında bildirim gönderilmesini ve cihazı yeniden başlatma gereksinimini gözlemleyin \* .
+
+\* Sonuçlarınız, kullanılan güncelleştirme ilkelerine göre farklılık gösterebilir.
+
+### <a name="smart-retry-for-app-updates"></a>Uygulama güncelleştirmeleri için akıllı yeniden deneme
+
+HoloLens için etkin olan, bt yöneticilerinin güncelleştirme uygulanmasına izin verirken güncelleştirilmesi başarısız olan uygulamaları yeniden başlatmak için yinelenen veya bir zaman tarihi ayarlamasına izin veren yeni bir ilkedir. Bunlar, zamanlanan saat veya oturum açma gibi birkaç farklı tetikleyiciye göre ayarlanabilir. Bu ilkeyi kullanma hakkında daha fazla bilgi edinmek için lütfen [ApplicationManagement/Scheduleforcerestartforupdatebaşarısızlıklarını](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)görüntüleyin.
+
+Bu bilgiler daha sonra [iş için uygulama dağıtım Deposu sayfasında](app-deploy-store-business.md)bulunabilir.
+
+#### <a name="overview-to-try-smart-retry-for-app-updates"></a>Uygulama güncelleştirmeleri için akıllı yeniden denemeyi denemeye genel bakış
+
+1. Yeni akıllı yeniden deneme özelliğini yapılandırın.
+1. Uygulamanızı henüz almamış ve doğru şekilde yapılandırılmış bir cihazda çevrimiçi ortamda oturum açın.
+1. Cihazı kapatma veya bağlantısını kesme yoluyla uygulamayı indiremiyor.
+1. Cihazınızı açık bir şekilde kapatıp, yükleme işlemini yeniden denemek için tetiklediğiniz zamanda internet 'e bağlanın.
+
+### <a name="use-only-private-store-apps-for-microsoft-store"></a>Microsoft Store için yalnızca özel Mağaza uygulamaları kullanın
+
+RequirePrivateStoreOnly ilkesi HoloLens için etkinleştirildi. bu ilke, Microsoft Store uygulamasının yalnızca kuruluşunuz için yapılandırılmış özel mağazayı [İş İçin Microsoft Store](/microsoft-store/microsoft-store-for-business-overview)aracılığıyla yapılandırmak üzere yapılandırılmasını sağlar. Erişimi yalnızca kullanılabilir hale getirdiğiniz uygulamalarla sınırlama.
+
+[ApplicationManagement/RequirePrivateStoreOnly](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly) hakkında daha fazla bilgi edinin
+
+Bu bilgiler daha sonra [iş için uygulama dağıtım Deposu sayfasında](app-deploy-store-business.md)bulunabilir.
+
+#### <a name="overview-to-try-only-private-store-apps"></a>Yalnızca özel mağaza uygulamalarını denemeye genel bakış
+
+1. [MDM](hololens-mdm-configure.md)aracılığıyla cihazlarınız için yeni ilkeyi yapılandırın.
+1. İlkeye sahip bir cihazda oturum açın.
+1. Microsoft Store uygulamasını açın ve kuruluşunuzun uygulamalarını görebilmenizi sağlayabilirsiniz.
+
+### <a name="use-wdac-and-lob-apps"></a>WDAC ve LOB uygulamalarını kullanma
+
+Artık uygulama veya işlemlerin başlatılmasını engellemek için WDAC kullanabilir ve kendi işlem hattınızdan oluşan uygulamalarınızı kullanmaya devam edebilirsiniz. Artık bunlara WDAC ilkenizde izin verebilirsiniz. Bu ilkenin kullanılması, WDAC ilkenizi oluştururken PowerShell 'de ek bir kod satırı çalıştırmayı içerir. [Buradaki adımları gözden geçirin.](/mem/intune/configuration/custom-profile-hololens)
+
+#### <a name="overview-to-try-your-own-apps-while-using-wdac-to-block-others"></a>Diğer uygulamaları engellemek için WDAC kullanırken kendi uygulamalarınızı denemeye genel bakış
+
+1. LOB uygulamanızın Aumkimliklerini ve engellemeyi planladığınız uygulamaları toplayın.
+1. Yeni adımları izleyerek [Yeni BIR WDAC Ilkesi oluşturun](/mem/intune/configuration/custom-profile-hololens) .
+1. [ILKEYI MDM kullanarak cihazınıza dağıtın](hololens-mdm-configure.md) .
+1. Cihazda oturum açın ve uygulamanızı başlatıp diğerlerini engelleyebilmenizi sağlayabilirsiniz.
+
+### <a name="fixes-and-improvements"></a>Düzeltmeler ve geliştirmeler
+
+#### <a name="for-developers"></a>Geliştiriciler için
+
+- Bir [cihaz portalı için, kilitli dosyaları indirmede hiçbir istem olmadığı bilinen bir sorun](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)düzeltildi.
+- [Karşıya dosya yükleme ve indirme zaman aşımları Ile cihaz portalı 'nın bilinen bir sorunu](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)düzeltildi.
+- 2B uygulamalar için oyun yüzeyi işleme, Insider Derlemeleriyle devre dışı bırakıldı. Bu uygulamayı kaldırarak, uygulamalar artık oyun yüzeyi API 'Lerini doğrudan kullanabilir ve tüm denetim kümesine erişebilir ve daha fazlasını yapmak için göz önünde bulundurularak geliştirilebilir. Geliştiriciler oyun yüzeyi girişini tüketmek için oyun yüzeyi API 'Lerini kullanmalıdır. Bu, [oyun yüzeyi sınıfı (Windows için bir örnektir. Gaming. ınput)-UWP uygulamalarını Windows](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true).
+- uygulamaların, HoloLens oturum açan kullanıcı için bilgi noktası modunda HoloLens çalışıp çalışmadığını belirleyebilmesi için [atanan erişim apı 'si](/uwp/api/windows.system.userprofile.assignedaccesssettings?view=winrt-20348&preserve-view=true) etkinleştirildi.
+
+#### <a name="for-enterprise"></a>Enterprise için
+
+- HoloLens cihazlarından raporlama uyumluluk özellikleri etrafında sorunları giderir; Insider Derlemeleriyle ilgili doğru raporlama tetiklenmesi için yeniden başlatma gerekebilir.  
+- Uzaktan Yardım 'ın yerleşik sürümü, yeni bir yanıp sönuca yüklenmiş olarak güncelleştirildi.
+- ilk kullanıcı oturum açma işleminden sonra, AAD grup tabanlı bilgi noktası yapılandırmalarının kullanıldığı senaryolarda OOBE sonlandırılmakta olan bir sorun düzeltildi.
+- Cihaz yeniden başlatması için güncelleştirme bildirimleri ve iletişim kutusu istemleri görüntülenirken bir sorun düzeltildi.
+- cihaz yeniden başlatıldıktan sonra Xbox denetleyicileri ve diğer Bluetooth LE çevre birimlerinin bağlanması için yeniden eşleştirilmesi gereken bir sorun düzeltildi.
+- Uzaktan Yardım çağrısı sırasında giden videonun kısa bir şekilde dondurmasına neden olabilecek bir sabit video Kodlayıcısı sorunu. "Parça ve Forge" Wi-Fi güvenlik açıklarını gidermek için sürücü ve bellenim değişiklikleri Wi-Fi.
+- "Parça ve Forge" Wi-Fi güvenlik açıklarını gidermek için sürücü ve bellenim değişiklikleri Wi-Fi.
+- Taşıma platformu modunun (MPı) kullanılması durumunda, "aşağı" kısa bir süre içinde zaman çekimi ortalaması alınarak tahmin edilir. Bu değer, platform modu taşınırken gerçek yerçekimi değiştirir.
+- 3DoF modundayken veya izlemenin kaybolması sırasında hologramlar içinde düzenli olarak wobblek düzeltildi.
+- Eski sürümlerden 21H1/21H2 sürümündeki güncelleştirmeleri etkileyen bir sorunu giderir.
+
+## <a name="windows-holographic-version-20h2---october-2021-update"></a>Windows Holographic, sürüm 20H2-Ekim 2021 güncelleştirmesi
+
+- Derleme 19041,1168
+
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
+
+- bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez, en son yapımızın Windows Holographic, sürüm 21h2 ' yi denemenizi öneririz.
 
 ## <a name="windows-holographic-version-21h1---september-2021-update"></a>Windows Holographic, sürüm 21H1-Eylül 2021 güncelleştirmesi
 
@@ -75,6 +332,9 @@ Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 - İşletim sistemi sıfırlamaları üzerinde önceden yüklenmiş uygulamaları etkileyen bir sorun düzeltildi.
 - Artan CPU yüklemesiyle ücretlendirmesi sırasında çalışma zamanını artırmak için pil şarj performansı ayarlandı. HoloLens 2 cihaz şarj edilirken, cihazın sık çalıştığı algılanırsa, iç pil, ısı azaltmayı daha yavaş ücretlendirir. Pozitif zorunluluğunu getirir, bir cihazın ısı sorunları nedeniyle kapanmasına daha az olma olasılığı vardır ve bu da cihazın daha uzun süre çalışmasına neden olur. Cihaz seyrek erişimli çalışıyorsa, ücretlendirme ücreti etkilenmez.
 
+> [!IMPORTANT]
+> [21 h1 deremizdeki, uzaktan yardım kullanıcılarını etkileyen bilinen bir sorun](hololens-troubleshooting.md#remote-assist-video-freezes-after-20-minutes)nedeniyle, Windows Holographic, sürüm 21h1 güncelleştirmelerinin sunumunu zamana bağlı duraklattık. ayrıca, varsayılan gelişmiş kurtarma yardımcısı (ARC) derlemesini [Windows Holographic, sürüm 20h2 – haziran 2021 güncelleştirmesine](hololens-release-notes.md#windows-holographic-version-20h2--june-2021-update)değiştirdik. Şimdi yay derlemesi, 21H1 derlemesini hedeflemeyi sürdürecek.
+
 ## <a name="windows-holographic-version-20h2--july-2021-update"></a>Windows Holographic, sürüm 20H2 – 2021 Temmuz güncelleştirmesi
 
 - Derleme 19041,1157
@@ -117,221 +377,221 @@ aşağıdaki telemetri ilkeleri artık HoloLens 2 ' de desteklenmektedir:
 
 - ConfigureTelemetryOptInSettingsUx
 - DisableDeviceDelete
-- Allowdevicenameındiagnokdata
-- Feedbackhubalwayssavediagnosticsyerel
+- AllowDeviceNameInDiagnosticData
+- FeedbackHubAlwaysSaveDiagnosticsLocally
 
-hem system\allowtelemetri hem de System\ConfigureTelemetryOptInSettingsUx, Ayarlar uygulamasındaki telemetri ve davranış üzerinde tüm denetim sağlamak için birlikte kullanılmalıdır.
+Hem System\AllowTelemetry hem de System\ConfigureTelemetryOptInSettingsUx birlikte kullanarak uygulamanın Telemetri ve davranış üzerinde tam denetime Ayarlar gerekir.
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Renk ayarlama ile büyük video bozukluğunu düzeltir.
-- Güç menüsünde metnin kesilmiş olabileceği bir sorunu giderir.
-- RequirePrivateStoreOnly ilkesi için desteği sunar.
+- Renk ayarlama ile videonun önemli bozulmalarını düzeltir.
+- Power menüsünde metnin kesilmesine neden olan bir sorunu gidermek.
+- RequirePrivateStoreOnly ilkesi için destek sağlar.
 
-## <a name="windows-holographic-version-20h2--june-2021-update"></a>Windows Holographic, sürüm 20H2 – Haziran 2021 güncelleştirmesi
+## <a name="windows-holographic-version-20h2--june-2021-update"></a>Windows Holographic, sürüm 20H2 – Haziran 2021 Güncelleştirmesi
 
-- Derleme 19041,1154
+- Derleme 19041.1154
 
 ### <a name="added-support-for-some-telemetry-policies"></a>Bazı telemetri ilkeleri için destek eklendi
 
-aşağıdaki telemetri ilkeleri artık HoloLens 2 ' de desteklenmektedir:
+Aşağıdaki telemetri ilkeleri artık 2. HoloLens desteklemektedir:
 
 - ConfigureTelemetryOptInSettingsUx
 - DisableDeviceDelete
-- Allowdevicenameındiagnokdata
-- Feedbackhubalwayssavediagnosticsyerel
+- AllowDeviceNameInDiagnosticData
+- FeedbackHubAlwaysSaveDiagnosticsLocally
 
-hem system\allowtelemetri hem de System\ConfigureTelemetryOptInSettingsUx, Ayarlar uygulamasındaki telemetri ve davranış üzerinde tüm denetim sağlamak için birlikte kullanılmalıdır.
+Hem System\AllowTelemetry hem de System\ConfigureTelemetryOptInSettingsUx birlikte kullanarak uygulamanın Telemetri ve davranış üzerinde tam denetime Ayarlar gerekir.
 
-Windows Holographic, sürüm 21h1 olan en son derlemenizi denemenizi öneririz.
+Holographic sürüm 21H1'Windows en son derlememizi denemeyi teşvik ederiz.
 
-## <a name="windows-holographic-version-1903---june-2021-update"></a>Windows Holographic, sürüm 1903-Haziran 2021 güncelleştirme
+## <a name="windows-holographic-version-1903---june-2021-update"></a>Windows Holographic, sürüm 1903 - Haziran 2021 Güncelleştirmesi
 
-- Derleme 18362,1116
+- Derleme 18362.1116
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez, Windows Holographic, sürüm 21h1 olan en son derlemeyi denemenizi öneririz.
+- Bu aylık kalite güncelleştirmesi önemli bir değişiklik içermemektedir. Holographic sürüm 21H1'Windows en son derlememizi denemeniz için sizi teşvik ederiz.
 
 >[!IMPORTANT]
-> Bu derleme artık servise alınmaz.
+> Bu derleme artık hizmette olmayacaktır.
 
 ## <a name="windows-holographic-version-21h1"></a>Windows Holographic, sürüm 21H1
 
-- Derleme 20346,1002
+- Derleme 20346.1002
 
-Bu güncelleştirme, iki hedef kitleye yönelik özellikler içerir; Son Kullanıcı tarafından bir cihazdaki herkes tarafından kullanılabilen özellikler ve BT yöneticileri tarafından yapılandırılabilen yeni cihaz yönetimi seçenekleri. Aşağıdaki tabloda, her bir hedef kitle ile ilgili özellikler belirtilir. BT yöneticisiyseniz lütfen [BT yöneticimize göz atın-güncelleştirme denetim listesini](#it-admin---update-checklist)inceleyin.
+Bu güncelleştirme, iki hedef kitleye yönelik özellikler içerir; Son Kullanıcı tarafından bir cihaz üzerinde herkes tarafından kullanılan özellikler ve IT Yöneticileri tarafından yapılandırılan yeni cihaz yönetimi seçenekleri. Aşağıdaki tabloda her hedef kitleyle ilgili özellikler gösterilmiştir. BIR IT Yöneticisiyseniz lütfen IT Yöneticisi - Güncelleştirme Denetim [Listesi'ne göz atın.](#it-admin---update-checklist)
 >[!IMPORTANT]
->bu yapıya güncelleştirmek için HoloLens 2 cihazdan şu anda şubat 2021 güncelleştirmesi (derleme 19041,1136) veya daha yeni bir sürümü çalışıyor olmalıdır. Bu özellik güncelleştirmesini görmüyorsanız, lütfen önce cihazınızı güncelleştirin ve yeniden deneyin.
+>Bu derlemeye güncelleştirmek için HoloLens 2 cihazın Şubat 2021 güncelleştirmesini (derleme 19041.1136) veya daha yenisini çalıştıracak olması gerekir. Bu özellik güncelleştirmesini görmüyorsanız lütfen önce cihazınızı güncelleştirin ve yeniden deneyin.
 
 >[!NOTE]
->bugün, Microsoft HoloLens 2 aşağıdaki sürümler için aylık bakım güncelleştirmelerini (hata ve güvenlik düzeltmelerini) destekler:
+>Bugün Microsoft HoloLens 2, aşağıdaki sürümler için aylık bakım güncelleştirmelerini (hata ve güvenlik düzeltmeleri) destekler:
 >
->- Windows Holographic, sürüm 20H2 (derleme 19041.1128 +)
->- Windows Holographic, sürüm 2004 (derleme 19041.1103 +)
->- Windows Holographic, sürüm 1903 (derleme 18362 +)
+>- Windows Holographic, sürüm 20H2 (Derleme 19041.1128+)
+>- Windows Holographic, sürüm 2004 (Derleme 19041.1103+)
+>- Windows Holographic, sürüm 1903 (Derleme 18362+)
 >
-> Windows Holographic sürüm 21h1 ' i kullanıma **sunduğumuz için, Windows Holographic sürüm 1903 ' a yönelik aylık bakım güncelleştirmelerine devam ediyoruz**. Bu, daha yeni sürümlere odaklanmamızı ve değerli geliştirmeler sunmaya devam etmenizi sağlar.
+> Windows Holographic sürüm 21H1'in tanıtımıyla, Windows Holographic sürüm **1903** için aylık bakım güncelleştirmelerini sonlandırıyoruz. Bu sayede daha yeni sürümlere odaklanarak değerli geliştirmeler yapmaya devam edeceğiz.
 
-| Özellik adı                                              | Kısa açıklama                                                                      | Hedef kitle |
+| Özellik Adı                                              | Kısa açıklama                                                                      | Hedef Hedef Kitle |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------|
-| [Yeni Microsoft Edge](#introducing-the-new-microsoft-edge)  | yeni Chromium tabanlı Microsoft Edge artık HoloLens 2 ' de kullanılabilir. | Son Kullanıcı |
-[WebXR ve 360 Görüntüleyicisi](#webxr-and-360-viewer) | Modern Web deneyimleri ve 360 video kayıttan yürütmeyi deneyin. | Son Kullanıcı |
-[yeni Ayarlar uygulaması](#new-settings-app) | eski Ayarlar uygulaması, yeni özellikler ve ayarlarla güncelleştirilmiş bir sürüm ile değiştiriliyor. | Son Kullanıcı |
-[Ekran renk ayarı](#display-color-calibration) | HoloLens 2 görüntü için alternatif bir renk profili seçin. | Son Kullanıcı |
+| [Yeni Microsoft Edge](#introducing-the-new-microsoft-edge)  | Yeni, Chromium tabanlı Microsoft Edge artık 2. HoloLens kullanılabilir. | Son Kullanıcı |
+[WebXR ve 360 Görüntüleyici](#webxr-and-360-viewer) | Tam ekran web deneyimlerini ve 360 video kayıttan yürütmeyi deneyin. | Son Kullanıcı |
+[Yeni Ayarlar uygulaması](#new-settings-app) | Eski Ayarlar, güncelleştirilmiş bir sürümle yeni özellikler ve ayarlarla değiştir ediliyor. | Son Kullanıcı |
+[Renk ayarlamayı görüntüleme](#display-color-calibration) | HoloLens 2 ekranınız için alternatif bir renk profili seçin. | Son Kullanıcı |
 [Varsayılan uygulama seçici](#default-app-picker) | Her dosya veya bağlantı türü için hangi uygulamanın başlatılması gerektiğini seçin. | Son Kullanıcı |
-[Uygulama birimi denetimi başına](#per-app-volume-control) | Uygulama düzeyi birimini sistem biriminden bağımsız olarak denetleyin. | Son Kullanıcı |
-[Web uygulamalarını yükler](#install-web-apps) | web uygulamalarını, yeni Microsoft Edge tarayıcıyla Microsoft Office gibi HoloLens 2 ' ye yükler. | Son Kullanıcı |
-[Türe göre kaydırın](#swipe-to-type) | Holographic klavyesinde "çekme" kelimelerinizin ucunu kullanın. | Son Kullanıcı |
-[Başlangıç menüsünde güç menüsü](#power-menu-from-start) | başlat menüsünde HoloLens cihazı yeniden başlatın ve kapatın. | Son Kullanıcı |
-[Oturum açma ekranında birden çok Kullanıcı listelendi](#multiple-users-listed-on-sign-in-screen) | Oturum açma ekranında birden çok kullanıcı hesabı görüntüleyin. | Son Kullanıcı |
-[USB-C dış mikrofon desteği](#usb-c-external-microphone-support) | Uygulamalar ve/veya uzaktan yardım için USB-C mikrofonlar kullanın. | Son Kullanıcı |
-[Kiosks için ziyaretçi otomatik oturum açması](#visitor-auto-logon-for-kiosks) | Bilgi noktası modlarında kullanılacak ziyaretçi hesaplarında otomatik oturum açmayı sağlar. | BT Yöneticisi |
-[Bilgi noktası modundaki yeni uygulamalar için yeni AUMIDs](#use-the-new-settings-and-edge-apps-in-kiosk-modes)  | yeni Ayarlar ve Edge uygulamaları için aumıds. | BT Yöneticisi |
-[Geliştirilmiş bilgi noktası modu hata teslim](#kiosk-mode-behavior-changes-for-handling-of-failures) | Bilgi noktası modu, boş başlangıç menüsünden önce Global olarak atanan erişimi arar. | BT Yöneticisi |
-[sayfa Ayarlar görünürlüğü için yeni settingsurin](#new-settings-uris-for-page-settings-visibility) | 20 + yeni settingsurin Ayarlar/pagevisibilitylist ilkesi içindir. | BT Yöneticisi |
-[Geri dönüş tanılamayı yapılandırma](#configuring-fallback-diagnostics-via-settings-app) | Ayarlar uygulamasında geri dönüş tanılama davranışı ayarlanıyor. | BT Yöneticisi |
-[Yakındaki cihazlarla şeyleri paylaşma](#share-things-with-nearby-devices) | dosya veya url 'leri bir HoloLens bilgisayara paylaşabilirsiniz. | Tümü |
-[Yeni işletim sistemi tanılama izlemeleri](#new-os-diagnostic-traces) | işletim sistemi güncelleştirmelerine yönelik Ayarlar yeni sorun giderici. | BT Yöneticisi |
-[Teslim Iyileştirme önizlemesi](#delivery-optimization-preview) | birden çok HoloLens cihazdan yüklemeler için bant genişliği tüketimini azaltma. | BT Yöneticisi |
+[Uygulama başına birim denetimi](#per-app-volume-control) | Uygulama düzeyindeki birimi sistem biriminden bağımsız olarak denetleme. | Son Kullanıcı |
+[Web uygulamalarını yükleme](#install-web-apps) | Microsoft Office gibi HoloLens 2. Microsoft Edge web Microsoft Edge yükleyin. | Son Kullanıcı |
+[Türe doğru çekme](#swipe-to-type) | Holografik klavyede sözcükleri "kaydırmak" için parmak ucunu kullanın. | Son Kullanıcı |
+[Başlat'tan Güç menüsü](#power-menu-from-start) | Başlat Menüsünde cihazı yeniden başlatın ve HoloLens kapatın. | Son Kullanıcı |
+[Oturum açma ekranında listelenen birden çok kullanıcı](#multiple-users-listed-on-sign-in-screen) | Oturum açma ekranında birden çok kullanıcı hesabı görüntüler. | Son Kullanıcı |
+[USB-C Dış Mikrofon Desteği](#usb-c-external-microphone-support) | Uygulamalar ve / veya Remote Assist için USB-C mikrofonlarını kullanın. | Son Kullanıcı |
+[Bilgi Noktası için Ziyaretçi Otomatik Oturum Açma](#visitor-auto-logon-for-kiosks) | Ziyaretçi hesaplarında bilgi noktası modları için otomatik oturum açma özelliğinin kullanılmaktadır. | BT Yöneticisi |
+[Bilgi Noktası modundaki yeni uygulamalar için yeni AUMID'ler](#use-the-new-settings-and-edge-apps-in-kiosk-modes)  | Yeni uygulamalar ve Edge Ayarlar AUMID'leri. | BT Yöneticisi |
+[Bilgi noktası modu hata teslimi iyileştirildi](#kiosk-mode-behavior-changes-for-handling-of-failures) | Bilgi noktası modu, boş başlat menüsünden önce Genel Atanan Erişim'i okur. | BT Yöneticisi |
+[Sayfa Görünürlüğü için Yeni SettingsURIs Ayarlar Ayarları](#new-settings-uris-for-page-settings-visibility) | Ayarlar/PageVisibilityList ilkesi için 20'den fazla yeni SettingsURIs. | BT Yöneticisi |
+[Geri Dönüş Tanılamasını Yapılandırma](#configuring-fallback-diagnostics-via-settings-app) | Ayarlar Uygulamasında Geri Dönüş Tanılama Davranışını Ayarlama. | BT Yöneticisi |
+[Yakındaki cihazlarla paylaşım](#share-things-with-nearby-devices) | Dosya veya URL'leri bir HoloLens bilgisayara paylaşma. | Tümü |
+[Yeni işletim sistemi tanılama izlemeleri](#new-os-diagnostic-traces) | Işletim sistemi güncelleştirmeleri Ayarlar yeni sorun giderici. | BT Yöneticisi |
+[Teslim İyileştirme Önizleme](#delivery-optimization-preview) | Birden çok mobil cihazdan yapılan indirmeler için bant HoloLens azaltabilirsiniz. | BT Yöneticisi |
 
-İlgili sürüm notlarını gözden geçirin:
+İlgili sürüm notlarına göz at:
 
 - [HoloLens Emulator arşivini ziyaret edin](/windows/mixed-reality/hololens-emulator-archive)
-- [Dynamics 365 uzaktan yardım](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
-- [Dynamics 365 kılavuzlar](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
+- [Dynamics 365 Remote Assist](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
+- [Dynamics 365 Kılavuzları](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
 
-### <a name="introducing-the-new-microsoft-edge"></a>Yeni Microsoft Edge tanıtımı
+### <a name="introducing-the-new-microsoft-edge"></a>Yeni Microsoft Edge
 
-![eski Microsoft Edge logosunun yeni Microsoft Edge logoa animasyonu.](images/new-edge.gif)
+![Eski Microsoft Edge yeni logoya Microsoft Edge animasyonu.](images/new-edge.gif)
 
-yeni Microsoft Edge, müşteriler için daha iyi uyumluluk ve web geliştiricileri için web 'in daha az parçalanması oluşturmak üzere [Chromium açık kaynaklı projeyi benimsemektedir](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) .
+Yeni [Microsoft Edge, müşteriler için daha Chromium](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) uyumluluk ve web geliştiricileri için web'in daha az parçalanması için Chromium açık kaynak projesini benimsemektedir.
 
 > [!IMPORTANT]
-> bu yeni Microsoft Edge, yeni sürümlerde [artık desteklenmeyen](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) eski Microsoft Edge otomatik olarak değiştirir.
+> Bu yeni Microsoft Edge, yeni sürümlerde artık Microsoft Edge eski [sürümlerin](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) yerini otomatik olarak almaktadır.
 
-![yeni Microsoft Edge ekran görüntüsü.](images/new-edge-ui.png)
+![Yeni Microsoft Edge ekran görüntüsü.](images/new-edge-ui.png)
 
-#### <a name="launching-the-new-microsoft-edge"></a>Yeni Microsoft Edge başlatılıyor
+#### <a name="launching-the-new-microsoft-edge"></a>Yeni uygulamayı Microsoft Edge
 
-Yeni Microsoft Edge ![yeni Microsoft Edge simgesi.](images/new_edge_logo.png) (mavi ve yeşil girdap simgesiyle gösterilir) Başlat menüsü sabitlenmiştir ve bir web bağlantısını etkinleştirdiğinizde otomatik olarak başlatılır.
+Yeni Microsoft Edge ![yeni Microsoft Edge simgesi.](images/new_edge_logo.png) (mavi ve yeşil bir swirl simgesiyle gösterilir) Başlat menüsü sabitlenir ve bir web bağlantısını etkinleştirerek otomatik olarak başlatılır.
 
 > [!NOTE]
-> yeni Microsoft Edge HoloLens 2 ' de ilk kez başlattığınızda, ayarlarınız ve verileriniz eski Microsoft Edge içeri aktarılır. yeni Microsoft Edge başlattıktan sonra eski Microsoft Edge kullanmaya devam ederseniz, bu yeni veriler eski Microsoft Edge yeni Microsoft Edge eşitlenmeyecektir.
+> HoloLens 2'de yeni Microsoft Edge ilk kez başlatacak olurken, ayarlarınız ve verileriniz eski Microsoft Edge. Yeni Microsoft Edge başlattıktan sonra eski Microsoft Edge kullanmaya devam edersiniz, bu yeni veriler eski Microsoft Edge yeni Microsoft Edge.
 
-#### <a name="configuring-policy-settings-for-the-new-microsoft-edge"></a>Yeni Microsoft Edge ilke ayarlarını yapılandırma
+#### <a name="configuring-policy-settings-for-the-new-microsoft-edge"></a>Yeni uygulama için ilke ayarlarını Microsoft Edge
 
-yeni Microsoft Edge, bt yöneticilerine HoloLens 2 ' de eski Microsoft Edge ile daha geniş bir tarayıcı ilkeleri kümesi sunar.
+Yeni Microsoft Edge, ÖNCEKI 2. HoloLens'da, ESKI Microsoft Edge daha geniş bir tarayıcı ilkeleri kümesi Microsoft Edge.
 
-Yeni Microsoft Edge ilke ayarlarını yönetme hakkında daha fazla bilgi edinmek için bazı yararlı kaynaklar aşağıda verilmiştir:
+Yeni ilke ayarlarını yönetme hakkında daha fazla bilgi için aşağıdaki yararlı kaynaklara Microsoft Edge:
 
-- [Microsoft Intune ile Microsoft Edge ilkesi ayarlarını yapılandırma](/deployedge/configure-edge-with-intune)
-- [Microsoft Edge ilke eşlemesine Microsoft Edge'in eski sürümü](/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
-- [Microsoft Edge ilke eşleme için Google Chrome](/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
-- tam [Microsoft Edge Enterprise belgeleri](/deployedge/)
+- [İlke Microsoft Edge ayarlarını Microsoft Intune](/deployedge/configure-edge-with-intune)
+- [Microsoft Edge'in eski sürümü Microsoft Edge eşlemesi](/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
+- [Google Chrome'dan Microsoft Edge eşlemesi](/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
+- Tam [Microsoft Edge Enterprise belgeleri](/deployedge/)
 
 > [!IMPORTANT]
-> yeni Microsoft Edge tarafından desteklenen tarayıcı ilkelerinin hacmi nedeniyle, takımımız her yeni ilkenin HoloLens 2 ' de çalıştığından emin olamaz. ancak, daha önce HoloLens 2 ' de desteklenen her bir eski Microsoft Edge ilkesinin Microsoft Edge denk olarak sınanmış ve onayladık. HoloLens 2 ile kullandığınız her bir eski Microsoft Edge tarayıcı ilkesinin yeni Microsoft Edge eşdeğerini bulmak için [Microsoft Edge ilke eşlemesine Microsoft Edge'in eski sürümü](/deployedge/microsoft-edge-policy-map-legacy-to-newedge) bakın.
+> Yeni ilke tarafından desteklenen tarayıcı ilkelerinin hacmi Microsoft Edge, ekibimiz her yeni ilkenin 2. HoloLens garanti HoloLens. Ancak, daha önce HoloLens 2'de desteklenen her eski Microsoft Edge Microsoft Edge ilkenin eşdeğerini test ettik ve HoloLens doğruladık. Microsoft Edge'in eski sürümü 2 [ile Microsoft Edge](/deployedge/microsoft-edge-policy-map-legacy-to-newedge) eski Microsoft Edge tarayıcı ilkesine eşdeğer yeni Microsoft Edge ilke eşlemesini bulmak için bkz. HoloLens eşlemesi.
 >
-> HoloLens 2 *ile çalışabildiğinizi* bildiğiniz en az iki yeni Microsoft Edge ilkesi vardır:
+> 2. Microsoft Edge en az iki *yeni* ilke HoloLens:
 >
 > - EnterpriseModeSiteList
-> - EnterpriseSiteListServiceURL 'Si
+> - EnterpriseSiteListServiceURL
 
-#### <a name="what-to-expect-from-the-new-microsoft-edge-on-hololens-2"></a>HoloLens 2 ' de yeni Microsoft Edge bekleneceğiniz
+#### <a name="what-to-expect-from-the-new-microsoft-edge-on-hololens-2"></a>HoloLens 2'de Microsoft Edge yeni HoloLens bekliyor
 
-yeni Microsoft Edge yeni bir uwp bağdaştırıcı katmanına sahip yerel bir Win32 uygulaması olduğundan, bu, yalnızca HoloLens 2 gibi UWP cihazlarda çalışmasına izin vererek bazı özellikler hemen kullanılamayabilir. Önümüzdeki aylarda yeni senaryolar ve Özellikler destekliyoruz, bu nedenle bu alanı güncel bilgiler için denetleyin.
+Yeni Microsoft Edge, yalnızca U HoloLens WP 2 gibi UWP cihazlarda çalışmasına izin veren yeni bir UWP bağdaştırıcı katmanına sahip yerel bir Win32 uygulaması olduğundan, bazı özellikler hemen kullanılabilir olmayacaktır. Önümüzdeki aylarda yeni senaryoları ve özellikleri destekley edeceğimiz için bu alanı güncel bilgiler için kontrol edin.
 
-**Çalışması beklenen senaryolar ve Özellikler:**
+**Çalışması beklenen senaryolar ve özellikler:**
 
 - İlk çalıştırma deneyimi, profilde oturum açma ve eşitleme
-- Web siteleri, beklendiği gibi işlenmeli ve davranmalıdır
-- Çoğu tarayıcı işlevinin (Sık Kullanılanlar, geçmiş, vb.) beklenen şekilde çalışması gerekir
+- Web siteleri beklendiği gibi işlemeli ve davranabilir
+- Çoğu tarayıcı işlevi (Sık Kullanılanlar, Geçmiş vb.) beklendiği gibi çalışmalı
 - Koyu mod
-- Cihaza Web uygulamaları yükleme
-- uzantılar yükleniyor (lütfen HoloLens 2 ' de düzgün çalışmayan uzantıları kullanıyorsanız bize bildirin)
-- PDF 'YI görüntüleme ve işaretleme
+- Cihaza web uygulamaları yükleme
+- Uzantıları yükleme (2. veya 2. gün içinde düzgün çalışmayan uzantılar kullanıyorsanız HoloLens bize haber ver)
+- PDF'yi görüntüleme ve işaretleme
 - Tek bir tarayıcı penceresinden uzamsal ses
-- Tarayıcının otomatik ve el ile güncelleştirilmesi
-- PDF 'YI yazdırma menüsünden kaydetme ("PDF 'ye Kaydet" seçeneğini kullanarak)
-- WebXR ve 360 Viewer uzantısı
-- Ortamınıza yerleştirilmiş birden çok pencere arasında gezinerek, doğru pencereye içerik geri yükleme
+- Tarayıcıyı otomatik ve el ile güncelleştirme
+- Yazdır menüsünden PDF kaydetme ("PDF'ye Kaydet" seçeneğini kullanarak)
+- WebXR ve 360 Görüntüleyici uzantısı
+- Ortamınıza yerleştirilen birden çok pencereye göz atarak doğru pencereye içerik geri yükleme
 
-**Çalışması beklenen senaryolar ve Özellikler:**
+**Çalışması beklenilen senaryolar ve özellikler:**
 
-- Eşzamanlı ses akışları ile birden çok pencere arasındaki uzamsal ses
-- "Görüntüleyin, söyleyin"
+- Eşzamanlı ses akışlarıyla birden çok pencereden uzamsal ses
+- "Gör, söyle"
 - Yazdırma
 
-**Bilinen en iyi tarayıcı sorunları:**
+**Bilinen en önemli tarayıcı sorunları:**
 
-- Yeni Microsoft Edge için holographic klavyesindeki Büyüteç önizlemesi devre dışı bırakıldı. Büyütme doğru şekilde çalışmaya başladıktan sonra bu özelliği gelecekteki bir güncelleştirmede yeniden etkinleştirmek isteriz.
-- Başka bir tarayıcı penceresi açık ve etkin olduğunda ses yanlış tarayıcı penceresinden oynayabilir. Ses oynatılması beklenen diğer etkin pencereyi kapatarak Bu soruna geçici bir çözüm bulabilirsiniz.
-- ["Beni takip etme" modunda](hololens2-basic-usage.md#follow-me-stop-following)bir tarayıcı penceresinden ses çalarken, "beni izle" modunu devre dışı bıraktığınızda ses çalmaya devam edecektir. "Beni Izle" modunu devre dışı bırakmadan veya **X** düğmesi ile pencereyi kapatarak bu sorunu geçici olarak çözebilirsiniz.
-- active Microsoft Edge windows ile etkileşim kurmak, diğer 2b uygulama pencerelerinin beklenmedik şekilde etkin olmasına neden olabilir. Bu pencereleri yeniden etkileşimde bulunarak tekrar etkinleştirebilirsiniz.
+- Holografik klavyede büyüteç önizlemesi, yeni Microsoft Edge. Bu özelliği, büyütme doğru şekilde çalışmaya başladıktan sonra gelecekteki bir güncelleştirmede yeniden kullanılabilir hale gelecektir.
+- Başka bir tarayıcı penceresi açık ve etkinse ses yanlış tarayıcı penceresinden oynatılmış olabilir. Ses çalması gereken diğer etkin pencereyi kapatarak bu soruna bir son ve sonra bakabilirsiniz.
+- "Beni takip et" modundaki bir tarayıcı penceresinden ses çalacaksanız, "Beni takip [et"](hololens2-basic-usage.md#follow-me-stop-following)modunu devre dışı bıraksanız ses çalmaya devam eder. "Beni takip et" modunu devre dışı bırakmadan önce veya X düğmesiyle pencereyi kapatarak ses kayıttan yürütmeyi durdurarak bu sorunu **atlayabilirsiniz.**
+- Etkin uygulama pencereleriyle Microsoft Edge, diğer 2D uygulama pencerelerinde beklenmedik şekilde etkin olmayan bir şekilde devre dışı bırakılamaları olabilir. Bu pencerelerle yeniden etkileşim kurarak bu pencereleri yeniden etkinleştirilebilir.
 
 #### <a name="microsoft-edge-insider-channels"></a>Microsoft Edge Insider kanalları
 
-Microsoft Edge ekibi, Edge ınsider community için üç önizleme kanalı sağlar: Beta, Dev ve canary. önizleme kanalının yüklenmesi, HoloLens 2 ' Microsoft Edge yayınlanan sürümünü kaldırmaz ve aynı anda birden fazla yükleyebilirsiniz.
+Yeni Microsoft Edge Edge Insider topluluğuna üç önizleme kanalı sağlar: Beta, Dev ve Canary. Önizleme kanalının yüklü olması, Microsoft Edge 2'nize HoloLens sürümünü kaldırmaz ve aynı anda birden fazla yükleyebilirsiniz.
 
-Edge ınsider community hakkında daha fazla bilgi edinmek için [Microsoft Edge ınsider giriş sayfasını](https://www.microsoftedgeinsider.com) ziyaret edin. Farklı Edge Insider kanalları hakkında daha fazla bilgi edinmek ve kullanmaya başlamak için [Edge Insider indirme sayfasını](https://www.microsoftedgeinsider.com/download)ziyaret edin.
+Edge [Insider Microsoft Edge daha fazla bilgi](https://www.microsoftedgeinsider.com) edinmek için Microsoft Edge Insider giriş sayfasını ziyaret edin. Farklı Edge Insider kanalları hakkında daha fazla bilgi edinmek ve çalışmaya başlamak için [Edge Insider indirme sayfasını ziyaret edin.](https://www.microsoftedgeinsider.com/download)
 
-Microsoft Edge ınsider kanallarını HoloLens 2 ' ye yüklemek için kullanabileceğiniz birkaç yöntem vardır:
+Microsoft Edge Insider kanallarını HoloLens 2:
 
-**Cihaza doğrudan yüklemek (Şu anda yalnızca yönetilmeyen cihazlar için kullanılabilir)**
+**Cihaza doğrudan yükleme (şu anda yalnızca yönetemeyen cihazlar tarafından kullanılabilir)**
 
-  1. HoloLens 2 ' de [Edge ınsider indirme sayfasını](https://www.microsoftedgeinsider.com/download)ziyaret edin.
-  1. yüklemek istediğiniz Edge ınsider kanalı için **HoloLens 2 için indir** düğmesini seçin.
-  1. İndirilmiş. msix dosyasını Edge indirme kuyruğundan veya cihazınızın "Indirmeler" klasöründen (Dosya Gezgini 'ni kullanarak) başlatın.
-  1. [Uygulama yükleyicisi](app-deploy-app-installer.md) başlatılır.
-  1. **Install** düğmesini seçin.
-  1. başarılı bir yüklemeden sonra, Başlat menüsü **tüm uygulamalar** listesinde Microsoft Edge Beta, Dev veya canary ' ı ayrı bir giriş olarak bulacaksınız.
+  1. 2. HoloLens Edge Insider indirme [sayfasını ziyaret edin.](https://www.microsoftedgeinsider.com/download)
+  1. Yüklemek istediğiniz Edge **Insider HoloLens 2** için İndir düğmesini seçin.
+  1. edge indirme kuyruğundan veya cihazınızın "İndirilenler" klasöründen indirilen .msix dosyasını Dosya Gezgini.
+  1. [Uygulama yükleyicisi](app-deploy-app-installer.md) başlatacak.
+  1. Yükle **düğmesini** seçin.
+  1. Yükleme başarılı olduktan sonra, Microsoft Edge Beta, Dev veya Canary'nin, Tüm uygulamalar listesi içinde ayrı **bir** giriş olarak Başlat menüsü.
 
-**Windows cihaz portalı ile bilgisayar aracılığıyla yükler (HoloLens 2 ' de [geliştirici modunun](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) etkinleştirilmesini gerektirir)**
+**Windows Cihaz Portalı ile PC üzerinden yükleme [](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) (2. HoloLens geliştirici modunun etkinleştirilmesi gerekir)**
 
-  1. Bilgisayarınızda [Edge Insider indirme sayfasını](https://www.microsoftedgeinsider.com/download)ziyaret edin.
-  1. yüklemek istediğiniz Edge ınsider kanalının "Windows 10 için indir" düğmesinin yanındaki **açılan ok düğmesini** seçin.
-  1. açılan menüden **HoloLens 2** ' yi seçin.
-  1. . Msix dosyasını BILGISAYARıNıZıN "Indirmeler" klasörüne (veya kolayca bulabileceğinizi bir klasöre) kaydedin.
-  1. HoloLens 2 ' ye indirilen. msix dosyasını yüklemek için bilgisayarınızda [Windows cihaz portalı](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) 'nı kullanın.
-  1. başarılı bir yüklemeden sonra, Başlat menüsü **tüm uygulamalar** listesinde Microsoft Edge Beta, Dev veya canary ' ı ayrı bir giriş olarak bulacaksınız.
+  1. Bilgisayarınızda [Edge Insider indirme sayfasını ziyaret edin.](https://www.microsoftedgeinsider.com/download)
+  1. Yüklemek **istediğiniz** Edge Insider kanalı için "Windows 10 indir" düğmesinin yanındaki aşağı ok düğmesini seçin.
+  1. Açılan **HoloLens 2'yi** seçin.
+  1. .msix dosyasını bilgisayarınızın "İndirilenler" klasörüne (veya kolayca bulabilirsiniz başka bir klasöre) kaydedin.
+  1. İndirilen [.msix](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) dosyasını 2. Windows Cihaz Portalı yüklemek için bilgisayarınızda HoloLens kullanın.
+  1. Yükleme başarılı olduktan sonra, Microsoft Edge Beta, Dev veya Canary'nin, Tüm uygulamalar listesi içinde ayrı **bir** giriş olarak Başlat menüsü.
 
-#### <a name="using-wdac-to-block-new-microsoft-edge"></a>Yeni Microsoft Edge engellemek için WDAC kullanma
+#### <a name="using-wdac-to-block-new-microsoft-edge"></a>Yeni depolamayı engellemek için WDAC Microsoft Edge
 
-bt yöneticileri için, yeni Microsoft Edge uygulamasını engelleyecek bir [WDAC ilkesini](windows-defender-application-control-wdac.md) güncelleştirmek isteyen bt yöneticileri için, aşağıdaki ilkeyi ilkenize eklemeniz gerekir.
+WDAC ilkelerini yeni [](windows-defender-application-control-wdac.md) uygulama Microsoft Edge güncelleştirmek Microsoft Edge, ilkenize aşağıdakini eklemeniz gerekir.
 
 ``` <Deny ID="ID_DENY_D_3_0" FriendlyName="C:\Data\Programs FileRule" PackageVersion="65535.65535.65535.65535" FileName="msedge.exe" /> ```
 
-#### <a name="managing-endpoints-for-the-new-microsoft-edge"></a>Yeni Microsoft Edge için uç noktaları yönetme
+#### <a name="managing-endpoints-for-the-new-microsoft-edge"></a>Yeni uygulamanın uç noktalarını Microsoft Edge
 
-Bazı ortamların, dikkate alınması açısından hesaba yönelik ağ kısıtlamaları olabilir. Yeni kenara sorunsuz bir deneyim sağlamak için lütfen [Bu Microsoft uç noktalarını etkinleştirin.](/deployedge/microsoft-edge-security-endpoints)
+Bazı ortamların dikkate alınması gereken ağ kısıtlamaları olabilir. Yeni Edge ile sorunsuz bir deneyim sağlamak için lütfen [bu Microsoft uç noktalarını etkinleştirin.](/deployedge/microsoft-edge-security-endpoints)
 
-HoloLens için şu anda kullanılabilir [uç noktalar](hololens-offline.md)hakkında daha fazla bilgi edinin.
+için kullanılabilir olan uç noktalar hakkında [daha fazla bilgi HoloLens.](hololens-offline.md)
 
-### <a name="install-web-apps"></a>Web uygulamalarını yükler
+### <a name="install-web-apps"></a>Web uygulamalarını yükleme
 
  > [!Note]
->[Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1)itibariyle, Office web uygulaması artık önceden yüklenmeyecektir.
+>Holographic [Windows 21H1](hololens-release-notes.md#windows-holographic-version-21h1)sürümünden Office web uygulaması artık önceden yüklenmez.
 
-yeni kenarı, Microsoft Store uygulamalarla birlikte web uygulamaları yüklemek için kullanabilirsiniz. örneğin, SharePoint veya OneDrive barındırılan dosyaları görüntülemek ve düzenlemek için Microsoft Office web uygulamasını yükleyebilirsiniz. Office web uygulamasını yüklemek için, https://www.office.com adres çubuğuna **uygulama kullanılabilir** veya **Office** düğmesini seçin. Onaylamak için **yüklemeyi** seçin.
+Yeni Edge'i kullanarak web uygulamalarının yanı sıra yeni Microsoft Store yükleyebilirsiniz. Örneğin, Microsoft Office veya SharePoint barındırılan dosyaları görüntülemek ve düzenlemek için OneDrive. Office web uygulamasını yüklemek için adres çubuğundaki Kullanılabilir Uygulama https://www.office.com veya Office düğmesini seçin.   Onaylamak **için Yükle'yi** seçin.
 
 > [!IMPORTANT]
-> Office web uygulaması işlevselliği yalnızca, HoloLens 2 etkin bir internet bağlantısına sahip olduğunda kullanılabilir.
+> Office web uygulaması işlevselliği yalnızca 2. HoloLens etkin bir İnternet bağlantısı olduğunda kullanılabilir.
 
-### <a name="webxr-and-360-viewer"></a>WebXR ve 360 Görüntüleyicisi
+### <a name="webxr-and-360-viewer"></a>WebXR ve 360 Görüntüleyici
 
-yeni Microsoft Edge, derinlikli web deneyimleri (webvr 'yi değiştirme) oluşturmaya yönelik yeni standart olan webxr için destek içerir. birçok modern web deneyimi, VR ile birlikte tasarlanmıştır (görünüm alanınızı bir sanal ortamla değiştirir), ancak bu deneyimler HoloLens 2 tarafından da desteklenir. WebXR standardı, fiziksel ortamınızı kullanan genişletilmiş ve karma gerçeklik derinlikli web deneyimlerini de sunar. geliştiriciler webxr ile daha fazla zaman harcadığında, yeni genişleticilerin ve karma gerçeklik derinlikli deneyimlerin HoloLens 2 müşteri tarafından denemeye ulaştığını öneririz!
+Yeni Microsoft Edge, tam ekran web deneyimleri oluşturmaya (WebVR yerine) yeni standart olan WebXR desteği içerir. Birçok çevreleyici web deneyimi VR ile tasarlanmıştır (görünüm alanınızı bir sanal ortamla değiştirir), ancak bu deneyimler 2. HoloLens de desteklemektedir. WebXR standardı, fiziksel ortamınızı kullanan artırılmış ve karma gerçeklik çevreleyici web deneyimleri de sağlar. Geliştiriciler WebXR ile daha fazla zaman harcayarak 2 müşterinin denemesi için yeni artırılmış ve karma gerçeklik HoloLens deneyimler gelmesini bekliyor!
 
-360 görüntüleyici uzantısı, webxr üzerinde oluşturulmuştur ve HoloLens 2 ' deki yeni Microsoft Edge birlikte otomatik olarak yüklenir. Bu web uzantısı size 360 derecelik videolarda araçlarındaki yeniliklere dalabilirsiniz olanağı sağlar. YouTube, 360 videoların en büyük seçimini sunarak, buradan başlamanız önerilir.
+360 Görüntüleyici uzantısı WebXR üzerinde oluşturulur ve 2. Microsoft Edge yeni HoloLens yüklenir. Bu web uzantısı, kendinizi 360 derecelik videolara daldırma olanağı sağlar. YouTube en fazla 360 video seçkisi sunduğundan, bu videoya orada başlamayı teşvik ediyoruz.
 
-#### <a name="how-to-use-webxr"></a>WebXR kullanma
+#### <a name="how-to-use-webxr"></a>WebXR'i kullanma
 
-1. WebXR desteğiyle bir Web sitesine gidin.
-1. Web sitesindeki **VR girin** düğmesini seçin. Bu düğmenin konumu ve görsel temsili Web sitesi başına değişebilir, ancak şuna benzer olabilir:
+1. WebXR desteği olan bir web sitesine gidin.
+1. Web **sitesinde VR girin** düğmesini seçin. Bu düğmenin konumu ve görsel gösterimi web sitesi başına farklılık gösterebilir ancak aşağıdakine benzer olabilir:
 
-    ![VR düğmesi örneği girin.](images/75px-enter-vr.png)
+    ![VR düğmesi örneğini girin.](images/75px-enter-vr.png)
 
-1. Belirli bir etki alanında bir WebXR deneyimini ilk kez başlatmaya çalıştığınızda, tarayıcı bir derinlikli görünüm girip **Izin ver**' i seçeceğiz.
+1. Belirli bir etki alanında WebXR deneyimini ilk kez başlatmayı deneyci, çevreleyici bir görünüm girmek için onay sorar ve İzin Ver'i **seçer.**
 1. deneyimi işlemek için [HoloLens 2 hareketlerini](hololens2-basic-usage.md#the-hand-tracking-frame) kullanın.
 1. Deneyimde **Çıkış** düğmesi yoksa, giriş geri döndürmek için [Başlangıç hareketini](hololens2-basic-usage.md#start-gesture) kullanın.
 
@@ -550,7 +810,7 @@ AAD olmayan bir yapılandırma için, bir cihazı ziyaretçi otomatik oturum aç
     1. Yerel hesap oluşturma
 1. [Sağlama paketini uygulayın](hololens-provisioning.md).
 
-AAD yapılandırmasında, kullanıcılar bu değişiklik yapılmadan bugün buna benzer bir şey elde edebilir. Bilgi noktası modu için yapılandırılmış AAD 'ye katılmış cihazlar, oturum açma ekranından tek bir düğmeye dokunarak bir ziyaretçi hesabında oturum açabilir. Ziyaretçi hesabında oturum açtıktan sonra, ziyaretçi başlangıç menüsünde açıkça oturum açana veya cihaz yeniden başlatılana kadar cihaz yeniden oturum açmayı istemez.
+AAD bir yapılandırma için, kullanıcılar bu değişiklik olmadan bugün buna benzer bir şey elde edebilir. bilgi noktası modu için yapılandırılmış AAD katılmış cihazlar, oturum açma ekranından tek bir düğmeye dokunarak bir ziyaretçi hesabında oturum açabilir. Ziyaretçi hesabında oturum açtıktan sonra, ziyaretçi başlangıç menüsünde açıkça oturum açana veya cihaz yeniden başlatılana kadar cihaz yeniden oturum açmayı istemez.
 
 Ziyaretçi otomatik oturum açma, [özel OMA-URI](/mem/intune/configuration/custom-settings-windows-10) ilkesi aracılığıyla yönetilebilir:
 
@@ -575,7 +835,7 @@ Yeni uygulamaları dahil etmek için bir bilgi noktası değiştirirken, yeni AU
 
 ### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Hataların işlenmesine yönelik bilgi noktası modu davranış değişiklikleri
 
-Daha eski derlemelerde, bir cihazın bir bilgi noktası yapılandırması varsa ve bu, hem genel atanan erişim hem de AAD grup üyesi tarafından atanan erişimin bir birleşimi ise, AAD grup üyeliğini belirlemek başarısız olursa Kullanıcı "[hiçbir şey gösterilmez](hololens-kiosk.md#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode)" menüsünü görür.
+daha eski derlemelerde, bir cihazın bir bilgi noktası yapılandırması varsa ve bu, hem küresel olarak atanan erişim hem de AAD grup üyesi tarafından atanan erişim ' in bir birleşimi olan AAD grup üyeliğini belirlemek başarısız olursa, kullanıcı "[başlangıç olarak gösterilmemektedir](hololens-kiosk.md#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode)
 
 bu Windows sürümden itibaren, bilgi noktası deneyimi AAD grubu bilgi noktası modu sırasında oluşan hatalara karşı genel bilgi noktası yapılandırmasına (varsa) geri dönüş yapılır.
 
@@ -685,7 +945,7 @@ Ziyaretçiler artık bir bilgi noktasında otomatik olarak oturum açabilir. Bu 
 
 ✔️ [**Gelişmiş bilgi noktası modu hata teslim**](#kiosk-mode-behavior-changes-for-handling-of-failures)etme:
 
-Oturum açan AAD kullanıcısının AAD grup üyeliği başarıyla saptanmamışsa, bu durumda Başlat menüsü (varsa) için genel bilgi noktası yapılandırması kullanılır, aksi takdirde Kullanıcı boş Başlat menüsüyle sunulur. Boş başlangıç menüsü, doğrudan ayarlayabileceğiniz bir yapılandırma olmadığından, bu yeni işleme, sizin yapılandırmanıza uygulanabilecek veya atanan erişim yapılandırmalarınıza yeni ayarlamalar yapmak isteyebileceğiniz için, bilgi noktaları kullanıyorsanız, destek bölümünüze bildirmek için bir şey olabilir.
+oturum açmış AAD kullanıcının AAD grup üyeliği başarıyla saptanmamışsa, bu durumda başlat menüsü (varsa) için genel bilgi noktası yapılandırması kullanılır, aksi takdirde kullanıcı boş başlat menüsüyle sunulur. Boş başlangıç menüsü, doğrudan ayarlayabileceğiniz bir yapılandırma olmadığından, bu yeni işleme, sizin yapılandırmanıza uygulanabilecek veya atanan erişim yapılandırmalarınıza yeni ayarlamalar yapmak isteyebileceğiniz için, bilgi noktaları kullanıyorsanız, destek bölümünüze bildirmek için bir şey olabilir.
 
 #### <a name="updates-to-page-settings-visibility"></a>sayfa Ayarlar görünürlüğü için güncelleştirmeler
 
@@ -739,156 +999,156 @@ Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
 - Bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermiyor. **Bu derleme artık aylık hizmet güncelleştirmelerini almamayacaktır**. Windows Holographic, sürüm 21h1 olan en son derlemenizi denemenizi öneririz.
 
-## <a name="windows-holographic-version-20h2---april-2021-update"></a>Windows Holographic, sürüm 20H2-Nisan 2021 güncelleştirmesi
+## <a name="windows-holographic-version-20h2---april-2021-update"></a>Windows Holographic, sürüm 20H2 - Nisan 2021 Güncelleştirmesi
 
-- Derleme 19041,1144
-
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- İş kolu uygulama yüklemesi durum raporlama etrafında bir sorunu düzeltir.
-
-## <a name="windows-holographic-version-1903---april-2021-update"></a>Windows Holographic, sürüm 1903-Nisan 2021 güncelleştirme
-
-- Derleme 18362,1108
+- Derleme 19041.1144
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- bir yerel hesabın parolasını değiştirmeye çalışırken Ayarlar uygulamasının çöktüğü bir sorunu giderir.
+- İş satırı uygulaması yükleme durumu raporlaması ile ilgili bir sorun düzeltildi.
 
+## <a name="windows-holographic-version-1903---april-2021-update"></a>Windows Holographic, sürüm 1903 - Nisan 2021 Güncelleştirmesi
 
-## <a name="windows-holographic-version-20h2---march-2021-update"></a>Windows Holographic, sürüm 20H2-Mart 2021 güncelleştirmesi
-
-- Derleme 19041,1140
-
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- HoloLens 2 ile fotoğraf yakalamak için advancedphotocapture veya lowgphotocapture kullanan müşteriler artık fotoğraf yakalandıktan sonra kamerayı 3 saniyeye alabilir.
-- Cihaz portalı hizmetinde bellek sızıntısı için, sorun diğer uygulamaların bellek ayırmayı başarısız olmasına neden olan hizmet tarafından daha fazla bellek kullanımına neden oldu.
-- Hazırlanmış dağıtıma kayıtlı olan kullanıcıların cihazda oturum açabildiği bir sorun düzeltildi.
-
-## <a name="windows-holographic-version-1903---march-2021-update"></a>Windows Holographic, sürüm 1903-Mart 2021 güncelleştirme
-
-- Derleme 18362,1102
+- Derleme 18362.1108
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Cihaz portalı hizmetinde bellek sızıntısı için, sorun diğer uygulamaların bellek ayırmayı başarısız olmasına neden olan hizmet tarafından daha fazla bellek kullanımına neden oldu.
+- Yerel bir hesap Ayarlar parola değiştirmeye çalışırken uygulamanın kilitlenmesi sorununa yol açıyor.
 
-## <a name="windows-holographic-version-20h2---february-2021-update"></a>Windows Holographic, sürüm 20H2-Şubat 2021 güncelleştirmesi
 
-- Derleme 19041,1136
+## <a name="windows-holographic-version-20h2---march-2021-update"></a>Windows Holographic, sürüm 20H2 - Mart 2021 Güncelleştirmesi
 
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- İlk cihaz kurulumu ve uygulama güncelleştirmelerini depolama etrafında bir sorunu düzeltir.
-- daha sonraki HoloLens sürümler için yükseltmeler ve fışıklardan oluşan bir sorunu giderir.
-- kullanılmayan önceden yüklenmiş sertifikalar HoloLens cihazlarından esım kök deposundan kaldırıldı.
-
-## <a name="windows-holographic-version-1903---february-2021-update"></a>Windows Holographic, sürüm 1903-Şubat 2021 güncelleştirme
-
-- Derleme 18362,1098
-
-bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez Windows Holographic, sürüm 2004 için en son derlemelerimizi denemenizi öneririz.
-
-## <a name="windows-holographic-version-20h2---january-2021-update"></a>Windows Holographic, sürüm 20H2-Ocak 2021 güncelleştirmesi
-
-- Derleme 19041,1134
+- Derleme 19041.1140
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Cihazda çok sayıda kullanıcı olduğunda başlangıç, özgeçmişler ve Kullanıcı geçişi sırasında performans geliştirildi.
-- [Araştırma modu](/windows/mixed-reality/develop/platform-capabilities-and-apis/research-mode)için ARM32 desteği eklendi.
+- HoloLens 2 ile fotoğraf yakalamak için AdvancedPhotoCapture veya LowLagPhotoCapture kullanan müşteriler artık fotoğraf kaydedildikten 3 saniye sonra kamera pozunu alabilir.
+- Cihaz Portalı Service'te bir bellek sızıntısı için düzeltme, hizmet tarafından bellek kullanımının artmasına neden oldu ve bu da diğer uygulamaların belleğin tamamında hataya neden oldu.
+- Aşamalı Rollout'a kaydolan kullanıcıların cihazda oturum alamama sorunu düzeltildi.
 
-## <a name="windows-holographic-version-1903---january-2021-update"></a>Windows Holographic, sürüm 1903-Ocak 2021 güncelleştirme
+## <a name="windows-holographic-version-1903---march-2021-update"></a>Windows Holographic, sürüm 1903 - Mart 2021 Güncelleştirmesi
 
-- Derleme 18362,1091
+- Derleme 18362.1102
 
-bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez Windows Holographic, sürüm 2004 için en son derlemelerimizi denemenizi öneririz.
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-## <a name="windows-holographic-version-20h2--december-2020-update"></a>Windows Holographic, sürüm 20H2 – Aralık 2020 güncelleştirme
+- Cihaz Portalı Service'te bir bellek sızıntısı için düzeltme, hizmet tarafından bellek kullanımının artmasına neden oldu ve bu da diğer uygulamaların belleğin tamamında hataya neden oldu.
 
-- Derleme 19041,1131
+## <a name="windows-holographic-version-20h2---february-2021-update"></a>Windows Holographic, sürüm 20H2 - Şubat 2021 Güncelleştirmesi
 
-### <a name="install-apps-on-hololens-2-via-app-installer"></a>uygulama yükleyicisi aracılığıyla HoloLens 2 ' ye uygulama yükleme
+- Derleme 19041.1136
 
-HoloLens 2 cihazlarınıza **daha sorunsuz bir şekilde uygulama yüklemenize olanak tanımak için yeni bir özellik (App ınstaller) ekliyoruz** . Özelliği, **yönetilmeyen cihazlar için varsayılan olarak açık** olacaktır. Kurumların kesintiye uğramasını önlemek için, uygulama yükleyicisi Şu anda **Yönetilen cihazlarda kullanılamayacak** .  
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-**Aşağıdakilerden biri doğruysa** bir cihaz "yönetilen" olarak değerlendirilir:
+- İlk cihaz kurulumu ve mağaza uygulaması güncelleştirmeleri ile ilgili bir sorunu düzeltir.
+- Sonraki sürümler için yükseltme ve uçuş ile ilgili HoloLens gidermek.
+- eSIM kök depolamadan kullanılmayan önceden yüklenmiş sertifikalar, HoloLens kaldırıldı.
 
-- MDM [kaydı](hololens-enroll-mdm.md) yapılmış
-- [Sağlama paketiyle](hololens-provisioning.md) yapılandırıldı
-- Kullanıcı [kimliği](hololens-identity.md) Azure AD
+## <a name="windows-holographic-version-1903---february-2021-update"></a>Windows Holographic, sürüm 1903 - Şubat 2021 Güncelleştirmesi
 
-Artık Geliştirici modunu etkinleştirmek veya cihaz portalını kullanmak gerekmeden uygulama yükleyebilirsiniz.  Cihazınıza appx paketini indirmeniz (USB veya-Edge üzerinden) ve yüklemeyi başlatma istenmeden dosya Gezgini 'ndeki appx grubuna gitmeniz yeterlidir.  Alternatif olarak, [bir Web sayfasından bir yüklemeyi başlatabilirsiniz](/windows/msix/app-installer/installing-windows10-apps-web).  MDM 'nin LOB uygulaması dağıtım özelliğini kullanarak Microsoft Store veya dışarıdan yüklemeden yüklediğiniz uygulamalar gibi uygulamalar, [imza aracı](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) ile dijital olarak imzalanmalıdır ve uygulama dağıtılmadan önce [imzalamak için kullanılan sertifikaya HoloLens cihaz tarafından güvenilmesi gerekir](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) .
+- Derleme 18362.1098
 
-**Uygulama yüklemesi yönergeleri.**
+Bu aylık kalite güncelleştirmesi önemli bir değişiklik içermemektedir. Windows Holographic sürüm 2004 için en son derlemelerimizi denemeniz gerekir.
 
-1. Cihazınızın yönetilen olarak değerlendirilmediğinden emin olun
+## <a name="windows-holographic-version-20h2---january-2021-update"></a>Windows Holographic, sürüm 20H2 - Ocak 2021 Güncelleştirmesi
+
+- Derleme 19041.1134
+
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
+
+- Cihazda çok sayıda kullanıcı olduğunda başlatma, sürdürme ve kullanıcı değiştirme sırasında performans geliştirildi.
+- Araştırma Modu için arm32 [desteği eklendi.](/windows/mixed-reality/develop/platform-capabilities-and-apis/research-mode)
+
+## <a name="windows-holographic-version-1903---january-2021-update"></a>Windows Holographic, sürüm 1903 - Ocak 2021 Güncelleştirmesi
+
+- Derleme 18362.1091
+
+Bu aylık kalite güncelleştirmesi önemli bir değişiklik içermemektedir. Windows Holographic sürüm 2004 için en son derlemelerimizi denemeniz gerekir.
+
+## <a name="windows-holographic-version-20h2--december-2020-update"></a>Windows Holographic, sürüm 20H2 – Aralık 2020 Güncelleştirmesi
+
+- Derleme 19041.1131
+
+### <a name="install-apps-on-hololens-2-via-app-installer"></a>Uygulama Yükleyicisi aracılığıyla HoloLens 2'ye Uygulama Yükleyicisi
+
+Uygulamaları 2 **cihaza daha sorunsuz Uygulama Yükleyicisi için** yeni bir özellik (HoloLens) ekliyoruz. Özellik, varsayılan **olarak, unmanaged cihazlar için açık olur.** Kuruluşlarda kesinti yaşanmasını önlemek için uygulama **yükleyicisi şu anda yönetilen cihazlarda** kullanılamaz.  
+
+Aşağıdakilerden herhangi biri doğruysa **cihaz** "yönetilen" olarak kabul edilir:
+
+- MDM [Kayıtlı](hololens-enroll-mdm.md)
+- Sağlama [paketiyle yapılandırılmış](hololens-provisioning.md)
+- Kullanıcı [Kimliği](hololens-identity.md) Azure AD'dir
+
+Artık Geliştirici Modunu etkinleştirmeye veya uygulama modunu kullanmaya gerek kalmadan Uygulamaları Cihaz Portalı.  Appx Paketi'nin (USB üzerinden veya Edge üzerinden) cihazınıza indirerek yüklemenin Dosya Gezgini appx paketine gidin.  Alternatif olarak, [bir web sayfasından yükleme başlatabilirsiniz.](/windows/msix/app-installer/installing-windows10-apps-web)  MDM'nin LOB Uygulaması dağıtım özelliğini kullanarak Microsoft Store veya sideload'tan yüklemiş olduğu gibi, uygulamaların [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) da İmza [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) Aracı ile dijital olarak imzalanacak ve uygulama dağıtılamadan önce imzalamak için kullanılan sertifikanın HoloLens cihazı tarafından güvenilir olması gerekir.
+
+**Uygulama yükleme yönergeleri.**
+
+1. Cihazınızın yönetilen olarak kabul edilen bir şey olduğundan emin olun
 1. HoloLens 2 cihazınızın açık ve bilgisayarınıza bağlı olduğundan emin olun
-1. HoloLens 2 cihazında oturum açtığınızdan emin olun
-1. bilgisayarınızda özel uygulamanıza gidin ve app. appxpaketi ' ni devicename\ınternal Depolama \downloadcopy dizinine kopyalayın.   Dosyanızı kopyalamayı tamamladıktan sonra cihazınızın bağlantısını kesebilirsiniz
-1. HoloLens 2 cihazınızdan başlat menüsünü açın, tüm uygulamalar ' ı seçin ve dosya gezgini uygulamasını başlatın.
-1. Indirmeler klasörüne gidin. Uygulamanın sol panelinde bu cihazı önce seçin, sonra Indirmeler ' a gidin.
-1. Yourapp. appxpaket dosyasını seçin.
-1. Uygulama yükleyicisi başlatılır. Uygulamanızı yüklemek için Install (Çalıştır) düğmesini seçin.
-Yükleme tamamlandıktan sonra yüklenen uygulama otomatik olarak başlatılır.
+1. HoloLens 2 cihazında oturum HoloLens olun
+1. Bilgisayarınızda özel uygulamanıza gidin ve yourapp.appxbundle'ı yourdevicename\Internal Depolama\Downloads klasörüne kopyalayın.   Dosyanızı kopyalamayı tamamlayıp cihazınızın bağlantısını kesebilirsiniz
+1. 2 HoloLens Başlat Menüsünü açın, Başlat'ı Tüm uygulamalar seçin ve Dosya Gezgini başlatabilirsiniz.
+1. İndirilenler klasörüne gidin. Uygulamanın sol panelinde Önce Bu cihaz'ı seçmeniz ve ardından İndirilenler'e gitmek zorundayabilirsiniz.
+1. yourapp.appxbundle dosyasını seçin.
+1. Uygulama Yükleyicisi başlatacak. Uygulamayı yüklemek için Yükle düğmesini seçin.
+Yüklü uygulama, yükleme tamamlandıktan sonra otomatik olarak başlatılır.
 
-bu akışı test etmek için, [Windows Universal Samples GitHub](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples) üzerinde örnek uygulamalar bulabilirsiniz.
+Bu akışı test etmek için [Windows Evrensel GitHub](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples) örnek uygulamalar bulabilirsiniz.
 
-[uygulama yükleyicisiyle HoloLens 2 ' ye uygulama yükleme](app-deploy-app-installer.md)işleminin tam süreci hakkında bilgi edinin.  
+Uygulama Yükleyicisi ile HoloLens [2'ye uygulama yükleme işleminin tam Uygulama Yükleyicisi.](app-deploy-app-installer.md)  
 
-![Uygulama yükleyicisi aracılığıyla MRTK örnekleri yükleniyor.](images/hololens-app-installer-picture.jpg)
+![Uygulama Yükleyicisi aracılığıyla MRTK Örnekleri Uygulama Yükleyicisi.](images/hololens-app-installer-picture.jpg)
 
 ### <a name="improvements-and-fixes-in-the-update"></a>Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- El ile izleme artık, izlemenin daha önce kaybedildiği birçok yeni durumda izlemeyi korur.  Bu yeni durumların bazılarında, yalnızca Palm konumu kullanıcının gerçek adına göre güncelleştirilmeye devam ederken, diğer yandan da önceki bir poza göre çıkarılır.  Bu değişiklik, taşıma, oluşturma, scoing ve hareketli hale alma gibi hareket halinde izlemenin tutarlılığını artırmaya yardımcı olur.  Ayrıca, el 'nin bir yüzeye yakın veya bir nesneyi tutan durumlarda da yardımcı olur.  Bu yandan, her ne kadar [ortak doğruluk](/uwp/api/windows.perception.people.jointposeaccuracy?view=winrt-19041&preserve-view=true) değeri "yüksek" yerine "yaklaşık" olarak ayarlanır.
-- Azure AD hesapları için PIN sıfırlamasının bir hata göstereceği bir sorun düzeltildi "bir sorun oluştu.
-- Kullanıcılar, ayarlar uygulaması, Yeni Kullanıcı veya bildirim bildirimi ' ni başlatırken, kullanıcıların çok daha az önyükleme sonrası OOBE kilitlenmelerini görmelidir.
-- Kullanıcıların, OOBE 'den gelen doğru saat dilimi olması gerekir.
+- El izleme artık daha önce el kayıpları olan birçok yeni durumda izlemeye devam ediyor.  Bu yeni durumlardan bazılarında, kullanıcının gerçek el ile yalnızca konum güncelleştirilirken diğer ortaklar önceki bir poza göre ertelenmektedir.  Bu değişiklik; tırslama, atma, kırpma ve kırpma gibi hareketlerde izleme tutarlılığının iyileştirilmesine yardımcı olur.  Ayrıca, el bir yüzeyin yakınında veya bir nesneyi tuttuğunda da yardımcı olur.  El birikleri vernilen zaman, [her bir ortak](/uwp/api/windows.perception.people.jointposeaccuracy?view=winrt-19041&preserve-view=true) doğruluk değeri "Yüksek" yerine "Yaklaşık" olarak ayarlanır.
+- Azure AD hesapları için PIN sıfırlamanın "Bir sorun oluştu.
+- Et, Ayarlar uygulamasından Iris, yeni kullanıcı veya bildirim bildirimi başlatan kullanıcılar önyükleme sonrası OOBE kilitlenmelerini çok daha az görüyor.
+- Kullanıcıların OOBE'den gelen doğru saat dilimine sahip olması gerekir.
 
-## <a name="windows-holographic-version-1903--december-2020-update"></a>Windows Holographic, sürüm 1903 – Aralık 2020 güncelleştirme
+## <a name="windows-holographic-version-1903--december-2020-update"></a>Windows Holographic, sürüm 1903 – Aralık 2020 Güncelleştirmesi
 
-- Derleme 18362,1088
+- Derleme 18362.1088
 
-bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez, en son Windows Holographic, sürüm 20h2 – aralık 2020 güncelleştirme ve yapıya eklenen yeni uygulama yükleyicisi özelliğini denemenizi öneririz.
+Bu aylık kalite güncelleştirmesi önemli bir değişiklik içermemektedir. En son Windows Holographic, sürüm 20H2 – Aralık 2020 Güncelleştirmesini ve derlemeye eklenen yeni Uygulama Yükleyicisi özelliğini denemeniz gerekir.
 
 ## <a name="windows-holographic-version-20h2"></a>Windows Holographic, sürüm 20H2
 
-- Derleme 19041,1128
+- Derleme 19041.1128
 
-Windows Holographic, 20h2 sürümü artık kullanılabilir ve 2 kullanıcı ve bt uzmanlarına HoloLens harika yeni özellikler sunuyor. otomatik göz konumlandırmayı, Ayarlar ' deki sertifika yöneticisi 'ne, gelişmiş bilgi noktası modu işlevselliğine ve yeni Autopilot kurulum özelliklerine sahip. bu yeni güncelleştirme, bt ekiplerinin HoloLens cihazları yapılandırmak ve yönetmek için daha ayrıntılı denetim almasını sağlar ve kullanıcılara daha sorunsuz holographic deneyimleri sunar.
+Windows Holographic sürüm 20H2 artık kullanılabilir ve 2 kullanıcı ve BT HoloLens yeni özellikler sunar. Otomatik Göz Konumlandırmadan Sertifika Yöneticisi'ne Ayarlar Bilgi Noktası Modu işlevselliğine ve yeni Autopilot kurulum özelliklerine kadar. Bu yeni güncelleştirme, IT ekiplerinin cihazları yapılandırmak ve yönetmek için daha ayrıntılı denetime sahip HoloLens ve kullanıcılara daha sorunsuz holografik deneyimler sunar.
 
-Bu en son sürüm 2004 sürümüne yönelik aylık bir güncelleştirmedir, ancak bu kez yeni özellikler de ekledik. ana yapı numarası aynı kalacaktır ve Windows Update sürüm 2004 ' e yönelik aylık bir yayın olduğunu belirtecektir (derleme 19041). en son kullanılabilir derleme 19041.1128 + ' de olduğunu onaylamak için Ayarlar > ekranında yapı numaranızı görebilirsiniz. en son sürüme güncelleştirmek için Ayarlar uygulamasını açın, güncelleştirme & güvenlik ' e gidin ve güncelleştirmeler için denetle ' ye dokunun. HoloLens güncelleştirmelerinin nasıl yönetileceği hakkında daha fazla bilgi için, [HoloLens güncelleştirmelerini yönet](hololens-updates.md)' e gidin.
+Bu en son sürüm, 2004 sürümüne aylık bir güncelleştirmedir, ancak bu kez yeni özellikler ekllmektedir. Ana derleme numarası aynı kalır ve Windows Update 2004 (derleme 19041) sürümüne aylık bir sürümü gösteriyor. Kullanılabilir en son derleme olan 19041.1128+ sürümünü onaylamak için Ayarlar > Hakkında ekranında Derleme Numaranıza bakabilirsiniz. En son sürüme güncelleştirmek için Ayarlar uygulamasını açın, & Güvenliği Güncelleştir'e gidin ve Güncelleştirmeleri Kontrol Edin'e dokunun. Güncelleştirmeleri yönetme hakkında daha fazla bilgi için HoloLens güncelleştirmelerini [yönetme HoloLens ziyaret edin.](hololens-updates.md)
 
-### <a name="whats-new-in-windows-holographic-version-20h2"></a>Windows Holographic, sürüm 20h2 ' deki yenilikler  
+### <a name="whats-new-in-windows-holographic-version-20h2"></a>Windows Holographic sürüm 20H2'daki yeniler  
 
 | Özellik                                              | Açıklama                                                                                                                                     |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Otomatik göz konumu desteği](hololens-release-notes.md#auto-eye-position-support) | Göz önünde bulunmadan, göz önünde bulunmadan önce gözle yer işareti olarak hesaplar.   |
-| [Sertifika Yöneticisi](hololens-release-notes.md#certificate-manager)   | yeni daha basit yöntemlerin Ayarlar uygulamasına sertifika yüklemeye ve kaldırmasına izin verir.     |
-| [Sağlamayı USB 'den otomatik olarak başlatma](hololens-release-notes.md#auto-launch-provisioning-from-usb)                    | USB sürücülerdeki sağlama paketleri otomatik olarak OOBE 'de sağlama sayfasına istem.                                                         |
-| [OOBE 'de sağlama paketlerini otomatik onaylama](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Sağlama paketleri, sağlama sayfasından OOBE sırasında otomatik olarak uygulanır.                                                         |
-| [Kullanıcı arabirimi kullanmadan otomatik sağlama](hololens-release-notes.md#automatic-provisioning-without-using-ui) | Sağlama otomatik başlatma ve birlikte otomatik onaylama işlemlerini birleştirme. |
-| [Wi-Fi bağlantısı ile Autopilot kullanma](hololens-release-notes.md#using-autopilot-with-wi-fi-connection) | Ethernet bağdaştırıcısı için gerek olmadan cihaz Wi-Fi Autopilot kullanın. |
-| [Tenantlockdown CSP ve Autopilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Kiracı kaydı ve ilke uygulandıktan sonra, cihaz yalnızca cihaz sıfırlandığında veya yeniden flaışınızda bu kiracıya kaydedilebilir. |
-| [Genel atanan erişim](hololens-release-notes.md#global-assigned-access--kiosk-mode)                               | Birden çok uygulama bilgi noktası modu için yeni yapılandırma yöntemi, sistem düzeyinde bilgi noktası uygular ve bu durum, tümü için geçerli hale getirir.                  |
-| [Çoklu uygulama bilgi noktasında uygulamayı otomatik olarak başlatma](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Bir uygulamayı birden çok uygulama bilgi noktası modunda oturum açarken otomatik olarak başlatılacak şekilde ayarlar.                                                        |
-| [Hataların işlenmesine yönelik bilgi noktası modu davranış değişiklikleri](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Bilgi noktası modu hatası artık kısıtlayıcı geri dönüş içeriyor.                                                                                                |
-| [HoloLens Elerindeki](hololens-release-notes.md#hololens-policies)                                    | HoloLens için yeni ilkeler.     |
-| [Çevrimdışı bilgi noktası için Azure AD grubu üyeliğini önbelleğe alma](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk)         | Yeni ilke, kullanıcıların, gün sayısını ayarlamak için bilgi noktası modunu çevrimdışı kullanması için Grup üyeliği önbelleğini kullanmasına izin verir.                                        |
-| [HoloLens 2 için yeni cihaz kısıtlama ilkeleri](hololens-release-notes.md#new-device-restriction-policies-for-hololens-2)       | HoloLens 2 için yeni etkinleştirilen cihaz yönetimi ilkeleri etkinleştirildi.                                                                                |
+| [Otomatik Göz Konumu Desteği](hololens-release-notes.md#auto-eye-position-support) | Kullanıcıların Göz İzleme ayarına girmeden göz konumlarını etkin bir şekilde hesaplama.   |
+| [Sertifika Yöneticisi](hololens-release-notes.md#certificate-manager)   | Sertifika yükleme ve kaldırma için yeni basit yöntemlere izin verir Ayarlar sağlar.     |
+| [USB'den sağlamayı otomatik başlatma](hololens-release-notes.md#auto-launch-provisioning-from-usb)                    | USB sürücülerinde paketlerin sağlanması, otomatik olarak OOBE'de sağlama sayfasına sorılır.                                                         |
+| [OOBE'de sağlama paketlerini otomatik olarak onaylama](hololens-release-notes.md#auto-confirm-provisioning-packages-in-oobe)           | Sağlama paketleri, sağlama sayfasından OOBE sırasında otomatik olarak uygulanır.                                                         |
+| [Kullanıcı arabirimini kullanmadan otomatik sağlama](hololens-release-notes.md#automatic-provisioning-without-using-ui) | Sağlama otomatik başlatma ve otomatik onaylamayı birlikte birleştirme. |
+| [Autopilot'ı Wi-Fi kullanma](hololens-release-notes.md#using-autopilot-with-wi-fi-connection) | Ethernet bağdaştırıcısına gerek kalmadan Wi-Fi otomatik pilot kullanın. |
+| [Tenantlockdown CSP ve Autopilot](hololens-release-notes.md#tenantlockdown-csp-and-autopilot)                     | Kiracı kaydı ve ilke uygulandıktan sonra, cihaz yalnızca cihaz sıfırlanır veya yeniden yanıp söner. |
+| [Genel Atanan Erişim](hololens-release-notes.md#global-assigned-access--kiosk-mode)                               | Bilgi noktası sistem düzeyinde uygulanarak herkes için geçerli olacak şekilde çoklu uygulama bilgi noktası modu için yeni yapılandırma yöntemi.                  |
+| [Çok uygulamalı bilgi noktası içinde bir uygulamayı otomatik başlatma](hololens-release-notes.md#automatic-launch-of-an-application-in-multiple-app-kiosk-mode)                | Birden çok uygulamalı bilgi noktası modunda oturum a açılırken bir uygulamayı otomatik olarak başlatılacak şekilde ayarlar.                                                        |
+| [Hataların işlenmesi için bilgi noktası modu davranış değişiklikleri](hololens-release-notes.md#kiosk-mode-behavior-changes-for-handling-of-failures) | Bilgi noktası modu hatası artık kısıtlayıcı geri dönüşe sahip.                                                                                                |
+| [HoloLens Koşullarıdır](hololens-release-notes.md#hololens-policies)                                    | Yeni ilkeler HoloLens.     |
+| [Çevrimdışı Bilgi Noktası için Azure AD Grubu üyeliğini önbelleğe alın](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk)         | Yeni ilke, kullanıcıların kaç gün boyunca çevrimdışı Bilgi Noktası modunu kullanmak için grup üyeliği önbelleğini kullanmalarını sağlar.                                        |
+| [HoloLens 2 için yeni cihaz kısıtlama ilkeleri](hololens-release-notes.md#new-device-restriction-policies-for-hololens-2)       | HoloLens 2 için yeni etkinleştirilen cihaz yönetimi ilkeleri.                                                                                |
 | [HoloLens 2 için yeni güç ilkeleri](hololens-release-notes.md#new-power-policies-for-hololens-2)       | Güç zaman aşımı ayarları için yeni desteklenen ilkeler.  |
-| [Güncelleştirme Ilkeleri](hololens-release-notes.md#newly-enabled-update-policies-for-hololens)        | Güncelleştirmelerin denetimine izin veren yeni etkinleştirilen ilkeler.           |
-| [HoloLens 2 için Ayarlar sayfa görünürlüğü etkinleştirildi](hololens-release-notes.md#enabled-settings-page-visibility-for-hololens-2)      | Ayarlar uygulamasında hangi sayfaların görüldüğünü seçme ilkesi.             |
-| [Araştırma modu](hololens-release-notes.md#research-mode) | HoloLens 2 üzerinde araştırma modu kullanılıyor. |
-| [Kayıt uzunluğu artırıldı](hololens-release-notes.md#recording-length-increased) | MRC kayıtları artık 5 dakikaya geçmiyor. |
+| [İlkeleri Güncelleştirme](hololens-release-notes.md#newly-enabled-update-policies-for-hololens)        | Güncelleştirmelerin denetimine izin veren yeni etkinleştirilen ilkeler.           |
+| [Ayarlar 2 için sayfa görünürlüğü HoloLens etkinleştirildi](hololens-release-notes.md#enabled-settings-page-visibility-for-hololens-2)      | Uygulama içinde hangi sayfaların görül Ayarlar.             |
+| [Araştırma modu](hololens-release-notes.md#research-mode) | HoloLens 2'de Araştırma modunu kullanma. |
+| [Kayıt uzunluğu artırıldı](hololens-release-notes.md#recording-length-increased) | MRC kayıtları artık 5 dakikayı geçmeyecek. |
 | [Güncelleştirmedeki geliştirmeler ve düzeltmeler](hololens-release-notes.md#improvements-and-fixes-in-the-update)                 | Güncelleştirmede ek düzeltmeler.   |
 
 ### <a name="auto-eye-position-support"></a>Otomatik Göz Konumu Desteği
 
-Bu HoloLens 2'de göz pozisyonları doğru hologram konumlandırmayı, rahat görüntüleme deneyimini ve gelişmiş görüntü kalitesini sağlar. Göz pozisyonları, göz izleme hesaplaması kapsamında dahili olarak hesaplanır. Ancak bu, deneyim göz bakışı girişi gerekmese bile her kullanıcının göz izleme ayarlaması izlemesini gerektirir.
+Bu HoloLens 2'de göz pozisyonları doğru hologram konumlandırma, rahat görüntüleme deneyimi ve geliştirilmiş görüntü kalitesi sağlar. Göz pozisyonları, göz izleme hesaplaması kapsamında dahili olarak hesaplanır. Ancak bu, deneyim göz bakışı girişi gerekmese bile her kullanıcının göz izleme ayarlaması izlemesini gerektirir.
 
-**Otomatik Göz Konumu (AEP),** bu senaryoları kullanıcı için göz konumlarını hesaplamanın etkileşimsiz bir yolu ile sağlar. Otomatik Göz Konumu, kullanıcı cihazı bağlı olduğu andan itibaren arka planda otomatik olarak çalışmaya başlar. Kullanıcının önceden göz izleme ayarı yoksa, Otomatik Göz Konumu 20 - 30 saniyelik bir işlem süresi sonra kullanıcının göz konumlarını görüntüleme sistemine sağlamaya başlar. Kullanıcı verileri cihazda kalıcı olmaz ve bu nedenle kullanıcı çıkar ve cihazı yeniden başlatırsa ya da cihaz yeniden başlatılırsa ya da uykudan çıkarsa bu işlem yinelenir.
+**Otomatik Göz Konumu (AEP),** bu senaryoları kullanıcı için göz konumlarını hesaplamanın etkileşimsiz bir yolu ile sağlar. Otomatik Göz Konumu, kullanıcı cihazı bağlı olduğu andan itibaren arka planda otomatik olarak çalışmaya başlar. Kullanıcının daha önce göz izleme ayarı yoksa Otomatik Göz Konumu, 20 -30 saniyelik bir işlem süresi sonra kullanıcının göz konumlarını görüntüleme sistemine sağlamaya başlar. Kullanıcı verileri cihazda kalıcı olmaz ve bu nedenle kullanıcı çıkar ve cihazı yeniden başlatırsa ya da cihaz yeniden başlatılırsa ya da uykudan çıkarsa bu işlem yinelenir.
 
 Otomatik Göz Konumu özelliğinde, kullanıcı cihaza bağlıyken birkaç sistem davranışı değişikliği vardır. Bu bağlamda, bir kullanıcı daha önce cihazda göz izleme ayarlama işleminin üzerinden geçilen birini ifade eder.
 
@@ -899,9 +1159,9 @@ Otomatik Göz Konumu özelliğinde, kullanıcı cihaza bağlıyken birkaç siste
 
 Kullanıcı, bakış etkin olmayan bir uygulamadan bakış verilerine erişen uygulamaya geçiş olursa, ayarlama istemi görüntülenir.
 
-Diğer tüm sistem davranışları, geçerli kullanıcının etkin bir göz izleme cihazına sahip olmadığının benzeridir. Örneğin Tek Elle Başlatma hareketi etkinleştirilmez. İlk kurulumda İlk İlk Deneyimi'ne hiçbir değişiklik olmayacaktır.
+Diğer tüm sistem davranışları, geçerli kullanıcının etkin bir göz izleme cihazına sahip olmadığının benzeridir. Örneğin Tek Elle Başlatma hareketi etkinleştirilmez. İlk kurulum için İlk İlk Deneyimi'ne hiçbir değişiklik olmayacaktır.
 
-Göz bakışı verileri veya çok hassas hologram konumlandırması gerektiren deneyimler için kullanıcıların göz izleme cihazlarını çalıştırmalarını öneririz. Göz izleme ayarlama isteminden veya başlangıç menüsünden Ayarlar uygulamasını başlatarak ve ardından Sistem > Aylam > Göz Ayarlaması'> **Çalıştır'ı seçerek** erişilebilir.
+Göz bakışı verileri veya çok hassas hologram konumlandırması gerektiren deneyimler için kullanıcıların göz izleme cihazlarını çalıştırmalarını öneririz. Göz izleme ayarlama isteminden veya başlangıç menüsünden Ayarlar uygulamasını başlatarak ve ardından Sistem > Ayar > Göz Düzeltmesi'> **Çalıştır'ı seçerek** erişilebilir.
 
 Bu bilgiler daha sonra diğer ayarlama [bilgileriyle bulunabilir.](hololens-calibration.md#auto-eye-position-support)
 
@@ -913,17 +1173,17 @@ Holographic Windows 20H2'de, HoloLens 2 Ayarlar ekliyoruz. Ayarlar > **Security 
 
 - **Denetim:** Bir sertifikanın doğru şekilde dağıtıldığından veya uygun şekilde kaldırıldığından emin olmak için yeteneği.
 - **Tanılama:** Sorunlar ortaya çıktığında, cihazda uygun sertifikaların mevcut olduğunu doğrulama zaman kazandırır ve sorun gidermeye yardımcı olur.
-- **Doğrulama:** Bir sertifikanın hedeflenen amaca hizmet ettiği ve işlevsel olduğunu doğrulamak, sertifikaları daha büyük ölçekte dağıtmadan önce özellikle ticari ortamlarda önemli ölçüde zaman tasarrufu sağlar.
+- **Doğrulama:** Bir sertifikanın hedeflenen amaca hizmet ettiği ve işlevsel olduğunu doğrulamak, sertifikaları büyük ölçekte dağıtmadan önce özellikle ticari ortamlarda önemli zaman tasarrufu sağlar.
 
 Listede belirli bir sertifikayı hızla bulmak için ad, depolama veya sona erme tarihine göre sıralama seçenekleri vardır. Kullanıcılar doğrudan bir sertifika da arayabilir. Tek tek sertifika özelliklerini görüntülemek için sertifikayı seçin ve Bilgi'ye **tıklayın.**
 
-Sertifika yüklemesi şu anda .cer ve .crt dosyalarını desteklemektedir. Cihaz Sahipleri Sertifikaları Yerel Makineye ve Geçerli Kullanıcıya yükleyebilir;  diğer tüm kullanıcılar yalnızca Geçerli Kullanıcı'ya yükleyebilir. Kullanıcılar yalnızca doğrudan Ayarlar kullanıcı arabiriminden yüklü sertifikaları kaldırabilir. Bir sertifika başka bir şekilde yüklendiyse, aynı mekanizma tarafından da kaldırılmalıdır.
+Sertifika yüklemesi şu anda .cer ve .crt dosyalarını desteklemektedir. Cihaz Sahipleri Sertifikaları Yerel Makineye ve Geçerli Kullanıcıya yükleyebilir;  diğer tüm kullanıcılar yalnızca Geçerli Kullanıcı'ya yükleyebilir. Kullanıcılar yalnızca doğrudan Ayarlar kullanıcı arabiriminden Ayarlar kaldırabilir. Bir sertifika başka bir şekilde yüklendiyse, aynı mekanizma tarafından da kaldırılmalıdır.
 
 #### <a name="steps-to-install-a-certificate"></a>Sertifika yükleme adımları
 
 1. Bağlan 2 HoloLens bilgisayarınıza bağlayın.
 1. Yüklemek istediğiniz sertifika dosyasını HoloLens 2'de bir konuma yükleyin.
-1. Ayarlar **App > Update & Security > 'a** gidin ve Sertifika yükle'yi seçin.
+1. Ayarlar **App > Update & Security > 'a gidin** ve Sertifika yükle'yi seçin.
 1. Dosyayı **İçeri Aktar'a** tıklayın ve sertifikayı kaydeden konuma gidin.
 1. Mağaza **Konumu'.**
 1. Sertifika **Deposu'ları seçin.**
@@ -933,13 +1193,13 @@ Sertifikanın artık cihaza yüklenmiş olması gerekir.
 
 #### <a name="steps-to-remove-a-certificate"></a>Sertifikayı kaldırma adımları
 
-1. Ayarlar **App > Update and Security > 'a gidin.**
+1. Ayarlar **App > Update and Security > Certificates 'a gidin.**
 1. Arama kutusunda sertifikayı adıyla ara.
 1. Sertifikayı seçin.
 1. **Kaldır'a tıklayın**
 1. Onay **istendiğinde** Evet'i seçin.
 
-![Ayarlar uygulamasında sertifika görüntüleyici.](images/certificate-viewer-device.jpg)
+![Ayarlar uygulamasındaki sertifika görüntüleyici.](images/certificate-viewer-device.jpg)
 
 ![Sertifika kullanıcı arabirimini kullanarak sertifika yüklemenin nasıl olduğunu gösteren resim.](images/certificate-device-install.jpg)
 
@@ -964,176 +1224,176 @@ OOBE sırasında sağlama paketlerini uygulama hakkında daha fazla bilgi için,
 
 - Daha az kullanıcı etkileşimi sağlayan otomatik işlem, Sağlama Paketi sayfası görüntülendiğinde listelenen tüm paketleri otomatik olarak uygulayacaktır.
 
-Sağlama ana ekranı geldiğinde, tüm sağlama paketlerini otomatik olarak uygulamaya başlamadan önce OOBE 10 saniye geri sayar. Kullanıcılar, [beklendikten sonra bu](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) 10 saniye içinde onaylayabilir veya iptal edebilir.
+Sağlama ana ekranı geldiğinde, tüm sağlama paketlerinin uygulanması için OOBE 'nin otomatik olarak başlatılması için önce 10 saniye geçmesi gerekir. Kullanıcılar, bekledikleri paketleri doğruladıktan sonra bu 10 saniye içinde yine de [onaylama veya iptal](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) edebilir.
 
-### <a name="automatic-provisioning-without-using-ui"></a>Kullanıcı arabirimini kullanmadan otomatik sağlama
+### <a name="automatic-provisioning-without-using-ui"></a>Kullanıcı arabirimi kullanmadan otomatik sağlama
 
-- Sağlama için azaltılmış cihaz etkileşimleri için birleşik otomatik işlemler.
+- Sağlama için azaltılmış cihaz etkileşimleri için otomatik süreçler birleştirildi.
 
-Bir kullanıcı, USB cihazlarından sağlamanın otomatik başlatılmasını ve paketlerin otomatik olarak onayını birleştirerek, HoloLens 2 cihazı cihazın kullanıcı arabirimini kullanmadan, hatta cihazı takmadan otomatik olarak sağlar. Birden çok cihaz için aynı USB sürücü ve sağlama paketini kullanmaya devam edersiniz. Bu, aynı alanda aynı anda birden çok cihaz dağıtmak için kullanışlıdır.
+bir kullanıcı, USB cihazlarından sağlamanın otomatik olarak başlatılmasını ve sağlama paketlerinin otomatik onayını birleştirerek, cihazın kullanıcı arabirimini kullanmadan veya hatta cihazı takmadan HoloLens 2 cihaz otomatik olarak sağlayabilir. Birden çok cihaz için aynı USB sürücüsünü ve sağlama paketini kullanmaya devam edebilirsiniz. Bu, aynı alanda aynı anda birden çok cihazı dağıtmak için yararlıdır.
 
-1. [Windows](hololens-provisioning.md) Configuration Designer [kullanarak sağlama paketi oluşturun.](https://www.microsoft.com/store/productId/9NBLGGH4TX22)
+1. [Windows yapılandırma tasarımcısı](https://www.microsoft.com/store/productId/9NBLGGH4TX22)'nı kullanarak [bir sağlama paketi oluşturun](hololens-provisioning.md) .
 1. Paketi bir USB depolama sürücüsüne kopyalayın.
-1. [2 HoloLens](hololens-insider.md#ffu-download-and-flash-directions) [19041.1361 veya daha yeni bir derlemeye flash olarak söner.](https://aka.ms/hololens2previewdownload)
-1. Gelişmiş [Kurtarma Yardımcı,](https://www.microsoft.com/store/productId/9P74Z35SFRS8) cihazınızın usb-C kablolarını çıkarın ve yanıp sönmeyi tamamlandıktan sonra.
-1. USB sürücülerinizi cihaza takın.
-1. 2 HoloLens cihaz OOBE'de ilk kez başlatılırsa, USB sürücüsünde sağlama paketini otomatik olarak algılar ve sağlama sayfasını başlatacaktır.
-1. 10 saniye sonra cihaz sağlama paketini otomatik olarak uygulayacaktır.
+1. [HoloLens 2](hololens-insider.md#ffu-download-and-flash-directions) ' ye [19041,1361 veya daha yeni bir derleme](https://aka.ms/hololens2previewdownload)yapın.
+1. [Gelişmiş kurtarma Yardımcısı](https://www.microsoft.com/store/productId/9P74Z35SFRS8) cihazınızın yanıp sönmesi TAMAMLANDıĞıNDA, USB-C kablonuzu sökün.
+1. USB sürücünüzü cihaza takın.
+1. HoloLens 2 cihazı OOBE 'de önyüklendiğinde, USB sürücüsünde sağlama paketini otomatik olarak algılayacak ve sağlama sayfasını başlatacaktır.
+1. 10 saniye sonra cihaz, sağlama paketini otomatik olarak uygular.
 
-Cihazınız artık yapılandırıldı ve Sağlama [Başarılı ekranı görüntülenir.](hololens-provisioning.md#automatic-provisioning-without-using-ui)
+Cihazınız artık yapılandırıldı ve [sağlama başarılı ekranı görüntülenir](hololens-provisioning.md#automatic-provisioning-without-using-ui).
 
-### <a name="using-autopilot-with-wi-fi-connection"></a>Autopilot'ı Wi-Fi kullanma
+### <a name="using-autopilot-with-wi-fi-connection"></a>Wi-Fi bağlantısı ile Autopilot kullanma
 
-- Autopilot'ın bağlı cihazlarda çalışmasına olanak sağlayarak Ethernet'e USB-C bağdaştırıcılarının donanım ihtiyaçlarını Wi-Fi gerekiyor.
+- Wi-Fi bağlı cihazlarda Autopilot çalışmasını etkinleştirerek, USB-C bağdaştırıcılarının Ethernet ile donanım ihtiyaçlarını azaltmaya gereksinimi ortadan kaldırılmıştır.
 
-Şimdi OOBE sırasında, Wi-Fi ile HoloLens 2'ye bağlanınca, OOBE cihaz için bir Autopilot profili olup denetlemez. Bir tane bulunursa, AAD'ye katılma ve kayıt akışının geri kalanını tamamlamak için kullanılır. Başka bir deyişle, USB-C'ye ethernet veya USB-C bağdaştırıcısına Wi-Fi artık gerekli değildir, ancak OOBE'nin başında sağlanıyorsa çalışmaya devam eder. 2 cihaz için [Autopilot hakkında HoloLens bilgi edinebilirsiniz.](hololens2-autopilot.md)
+artık oobe sırasında, HoloLens 2 ' yi Wi-Fi ile bağlandıktan sonra, oobe cihaz için bir Autopilot profilini denetlecektir. bir tane bulunursa, AAD joın ve kayıt akışının geri kalanını tamamlaması için kullanılacaktır. Diğer bir deyişle, Ethernet ile USB-C veya Wi-Fi USB-C adaptörünün kullanılması artık bir gereksinim değildir, ancak OOBE 'nin başlangıcında sağlanmışsa çalışmaya devam ederler. [HoloLens 2 cihazları için Autopilot](hololens2-autopilot.md)hakkında daha fazla bilgi edinin.
 
 ### <a name="tenantlockdown-csp-and-autopilot"></a>Tenantlockdown CSP ve Autopilot
 
-- Cihaz sıfırlama veya ters eğik çizgi ile bile cihazları kiracıya kilitleyerek kuruluşun kiracısı üzerinde tutar. Sağlama yoluyla içinde hesap oluşturulmasına izin ve daha fazla güvenlikle.
+- Cihaz sıfırlama veya refflash aracılığıyla bile, cihazı kiracıya kilitleyerek kuruluşun kiracısındaki cihazları tutar. , Sağlama yoluyla içinde hesap oluşturmayı engelleyerek daha fazla güvenlik ile.
 
-HoloLens 2 cihaz artık Windows Holographic sürüm [20H2'den](hololens-release-notes.md#windows-holographic-version-20h2)sonra TenantLockdown CSP'yi desteklemektedir.
+HoloLens 2 cihaz artık [Windows Holographic sürümü 20h2](hololens-release-notes.md#windows-holographic-version-20h2)itibariyle tenantlockdown CSP 'yi destekliyor.
 
-[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP, HoloLens 2'nin yalnızca Autopilot kullanarak MDM kaydına bağlı olmasına olanak sağlar. TenantLockdown CSP'nin RequireNetworkInOOBE düğümü HoloLens 2'de true veya false (başlangıçta ayarlanmış) değerine ayarlandıktan sonra, bu değer yeniden yanıp sönmeye, işletim sistemi güncelleştirmelerine vb. rağmen cihazda kalır.
+[Tenantlockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP, HoloLens 2 ' nin yalnızca Autopilot kullanarak MDM kaydına bağlı olmasını sağlar. tenantlockdown CSP 'nin talep ırenetworkınoobe düğümü, HoloLens 2 ' de doğru veya yanlış (başlangıçta ayarlanmış) değere ayarlandığında, bu değer yeniden yanıp sönse, işletim sistemi güncelleştirmeleri, vb. için cihazda kalır.
 
-TenantLockdown CSP'lerinin RequireNetworkInOOBE düğümü HoloLens 2'de true olarak ayarlandıktan sonra, OOBE ağ bağlantısı sonrasında Autopilot profilinin başarıyla indirilme ve uygulanması için süresiz olarak bekler.
+tenantlockdown csp 'ler ' talep ırenetworkınoobe düğümü HoloLens 2 ' de true olarak ayarlandığında, ağ bağlantısından sonra OOBE, Autopilot profilinin başarıyla indirilip uygulanmasını bekler.
 
-TenantLockdown CSP'lerinin RequireNetworkInOOBE düğümü HoloLens 2'de true olarak ayarlandıktan sonra, OOBE'de aşağıdaki işlemlere izin verilmiyor:
+tenantlockdown csp 'ler ' talep ırenetworkınoobe düğümü HoloLens 2 ' de true olarak ayarlandığında, OOBE 'de aşağıdaki işlemlere izin verilmez:
 
 - Çalışma zamanı sağlamayı kullanarak yerel kullanıcı oluşturma
-- Çalışma zamanı sağlama aracılığıyla Azure AD birleştirme işlemi gerçekleştirme
-- OOBE deneyiminde cihazın sahibini seçme
+- Çalışma zamanı sağlama aracılığıyla Azure AD JOIN işlemi gerçekleştiriliyor
+- Cihaza kimin sahip olduğunu OOBE deneyiminde seçme
 
-#### <a name="how-to-set-this-using-intune"></a>Intune kullanılarak bu nasıl ayarlanır?
+#### <a name="how-to-set-this-using-intune"></a>Bu Intune kullanılarak nasıl ayarlanır?
 
-1. Özel bir OMA URI cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi RequireNetworkInOOBE düğümü için true belirtin.
-OMA-URI değeri ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE olmalı
-
-   > [!div class="mx-imgBorder"]
-   > ![OMA-URI aracılığıyla tennant kilitlemeyi ayarlama.](images/hololens-tenant-lockdown.png)
-
-1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna attayabilirsiniz.
-
-1. Önceki HoloLens oluşturulan grubun 2 cihaz üyesini seçin ve eşitlemeyi tetikler.  
-
-Intune portalında cihaz yapılandırmasının başarıyla uygulandığını doğrulayın. Bu cihaz yapılandırması HoloLens 2 cihazında başarıyla uygulandığında TenantLockdown'ın etkileri etkin olur.
-
-#### <a name="how-to-unset-tenantlockdowns-requirenetworkinoobe-on-hololens-2-using-intune"></a>Intune kullanarak TenantLockdown'ın RequireNetworkInOOBE HoloLens 2'nin kümesi nasıl geri alır?
-
-1. Yukarıda HoloLens 2'nin daha önce atandığı cihaz yapılandırmasının atandığı cihaz grubundan 2. kümeyi kaldırın.
-
-1. Özel bir OMA URI tabanlı cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi RequireNetworkInOOBE için false belirtin.
-OMA-URI değeri ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE olmalı
+1. Özel bir OMA URI cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi, talep ırenetworkınoobe düğümü için true değerini belirtin.
+OMA-URI değeri olmalıdır./Vendor/MSFT/tenantlockdown/karşılandığından ırenetworkınoobe
 
    > [!div class="mx-imgBorder"]
-   > ![Intune'da OMA URI'sı aracılığıyla RequireNetworkInOOBE ayarının false olarak ayar ekran görüntüsü.](images/hololens-tenant-lockdown-false.png)
+   > ![OMA-URI aracılığıyla kiracı kilidi ayarlanıyor.](images/hololens-tenant-lockdown.png)
 
-1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna attayabilirsiniz.
+1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna atayın.
 
-1. Önceki HoloLens oluşturulan grubun 2 cihaz üyesini seçin ve eşitlemeyi tetikler.
+1. önceki adımda oluşturulan grubun HoloLens 2 cihaz üyesini yapın ve eşitlemeyi tetikleyin.  
 
-Intune portalında cihaz yapılandırmasının başarıyla uygulandığını doğrulayın. Bu cihaz yapılandırması HoloLens 2 cihazına başarıyla uygulandığında TenantLockdown'ın etkileri devre dışı kalır.
+Intune portalında cihaz yapılandırmasının başarıyla uygulandığını doğrulayın. bu cihaz yapılandırması HoloLens 2 cihazında başarıyla geçerliyse, tenantlockdown etkileri etkin olur.
 
-#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>TenantLockdown true olarak ayarlandıktan sonra Autopilot profili bir HoloLens OOBE sırasında ne olur?
+#### <a name="how-to-unset-tenantlockdowns-requirenetworkinoobe-on-hololens-2-using-intune"></a>ıntune 'u kullanarak HoloLens 2 üzerinde tenantlockdown 'ın talep ırenetworkınoobe ayarı nasıl yapılır?
 
-OOBE, Autopilot profilinin indirilene kadar süresiz olarak bekler ve aşağıdaki iletişim kutusu görüntülenir. TenantLockdown'ın etkilerini kaldırmak için cihazın ilk olarak yalnızca Autopilot kullanılarak özgün kiracısına kayıtlı olması ve TenantLockdown CSP tarafından tanıtılan kısıtlamaların kaldırılması için önceki adımda açıklandığı gibi RequireNetworkInOOBE'nin kümeden kaldırılması gerekir.
+1. yukarıda oluşturulan cihaz yapılandırmasının daha önce atandığı cihaz grubundan HoloLens 2 ' i kaldırın.
 
-![Cihazda ilkenin ne zaman zorlanan cihaz içinde görünümü.](images/hololens-autopilot-lockdown.png)
+1. Özel bir OMA URI tabanlı cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi, talep ırenetworkınoobe için false belirtin.
+OMA-URI değeri olmalıdır./Vendor/MSFT/tenantlockdown/karşılandığından ırenetworkınoobe
 
-Bu bilgiler artık [Tenantlockdown CSP](hololens2-autopilot.md#tenant-lockdown-csp-and-autopilot)ve Autopilot altında Autopilot'ın geri kalanıyla birlikte bulunabilir.
+   > [!div class="mx-imgBorder"]
+   > ![Intune 'da OMA URI aracılığıyla talep ırenetworkınoobe ayarının false olarak ayarlanmasına yönelik ekran görüntüsü.](images/hololens-tenant-lockdown-false.png)
 
-### <a name="global-assigned-access--kiosk-mode"></a>Genel Atanan Erişim – Bilgi Noktası Modu
+1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna atayın.
 
-- Bilgi noktası modunu sistem düzeyinde uygulanan yeni Bilgi Noktası yöntemi etkinleştirerek Bilgi Noktası için azaltılmış Kimlik yönetimi.
+1. önceki adımda oluşturulan grubun HoloLens 2 cihaz üyesini yapın ve eşitlemeyi tetikleyin.
 
-Bu yeni özellik, bir IT Yöneticisinin sistem düzeyinde geçerli olan, sistem üzerinde herhangi bir kimliğe benzeşimleri olan ve cihazda oturum açabilen herkes için geçerli olan birden çok uygulama bilgi noktası modu için HoloLens 2 cihazı yapılandırmasını sağlar. Bilgi noktası modunda bu yeni özellik hakkında [HoloLens okuyun.](hololens-kiosk.md)
+Intune portalında cihaz yapılandırmasının başarıyla uygulandığını doğrulayın. bu cihaz yapılandırması HoloLens 2 cihazında başarıyla uygulandıktan sonra, tenantlockdown 'ın etkileri devre dışı bırakılır.
 
-### <a name="automatic-launch-of-an-application-in-multiple-app-kiosk-mode"></a>Bir uygulamanın çoklu uygulama bilgi noktası modunda otomatik olarak başlatılması
+#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>Autopilot profili, maantlockdown true olarak ayarlandıktan sonra bir HoloLens için atanmazsa, OOBE sırasında ne olur?
 
-- Otomatik uygulama başlatma deneyimi odaklıdır ve Bilgi Noktası modu deneyimleri için seçilen kullanıcı arabirimini ve uygulama seçimlerini daha da artırmaktadır.
+OOBE, Autopilot profilinin indirilmek için süresiz olarak bekler ve aşağıdaki iletişim kutusu sunulacaktır. TenantLockdown 'in etkilerini kaldırmak için, önce Autopilot yalnızca bir cihaz özgün kiracısına kaydedilmelidir ve eski adımda açıklandığı gibi, TenantLockdown CSP tarafından tanıtılan kısıtlamaların kaldırılması için önce bu, önkoşul olarak ayarlanmalıdır.
 
-Yalnızca birden çok uygulamalı bilgi noktası modu için geçerlidir ve atanan erişim yapılandırmasında aşağıdaki vurgulanmış öznitelik kullanılarak yalnızca 1 uygulama otomatik olarak başlatılacak şekilde atanabilir.
+![Cihazda ilke uygulandığında cihaz içi görünümü.](images/hololens-autopilot-lockdown.png)
 
-Kullanıcı oturum başlattığında uygulama otomatik olarak başlatılır.
+Bu bilgiler artık, [Tenantlockdown CSP ve Autopilot](hololens2-autopilot.md#tenant-lockdown-csp-and-autopilot)altında Autopilot 'in geri kalanının yanı sıra bulunabilir.
+
+### <a name="global-assigned-access--kiosk-mode"></a>Genel atanan erişim – bilgi noktası modu
+
+- Bilgi noktası için, sistem düzeyinde bilgi noktası modu uygulayan yeni bilgi noktası yöntemi etkinleştirilerek kimlik yönetimi azaltıldı.
+
+bu yeni özellik, bir bt yöneticisinin sistem düzeyinde geçerli olan birden çok uygulama bilgi noktası modu için bir HoloLens 2 cihazı yapılandırmasına izin verir, sistemde hiçbir kimlikle benzeşim yoktur ve cihazda oturum açan herkese uygulanır. [HoloLens bilgi noktası modunda](hololens-kiosk.md)bu yeni özellik hakkında ayrıntılı bilgi edinin.
+
+### <a name="automatic-launch-of-an-application-in-multiple-app-kiosk-mode"></a>Birden çok uygulama bilgi noktası modunda bir uygulamayı otomatik olarak başlatma
+
+- Otomatik uygulama başlatma ile odaklanmış deneyim, bilgi noktası modu deneyimleri için seçilen kullanıcı arabirimi ve uygulama seçimlerini daha da artırır.
+
+Yalnızca birden çok uygulama bilgi noktası modu için geçerlidir ve atanan erişim yapılandırmasında aşağıda vurgulanan öznitelik kullanılarak otomatik başlatılacak şekilde yalnızca 1 uygulama belirlenebilir.
+
+Uygulama, Kullanıcı oturum açtığında otomatik olarak başlatılır.
 
 ```xml
 <AllowedApps>                     
     <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
 ```
 
-### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Hataların işlenmesi için bilgi noktası modu davranış değişiklikleri
+### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Hataların işlenmesine yönelik bilgi noktası modu davranış değişiklikleri
 
-- Bilgi noktası modu hatalarda kullanılabilir uygulamaları ortadan kaldırarak daha güvenli Bilgi Noktası modu.
+- Bilgi noktası modu hatalarında kullanılabilir uygulamaları ortadan kaldırarak daha güvenli bilgi noktası modu.
 
-Bilgi noktası modu uygulama sırasında hatalarla karşılaşmanın HoloLens başlat menüsündeki tüm uygulamaları göstermek için kullanılırdı. Holographic Windows 20H2'de hata olması durumunda başlat menüsünde aşağıdaki gibi hiçbir uygulama gösterilmez:
+bilgi noktası modu ' nda hatalarla karşılaşmadan önce, başlangıç menüsündeki tüm uygulamaları göstermek için HoloLens kullanılır. artık Windows Holographic sürüm 20h2 ' de, aşağıdaki gibi başlangıç menüsünde hiçbir uygulama gösterilmez:
 
-![Bilgi Noktası modunun artık başarısız olduğunda ne gibi göründüğünün resmi.](images/hololens-kiosk-failure-behavior.png )
+![Ne zaman bilgi noktası modunun başarısız olduğunu anlamak için görüntü görüntülenir.](images/hololens-kiosk-failure-behavior.png )
 
-### <a name="hololens-policies"></a>HoloLens Koşullarıdır
+### <a name="hololens-policies"></a>HoloLens Elerindeki
 
-- Cihaz yönetimi seçenekleri, HoloLens için özel olarak oluşturulur.
+- cihazı yönetmek için HoloLens özel olarak cihaz yönetimi seçenekleri.
 
-Windows Holographic sürüm 20H2'de HoloLens 2 cihaz için yeni karma gerçeklik ilkeleri oluşturulmuştur. Yeni kontrol edilebilir ayarlar şunlardır: parlaklığı ayarlama, birimi ayarlama, karma gerçeklik yakalamalarında ses kaydını devre dışı bırakma, tanılamanın ne zaman toplanabilir olduğunu ayarlama ve AAD grup üyeliği önbelleği.  
+HoloLens 2 cihazları için yeni karma gerçeklik ilkeleri Windows Holographic version 20h2 ' de oluşturulmuştur. yeni denetlenebilir ayarlar şunlardır: parlaklık ayarlanıyor, birim ayarlama, karma gerçeklik halinde ses kaydı devre dışı bırakma, tanılama toplandığında ayarlama ve grup üyeliği önbelleği AAD.  
 
-| Yeni HoloLens ilkesi                                | Açıklama                                                                               | Notlar                                                                |
+| yeni HoloLens ilkesi                                | Açıklama                                                                               | Notlar                                                                |
 |----------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| MixedReality\BrightnessButtonDisabled              | Parlaklığa sahip düğmelerin devre dışı bırakılarak parlaklığı değiştirmez.       | 1 Evet, 0 Hayır (varsayılan)                                                |
-| MixedReality\VolumeButtonDisabled                  | Ses düğmelerinin devre dışı bırakılarak birimi değiştirmez.               | 1 Evet, 0 Hayır (varsayılan)                                                |
-| MixedReality\MicrophoneDisabled                    | 2. görüntüde ses kaydı mümkün HoloLens devre dışı.                      | 1 Evet, 0 Hayır (varsayılan)                                                |
-| MixedReality\FallbackDiagnostics                   | Tanılama günlüklerinin ne zaman toplanabilir davranışını kontrol eder.                               | 0 Devre Dışı, 1 Cihaz Sahipleri için Etkin, 2 Herkes için Etkin (Varsayılan) |
+| Mixedreality\parlatnessbuttondisabled              | Parlaklık düğmelerinin devre dışı olmasına izin verir ve bu sayede parlaklığı değiştirmez.       | 1 Evet, 0 Hayır (varsayılan)                                                |
+| MixedReality\VolumeButtonDisabled                  | Ses düğmelerinin devre dışı olmasına izin verir, böylece birim değişmez.               | 1 Evet, 0 Hayır (varsayılan)                                                |
+| Mixedreality\mikro phonedisabled                    | HoloLens 2 ' de ses kaydı mümkün olmayacak şekilde mikrofonu devre dışı bırakır.                      | 1 Evet, 0 Hayır (varsayılan)                                                |
+| MixedReality\FallbackDiagnostics                   | Tanılama günlüklerinin toplanabilmesi için davranışını denetler.                               | 0 devre dışı, 1 cihaz sahipleri için etkin, 2 tümü için etkin (varsayılan) |
 | MixedReality\HeadTrackingMode                      | Daha sonraki kullanımlar için ayrılmıştır.                                                                  |                                                                      |
-| MixedReality\AADGroupMembershipCacheValidityInDays | Azure AD gruplarını hedef alan Bilgi Noktası için Azure AD grup üyeliği önbelleğinin kaç gün süreyle kullanıl olduğunu kontrol eder. | Aşağıya bakın.                                                           |
+| MixedReality\AADGroupMembershipCacheValidityInDays | Azure AD gruplarını hedefleyen bilgi noktası için Azure AD grup üyeliği önbelleğinin kaç gün kullandığını denetler. | Aşağıya bakın.                                                           |
 
-### <a name="cache-azure-ad-group-membership-for-offline-kiosk"></a>Çevrimdışı Bilgi Noktası için Azure AD Grubu üyeliğini önbelleğe alın
+### <a name="cache-azure-ad-group-membership-for-offline-kiosk"></a>Çevrimdışı bilgi noktası için Azure AD grubu üyeliğini önbelleğe alma
 
-- 60 gün boyunca AAD gruplarıyla birlikte kullanılacak Çevrimdışı Bilgi Noktası etkinleştirildi.
+- 60 güne kadar bir AAD grup ile kullanılmak üzere çevrimdışı kiosks etkinleştirildi.
 
-Bu ilke, oturum açık kullanıcı için Azure AD gruplarını hedef alan Atanan Erişim yapılandırmaları için Azure AD grup üyeliği önbelleğinin kaç gün boyunca kullanılana kadar süreyle kullanılabilir olduğunu kontrol eder. Bu ilke değeri yalnızca 0'dan büyük değere ayarlanırsa önbellek aksi takdirde kullanılmaz.  
+Bu ilke, kaç gün boyunca Azure AD grup üyeliği önbelleğinin oturum açmış kullanıcı için Azure AD gruplarını hedefleyen atanan erişim yapılandırmalarında kullanılmasına izin verileceğini denetler. Bu ilke değeri 0 ' dan büyük bir değere ayarlandıktan sonra, önbellek kullanılır.  
 
-Ad: AADGroupMembershipCacheValidityInDays URI değeri: ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+Ad: AADGroupMembershipCacheValidityInDays URI değeri:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
 
-En az - 0 gün  
-En fazla - 60 gün
+En az-0 gün  
+Maksimum 60 gün
 
 Bu ilkeyi doğru kullanma adımları:
 
-1. Azure AD gruplarını hedef alan bilgi noktası için bir cihaz yapılandırma profili oluşturun ve bu profili HoloLens cihaza attayın.
-1. Bu ilke değerini istenen gün sayısına (> 0) ayaran ve bu değeri HoloLens cihaza atatan özel bir OMA URI tabanlı cihaz yapılandırması oluşturun.
-    1. URI değeri OMA-URI metin kutusuna ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays olarak girilebilir
-    1. Değer izin verilen en az / en yüksek değer arasında olabilir.
-1. Cihazları HoloLens ve her iki yapılandırmanın da cihaza uygulandığını doğrulayın.
-1. İnternet kullanılabilir olduğunda Azure AD 1 kullanıcısı oturum açmasına izin ver. Kullanıcı oturum açma ve Azure AD grup üyeliği başarıyla onaylandıktan sonra önbellek oluşturulur.
-1. İlke değeri X gün sayısına izin HoloLens azure AD kullanıcı 1 artık çevrimdışı duruma geçer ve bilgi noktası modu için bunu kullanabilir.
-1. 4. ve 5. adımlar diğer Tüm Azure AD kullanıcılarının N. Önemli noktası, bilgi noktası yapılandırmasının hedeflene Azure AD grubuna üye olup olmadığını belirleyecek şekilde herhangi bir Azure AD kullanıcılarının internet kullanarak cihazda oturum açması gerektir.
+1. Azure AD gruplarını hedefleyen bilgi noktası için bir cihaz yapılandırma profili oluşturun ve HoloLens cihazlara atayın.
+1. bu ilke değerini istenen gün sayısına (> 0) ayarlayan ve HoloLens cihazlara atayan özel bir OMA urı tabanlı cihaz yapılandırması oluşturun.
+    1. URI değeri, OMA-URI metin kutusunda./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays olarak girilmelidir
+    1. Değer, izin verilen Min/Max arasında olabilir.
+1. HoloLens cihazları kaydedin ve her iki yapılandırmanın cihaza uygulandığını doğrulayın.
+1. Internet 'in kullanılabildiği Azure AD User 1 oturum açma ve Azure AD grup üyeliği başarıyla onaylandıktan sonra önbellek oluşturulur.
+1. artık Azure AD kullanıcı 1, HoloLens çevrimdışına alabilir ve ilke değeri X gün sayısı için izin verdiği sürece bilgi noktası modu için kullanabilir.
+1. 4 ve 5. adım, diğer tüm Azure AD kullanıcıları için yinelenebilir. burada anahtar noktası, herhangi bir Azure AD kullanıcısının Internet 'i kullanarak cihaza oturum açması gerekir. bu sayede, bilgi noktası yapılandırmasının hedeflediği Azure AD grubuna üye olduklarını belirleyebiliriz.
 
 > [!NOTE]
-> Bir Azure AD kullanıcısı için 4. adım gerçekleştirilinceye kadar "bağlantısız" ortamlarda belirtilen hata davranışıyla karşılana kadar.
+> Bir Azure AD kullanıcısı için 4. adım gerçekleştirilene kadar "bağlantısı kesik" ortamlarda bahsedilen hata davranışı ile karşılaşırsınız.
 
 ### <a name="new-device-restriction-policies-for-hololens-2"></a>HoloLens 2 için yeni cihaz kısıtlama ilkeleri
 
-- Kullanıcıların, sağlama paketleri eklemeyi veya kaldırmayı engelleme gibi belirli cihaz yönetimi ilkelerini yönetmesine izin verir.
+- Kullanıcıların, sağlama paketleri ekleme veya kaldırma gibi belirli cihaz yönetim ilkelerini yönetmesine olanak tanır.
 
-2 cihaz için daha fazla yönetim seçeneğine izin HoloLens ilkeler.
+HoloLens 2 cihazların daha fazla yönetim seçeneklerine izin veren yeni etkinleştirilen ilkeler.
 
 - [AllowAddProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
 - [AllowRemoveProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage)
 - [ConfigureTimeZone](/windows/client-management/mdm/policy-csp-timelanguagesettings#timelanguagesettings-configuretimezone)
 - [RemoteLock](/windows/client-management/mdm/remotelock-csp)
 
-AllowAddProvisioningPackage ve AllowRemoveProvisioningPackage için bu iki yeni kod Ortak Cihaz [Kısıtlamalarımıza ekleniyor.](hololens-common-device-restrictions.md)
+AllowAddProvisioningPackage ve AllowRemoveProvisioningPackage için bu iki yeni ilke [ortak cihaz kısıtlamalarımıza](hololens-common-device-restrictions.md)ekleniyor.
 
 > [!NOTE]
-> [RemoteLock ile ilgili olarak,](/windows/client-management/mdm/remotelock-csp)HoloLens yalnızca ./Vendor/MSFT/RemoteLock/Lock yapılandırmasını destekler. Sıfırlama ve kurtarma gibi PIN ile ilgili yapılandırmalar desteklenmiyor.
+> [remotelock](/windows/client-management/mdm/remotelock-csp)ile ilgili olarak HoloLens yalnızca./vendor/msft/remotelock/lock yapılandırmasını destekler. Sıfırlama ve kurtarma gibi PIN ile ilgili yapılandırma desteklenmez.
 
 ### <a name="new-power-policies-for-hololens-2"></a>HoloLens 2 için yeni güç ilkeleri
 
-- Güç ilkeleri aracılığıyla uyku HoloLens veya kilitlerken daha fazla seçenek.
+- HoloLens, güç ilkeleri aracılığıyla uyku moduna geçme veya kilitleme için daha fazla seçenek.
 
-Bu yeni eklenen ilkeler, yöneticilerin boşta kalma zaman aşımı gibi güç durumları denetlemesine olanak sağlar. Her ilke hakkında daha fazla bilgi için lütfen bu ilkenin bağlantısına tıklayın.
+Bu yeni eklenen ilkeler, yöneticilerin boşta kalma zaman aşımı gibi güç durumlarını denetlemesine olanak tanır. Her ilke hakkında daha fazla bilgi edinmek için lütfen bu ilkenin bağlantısına tıklayın.
 
 |     İlke belgeleri bağlantısı                |     Notlar                                                                                                                                       |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-|     [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     Windows Configuration Designer'da kullanmak için örnek değer, örneğin,`<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
+|     [Displayofftimeoutonpili](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     Windows yapılandırma tasarımcısında kullanılacak örnek değer, yani,`<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
 |     [Displayofftimeoutpluggedın](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)               |     Windows yapılandırma tasarımcısında kullanılacak örnek değer, yani,`<enabled/><data   id="EnterVideoACPowerDownTimeOut" value="100"/>`     |
 |     [Enerji Gysaverbatteryıthresholdonpili](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)     |  Windows yapılandırma tasarımcısında kullanılacak örnek değer, örn. 100                                                                             |
 |     [Enerji Gysaverbatteryıthresholdpluggedın](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)     |     Windows yapılandırma tasarımcısında kullanılacak örnek değer, örn. 100                                                                          |
@@ -1232,46 +1492,46 @@ bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez W
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
 - appxmanifest 'de SupportsMultipleInstances = "true" olduğunda Visual Studio bir uygulamada hata ayıklamayı önleyen bir sorunu giderir.
-- Bu sürüm, ağ proxy 'si üzerinden başarısız olan Internet algılamayı ele almak için NCSı proxy algılama düzeltmesini içerir. NCSı, Internet bağlantısı algılaması için makine ara sunucusunu ve profil başına proxy 'yi kullanabilir. Kullanıcı başına proxy, gelecek sürümde NCSı tarafından desteklenecektir.
-- çoğu Windows Mixed Reality cihazda, kullanıcının başı ileri doğru görünen bir bağımsız konumda olduğunda, ileri yönlü vektör, başa paraleldir. ancak, HoloLens 2 ' nin önceki sürümleri, bir yandan, ideal yönlendirmeye göre birkaç derece aşağı doğru bir şekilde aşağı doğru bir şekilde aşağı hizalanmış şekilde, vektör 'yi görüntüleme paneline dikey olacak şekilde hizalı HoloLens 2 ' nin daha yeni sürümleri, form faktörleri arasında anlam tutarlılığı sağlamak için bunu düzeltmedi.
-- Belirli senaryolarda daha az izleme kaybına neden olacak gelişmiş ve izleme sağlamlık.
-- Bu sürümde, video yakalama sorunlarına katkıda bulunan ses zaman damgası kalitesini geliştirmek için bir çözüm bulunur.
+- Bu sürüm, ağ proxy 'si üzerinden başarısız olan Internet algılamayı ele almak için NCSı proxy algılama düzeltmesini içerir. NCSı, Internet bağlantısı algılaması için makine ara sunucusunu ve profil başına proxy 'yi kullanabilir. Kullanıcı başına ara sunucu, gelecek sürümlerde NCSI tarafından desteklenecegizli olacak.
+- Çoğu Windows Mixed Reality, kullanıcının başı ileriye doğru nötr bir konumda olduğunda ileri yönlü vektörü yere paraleldir. Ancak, HoloLens 2'nin önceki sürümleri vektörü görüntüleme panelleri yerine dikey olacak şekilde hizalar ve bu da ideal yönlendirmeye göre birkaç derece aşağıya doğru eğiktir. Daha yeni HoloLens 2 sürümleri, form faktörleri arasında semantik tutarlılık sağlamak için bu sorunu düzeltti.
+- Belirli senaryolarda daha az izleme kaybıyla sonuçlanacak gelişmiş el izleme sağlamlığı.
+- Bu sürüm, video yakalama sorunlarına katkıda bulunarak ses zaman damgası kalitesini geliştirmeye ilişkin bir düzeltme içerir.
 
-## <a name="windows-holographic-version-1903---september-2020-update"></a>Windows Holographic, sürüm 1903-Eylül 2020 güncelleştirme
+## <a name="windows-holographic-version-1903---september-2020-update"></a>Windows Holographic, sürüm 1903 - Eylül 2020 Güncelleştirmesi
 
-- Derleme 18362,1079
-
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- çoğu Windows Mixed Reality cihazda, kullanıcının başı ileri doğru görünen bir bağımsız konumda olduğunda, ileri yönlü vektör, başa paraleldir. ancak, HoloLens 2 ' nin önceki sürümleri, bir yandan, ideal yönlendirmeye göre birkaç derece aşağı doğru bir şekilde aşağı doğru bir şekilde aşağı hizalanmış şekilde, vektör 'yi görüntüleme paneline dikey olacak şekilde hizalı HoloLens 2 ' nin daha yeni sürümleri, form faktörleri arasında anlam tutarlılığı sağlamak için bunu düzeltmedi.
-- Belirli senaryolarda daha az izleme kaybına neden olacak gelişmiş ve izleme sağlamlık.
-
-## <a name="windows-holographic-version-2004---august-2020-update"></a>Windows Holographic, sürüm 2004-Ağustos 2020 güncelleştirme
-
-- Derleme 19041,1113
+- Derleme 18362.1079
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Ayarlar uygulama artık kullanıcıyı ıris kayıt veya göz izleme ayarlaması deneyimlerine göre takip edemeyecektir.
-- Bir sağlama paketinin, cihazı yeniden adlandıran ve diğer eylemleri gerçekleştiren (bir ağa bağlanma gibi) bir hata düzeltildi, yeniden adlandırma nedeniyle cihaz yeniden başlatıldıktan sonra diğer eylemleri gerçekleştiremeyebilir.
-- Görsel kaliteyi artırmak için ilk cihaz kurulumu akışlarının değiştirilen renk şeması.
+- Çoğu Windows Mixed Reality, kullanıcının başı ileriye doğru nötr bir konumda olduğunda ileri yönlü vektörü yere paraleldir. Ancak, HoloLens 2'nin önceki sürümleri vektörü görüntüleme panelleri yerine dikey olacak şekilde hizalar ve bu da ideal yönlendirmeye göre birkaç derece aşağıya doğru eğiktir. Daha yeni HoloLens 2 sürümleri, form faktörleri arasında semantik tutarlılık sağlamak için bu sorunu düzeltti.
+- Belirli senaryolarda daha az izleme kaybıyla sonuçlanacak gelişmiş el izleme sağlamlığı.
 
-## <a name="windows-holographic-version-1903---august-2020-update"></a>Windows Holographic, sürüm 1903-Ağustos 2020 güncelleştirme
+## <a name="windows-holographic-version-2004---august-2020-update"></a>Windows Holographic, sürüm 2004 - Ağustos 2020 Güncelleştirmesi
 
-- Derleme 18362,1074
-
-bu aylık kalite güncelleştirmesi herhangi bir önemli değişiklik içermez Windows Holographic, sürüm 2004 için en son derlemelerimizi denemenizi öneririz.
-
-## <a name="windows-holographic-version-2004---july-2020-update"></a>Windows Holographic, sürüm 2004-2020 Temmuz güncelleştirmesi
-
-- Derleme 19041,1109
+- Derleme 19041.1113
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Geliştiriciler artık cihaz portalının etkinleştirilmesi veya devre dışı bırakılması arasında güvenli bir bağlantı yapılmasını tercih edebilir.
+- Ayarlar uygulama artık Iris Kaydı veya Göz İzleme Ayarlama deneyimlerine kullanıcı takip etmemektedir.
+- OOBE sırasında cihazı yeniden adlandıran ve diğer eylemleri (ağa bağlanma gibi) gerçekleştiren sağlama paketinin yeniden adlandırma nedeniyle cihaz yeniden başlatıldıktan sonra diğer eylemleri gerçekleştirememe hatası düzeltildi.
+- Görsel kalitesini geliştirmek için ilk cihaz kurulumu akışlarının renk düzeni değiştirildi.
+
+## <a name="windows-holographic-version-1903---august-2020-update"></a>Windows Holographic, sürüm 1903 - Ağustos 2020 Güncelleştirmesi
+
+- Derleme 18362.1074
+
+Bu aylık kalite güncelleştirmesi önemli bir değişiklik içermemektedir. Windows Holographic sürüm 2004 için en son derlemelerimizi denemeniz gerekir.
+
+## <a name="windows-holographic-version-2004---july-2020-update"></a>Windows Holographic, sürüm 2004 - Temmuz 2020 Güncelleştirmesi
+
+- Derleme 19041.1109
+
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
+
+- Geliştiriciler artık güvenli bir bağlantı gerektiren bir uygulamanın etkinleştirilmesi Cihaz Portalı devre dışı bırakılması arasında seçim olabilir.
 - Uygulamanın işletim sistemi güncelleştirmeleri sonrasında başlatılması için güvenilirlik artırıldı.
 - Varsayılan gelen kutusu parlaklığı yüzde 100 olarak değiştirildi.
-- HoloLens 2'de, Windows Cihaz Portalı için HTTPS iletmeyle ilgili HoloLens giderildi.
+- HoloLens 2'de, Windows Cihaz Portalı için HTTPS iletmeyle ilgili bir HoloLens giderildi.
 
 ## <a name="windows-holographic-version-1903---july-2020-update"></a>Windows Holographic, sürüm 1903 - Temmuz 2020 Güncelleştirmesi
 
@@ -1300,9 +1560,9 @@ Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 - Kaydedilen videolarda hologram kararlılığı geliştirildi.
 - Cihaz birkaç gün boyunca bekleme durumunda kaldıktan sonra karma gerçeklik yakalamanın video kaydedemezse bir sorun çözüldü.
 - HolographicSpace.UserPresence API'si Genellikle Unity uygulamaları için devre dışı bırakılır. Bu davranış, "arka planda çalıştır" ayarı etkinleştirilse bile bazı uygulamaların, mengene çevrilmiş durumdayken duraklatılmasına neden olan bir sorunu önler. API artık Unity 2018.4.18 ve sonraki ve 2019.3.4 ve sonraki sürümleri için etkinleştirilmiştir.
-- Bir web Cihaz Portalı üzerinden Wi-Fi, bir web tarayıcısı geçersiz sertifika nedeniyle erişimini engellenebilir. Tarayıcı, cihaz sertifikasına daha önce güvenildi olsa ERR_SSL_PROTOCOL_ERROR", gibi bir hata bildirebilirsiniz. Bu durumda, güvenlik uyarılarını yoksayma seçeneği Cihaz Portalı bu durumla ilgili ilerleme kaydedesiniz. Bu güncelleştirme sorunu çözdü. Cihaz sertifikası daha önce bir bilgisayara indirildikten ve tarayıcı güvenlik uyarılarını kaldırmak için güvenilirse ve SSL hatası oluşursa, tarayıcı güvenlik uyarılarını ele almak için yeni sertifikanın indirildikten ve güvenilir olması gerekir.
+- Bir web Cihaz Portalı üzerinden Wi-Fi, bir web tarayıcısı geçersiz sertifika nedeniyle erişimini engellenebilir. Tarayıcı, cihaz sertifikasına daha önce güvenilse bile "ERR_SSL_PROTOCOL_ERROR" gibi bir hata bildirebilirsiniz. Bu durumda, güvenlik uyarılarını yoksayma seçeneği Cihaz Portalı bu durumla devam etmek mümkün değildir. Bu güncelleştirme sorunu çözdü. Cihaz sertifikası daha önce bir bilgisayara indirildikten ve tarayıcı güvenlik uyarılarını kaldırmak için güvenilirse ve SSL hatası oluşursa, tarayıcı güvenlik uyarılarını ele almak için yeni sertifikanın indirildikten ve güvenilir olması gerekir.
 - MSIX paketlerini kullanarak bir uygulama yükleyebilmeyi içeren bir çalışma zamanı sağlama paketi oluşturma özelliği etkinleştirildi.
-- **Ayarlar**  >  **System** Hologramlar'da, cihaz kapanıyorsa kullanıcıların Karma Gerçeklik giriş girişlerinden tüm hologramları otomatik olarak kaldırmasını sağlayan  >   bir ayar eklendi.
+- **Ayarlar**  >  **System**  >  **Hologramlar'da,** cihaz kapanıyorsa kullanıcıların karma gerçeklik giriş girişlerinden tüm hologramları otomatik olarak kaldırmasını sağlayan bir ayar eklendi.
 - Piksel biçimini değiştiren uygulamaların HoloLens öykünücüde siyah işlemeye neden olan bir HoloLens düzeltildi.
 - Iris oturum açma sırasında kilitlenmeye neden olan bir hata düzeltildi.
 - Zaten geçerli olan uygulamalar için yinelenen mağaza indirmeleri ile ilgili bir sorun düzeltildi.
@@ -1331,42 +1591,42 @@ Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
 - Derleme - 19041.1103
 
-HoloLens 2, Windows Holographic için Mayıs *2020* ana yazılım güncelleştirmesi, Windows Autopilot desteği, uygulama koyu modu, 5G/LTE etkin noktaları için USB Ethernet desteği ve çok daha fazlası gibi heyecan verici yeni özellikler içerir. En son sürüme güncelleştirmek için Ayarlar uygulamasını açın, Güncelleştirme & Güvenliği'ne gidin ve   Güncelleştirmeleri **Kontrol Edin düğmesini** ****   seçin. 
+HoloLens 2, Windows Holographic için Mayıs *2020* ana yazılım güncelleştirmesi, Windows Autopilot desteği, uygulama koyu modu, 5G/LTE etkin noktaları için USB Ethernet desteği ve çok daha fazlası gibi heyecan verici yeni özellikler içerir. En son sürüme güncelleştirmek için Ayarlar uygulamasını açın, & Güvenliği Güncelleştir'e gidin ve   Güncelleştirmeleri **Kontrol Edin düğmesini** ****   seçin. 
 
 |             Özellik                              |          Açıklama                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 |       Windows Autopilot                          |          Windows AutoPilot kullanarak yeni cihazları üretim için önceden yapılandırma ve sorunsuz bir şekilde ayarlama                 |
 |       FIDO 2 desteği                             |          Paylaşılan cihazlar için hızlı ve güvenli kimlik doğrulamasını etkinleştirmek için FIDO2 Güvenlik Anahtarları desteği            |
 |       Geliştirilmiş sağlama                      |          Usb sürücüden uygulamanıza sorunsuz bir şekilde bir sağlama paketi HoloLens                              |
-|       Uygulama yükleme durumu                 |          MDM aracılığıyla Ayarlar uygulamalar için uygulamanın 2. sürümüne HoloLens durumunu denetleme               |
+|       Uygulama yükleme durumu                 |          MDM aracılığıyla Ayarlar uygulamalar için uygulamanın 2. HoloLens yükleme durumunu denetleme               |
 |       Yapılandırma hizmeti sağlayıcıları (CSP'ler)   |          Yönetici denetimi özelliklerini geliştirmek için yeni yapılandırma hizmeti sağlayıcıları eklendi                 |
 |       USB 5G/LTE desteği                       |          Genişletilmiş USB Ethernet özelliği 5G/LTE desteği sağlar                                    |
 |       Koyu uygulama modu                              |          Hem koyu hem de açık modlarını destekleyen uygulamalar için koyu uygulama modu kullanılabilir ve görüntüleme deneyimini geliştirin        |
-|       Sesli komutlar                             |          Uygulamalı ses denetimi için ek sistem HoloLens desteği                           |
-|       El izleme geliştirmeleri                 |          El izleme geliştirmeleri düğmeleri ve 2D sayfalı etkileşimleri daha doğru hale sağlar                        |
-|       Kalite geliştirmeleri ve düzeltmeleri                 |          Platform genelinde çeşitli sistem performansı ve güvenilirlik geliştirmeleri                            |
+|       Sesli komutlar                             |          HoloLens eller denetlemek için ek sistem ses komutları desteği                           |
+|       İzleme geliştirmeleri                 |          İzleme geliştirmeleri, düğmeleri ve 2B kurşun etkileşimini daha doğru hale getirir                        |
+|       Kalite iyileştirmeleri ve düzeltmeleri                 |          Platform genelinde çeşitli sistem performansı ve güvenilirlik iyileştirmeleri                            |
 
-### <a name="support-for-windows-autopilot"></a>Windows Autopilot desteği
+### <a name="support-for-windows-autopilot"></a>Windows Autopilot için destek
 
-Windows HoloLens 2 için Autopilot, cihaz satış kanalının Intune kiracınıza HoloLens önceden kaydolmasına olanak sağlar. Cihazlar geldiğinde, kiracınız altında paylaşılan cihazlar olarak kendi kendine dağıtım yapmaya hazır olur. Kendi kendine dağıtımdan yararlanmak için cihazın kurulumun ilk ekranı sırasında USB-C-Ethernet kullanarak bir ağa bağlanması gerekir.
+Windows HoloLens 2 için Autopilot, cihaz satış kanalının ıntune kiracınıza HoloLens önceden kaydolmasına olanak tanır. Cihazlar geldiğinde, kiracınız altında paylaşılan cihazlar olarak kendi kendine dağıtım yapmaya hazırsınız demektir. Self-Deployment 'ın avantajlarından yararlanmak için, cihazın bir USB-C-Ethernet kullanarak kurulum 'daki ilk ekran sırasında ağa bağlanması gerekir.
 
-Bir kullanıcı Autopilot kendi kendine dağıtım işlemini başladıktan sonra, işlem aşağıdaki adımları tamamlar:
+Bir Kullanıcı Autopilot kendi kendine dağıtım işlemini başlattıktan sonra, işlem aşağıdaki adımları tamamlar:
 
-1. Cihazı Azure Active Directory (Azure AD) ile birleştirme.
-1. Azure AD'ye kullanarak cihazı Microsoft Intune (veya başka bir MDM hizmetine) kaydetme.
-1. Cihaz hedefli ilkeleri, sertifikaları ve ağ profillerini indirin.
-1. Cihazı sağlama.
-1. Oturum açma ekranı kullanıcıya gösterilir.
+1. Cihazı Azure Active Directory (Azure AD) ile birleştirin.
+1. cihazı Microsoft Intune (veya başka bir MDM hizmeti) kaydetmek için Azure AD 'yi kullanın.
+1. Cihaza yönelik ilkeleri, sertifikaları ve ağ profillerini indirin.
+1. Cihazı sağlayın.
+1. Kullanıcıya oturum açma ekranını sunun.
 
-[HoloLens 2 değerlendirme Windows Autopilot hakkında daha fazla bilgi edinin.](hololens2-autopilot.md)
+[Windows Autopilot for HoloLens 2 değerlendirme kılavuzunda](hololens2-autopilot.md)daha fazla bilgi edinin.
 
-*Şimdi AutoPilot önizlemeye katılmak için Hesap Yöneticinize ulaşın. Autopilot'a hazır cihazlar yakında gönderime başlayacaktır.*
+*AutoPilot önizlemesini şimdi katmak için hesap yöneticinize başvurun. Autopilot için kullanıma sunulan cihazlar yakında gönderim yapmaya başlayacaktır.*
 
 ### <a name="fido2-security-key-support"></a>FIDO2 güvenlik anahtarı desteği
 
-Bazı kullanıcılar, HoloLens veya okul ortamındaki diğer kullanıcılarla bir cihaz paylaşır. Bu nedenle, kullanıcıların uzun kullanıcı adları ve parolalar yazmadan kolayca ulaşabiliyorları önemlidir. Fast Identity Online (FIDO), kuruluşta (Azure AD kiracısı) herkesin kullanıcı adı veya parola girmeden HoloLens oturum açmasına olanak sağlar.
+bazı kullanıcılar bir HoloLens cihazını iş veya okul ortamında başkalarıyla paylaşır. Bu nedenle, kullanıcıların uzun Kullanıcı adlarını ve parolalarını yazmadan kolayca kolayca olanak sağlamak önemlidir. hızlı kimlik çevrimiçi (fido), kuruluşunuzdaki herkesin (Azure AD kiracısı) kullanıcı adı veya parola girmeden HoloLens sorunsuzca oturum açmasını sağlar.
 
-FIDO2 güvenlik anahtarları, herhangi bir form faktöründe getirilebilir, standartlara dayalı bir parolasız kimlik doğrulama yöntemidir. FIDO, parolasız kimlik doğrulaması için açık bir standarttır. Kullanıcıların ve kuruluşların kaynaklarında kullanıcı adı veya parola olmadan oturum açmalarına olanak sağlar. Bunun yerine bir dış güvenlik anahtarı veya cihazda yerleşik olarak yer alan bir platform anahtarı kullanırlar.
+FIDO2 güvenlik anahtarları, herhangi bir form faktörüyle gelebilmesi için bir "unphishable" standartlara dayalı bir kimlik doğrulama yöntemidir. FıDO, passwordless kimlik doğrulaması için açık bir standarttır. Kullanıcıların ve kuruluşların kendi kaynaklarında Kullanıcı adı veya parola olmadan oturum açmasına olanak tanır. Bunun yerine, bir dış güvenlik anahtarı veya bir cihazda yerleşik bir platform anahtarı kullanırlar.
 
 Başlamak için bkz. [passwordless güvenlik anahtarı oturum açma 'Yı etkinleştirme](/azure/active-directory/authentication/howto-authentication-passwordless-security-key).
 
@@ -1446,116 +1706,116 @@ Bu "yerleşik" uygulamalar koyu modunu destekler:
 
 ### <a name="system-voice-commands"></a>Sistem ses komutları
 
-Artık, cihazdaki herhangi bir uygulamayla sesli komutları kullanabilirsiniz. Daha fazla bilgi için bkz. [HoloLens çalıştırmak için sesinizi kullanma](hololens-cortana.md). ayrıca [HoloLens 2 için desteklenen diller](hololens2-language-support.md)bölümüne bakın.  
+Artık, cihazdaki herhangi bir uygulamayla sesli komutları kullanabilirsiniz. Daha fazla bilgi için [bkz. Seslerinizi kullanarak HoloLens.](hololens-cortana.md) Ayrıca [bkz. HoloLens 2 için desteklenen diller.](hololens2-language-support.md)  
 
 ### <a name="cortana-updates"></a>Cortana güncelleştirmeleri
 
-güncelleştirilmiş uygulama, cihazlarınız arasında daha fazla işlem yapmanıza yardımcı olmak için Microsoft 365 ile tümleşir (şu anda yalnızca US-English). HoloLens 2 ' de, Cortana birimi ayarlama veya yeniden başlatma gibi belirli cihaza özgü komutları artık desteklememektedir. Bu seçenekler artık yeni sistem ses komutları tarafından desteklenmektedir. [blogumuza](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/)yeni Cortana uygulaması hakkında daha fazla bilgi edinin.
+Güncelleştirilmiş uygulama, cihazlarınızı Microsoft 365 (şu anda yalnızca US-English) yardımcı olmak için US-English tümleştirilmiştir. 2 HoloLens de, Cortana ayarlama veya yeniden başlatma gibi belirli cihaza özgü komutları artık desteklemez. Bu seçenekler artık yeni sistem ses komutları tarafından de desteklemektedir. Blog sayfamızda yeni Cortana hakkında daha fazla bilgi [edinebilirsiniz.](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/)
 
-### <a name="quality-improvements-and-fixes"></a>Kalite iyileştirmeleri ve düzeltmeleri
+### <a name="quality-improvements-and-fixes"></a>Kalite geliştirmeleri ve düzeltmeleri
 
-Güncelleştirmede Ayrıca geliştirmeler ve düzeltmeler:  
+Güncelleştirmede yapılan geliştirmeler ve düzeltmeler:  
 
-- Etkin bir görüntüleme ayarlama sistemi sunuldu. Bu özellik hologragram kararlılığını ve hizalamasını geliştirir. Başlarınızı yan yana hareket ettirmek için artık yerinde kalabilirler.
-- Wi-Fi akışının HoloLens düzenli aralıklarla kesintiye uğradığından hata düzeltildi. Bir uygulama düşük gecikmeli akış için ihtiyacı olduğunu gösteriyorsa, [Setsocketmediastreamingmode işlevini](/windows/win32/api/socketapi/nf-socketapi-setsocketmediastreamingmode)çağırarak bu çözümü uygulayın.
-- Araştırma modunda akış sırasında oluşan bir cihaz askıda kalması düzeltildi.
-- Bir oturum sürdürülürken, bazı durumlarda oturum açma ekranında doğru kullanıcının görüntülenmediğini bir hata düzeltildi.
-- kullanıcıların MDM günlüklerini **Ayarlar** aracılığıyla dışarı aktarmadık bir sorun düzeltildi.
-- Hazır kurulum 'un doğruluk izlemenin bekleninden daha düşük olması nedeniyle oluşan bir sorun düzeltildi.
-- Göz izleme alt sisteminin belirli koşullar altında başlatma veya ayarlama yapma işleminin başarısız olduğu bir sorun düzeltildi.
-- Zaten kalibre edilmiş bir kullanıcı için göz ayarlamaya sorulacak bir sorun düzeltildi.
-- Bir sürücünün göz ayarlama sırasında çöktüğünde bir sorun düzeltildi.
-- Yinelenen güç düğmesi bastığı bir sorun düzeltildi, 60 saniyelik bir sistem zaman aşımı ve kabuk kilitlenmesine neden olabilir.
-- Derinlik arabellekleri için iyileştirilmiş kararlılık.
-- Geri bildirim merkezinde, kullanıcıların daha kolay geri bildirimde bulunmak için bir **paylaşma** düğmesi eklendi.
-- Roboryardım 'ın doğru şekilde yüklendiği bir hata düzeltildi.
+- Etkin bir ekran ayarlama sistemi tanıtıldı. Bu özellik hologramların kararlılığını ve hizalamasını artırır. Artık kafanızı yan yana taşımış olurken bunlar yerinde kalır.
+- Akış akışının Wi-Fi kesintiye HoloLens bir hata düzeltildi. Bir uygulama düşük gecikmeli akış gerektiğini gösteriyorsa, [SetSocketMediaStreamingMode](/windows/win32/api/socketapi/nf-socketapi-setsocketmediastreamingmode)işlevini çağırarak düzeltmeyi gerçekleştirin.
+- Araştırma modunda akış sırasında bir cihazın askıda kalma süresi düzeltildi.
+- Bazı durumlarda oturum devam edince oturum açma ekranında doğru kullanıcının görüntülenmey on the bug düzeltildi.
+- Kullanıcıların MDM günlüklerini Ayarlar aracılığıyla dışarı **aktaramama sorunu düzeltildi.**
+- İlk kurulumdan hemen sonra göz izleme doğruluğunun beklenenden daha düşük olduğu bir sorun düzeltildi.
+- Göz izleme alt sisteminin belirli koşullar altında ayarlama işlemini başlatamadığı veya gerçekleştiramadığı bir sorun düzeltildi.
+- Önceden ayarlanmış bir kullanıcı için göz düzeltmesi istendiğinde bir sorun düzeltildi.
+- Bir sürücünün göz ayarı sırasında kilitlenmesi sorunu düzeltildi.
+- Yinelenen güç düğmesi basmalarının 60 saniyelik sistem zaman aşımına ve kabuk kilitlenmeye neden olduğu bir sorun düzeltildi.
+- Derinlik arabellekleri için geliştirilmiş kararlılık.
+- Kullanıcıların geri **bildirimi** daha kolay paylaş Geri Bildirim Merkezi için paylaşıma bir Paylaş düğmesi eklendi.
+- RoboRaid wan'ın düzgün yüklenmemiş olmasıyla ilgili bir hata düzeltildi.
 
 ### <a name="known-issues"></a>Bilinen sorunlar
 
-- Zh-CN sistem diliyle ilgili bir sorun, sesli komutların karma gerçeklik yakalama almasını veya cihaz IP adresini görüntülemesini engeller.
-- bir sorun, cihazı "Hey Cortana" ses etkinleştirmesini kullanacak şekilde başlattıktan sonra Cortana uygulamasını başlatmanız gerekir. bir 18362 yapıdan güncelleştirdiyseniz, artık **başlangıç** aşamasında çalışmamış Cortana uygulamasının önceki sürümü için ikinci bir uygulama kutucuğu görebilirsiniz.
+- zh-CN sistem diliyle ilgili bir sorun ses komutlarının karma gerçeklik yakalamasını veya cihaz IP adresini görüntülemesini önlemektedir.
+- Bir sorun, cihazı "Hey Cortana" ses etkinleştirmeyi kullanmak üzere başlattıktan sonra Cortana uygulamasını başlatmanız gerekir. Bir 18362 derlemesinde güncelleştirme yaptıysanız, Cortana uygulamasının önceki sürümü için Başlat'ta artık çalışmayan ikinci bir uygulama kutucuğu **da görüntüleniyor olabilir.**
 
-## <a name="windows-holographic-version-1903---may-2020-update"></a>Windows Holographic, sürüm 1903-Mayıs 2020 güncelleştirme
+## <a name="windows-holographic-version-1903---may-2020-update"></a>Windows Holographic, sürüm 1903 - Mayıs 2020 Güncelleştirmesi
 
-- Derleme 18362,1061
+- Derleme 18362.1061
 
-bu aylık kalite güncelleştirmesi, daha önce açıklandığı gibi, takım Windows Holographic sürüm 2004 ' de çalıştığı için herhangi bir önemli değişikliği içermez.
+Bu aylık kalite güncelleştirmesi, ekip daha önce açıklandığı gibi Windows Holographic sürüm 2004 Mayıs Güncelleştirmesi üzerinde çalıştığı için önemli bir değişiklik içermemektedir.
 
-## <a name="windows-holographic-version-1903---april-2020-update"></a>Windows Holographic, sürüm 1903-Nisan 2020 güncelleştirme
+## <a name="windows-holographic-version-1903---april-2020-update"></a>Windows Holographic, sürüm 1903 - Nisan 2020 Güncelleştirmesi
 
-- Derleme 18362,1059
+- Derleme 18362.1059
 
 **Desteklenen uygulamalar için koyu mod**
 
-birçok Windows uygulama hem koyu hem de hafif modunu destekler. HoloLens 2 müşteri artık hem renk düzenlerini destekleyen uygulamalar için varsayılan modu seçebilirler. müşteri geri bildirimlerine bağlı olarak, varsayılan uygulama modunu "koyu" olarak ayarlarız, ancak bu ayarı dilediğiniz zaman kolayca değiştirebilirsiniz: **"varsayılan uygulama modunu seçin"** bulmak için **Ayarlar > sistem > rengine** gidin.
+Birçok Windows hem koyu hem de açık modu destekler. HoloLens 2 müşteri artık her iki renk düzenini de destekleyen uygulamalar için varsayılan modu seçebilir. Müşteri geri bildirimlerine dayanarak varsayılan uygulama modunu "koyu" olarak ayarlamış oluruz ancak bu ayarı istediğiniz zaman kolayca değiştirebilirsiniz: "Varsayılan uygulama modunu seçin" için **Ayarlar > System > Colors'a** **gidin.**
 
-Bu "yerleşik" uygulamalar koyu modunu destekler:
+Bu "in-box" uygulamaları koyu modu destekler:
 
 - Ayarlar
 - Microsoft Store
 - Posta
 - Takvim
 - Dosya Gezgini
-- Geribildirim Merkezi
+- Geri Bildirim Merkezi
 - OneDrive
 - Fotoğraflar
-- 3B görüntüleyici
-- TV & Filmler
+- 3B Görüntüleyici
+- Filmler & TV
 
-**Güncelleştirmede Ayrıca geliştirmeler ve düzeltmeler:**
+**Güncelleştirmede de iyileştirmeler ve düzeltmeler:**
 
-- Kabuk Yerpaylaşımları karma gerçeklik yakalamalarına dahil edilmiştir.
-- Gerçek olmayan geliştiriciler artık cihaz portalındaki 3B görünüm sayfasını kullanarak uygulamalarını test edebilir ve hatalarını ayıklamanıza olanak sağlar.
-- *Holographicdepthreprojectionbir yöntemi DepthReprojection* algoritması kullanıldığında karma gerçeklik yakalamadaki iyileştirilmiş hologram kararlılığı.
-- 32-bit ARM uygulamalarında "WinRT ıstreamsocketlistener API sınıfı kaydedilemedi" hatası düzeltildi.
+- Kabuk katmanlarının karma gerçeklik yakalamalarına dahil olduğundan emin olmak.
+- Unreal geliştiricileri artık uygulamalarını test etmek ve hata ayıklamak için Cihaz Portalı 3B Görünüm sayfasını kullanabilir.
+- *HolographicDepthReprojectionMethod DepthReprojection* algoritması kullanılırken karma gerçeklik yakalamada geliştirilmiş hologram kararlılığı.
+- 32 bit ARM uygulamaları üzerinde "WinRT IStreamSocketListener API Sınıfı kayıtlı değil" hatası düzeltildi.
 
-## <a name="windows-holographic-version-1903---march-2020-update"></a>Windows Holographic, sürüm 1903-Mart 2020 güncelleştirme
+## <a name="windows-holographic-version-1903---march-2020-update"></a>Windows Holographic, sürüm 1903 - Mart 2020 Güncelleştirmesi
 
-- Derleme 18362,1056
-
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- *Holographicdepthreprojection, oto planar* algoritması kullanıldığında karma gerçeklik yakalamadaki iyileştirilmiş hologram kararlılığı.
-- Bir derinlik MF örneğine eklenen koordinat sisteminin ortak belgelerle tutarlı olmasını sağlar.
-- Müşterilerin cihaz portalı üzerinden büyük miktarlarda metin yapıştırmasını sağlayarak geliştirilmiş geliştirici verimliliği.
-
-## <a name="windows-holographic-version-1903---february-2020-update"></a>Windows Holographic, sürüm 1903-Şubat 2020 güncelleştirme
-
-- Derleme 18362,1053
+- Derleme 18362.1056
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Unity uygulamaları için HolographicSpace. Uservarlığına yönelik API geçici olarak devre dışı bırakıldı. Bu değişiklik, "arka planda çalıştır" ayarı etkinleştirilmiş olsa bile, bazı uygulamaların, vizörü çevrildikten sonra duraklamasını engelleyen bir sorunu önler.
-- Kullanıcının bir kullanıcı arabirimi dontığı ve birkaç saniye sonra kabuğa geri dönmesi fark eden, izlenen bir rastgele kilitlenme çökme düzeltildi.
-- Gelişmiş izleme, Dizin parmağınızla yer ayırdığınızda, o parmağınızla büyük bir kısmı beklenmedik şekilde eğilerek daha az olabilir.
-- Baş izlemenin, uzamsal eşlemenin ve diğer çalışma zamanlarının güvenilirliği geliştirildi.
+- *HolographicDepthReprojectionMethod AutoPlanar* algoritması kullanılırken karma gerçeklik yakalamada geliştirilmiş hologram kararlılığı.
+- Derinlik MF örneğine bağlı koordinat sisteminin genel belgelerle tutarlı olduğundan emin olun.
+- Müşterilerin cihaz portalı üzerinden büyük miktarlarda metin yapıştırmalarına olanak sağlayarak geliştirici üretkenliği geliştirildi.
 
-## <a name="windows-holographic-version-1903---january-2020-update"></a>Windows Holographic, sürüm 1903-Ocak 2020 güncelleştirme
+## <a name="windows-holographic-version-1903---february-2020-update"></a>Windows Holographic, sürüm 1903 - Şubat 2020 Güncelleştirmesi
 
-- Derleme 18362,1043
-
-Güncelleştirmedeki geliştirmeler ve düzeltmeler:
-
-- HoloLens 2 öykünücüsü ile çalışırken özel uygulamalar için iyileştirilmiş kararlılık.
-
-## <a name="windows-holographic-version-1903---december-2019-update"></a>Windows Holographic, sürüm 1903-Aralık 2019 güncelleştirme
-
-- Derleme 18362,1042
+- Derleme 18362.1053
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- Son aşama üretilmesi (LSR) düzeltmeleri tanıtılmıştır. Daha kararlı ve daha doğru bir şekilde hesaba göre daha kararlı ve net bir şekilde görüntülenmesi için hologragram geliştirilmiş görsel işleme. Bu belirti, uygulamalar hologragram derinliğini doğru şekilde ayarlamazsanız bu güncelleştirmeden sonra daha belirgin olacaktır.
-- Özel uygulamaların ve özel uygulamalar arasında gezinmesinin sabit kararlılığı.
-- Karma Gerçeklik yakalamanın birkaç gün boyunca bekleme durumunda olduktan sonra video kaydedemediği bir sorun çözüldü.
-- İyileştirilmiş hologram kararlılığı.
+- Unity uygulamaları için HolographicSpace.UserPresence API'sini geçici olarak devre dışı bırakıldı. Bu değişiklik, "arka planda çalıştır" ayarı etkinleştirilse bile bazı uygulamaların, mengene çevrilmiş durumdayken duraklatılmasına neden olan bir sorunu önler.
+- Kullanıcı birkaç saniye sonra kullanıcı arabiriminin donması ve tekrar kabukta kilitlenmesi nedeniyle oluşan rastgele BIR HUP kilitlenmesi düzeltildi.
+- Dizin parmaklarınızı sıktınız ve bu şekilde el izleme iyileştirildi. Böylece, bu parmak büyük kısmı beklenmedik bir şekilde curl olma olasılığı daha düşük olur.
+- Baş izleme, uzamsal eşleme ve diğer çalışma zamanlarının güvenilirliği geliştirildi.
 
-## <a name="windows-holographic-version-1903---november-2019-update"></a>Windows Holographic, sürüm 1903-Kasım 2019 güncelleştirme
+## <a name="windows-holographic-version-1903---january-2020-update"></a>Windows Holographic, sürüm 1903 - Ocak 2020 Güncelleştirmesi
 
-- Derleme 18362,1039
+- Derleme 18362.1043
 
 Güncelleştirmedeki geliştirmeler ve düzeltmeler:
 
-- En-CA ve en-AU için ilk kurulum sırasında sesli komut **seçme** işlevlerinin sabit işlevselliği.
-- En son Unity ve karma gerçeklik araç seti (MRTK) sürümlerine daha fazla yerleştirilmiş olan nesnelerin geliştirilmiş görsel kalitesi.
-- Başlat menüsü açılıp kapanana kadar başlangıçta durdurulmuş bir durumda takılarak holographic uygulamalarla ilgili sorunlar düzeltildi.
-- HoloLens 2 ve öykünücü için openxr çalışma zamanı uyumluluk düzeltmeleri ve geliştirmeleri.
+- HoloLens 2 öykünücüsü ile çalışırken özel uygulamalar için geliştirilmiş kararlılık.
+
+## <a name="windows-holographic-version-1903---december-2019-update"></a>Windows Holographic, sürüm 1903 - Aralık 2019 Güncelleştirmesi
+
+- Derleme 18362.1042
+
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
+
+- Son aşama yeniden üretme (LSR) düzeltmeleri tanıtıldı. Hologramların görsel işlemesi, derinliğini daha doğru bir şekilde hesaparak daha kararlı ve daha yavaş görünecek şekilde iyileştirildi. Uygulamalar hologram derinliğini doğru ayarlamazsa bu belirti bu güncelleştirmeden sonra daha fark edilir.
+- Özel uygulamaların kararlılığı ve özel uygulamalar arasında gezinme düzeltildi.
+- Cihaz birkaç gün boyunca bekleme durumunda kaldıktan sonra karma gerçeklik yakalamanın video kaydedemezse bir sorun çözüldü.
+- Geliştirilmiş hologram kararlılığı.
+
+## <a name="windows-holographic-version-1903---november-2019-update"></a>Windows Holographic, sürüm 1903 - Kasım 2019 Güncelleştirmesi
+
+- Derleme 18362.1039
+
+Güncelleştirmedeki geliştirmeler ve düzeltmeler:
+
+- en-CA **ve** en-AU için ilk kurulum sırasında Select voice komutlarının işlevselliği düzeltildi.
+- En son Unity ve Karma Gerçeklik Araç Seti (MRTK) sürümlerinde uzak yerleştirilen nesnelerin görsel kalitesi geliştirildi.
+- Holografik uygulamaların başlangıçta duraklatılmış durumda takılı kalan ve sonra kapatılana kadar Başlat menüsü sorunları düzeltildi.
+- OpenXR çalışma zamanı uyumluluk düzeltmeleri ve HoloLens 2 ve öykünücü için geliştirmeler.

@@ -1,54 +1,64 @@
 ---
-title: Ortak cihaz kısıtlamaları
-description: HoloLens karma gerçeklik cihazının ortak cihaz kısıtlamaları ve ayarlarıyla güncel tutun.
+title: Yaygın Cihaz Kısıtlamaları
+description: Karma gerçeklik cihazı için yaygın cihaz kısıtlamalarını ve ayarlarını HoloLens takip edin.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
 ms.author: v-evmill
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/13/2020
-ms.reviewer: ''
+ms.date: 10/13/2021
+ms.reviewer: aboeger
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 769cacc1803af9d9e9bf1079f8cd5671f194c3bc
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 12dd061565c88fed65d1152c224be9ebbc7185d4
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033179"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924305"
 ---
-# <a name="common-device-restrictions"></a>Ortak cihaz kısıtlamaları 
+# <a name="common-device-restrictions"></a>Yaygın Cihaz Kısıtlamaları
 
-bu kılavuz, bt uzmanlarının kuruluştaki Windows 10 Holographic işletim sistemine yönelik daha yaygın olarak kullanılan yönetim seçeneklerini anlamalarına yardımcı olur. Bu ilkelerin MDM satıcınız tarafından nasıl etkinleştirildiğini anlamak için lütfen MDM sisteminizin belgelerine başvurun. Tüm MDM sistemleri bu kılavuzda açıklanan tüm ayarları desteklemez. Bazı özel ilkeleri OMA-URI XML dosyaları aracılığıyla destekler. bkz. [özel ilkeler için Microsoft Intune desteği](/mem/intune/configuration/custom-settings-windows-10). Adlandırma kuralları MDM satıcıları arasında da farklılık gösterebilir.
+Bu kılavuz, BT uzmanlarının kuruluşta işletim sistemi için kullanılabilen daha yaygın Windows 10 Holographic yönetim seçeneklerini anlarını anlamanıza yardımcı olur. Bu ilkelerin MDM satıcınız tarafından nasıl etkinleştirildiğinden emin olmak için lütfen MDM sistem belgelerinize başvurun. Tüm MDM sistemleri bu kılavuzda açıklanan her ayarı desteklemez. Bazıları OMA-URI XML dosyaları aracılığıyla özel ilkeleri destekler. [Bkz Microsoft Intune özel ilkeler için destek.](/mem/intune/configuration/custom-settings-windows-10) Adlandırma kuralları MDM satıcıları arasında da değişiklik gösterebilir.
 
-## <a name="prevent-changing-of-settings"></a>Ayarların değiştirilmesini engelle
-Çalışanların genellikle kurumsal cihazlarda kilitlemek isteyebileceğiniz belirli kişisel cihaz ayarlarını değiştirmesine izin verilir. çalışanlar, ayarlar kullanıcı arabirimi aracılığıyla HoloLens belirli ayarlarını etkileşimli bir şekilde ayarlayabilir. MDM 'yi kullanarak kullanıcıların değiştirmesine izin verilen kullanıcıları sınırlayabilirsiniz. aşağıda, Windows 10 Holographic ayarları kısıtlamaları yapılandırmak üzere desteklediği yaygın olarak kullanılan MDM ayarları listelenmektedir:
--   [VPN 'ye Izin ver:](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn) Kullanıcının VPN ayarlarını değiştirmesine izin verir
--   [El Ile WiFi yapılandırmasına Izin ver:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration) Kullanıcıların MDM tarafından sağlanan ağların dışında Wi-Fi bağlantıları yapmasına izin verir
--   [El Ile MDM kaydı kaldırmaya Izin ver](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment) Kullanıcıların çalışma alanı hesabını silmesine izin verilip verilmediği (yani, cihazın MDM sisteminden kaydını kaldırma)
+## <a name="prevent-changing-of-settings"></a>Ayarların değiştirilmesini engelleme
 
-HoloLens 2 cihazları için [Windows Holographic, sürüm 20h2 ' ye](hololens-release-notes.md#windows-holographic-version-20h2) eklendi:
-- [Sağlama paketi eklemeye Izin ver:](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage) Kullanıcıların yeni sağlama paketleri ekleyebiliyorsanız, yeni değerlerle üzerine yazarak geçiş yapın.
-- [Sağlama paketinin kaldırılmasına Izin ver:](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) Kullanıcıların, sağlama paketlerini kaldırabilmesinin ardından daha önce kilitli ayarları değiştirmesine izin vermek için değiştirin.
+Çalışanların genellikle şirket cihazlarına kilitlemek istediğiniz bazı kişisel cihaz ayarlarını değiştirmesine izin verilir. Çalışanlar, ayarların kullanıcı arabirimi aracılığıyla HoloLens ayarlarını etkileşimli olarak ayarlayabilir. MDM kullanarak kullanıcıların değiştirmesine izin verilenleri sınırlandırabilirsiniz.
+Aşağıda, sık kullanılan ve ayar kısıtlamalarını yapılandırmak için Windows 10 Holographic MDM ayarları listelebildi:
 
-HoloLens desteklenen [ilke csp 'lerine](/windows/client-management/mdm/policy-csps-supported-by-hololens2) ilke seçenekleri hakkında daha fazla ayrıntı bulun
+- [VPN'e izin ver:](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn) Kullanıcının VPN ayarlarını değiştirmesini sağlar
+- [El ile WiFi Yapılandırmasına İzin Ver:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration) Kullanıcıların MDM tarafından sağlanan Wi-Fi dışında bağlantı kurmalarına izin verir
+- [El ile MDM Kaydı Geri Kaydına İzin Ver](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment) Kullanıcıların çalışma alanı hesabını silebilir olup olmadığı (örneğin, cihazın MDM sisteminden kaydı silin)
+
+Windows 2 [cihazlar için Holographic sürüm 20H2 HoloLens](hololens-release-notes.md#windows-holographic-version-20h2) eklendi:
+
+- [Sağlama Paketi Eklemeye İzin Ver:](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage) Kullanıcıların yeni sağlama paketleri ek açıp ekleyeliklerini değiştirerek üzerine yeni değerler yazarak.
+- [Sağlama Paketini Kaldırmaya İzin Ver:](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) Kullanıcılar sağlama paketlerini kaldırabilirse, önceden kilitlenmiş ayarları değiştirmelerine izin vererek iki durumlu düğmeyi değiştirin.
+
+Windows [Holographic, sürüm 21H2'ye eklendi:](hololens-release-notes.md#windows-holographic-version-21h2)
+
+- [RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly) ilkesi, Microsoft Store uygulamasının yalnızca özel mağazayı yalnızca kendi özel mağazanızı gösterecek şekilde yapılandırılması için yapılandırıldığından, erişimi yalnızca kullanılabilir yaptık uygulamalarla sınırlandırabilirsiniz.
+
+Desteklenen İlke CSP'leri için HoloLens seçenekleri [hakkında daha fazla ayrıntı bulabilirsiniz](/windows/client-management/mdm/policy-csps-supported-by-hololens2)
 
 ## <a name="hardware-restrictions"></a>Donanım kısıtlamaları
-Windows 10 Holographic cihazlar; kameralar, mikrofonlar, hoparlörler, USB arabirimleri, Bluetooth arabirimleri ve Wi-Fi gibi popüler donanım özelliklerini içeren son teknoloji teknolojisini kullanır. Bu özelliklerin kullanılabilirliğini denetlemek için donanım kısıtlamalarını kullanabilirsiniz.
-aşağıda, donanım kısıtlamalarını yapılandırmak için Windows 10 Holographic desteklediği yaygın olarak kullanılan MDM ayarları listelenmektedir:
+
+Windows 10 Holographic cihazlar; kameralar, mikrofonlar, konuşmacılar, USB arabirimleri, Bluetooth arabirimleri ve Wi-Fi gibi popüler donanım özelliklerini içeren en son teknolojiden kullanılır. Bu özelliklerin kullanılabilirliğini kontrol etmek için donanım kısıtlamalarını kullanabilirsiniz.
+Aşağıdaki liste, donanım kısıtlamalarını yapılandırmak için Windows 10 Holographic yaygın olarak kullanılan MDM ayarlarını listeler:
 
 > [!NOTE]
-> Bu donanım sınırlamalarından bazıları, veri korumasına yönelik bağlantıyı ve yardımı etkiler.
+> Bu donanım kısıtlamalarının bazıları, bağlantıları etkiler ve veri koruma konusunda yardımcı olur.
 
--   [Wi-Fi ' a Izin ver:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifi) Kullanıcıların cihazlarında WiFi radyoyu etkinleştirip kullanıp kullanamayacağını belirtir.
--   [USB bağlantısına Izin ver:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) USB bağlantısının etkin olup olmadığı (USB şarjını etkilemez.)
--   [Bluetooth Izin ver:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth) kullanıcıların cihazlarında Bluetooth radyoyu etkinleştirip kullanıp kullanamayacağını belirtir.
--   [Kamerayı kısıtla:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesscamera) Windows uygulamaların kameraya erişip erişemeyeceğini belirtir.
--   [Mikrofonları kısıtla:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccessmicrophone) Windows uygulamaların mikrofona erişip erişemeyeceğini belirtir.
+- [Wi-Fi'a izin ver:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifi) Kullanıcıların cihazlarında WiFi radyoyu etkinleştirip kullanamayıp kullanamayyıp kullanamayabilirsiniz.
+- [USB Bağlantısına İzin Ver:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) USB bağlantısının etkin olup olmadığı (USB ücretlendirmesini etkilemez.)
+- [İzin Bluetooth:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth) Kullanıcıların cihazlarında Bluetooth ve kullanıp kullanamayıp kullanamayabilirsiniz.
+- [Kamerayı Kısıtla:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesscamera) Uygulamaların kameraya Windows olup olmadığını belirtir.
+- [Mikrofonları Kısıtla:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccessmicrophone) Uygulamaların mikrofona Windows olup olmadığını belirtir.
 
-HoloLens 2 cihazları için [Windows Holographic, sürümü 20h2 ' ye](hololens-release-notes.md#windows-holographic-version-20h2) eklenmiştir. 
-- [Displayofftimeoutonpili](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery) Görüntü kapanana kadar olan süreyi ayarlayın ve ekran devre dışı bırakarak cihazı kilitler. 
-- [Displayofftimeoutpluggedın](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin) Görüntü kapanana kadar olan süreyi ayarlayın ve ekran devre dışı bırakarak cihazı kilitler. 
+Windows 2 [cihazlar için Holographic sürüm 20H2 HoloLens](hololens-release-notes.md#windows-holographic-version-20h2) eklendi:
+
+- [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery) Ekran kapatana kadar zaman ayarlayın ve ekranı kapatarak cihazı kilitler.
+- [DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin) Ekran kapatana kadar zaman ayarlayın ve ekranı kapatarak cihazı kilitler.
