@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e9aad32891bb093cbce18671b76549788b19afcb
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 0efcfd0adf9bd380007e5ed4f905cb130b76d4b8
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126036508"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034255"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>HoloLens 2 ' yi yeniden başlatın, sıfırlayın veya kurtarın
 
@@ -45,13 +45,19 @@ Cihaz doğru şekilde önyüklendiğinde ve çalışıyorsa, pil ücreti düzeyi
 
    ![HoloLens 2 özellikleri ekranı, pil değişim düzeyini gösterir.](images/ResetRecovery2.png)
 
-Cihaz başlangıç menüsüne önyükleme yapamıyor, ana bilgisayar bilgisayarındaki açık görünüm ve cihaz numaralandırması konusuna göz önünde barının. Ardından [sorun giderme kılavuzunu](hololens-troubleshooting.md)izleyin. Cihazın durumu, sorun giderme kılavuzunda listelenen durumlardan hiçbiriyle eşleşmezse, ana bilgisayar bilgisayarınıza değil güç kaynağına bağlı cihazla [sabit sıfırlama yordamını](hololens-recovery.md#hard-reset-procedure) gerçekleştirin. Cihazın ücreti için en az bir saat bekleyin.
+Cihaz başlangıç menüsüne önyükleme yapamıyor, ana bilgisayar bilgisayarındaki açık görünüm ve cihaz numaralandırması konusuna göz önünde barının. Ardından [sorun giderme kılavuzunu](hololens-troubleshooting.md)izleyin. Cihazın durumu, sorun giderme kılavuzunda listelenen durumlardan hiçbiriyle eşleşmezse, ana bilgisayar bilgisayarınıza değil güç kaynağına bağlı cihazla [sabit sıfırlama yordamını](hololens-recovery.md#hard-restart-procedure) gerçekleştirin. Cihazın ücreti için en az bir saat bekleyin.
 
-## <a name="reset-the-device"></a>Cihazı sıfırlama
+> [!NOTE]
+> Koşulları tanımlayarak başlayalım. \
+> "Yeniden Başlat" yalnızca cihazın kapalı ve açık olduğunu gösterir. \
+> "sıfırlama", geçerli görüntüyü yeniden yüklemek için Ayarlar kullanıcı arabirimi aracılığıyla cihazı varsayılana geri yükleme anlamına gelir. \
+> "Refflash", cihazın bir bilgisayara bağlandığı ve yeni bir görüntünün (isteğe bağlı olarak farklı bir bilgisayarın) yükleneceği anlamına gelir.
 
-Belirli koşullarda, yazılım Kullanıcı arabirimini kullanmadan cihazı el ile sıfırlamanız gerekebilir.
+## <a name="restart-the-device"></a>Cihazı yeniden başlatma
 
-### <a name="standard-procedure"></a>Standart yordam
+Belirli koşullarda, yazılım Kullanıcı arabirimini kullanmadan cihazı el ile yeniden başlatmanız gerekebilir. Bu, cihazınızı sıfırlamak/aktarmak zorunda kalmadan karşılaştığınız bir sorunu çözmenize yardımcı olabilir.
+
+### <a name="standard-restart-procedure"></a>Standart yeniden başlatma prosedürü
 
 1. Cihazın güç kaynağı veya konak bılgısayar bağlantısını kesmek için Type-C kablosunu çıkarın.
 
@@ -63,7 +69,7 @@ Belirli koşullarda, yazılım Kullanıcı arabirimini kullanmadan cihazı el il
 
    ![HoloLens 2 MicrosoftHoloLensRecovery sapve yöneticisi.](images/MicrosoftHoloLens_DeviceManager.png)
 
-### <a name="hard-reset-procedure"></a>Sabit sıfırlama prosedürü
+### <a name="hard-restart-procedure"></a>Sabit yeniden başlatma prosedürü
 
 Standart sıfırlama yordamı çalışmazsa, sabit sıfırlama yordamını kullanın:
 
@@ -92,13 +98,13 @@ Cihazı kırmanın iki yolu vardır. her ikisi için, önce [Windows deposundan 
 >[!WARNING]
 >Cihazınızı Kırdıysanız, TPM sıfırlama bilgileri de dahil olmak üzere tüm kişisel verileriniz, uygulamalarınız ve ayarlarınız silinir.
 
-Varsayılan olarak, Gelişmiş kurtarma Yardımcısı en son özellik yayın derlemesini indirmek üzere ayarlanmıştır; en son özellik sürümü hakkında bilgi edinmek için, bkz. [HoloLens 2 sürüm notları](hololens-release-notes.md). en son HoloLens 2 tam Flash güncelleştirmesi (ffu) paketini, gelişmiş kurtarma yardımcısı aracılığıyla cihazınızı yeniden flash 'a aktarmak üzere almak için, en son aylık HoloLens 2 görüntüsünü indirin: [https://aka.ms/hololens2download](https://aka.ms/hololens2download) . Bu sürüm, genel olarak kullanılabilir olan en son yapıya sahiptir.
+Varsayılan olarak, Gelişmiş kurtarma Yardımcısı en son özellik yayın derlemesini indirmek üzere ayarlanır. en son özellik sürümü hakkında bilgi edinmek için, bkz. [HoloLens 2 sürüm notları](hololens-release-notes.md). en son HoloLens 2 tam Flash güncelleştirmesi (ffu) paketini, gelişmiş kurtarma yardımcısı aracılığıyla cihazınızı yeniden flash 'a aktarmak üzere almak için, en son aylık HoloLens 2 görüntüsünü indirin: [https://aka.ms/hololens2download](https://aka.ms/hololens2download) . Bu sürüm, genel olarak kullanılabilir olan en son yapıya sahiptir.
 
 refflash yordamını çalıştırmadan önce, uygulamanın Windows 10 bilgisayarınızda yüklü olduğundan ve çalıştığından emin olun ve cihazı algılamaya hazırlanın. ayrıca HoloLens en az %40 oranında ücretlendirildiğinden emin olun.
 
 ![HoloLens 2 temiz kırflash ekran görüntüsü.](images/ARC1.png)
 
-### <a name="normal-procedure"></a>Normal yordam
+### <a name="normal-flashing-procedure"></a>Normal yanıp sönen yordam
 
 1. HoloLens cihaz çalışırken, daha önce gelişmiş kurtarma yardımcısı uygulamasını açtığınız Windows 10 bilgisayara bağlayın.
 
@@ -108,7 +114,7 @@ refflash yordamını çalıştırmadan önce, uygulamanın Windows 10 bilgisayar
 
 1. gelişmiş kurtarma yardımcı uygulama kullanıcı arabiriminde HoloLens 2 cihazını seçin ve yönergeleri izleyerek, bildirimi tamamlayın.
 
-### <a name="manual-procedure"></a>El ile yordam
+### <a name="manual-flashing-mode-procedure"></a>El ile yanıp sönen mod yordamı
 
 Şu durumlarda cihazı kurtarma moduna almanız gerekebilir:
 
@@ -146,48 +152,48 @@ refflash yordamını çalıştırmadan önce, uygulamanın Windows 10 bilgisayar
 
 1. ARC cihazınızı algılamazsa, bilgisayarınızda dosya Gezgini aracılığıyla cihazınıza bağlanabildiğinizden emin olun. Bunu yaparsanız;
 
-    1. Cihazınızın bu bağlantıyı devre dışı bırakan USB ilkeleri olabilir. Öyleyse, [El Ile yanıp sönen modu](hololens-recovery.md#manual-procedure)deneyin.
+    1. Cihazınızın bu bağlantıyı devre dışı bırakan USB ilkeleri olabilir. Öyleyse, [El Ile yanıp sönen modu](hololens-recovery.md#manual-flashing-mode-procedure)deneyin.
     2. İlke yoksa, farklı bir USB kablosu deneyin.
 
-1. Cihazınızın [1-3-5-LED deseni görüntülemez.](hololens2-setup.md#lights-to-indicate-problems)
+1. Cihazınızın [1-3-5 yönlü bir model GÖRÜNTÜLEMEMIŞ](hololens2-setup.md#lights-to-indicate-problems)olduğunu denetleyin.
 
-## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazalarını kullanmadan ARC'ı indirme
+## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazasını kullanmadan YAYı indirin
 
-IT ortamı, Windows Store uygulamasının kullanımını önlese veya perakende mağazasına erişimi sınırlarsa, IT yöneticisi bu uygulamayı bir "çevrimdışı" dağıtım yolu aracılığıyla kullanılabilir hale getirmesini sağlar.
+bt ortamı Windows mağaza uygulamasının kullanımını engelliyorsa veya perakende mağazası 'na erişimi sınırlayıp, bt yöneticisi bu uygulamayı "çevrimdışı" bir dağıtım yolu aracılığıyla kullanılabilir hale getirir.
 
  >[!NOTE]
- > - IT yöneticileri bu uygulamayı System Center Configuration Manager (SCCM) veya Intune aracılığıyla da dağıtabilirsiniz.
- > - Bu kılavuz Gelişmiş Kurtarma Yardımcı'ya odaklanır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
+ > - bt yöneticileri ayrıca bu uygulamayı System Center Configuration Manager (SCCM) veya ıntune aracılığıyla dağıtabilir.
+ > - Bu kılavuz, Gelişmiş kurtarma Yardımcısı 'na odaklanmaktadır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
 
 Dağıtım yolunu etkinleştirmek için şu adımları izleyin:
 
-1. [İş İçin Microsoft Store'a](https://businessstore.microsoft.com) gidin ve Azure Active Directory oturum açma.
+1. [İş İçin Microsoft Store](https://businessstore.microsoft.com) gidin ve bir Azure Active Directory kimliği kullanarak oturum açın.
 
-1. Yönet **– Ayarlar.** Alışveriş deneyimi altında Çevrimdışı uygulamaları **göster'i açma.** 
+1. **yönet – Ayarlar** sayfasına gidin. **Alışveriş deneyimi** altında **çevrimdışı uygulamaları göster** ' i açın.
 
-1. Grubum **için alışverişe gidin ve** Advanced Recovery Companion araması yapmak için [**_._**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)
+1. **Grubum için mağaza**' a gidin ve [**_Gelişmiş kurtarma Yardımcısı_**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)' nı arayın.
 
-1. Lisans **Türü'sini** **_çevrimdışı _ olarak_*değiştirerek _ Yönet'i* seçin.**
+1. **Lisans türünü** **_çevrimdışı_*_ olarak değiştirin ve _ Yönet ' i seçin***.
 
-1. Paketi **çevrimdışı kullanım için indir'in altında** ikinci mavi İndir **düğmesini** seçin. Dosya uzantısının *.appxbundle olduğundan emin olun.*
+1. **Çevrimdışı kullanım için paketi indirin** altında Ikinci mavi **İndir** düğmesini seçin. Dosya uzantısının *. appxdemeti* olduğundan emin olun.
 
-    - Bu aşamada, Masaüstü bilgisayar internet erişimine sahipse, uygulamayı yüklemek için pakete çift tıklayın.
+    - Bu aşamada, masaüstü BILGISAYARıN internet erişimi varsa, uygulamayı yüklemek için pakete çift tıklayın.
 
-    - Hedef bilgisayar İnternet bağlantısına sahip değilse şu adımları izleyin:
-       1. Kodlanmamış lisansı seçin ve ardından Lisans **oluştur'a tıklayın.**
-       2. Gerekli **Çerçeveler altında** İndir'i **seçin.**
-       3. Paketi bağımlılık ve lisansla uygulamak için DISM kullanın. Yönetici komut isteminde aşağıdaki komutu çalıştırın:
+    - Hedef bılgısayarda internet bağlantısı yoksa, şu adımları izleyin:
+       1. Kodlanamayan lisansı seçin ve ardından **Lisans oluştur**' u seçin.
+       2. **Gerekli çerçeveler** altında **İndir**' i seçin.
+       3. Paketi bağımlılık ve lisansa uygulamak için DıSM 'yi kullanın. Yönetici komut isteminden aşağıdaki komutu çalıştırın:
 
           ```console
           C:\WINDOWS\system32>dism /online /Add-ProvisionedAppxPackage /PackagePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_1.19050.1301.0_neutral_~_8wekyb3d8bbwe.appxbundle" /DependencyPackagePath:"C:\ARCoffline\Microsoft.VCLibs.140.00.UWPDesktop_14.0.27629.0_x86__8wekyb3d8bbwe.appx" /LicensePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_8wekyb3d8bbwe_f72ce112-dd2e-d771-8827-9cbcbf89f8b5.xml" /Region:all
           ```
           > [!NOTE]
-          > Bu kod örneğinde yer alan sürüm numarası şu anda kullanılabilir olan sürümle eşleşmez. Ayrıca örnekten farklı bir indirme konumu seçmiş de olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
+          > Bu kod örnekteki sürüm numarası, mevcut olan sürümle eşleşmeyebilir. Ayrıca, örnekteki farklı bir indirme konumu seçmiş olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
 
 > [!TIP]
-> Çevrimdışı FFU yüklemek için Gelişmiş Kurtarma Yardımcı'sı kullanmayı planlasanız, flash görüntü indirebilirsiniz. [**HoloLens 2 için geçerli görüntüyü indirin.**](https://aka.ms/hololens2download)
+> Çevrimdışı bir FFU yüklemek için Gelişmiş kurtarma Yardımcısı kullanmayı planlarken, Flash görüntünüzü indirmek faydalı olabilir. [**HoloLens 2 için geçerli görüntüyü indirin**](https://aka.ms/hololens2download).
 
 Diğer kaynaklar:
 
 - [Çevrimdışı uygulamaları dağıtma](/microsoft-store/distribute-offline-apps) 
-- [DISM uygulama paketi (.appx veya .appxbundle) hizmet komut satırı seçenekleri](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)
+- [DıSM uygulama paketi (. appx veya. appxdemeti) komut satırı seçeneklerini sunma](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)
