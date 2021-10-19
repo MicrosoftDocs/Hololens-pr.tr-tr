@@ -1,13 +1,13 @@
 ---
-title: HoloLens yeniden başlatın, sıfırlayın veya kurtarın
+title: 2' de yeniden başlatma, sıfırlama HoloLens kurtarma
 ms.reviewer: Follow along with our basic and advanced instructions for rebooting or resetting your HoloLens 2 device.
-description: HoloLens 2 ' ye görüntü flash için gelişmiş kurtarma yardımcısı 'nı kullanma.
-keywords: nasıl yapılır, yeniden başlatma, sıfırlama, kurtarma, sabit sıfırlama, geçici sıfırlama, güç çevrimi, HoloLens, kapatma, arc, gelişmiş kurtarma yardımcısı
+description: HoloLens 2'ye bir görüntü flash ile flash HoloLens kullanma.
+keywords: nasıl yeniden başlatma, sıfırlama, kurtarma, sabit sıfırlama, yazılım sıfırlaması, güç döngüsü, HoloLens, kapatma, arc, gelişmiş kurtarma yardımcı
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
-ms.author: mazeller
-ms.date: 08/30/2021
+ms.author: v-beehanson
+ms.date: 10/15/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
@@ -16,184 +16,192 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0efcfd0adf9bd380007e5ed4f905cb130b76d4b8
-ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
+ms.openlocfilehash: 9f8969d018059a3b38d2b3001f8bc983b72d58c7
+ms.sourcegitcommit: f105a770814ccd61e88b650448902a03c95b7a3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130034255"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151660"
 ---
-# <a name="restart-reset-or-recover-hololens-2"></a>HoloLens 2 ' yi yeniden başlatın, sıfırlayın veya kurtarın
+# <a name="restart-reset-or-recover-hololens-2"></a>2' de yeniden başlatma, sıfırlama HoloLens kurtarma
 
 >[!IMPORTANT]
-> Herhangi bir sorun giderme yordamını başlatmaya başlamadan önce, cihazınızın, mümkünse pil kapasitesi için **yüzde 20 ila 40 oranında** ücretlendirildiğinizden emin olun. Güç düğmesinin altında bulunan [Pil göstergesi ışıkları](hololens2-setup.md#lights-that-indicate-the-battery-level) , cihazda oturum açmadan pil kapasitesini doğrulamaya yönelik hızlı bir yoldur.
+> Herhangi bir sorun giderme yordamına başlamadan önce, mümkünse cihazınızın pil kapasitesinin yüzde **20-40'ını** ücrete tabi olduğundan emin olun. Güç [düğmesinin altında](hololens2-setup.md#lights-that-indicate-the-battery-level) bulunan pil göstergesi ışığı, cihazda oturum açmadan pil kapasitesini doğrulamanın hızlı bir yolu olabilir.
 
-cihazınızı ücretlendirmenin en iyi yolu olan HoloLens 2 ile birlikte gelen [cihazınızın şarj cihazına ve USB Type-C kablosunu](https://www.microsoft.com/en-us/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5?rtc=1) kullanın. Cihazınızın şarj cihazına, 18W gücü (2a 'da 9V) sağlar. HoloLens 2 cihaz, izin verilen duvar karağını kullanarak, cihaz bekleme modundayken 65 dakikadan kısa bir süre içinde pili tam olarak ücretlendirmesini sağlayabilir. Bu aksesuarlar yoksa, mevcut olan cihazınızın şarj cihazına 'ın en az 15W güç desteğine sahip olduğundan emin olun.
-
-> [!NOTE]
-> Mümkünse, cihazı USB üzerinden ücretlendirilecek bir BILGISAYAR kullanmaktan kaçının, bu da yavaş olur.
-
-Cihaz doğru şekilde önyüklendiğinde ve çalışıyorsa, pil ücreti düzeyini denetlemek için üç yol vardır:
-
-- HoloLens cihaz kullanıcı arabiriminin ana menüsünde.
-- Güç düğmesine ışığı (%40 oranında bir ücret için) görüntüleyin ve en az iki katı LED görmeniz gerekir.
-    - Cihaz şarj edildiğinde, pil göstergesi, geçerli ücret düzeyini belirtmek için ışıkları.  Son ışık, etkin şarjın olduğunu göstermek için soluklaşır ve artacaktır.
-    - HoloLens açık olduğunda, pil göstergesi pil düzeyini beş artışlarla görüntüler.
-    - Beş ışığının yalnızca biri açık olduğunda, pil düzeyi yüzde 20 ' nin altında olur.
-    - Pil düzeyi kritik düzeyde düşükse ve cihazı açmaya çalışırsanız, bir ışık kısa bir süre yanıp söndürmez ve sonra da çıkar.
-- ana bilgisayarınızda, **dosya gezgini** 'ni açın ve **bu bilgisayarın** altındaki HoloLens 2 cihazınızı sol tarafta arayın. Cihaza sağ tıklayın ve **Özellikler**' i seçin. Bir iletişim kutusu, pil ücreti düzeyini gösterir.
-
-   ![HoloLens 2 özellikleri ekranı, pil değişim düzeyini gösterir.](images/ResetRecovery2.png)
-
-Cihaz başlangıç menüsüne önyükleme yapamıyor, ana bilgisayar bilgisayarındaki açık görünüm ve cihaz numaralandırması konusuna göz önünde barının. Ardından [sorun giderme kılavuzunu](hololens-troubleshooting.md)izleyin. Cihazın durumu, sorun giderme kılavuzunda listelenen durumlardan hiçbiriyle eşleşmezse, ana bilgisayar bilgisayarınıza değil güç kaynağına bağlı cihazla [sabit sıfırlama yordamını](hololens-recovery.md#hard-restart-procedure) gerçekleştirin. Cihazın ücreti için en az bir saat bekleyin.
+Cihazınızı ücret ödemenin en iyi yolu, HoloLens 2 ile birlikte gelen USB [Type-C](https://www.microsoft.com/en-us/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5?rtc=1) kablosunu kullanın. Malzeme 18W güç sağlar (2A'da 9V). Sağlanan duvar duvarını kullanarak HoloLens 2 cihaz bekleme durumundayken pilin 65 dakikadan kısa bir sürede dolup dolulyabilirsiniz. Bu aksesuarlar mevcut değilse, kullanılabilir olan aletin en az 15W gücü destekleyene sahip olduğundan emin olun.
 
 > [!NOTE]
-> Koşulları tanımlayarak başlayalım. \
-> "Yeniden Başlat" yalnızca cihazın kapalı ve açık olduğunu gösterir. \
-> "sıfırlama", geçerli görüntüyü yeniden yüklemek için Ayarlar kullanıcı arabirimi aracılığıyla cihazı varsayılana geri yükleme anlamına gelir. \
-> "Refflash", cihazın bir bilgisayara bağlandığı ve yeni bir görüntünün (isteğe bağlı olarak farklı bir bilgisayarın) yükleneceği anlamına gelir.
+> Mümkünse, cihazı USB üzerinden ücretlandırarak yavaş olan bir bilgisayar kullanmaktan kaçının.
 
-## <a name="restart-the-device"></a>Cihazı yeniden başlatma
+Cihaz doğru şekilde önyüklüp çalışıyorsa, pil ücreti düzeyini denetlemenin üç yolu vardır:
 
-Belirli koşullarda, yazılım Kullanıcı arabirimini kullanmadan cihazı el ile yeniden başlatmanız gerekebilir. Bu, cihazınızı sıfırlamak/aktarmak zorunda kalmadan karşılaştığınız bir sorunu çözmenize yardımcı olabilir.
+- Cihaz kullanıcı arabiriminin ana HoloLens seçin.
+- LED'i güç düğmesinin yakınında görüntüle (yüzde 40 ücret için en az iki katı LED görüyor gerekir).
+    - Cihaz ücretlendirmeye devam edin. Pil göstergesi, geçerli ücret düzeyini belirtmek için yanıp söner.  Son ışık, etkin ücretlendirmeyi göstermek için belirecek ve sönecek.
+    - Pil HoloLens, pil düzeyini beş artımlı olarak görüntüler.
+    - Beş ışığın yalnızca biri açık olduğunda pil düzeyi yüzde 20'nin altında olur.
+    - Pil düzeyi kritik düzeyde düşükse ve cihazı açmayı denersiniz, bir ışık kısa bir süre yanıp söner ve sonra gider.
+- Konak bilgisayarınızda, **Dosya Gezgini** açın ve sol tarafta Bu bilgisayar altında HoloLens 2 cihazınızı **kontrol edin.** Cihaza sağ tıklayın ve Özellikler'i **seçin.** Bir iletişim kutusu pil ücreti düzeyini gösterir.
 
-### <a name="standard-restart-procedure"></a>Standart yeniden başlatma prosedürü
+   ![Pil HoloLens 2 özellikler ekranında pil değişikliği düzeyi gösterilir.](images/ResetRecovery2.png)
 
-1. Cihazın güç kaynağı veya konak bılgısayar bağlantısını kesmek için Type-C kablosunu çıkarın.
+Cihaz başlangıç menüsüne önyükleyene, ana bilgisayar üzerinde LED görünümünü ve cihaz numaralandırıcıyı not edin. Ardından sorun giderme [kılavuzunu izleyin.](hololens-troubleshooting.md) Cihazın durumu sorun giderme kılavuzunda listelenen durumlardan herhangi biri ile [](hololens-recovery.md#hard-restart-procedure) eşlenemezse, konak bilgisayarınıza değil, güç kaynağına bağlı cihazla sabit yeniden başlatma yordamını gerçekleştirin. Cihazın ücret ödemesi için en az bir saat bekleyin.
 
-2. 15 saniye boyunca **Güç** düğmesine basın ve basılı tutun. Tüm LED 'ler kapalı olmalıdır.
+> [!NOTE]
+> Terimleri tanımlayarak başlayalım.\
+> "Yeniden başlatma", cihazı kapatma ve açma anlamına gelir.\
+> "Sıfırla", geçerli görüntüyü yeniden yüklemek için cihazı Ayarlar kullanıcı arabirimi aracılığıyla varsayılanlara geri yükleme anlamına gelir.\
+> "Reflash", cihazın bir bilgisayara bağlı olduğu ve yeni bir görüntünün (isteğe bağlı olarak farklı bir görüntü) yüklü olduğu anlamına gelir.
 
-3. 2-3 saniye bekleyin ve ardından **Güç** düğmesine kısa basın. Güç düğmesine yakın LED 'ler açılır ve cihaz başlatılmaya başlayacaktır.
+## <a name="restart-the-device"></a>Cihazı yeniden başlatın
 
-4. cihazı ana bilgisayara Bağlan ve ardından Device Manager açın. (Windows 10 için **Windows** tuşuna ve sonra **X** tuşuna basın ve ardından **Device Manager**' yı seçin.) aşağıdaki görüntüde gösterildiği gibi cihazın *Microsoft HoloLens* doğru şekilde numaralandırdığından emin olun:
+Belirli durumlarda, yazılım kullanıcı arabirimini kullanmadan cihazı el ile yeniden başlatmanız gerekebilir. Bu, cihazınıza sıfırlamak/ters eğik çizgi uygulamanıza gerek kalmadan karşılaştığınız bir sorunu çözmenize yardımcı olabilir.
 
-   ![HoloLens 2 MicrosoftHoloLensRecovery sapve yöneticisi.](images/MicrosoftHoloLens_DeviceManager.png)
+### <a name="standard-restart-procedure"></a>Standart yeniden başlatma yordamı
 
-### <a name="hard-restart-procedure"></a>Sabit yeniden başlatma prosedürü
+1. Cihazın güç kaynağından veya konak pc'den bağlantısını kesmek için Type-C kablosunu çıkarın.
 
-Standart sıfırlama yordamı çalışmazsa, sabit sıfırlama yordamını kullanın:
+2. Güç düğmesine 15 **saniye** basılı tutun. Tüm LED'ler kapalıdır.
 
-1. Cihazın güç kaynağı veya konak bılgısayar bağlantısını kesmek için Type-C kablosunu çıkarın.
+3. 2-3 saniye bekleyin ve güç düğmesine kısa **basın.** Güç düğmesine yakın LED'ler yanacak ve cihaz çalışmaya başlayacaktır.
 
-1. 15 saniye boyunca **Ses**  +  **tasarrufu** düğmelerini basılı tutun. Cihaz otomatik olarak yeniden başlatılır.
+4. Bağlan konak bilgisayara bağlayın ve ardından Cihaz Yöneticisi'ni açın. (Windows 10 için, **Windows** tuşuna ve **ardından X** tuşuna basın ve Ardından Cihaz **Yöneticisi'ni** seçin.) Aşağıdaki görüntüde gösterildiği gibi cihazın doğru şekilde Microsoft HoloLens *emin* olun:
 
-1. cihazı ana bilgisayar bilgisayarına Bağlan.
+   ![HoloLens 2 MicrosoftHoloLensRecovery cihaz yöneticisi.](images/MicrosoftHoloLens_DeviceManager.png)
 
-1. Device Manager açın ( **Windows** tuşuna ve sonra **X** tuşuna Windows 10 ve ardından **Device Manager**' i seçin). aşağıdaki görüntüde gösterildiği gibi cihazın *Microsoft HoloLens* doğru şekilde numaralandırdığından emin olun:
+### <a name="hard-restart-procedure"></a>Sabit yeniden başlatma yordamı
+
+Standart sıfırlama yordamı işe başlatılmazsa, sabit yeniden başlatma yordamını kullanın:
+
+1. Cihazın güç kaynağından veya konak pc'den bağlantısını kesmek için Type-C kablosunu çıkarın.
+
+1. Güç **düğmelerini**  +   15 saniye basılı tutun. Cihaz otomatik olarak yeniden başlatılır.
+
+1. Bağlan konak bilgisayara bağlayın.
+
+1. Cihaz Yöneticisi'ni açın (Windows 10 **tuşuna Windows** **X** tuşuna basın ve Ardından Cihaz Yöneticisi'ni **seçin).** Aşağıdaki görüntüde gösterildiği gibi cihazın doğru şekilde *Microsoft HoloLens* emin olun:
 
    ![HoloLens 2 MicrosoftHoloLensRecovery cihaz yöneticisi 2.](images/MicrosoftHoloLens_DeviceManager.png)
 
-## <a name="clean-reflash-the-device"></a>Cihazı Temizleme-yeniden yansıtma
+## <a name="reset-the-device"></a>Cihazı sıfırlama
 
-olağandışı durumlarda, HoloLens 2 ' yi "temizle-flash" yapmanız gerekebilir. Lütfen temizleme-refflash 'un aşağıdaki sorunları etkilemesini beklenmediğini unutmayın:
+Cihazınızı doğrudan başlığından sıfırlayabilirsiniz. Bu **Ayarlar'ı** seçin ve ardından & Güvenlik > Bu cihazı sıfırla & **kurtarmayı sıfırla >'yi seçin.**
 
-- [Renk dağılımı görüntüleme](hololens2-display.md)
-- Sesle önyükleme, ancak görüntüleme çıktısı yok
-- [1-3-5-LED desenli](hololens2-setup.md#lights-to-indicate-problems)
-- [Aşırı ısınmasını](hololens-environment-considerations.md#temperature-and-regulatory-information) 
-- İşletim sistemi kilitlenmeleri (uygulama kilitlenmelerinden farklı)
+   ![HoloLens başlığı sıfırlama.](images/headset-reset-recovery.png)
 
-Cihazı kırmanın iki yolu vardır. her ikisi için, önce [Windows deposundan gelişmiş kurtarma yardımcısı 'nı yüklemeniz](https://www.microsoft.com/store/productId/9P74Z35SFRS8)gerekir.
+Bu şekilde sıfırlasanız, tüm kullanıcı hesapları kaldırılır ve tüm veriler silinir.
+
+## <a name="clean-reflash-the-device"></a>Cihazı temizleme
+
+Olağanüstü durumlarda, HoloLens 2'de "temizleme" yapmak zorunda HoloLens olabilir. Clean-reflash'in aşağıdaki sorunları etkilemesi beklenmiyor:
+
+- [Renk tekdüzlüklerini görüntüleme](hololens2-display.md)
+- Ses ile önyükleniyor ama görüntü çıkışı yok
+- [1-3-5-LED deseni](hololens2-setup.md#lights-to-indicate-problems)
+- [Aşırı ısınma](hololens-environment-considerations.md#temperature-and-regulatory-information) 
+- Işletim sistemi kilitleniyor (uygulama kilitlenmelerinden farklıdır)
+
+Cihaza ters eğik çizginin iki yolu vardır. Her ikisi için de, önce [Gelişmiş Kurtarma Yardımcı'sı'Windows yüklemeniz gerekir.](https://www.microsoft.com/store/productId/9P74Z35SFRS8)
 
 >[!WARNING]
->Cihazınızı Kırdıysanız, TPM sıfırlama bilgileri de dahil olmak üzere tüm kişisel verileriniz, uygulamalarınız ve ayarlarınız silinir.
+>Cihazınıza başvurursanız TPM sıfırlama bilgileri de dahil olmak üzere tüm kişisel verileriniz, uygulamalarınız ve ayarlarınız silinir.
 
-Varsayılan olarak, Gelişmiş kurtarma Yardımcısı en son özellik yayın derlemesini indirmek üzere ayarlanır. en son özellik sürümü hakkında bilgi edinmek için, bkz. [HoloLens 2 sürüm notları](hololens-release-notes.md). en son HoloLens 2 tam Flash güncelleştirmesi (ffu) paketini, gelişmiş kurtarma yardımcısı aracılığıyla cihazınızı yeniden flash 'a aktarmak üzere almak için, en son aylık HoloLens 2 görüntüsünü indirin: [https://aka.ms/hololens2download](https://aka.ms/hololens2download) . Bu sürüm, genel olarak kullanılabilir olan en son yapıya sahiptir.
+Varsayılan olarak, Gelişmiş Kurtarma Yardımcısı en son özellik sürümü derlemeyi indirmek için ayarlanır. En son özellik sürümü hakkında bilgi edinmek için [bkz. HoloLens 2 sürüm notları.](hololens-release-notes.md) En son HoloLens 2 Tam Flash Güncelleştirme (FFU) paketini Advanced Recovery Companion aracılığıyla cihazınıza ters eğik çizgiyle almak için en son aylık HoloLens 2 görüntüsünü indirin: [https://aka.ms/hololens2download](https://aka.ms/hololens2download) . Bu sürüm, genel kullanıma açık en son derlemedir.
 
-refflash yordamını çalıştırmadan önce, uygulamanın Windows 10 bilgisayarınızda yüklü olduğundan ve çalıştığından emin olun ve cihazı algılamaya hazırlanın. ayrıca HoloLens en az %40 oranında ücretlendirildiğinden emin olun.
+Reflash yordamına başlamadan önce, uygulamanın bilgisayarınızda yüklü ve Windows 10 ve cihazı algılamaya hazır olduğundan emin olun. Ayrıca, HoloLens en az %40 ücrete tabi olduğundan emin olmak.
 
-![HoloLens 2 temiz kırflash ekran görüntüsü.](images/ARC1.png)
+![HoloLens 2 temiz ters eğik çizgi ekran.](images/ARC1.png)
 
-### <a name="normal-flashing-procedure"></a>Normal yanıp sönen yordam
+### <a name="normal-flashing-procedure"></a>Normal flashing yordamı
 
-1. HoloLens cihaz çalışırken, daha önce gelişmiş kurtarma yardımcısı uygulamasını açtığınız Windows 10 bilgisayara bağlayın.
+1. Cihaz HoloLens çalışırken, daha önce Gelişmiş Kurtarma Windows 10 uygulamasını açtığınız bilgisayarla bağlantı kurabilirsiniz.
 
-   Cihaz otomatik olarak algılanır ve Gelişmiş kurtarma yardımcı uygulaması kullanıcı arabirimi güncelleştirme işlemini başlatır:
+   Cihaz otomatik olarak algılanır ve Gelişmiş Kurtarma Yardımcı uygulama kullanıcı arabirimi güncelleştirme işlemini başlatacaktır:
 
-   ![HoloLens 2 temiz flash başlangıç ekranı.](images/ARC2.png)
+   ![HoloLens 2 temiz reflash ilk ekranı.](images/ARC2.png)
 
-1. gelişmiş kurtarma yardımcı uygulama kullanıcı arabiriminde HoloLens 2 cihazını seçin ve yönergeleri izleyerek, bildirimi tamamlayın.
+1. Gelişmiş HoloLens Yardımcı uygulama kullanıcı arabiriminde HoloLens 2 cihazı seçin ve ters eğik çizgiyi tamamlamak için yönergeleri izleyin.
 
-### <a name="manual-flashing-mode-procedure"></a>El ile yanıp sönen mod yordamı
+### <a name="manual-flashing-mode-procedure"></a>El ile flashing modu yordamı
 
-Şu durumlarda cihazı kurtarma moduna almanız gerekebilir:
+Aşağıdakiler için cihazı kurtarma moduna alasınız:
 
-- HoloLens 2 doğru başlatılmaz
-- Gelişmiş kurtarma Yardımcısı cihazı algılayamıyor
-- Yalnızca tek bir kullanıcısı olan bir cihaz için parolayı/PIN kodunu artık bilemezsiniz
+- HoloLens 2 düzgün başlat
+- Gelişmiş Kurtarma Yardımcı cihazı algılayamaz
+- Artık yalnızca tek bir kullanıcısı olan bir cihazın parolasını/PIN'ini bilmiyorsanız
 
-1. Cihazın güç kaynağı veya konak bılgısayar bağlantısını kesmek için Type-C kablosunu çıkarın.
+1. Cihazın güç kaynağından veya konak pc'den bağlantısını kesmek için Type-C kablosunu çıkarın.
 
-2. 15 saniye boyunca **Güç** düğmesine basın ve basılı tutun. Tüm LED 'Leri kapatması gerekir.
+2. Güç düğmesine 15 **saniye** basılı tutun. Tüm LED'ler kapalıdır.
 
-3. **Birim yukarı** düğmesine basarken, cihazı başlatmak için **Güç** düğmesine basın ve bırakın. 15 saniye bekleyin ve ardından **birim yukarı** düğmesini serbest bırakın. Yalnızca beş LED 'in ortasının ışığı açılır.
+3. Ses yukarı **düğmesine basarken,** cihazı başlatmak için **güç** düğmesine basın ve bırakın. 15 saniye bekleyin ve ardından birimi **yukarı bırakın.** Yalnızca beş LED'in ortadaki LED ışığı yanacak.
 
-4. cihazı ana bilgisayara Bağlan ve Device Manager açın. (Windows 10 için **Windows** tuşuna ve sonra **X** tuşuna basın ve ardından **Device Manager**' yı seçin.) aşağıdaki görüntüde gösterildiği gibi cihazın Microsoft HoloLens doğru şekilde numaralandırdığından emin olun:
+4. Bağlan konak bilgisayara bağlayın ve Cihaz Yöneticisi'ni açın. (Windows 10 tuşuna ve **Windows** **X** tuşuna basın ve Ardından Cihaz **Yöneticisi'ni** seçin.) Aşağıdaki görüntüde gösterildiği gibi cihazın doğru şekilde Microsoft HoloLens emin olun:
 
    ![HoloLens 2 MicrosoftHoloLensRecovery.](images/MicrosoftHoloLensRecovery.png)
 
-   Cihaz otomatik olarak algılanır ve Gelişmiş kurtarma yardımcı uygulaması kullanıcı arabirimi güncelleştirme işlemini başlatır:
+   Cihaz otomatik olarak algılanır ve Gelişmiş Kurtarma Yardımcı uygulama kullanıcı arabirimi güncelleştirme işlemini başlatacaktır:
 
-   ![HoloLens 2 temiz kırflash ekranı.](images/ARC2.png)
+   ![HoloLens 2 temiz reflash ekranı.](images/ARC2.png)
 
-6. gelişmiş kurtarma yardımcı uygulama kullanıcı arabiriminde HoloLens 2 cihazını seçin ve ardından yönergeleri izleyerek refflash 'u tamamlayın.
+6. Gelişmiş HoloLens Yardımcı uygulama kullanıcı arabiriminde 2. kullanıcı arabirimini seçin ve ardından yönergeleri izleyerek ters eğik çizgiyi uygulayın.
 
-## <a name="troubleshoot-advanced-recovery-companion"></a>Gelişmiş kurtarma Yardımcısı sorunlarını giderme
+## <a name="troubleshoot-advanced-recovery-companion"></a>Gelişmiş Kurtarma Yardımcı sorunlarını giderme
 
-1. Flash 'ı denemeden önce cihazınızın %40 veya daha fazla bir ücret aldığından emin olun.
+1. Flash denemeden önce cihazınızın %40 veya daha fazla ücrete bağlı olduğundan emin olun.
 
-1. Cihazınızın kilidinin açık olup olmadığını denetleyin.
+1. Cihazınızın kilidinin açık olup olduğunu kontrol edin.
 
-1. Cihazınızın hub değil, doğrudan ana bilgisayar bilgisayarına takıldığını kontrol edin.
+1. Cihazınızın hub'a değil doğrudan konak bilgisayara takılı olup olmadığını kontrol edin.
 
-1. cihazınız, evrensel seri veri yolu sürücüleri altında bir HoloLens/HoloLens kurtarma aygıtı olarak gösterilmiyorsa, aşağıdakileri denetleyin:
-    1. **Bağlantı noktaları**, BIR Qualcomm HS-USB cihazı
-    1. QUSB_BULK cihaz olarak **diğer cihazlar**-ana bilgisayarınızda, Hololens algılamak için gereken sürücüler eksiktir. sağ tıklayıp sürücüyü güncelleştir ' i seçin ve sürücüleri çevrimiçi olarak arayın veya [Windows Update ayarlarınızda isteğe bağlı güncelleştirmeleri denetleyin](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/improving-the-update-discoverability-experience/ba-p/1585674). Sürücü indirildikten sonra, ARC onu algılayabilmelidir.
+1. Cihazınız Evrensel Seri Veri Veri HoloLens/HoloLens Kurtarma cihazı olarak görünmüyorsa şunları kontrol edin:
+    1. **Bağlantı** noktaları, Qualcomm HS-USB cihazı olarak
+    1. **Diğer Cihazlar**, QUSB_BULK cihaz olarak - konak bilgisayarınızda cihazlarınızı algılamak için gerekli HoloLens. Sağ tıklayın ve Sürücüyü Güncelleştir'i seçin, çevrimiçi sürücü araması yapın veya Güncelleştirme ayarları'Windows [İsteğe Bağlı Güncelleştirmeler'i kontrol edin.](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/improving-the-update-discoverability-experience/ba-p/1585674) Sürücü indirildikten sonra ARC tarafından algılanabilir.
 
-1. ARC cihazınızı algılamazsa, bilgisayarınızda dosya Gezgini aracılığıyla cihazınıza bağlanabildiğinizden emin olun. Bunu yaparsanız;
+1. ARC cihazınızı algılamazsa, bilgisayarınıza bağlanarak cihazınıza bağlana Dosya Gezgini emin olun. Bunu yoksa;
 
-    1. Cihazınızın bu bağlantıyı devre dışı bırakan USB ilkeleri olabilir. Öyleyse, [El Ile yanıp sönen modu](hololens-recovery.md#manual-flashing-mode-procedure)deneyin.
-    2. İlke yoksa, farklı bir USB kablosu deneyin.
+    1. Cihazınızın bağlantıyı devre dışı bırakan USB ilkeleri olabilir. Öyleyse, El İle [Yanıp Sönme modunu deneyin.](hololens-recovery.md#manual-flashing-mode-procedure)
+    2. İlke yoksa farklı bir USB kablosu deneyin.
 
-1. Cihazınızın [1-3-5 yönlü bir model GÖRÜNTÜLEMEMIŞ](hololens2-setup.md#lights-to-indicate-problems)olduğunu denetleyin.
+1. Cihazınızın [1-3-5-LED deseni görüntülemez.](hololens2-setup.md#lights-to-indicate-problems)
 
-## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazasını kullanmadan YAYı indirin
+## <a name="download-arc-without-using-the-app-store"></a>Uygulama mağazalarını kullanmadan ARC'ı indirme
 
-bt ortamı Windows mağaza uygulamasının kullanımını engelliyorsa veya perakende mağazası 'na erişimi sınırlayıp, bt yöneticisi bu uygulamayı "çevrimdışı" bir dağıtım yolu aracılığıyla kullanılabilir hale getirir.
+IT ortamı, Windows Store uygulamasının kullanımını önlese veya perakende mağazasına erişimi sınırlarsa, IT yöneticisi bu uygulamayı bir "çevrimdışı" dağıtım yolu aracılığıyla kullanılabilir hale getirmesini sağlar.
 
  >[!NOTE]
- > - bt yöneticileri ayrıca bu uygulamayı System Center Configuration Manager (SCCM) veya ıntune aracılığıyla dağıtabilir.
- > - Bu kılavuz, Gelişmiş kurtarma Yardımcısı 'na odaklanmaktadır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
+ > - AYRıCA, BU uygulamayı hem System Center Configuration Manager (SCCM) hem de Intune üzerinden dağıtabilirsiniz.
+ > - Bu kılavuz Gelişmiş Kurtarma Yardımcı'ya odaklanır, ancak işlem diğer "çevrimdışı" uygulamalar için de kullanılabilir.
 
 Dağıtım yolunu etkinleştirmek için şu adımları izleyin:
 
-1. [İş İçin Microsoft Store](https://businessstore.microsoft.com) gidin ve bir Azure Active Directory kimliği kullanarak oturum açın.
+1. [İş İçin Microsoft Store'a](https://businessstore.microsoft.com) gidin ve Azure Active Directory oturum açma.
 
-1. **yönet – Ayarlar** sayfasına gidin. **Alışveriş deneyimi** altında **çevrimdışı uygulamaları göster** ' i açın.
+1. Yönet **– Ayarlar.** Alışveriş deneyimi altında Çevrimdışı uygulamaları **göster'i açma.** 
 
-1. **Grubum için mağaza**' a gidin ve [**_Gelişmiş kurtarma Yardımcısı_**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)' nı arayın.
+1. Grubum **için alışverişe gidin ve** Advanced Recovery Companion araması yapmak için [**_._**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8)
 
-1. **Lisans türünü** **_çevrimdışı_*_ olarak değiştirin ve _ Yönet ' i seçin***.
+1. Lisans **Türü'sini** **_çevrimdışı _ olarak_*değiştirerek _ Yönet'i* seçin.**
 
-1. **Çevrimdışı kullanım için paketi indirin** altında Ikinci mavi **İndir** düğmesini seçin. Dosya uzantısının *. appxdemeti* olduğundan emin olun.
+1. Paketi **çevrimdışı kullanım için indir'in altında** ikinci mavi İndir **düğmesini** seçin. Dosya uzantısının *.appxbundle olduğundan emin olun.*
 
-    - Bu aşamada, masaüstü BILGISAYARıN internet erişimi varsa, uygulamayı yüklemek için pakete çift tıklayın.
+    - Bu aşamada, Masaüstü bilgisayar internet erişimine sahipse, uygulamayı yüklemek için pakete çift tıklayın.
 
-    - Hedef bılgısayarda internet bağlantısı yoksa, şu adımları izleyin:
-       1. Kodlanamayan lisansı seçin ve ardından **Lisans oluştur**' u seçin.
-       2. **Gerekli çerçeveler** altında **İndir**' i seçin.
-       3. Paketi bağımlılık ve lisansa uygulamak için DıSM 'yi kullanın. Yönetici komut isteminden aşağıdaki komutu çalıştırın:
+    - Hedef bilgisayar İnternet bağlantısına sahip değilse şu adımları izleyin:
+       1. Kodlanmamış lisansı seçin ve ardından Lisans **oluştur'a tıklayın.**
+       2. Gerekli **Çerçeveler altında** İndir'i **seçin.**
+       3. Paketi bağımlılık ve lisansla uygulamak için DISM kullanın. Yönetici komut isteminde aşağıdaki komutu çalıştırın:
 
           ```console
           C:\WINDOWS\system32>dism /online /Add-ProvisionedAppxPackage /PackagePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_1.19050.1301.0_neutral_~_8wekyb3d8bbwe.appxbundle" /DependencyPackagePath:"C:\ARCoffline\Microsoft.VCLibs.140.00.UWPDesktop_14.0.27629.0_x86__8wekyb3d8bbwe.appx" /LicensePath:"C:\ARCoffline\Microsoft.AdvancedRecoveryCompanion_8wekyb3d8bbwe_f72ce112-dd2e-d771-8827-9cbcbf89f8b5.xml" /Region:all
           ```
           > [!NOTE]
-          > Bu kod örnekteki sürüm numarası, mevcut olan sürümle eşleşmeyebilir. Ayrıca, örnekteki farklı bir indirme konumu seçmiş olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
+          > Bu kod örneğinde yer alan sürüm numarası şu anda kullanılabilir olan sürümle eşleşmez. Ayrıca örnekten farklı bir indirme konumu seçmiş de olabilirsiniz. Gerektiğinde komutta herhangi bir değişiklik yapın.
 
 > [!TIP]
-> Çevrimdışı bir FFU yüklemek için Gelişmiş kurtarma Yardımcısı kullanmayı planlarken, Flash görüntünüzü indirmek faydalı olabilir. [**HoloLens 2 için geçerli görüntüyü indirin**](https://aka.ms/hololens2download).
+> Çevrimdışı FFU yüklemek için Gelişmiş Kurtarma Yardımcı'sı kullanmayı planlasanız, flash görüntü indirebilirsiniz. [**HoloLens 2 için geçerli görüntüyü indirin.**](https://aka.ms/hololens2download)
 
 Diğer kaynaklar:
 
 - [Çevrimdışı uygulamaları dağıtma](/microsoft-store/distribute-offline-apps) 
-- [DıSM uygulama paketi (. appx veya. appxdemeti) komut satırı seçeneklerini sunma](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)
+- [DISM uygulama paketi (.appx veya .appxbundle) hizmet komut satırı seçenekleri](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options)

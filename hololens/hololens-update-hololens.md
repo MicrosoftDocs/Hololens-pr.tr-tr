@@ -1,7 +1,7 @@
 ---
-title: güncelleştirme HoloLens 2
-description: HoloLens yapı numaranızı nasıl denetleyeceğinizi, cihaz güncelleştirmeleriyle güncel tutmaya, ınsiders programına katılmayı ve güncelleştirmeleri geri almayı öğrenin.
-keywords: nasıl yapılır, güncelleştirme, geri alma, HoloLens, denetimi oluşturma, derleme numarası
+title: Güncelleştirme HoloLens 2
+description: Derleme numaranızı denetlemeyi, HoloLens güncelleştirmeleri takip etmeyi, Insiders Programına katılmayı ve güncelleştirmeleri geri almayı öğrenin.
+keywords: nasıl güncelleştirmesi, geri alma, geri alma, HoloLens, derlemeyi denetleme, derleme numarası
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
@@ -14,87 +14,91 @@ ms.reviewer: ''
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 49036135ba13a93d2e8be97a7f3a95d50785c5c5
-ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
+ms.openlocfilehash: 080fb184c7eca3fdb978e860a29764f5012a179e
+ms.sourcegitcommit: f105a770814ccd61e88b650448902a03c95b7a3c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130034272"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151691"
 ---
-# <a name="update-hololens-2"></a>güncelleştirme HoloLens 2
+# <a name="update-hololens-2"></a>Güncelleştirme HoloLens 2
 
 ## <a name="overview"></a>Genel Bakış
 
-Her zaman yeni özellikler, hata düzeltmeleri ve güvenlik güncelleştirmeleri üzerinde çalışıyoruz. Bu güncelleştirmeler hazırlandığı zaman size bildirilir.
+Her zaman yeni özellikler, hata düzeltmeleri ve güvenlik güncelleştirmeleri üzerinde çalışıyoruz. Bu güncelleştirmeler hazır olduğunda size bildirilecek.
 
-tercihinize bağlı olarak HoloLens, Internet 'e bağlı her seferinde ve hatta bekleme durumunda sistem güncelleştirmelerini otomatik olarak indirip yükler.
+Tercihlerinize bağlı olarak, HoloLens, İnternet'e bağlı ve hatta beklemede olduğunda sistem güncelleştirmelerini otomatik olarak indirir ve yükleyebilir.
 
-HoloLens her zaman güncelleştirildiğinden emin olmak için, onunla birlikte gelen cihazınızın şarj cihazına ile prize takılı bırakın. HoloLens internet 'e bağlanmasını da istiyorsunuz. Bu şekilde, sistem güncelleştirmeleri otomatik olarak indirilir ve yüklenir. 
+Cihazınızın her HoloLens güncelleştirilmiş olduğundan emin olmak için, yanında gelen aleti takılı bırakın. Ayrıca, ağ HoloLens İnternet'e bağlanmalarını da istiyor. Bu şekilde sistem güncelleştirmeleri otomatik olarak indirilir ve yüklenir. 
 
-Windows Update hizmeti ile, hangi cihazların hangi cihazlarda hangilerinin alınacağını gösteren güncelleştirme işleminin birden çok yönünü denetlersiniz. bu denetim, test için HoloLens cihazların bir alt kümesine yönelik güncelleştirmeleri kullanıma sunabileceğinden yararlıdır. Ardından, kalan güncelleştirmelere yönelik güncelleştirmeleri alın. Ya da farklı güncelleştirme türleri için farklı güncelleştirme zamanlamaları tanımlayabilirsiniz.
+Güncelleştirme Windows ile, güncelleştirme işleminin hangi cihazların hangi güncelleştirmeleri hangi zamanda alaları olduğu gibi birden çok yönü denetlemeniz gerekir. Bu denetim, güncelleştirmeleri test etmek için belirli cihazların bir alt kümesine HoloLens yardımcı olur. Ardından, kalanlara güncelleştirmeleri dışarı alın. Veya farklı güncelleştirme türleri için farklı güncelleştirme zamanlamaları tanımlayabilirsiniz.
 
 ## <a name="types-of-updates"></a>Güncelleştirme türleri
 
-HoloLens için, iki güncelleştirme türünü otomatik olarak yönetebilirsiniz.
+Daha HoloLens için iki tür güncelleştirmeyi otomatik olarak yönetabilirsiniz.
 
-- Özellik güncelleştirmeleri: yılda iki kez serbest bırakıldı.
-- Kalite güncelleştirmeleri: kritik güvenlik güncelleştirmelerini dahil edin. Aylık olarak veya gerektiği şekilde serbest bırakılıyordu.
+- Özellik güncelleştirmeleri: yılda iki kez yayınlandı.
+- Kalite güncelleştirmeleri: Kritik güvenlik güncelleştirmelerini dahil edin. Bunlar aylık olarak veya gerektiğinde yayımlar.
 
- / Güncelleştirmeleri taramayı, indirmeyi ve yüklemeyi yönetmek için **allowupdate** güncelleştirme ' yi kullanın. 
+Güncelleştirmeleri  / tarama, indirme ve yükleme işlemini yönetmek için **AllowAutoUpdate** Güncelleştirmesini kullanın. 
 
 ## <a name="scheduling-updates"></a>Güncelleştirmeleri zamanlama
 
-Ayrıca, bir güncelleştirme zamanlaması da ayarlayabilirsiniz. Belirli bir günde veya her gün, belirli bir zamanda olabilir. Örneğin, 5 p.m. veya etkin saatlerin dışında.
+Ayrıca bir güncelleştirme zamanlaması da ayarlayın. Belirli bir günde veya her gün belirli bir zamanda olabilir. Örneğin, saat 17:00'de veya etkin saatlerin dışında.
 
-Son olarak, güncelleştirme stratejinizi planlamaya yönelik birkaç sözcük. Güncelleştirme erteleme 'yi destekliyoruz, bu nedenle Microsoft 'un bu güncelleştirmeyi cihazlara yüklemek için bir güncelleştirme yayınladıktan sonra ne kadar bekleneceğini seçebilirsiniz.
+Son olarak, güncelleştirme stratejinizi planlama hakkında birkaç sözcük. Güncelleştirme ertelemelerini destekliyoruz, bu nedenle Microsoft'un bu güncelleştirmeyi cihazlara yüklemek için bir güncelleştirmeyi yayından sonra ne kadar bekleyeceğine karar ve ardından siz karar ve verirsiniz.
 
-Bazen bir şirket her şeyin çalıştığından emin olmak için tüm yeni özellikleri denemek ve destek ekibinin hazırlanabilmesi için yeni güncelleştirmeler hakkında bilgi sahibi olmaları gerekir. Bunların tümünün iyi olduğunu onayladıktan sonra, tüm şirketteki güncelleştirmeleri kullanıma sunırlar. Güncelleştirme halkaları olarak bilinen farklı erteleme ilkeleriyle cihazlarınızın alt kümelerini ilişkilendirerek, kuruluşunuz için bir güncelleştirme dağıtımı stratejisini koordine edebilirsiniz.
+Bazen bir şirket, her şeyin çalışır olduğundan emin olmak için önce tüm yeni özellikleri denemek ve destek ekibinin hazırlıklı olmak için yeni güncelleştirmelere aşina olmak için bu özellikleri denemeyi dener. Her şey iyi olduğunu onaylandıktan sonra güncelleştirmeleri şirketin tamamına iletir. Cihaz kümelerinizi farklı erteleme ilkeleriyle (güncelleştirme halkaları olarak bilinir) bağ bağarak, bir güncelleştirmenin kuruluşa yönelik bir rollout stratejisini koordine edin.
 
 ## <a name="hololens-update-tools"></a>HoloLens güncelleştirme araçları
 
-bu bölüm, için HoloLens araçları konusunda size kılavuzluk eder:
+Bu bölüm, şu araçlar için HoloLens adım adım size yol sunar:
 
-- Güncelleştirmeler denetleniyor
-- HoloLens el ile güncelleştirme
-- geçerli işletim sistemi sürümünüzü görüntüleme (derleme numarası)
+- güncelleştirmeleri denetleme
+- el ile güncelleştirme HoloLens
+- geçerli işletim sistemi sürümüm (derleme numarası) görüntüleme
 - daha eski bir güncelleştirmeye geri dönme
 
-### <a name="check-for-updates-and-manually-update"></a>Güncelleştirmeleri denetle ve el ile Güncelleştir
+### <a name="check-for-updates-and-manually-update"></a>Güncelleştirmeleri denetleme ve el ile güncelleştirme
 
-Ayarlar ' da dilediğiniz zaman güncelleştirmeleri denetleyebilirsiniz.  Kullanılabilir güncelleştirmeleri görmek ve yeni güncelleştirmeleri denetlemek için:
+Ayarlarda dilediğiniz zaman güncelleştirmeleri kontrol edebilirsiniz.  Kullanılabilir güncelleştirmeleri görmek ve yeni güncelleştirmeleri kontrol etmek için:
 
 1. **Ayarlar** uygulamasını başlatın.
-1. **& güvenlik**  >  **Windows Update** güncelleştirme bölümüne gidin.
+1. Update **& Security**  >  **Windows Update 'e gidin.**
 1. **Güncelleştirmeleri denetle**’yi seçin.
 
-Bir güncelleştirme varsa, yeni sürümü indirmeye başlayacaktır. İndirme işlemi tamamlandıktan sonra yüklemeyi tetiklemek için **Şimdi yeniden Başlat** düğmesini seçin. Cihazınız %40 ' in altında ve takılı değilse, yeniden başlatma güncelleştirmeyi yüklemeye başlamacaktır.
+Bir güncelleştirme varsa, yeni sürümü indirmeye başlar. İndirme işlemi tamamlandıktan sonra, yüklemeyi **tetiklemek için** Şimdi Yeniden Başlat düğmesini seçin. Cihazınız %40'ın altında ve takılı değilse, yeniden başlatma güncelleştirmeyi yüklemeye başlamaz.
 
-HoloLens güncelleştirmeyi yüklerken, dönen gears ve ilerleme göstergesi görüntülenir. bu süre boyunca HoloLens kapatmayın. Yüklemeyi tamamladıktan sonra otomatik olarak yeniden başlatılır.
+Güncelleştirme HoloLens yüklerken dönen dişliler ve ilerleme göstergesi görüntülenir. Bu süre boyunca HoloLens kapatabilirsiniz. Yükleme tamamlandıktan sonra otomatik olarak yeniden başlatılır.
 
-HoloLens tek seferde bir güncelleştirme uygular.  HoloLens en son arka planda birden çok sürümdaysanız, tam olarak güncel olması için güncelleştirme işlemini birden çok kez çalıştırmanız gerekebilir.
+HoloLens bir güncelleştirme uygular.  En HoloLens sürümün arkasında birden fazla sürüm varsa, güncelleştirme işlemini tamamen güncel hale almak için birden çok kez çalıştırmanız gerekir.
 
-### <a name="check-your-operating-system-version-build-number"></a>İşletim sistemi sürümünüzü denetleyin (derleme numarası)
+### <a name="check-your-operating-system-version-build-number"></a>İşletim sistemi sürümünizi (derleme numarası) denetleme
 
-**Ayarlar** açıp **sistem** hakkında ' yı seçerek sistem sürüm numarasını (derleme numarası) doğrulayabilirsiniz  >  .
+Sistem sürüm numarasını (derleme numarası) doğrulamak için şu Ayarlar **Sistem** **Hakkında'yi**  >  **seçin.**
 
-### <a name="go-back-to-a-previous-version"></a>Önceki bir sürüme geri dön
+### <a name="go-back-to-a-previous-version"></a>Geri dön önceki bir sürüme
 
-bazı durumlarda, HoloLens yazılımının önceki bir sürümüne geri dönmek isteyebilirsiniz. Önerilen adımlar şunlardır:
+Bazı durumlarda, HoloLens yazılımının önceki bir sürümüne dönmek HoloLens. Önerilen adımlar:
 
-1. Sorununuzu giderip çözebilecekleri hakkında bilgi için desteğe başvurun.
-    1. **Isteğe bağlı** veya **tam** telemetri etkinleştirildiğinden emin olun; bu durum, mühendislerin tanılanması için daha fazla işlem yapılabilir ve kolay hale gelir.
-    1. [Dosyada geri bildirimde](hololens-feedback.md) bulunmak mümkün olduğunca açıklayıcı olmalıdır. Bu başlığı izleyin veya hesabınızı destekle paylaşmak için paylaşma özelliğini kullanın.
-    1. [Desteğe](https://aka.ms/hlsupport)başvurun. Sorununuzun önceki bir sürüme dönerek çözülmesi gereken bir sorun varsa, cihazınızı Flash için sizin için bir tane sağlayabilirsiniz.
+1. Sorunlarınızı düzeltebilirler mi diye görmek için Destek'e başvurun.
+    1. İsteğe **Bağlı** veya **Tam** telemetri'nin etkinleştirildiğinden emin olun. Bu, hatanızı daha eyleme değiştirilebilir ve mühendislerin tanılamasını kolaylaştırır.
+    1. Dosya [Geri Bildirimi'ne](hololens-feedback.md) mümkün olduğunca açıklayıcı olun. Başlığı not alır veya hatanızı Destek ile paylaşabilirsiniz.
+    1. De [destekle iletişime geçin.](https://aka.ms/hlsupport) Sorun önceki bir sürüme dönerek çözülmesi gereken bir sorunsa, cihazınızı yanıp söndürecek FFU'ları sağlar.
 
-1. bu işe çalışmadıysanız, [gelişmiş kurtarma yardımcısı ile HoloLens 2](hololens-recovery.md#clean-reflash-the-device).
+1. Alternatif olarak, Gelişmiş [Kurtarma Yardımcısı ile HoloLens 2'nize ters eğik çizgi HoloLens.](hololens-recovery.md#clean-reflash-the-device)
+    1.  Hangi sürüme flash yapmak istediğinizi seçin: 
+        1.  En son [2 sürümü HoloLens indirebilirsiniz.](https://aka.ms/hololens2download)
+        1.  ARC konakları için varsayılan derlemeyi kullanabilirsiniz.
+        1.  Size sağlanan bir derleme Desteği kullanabilirsiniz.
 
 > [!NOTE]
-> Önceki bir sürüme geri dönmek kişisel dosyalarınızı ve ayarlarını siler.
+> Önceki bir sürüme geri dönmek kişisel dosyalarınızı ve ayarlarınızı siler.
 
-Ayrıca, şu anda yüklü olan yayında kalmak isterseniz, güncelleştirmeleri el ile de [duraklatabilirsiniz](hololens-updates.md#pause-updates-via-device). Bu, mühendisliğe sorunu çözmesi için mühendislik ekibi zamanına verecektir.
+Ayrıca, o anda yüklü olan sürümüne devam etmek için güncelleştirmeleri el ile [duraklatabilirsiniz.](hololens-updates.md#pause-updates-via-device) Bu, Mühendislik Ekibine sorunu çözmesi için zaman ve verecek.
 
-## <a name="windows-insider-program-on-hololens"></a>Windows HoloLens Insider programı
+## <a name="windows-insider-program-on-hololens"></a>Windows Insider Programı üzerinde HoloLens
 
-HoloLens en son özellikleri görmek mi istiyorsunuz?  bu durumda Windows ınsider programına katın; HoloLens yazılım güncelleştirmelerinin önizleme yapılarına genel kullanıma açık olmadan önce erişim alacaksınız.
+HoloLens'daki en son özellikleri görmek HoloLens?  Öyleyse, Windows Insider Programı; Yazılım güncelleştirmelerinin genel erişime açık HoloLens önizleme derlemelerine erişin.
 
-[Microsoft HoloLens için Windows ınsider önizlemesi alın](hololens-insider.md).
+[Microsoft HoloLens için Windows Insider önizlemesini Microsoft HoloLens.](hololens-insider.md)
