@@ -1,6 +1,6 @@
 ---
-title: MDM 'ye HoloLens kaydetme
-description: birden çok cihazın daha kolay yönetilmesi için mobil cihaz yönetimi 'ne (MDM) HoloLens kaydetmeyi öğrenin.
+title: MDM'HoloLens kayıt
+description: Birden çok cihazın daha HoloLens yönetimi için mobil cihaz yönetimine (MDM) nasıl kaydolacaklarını öğrenin.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 2a9b3fca-8370-44ec-8b57-fb98b8d317b0
@@ -14,64 +14,72 @@ manager: ranjibb
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: fa114633afe70a11a180c67fedbd40eb423ece99
-ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
+ms.openlocfilehash: 9f466abe45a1a9ad676f8dd6a94244473c084be7
+ms.sourcegitcommit: 38b5e4d92da6fc5d6a6a2ef875644d6db2cce822
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130034187"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "130202896"
 ---
-# <a name="enroll-hololens-in-mdm"></a>MDM 'ye HoloLens kaydetme
+# <a name="enroll-hololens-in-mdm"></a>MDM'HoloLens kayıt
 
-[Microsoft Intune](/intune/windows-holographic-for-business)gibi çözümleri kullanarak birden çok Microsoft HoloLens cihazı eşzamanlı olarak yönetebilirsiniz. Ayarları yönetebileceksiniz, yüklenecek uygulamaları seçerek kuruluşunuzun ihtiyacı olarak uyarlanmış güvenlik yapılandırması ayarlayabilirsiniz. bkz. [Windows Holographic çalıştıran cihazları Microsoft Intune](/intune/windows-holographic-for-business), [Windows Holographic 'de desteklenen yapılandırma hizmeti sağlayıcılarını (csp)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens)ve [Windows Holographic for Business tarafından desteklenen ilkeleri](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies)yönetme.
+birden çok Microsoft HoloLens cihazları aynı anda yönetmek için [Microsoft Intune.](/intune/windows-holographic-for-business) Ayarları yönetecek, yükecek uygulamaları seçecek ve güvenlik yapılandırmalarını, kuruluş gereksinimlerine göre ayarlayabileceksiniz. Bkz. Windows Holographic çalıştıran cihazları Microsoft Intune ile yönetme, [Windows Holographic'te](/intune/windows-holographic-for-business)desteklenen yapılandırma hizmeti sağlayıcıları [(CSP'ler)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens)ve [Windows Holographic for Business.](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies)
 
 > [!NOTE]
-> VPN, BitLocker ve bilgi noktası modu özellikleri de dahil olmak üzere mobil cihaz yönetimi (MDM) yalnızca [Windows holographic for Business sürümüne yükselttiğinizde](hololens1-upgrade-enterprise.md)kullanılabilir.
+> VPN, Bitlocker ve bilgi noktası modu özellikleri de dahil olmak üzere mobil cihaz yönetimi (MDM), yalnızca [Windows Holographic for Business.](hololens1-upgrade-enterprise.md)
 
 ## <a name="requirements"></a>Gereksinimler
 
- kuruluşunuzun HoloLens cihazları yönetmek için mobil cihaz yönetimi (MDM) ayarlamış olması gerekir. mdm sağlayıcınız Microsoft Intune veya Microsoft MDM apı 'leri kullanan bir 3. taraf sağlayıcı olabilir.
+ Mobil cihazları yönetmek için, Cihaz Yönetimi mobil cihazları (MDM) HoloLens gerekir. MDM sağlayıcınız microsoft Microsoft Intune microsoft MDM API'lerini kullanan üçüncü taraf bir sağlayıcı olabilir.
 
-## <a name="different-ways-to-enroll"></a>Farklı kayıt yolları
+## <a name="different-ways-to-enroll"></a>Kaydetmenin farklı yolları
 
-OOBE ya da oturum açma sonrası seçilen [kimliğin](hololens-identity.md) türüne bağlı olarak farklı kayıt yöntemleri vardır.
+OOBE sırasında veya [oturum](hololens-identity.md) açma sonrası sırasında seçilen kimlik türüne bağlı olarak, farklı kayıt yöntemleri vardır.
 
-- kimlik Azure AD ise, OOBE sırasında ya da **uygulama**  ->  **erişimi iş veya okul**  ->  **Bağlan** düğmesini Ayarlar.
-    - Azure AD 'de, [OTOMATIK MDM kaydı](hololens-enroll-mdm.md#auto-enrollment-in-mdm) yalnızca Azure AD, kayıt URL 'leriyle yapılandırıldıysa oluşur.
+- Kimlik Azure AD ise, OOBE sırasında veya uygulama **Ayarlar Access** İş veya Okul Bağlan  ->    ->   düğmesi.
+    - Azure AD için, [otomatik MDM kaydı](hololens-enroll-mdm.md#auto-enrollment-in-mdm) yalnızca Azure AD kayıt URL'leriyle yapılandırılmışsa gerçekleşir.
 
-- Kimlik Azure AD ise ve cihaz kendisine atanmış belirli yapılandırma profiline sahip Intune MDM sunucusuna önceden kaydedilmişse, Azure AD-Join ve [OTOMATIK MDM kaydı](hololens-enroll-mdm.md#auto-enrollment-in-mdm) OOBE sırasında gerçekleşir.
-    - [19041.1103 + yapılarında](hololens-release-notes.md#windows-holographic-version-2004)bulunan [Autopilot Flow](hololens2-autopilot.md) da denir.
+- Kimlik Azure AD ise ve cihaz, belirli bir yapılandırma profili atanmış intune MDM sunucusuna önceden kaydedilmişse, OOBE sırasında Azure AD-Join ve [otomatik MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) kaydı gerçekleşir.
+    - Autopilot [akışı olarak da adlandırılan](hololens2-autopilot.md) Bu akış [19041.1103+derlemelerde kullanılabilir.](hololens-release-notes.md#windows-holographic-version-2004)
 
 
-- kimlik MSA ise **Ayarlar uygulama**  ->  **erişimi iş veya okul**  ->  **Bağlan** düğmesini kullanarak.
-    - Iş hesabı ekle (AWA) akışı da denir.
-- kimlik yerel kullanıcı ise, **Ayarlar uygulama**  ->  **erişimi iş veya okul**  ->  **kayıt yalnızca cihaz yönetimi bağlantısı '** nı kullanarak.
-    - Saf MDM kayıt akışı da denir.
+- Kimlik MSA ise Uygulama Erişimi **Ayarlar veya** Okul  ->  **Yönetimi düğmesini**  ->  **Bağlan** kullanın.
+    - İş Hesabı Ekle (AWA) akışı olarak da adlandırılan.
+- Kimlik Yerel Kullanıcı ise, Uygulama **Erişimi Ayarlar veya** Okul Kaydı'nın yalnızca cihaz yönetimi  ->    ->  **bağlantısında kullanılarak.**
+    - Saf MDM kayıt akışı olarak da adlandırılan.
 
-cihaz MDM sunucunuza kaydedildikten sonra Ayarlar uygulama cihazın cihaz yönetimine kaydedildiğini yansıtır.
+Cihaz MDM sunucunuza kaydolan Ayarlar uygulama artık cihazın cihaz yönetimine kayded olduğunu yansıtacak.
 
-## <a name="auto-enrollment-in-mdm"></a>MDM 'de otomatik kayıt
+## <a name="auto-enrollment-in-mdm"></a>MDM'de otomatik kayıt
 
-kuruluşunuzun [azure Premium aboneliği](https://azure.microsoft.com/overview/)varsa, kimlik doğrulaması için bir azure ad belirteci kabul eden Azure Active Directory (Azure AD) ve mdm çözümü (şu anda yalnızca Microsoft Intune ve airwatch 'da desteklenir) kullanılıyorsa, bt yöneticiniz azure ad 'yi, kullanıcı azure ad ile oturum açtıktan sonra MDM kaydına otomatik olarak izin verecek şekilde yapılandırabilir hesabı. [Azure AD kaydı 'nı yapılandırmayı öğrenin.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Kurumda bir [Azure Premium](https://azure.microsoft.com/overview/)aboneliği varsa, kimlik doğrulaması için Azure AD belirteci kabul eden bir MDM çözümü (şu anda yalnızca Microsoft Intune ve AirWatch'da desteklemektedir) Azure Active Directory (Azure AD) kullanıyorsa, IT yöneticiniz Azure AD'yi, kullanıcı Azure AD'sinde oturum atıktan sonra MDM kaydına otomatik olarak izin verecek şekilde yapılandırabilirsiniz Hesabı. [Ayrıntılı arka plan bilgileri için Azure AD](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) kaydı ve [MDM ile Azure Active Directory tümleştirmesi](/windows/client-management/mdm/azure-active-directory-integration-with-mdm) yapılandırmayı öğrenin.
 
-Otomatik kayıt etkinleştirildiğinde, ek bir el ile kayıt gerekmez. Kullanıcı bir Azure AD hesabıyla oturum açtığında, ilk çalıştırma deneyimini tamamladıktan sonra cihaz MDM 'ye kaydedilir.
+Otomatik kayıt etkinleştirildiğinde ek el ile kayıt gerekmez. Kullanıcı bir Azure AD hesabıyla oturum açınca, ilk çalıştırma deneyimini tamamladıktan sonra cihaz MDM'ye kaydolacak.
 
-Bir cihaz Azure AD 'ye katıldığında, [cihaz sahibini](security-adminless-os.md#device-owner)kabul eden kişiyi etkileyebilir.
+Bir cihaz Azure AD'ye Katılmış olduğunda, cihaz sahibi olarak kabul [edenleri etkileyebilir.](security-adminless-os.md#device-owner)
 
-## <a name="unenroll-hololens-from-intune"></a>HoloLens kaydını ıntune 'dan kaldırma
+## <a name="unenroll-hololens-from-intune"></a>Intune'HoloLens kaydı silenler
 
-Kayıt yöntemine bağlı olarak, cihazınızın kaydının kaldırılması kullanılamayabilir.
+Kayıt yöntemine bağlı olarak, cihazınızın kaydı silinene kadar kullanılabilir olabilir.
 
-Cihazınız bir Azure AD hesabı veya Autopilot kaydedildiyse, Intune kaydı geri alınamaz. HoloLens azure ad 'den katılmayı veya azure ad kiracısıyla farklı bir şekilde yeniden katmak isterseniz, cihazı [sıfırlamanız/refflash](hololens-recovery.md#restart-the-device) yapmanız gerekir.
+Cihazınız bir Azure AD hesabına veya Autopilot'a kaydedildiyse, Intune'dan kayıttan silinamaz. Azure AD'den HoloLens veya Azure AD kiracılarından farklı bir kiracıya yeniden katılmayı isterseniz cihazı [sıfırlamanız/ters eğik](hololens-recovery.md#restart-the-device) çizgiyle sıfırlamanız gerekir.
 
-Cihazınız, bir iş hesabı veya yalnızca cihaz yönetimine kaydolmuş yerel bir hesaptan eklenen bir MSA hesabından kaydedildiyse, cihazın kaydını geri alabilirsiniz. Başlat menüsü açın ve sonra **uygulama**  ->  **erişimi iş veya okul**  ->  *hesabınız*  ->  **bağlantısını kes** düğmesine Ayarlar seçin.
+Cihazınız iş hesabı ekli bir MSA hesabından veya yalnızca cihaz yönetimine kayıtlı bir Yerel hesaptan kayıtlı ise, cihazın kaydını sebilirsiniz. Uygulama Erişim Başlat menüsü'ı açın Ayarlar **App**  ->  **Access work veya School**  ->  *YourAccount* Disconnect  ->  **düğmesini** seçin.
 
 ## <a name="enrollment-troubleshooting"></a>Kayıt sorunlarını giderme
 
-### <a name="ensure-valid-license-is-assigned-to-the-user"></a>Kullanıcıya geçerli lisansın atandığından emin olun
+### <a name="ensure-device-is-successfully-connected-to-internet-before-attempting-enrollment-post-oobe"></a>OOBE'den sonra kayıt yapmaya çalışmadan önce cihazın İnternet'e başarıyla bağlandığından emin olun
 
-Windows cihaz [kayıt sorunlarını gidermek için Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors) özellikle aşağıdaki bölümlerde yer alarak [cihaz türü kısıtlamalarını denetleyin](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#check-device-type-restrictions) ve [kullanıcıya geçerli bir lisans atayın.](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#assign-a-valid-license-to-the-user)
+Kullanıcı oturum aleni olduktan sonra, cihazda İnternet'e yönelik herhangi bir web sitesine göz atarak İnternet bağlantısı olduğundan emin olun.
 
-### <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>Windows cihazlar için MDM kaydının engellenmediğinden emin olun
+### <a name="ensure-that-azure-active-directory-aad-join-is-not-disabled-in-your-aad-tenant"></a>Kiracınız Azure Active Directory (AAD) birleştirmenin devre dışı AAD emin
 
-kayıt işleminin başarılı olabilmesi için HoloLens cihazlarınızın kaydedebileceği emin olmanız gerekir. HoloLens Windows bir cihaz olarak değerlendirildiğinden, dağıtımınızı engelleyebilen bir kayıt kısıtlaması olmaması gerekir. [Bu kısıtlamalar listesini gözden geçirin](/mem/intune/enrollment/enrollment-restrictions-set) ve cihazlarınızı kaydedeceksiniz emin olun.
+Uygulama [sayfasındaki kullanılabilir seçenekler hakkında](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) bilgi için cihaz ayarlarınızı Azure portal.
+
+### <a name="ensure-valid-license-is-assigned-to-the-user"></a>Kullanıcıya geçerli lisansın atan olduğundan emin olun
+
+Özellikle aşağıdaki [bölümlerde Windows Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors) cihaz Windows sorunlarını giderme( örneğin, Cihaz [](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#check-device-type-restrictions) türü kısıtlamalarını denetleme ve Kullanıcıya geçerli bir lisans [atama) bakın.](/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors#assign-a-valid-license-to-the-user)
+
+### <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>Diğer cihazlarda MDM kaydı engellenmiş Windows olun
+
+Kaydın başarılı olması için cihaz cihazlarınızı kaydede HoloLens gerekir. Bu HoloLens bir Windows kabul edilen bir kayıt kısıtlaması olması gerekir ve bu da dağıtımınızı engelleyebilir. [Bu kısıtlama listesini gözden geçirin](/mem/intune/enrollment/enrollment-restrictions-set) ve cihazlarınızı kaydedesiniz.
