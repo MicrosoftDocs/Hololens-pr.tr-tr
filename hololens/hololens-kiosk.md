@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e856ac74e959743e8d05ea6acf583700a6450373
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: e8f269a3793a5e61eb3eb4b88084a5e4af375ffa
+ms.sourcegitcommit: 73a1555fb8b84f3d20c480282c648d8d800a6c98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126033196"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351728"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>bilgi noktası olarak HoloLens ayarlama
 
@@ -48,8 +48,8 @@ Aşağıdaki tabloda, farklı bilgi noktası modlarında Özellik özellikleri l
 
 ## <a name="key-general-considerations-before-configuring-kiosk-mode"></a>Bilgi noktası modunu yapılandırmadan önce önemli genel konular
 
-1. ortamınızda HoloLens oturum açan kullanıcı hesabı türünü belirleme-HoloLens Azure Active Directory (AAD) hesaplarını, Microsoft hesaplarını (MSA) ve yerel hesapları destekler. Ayrıca, Konuk/ziyaretçi adlı geçici olarak oluşturulan hesaplar da desteklenir (yalnızca AAD 'ye yönelik ekleme cihazları için). [Kullanıcı kimliğini yönetme ve HoloLens için oturum açma](hololens-identity.md)hakkında daha fazla bilgi edinin.
-2. Bilgi noktası modu deneyiminin hedeflerini (herkes, tek bir Kullanıcı, belirli kullanıcılar veya AAD gruplarına üye olan kullanıcılar vb.) belirtir.
+1. ortamınızda HoloLens oturum açan kullanıcı hesabı türünü belirleme-HoloLens Azure Active Directory (AAD) hesaplarını, Microsoft hesaplarını (MSA) ve yerel hesapları destekler. ayrıca, konuk/ziyaretçi adlı geçici olarak oluşturulan hesaplar da desteklenir (yalnızca AAD cihazları için). [Kullanıcı kimliğini yönetme ve HoloLens için oturum açma](hololens-identity.md)hakkında daha fazla bilgi edinin.
+2. bilgi noktası modu deneyiminin hedeflerini (herkes, tek bir kullanıcı, belirli kullanıcılar veya AAD grubu üyesi olan kullanıcılar, vb.) belirtir.
 3. Birden çok uygulama bilgi noktası modu için, başlangıç menüsünde gösterilecek uygulamaları (öğeleri) saptayın. Her uygulama için, [uygulama Kullanıcı MODELI kimliği (AUMıD)](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) gerekecektir.
 4. bilgi noktası modunun, çalışma zamanı sağlama paketleri ya da mobil cihaz yönetimi (MDM) sunucusu aracılığıyla HoloLens uygulanacağını belirleme.
 
@@ -66,7 +66,7 @@ Bilgi noktası modu bir güvenlik yöntemi olarak düşünülmemelidir, ancak ku
 Yalnızca çalışma zamanı sağlama paketlerini kullanmayı planlıyor veya el ile bilgi noktası yapılandırması oluşturmayı planlıyorsanız geçerlidir. Bilgi noktası modu yapılandırması, XML tabanlı hiyerarşik bir yapı kullanır:
 
 - Atanan erişim profili, başlangıç menüsünde bilgi noktası modunda hangi uygulamaların görüntüleneceğini tanımlar. Birden çok profili, daha sonra başvurulabilen aynı XML yapısında tanımlayabilirsiniz.
-- Atanan erişim yapılandırması, bu profilin bir profiline ve hedef kullanıcısına (örneğin, belirli bir kullanıcıya veya AAD grubuna veya ziyaretçiye vb.) başvurur. Kullanım senaryolarınızın karmaşıklığına göre aynı XML yapısında birden çok yapılandırma tanımlayabilirsiniz (aşağıdaki desteklenen senaryolar bölümüne bakın).
+- atanan erişim yapılandırması, bu profilin bir profili ve hedef kullanıcısına (örneğin, belirli bir kullanıcı veya AAD grubu ya da ziyaretçi vb.) başvurur. Kullanım senaryolarınızın karmaşıklığına göre aynı XML yapısında birden çok yapılandırma tanımlayabilirsiniz (aşağıdaki desteklenen senaryolar bölümüne bakın).
 - Daha fazla bilgi edinmek için [atanan](/windows/client-management/mdm/assignedaccess-csp).
 
 ## <a name="supported-scenarios-for-kiosk-mode-based-on-identity-type"></a>Kimlik türünü temel alan bilgi noktası modu için desteklenen senaryolar
@@ -81,7 +81,7 @@ Kopyalama yapıştırmadan önce gerekli olan senaryonuz ve güncelleştirmeniz 
 | **İstenen bilgi noktası deneyimi** | **Önerilen bilgi noktası yapılandırması** | **Yapılandırma yolları**  | **Açıklamalar** |
 | --- | --- | --- | --- |
 | Oturum açan her kullanıcı bilgi noktası deneyimini alır. | [Birden çok uygulama genel atanmış erişim profilini yapılandırma](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Global atanan erişim [20 H2 ve daha yeni derlemeler](hololens-release-notes.md#windows-holographic-version-20h2) gerektirir |
-| Oturum açan belirli bir kullanıcı bilgi noktası deneyimini alır.  | [Belirli bir kullanıcının adını belirterek, tek veya birden çok uygulama tarafından atanan erişim profilini (gerekli olduğu gibi) yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account) | [Aşağıdaki desteklenen seçeneklere bakın.](#steps-in-configuring-kiosk-mode-for-hololens) | Tek uygulama bilgi noktası modu için HoloLens yalnızca yerel kullanıcı hesabı veya MSA hesabı desteklenir. <br> Birden çok uygulama bilgi noktası modu için HoloLens yalnızca MSA hesabı veya AAD hesabı desteklenir. |
+| Oturum açan belirli bir kullanıcı bilgi noktası deneyimini alır.  | [Belirli bir kullanıcının adını belirterek, tek veya birden çok uygulama tarafından atanan erişim profilini (gerekli olduğu gibi) yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account) | [Aşağıdaki desteklenen seçeneklere bakın.](#steps-in-configuring-kiosk-mode-for-hololens) | Tek uygulama bilgi noktası modu için HoloLens yalnızca yerel kullanıcı hesabı veya MSA hesabı desteklenir. <br> birden çok uygulama bilgi noktası modu için, HoloLens yalnızca MSA hesabı veya AAD hesabı desteklenir. |
 
 ### <a name="for-users-who-sign-in-as-aad-account"></a>AAD hesabı olarak oturum açan kullanıcılar için
 
@@ -89,8 +89,8 @@ Kopyalama yapıştırmadan önce gerekli olan senaryonuz ve güncelleştirmeniz 
 | --- | --- | --- | --- |
 | Oturum açan her kullanıcı bilgi noktası deneyimini alır. | [Birden çok uygulama genel atanmış erişim profilini yapılandırma](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Global atanan erişim [20 H2 ve daha yeni derlemeler](hololens-release-notes.md#windows-holographic-version-20h2) gerektirir |
 | Oturum açan her Kullanıcı, belirli kullanıcılar hariç bilgi noktası deneyimini alır. | [Bazı kullanıcıları (cihaz sahipleri olması gereken) dışlayarak birden çok uygulama genel atanmış erişim profilini yapılandırın](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners). | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Global atanan erişim [20 H2 ve daha yeni derlemeler](hololens-release-notes.md#windows-holographic-version-20h2) gerektirir |
-| Her AAD kullanıcısı, bu kullanıcıya özgü ayrı bilgi noktası deneyimi alır. | [Her Kullanıcı için AAD hesap adını belirten atanan erişim yapılandırmasını yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
-| Farklı AAD gruplarındaki kullanıcılar, yalnızca grupları için bilgi noktası modunda deneyim yaşar. | [Her istenen AAD grubu için atanan erişim yapılandırmasını yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • bir kullanıcı oturum açtığında ve HoloLens Internet 'e bağlıyken, bu kullanıcının bilgi noktası yapılandırması var olan bir aad grubunun üyesi olduğu bulunursa, kullanıcı bu aad grubu için bilgi noktası deneyimi yaşar. <br> • [kullanıcı oturum açtığında bir internet yoksa, kullanıcı HoloLens hata modu davranışına karşı çalışır.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Kullanıcı oturum açtığında ve AAD grubu tabanlı bilgi noktası kullanılması gerektiğinde internet kullanılabilirliği garanti edilmediği takdirde, [AADGroupMembershipCacheValidityInDayspolicy kullanmayı göz önünde bulundurun](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). <br> • Oturum açma sırasında AAD gruplarıyla ilgili en iyi deneyim için [AADGroupMembershipCacheValidityInDayspolicy](/hololens/hololens-release-notes#cache-azure-ad-group-membership-for-offline-kiosk) kullanma önerisi |
+| her AAD kullanıcı, bu kullanıcıya özgü ayrı bilgi noktası deneyimi alır. | [AAD hesap adlarını belirten her bir kullanıcı için atanan erişim yapılandırmasını yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
+| farklı AAD gruplarındaki kullanıcılar, yalnızca grupları için bilgi noktası modu deneyimi yaşar. | [her istenen AAD grubu için atanan erişim yapılandırmasını yapılandırın.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-çoklu uygulama](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • bir kullanıcı oturum açtığında ve HoloLens Internet 'e bağlıyken, bu kullanıcının bilgi noktası yapılandırması var olan bir AAD grubunun üyesi olduğu tespit edildiğinde, kullanıcı o AAD grubu için bilgi noktası deneyimi yaşar. <br> • [kullanıcı oturum açtığında bir internet yoksa, kullanıcı HoloLens hata modu davranışına karşı çalışır.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • kullanıcı oturum açtığında ve AAD grup tabanlı bilgi noktası kullanılması gerektiğinde internet kullanılabilirliği garanti edilmediği takdirde, [AADGroupMembershipCacheValidityInDayspolicy kullanmayı düşünün](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). <br> • oturum açma sırasında AAD gruplarıyla ilgili en iyi deneyim için, [AADGroupMembershipCacheValidityInDayspolicy](/hololens/hololens-release-notes#cache-azure-ad-group-membership-for-offline-kiosk) kullanma önerisi |
 | geçici amaçlar için HoloLens kullanması gereken kullanıcılar bilgi noktası deneyimi alın. | [Ziyaretçiler için atanan erişim yapılandırması yapılandırma](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [özel şablon Microsoft Intune](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Çalışma zamanı sağlama-tek uygulama](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • geçici kullanıcı hesabı, oturum açma sırasında HoloLens tarafından otomatik olarak oluşturulur ve geçici kullanıcı oturumu kapattığında kaldırılır. <br> • [Ziyaretçi otomatik oturum açma ilkesini](#how-can-visitor-accounts-automatically-logon-to-kiosk-experience)etkinleştirmeyi düşünün. |
 
 ## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>HoloLens için bilgi noktası modunu yapılandırma adımları
@@ -116,7 +116,7 @@ Aşağıdaki şekilde yapılandırmak için, kullanmak istediğiniz işlemle eş
 
 derlemeler [Windows Holographic, sürüm 21h1](hololens-release-notes.md#windows-holographic-version-21h1) ve sonraki sürümler:
 
-- AAD ve ADD olmayan yapılandırmaların her ikisi de bilgi noktası modları için otomatik oturum açma özellikli ziyaretçi hesaplarını destekler.
+- AAD ve ekleme olmayan yapılandırmaların her ikisi de, bilgi noktası modları için otomatik oturum açma özellikli ziyaretçi hesaplarını destekler.
 
 [!INCLUDE[](includes/kiosk-autologin.md)]
 
@@ -144,7 +144,7 @@ Bilgi noktası modu, bir gerekli sorgu dizesi parametresi ("true" veya "false" d
 Bilgi noktası modu uygulanırken hatalardan karşılaşıldığında, aşağıdaki davranış görünür:
 
 - Windows Holographic ' den önce, 20h2 sürümü HoloLens, Başlat menüsü tüm uygulamaları gösterir.
-- Windows Holographic, sürüm 20H2-bir cihazın bir bilgi noktası yapılandırması varsa ve bu, genel olarak atanmış erişime ve AAD grubu üyesine atanmış erişime sahip ise, AAD grup üyeliğini belirlemek başarısız olursa Kullanıcı "başlangıç bölümünde gösterilmez" menüsünü görür.
+- Windows Holographic, sürüm 20h2-bir cihazın bir bilgi noktası yapılandırması varsa ve bu, hem genel atanan erişim hem de AAD grup üyesi tarafından atanan erişim ' in bir birleşimi olan AAD grup üyeliğini belirlemek başarısız olursa, kullanıcı "başlangıç bölümünde gösterilmez
 
     ![Ne zaman bilgi noktası modunun başarısız olduğunu anlamak için görüntü görüntülenir.](images/hololens-kiosk-failure-behavior.png )
 
@@ -154,7 +154,9 @@ Bilgi noktası modu uygulanırken hatalardan karşılaşıldığında, aşağıd
 
 - Uygulamanın AUMıD 'nin doğru şekilde belirtildiğinden ve sürüm içermediğinden emin olun. örnekler için gelen kutusu uygulamalarına yönelik [HoloLens aumıds](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) bölümüne bakın.
 - Uygulamanın bu kullanıcı için cihazda yüklü olduğundan emin olun.
-- Bilgi noktası yapılandırması AAD gruplarını temel alıyorsa, AAD kullanıcısı oturum açtığında internet bağlantısının mevcut olduğundan emin olun. İsterseniz [Mixedreality/AADGroupMembershipCacheValidityInDays](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-aadgroupmembershipcachevalidityindays) ilkesini yapılandırıp bu, internet olmadan da çalışabilir.
+- bilgi noktası yapılandırması AAD grupları temel alıyorsa, lütfen AAD kullanıcı oturum açtığında internet bağlantısı bulunduğundan emin olun. İsterseniz [Mixedreality/AADGroupMembershipCacheValidityInDays](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-aadgroupmembershipcachevalidityindays) ilkesini yapılandırıp bu, internet olmadan da çalışabilir.
+
+XML atanmış erişim yapılandırması oluşturmak için kullanıldıysa (çalışma zamanı sağlama veya Intune Custom-OMA URI aracılığıyla), lütfen XML 'nin herhangi bir Web tarayıcısında veya XML düzenleyicisinde açarak doğru biçimlendirildiğinden emin olun. İyi biçimlendirilmiş ve geçerli şablonlar için [bilgi noktası XML kodu örneklerine](hololens-kiosk-reference.md#kiosk-xml-code-samples) bakın.
 
 ### <a name="issue---building-a-package-with-kiosk-mode-failed"></a>Sorun-bilgi noktası moduna sahip bir paket oluşturma başarısız oldu
 
@@ -185,13 +187,14 @@ HoloLens 'te sağlama paketi uygulanırken hata gösterilir
 1. çalışma zamanı sağlama paketinin mevcut olduğu Windows Configuration Designer projesinin bulunduğu klasöre gidin.
 1. ICD. log ' i açın ve sağlama paketini oluştururken günlükte hata olmadığından emin olun. Bazı hatalar derleme sırasında gösterilmiyor, ancak hala ICD. log dosyasında günlüğe kaydediliyor
 
-### <a name="issue--multiple-app-assigned-access-to-aad-group-does-not-work"></a>Sorun: AAD grubuna birden çok uygulama atanmış erişim çalışmıyor
+### <a name="issue--multiple-app-assigned-access-to-aad-group-does-not-work"></a>sorun: AAD grubuna birden çok uygulama atanmış erişim çalışmıyor
 
 **Belirtiler**
 
-AAD Kullanıcı oturum açtığında, cihaz bilgi noktası moduna geçmiyor
+AAD kullanıcı oturumu açma sırasında cihaz beklenen bilgi noktası moduna geçmemektedir.
 
 **Sorun giderme adımları**
 
-- Atanan erişim yapılandırması XML ' nda, oturum açan kullanıcının bir üyesi olduğu AAD grubunun GUID 'sinin, AAD kullanıcısının GUID 'SI değil, kullanıldığını ve kullanılacağını onaylayın.
-- Intune portalında AAD kullanıcısının hedeflenen AAD grubunun üyesi olarak gösterildiğini doğrulayın.
+- atanan erişim yapılandırması XML ' nda, oturum açan kullanıcının bir üyesi olduğu AAD grubunun guıd 'sinin, AAD kullanıcının guıd 'si değil, kullanıldığını ve kullanılacağını onaylayın.
+- ıntune portalında AAD kullanıcının gerçekten hedeflenen AAD grubunun üyesi olarak gösterildiğini doğrulayın.
+- Yalnızca Intune için, cihazın uyumlu olarak gösterildiğini doğrulayın. Daha fazla bilgi için [cihaz uyumluluk başvurusuna](/mem/intune/protect/device-compliance-get-started) bakın.

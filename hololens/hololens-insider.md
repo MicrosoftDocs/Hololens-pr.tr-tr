@@ -11,17 +11,17 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 10/12/2021
+ms.date: 10/19/2021
 ms.reviewer: ''
 manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 080eb5949bc80d1ce922d57f099c375668f5633f
-ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
+ms.openlocfilehash: 382c979138068ab1d9682ee4e84831accc9e4553
+ms.sourcegitcommit: 73a1555fb8b84f3d20c480282c648d8d800a6c98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129924351"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351664"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Microsoft HoloLens için Insider önizlemesi
 
@@ -29,7 +29,26 @@ HoloLens için en son Insider Preview yapılarına hoş geldiniz! [Başlamak ve 
 
 ## <a name="windows-insider-release-notes"></a>Windows Insider sürüm notları
 
-Son Insider özelliklerimizin herkese açık bir şekilde gittiğinden heyecanlıyız! Bu bilgileri öğrenmek isterseniz, lütfen [sürüm notları sayfasına](hololens-release-notes.md) göz atın
+HoloLens için yenilikler ve ufuk HoloLens yaklaşan bu yeni güncelleştirmelere göz atın!
+
+### <a name="colorblind-mode"></a>Colorblind modu
+
+Insider Build 20348,1463 ' ye eklendi
+
+colorblind modu, HoloLens daha erişilebilir hale getiren harika bir özelliktir. yeni colorblind modu, Ayarlar uygulamada **Ayarlar**  ->  **erişim kolaylığı**  ->  **renk filtreleri** altında bulunabilir. Birkaç yeni filtre kullanılabilir. Mevcut filtrelerin bazılarına ilişkin görsel bir örnek aşağıda verilmiştir.
+
+| Kapalı | Gri tona dönüştürme | Tritanopia |
+|-----|-----------|------------|
+| ![Renk filtresi kapalı](images/colorblind-off.png)   | ![Renk filtresi gri tona dönüştürme](images/colorblind-greyscale.png)         | ![Renk filtresi tritanopia](images/colorblind-tritanopia.png)          |
+
+### <a name="fixes-and-improvements"></a>Düzeltmeler ve geliştirmeler
+
+- [Her gücün yüzde 18 ' e ulaştığı bir bilinen sorun düzeltildi, cihaz aniden otomatik olarak kapanır](hololens-troubleshooting.md#every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically).
+- Aşağı yönde geçiş yaparken platform modunu taşımaya yönelik geliştirmeler.
+- Güncelleştirme iletişim kutularının çevresinde bir sorun düzeltildi.
+- gelen kutusu Microsoft Edge tarayıcı sürümü güncelleştirildi.
+- İsteğe bağlı tanılama verilerinin değiştirilmesindeki bir sorun düzeltildi, yeniden başlatmadan sonra telemetri ayarları sayfasında seçilen ayar kalıcı değil.
+- QR kodlarının cihaza göre 45 derecelik bir açıda döndürüldükleri zaman tanınmamış olması sorunu düzeltildi.
 
 ## <a name="start-receiving-insider-builds"></a>Insider derlemelerini almaya başlayın
 

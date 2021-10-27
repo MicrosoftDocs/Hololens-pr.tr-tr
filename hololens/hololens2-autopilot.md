@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: Autopilot
 manager: sekerawa
-ms.openlocfilehash: b343e4dc6e217319574efa068cd72c5f5a8675a8
-ms.sourcegitcommit: 38b5e4d92da6fc5d6a6a2ef875644d6db2cce822
+ms.openlocfilehash: 5ca7ad762e0fdbe448788926e7a6492cb7f2523d
+ms.sourcegitcommit: 73a1555fb8b84f3d20c480282c648d8d800a6c98
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "130202922"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351711"
 ---
 # <a name="windows-autopilot-for-hololens-2"></a>HoloLens 2 için Windows Autopilot
 
@@ -134,167 +134,167 @@ Donanım karmasını cihazdan alabilirsiniz. Cihaz, OOBE işlemi sırasında bir
    > [!NOTE]  
    > .zip dosyası hemen kullanılamıyor olabilir. Dosya henüz hazırsanız belgeler klasöründe bir HoloLensDiagnostics. temp dosyası görebilirsiniz. Dosya listesini güncelleştirmek için pencereyi yenileyin.
 
-1. Dosyanın içeriğini AutopilotDiagnostics.zip.
+1. AutopilotDiagnostics.zip dosyasının içeriğini ayıklayın.
 
-1. Ayıklanan dosyalarda, "DeviceHash" dosya adı ön ekine sahip CSV dosyasını bulun. Bu dosyayı daha sonra erişebilirsiniz bilgisayarın bir sürücüsüne kopyalayın.  
+1. Ayıklanan dosyalarda, "DeviceHash" dosya adı ön ekine sahip CSV dosyasını bulun. Bu dosyayı, daha sonra erişebileceğiniz bilgisayardaki bir sürücüye kopyalayın.  
 
    > [!IMPORTANT]  
-   > CSV dosyasındaki veriler aşağıdaki üst bilgi ve satır biçimini kullanmıştır:
+   > CSV dosyasındaki veriler aşağıdaki üstbilgiyi ve satır biçimini kullanmalıdır:
    >
    > ```
    > Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User <serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>
    >```
 
-#### <a name="register-device-through-mem"></a>MEM aracılığıyla cihaz kaydetme
+#### <a name="register-device-through-mem"></a>Cihazı bellek ile kaydetme
 
-1. Yönetim [Microsoft Endpoint Manager,](https://endpoint.microsoft.com)Cihazlar ve kayıt Windows Windows'ı seçin ve ardından Program'ın altında  >    >  Cihazlar   >   **İçeri Aktarma'Windows Autopilot Deployment seçin.**
+1. [Microsoft Endpoint Manager yönetim merkezi](https://endpoint.microsoft.com)'nde **cihazları**  >  **Windows**  >  **Windows kayıt**' ı seçin ve ardından   >  **Windows Autopilot Deployment Program** altında cihazlar **içeri aktar** ' ı seçin.
 
-1. **Autopilot Windows Ekle** altında DeviceHash CSV dosyasını seçin, Aç'ı **ve** ardından İçeri Aktar'ı **seçin.**  
+1. **Windows Autopilot cihazları ekle** altında devicehash CSV dosyasını seçin, **aç**' ı seçin ve ardından **içeri aktar**' ı seçin.  
 
    > [!div class="mx-imgBorder"]
-   > ![Donanım karması içeri aktarın komutunu kullanın.](./images/hololens-ap-hash-import.png)
+   > ![Donanım karmasını içeri aktarmak için Al komutunu kullanın.](./images/hololens-ap-hash-import.png)
 
-1. İçeri aktarma işlemi tamam olduktan sonra  >  **Cihazlar'ı Windows**  >  **Windows Cihazları Eşitle'yi**  >    >  **seçin.** Kaç tane cihaz eşitlenmesine bağlı olarak, sürecin tamamlanması birkaç dakika sürebilir. Kayıtlı cihazı görmek için Yenile'yi **seçin.**  
+1. içeri aktarma tamamlandıktan sonra **cihaz**  >  **Windows**  >  **Windows kayıt**  >  **cihazları**  >  **eşitleme**' yi seçin. Kaç cihazın eşitlendiğine bağlı olarak işlemin tamamlanması birkaç dakika sürebilir. Kayıtlı cihazı görmek için **Yenile**' yi seçin.  
 
    > [!div class="mx-imgBorder"]
    > ![Cihaz listesini görüntülemek için Eşitle ve Yenile komutlarını kullanın.](./images/hololens-ap-devices-sync.png)  
 
-### <a name="5-create-a-device-group"></a>5. Cihaz grubu oluşturma
+### <a name="5-create-a-device-group"></a>5. bir cihaz grubu oluşturun
 
-1. Yönetim [Microsoft Endpoint Manager Gruplar Yeni](https://endpoint.microsoft.com) **grup'ı**  >  **seçin.**
+1. [Microsoft Endpoint Manager yönetim merkezi](https://endpoint.microsoft.com)'nde **gruplar**  >  **yeni grup**' u seçin.
 
-1. Grup türü olarak **Güvenlik'i seçin** ve ardından bir grup adı ve açıklaması girin. 
+1. **Grup türü** için **güvenlik**' i seçin ve ardından bir grup adı ve açıklama girin.
 
-1. Üyelik **türü olarak** Atanan veya Dinamik **Cihaz'ı seçin.** 
+1. **Üyelik türü** için **atanan** ya da **dinamik cihaz**' ı seçin.
 
 1. Aşağıdakilerden birini yapın:  
 
-   - Önceki adımda **Üyelik türü olarak** **Atanan'ı** seçtiyebilirsiniz. Üyeler'i seçin ve ardından Autopilot cihazlarını gruba ekleyin. Henüz kayıtlı olmayan Autopilot cihazları, cihaz adı olarak cihaz seri numarası kullanılarak listelenir.
-   - Bir önceki adımda **Üyelik** türü için **Dinamik** Cihazlar'ı seçtiyebilirsiniz,  Dinamik cihaz üyeleri'ni seçin ve ardından Gelişmiş kural'a aşağıdakine benzer bir kod girin:
-     - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için şunları yazın: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-     - Intune'un grup etiketi alanı, Azure AD **cihazlarında OrderID** özniteliğiyle eşler. Belirli bir grup etiketine (Azure AD cihaz OrderID) sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için şunları yazmanız gerekir: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-     - Belirli bir Satın Alma Siparişi Kimliğine sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak için şunları yazın: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+   - Önceki adımda **üyelik türü** için **atandı** ' ı seçtiyseniz **Üyeler**' i seçin ve ardından gruba Autopilot cihazları ekleyin. Henüz kayıtlı olmayan Autopilot cihazlar cihaz adı olarak cihaz seri numarası kullanılarak listelenir.
+   - Önceki adımda **üyelik türü** Için **dinamik cihazlar** ' ı seçtiyseniz, **dinamik cihaz üyeleri**' ni seçin ve ardından aşağıdaki gibi **Gelişmiş kuralda** kodu girin:
+     - Tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazın: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+     - Intune 'un Grup etiketi alanı, Azure AD cihazlarındaki **OrderID** özniteliğiyle eşlenir. Belirli bir grup etiketine sahip tüm Autopilot cihazlarınızı (Azure AD cihaz OrderID) içeren bir grup oluşturmak istiyorsanız şunu yazmanız gerekir: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+     - Belirli bir satın alma siparişi KIMLIĞINE sahip tüm Autopilot cihazlarınızı içeren bir grup oluşturmak istiyorsanız şunu yazın: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
 
      > [!NOTE]  
-     > Bu kurallar Autopilot cihazlarına özgü öznitelikleri hedefler.
-1. **Kaydet'i** ve ardından Oluştur'a **tıklayın.**
+     > Bu kurallar, Autopilot cihazlarına özgü öznitelikleri hedef olarak hedefler.
+1. **Kaydet**' i seçin ve ardından **Oluştur**' u seçin.
 
-### <a name="6-create-autopilot-profile-and-assign-it-to-the-device-group"></a>6. Otomatik pilot profili oluşturma ve bunu cihaz grubuna atama
+### <a name="6-create-autopilot-profile-and-assign-it-to-the-device-group"></a>6. Autopilot profili oluştur ve cihazı cihaz grubuna ata
 
-1. Yönetim [merkezinde Microsoft Endpoint Manager](https://endpoint.microsoft.com)Autopilot dağıtım  >  **profilleri Windows**  >  **Windows'Windows**  >    >    >  Profil oluşturma'HoloLens.
-   ![Profil oluştur açılan listesinde bir HoloLens vardır.](./images/hololens-ap-enrollment-profiles.png)
+1. [Microsoft Endpoint Manager yönetim merkezi](https://endpoint.microsoft.com)'nde Windows **cihazlar**' ı seçin  >    >  **Windows kayıt**  >  **Windows Autopilot dağıtım profilleri**  >  **profil oluştur**  >  **HoloLens**.
+   ![profil oluştur açılır listesi bir HoloLens öğesi içerir.](./images/hololens-ap-enrollment-profiles.png)
 
-1. Bir profil adı ve açıklama girin ve ardından Sonraki'yi **seçin.**  
-   listesini içeren bir liste **HoloLens.** Bu seçenek yoksa geri bildirim seçenekleriyle [bize ulaşın.](hololens2-autopilot.md#feedback-and-support-for-autopilot)
+1. Bir profil adı ve açıklama girin ve ardından **İleri**' yi seçin.  
+   **HoloLens** içeren bir liste görmeniz gerekir. Bu seçenek yoksa, bizimle iletişim kurmak için [geri bildirim](hololens2-autopilot.md#feedback-and-support-for-autopilot) seçeneklerinden birini kullanın.
 
    > [!div class="mx-imgBorder"]
-   > ![Profil adı ve açıklama ekleyin.](./images/hololens-ap-profile-name.png)
+   > ![Profil adı ve açıklaması ekleyin.](./images/hololens-ap-profile-name.png)
 
-1. İlk **deneyim (OOBE)** sayfasında, ayarların çoğu bu değerlendirme için OOBE'yi kolaylaştıracak şekilde önceden yapılandırılmıştır. İsteğe bağlı olarak, aşağıdaki ayarları yapılandırabilirsiniz:  
+1. **Kullanıma hazır deneyim (OOBE)** sayfasında, ayarların çoğu bu DEĞERLENDIRME için OOBE 'yi kolaylaştırmak üzere önceden yapılandırılmıştır. İsteğe bağlı olarak, aşağıdaki ayarları yapılandırabilirsiniz:  
 
-   - **Dil (Bölge):** OOBE için dili seçin. 2 için desteklenen diller listesinden [bir dil HoloLens öneririz.](hololens2-language-support.md)
-   - **Klavyeyi otomatik olarak** yapılandırma: Klavyenin seçili dille eş olduğundan emin olmak için Evet'i **seçin.**
-   - **Cihaz adı şablonu uygulama:** OOBE sırasında cihaz  adını otomatik olarak ayarlamak için Evet'i seçin ve Ardından Ad girin alanına şablon tümceciği ve yer tutucularını girin. Örneğin, dört basamaklı rastgele sayı için bir ön ek ve yer  `%RAND:4%` &mdash; tutucu girin.
+   - **Dil (bölge)**: OOBE dilini seçin. [HoloLens 2 için desteklenen diller](hololens2-language-support.md)listesinden bir dil seçmenizi öneririz.
+   - **Klavyeyi otomatik olarak Yapılandır**: klavyenin seçili dille eşleştiğinden emin olmak için **Evet**' i seçin.
+   - **Cihaz adı şablonu Uygula**: OOBE sırasında cihaz adını otomatik olarak ayarlamak için **Evet** ' i seçin ve ardından **bir ad girin** alanına şablon tümceciğini ve yer tutucuları girin. Örneğin, `%RAND:4%` &mdash; dört basamaklı rastgele bir sayı için bir ön ek ve yer tutucu girin.
      > [!NOTE]  
-     > Cihaz adı şablonu kullanırsanız, OOBE işlemi cihaz adını uygulamanın ardından ve cihazı Azure AD'ye eklemeden önce cihazı bir kez yeniden başlatılır. Bu yeniden başlatma, yeni adın etkili olmasına olanak sağlar.  
+     > Bir cihaz adı şablonu kullanırsanız, OOBE işlemi cihaz adını uyguladıktan ve cihazı Azure AD 'ye katmadan önce bir kez yeniden başlatır. Bu yeniden başlatma, yeni adın geçerli olması için etkin bir ad sağlar.  
 
    > [!div class="mx-imgBorder"]
-   > ![OOBE ayarlarını yapılandırma.](./images/hololens-ap-profile-oobe.png)
+   > ![OOBE ayarlarını yapılandırın.](./images/hololens-ap-profile-oobe.png)
 
-1. Ayarları yapılandırdikten sonra, Sonraki'yi **seçin.**
-1. Kapsam **etiketleri sayfasında,** isteğe bağlı olarak bu profile uygulamak istediğiniz kapsam etiketlerini ekleyin. Kapsam etiketleri hakkında daha fazla bilgi için [bkz. Dağıtılmış IT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma.](/mem/intune/fundamentals/scope-tags.md) Tamamlandığında, Sonraki'yi **seçin.**
-1. Atamalar **sayfasında Atama** için Seçili **gruplar'ı** **seçin.**
-1. **SEÇİLEN GRUPLAR** altında **+ Dahil etmek için grupları seçin'i seçin.**
-1. Dahil **etmek için grupları seçin listesinde** Autopilot cihazları için oluşturduğunuz cihaz grubunu HoloLens'ı **seçin.**  
+1. Ayarları yapılandırdıktan sonra **İleri**' yi seçin.
+1. **Kapsam etiketleri** sayfasında isteğe bağlı olarak, bu profile uygulamak istediğiniz kapsam etiketlerini ekleyin. Kapsam etiketleri hakkında daha fazla bilgi için bkz. [Dağıtılmış BT için rol tabanlı erişim denetimi ve kapsam etiketleri kullanma](/mem/intune/fundamentals/scope-tags.md). İşiniz bittiğinde **İleri**' yi seçin.
+1. **Atamalar** sayfasında, **ata** için **Seçili gruplar** ' ı seçin.
+1. **SEÇILI gruplar** altında **+ dahil edilecek grupları** Seç ' i seçin.
+1. **dahil edilecek grupları seçin** listesinde, Autopilot HoloLens cihazları için oluşturduğunuz cihaz grubunu seçin ve ardından **ileri**' yi seçin.  
   
-   Herhangi bir grubu dışlamak için Dışlamak istediğiniz Grupları **seç'i** seçin ve dışlamak istediğiniz grupları seçin.
+   Herhangi bir grubu dışlamak istiyorsanız, **hariç tutulacak grupları** seçin ' i seçin ve dışlamak istediğiniz grupları seçin.
 
    > [!div class="mx-imgBorder"]
-   > ![Profile bir cihaz grubu atama.](./images/hololens-ap-profile-assign-devicegroup.png)
+   > ![Profile bir cihaz grubu atanıyor.](./images/hololens-ap-profile-assign-devicegroup.png)
 
-1. Gözden Geçir **+ Oluştur sayfasında** ayarları gözden geçirerek Oluştur'a **seçerek** profili oluşturun.  
+1. **Gözden geçir + oluştur** sayfasında, ayarları gözden geçirin ve sonra profili oluşturmak için **Oluştur** ' u seçin.  
 
    > [!div class="mx-imgBorder"]
-   > ![Gözden geçir ve oluştur.](./images/hololens-ap-profile-summ.png)
+   > ![Gözden geçir + oluştur.](./images/hololens-ap-profile-summ.png)
 
-### <a name="7-create-enrollment-status-page-esp-configuration-and-assign-it-to-the-device-group"></a>7. Kayıt Durumu Sayfası (ESP) yapılandırması oluşturma ve bunu cihaz grubuna atama
+### <a name="7-create-enrollment-status-page-esp-configuration-and-assign-it-to-the-device-group"></a>7. kayıt durumu sayfası (ESP) yapılandırma oluştur ve cihazı cihaz grubuna ata
 
-Kayıt Durumu Sayfası (ESP), MDM ile yönetilen bir kullanıcı cihazda ilk kez oturum a açınca çalışan tam cihaz yapılandırma işleminin durumunu görüntüler. ESP yapılandırmanın aşağıdakine benzer olduğundan emin olun ve atamaların doğru olduğunu doğrulayın.  
+Kayıt durumu sayfası (ESP), MDM ile yönetilen bir Kullanıcı bir cihazda ilk kez kaydolduğunda çalıştırılan tam cihaz yapılandırma işleminin durumunu görüntüler. ESP yapılandırmanızın aşağıdakine benzer olduğundan emin olun ve atamaların doğru olduğunu doğrulayın.  
 
 > [!div class="mx-imgBorder"]
 > ![ESP yapılandırması.](./images/hololens-ap-profile-settings.png)
 
-ESP hakkında daha fazla bilgi için Kayıt [Durumu Sayfasını Ayarlama - Microsoft Intune | Microsoft Docs](/mem/intune/enrollment/windows-enrollment-status)
+ESP hakkında daha fazla bilgi için bkz [. kayıt durumu sayfasını ayarlama-Microsoft Intune | Microsoft Docs](/mem/intune/enrollment/windows-enrollment-status)
 
-### <a name="8-verify-the-profile-status-of-the-hololens-devices"></a>8. Cihaz profili HoloLens doğrulama
+### <a name="8-verify-the-profile-status-of-the-hololens-devices"></a>8. HoloLens cihazların profil durumunu doğrulayın
 
-1. Yönetim Microsoft Endpoint Manager'nde Cihazlar'ı **ve**  >  **Windows**  >  **Windows'yi**  >  **seçin.**
+1. Microsoft Endpoint Manager yönetim merkezi 'nde **cihazlar**  >    >  **Windows kayıt**  >  **cihazları** Windows ' nı seçin.
 
-1. HoloLens cihazların listelenmiş olduğunu ve profil durumunun Atandı olduğunu **doğrulayın.**  
+1. HoloLens cihazların listelendiğini ve profil durumunun **atandığını** doğrulayın.  
 
    > [!NOTE]  
-   > Profilin cihaza atanmaları birkaç dakika sürebilir.  
+   > Profilin cihaza atanması birkaç dakika sürebilir.  
 
    > [!div class="mx-imgBorder"]
    > ![Cihaz ve profil atamaları.](./images/hololens-ap-devices-assignments.png)
 
-## <a name="windows-autopilot-for-hololens-2-user-experience"></a>Windows HoloLens 2 Kullanıcı Deneyimi için Autopilot
+## <a name="windows-autopilot-for-hololens-2-user-experience"></a>Windows HoloLens 2 kullanıcı deneyimi için Autopilot
 
-Yukarıdaki yönergeler tamamlandıktan sonra, HoloLens 2 kullanıcınız kendi HoloLens cihazlarını sağlama konusunda aşağıdaki deneyimi deneyimler:  
+yukarıdaki yönergeler tamamlandıktan sonra, HoloLens 2 kullanıcılarınız HoloLens cihazlarını sağlamak için aşağıdaki deneyimden geçer:  
 
-1. Autopilot deneyimi için İnternet erişimi gerekir. İnternet erişimi sağlamak için aşağıdaki seçeneklerden birini kullanın:
+1. Autopilot deneyimi Internet erişimi gerektirir. Internet erişimi sağlamak için aşağıdaki seçeneklerden birini kullanın:
 
-    - Bağlan OOBE'Wi-Fi bir ağ üzerinden çalıştırın ve autopilot deneyimini otomatik olarak algılamasına izin verir. Autopilot deneyimi kendi kendine tamamlayana kadar OOBE ile yalnızca bu kez etkileşim kurmanız gerekir.
+    - Bağlan, bir Wi-Fi ağa OOBE 'de ve sonra otomatik olarak Autopilot deneyimini algılamasına izin verin. Bu, Autopilot deneyimi kendi kendine tamamlanana kadar OOBE ile etkileşimde bulunmak için tek zaman gerekir.
 
-    - Bağlan İnternet bağlantısı için "USB-C'den Ethernet'e" bağdaştırıcıları kullanarak Ethernet ile cihazınızı bağlayın ve otomatik olarak 2 tam Autopilot deneyimi HoloLens izin verir.
+    - kablolu internet bağlantısı için "USB-C-Ethernet" bağdaştırıcılarını kullanarak Ethernet ile cihazınızı Bağlan ve HoloLens 2 tam Autopilot deneyimini otomatik olarak sağlayın.
 
-    - Bağlan İnternet bağlantısı için "USB-C-Wi-Fi" bağdaştırıcıları ile cihazınızı bağlayın ve otomatik olarak 2 tam Autopilot deneyimi HoloLens izin verir.
+    - kablosuz internet bağlantısı için cihazınızı "USB-C-Wi-Fi" bağdaştırıcılarına Bağlan ve HoloLens 2 tam Autopilot deneyimini otomatik olarak sağlayın.
 
         > [!IMPORTANT]  
-       > Autopilot için OOBE'Wi-Fi ağlarını kullanmaya çalışan cihazların [Holographic sürüm 20H2'de Windows olması gerekir.](hololens-release-notes.md#windows-holographic-version-20h2)
+       > Autopilot için OOBE 'de Wi-Fi ağlarını kullanmaya çalışan cihazların [, Windows Holographic, sürüm 20h2](hololens-release-notes.md#windows-holographic-version-20h2)üzerinde olması gerekir.
        >
-       > Ethernet bağdaştırıcıları kullanan cihazlar için, İlk-Kutu Deneyimi (OOBE) başlamadan önce cihazı ağa bağlamanız gerekir. Cihaz, ilk OOBE ekranında autopilot cihaz olarak sağ isteyip sağlama olmadığını belirler. Cihaz ağa bağlanamıyorsa veya cihazı Autopilot cihazı olarak sağlamayı seçmiyorsanız, daha sonra Autopilot sağlama olarak değiştiremezsiniz. Bunun yerine, cihazı Autopilot cihaz olarak sağlama amacıyla bu yordamı baştan başlatmanız gerekir.
+       > Ethernet bağdaştırıcılarını kullanan cihazlarda, Ilk çalıştırma deneyimi (OOBE) başlamadan önce cihazı ağa bağlamanız gerekir. Cihaz, ilk OOBE ekranındaki bir Autopilot cihazı olarak sağlanıp sağlanmadığını belirler. Cihaz ağa bağlanamıyorsa veya cihazı bir Autopilot cihazı olarak sağlamayı tercih ediyorsanız, daha sonra Autopilot sağlamaya geçiş yapılamaz. Bunun yerine, cihazı bir Autopilot cihazı olarak sağlamak için bu yordamı yeniden başlatmanız gerekir.
 
-1. Cihazın OOBE'i otomatik olarak başlatması gerekir. OOBE ile etkileşim kurma.
+1. Cihazın otomatik olarak OOBE başlatması gerekir. OOBE ile etkileşim kurma.
 
     > [!IMPORTANT]
-    > Otomatik pilot devam ederken, sistemi bekleme/kapatma moduna getirmek için lütfen OOBE ile etkileşime geçmeyin veya güç düğmesine basın. Bu, otomatik pilot akışının tamamlanmayacak şekilde tamamlanmasına neden olabilir.
+    > Lütfen Autopilot devam ederken, sistemi bekleme/kapatma durumuna getirmek için OOBE ile etkileşime girmeyin veya güç düğmesine basın. Bu, Autopilot akışının tamamlanmamasına neden olabilir.
 
-   Ağ HoloLens 2'nin ağ bağlantısını algılamasına ve otomatik olarak OOBE'nin tamamlanmasına izin ver. Cihaz OOBE sırasında yeniden başlatabilirsiniz. OOBE ekranları aşağıdakine benzer.
+   HoloLens 2 ' nin ağ bağlantısını algılaması ve OOBE 'nin otomatik olarak tamamlanmasına izin verin. Cihaz, OOBE sırasında yeniden başlatılabilir. OOBE ekranları aşağıdakine benzemelidir.
 
    ![OOBE 1. adım. ](./images/autopilot-welcome.jpg)
     ![ OOBE 2. adım. ](./images/autopilot-step-complete.jpg)
-    ![ OOBE 3. adım.](./images/autopilot-device-setup.jpg)
+    ![ OOBE adım 3.](./images/autopilot-device-setup.jpg)
 
-1. OOBE'nin sonunda kullanıcı adı ve parolanızı kullanarak cihazda oturum açın.
+1. OOBE 'nin sonunda, Kullanıcı adınızı ve parolanızı kullanarak cihazda oturum açabilirsiniz.
 
    <img src="./images/other-user.jpg" alt="Other user" width="450" height="700" />
 
-## <a name="tenant-lockdown-csp-and-autopilot"></a>Kiracı kilitleme CSP'si ve Autopilot
+## <a name="tenant-lockdown-csp-and-autopilot"></a>Kiracı kilitleme CSP 'si ve Autopilot
 
-HoloLens 2 cihaz, Holographic sürüm 20H2'den Windows TenantLockdown CSP'yi destekler. Bu CSP, cihaz sıfırlama veya ters eğik çizgi ile bile cihazları bu kiracıya kilitleyerek kuruluşun kiracısı üzerinde tutar.
+HoloLens 2 cihaz, Windows Holographic, sürüm 20h2 itibariyle tenantlockdown CSP 'yi destekler. Bu CSP, cihaz sıfırlama veya refflash aracılığıyla bile, kuruluşun kiracısında cihazları bu kiracıya kilitleyerek korur.
 
-[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP, HoloLens 2'nin yalnızca Autopilot kullanılarak MDM kaydına bağlı olması için olanak sağlar. TenantLockdown CSP'nin RequireNetworkInOOBE düğümü HoloLens 2'de true veya false (başlangıçta ayarlanmış) değerine ayarlandıktan sonra, bu değer başvuruya, işletim sistemi güncelleştirmelerine vb. rağmen cihazda kalır.
+[Tenantlockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP, HoloLens 2 ' nin yalnızca Autopilot kullanarak MDM kaydına bağlı olmasını sağlar. bir tenantlockdown CSP 'nin talep ırenetworkınoobe düğümü, HoloLens 2 ' de doğru veya yanlış (başlangıçta ayarlanmış) değere ayarlandığında, bu değer, zaman damgası, işletim sistemi güncelleştirmeleri vb. olarak cihazda kalır.
 
-HoloLens 2'de TenantLockdown CSP'lerinin RequireNetworkInOOBE düğümü true olarak ayarlandıktan sonra, OOBE ağ bağlantısı sonrasında Autopilot profilinin başarıyla indirilme ve uygulanması için süresiz olarak bekler.
+tenantlockdown csp 'ler ' talep ırenetworkınoobe düğümü HoloLens 2 ' de true olarak ayarlandığında, ağ bağlantısından sonra OOBE, Autopilot profilinin başarıyla indirilip uygulanmasını bekler.
 
-TenantLockdown CSP'lerinin RequireNetworkInOOBE düğümü HoloLens 2'de true olarak ayarlandıktan sonra, OOBE'de aşağıdaki işlemlere izin verilmiyor:
+tenantlockdown csp 'ler ' talep ırenetworkınoobe düğümü HoloLens 2 ' de true olarak ayarlandığında, OOBE 'de aşağıdaki işlemlere izin verilmez:
 
 - Çalışma zamanı sağlamayı kullanarak yerel kullanıcı oluşturma
-- Çalışma zamanı sağlama aracılığıyla Azure AD birleştirme işlemi gerçekleştirme
-- OOBE deneyiminde cihazın sahibini seçme
+- Çalışma zamanı sağlama aracılığıyla Azure AD JOIN işlemi gerçekleştiriliyor
+- Cihaza kimin sahip olduğunu OOBE deneyiminde seçme
 
-#### <a name="how-to-set-this-using-intune"></a>Intune kullanılarak bu nasıl ayarlanır?
+#### <a name="how-to-set-this-using-intune"></a>Bu Intune kullanılarak nasıl ayarlanır?
 
-1. Özel bir OMA URI cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi RequireNetworkInOOBE düğümü için true belirtin.
-OMA-URI değeri ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE olmalı
+1. Özel bir OMA URI cihaz yapılandırma profili oluşturun ve aşağıda gösterildiği gibi, talep ırenetworkınoobe düğümü için true değerini belirtin.
+OMA-URI değeri olmalıdır./Vendor/MSFT/tenantlockdown/karşılandığından ırenetworkınoobe
 
    > [!div class="mx-imgBorder"]
-   > ![OMA-URI aracılığıyla tennant kilitlemeyi ayarlama.](images/hololens-tenant-lockdown.png)
+   > ![OMA-URI aracılığıyla kiracı kilidi ayarlanıyor.](images/hololens-tenant-lockdown.png)
 
-1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna attayabilirsiniz.
+1. Bir grup oluşturun ve cihaz yapılandırma profilini bu cihaz grubuna atayın.
 
-1. Önceki HoloLens oluşturulan grubun 2 cihaz üyesini seçin ve eşitlemeyi tetikler.  
+1. önceki adımda oluşturulan grubun HoloLens 2 cihaz üyesini yapın ve eşitlemeyi tetikleyin.  
 
 Intune portalında cihaz yapılandırmasının başarıyla uygulandığını doğrulayın. bu cihaz yapılandırması HoloLens 2 cihazında başarıyla geçerliyse, tenantlockdown etkileri etkin olur.
 
@@ -320,10 +320,12 @@ OOBE, Autopilot profilinin indirilmek için süresiz olarak bekler ve aşağıda
 
 ![Cihazda ilke uygulandığında cihaz içi görünümü.](images/hololens-autopilot-lockdown.png)
 
-## <a name="known-issues-and-limitations"></a>Bilinen sorunlar ve sınırlamalar
+## <a name="troubleshooting"></a>Sorun giderme
 
-### <a name="why-do-i-see-0x80180014-during-autopilot"></a>Autopilot sırasında neden kaydedilmesi 0x80180014 görüyorum?
+### <a name="issue---mdm-enrollment-fails-with-error-0x80180014-error-code-during-autopilot"></a>Sorun-MDM kaydı Autopilot sırasında kaydedilmesi 0x80180014 hata kodu hatasıyla başarısız oluyor.
 
+ **Belirtiler**
+ 
 Bu, cihazdaki Autopilot işlemi sırasında gösterilen bir hatadır. gösterilen bu sorun yalnızca HoloLens bir cihaz şunları yaparken geçerlidir:
 
 1. En az bir kez Autopilot ile zaten geçmiş.
@@ -333,7 +335,7 @@ Deneyim, Autopilot deneyimidir ve belirli bir hata ile başarısız olur.
 
 ![HoloLens Autopilot hatası hata kodu](images/autopilot-0x80180014-failure.jpg)
 
-Bu hatayı çözmek için hangi adımların alınması gerekir?
+**Sorun giderme adımları**
 
 1. Cihazı Intune 'dan kaldırmak için [Autopilot cihaz içeri aktarma ve kayıt sorunlarını giderme](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) adımlarını izleyin. (Intune yöneticinizin bu görevi gerçekleştirmesi gerekir)
 1. 1. adım tamamlandıktan sonra, cihazı yeniden başlatın ve oturum açın.
@@ -342,19 +344,24 @@ Bu hatayı çözmek için hangi adımların alınması gerekir?
 
 AutoPilot ardından başarıyla kaydolmalıdır.
 
-### <a name="troubleshooting"></a>Sorun giderme
+### <a name="issue---autopilot-experience-did-not-start-even-though-the-autopilot-profile-is-assigned-in-intune"></a>Autopilot profili Intune 'A atansa da, sorun-Autopilot deneyimi başlatılamadı.
+
+**Belirtiler**
+
+varsayılan olarak, HoloLens 2, internet algılandıktan sonra Autopilot algılamasını 15 saniye bekler. 15 saniye içinde Autopilot profili algılanmazsa, bu, Autopilot doğru bir şekilde bulunamadığına ve EULA sayfasını görürsünüz.
+
+**Sorun giderme adımları**
+
+1. Önce lütfen Autopilot profilinin MDM portalında (örn. Intune) atanmış olarak gösterildiğini doğrulayın. 
+1. Cihazınızı yeniden başlatın ve yeniden deneyin. Daha fazla bilgi için bkz. [bilinen sorunlar ve sınırlamalar](hololens2-autopilot.md#troubleshooting).
+
+### <a name="helpful-resources"></a>Yardımcı kaynaklar
 
 aşağıdaki makaleler, daha fazla bilgi edinmek ve Autopilot sorunlarını gidermek için yararlı bir kaynak olabilir ancak bu makaleler Windows 10 masaüstü tabanlıdır ve tüm bilgiler HoloLens için uygulanabilir.
 
 - [Windows Autopilot-bilinen sorunlar](/mem/autopilot/known-issues)
 - [Microsoft Intune Windows cihaz kaydı sorunlarını giderme](/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
 - [Windows Autopilot-Ilke çakışmaları](/mem/autopilot/policy-conflicts)
-
-#### <a name="why-did-i-not-see-autopilot-experience-even-though-the-autopilot-profile-is-assigned-in-intune"></a>Autopilot profili Intune 'A atanmış olsa da neden Autopilot deneyimini görmüyorum?
-
-varsayılan olarak, HoloLens 2, internet algılandıktan sonra Autopilot algılamasını 15 saniye bekler. 15 saniye içinde Autopilot profili algılanmazsa, bu, Autopilot doğru bir şekilde bulunamadığına ve EULA sayfasını görürsünüz.
-
-Cihazınızı yeniden başlatın ve yeniden deneyin. Daha fazla bilgi için bkz. [bilinen sorunlar ve sınırlamalar](hololens2-autopilot.md#known-issues-and-limitations).
 
 ## <a name="feedback-and-support-for-autopilot"></a>Autopilot için geri bildirim ve destek
 
